@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
             padding: "16px",
             borderRadius: "5px",
             cursor: "pointer",
-            // backgroundColor: " #3f3f3f",
+            backgroundColor: " #efefef",
             "& .boxShadow": "0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)",
 
             "& .book-card__book": {
@@ -83,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
             height: "100%",
             backgroundColor: "#e1e1e1"
         },
-        "& .book-card__title": { fontSize: "1.5em", marginBottom: "8px" },
+        "& .book-card__title": { fontSize: "1.5em", marginBottom: "0" },
         "& .book-card__author": { color: "#757575", fontSize: "1em" },
     }
 }));

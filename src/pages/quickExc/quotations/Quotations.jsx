@@ -5,6 +5,8 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import { AppBar, Popper } from '@material-ui/core';
+import { quotationsData } from '../../../data';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -40,26 +42,42 @@ function a11yProps(index) {
 }
 
 const useStyles = makeStyles((theme) => ({
-    root:{
-        height:"90vh",
+    root: {
+        height: "100%",
     },
     root2: {
         flexGrow: 1,
         backgroundColor: theme.palette.background.paper,
         display: 'flex',
-        height: 224,
+        // height: 224,
+        "& .tab-container": {
+            width: '100%',
+            // height: "90vh",
+            padding: "30px",
+        },
+        "& .qots-container": {
+            display: 'flex',
+            alginItem:'center',
+            justifyContent:'center',
+            gap: '1.3rem',
+            flexWrap: 'wrap',
+            "& .qouts-img": {
+                padding: 10,
+                backgroundColor: "#efe",
+                "& img": {
+                    width: '300px',
+                    borderRadius: '13px',
+                }
+            }
+        },
     },
     tabs: {
         borderRight: `1px solid ${theme.palette.divider}`,
-        height:'300px',
-        width:'300px',
+        height: '300px',
+        width: '300px',
+        // position:'sticky'
     },
-    "& .tab-container": {
-        width: '100%',
-        height: "90vh",
-        padding:"10px",
 
-    }
 }));
 
 export default function Quotations() {
@@ -72,33 +90,44 @@ export default function Quotations() {
 
     return (
         <div className={classes.root}>
-            <div  className={classes.root2}>
+            <div className={classes.root2}>
+                    <Tabs
+                        // position="sticky"
+                        orientation="vertical"
+                        variant="scrollable"
+                        value={value}
+                        onChange={handleChange}
+                        aria-label="Vertical tabs example"
+                        className={classes.tabs}
+                    >
+                        <Tab label="Item One" {...a11yProps(0)} />
+                        <Tab label="Item Two" {...a11yProps(1)} />
+                        <Tab label="Item Three" {...a11yProps(2)} />
+                        <Tab label="Item Four" {...a11yProps(3)} />
+                        <Tab label="Item Five" {...a11yProps(4)} />
+                        <Tab label="Item Six" {...a11yProps(5)} />
+                        <Tab label="Item Seven" {...a11yProps(6)} />
+                    </Tabs>
+                
 
-
-                <Tabs
-                    orientation="vertical"
-                    variant="scrollable"
-                    value={value}
-                    onChange={handleChange}
-                    aria-label="Vertical tabs example"
-                    className={classes.tabs}
-                >
-                    <Tab label="Item One" {...a11yProps(0)} />
-                    <Tab label="Item Two" {...a11yProps(1)} />
-                    <Tab label="Item Three" {...a11yProps(2)} />
-                    <Tab label="Item Four" {...a11yProps(3)} />
-                    <Tab label="Item Five" {...a11yProps(4)} />
-                    <Tab label="Item Six" {...a11yProps(5)} />
-                    <Tab label="Item Seven" {...a11yProps(6)} />
-                </Tabs>
                 <TabPanel value={value} index={0}>
                     <div className="tab-container">
-
+                        <div className=" qots-container">
+                            {
+                                quotationsData.map((e, i) => (
+                                    <div className="qouts-img" key={i}>
+                                        <img src={e.url} alt="" />
+                                    </div>
+                                ))
+                            }
+                        </div>
                     </div>
                 </TabPanel>
+
                 <TabPanel value={value} index={1}>
                     Item Two
                 </TabPanel>
+                
                 <TabPanel value={value} index={2}>
                     Item Three
                 </TabPanel>

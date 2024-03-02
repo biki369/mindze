@@ -166,3 +166,26 @@ export const bookSummeryData = [
     author: "author",
   },
 ];
+
+
+
+export const quotationsData = [
+  {
+    url:"/src/assets/Quotation/encouragement/1.png"
+  },
+  {
+    url:"/src/assets/Quotation/encouragement/2.png"
+  },
+  {
+    url:"/src/assets/Quotation/encouragement/3.png"
+  },
+  {
+    url:"/src/assets/Quotation/encouragement/4.png"
+  },
+  {
+    url:"/src/assets/Quotation/encouragement/5.png"
+  },
+  {
+    url:"/src/assets/Quotation/encouragement/6.png"
+  },
+];
