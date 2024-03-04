@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
 
     "& .swiper_container": {
       // height:" 52rem",
+      height:'80vh',
       padding: "2rem 0",
       position: " relative",
 
@@ -69,8 +70,12 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const ServiceSlider = ({ images, text ,reviewData}) => {
+const ServiceSlider = (props) => {
+  
+  const { data, text, trustbyData } = props
+  
   const classes = useStyles();
+
 
   return (
     <div className={classes.root}>
@@ -105,22 +110,34 @@ const ServiceSlider = ({ images, text ,reviewData}) => {
             <img src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fGZsb3dlcnN8ZW58MHx8MHx8fDA%3D" alt="" />
           </SwiperSlide> */}
 
-          {
-           images && images.map((e, i) => (
+         
+{
+            data && data.map((e, i) => (
+              // <SwiperSlide key={i}>
+              //   <img src={e.img} alt="" />
+              // </SwiperSlide>
               <SwiperSlide key={i}>
                 <img src={e.img} alt="" />
+
+                <div className="review-box">
+                  <h3 className="ppl-name">{e.name}</h3>
+                  <p>{e.desc}</p>
+                </div>
               </SwiperSlide>
             ))
           }
           {
-            reviewData && reviewData.map((e, i) => (
+            trustbyData && trustbyData.map((e, i) => (
+              // <SwiperSlide key={i}>
+              //   <img src={e.img} alt="" />
+
+              //    <div className="review-box">
+              //       <h3 className="ppl-name">{e.name}</h3>
+              //       <p>{e.desc}</p>
+              //    </div>
+              // </SwiperSlide>
               <SwiperSlide key={i}>
                 <img src={e.img} alt="" />
-                
-                 <div className="review-box">
-                    <h3 className="ppl-name">{e.name}</h3>
-                    <p>{e.desc}</p>
-                 </div>
               </SwiperSlide>
             ))
           }

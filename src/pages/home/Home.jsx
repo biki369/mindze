@@ -170,27 +170,27 @@ const Home = () => {
         </div>
         
       <div >
-        <ServiceSlider text={"Psychological Councellors"} images={psychologicalSliderImg} />
+        <ServiceSlider text={"Psychological Councellors"} data={reviewData}  />
       </div>
       <div >
-        <ServiceSlider text={"Spiritual Councellors"} images={psychologicalSliderImg} />
+        <ServiceSlider text={"Spiritual Councellors"} data={reviewData}  />
       </div>
 
       <div className="review-section">
         <h1>What People Say About</h1>
         <div className="reviews">
           <div >
-            <ServiceSlider text={"Individual Reviews"} reviewData={reviewData} />
+            <ServiceSlider text={"Individual Reviews"} data={reviewData} />
           </div>
           <div >
-            <ServiceSlider text={"Organisation Reviews"} reviewData={reviewData} />
+            <ServiceSlider text={"Organisation Reviews"} data={reviewData} />
           </div>
         </div>
       </div>
 
       <div className="trustedBy-section">
         <div >
-          <ServiceSlider text={"Trusted by"} images={psychologicalSliderImg} />
+          <ServiceSlider text={"Trusted by"}  trustbyData={reviewData} />
         </div>
       </div>
 

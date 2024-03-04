@@ -60,8 +60,13 @@ const QuickExercises = () => {
 
     return (
         <div className={classes.root}>
-            <AppBar position="static">
-                <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
+            <AppBar 
+            position="static"
+           
+            >
+                <Tabs value={value} onChange={handleChange} aria-label="simple tabs example"
+                 centered
+                >
                     <Tab label="Short Exercises/Affirmations" {...a11yProps(0)} />
                     <Tab label="Quotations" {...a11yProps(1)} />
                     <Tab label="Quick Meditation Techniques" {...a11yProps(2)} />

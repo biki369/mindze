@@ -57,15 +57,16 @@ const useStyles = makeStyles((theme) => ({
         },
         "& .qots-container": {
             display: 'flex',
-            alginItem:'center',
-            justifyContent:'center',
-            gap: '1.3rem',
+            gap: '0.5rem',
+            // alginItem:'center',
+            // justifyContent:'center',
+            // gap: '1.3rem',
             flexWrap: 'wrap',
             "& .qouts-img": {
                 padding: 10,
                 backgroundColor: "#efe",
                 "& img": {
-                    width: '300px',
+                    width: '260px',
                     borderRadius: '13px',
                 }
             }

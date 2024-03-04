@@ -45,15 +45,32 @@ const useStyles = makeStyles((theme) => ({
     root: {
         "& .navBar": {
             marginTop: '30px',
-        },
-        "& .MuiPaper-elevation4 ": {
-            boxShadow: "none",
-        },
-        "& .MuiTabs-scrollButtonsDesktop": {
-            [theme.breakpoints.down(600)]: {
-                display: "inherit"
+            "& .MuiPaper-elevation4 ": {
+                boxShadow: "none",
             },
-        }
+
+        },
+
+        "& .top-nav": {
+
+            "& .MuiTabs-scrollButtonsDesktop": {
+                [theme.breakpoints.down(600)]: {
+                    display: "inherit"
+                },
+            },
+
+            '& .MuiTabs-flexContainer': {
+                flexWrap: 'wrap',
+            },
+
+            "& .Mui-selected": {
+                // backgroundColor:`${theme.palette.primary}`,
+                backgroundColor: "#3f51b5",
+                color: "#fff"
+            },
+        },
+
+
     },
 }));
 
@@ -70,12 +87,13 @@ const Layout = () => {
     return (
         <div className={classes.root}>
             <Box className='navBar'>
-                <AppBar position="sticky" color='#000'>
+                <AppBar position="sticky" color='#000' className='top-nav'>
                     <Tabs value={value}
                         onChange={handleChange}
                         aria-label="simple tabs example"
-                        variant="scrollable"
-                        scrollButtons="auto"
+                        TabIndicatorProps={{
+                            style: { display: 'none' }
+                        }}
                     >
                         {
                             menuLits.map((e, i) =>
@@ -90,18 +108,23 @@ const Layout = () => {
                         }
                     </Tabs>
                 </AppBar>
-                <TabPanel value={value} index={0}>
-                    <Home />
-                </TabPanel>
-                <TabPanel value={value} index={1}>
-                   <QuickExercises/>
-                </TabPanel>
-                <TabPanel value={value} index={2}>
-                    Item Three
-                </TabPanel>
-                <TabPanel value={value} index={4}>
-                    <BookSummery/>
-                </TabPanel>
+
+
+                <Box className='tab-pnl__container'>
+                    <TabPanel value={value} index={0}>
+                        <Home />
+                    </TabPanel>
+                    <TabPanel value={value} index={1}>
+                        <QuickExercises />
+                    </TabPanel>
+                    <TabPanel value={value} index={2}>
+                        Item Three
+                    </TabPanel>
+                    <TabPanel value={value} index={4}>
+                        <BookSummery />
+                    </TabPanel>
+                </Box>
+
             </Box>
         </div>
     )
