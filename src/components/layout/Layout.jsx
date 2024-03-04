@@ -4,7 +4,7 @@ import { AppBar, Box, Tab, Tabs, Typography } from "@material-ui/core"
 import PropTypes from 'prop-types';
 import { menuLits } from '../../data';
 import Home from '../../pages/home/Home';
-import { Outlet } from 'react-router-dom'
+// import { Outlet } from 'react-router-dom'
 import QuickExercises from '../../pages/quickExc/QuickExercises';
 import BookSummery from '../../pages/bookSummery/BookSummery';
 
@@ -108,8 +108,7 @@ const Layout = () => {
                         }
                     </Tabs>
                 </AppBar>
-
-
+                
                 <Box className='tab-pnl__container'>
                     <TabPanel value={value} index={0}>
                         <Home />
@@ -124,7 +123,6 @@ const Layout = () => {
                         <BookSummery />
                     </TabPanel>
                 </Box>
-
             </Box>
         </div>
     )

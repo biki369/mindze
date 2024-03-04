@@ -2,6 +2,7 @@ import { Container, Typography, makeStyles } from '@material-ui/core';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import EmailIcon from '@material-ui/icons/Email';
 import PhoneIcon from '@material-ui/icons/Phone';
+import { Copyright } from '../copy-right/CopyRight';
 
 
 
@@ -142,7 +143,7 @@ const Footer = () => {
 
             </div>
             <div className="cpy-right">
-                <Typography > Mindze copy right 2024</Typography>
+                <Typography > Mindze  <Copyright/>  </Typography>
             </div>
         </div>
     )
