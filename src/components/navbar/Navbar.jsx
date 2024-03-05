@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppBar, Box, Tab, Tabs, Typography } from "@material-ui/core"
+import { AppBar, Avatar, Box, Tab, Tabs, Typography } from "@material-ui/core"
 import { makeStyles } from '@material-ui/core/styles';
 import PermIdentityIcon from '@material-ui/icons/PermIdentity';
 import { Link } from 'react-router-dom';
@@ -30,12 +30,18 @@ const useStyles = makeStyles((theme) => ({
             // backgroundColor: "#3f51b5",
             "& .p-icon": {
                 "& svg": {
-                    fontSize: '36px',
-                    // color:"#fff",
+                    fontSize: '26px',
+                    // backgroundColor: "#3f51b5",
                 }
             }
         }
     },
+
+    avatar: {
+        margin: theme.spacing(0),
+        // backgroundColor: theme.palette.primary.main
+        backgroundColor:"#000",
+      },
 }));
 
 const Navbar = () => {
@@ -52,9 +58,11 @@ const Navbar = () => {
 
                 <div className="profile">
                     <div className="p-icon" title='Profile'>
-                        <Link to="login">
-                            <PermIdentityIcon />
-                        </Link>
+                        <Avatar className={classes.avatar}>
+                            <Link to="login">
+                                <PermIdentityIcon />
+                            </Link>
+                        </Avatar>
                     </div>
                 </div>
 

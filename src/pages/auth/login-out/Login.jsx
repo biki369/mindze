@@ -2,21 +2,8 @@ import React from 'react';
 import { Avatar, Box, Button, Checkbox, CssBaseline, FormControlLabel, Grid, makeStyles, Paper, TextField, Typography } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import image from "../../../assets/Home_page/1.jpg";
-// import authService from "./../service/authService";
-import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {"Copyright © "}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
+import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -59,6 +46,7 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(3, 0, 2)
   }
 }));
+
 
 export default function Login(props) {
 
@@ -165,9 +153,6 @@ export default function Login(props) {
                 </Link>
               </Grid>
             </Grid>
-            <Box mt={5}>
-              <Copyright />
-            </Box>
           </form>
         </div>
       </Grid>

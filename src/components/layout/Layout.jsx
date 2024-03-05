@@ -1,5 +1,5 @@
+import React from 'react';
 import { makeStyles } from '@material-ui/core';
-import React from 'react'
 import { AppBar, Box, Tab, Tabs, Typography } from "@material-ui/core"
 import PropTypes from 'prop-types';
 import { menuLits } from '../../data';
@@ -48,11 +48,9 @@ const useStyles = makeStyles((theme) => ({
             "& .MuiPaper-elevation4 ": {
                 boxShadow: "none",
             },
-
         },
 
         "& .top-nav": {
-
             "& .MuiTabs-scrollButtonsDesktop": {
                 [theme.breakpoints.down(600)]: {
                     display: "inherit"
@@ -69,11 +67,8 @@ const useStyles = makeStyles((theme) => ({
                 color: "#fff"
             },
         },
-
-
     },
 }));
-
 
 const Layout = () => {
 
@@ -128,4 +123,4 @@ const Layout = () => {
     )
 }
 
-export default Layout
+export default Layout;
