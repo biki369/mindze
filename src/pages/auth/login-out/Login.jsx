@@ -49,41 +49,28 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function Login(props) {
-
 //   if(authService.isLoggedIn()){
-
 //     props.history.push("./home");
-
 //   }
 
   const classes = useStyles();
-
 //   console.log(typeof classes.root);
 
   const [account, setAccount] = React.useState({username:"",password:""});
-
   const handelAccount = (property,event)=>{
-
     const accountCopy = {...account};
     accountCopy[property] = event.target.value;
-
     setAccount(accountCopy);
-
   }
-
 //   const isVarifiedUser=(username, password)=>{
-
 //     return users.find((user)=> user.username === username && user.password === password);
-
 //   };
-
 
   const handelLogin = ()=>{
     //   if(isVarifiedUser(account.username,account.password)){
     //     authService.doLogIn(account.username);
     //     setAccount({username:"",password:""});
     //     props.history.push("/home");
-
     //   }
   };
 
@@ -96,7 +83,7 @@ export default function Login(props) {
         item
         xs={12}
         sm={8}
-        md={5}
+        md={4}
         component={Paper}
         elevation={1}
         square

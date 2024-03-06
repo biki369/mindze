@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
       // justifyContent:'center',
       alginItem: 'center',
       flexWrap: "wrap",
-      gap: "20px",
+      gap: "10px",
     }
   },
 }));
@@ -70,7 +70,7 @@ const BookSummery = () => {
   return (
     <div className={classes.root}>
       <AppBar position="static">
-        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
+        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" centered>
           <Tab label="Personality Development" {...a11yProps(0)} />
           <Tab label="Psychology" {...a11yProps(1)} />
           <Tab label="Spirituality" {...a11yProps(2)} />

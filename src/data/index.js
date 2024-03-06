@@ -189,3 +189,91 @@ export const quotationsData = [
     url:"/src/assets/Quotation/encouragement/6.png"
   },
 ];
+
+
+export const mentalTestData = [
+  {
+    title: "Anexity Test",
+    img:'/src/assets/MentalHealthTest/anxiety.jpg'
+  },
+  {
+    title: "OCD Test",
+    img:'/src/assets/MentalHealthTest/ocd.jpg'
+  },
+  {
+    title: "Depression Test",
+    img:'/src/assets/MentalHealthTest/depression.jpg'
+  },
+  {
+    title: "Addiction Test",
+    img:'/src/assets/MentalHealthTest/addiction.jpg'
+  },
+  {
+    title: "Insomnia Test",
+    img:'/src/assets/MentalHealthTest/insomania.jpg'
+  },
+  {
+    title: "Panic Disorder Test",
+    img:'/src/assets/MentalHealthTest/panic_disorder.jpg'
+  },
+  {
+    title: "Eating Disorder Test",
+    img:'/src/assets/MentalHealthTest/eating_disorder.jpg'
+  },
+  {
+    title: "Bipolar Test",
+    img:'/src/assets/MentalHealthTest/bipolar.jpg'
+  },
+  {
+    title: "PTSD Test",
+    img:'/src/assets/MentalHealthTest/ptsd.jpg'
+  },
+  {
+    title: "ADHD Test",
+    img:'/src/assets/MentalHealthTest/adhd.jpg'
+  },
+];
+
+
+export const PhilosophicalPerspectiveData = [
+  {
+    title:"Osho",
+    img:"/src/assets/philosophers_image/mst_1.jpg",
+  },
+  {
+    title:"Jiddu Krishnamut",
+    img:"/src/assets/philosophers_image/mst_2.jpg",
+  },
+  {
+    title:"Sadguru",
+    img:"/src/assets/philosophers_image/mst_3.jpg",
+  },
+  {
+    title:"Alan Watts",
+    img:"/src/assets/philosophers_image/mst_4.webp",
+  },
+  {
+    title:"Eckhart Tolle",
+    img:"/src/assets/philosophers_image/mst_5.jpg",
+  },
+  {
+    title:"Jay Shetty",
+    img:"/src/assets/philosophers_image/mst_6.jpg",
+  },
+  {
+    title:"Adyashanti",
+    img:"/src/assets/philosophers_image/mst_7.jpg",
+  },
+  {
+    title:"Mooji",
+    img:"/src/assets/philosophers_image/mst_8.jpg",
+  },
+  {
+    title:"Thich Nhat Hanh",
+    img:"/src/assets/philosophers_image/mst_9.jpg",
+  },
+  {
+    title:"Deepak Chopra",
+    img:"/src/assets/philosophers_image/mst_10.jpg",
+  },
+]

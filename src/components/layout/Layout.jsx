@@ -7,6 +7,9 @@ import Home from '../../pages/home/Home';
 // import { Outlet } from 'react-router-dom'
 import QuickExercises from '../../pages/quickExc/QuickExercises';
 import BookSummery from '../../pages/bookSummery/BookSummery';
+import { MentalTest } from '../../pages/mental-test/MentalTest';
+import YogaMeditations from '../../pages/yoga-meditations/YogaMeditations';
+import PhilosophicalPerspective from '../../pages/philosophical-pers/PhilosophicalPerspective';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -112,10 +115,16 @@ const Layout = () => {
                         <QuickExercises />
                     </TabPanel>
                     <TabPanel value={value} index={2}>
-                        Item Three
+                        <MentalTest/>
+                    </TabPanel>
+                    <TabPanel value={value} index={3}>
+                        <YogaMeditations/>
                     </TabPanel>
                     <TabPanel value={value} index={4}>
                         <BookSummery />
+                    </TabPanel>
+                    <TabPanel value={value} index={5}>
+                        <PhilosophicalPerspective />
                     </TabPanel>
                 </Box>
             </Box>
