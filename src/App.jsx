@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/techniques:id" element={<Techniques />} />
+          <Route path="/techniques/:id" element={<Techniques />} />
           {/* {
             routes.map((e, i) => (
               <Route path={e.path} element={e.component} key={i} />

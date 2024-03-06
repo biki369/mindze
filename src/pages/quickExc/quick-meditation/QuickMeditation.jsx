@@ -45,7 +45,7 @@ const QuickMeditation = () => {
                     demoData.map((e, i) => (
                         <div className="techniques" key={i}>
                             <div className="title">
-                                <Link to={"/techniques:1212"}>Shikantaza("Just Sitting")</Link>
+                                <Link to={"/techniques/:1212"}>Shikantaza("Just Sitting")</Link>
                             </div>
                         </div>
                     ))
