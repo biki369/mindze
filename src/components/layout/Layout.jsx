@@ -10,6 +10,8 @@ import BookSummery from '../../pages/bookSummery/BookSummery';
 import { MentalTest } from '../../pages/mental-test/MentalTest';
 import YogaMeditations from '../../pages/yoga-meditations/YogaMeditations';
 import PhilosophicalPerspective from '../../pages/philosophical-pers/PhilosophicalPerspective';
+import Blogs from '../../pages/Blogs/BlogsMain';
+import BlogsMain from '../../pages/Blogs/BlogsMain';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -106,7 +108,7 @@ const Layout = () => {
                         }
                     </Tabs>
                 </AppBar>
-                
+
                 <Box className='tab-pnl__container'>
                     <TabPanel value={value} index={0}>
                         <Home />
@@ -115,16 +117,19 @@ const Layout = () => {
                         <QuickExercises />
                     </TabPanel>
                     <TabPanel value={value} index={2}>
-                        <MentalTest/>
+                        <MentalTest />
                     </TabPanel>
                     <TabPanel value={value} index={3}>
-                        <YogaMeditations/>
+                        <YogaMeditations />
                     </TabPanel>
                     <TabPanel value={value} index={4}>
                         <BookSummery />
                     </TabPanel>
                     <TabPanel value={value} index={5}>
                         <PhilosophicalPerspective />
+                    </TabPanel>
+                    <TabPanel value={value} index={6}>
+                        <BlogsMain />
                     </TabPanel>
                 </Box>
             </Box>

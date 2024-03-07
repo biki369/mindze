@@ -40,42 +40,53 @@ const useStyles = makeStyles((theme) => ({
         },
       }
     },
-       //==== about us===========
-       "& .about-section":{
-        display:"flex",
-        justifyContent:'center',
-        alignItems:'center',
-        gap:'2rem',
-        padding:'2rem 3.3rem',
-        "& > div": {
-          width: '50%',
-          [theme.breakpoints.down(600)]: {
-            width: "100%",
-          },
-         
-          },
-
-          "& .about-img":{
-            display:"flex",
-            justifyContent:'center',
-            alignItems:'center',
-            "& img":{
-              width:'500px',
-              borderRadius:'30px'
-              // height:'300px'
-            }
-          },
-          "& .about-us":{
-            padding:'0 6rem',
-            "& h1":{
-              display:"inline-block",
-              marginBottom:'1rem',
-              fontSize:'2.3rem',
-              outlineOffset: "-2px",
-              borderBottom:'3px solid #000'
-            }
-          }
+    //==== about us===========
+    "& .about-section": {
+      display: "flex",
+      [theme.breakpoints.down(600)]: {
+        width: "100%",
+        flexWrap: 'wrap',
       },
+      justifyContent: 'center',
+      alignItems: 'center',
+      gap: '2rem',
+      padding: '2rem 3.3rem',
+      // [theme.breakpoints.down(600)]: {
+      //   padding: '13px',
+      // },
+      "& > div": {
+        width: '50%',
+        [theme.breakpoints.down(600)]: {
+          width: "100%",
+        },
+      },
+      "& .about-img": {
+        display: "flex",
+        justifyContent: 'center',
+        alignItems: 'center',
+        "& img": {
+          width: '500px',
+          borderRadius: '30px',
+          [theme.breakpoints.down(600)]: {
+            width: '260px',
+          },
+          // height:'300px'
+        }
+      },
+      "& .about-us": {
+        padding: '0 6rem',
+        [theme.breakpoints.down(600)]: {
+          padding: '10px',
+        },
+        "& h1": {
+          display: "inline-block",
+          marginBottom: '1rem',
+          fontSize: '2.3rem',
+          outlineOffset: "-2px",
+          borderBottom: '3px solid #000'
+        }
+      }
+    },
 
     // ==== Review section style=====
     "& .review-section": {
@@ -158,22 +169,22 @@ const Home = () => {
         </Swiper>
       </div>
 
-        
-        <div className="about-section">
-           <div className='about-us'>
-               <h1>About us</h1>
-               <p>Mindze blends psychological insight, philosophical depth, and spiritual wellness to guide you through life's challenges. Our team believes in integrating these dimensions for healing, growth, and transformation.</p>
-           </div>
-           <div className="about-img">
-               <img src="/src/assets/Blog_pics/t9.png" alt="" />
-           </div>
+
+      <div className="about-section">
+        <div className='about-us'>
+          <h1>About us</h1>
+          <p>Mindze blends psychological insight, philosophical depth, and spiritual wellness to guide you through life's challenges. Our team believes in integrating these dimensions for healing, growth, and transformation.</p>
         </div>
-        
+        <div className="about-img">
+          <img src="/src/assets/Blog_pics/t9.png" alt="" />
+        </div>
+      </div>
+
       <div >
-        <ServiceSlider text={"Psychological Councellors"} data={reviewData}  />
+        <ServiceSlider text={"Psychological Councellors"} data={reviewData} />
       </div>
       <div >
-        <ServiceSlider text={"Spiritual Councellors"} data={reviewData}  />
+        <ServiceSlider text={"Spiritual Councellors"} data={reviewData} />
       </div>
 
       <div className="review-section">
@@ -190,7 +201,7 @@ const Home = () => {
 
       <div className="trustedBy-section">
         <div >
-          <ServiceSlider text={"Trusted by"}  trustbyData={reviewData} />
+          <ServiceSlider text={"Trusted by"} trustbyData={reviewData} />
         </div>
       </div>
 
