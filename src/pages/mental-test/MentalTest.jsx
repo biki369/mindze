@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
                 borderRadius: '13px',
-                border: '3px solid #000',
+                // border: '3px solid #000',
                 display: "flex",
                 justifyContent: 'center',
                 alignItems: 'end',

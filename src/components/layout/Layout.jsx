@@ -62,15 +62,21 @@ const useStyles = makeStyles((theme) => ({
                 },
             },
 
-            '& .MuiTabs-flexContainer': {
-                flexWrap: 'wrap',
-            },
+            // '& .MuiTabs-flexContainer': {
+            //     flexWrap: 'wrap',
+            // },
 
             "& .Mui-selected": {
                 // backgroundColor:`${theme.palette.primary}`,
                 backgroundColor: "#3f51b5",
                 color: "#fff"
             },
+            "& .MuiTab-root":{
+                width:'0'
+            }
+            // "& .MuiTabs-flexContainer":{
+            //     display:"block"
+            // },
         },
     },
 }));
@@ -94,6 +100,8 @@ const Layout = () => {
                         TabIndicatorProps={{
                             style: { display: 'none' }
                         }}
+                       
+
                     >
                         {
                             menuLits.map((e, i) =>

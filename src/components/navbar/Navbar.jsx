@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
     root: {
         //   flexGrow: 1,
+        padding:13,
         "& .logo-img": {
             width: "130px",
         },
@@ -18,6 +19,10 @@ const useStyles = makeStyles((theme) => ({
             alignItems: 'center',
             justifyContent: 'center',
             margin: "10px 0",
+            "& .typo-text": {
+                fontFamily: "Montserrat",
+                marginTop:13
+            },
         },
 
         "& .profile": {
@@ -40,8 +45,8 @@ const useStyles = makeStyles((theme) => ({
     avatar: {
         margin: theme.spacing(0),
         // backgroundColor: theme.palette.primary.main
-        backgroundColor:"#000",
-      },
+        backgroundColor: "#000",
+    },
 }));
 
 const Navbar = () => {
@@ -54,7 +59,7 @@ const Navbar = () => {
                 className='headerTop'
             >
                 <img src="/src/assets/logo.png" alt="logo" className="logo-img" />
-                <Typography>Blending Ancient Wisdom with Modern Mindcare</Typography>
+                <Typography className='typo-text'>Blending Ancient Wisdom with Modern Mindcare</Typography>
 
                 <div className="profile">
                     <div className="p-icon" title='Profile'>

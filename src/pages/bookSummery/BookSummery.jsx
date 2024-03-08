@@ -8,6 +8,8 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import { bookSummeryData } from '../../data';
 import BookCard from '../../components/cards/book-card/BookCard';
+import BookDetails from './BookDetails';
+import { Link } from '@material-ui/core';
 
 
 function TabPanel(props) {
@@ -49,7 +51,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
 
     "& .book-container": {
-      padding: "3rem",
+      marginTop: 20,
+      padding: "1rem",
       display: 'flex',
       // justifyContent:'center',
       alginItem: 'center',
@@ -78,8 +81,6 @@ const BookSummery = () => {
         </Tabs>
       </AppBar>
 
-
-    
       <TabPanel value={value} index={0}>
         <div className='book-container'>
           {
@@ -88,11 +89,14 @@ const BookSummery = () => {
                 <BookCard
                   data={e}
                 />
+
               </div>
             ))
           }
         </div>
+        <BookDetails />
       </TabPanel>
+
       <TabPanel value={value} index={1}>
         <div className='book-container'>
           {
@@ -106,6 +110,7 @@ const BookSummery = () => {
           }
         </div>
       </TabPanel>
+
       <TabPanel value={value} index={2}>
         <div className='book-container'>
           {
@@ -124,9 +129,9 @@ const BookSummery = () => {
           {
             bookSummeryData.map((e, i) => (
               <div className='' key={i}>
-                <BookCard
-                  data={e}
-                />
+                  <BookCard
+                    data={e}
+                  />
               </div>
             ))
           }

@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -94,6 +95,7 @@ const BookCard = ({ data }) => {
 
     return (
         <div className={classes.root}>
+            <Link to={"/booksummery/:3232"}>
             <div className="book-card">
                 <div className="book-card__cover">
                     <div className="book-card__book">
@@ -113,6 +115,8 @@ const BookCard = ({ data }) => {
                     </div>
                 </div>
             </div>
+            </Link>
+
         </div>
     )
 }

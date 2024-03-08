@@ -52,9 +52,6 @@ const useStyles = makeStyles((theme) => ({
 const Philosophers = () => {
     const classes = useStyles();
 
-
-
-
   return (
     <div className={classes.root}>
             <div className="philosophers-container">

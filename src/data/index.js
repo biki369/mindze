@@ -276,4 +276,25 @@ export const PhilosophicalPerspectiveData = [
     title:"Deepak Chopra",
     img:"/src/assets/philosophers_image/mst_10.jpg",
   },
+];
+
+
+
+export const blogPostData = [
+  {
+    title:"How can parents support their child's mental health?",
+    img:'/src/assets/Blog_pics/e1.jpg',
+  },
+  {
+    title:"How can parents support their child's mental health?",
+    img:'/src/assets/Blog_pics/lifestyle/image1.jpg',
+  },
+  {
+    title:"How can parents support their child's mental health?",
+    img:'/src/assets/Blog_pics/sports/image1.jpg',
+  },
+  {
+    title:"How can parents support their child's mental health?",
+    img:'/src/assets/Blog_pics/sprituality/image1.jpg',
+  },
 ]
