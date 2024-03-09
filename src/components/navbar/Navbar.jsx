@@ -4,7 +4,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import PermIdentityIcon from '@material-ui/icons/PermIdentity';
 import { Link } from 'react-router-dom';
 
-
 const useStyles = makeStyles((theme) => ({
     root: {
         //   flexGrow: 1,
@@ -24,7 +23,6 @@ const useStyles = makeStyles((theme) => ({
                 marginTop:13
             },
         },
-
         "& .profile": {
             position: 'absolute',
             right: "3.5vw",
@@ -41,7 +39,6 @@ const useStyles = makeStyles((theme) => ({
             }
         }
     },
-
     avatar: {
         margin: theme.spacing(0),
         // backgroundColor: theme.palette.primary.main
@@ -51,8 +48,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Navbar = () => {
     const classes = useStyles();
-
-
     return (
         <Box className={classes.root}>
             <Box
@@ -70,9 +65,7 @@ const Navbar = () => {
                         </Avatar>
                     </div>
                 </div>
-
             </Box>
-
         </Box>
     )
 }

@@ -1,6 +1,5 @@
 import { makeStyles } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-
 const useStyles = makeStyles((theme) => ({
     root: {
         // flexGrow: 1,
@@ -89,10 +88,8 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-
 const BookCard = ({ data }) => {
     const classes = useStyles();
-
     return (
         <div className={classes.root}>
             <Link to={"/booksummery/:3232"}>

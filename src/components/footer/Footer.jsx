@@ -4,10 +4,6 @@ import EmailIcon from '@material-ui/icons/Email';
 import PhoneIcon from '@material-ui/icons/Phone';
 import { Copyright } from '../copy-right/CopyRight';
 
-
-
-
-
 const useStyles = makeStyles((theme) => ({
     root: {
         "& .footer-container": {
@@ -23,7 +19,6 @@ const useStyles = makeStyles((theme) => ({
                 alignItems: 'center',
             },
             "& .ul-items": {
-
                 "& .footer-logo": {
                     "& img": {
                         width: '160px',
@@ -58,15 +53,10 @@ const useStyles = makeStyles((theme) => ({
 
     },
 }));
-
 const Footer = () => {
-
     const classes = useStyles();
-
-
     return (
         <div className={classes.root}>
-
             <div className="footer-container">
                 <Container>
                     <div className='footer-links'>
@@ -140,10 +130,9 @@ const Footer = () => {
                         </div>
                     </div>
                 </Container>
-
             </div>
             <div className="cpy-right">
-                <Typography > Mindze  <Copyright/>  </Typography>
+                <Typography > Mindze  <Copyright />  </Typography>
             </div>
         </div>
     )

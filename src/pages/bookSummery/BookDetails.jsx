@@ -1,12 +1,9 @@
 import { makeStyles, Container } from '@material-ui/core';
 import React from 'react'
 
-
-
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: "30px 23px",
-
     "& .book-overview": {
       textAlign: "center",
       "& .title": {
@@ -30,7 +27,6 @@ const useStyles = makeStyles((theme) => ({
         }
       },
     },
-
     "& .book-summery": {
       "& .title": {
         color: "#333",
