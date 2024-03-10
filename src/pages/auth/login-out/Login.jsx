@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Avatar, Box, Button, Checkbox, CssBaseline, FormControlLabel, Grid, makeStyles, Paper, TextField, Typography } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import image from "../../../assets/Home_page/1.jpg";
@@ -48,31 +48,132 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
+
+
 export default function Login(props) {
-//   if(authService.isLoggedIn()){
-//     props.history.push("./home");
-//   }
+  //   if(authService.isLoggedIn()){
+  //     props.history.push("./home");
+  //   }
 
   const classes = useStyles();
-//   console.log(typeof classes.root);
+  //   console.log(typeof classes.root);
 
-  const [account, setAccount] = React.useState({username:"",password:""});
-  const handelAccount = (property,event)=>{
-    const accountCopy = {...account};
+  const [isSignUp, setIsSignUp] = React.useState(false);
+  const [account, setAccount] = React.useState({ username: "", password: "" });
+
+  const handelAccount = (property, event) => {
+    const accountCopy = { ...account };
     accountCopy[property] = event.target.value;
     setAccount(accountCopy);
   }
-//   const isVarifiedUser=(username, password)=>{
-//     return users.find((user)=> user.username === username && user.password === password);
-//   };
+  //   const isVarifiedUser=(username, password)=>{
+  //     return users.find((user)=> user.username === username && user.password === password);
+  //   };
 
-  const handelLogin = ()=>{
+  const handelLogin = () => {
     //   if(isVarifiedUser(account.username,account.password)){
     //     authService.doLogIn(account.username);
     //     setAccount({username:"",password:""});
     //     props.history.push("/home");
     //   }
   };
+
+
+  const signUpForm = () => {
+    return (
+      <form className={classes.form} noValidate>
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={6}>
+            <TextField
+              autoComplete="fname"
+              name="firstName"
+              variant="outlined"
+              required
+              fullWidth
+              id="firstName"
+              label="First Name"
+              autoFocus
+            />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <TextField
+              variant="outlined"
+              required
+              fullWidth
+              id="lastName"
+              label="Last Name"
+              name="lastName"
+              autoComplete="lname"
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              variant="outlined"
+              required
+              fullWidth
+              id="email"
+              label="Email Address"
+              name="email"
+              autoComplete="email"
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              variant="outlined"
+              required
+              fullWidth
+              name="password"
+              label="Password"
+              type="password"
+              id="password"
+              autoComplete="current-password"
+            />
+          </Grid>
+          {/* <Grid item xs={12}>
+          <FormControlLabel
+            control={<Checkbox value="allowExtraEmails" color="primary" />}
+            label="I want to receive inspiration, marketing promotions and updates via email."
+          />
+        </Grid> */}
+        </Grid>
+      </form>
+    )
+  }
+
+
+  const signInform = () => {
+
+    return (
+      <form className={classes.form} noValidate>
+        <TextField
+          variant="outlined"
+          margin="normal"
+          required
+          fullWidth
+          id="email"
+          label="Email Address"
+          name="email"
+          autoComplete="email"
+          autoFocus
+        />
+        <TextField
+          variant="outlined"
+          margin="normal"
+          required
+          fullWidth
+          name="password"
+          label="Password"
+          type="password"
+          id="password"
+          autoComplete="current-password"
+        />
+        {/* <FormControlLabel
+      control={<Checkbox value="remember" color="primary" />}
+      label="Remember me"
+    /> */}
+
+      </form>)
+  }
 
   return (
     <Grid container component="main" className={classes.root}>
@@ -93,54 +194,35 @@ export default function Login(props) {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign in
+            {isSignUp ? "Sign Up" : "Sign In"}
           </Typography>
-          <form className={classes.form} noValidate>
-            <TextField
-            onChange={(event)=>handelAccount("username",event)}
-              variant="outlined"
-              margin="normal"
-              required
-              fullWidth
-              id="username"
-              label="Username"
-              name="username"
-              autoFocus
-            />
-            <TextField
-            onChange={(event)=>handelAccount("password",event)}
-              variant="outlined"
-              margin="normal"
-              required
-              fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-            />
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            />
+          <div>
+            {isSignUp ? signUpForm() : signInform()}
             <Button
               type="submit"
               fullWidth
               variant="contained"
               color="primary"
               className={classes.submit}
-              onClick = {handelLogin}
             >
-              Sign In
+              {isSignUp ? "Sign Up" : "Sign In"}
             </Button>
             <Grid container>
-              <Grid item>
-                <Link href="#" variant="body2">
-                  {"Don't have an account? Sign Up"}
+              <Grid item xs>
+
+                {
+                  !isSignUp &&<Link href="#" variant="body2">
+                  Forgot password?
                 </Link>
+                }
+              </Grid>
+              <Grid item style={{ course: "pointer" }}>
+                <Typography onClick={() => setIsSignUp(!isSignUp)} >
+                  {"Don't have an account? Sign Up"}
+                </Typography>
               </Grid>
             </Grid>
-          </form>
+          </div>
         </div>
       </Grid>
     </Grid>
