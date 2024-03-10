@@ -308,16 +308,18 @@ export const  counselorsData = [
     exp:"6",
     interest:"Lorem ipsum dolor sit, amet consectetur",
     education:"MA in Psychology",
-    online:true
+    online:true,
+    id:0,
   },
   {
-    name: "Raju",
+    name: "Name",
     desc:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum quod atque dolore iure?",
     img: "/src/assets/philosophers_image/b_2.jpg",
     exp:"3",
     interest:"Lorem ipsum dolor sit, amet consectetur",
     education:"MA,BA in Psychology",
-    online:false
+    online:false,
+    id:1,
   },
 ]
 

@@ -14,3 +14,15 @@ export const routes = [
         name: 'Login'
     },
 ];
+
+
+// const Tasks = React.lazy(() => import("./Components/Tasks"));
+// ...
+// const routes = [
+//   {
+//     path: "/tasks/edit/:id",
+//     name: "View Task",
+//     component: Tasks
+//   }
+// ...
+// ];

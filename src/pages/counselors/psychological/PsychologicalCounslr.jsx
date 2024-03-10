@@ -1,14 +1,15 @@
-import { Avatar, Paper, makeStyles } from '@material-ui/core';
 import React from 'react'
+import { Avatar, Paper, makeStyles } from '@material-ui/core';
 import SchoolIcon from '@material-ui/icons/School';
 import { counselorsData } from '../../../data';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         padding: 20,
         "& .counselor-container": {
             display: "flex",
-            gap: 10,
+            gap: 6,
             flexWrap: "wrap",
             "& .counselor": {
                 padding: "6px 10px",
@@ -74,17 +75,19 @@ const PsychologicalCounslr = () => {
                 {
                     counselorsData.map((e, i) => (
                         <Paper key={i}>
-                            <div className="counselor">
-                                <div className="counselor-img">
-                                    <Avatar alt="" src={e.img} className={classes.counslrAvatar} />
+                            <Link to={`/counselor/${e.id}`}>
+                                <div className="counselor">
+                                    <div className="counselor-img">
+                                        <Avatar alt="" src={e.img} className={classes.counslrAvatar} />
+                                    </div>
+                                    <div className="counselor-about">
+                                        <div className="name"> <span className='counslr-online' style={{ backgroundColor: e.online ? "#00b894" : "red" }}></span>{e.name}</div>
+                                        <div className="desc">{e.desc}</div>
+                                        <div className="exp">{e.exp}+ years of experience</div>
+                                        <div className="edu"><span><SchoolIcon /></span> {e.education}</div>
+                                    </div>
                                 </div>
-                                <div className="counselor-about">
-                                    <div className="name"> <span className='counslr-online' style={{ backgroundColor: e.online ? "#00b894" : "red" }}></span>{e.name}</div>
-                                    <div className="desc">{e.desc}</div>
-                                    <div className="exp">{e.exp}+ years of experience</div>
-                                    <div className="edu"><span><SchoolIcon /></span> {e.education}</div>
-                                </div>
-                            </div>
+                            </Link>
                         </Paper>
                     ))
                 }

@@ -10,6 +10,7 @@ import Test from './pages/mental-test/Test';
 import BlogDetails from './pages/Blogs/blog-details/BlogDetails';
 import PhilosopherDetails from './pages/philosophical-pers/philosopher-details/PhilosopherDetails';
 import BookDetails from './pages/bookSummery/BookDetails';
+import CounselorDetails from './pages/counselors/counselor-details/CounselorDetails';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/philosophers/:id" element={<PhilosopherDetails/>} />
           <Route path="/philosophers/:id" element={<PhilosopherDetails/>} />
           <Route path="/booksummery/:id" element={<BookDetails/>} />
+          <Route path="/counselor/:id" element={<CounselorDetails/>} />
           {/* {
             routes.map((e, i) => (
               <Route path={e.path} element={e.component} key={i} />
