@@ -297,4 +297,36 @@ export const blogPostData = [
     title:"How can parents support their child's mental health?",
     img:'/src/assets/Blog_pics/sprituality/image1.jpg',
   },
+];
+
+
+export const  counselorsData = [
+  {
+    name: "Yoga",
+    desc:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum quod atque dolore iure?",
+    img: "/src/assets/philosophers_image/b_2.jpg",
+    exp:"6",
+    interest:"Lorem ipsum dolor sit, amet consectetur",
+    education:"MA in Psychology",
+    online:true
+  },
+  {
+    name: "Raju",
+    desc:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum quod atque dolore iure?",
+    img: "/src/assets/philosophers_image/b_2.jpg",
+    exp:"3",
+    interest:"Lorem ipsum dolor sit, amet consectetur",
+    education:"MA,BA in Psychology",
+    online:false
+  },
 ]
+
+
+/* 
+name 
+designation
+yrs of experience 
+Area of interest 
+background education
+
+*/

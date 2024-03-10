@@ -12,6 +12,8 @@ import YogaMeditations from '../../pages/yoga-meditations/YogaMeditations';
 import PhilosophicalPerspective from '../../pages/philosophical-pers/PhilosophicalPerspective';
 import Blogs from '../../pages/Blogs/BlogsMain';
 import BlogsMain from '../../pages/Blogs/BlogsMain';
+import SpiritualCounslr from '../../pages/counselors/spiritual/SpiritualCounslr';
+import PsychologicalCounslr from '../../pages/counselors/psychological/PsychologicalCounslr';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -138,6 +140,12 @@ const Layout = () => {
                     </TabPanel>
                     <TabPanel value={value} index={6}>
                         <BlogsMain />
+                    </TabPanel>
+                    <TabPanel value={value} index={7}>
+                       <SpiritualCounslr/>
+                    </TabPanel>
+                    <TabPanel value={value} index={8}>
+                        <PsychologicalCounslr/>
                     </TabPanel>
                 </Box>
             </Box>
