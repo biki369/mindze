@@ -309,6 +309,7 @@ export const  counselorsData = [
     interest:"Lorem ipsum dolor sit, amet consectetur",
     education:"MA in Psychology",
     online:true,
+    designation:"Yoga Teacher",
     id:0,
   },
   {
@@ -319,7 +320,29 @@ export const  counselorsData = [
     interest:"Lorem ipsum dolor sit, amet consectetur",
     education:"MA,BA in Psychology",
     online:false,
+    designation:"Analyst,Stress,Depression",
     id:1,
+  },
+];
+
+export const userRating = [
+  {
+    name:"user name",
+    comment:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem fugiat maiores perspiciatis",
+    avatar:"/src/assets/philosophers_image/b_3.jpg",
+    rating:5,
+  },
+  {
+    name:"user name",
+    comment:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem fugiat maiores perspiciatis",
+    avatar:"/src/assets/philosophers_image/b_9.jpg",
+    rating:3,
+  },
+  {
+    name:"user name",
+    comment:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem fugiat maiores perspiciatis",
+    avatar:"/src/assets/philosophers_image/c_1.jpg",
+    rating:2,
   },
 ]
 
