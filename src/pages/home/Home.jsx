@@ -8,6 +8,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { heroSliderImg, psychologicalSliderImg, reviewData } from '../../data';
 import ServiceSlider from '../../components/sliders/serice-sldier/ServiceSlider';
+import NavigationDrawer from '../../components/drawer/NavigationDrawer';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -206,7 +207,7 @@ const Home = () => {
           <ServiceSlider text={"Trusted by"} trustbyData={reviewData} />
         </div>
       </div>
-
+        {/* <NavigationDrawer /> */}
     </div>
   )
 }

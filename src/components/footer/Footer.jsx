@@ -3,6 +3,7 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 import EmailIcon from '@material-ui/icons/Email';
 import PhoneIcon from '@material-ui/icons/Phone';
 import { Copyright } from '../copy-right/CopyRight';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -19,15 +20,16 @@ const useStyles = makeStyles((theme) => ({
                 alignItems: 'center',
             },
             "& .ul-items": {
+
                 "& .footer-logo": {
                     "& img": {
                         width: '160px',
-                    }
+                    },
                 },
                 "& li": {
                     listStyle: "none",
                     display: 'flex',
-                    justifyContent: 'center',
+                    // justifyContent: 'center',
                     alignItems: 'center',
                     gap: "10px",
                     margin: "13px 0",
@@ -72,28 +74,25 @@ const Footer = () => {
                                 </li>
                                 <li>
                                     <EmailIcon />
-                                    xyz@email.com
+                                    info.mindze@gmail.com
                                 </li>
                                 <li>
                                     <PhoneIcon />
                                     +91 xxxxxxxxx
                                 </li>
-                                <li>
-
-                                </li>
                             </ul>
                         </div>
                         <div className="ul-items">
                             <ul>
                                 <h3>Quick Links</h3>
                                 <li>
-                                    <a href="#">xyz</a>
+                                    <Link to={"/"}>Home</Link>
                                 </li>
                                 <li>
-                                    <a href="#">xyz</a>
+                                    <Link to={"/"}>Home</Link>
                                 </li>
                                 <li>
-                                    <a href="#">xyz</a>
+                                    <Link to={"/"}>Home</Link>
                                 </li>
 
                             </ul>
@@ -102,13 +101,14 @@ const Footer = () => {
                             <ul>
                                 <h3>Quick Links</h3>
                                 <li>
-                                    <a href="#">xyz</a>
+                                    <Link to={"/"}>Home</Link>
                                 </li>
                                 <li>
-                                    <a href="#">xyz</a>
+                                    <Link to={"/"}>Home</Link>
+
                                 </li>
                                 <li>
-                                    <a href="#">xyz</a>
+                                    <Link to={"/"}>Home</Link>
                                 </li>
 
                             </ul>
