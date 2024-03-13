@@ -58,6 +58,10 @@ const useStyles = makeStyles((theme) => ({
       alginItem: 'center',
       flexWrap: "wrap",
       gap: "10px",
+      [theme.breakpoints.down(600)]: {
+        justifyContent: 'center',
+
+      }
     }
   },
 }));
@@ -129,9 +133,9 @@ const BookSummery = () => {
           {
             bookSummeryData.map((e, i) => (
               <div className='' key={i}>
-                  <BookCard
-                    data={e}
-                  />
+                <BookCard
+                  data={e}
+                />
               </div>
             ))
           }

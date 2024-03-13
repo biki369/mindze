@@ -73,8 +73,8 @@ const useStyles = makeStyles((theme) => ({
                 backgroundColor: "#3f51b5",
                 color: "#fff"
             },
-            "& .MuiTab-root":{
-                width:'0'
+            "& .MuiTab-root": {
+                width: '0'
             }
             // "& .MuiTabs-flexContainer":{
             //     display:"block"
@@ -102,8 +102,6 @@ const Layout = () => {
                         TabIndicatorProps={{
                             style: { display: 'none' }
                         }}
-                       
-
                     >
                         {
                             menuLits.map((e, i) =>
@@ -142,10 +140,10 @@ const Layout = () => {
                         <BlogsMain />
                     </TabPanel>
                     <TabPanel value={value} index={7}>
-                       <SpiritualCounslr/>
+                        <SpiritualCounslr />
                     </TabPanel>
                     <TabPanel value={value} index={8}>
-                        <PsychologicalCounslr/>
+                        <PsychologicalCounslr />
                     </TabPanel>
                 </Box>
             </Box>

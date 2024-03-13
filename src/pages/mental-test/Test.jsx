@@ -15,8 +15,12 @@ const useStyles = makeStyles((theme) => ({
             },
             "& .test-content": {
                 "& p": {
-                    color: "#333",
-                    fontSize: "1.2rem",
+                    // color: "#333",
+                    fontSize:'1rem',
+                    color: "#2c3e50",
+                    fontFamily:'Montserrat',
+                    fontWeight:400,
+                    lineHeight:1.5,
                     // fontWeight: "400",
                     margin: "10px 0",
                     padding: '10px 30px',
@@ -27,7 +31,16 @@ const useStyles = makeStyles((theme) => ({
                     "& li": {
                         margin:"2rem 0",
                         fontSize:'1rem',
-                        color:"#333",
+                        color: "#2c3e50",
+                        fontFamily:'Montserrat',
+                        fontWeight:400,
+                        lineHeight:1.5,
+                        "& .MuiTypography-body1":{
+                            color: "#2c3e50",
+                            fontFamily:'Montserrat',
+                            fontWeight:400,
+                            lineHeight:1.5,
+                        },
                     },
                     "& p": {
                         padding: '0',
@@ -86,7 +99,7 @@ const Test = () => {
                     <div className='test-content'>
                         <p>It is based on the GAD-7, a standardized tool used for screening generalized anxiety disorder. The frequency of the following symptoms over the past two weeks:</p>
 
-                        <ol >
+                        <ol>
                             {testOlData.map((e, i) => (
                                 <li key={i}>
                                     <p>{e.li}</p>

@@ -6,20 +6,33 @@ import { Link } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
     root: {
         padding: '30px',
-        "& p":{
-          textAlign:'center',
-          marginBottom:'20px',
+        "& p": {
+            textAlign: 'center',
+            marginBottom: '20px',
         },
         "& .philosophers-container": {
             display: "flex",
             flexWrap: "wrap",
             width: '100%',
             gap: '10px',
+            alignItems:'center',
+            [theme.breakpoints.down(600)]: {
+                justifyContent: 'center',
+
+            },
             "& .philosophers-box": {
                 padding: "20px",
                 // display:"block",
                 minWidth: 283,
                 height: 300,
+                [theme.breakpoints.down(700)]: {
+                    minWidth: "49%",
+    
+                },
+                [theme.breakpoints.down(500)]: {
+                    minWidth: "100%",
+    
+                },
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
                 borderRadius: '13px',
@@ -39,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
                         "&:hover": {
                             borderBottom: `3px solid ${theme.palette.primary.main}`,
                             cursor: 'pointer',
-                            
+
                         }
                     }
                 }
@@ -52,12 +65,12 @@ const useStyles = makeStyles((theme) => ({
 const Philosophers = () => {
     const classes = useStyles();
 
-  return (
-    <div className={classes.root}>
+    return (
+        <div className={classes.root}>
             <div className="philosophers-container">
-            {
+                {
                     PhilosophicalPerspectiveData.map((e, i) => (
-                        <div className="philosophers-box" key={i} style={{ backgroundImage:`linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(${e.img})` }}>
+                        <div className="philosophers-box" key={i} style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(${e.img})` }}>
                             <div className="test-title" >
                                 <Link to={`/philosophers/:369`}><h3>{e.title}</h3></Link>
                             </div>
@@ -65,8 +78,8 @@ const Philosophers = () => {
                     ))
                 }
             </div>
-    </div>
-  )
+        </div>
+    )
 }
 
 export default Philosophers

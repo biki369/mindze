@@ -1,6 +1,6 @@
 import { Box, Typography, makeStyles } from '@material-ui/core';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y,Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -144,11 +144,13 @@ const Home = () => {
           // spaceBetween={30}
           centeredSlides={true}
           autoplay={{
-            delay: 2500,
+            delay: 1000,
             disableOnInteraction: false,
           }}
+          speed={5000}
+          loop={true}
           // slidesPerView={1}
-          modules={[Pagination, Navigation, Scrollbar]}
+          modules={[Pagination, Navigation, Scrollbar,Autoplay]}
           navigation
           pagination={{ clickable: true }}
         // Autoplay

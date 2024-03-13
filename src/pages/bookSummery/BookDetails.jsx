@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
           fontSize: 16,
           fontFamily: " Arial, sans-serif",
           color: "#333",
+          margin:"6px 0",
           "& strong": {
             marginRight: 6,
           },

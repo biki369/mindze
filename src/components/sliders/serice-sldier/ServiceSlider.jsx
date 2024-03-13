@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import { EffectCoverflow, Pagination, Navigation ,Autoplay} from 'swiper/modules';
 import { makeStyles } from '@material-ui/core';
 
 
@@ -85,7 +85,6 @@ const ServiceSlider = (props) => {
           effect={'coverflow'}
           grabCursor={true}
           centeredSlides={true}
-          loop={true}
           slidesPerView={'auto'}
           coverflowEffect={{
             rotate: 0,
@@ -100,10 +99,12 @@ const ServiceSlider = (props) => {
             clickable: true,
           }}
           autoplay={{
-            delay: 2500,
+            delay: 1000,
             disableOnInteraction: false,
           }}
-          modules={[EffectCoverflow, Pagination, Navigation]}
+          speed={3000}
+          loop={true}
+          modules={[EffectCoverflow, Pagination, Navigation,Autoplay]}
           className="swiper_container"
         >
           {/* <SwiperSlide>
