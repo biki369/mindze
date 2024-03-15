@@ -27,6 +27,12 @@ const useStyles = makeStyles((theme) => ({
                 display: "flex",
                 justifyContent: 'center',
                 alignItems: 'end',
+                [theme.breakpoints.down(760)]: {
+                    minWidth: "43vw",
+                },
+                [theme.breakpoints.down(500)]: {
+                    width: "100%",
+                },
                 "& .test-title": {
                     color: "#fff",
                     "& h3": {

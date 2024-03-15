@@ -1,5 +1,5 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core';
+import React, { useState } from 'react';
+import { makeStyles, useMediaQuery, useTheme } from '@material-ui/core';
 import { AppBar, Box, Tab, Tabs, Typography } from "@material-ui/core"
 import PropTypes from 'prop-types';
 import { menuLits } from '../../data';
@@ -14,6 +14,7 @@ import Blogs from '../../pages/Blogs/BlogsMain';
 import BlogsMain from '../../pages/Blogs/BlogsMain';
 import SpiritualCounslr from '../../pages/counselors/spiritual/SpiritualCounslr';
 import PsychologicalCounslr from '../../pages/counselors/psychological/PsychologicalCounslr';
+import NavigationDrawer from '../drawer/NavigationDrawer';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -87,6 +88,13 @@ const Layout = () => {
 
     const classes = useStyles();
     const [value, setValue] = React.useState(0);
+    const theme = useTheme();
+    const mobileDevice = useMediaQuery(theme.breakpoints.down('md'));
+
+    const [drawerOpen, setDrawerOpen] = useState(false);
+    const toggleDrawer = () => {
+        setDrawerOpen(!drawerOpen);
+    };
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -95,27 +103,38 @@ const Layout = () => {
     return (
         <div className={classes.root}>
             <Box className='navBar'>
-                <AppBar position="sticky" color='#000' className='top-nav'>
-                    <Tabs value={value}
-                        onChange={handleChange}
-                        aria-label="simple tabs example"
-                        TabIndicatorProps={{
-                            style: { display: 'none' }
-                        }}
-                    >
-                        {
-                            menuLits.map((e, i) =>
-                            (
-                                <Tab
-                                    label={e.label}
-                                    {...a11yProps(i)}
-                                    key={i}
-                                />
-                            )
-                            )
-                        }
-                    </Tabs>
-                </AppBar>
+                {
+                    !mobileDevice && <AppBar position="sticky" color='#000' className='top-nav'>
+                        <Tabs value={value}
+                            onChange={handleChange}
+                            aria-label="simple tabs example"
+                            TabIndicatorProps={{
+                                style: { display: 'none' }
+                            }}
+                        >
+                            {
+                                menuLits.map((e, i) =>
+                                (
+                                    <Tab
+                                        label={e.label}
+                                        {...a11yProps(i)}
+                                        key={i}
+                                    />
+                                )
+                                )
+                            }
+                        </Tabs>
+                    </AppBar>
+                }
+
+                {
+                    mobileDevice &&
+                    <>
+                        <button onClick={toggleDrawer}>Toggle Drawer</button>
+                        <NavigationDrawer isOpen={drawerOpen} onClose={toggleDrawer} items={menuLits} />
+                    </>
+                }
+
 
                 <Box className='tab-pnl__container'>
                     <TabPanel value={value} index={0}>

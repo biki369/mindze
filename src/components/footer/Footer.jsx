@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
     root: {
         "& .footer-container": {
-            textAlign: "center",
+            // textAlign: "center",
             padding: "3rem",
             backgroundColor: "rgb(28,35,49)",
             color: '#fff',
@@ -34,6 +34,8 @@ const useStyles = makeStyles((theme) => ({
                     gap: "10px",
                     margin: "13px 0",
                     "& a": {
+                        fontFamily:'Montserrat',
+                        fontSize:14,
                         textDecoration: 'none',
                         color: "#fff"
                     },

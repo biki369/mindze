@@ -27,6 +27,9 @@ const useStyles = makeStyles((theme) => ({
       padding: " 1rem 0",
       fontSize: " 3.5rem",
       textAlign: "center",
+      [theme.breakpoints.down(600)]: {
+        fontSize: " 2rem",
+      },
     },
 
     "& .swiper_container": {

@@ -10,8 +10,9 @@ const useStyles = makeStyles((theme) => ({
       display: "flex",
       gap:"23px",
       flexWrap:'wrap',
-
-
+      [theme.breakpoints.down(600)]: {
+        justifyContent:"center"
+      },
       "& .short-execs__card": {
         display: "flex",
         justifyContent: 'center',

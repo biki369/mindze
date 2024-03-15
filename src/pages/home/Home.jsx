@@ -1,4 +1,4 @@
-import { Box, Typography, makeStyles } from '@material-ui/core';
+import { Box, Typography, makeStyles, useMediaQuery, useTheme } from '@material-ui/core';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y,Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -9,6 +9,7 @@ import 'swiper/css/scrollbar';
 import { heroSliderImg, psychologicalSliderImg, reviewData } from '../../data';
 import ServiceSlider from '../../components/sliders/serice-sldier/ServiceSlider';
 import NavigationDrawer from '../../components/drawer/NavigationDrawer';
+import { useState } from 'react';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -44,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     //==== about us===========
     "& .about-section": {
       display: "flex",
-      [theme.breakpoints.down(600)]: {
+      [theme.breakpoints.down(800)]: {
         width: "100%",
         flexWrap: 'wrap',
       },
@@ -57,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
       // },
       "& > div": {
         width: '50%',
-        [theme.breakpoints.down(600)]: {
+        [theme.breakpoints.down(800)]: {
           width: "100%",
         },
       },
@@ -68,16 +69,22 @@ const useStyles = makeStyles((theme) => ({
         "& img": {
           width: '500px',
           borderRadius: '30px',
-          [theme.breakpoints.down(600)]: {
-            width: '260px',
+          [theme.breakpoints.down('md')]: {
+            width: '360px',
           },
           // height:'300px'
         }
       },
       "& .about-us": {
         padding: '0 6rem',
-        [theme.breakpoints.down(600)]: {
+        [theme.breakpoints.down(800)]: {
           padding: '10px',
+        },
+        "& p":{
+          fontSize: '1.2rem',
+          [theme.breakpoints.down(800)]: {
+            fontSize: '2rem',
+          },
         },
         "& h1": {
           display: "inline-block",
@@ -135,6 +142,9 @@ const useStyles = makeStyles((theme) => ({
 
 const Home = () => {
   const classes = useStyles();
+
+
+
 
   return (
     <div className={classes.root}>
@@ -207,7 +217,7 @@ const Home = () => {
           <ServiceSlider text={"Trusted by"} trustbyData={reviewData} />
         </div>
       </div>
-        {/* <NavigationDrawer /> */}
+        
     </div>
   )
 }

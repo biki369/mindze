@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Avatar, Button, Grid, Paper, makeStyles } from '@material-ui/core';
 import SchoolIcon from '@material-ui/icons/School';
 import { counselorsData } from '../../../data';
 import { Link } from 'react-router-dom';
 import StarsIcon from '@material-ui/icons/Stars';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+import MuiModal from '../../../components/modal/MuiModal';
+import DatePicker from '../../../components/mui-date-picker/DatePicker';
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -74,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
                 },
             },
 
-            "& .paper-dev":{
+            "& .paper-dev": {
                 padding: "10px 6px",
             }
         },
@@ -89,42 +92,66 @@ const useStyles = makeStyles((theme) => ({
 const PsychologicalCounslr = () => {
     const classes = useStyles();
 
+    const [selectedDate, setSelectedDate] = useState(new Date());
+
+    const handleDateChange = (date) => {
+      setSelectedDate(date);
+    };
+
+    const [openModal, setOpenModal] = useState(false);
+
+    const handleOpenModal = () => {
+        setOpenModal(true);
+    };
+
+    const handleCloseModal = () => {
+        setOpenModal(false);
+    };
+
     return (
         <div className={classes.root}>
             <div className='counselor-container'>
                 {
                     counselorsData.map((e, i) => (
                         <Paper key={i} className='paper-dev'>
-                                <div className="counselor" >
-                                    <div className="counselor-img">
-                                        <Avatar alt="" src={e.img} className={classes.counslrAvatar} />
-                                    </div>
-                                    <div className="counselor-about">
-                                        <div className="name">{e.name}</div>
-                                        <div className="exp">{e.exp}+ years of experience</div>
-                                    </div>
+                            <div className="counselor" >
+                                <div className="counselor-img">
+                                    <Avatar alt="" src={e.img} className={classes.counslrAvatar} />
                                 </div>
-                                <div className='designation-section'>
-                                    <div className="designation"> <span><StarsIcon /></span>  {e.designation}</div>
-                                    <div className='interest'><span><CheckCircleIcon /></span><strong>interest:</strong>{e.interest}</div>
-                                    {/* <div className="edu"><span><SchoolIcon /></span> {e.education}</div> */}
+                                <div className="counselor-about">
+                                    <div className="name">{e.name}</div>
+                                    <div className="exp">{e.exp}+ years of experience</div>
                                 </div>
-                            
+                            </div>
+                            <div className='designation-section'>
+                                <div className="designation"> <span><StarsIcon /></span>  {e.designation}</div>
+                                <div className='interest'><span><CheckCircleIcon /></span><strong>interest:</strong>{e.interest}</div>
+                                {/* <div className="edu"><span><SchoolIcon /></span> {e.education}</div> */}
+                            </div>
+
                             <Grid container mt={2}
-                            direction="row"
-                            justifyContent="flex-end"
-                            alignItems="center"
+                                direction="row"
+                                justifyContent="flex-end"
+                                alignItems="center"
                             >
-                                 <Grid item xs={12} sm={2}></Grid>
+                                <Grid item xs={12} sm={2}></Grid>
                                 <Grid item xs={12} sm={5}>
                                     <Button variant="outlined" color="primary">
                                         <Link to={`/counselor/${e.id}`}>View Profile</Link>
                                     </Button>
                                 </Grid>
                                 <Grid item xs={12} sm={5}>
-                                    <Button  variant="contained" color="primary">Book session</Button>
+                                    <Button variant="contained" color="primary"
+                                        onClick={handleOpenModal}
+                                    >Book session</Button>
                                 </Grid>
                             </Grid>
+
+                            <div className='modal-container'>
+                                <MuiModal open={openModal} onClose={handleCloseModal} data={e}>
+                                    <DatePicker selectedDate={selectedDate} onChange={handleDateChange} />
+                                </MuiModal>
+                            </div>
                         </Paper>
                     ))
                 }
