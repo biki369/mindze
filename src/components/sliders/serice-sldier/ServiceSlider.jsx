@@ -35,6 +35,9 @@ const useStyles = makeStyles((theme) => ({
     "& .swiper_container": {
       // height:" 52rem",
       height:'80vh',
+      [theme.breakpoints.down(769)]: {
+        height:'56vh',
+      },
       padding: "2rem 0",
       position: " relative",
 

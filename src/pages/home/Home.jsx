@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
       position: "relative",
       width: "100vw",
       height: "93vh",
+      [theme.breakpoints.down(760)]: {
+        height: "43vh",
+      },
       "& img": {
         width: '100%',
         // height:"100%",
@@ -82,9 +85,9 @@ const useStyles = makeStyles((theme) => ({
         },
         "& p":{
           fontSize: '1.2rem',
-          [theme.breakpoints.down(800)]: {
-            fontSize: '2rem',
-          },
+          // [theme.breakpoints.down(800)]: {
+          //   fontSize: '1rem',
+          // },
         },
         "& h1": {
           display: "inline-block",
@@ -131,7 +134,10 @@ const useStyles = makeStyles((theme) => ({
           },
           "& .heading": {
             padding: '0.5rem 0',
-            fontSize: '1.3rem'
+            fontSize: '1.3rem',
+            [theme.breakpoints.down(769)]: {
+              fontSize: '2rem',
+            },
           }
         }
       }

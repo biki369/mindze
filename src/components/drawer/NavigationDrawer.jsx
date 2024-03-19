@@ -1,20 +1,53 @@
 // NavigationDrawer
 
 import React from 'react';
-import { Drawer, List, ListItem, ListItemText } from '@material-ui/core';
+import { Drawer, List, ListItem, ListItemText, makeStyles } from '@material-ui/core';
+import { NavLink } from 'react-router-dom';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    padding: '30px',
+    "& .nav-links": {
+      display: "flex",
+      justifyContent: "center",
+      flexDirection: 'column',
+      // gap: "0.5rem",
+      "& a": {
+        padding: '10px',
+        width: '100%',
+      },
+      [theme.breakpoints.down(600)]: {}
+    }
+  },
+}));
+
 
 const NavigationDrawer = ({ isOpen, onClose, items }) => {
-  console.log(items,"sajdhg")
+  const classes = useStyles();
 
 
   return (
-    <Drawer open={isOpen} onClose={onClose}>
-      <List>
-        {items.map((item, index) => (
+    <Drawer open={isOpen} onClose={onClose} className={classes.root}>
+      <List className='nav-links'>
+        {/* {items.map((item, index) => (
           <ListItem button key={index} onClick={item.onClick}>
             <ListItemText primary={item.label} />
           </ListItem>
-        ))}
+        ))} */}
+        {
+          items.map((item, index) => (
+            <ListItem key={index}>
+              <NavLink to={item.path}
+                style={({ isActive }) => ({
+                  color: isActive ? '#fff' : '',
+                  background: isActive ? '#3f51b5' : '',
+                })}
+                onClick={onClose}
+
+              >{item.label}</NavLink>
+            </ListItem>
+          ))
+        }
       </List>
     </Drawer>
   );

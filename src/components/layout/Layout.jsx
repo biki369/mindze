@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { makeStyles, useMediaQuery, useTheme } from '@material-ui/core';
+import { Button, Toolbar, makeStyles, useMediaQuery, useTheme } from '@material-ui/core';
 import { AppBar, Box, Tab, Tabs, Typography } from "@material-ui/core"
 import PropTypes from 'prop-types';
 import { menuLits } from '../../data';
@@ -15,6 +15,11 @@ import BlogsMain from '../../pages/Blogs/BlogsMain';
 import SpiritualCounslr from '../../pages/counselors/spiritual/SpiritualCounslr';
 import PsychologicalCounslr from '../../pages/counselors/psychological/PsychologicalCounslr';
 import NavigationDrawer from '../drawer/NavigationDrawer';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import { Link, Route, Routes, } from 'react-router-dom';
+// import { Switch } from 'react-router';
+
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -28,9 +33,9 @@ function TabPanel(props) {
             {...other}
         >
             {value === index && (
-                <Box p={0}>
-                    <Typography>{children}</Typography>
-                </Box>
+                <>
+                    {children}
+                </>
             )}
         </div>
     );
@@ -111,6 +116,7 @@ const Layout = () => {
                             TabIndicatorProps={{
                                 style: { display: 'none' }
                             }}
+                            variant="fullWidth"
                         >
                             {
                                 menuLits.map((e, i) =>
@@ -128,11 +134,11 @@ const Layout = () => {
                 }
 
                 {
-                    mobileDevice &&
-                    <>
-                        <button onClick={toggleDrawer}>Toggle Drawer</button>
-                        <NavigationDrawer isOpen={drawerOpen} onClose={toggleDrawer} items={menuLits} />
-                    </>
+                    // mobileDevice &&
+                    // <>
+                    //     <button onClick={toggleDrawer}>Toggle Drawer</button>
+                    //     <NavigationDrawer isOpen={drawerOpen} onClose={toggleDrawer} items={menuLits} />
+                    // </>
                 }
 
 
@@ -165,6 +171,28 @@ const Layout = () => {
                         <PsychologicalCounslr />
                     </TabPanel>
                 </Box>
+
+                {/* <AppBar position="static">
+                    <Toolbar space={2}>
+                        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                            <MenuIcon />
+                        </IconButton>
+                        <Typography variant="h6" className={classes.title}>
+                            <Link to={"/"}>Home</Link>
+                        </Typography>
+                        <Typography variant="h6" className={classes.title}>
+                            <Link to={"/quickExercises"}>QuickExercises</Link>
+                        </Typography>
+                        <Button color="inherit">Login</Button>
+                    </Toolbar>
+                </AppBar>
+
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/quickExercises" element={<QuickExercises />} />
+                </Routes> */}
+
+                {/* <NavigationDrawer isOpen={drawerOpen} onClose={toggleDrawer} items={menuLits} /> */}
             </Box>
         </div>
     )

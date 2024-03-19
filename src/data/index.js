@@ -2,45 +2,54 @@ export const menuLits = [
   {
     label: "Home",
     icon: "",
+    path:"/"
     // components:<Home/>
   },
   {
     label: "Quick Exercises",
+    path:'/quickExercises',
     icon: "",
     components: "",
   },
   {
     label: "Mental Health Tests",
+    path:"/mentalTest",
     icon: "",
     components: "",
   },
   {
     label: "Yoga & Meditation",
+    path:'/yogaMeditations',
     icon: "",
     components: "",
   },
   {
     label: "Book Summaries",
+    path:'/bookSummery',
     icon: "",
     components: "",
   },
   {
     label: "Philosophical Perspective",
+    path:'/philosophers',
     icon: "",
     components: "",
   },
   {
     label: "Blogs",
+    path:'/blogs',
     icon: "",
     components: "",
   },
   {
     label: "Spiritual Counselors",
+    path:'/spiritualCounselors',
     icon: "",
     components: "",
   },
   {
     label: "Philosophical Counselors",
+    path:'/philosophicalCounselors',
     icon: "",
     components: "",
   },
@@ -121,16 +130,28 @@ export const psychologicalSliderImg = [
 
 export const shortsExe = [
   {
-    url: "https://drive.google.com/file/d/1uY1HFUfWTds9KsC-w2LcmRCKAcwAtHUu/preview",
+    url: "https://drive.google.com/file/d/1umK1rigOs3KL7sHVqRJfZvNqXjONozLz/preview",
+  },
+  {
+    url: "https://drive.google.com/file/d/1-EoPKgzB_R4sqJGaDMFnWYGdeqfhXNIg/preview",
+  },
+  {
+    url: "https://drive.google.com/file/d/1fNVwm-SYjGTYgR2Ynv4v1sD1Lf66230J/preview",
   },
   {
     url: "https://drive.google.com/file/d/1uY1HFUfWTds9KsC-w2LcmRCKAcwAtHUu/preview",
   },
   {
-    url: "https://drive.google.com/file/d/1uY1HFUfWTds9KsC-w2LcmRCKAcwAtHUu/preview",
+    url: "https://drive.google.com/file/d/18__8lMXOUvD4f8eo0tz1Ip7h3PmfYbBL/preview",
   },
   {
-    url: "https://drive.google.com/file/d/1uY1HFUfWTds9KsC-w2LcmRCKAcwAtHUu/preview",
+    url: "https://drive.google.com/file/d/1A8BONxUjcpm1P-efKSxs8aY1oi5A4APY/preview",
+  },
+  {
+    url: "https://drive.google.com/file/d/1zOwZDfpmv5gwAb-u65yUVvm5PYj4enrx/preview",
+  },
+  {
+    url: "https://drive.google.com/file/d/1fxwWW4kBB6i7oE0VifDJ7XeTLzmJ3Vyt/preview",
   },
 ];
 

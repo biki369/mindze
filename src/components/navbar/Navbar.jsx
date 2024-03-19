@@ -1,13 +1,17 @@
-import React from 'react'
-import { AppBar, Avatar, Box, Tab, Tabs, Typography } from "@material-ui/core"
-import { makeStyles } from '@material-ui/core/styles';
+import React, { useState } from 'react'
+import { AppBar, Avatar, Box, Button, IconButton, Tab, Tabs, Typography, useMediaQuery } from "@material-ui/core"
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import PermIdentityIcon from '@material-ui/icons/PermIdentity';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import { menuLits } from '../../data';
+import NavigationDrawer from '../drawer/NavigationDrawer';
+import MenuIcon from '@material-ui/icons/Menu';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         //   flexGrow: 1,
-        padding:13,
+        backgroundColor:'#f0f0f0',
+        padding: 13,
         "& .logo-img": {
             width: "130px",
         },
@@ -20,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
             margin: "10px 0",
             "& .typo-text": {
                 fontFamily: "Montserrat",
-                marginTop:13
+                marginTop: 13
             },
         },
         "& .profile": {
@@ -37,6 +41,23 @@ const useStyles = makeStyles((theme) => ({
                     // backgroundColor: "#3f51b5",
                 }
             }
+        },
+        "& .nav-links": {
+            position: 'sticky',
+            // backgroundColor:'#f0f0f0',
+            // padding:'10px',
+            top: 0,
+            zIndex: 99,
+            marginTop: '2rem',
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            // flexDirection:'column',
+            gap: "0.5rem",
+            "& a": {
+                padding: '10px',
+            },
+            [theme.breakpoints.down(600)]: {}
         }
     },
     avatar: {
@@ -48,6 +69,24 @@ const useStyles = makeStyles((theme) => ({
 
 const Navbar = () => {
     const classes = useStyles();
+
+    const theme = useTheme();
+    const mobileDevice = useMediaQuery(theme.breakpoints.down('md'));
+
+    const [drawerOpen, setDrawerOpen] = useState(false);
+    const toggleDrawer = () => {
+        setDrawerOpen(!drawerOpen);
+    };
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
+
+
+
+
+
     return (
         <Box className={classes.root}>
             <Box
@@ -66,6 +105,32 @@ const Navbar = () => {
                     </div>
                 </div>
             </Box>
+
+            {
+                !mobileDevice && <Box className='nav-links'>
+                    {
+                        menuLits.map((item, index) => (
+                            <NavLink to={item.path} key={index}
+                                style={({ isActive }) => ({
+                                    color: isActive ? '#fff' : '#545e6f',
+                                    background: isActive ? '#3f51b5' : '',
+                                })}
+
+                            >{item.label}</NavLink>
+                        ))
+                    }
+                </Box>
+            }
+
+            {
+                mobileDevice &&<Box>
+                    <IconButton onClick={toggleDrawer} ><MenuIcon /></IconButton >
+                    <NavigationDrawer isOpen={drawerOpen} onClose={toggleDrawer} items={menuLits} />
+                </Box>
+            }
+
+
+
         </Box>
     )
 }
