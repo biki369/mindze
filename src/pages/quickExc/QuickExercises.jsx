@@ -67,6 +67,7 @@ const QuickExercises = () => {
             >
                 <Tabs value={value} onChange={handleChange} aria-label="simple tabs example"
                  centered
+
                 >
                     <Tab label="Short Exercises/Affirmations" {...a11yProps(0)} />
                     <Tab label="Quotations" {...a11yProps(1)} />
