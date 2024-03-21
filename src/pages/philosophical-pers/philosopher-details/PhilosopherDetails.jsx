@@ -1,4 +1,5 @@
 import { Container, makeStyles } from '@material-ui/core';
+import BackCurrent from '../../../components/back-current/BackCurrent';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -49,6 +50,8 @@ const PhilosopherDetails = () => {
 
   return (
     <div className={classes.root}>
+                    <BackCurrent link="/philosophers" name="Philosophers"/>
+
         <Container>
                  <h1 className="title">JIDDU KRISHNAMURTI</h1>
                   <h2 className="sub-title">Jiddu Krishnamurti on Mental Health: An Exploration of Inner Freedom</h2>

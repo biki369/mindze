@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/core';
-
+import BackCurrent from '../../../components/back-current/BackCurrent'; 
 const useStyles = makeStyles((theme) => ({
     root: {
         height: "100%",
@@ -47,6 +47,8 @@ const BlogDetails = () => {
 
     return (
         <div className={classes.root}>
+         <BackCurrent link="/blogs" name="Blog Details"/>
+
             <div className="blog-container">
                 <h1 className="blog-title">Supporting Your Child's Mental Health</h1>
 

@@ -13,13 +13,12 @@ import QuickExercises from './pages/quickExc/QuickExercises';
 import Home from './pages/home/Home';
 import { MentalTest } from './pages/mental-test/MentalTest';
 import YogaMeditations from './pages/yoga-meditations/YogaMeditations';
-import BookSummery from './pages/bookSummery/BookSummery';
 import PhilosophicalPerspective from './pages/philosophical-pers/PhilosophicalPerspective';
 import SpiritualCounslr from './pages/counselors/spiritual/SpiritualCounslr';
 import BlogsMain from './pages/Blogs/BlogsMain';
 import PsychologicalCounslr from './pages/counselors/psychological/PsychologicalCounslr';
-import { routes } from './routes';
 import LoginUser from './pages/auth/login-user/LoginUser';
+import Books from './pages/bookSummery/Books';
 
 
 function App() {
@@ -43,7 +42,7 @@ function App() {
           <Route path="/quickExercises" element={<QuickExercises />} />
           <Route path="/mentalTest" element={<MentalTest />} />
           <Route path="/yogaMeditations" element={<YogaMeditations />} />
-          <Route path="/bookSummery" element={<BookSummery />} />
+          <Route path="/books" element={<Books />} />
           <Route path="/philosophers" element={<PhilosophicalPerspective />} />
           <Route path="/blogs" element={<BlogsMain />} />
           <Route path="/spiritualCounselors" element={<SpiritualCounslr />} />

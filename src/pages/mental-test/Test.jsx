@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Checkbox, Container, FormControlLabel, FormGroup, Typography, makeStyles } from "@material-ui/core";
+import BackCurrent from '../../components/back-current/BackCurrent';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -16,11 +17,11 @@ const useStyles = makeStyles((theme) => ({
             "& .test-content": {
                 "& p": {
                     // color: "#333",
-                    fontSize:'1rem',
+                    fontSize: '1rem',
                     color: "#2c3e50",
-                    fontFamily:'Montserrat',
-                    fontWeight:400,
-                    lineHeight:1.5,
+                    fontFamily: 'Montserrat',
+                    fontWeight: 400,
+                    lineHeight: 1.5,
                     // fontWeight: "400",
                     margin: "10px 0",
                     padding: '10px 30px',
@@ -29,17 +30,17 @@ const useStyles = makeStyles((theme) => ({
                     marginTop: "1.3rem",
                     paddingLeft: '2.3rem',
                     "& li": {
-                        margin:"2rem 0",
-                        fontSize:'1rem',
+                        margin: "2rem 0",
+                        fontSize: '1rem',
                         color: "#2c3e50",
-                        fontFamily:'Montserrat',
-                        fontWeight:400,
-                        lineHeight:1.5,
-                        "& .MuiTypography-body1":{
+                        fontFamily: 'Montserrat',
+                        fontWeight: 400,
+                        lineHeight: 1.5,
+                        "& .MuiTypography-body1": {
                             color: "#2c3e50",
-                            fontFamily:'Montserrat',
-                            fontWeight:400,
-                            lineHeight:1.5,
+                            fontFamily: 'Montserrat',
+                            fontWeight: 400,
+                            lineHeight: 1.5,
                         },
                     },
                     "& p": {
@@ -95,6 +96,8 @@ const Test = () => {
         <div className={classes.root}>
             <Container>
                 <div className="test">
+                    <BackCurrent link="/mentalTest" name="Mental Tests" />
+
                     <h2>ANXIETY TEST</h2>
                     <div className='test-content'>
                         <p>It is based on the GAD-7, a standardized tool used for screening generalized anxiety disorder. The frequency of the following symptoms over the past two weeks:</p>

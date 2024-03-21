@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core";
-
+import BackCurrent from '../../../components/back-current/BackCurrent'
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: '30px',
@@ -53,6 +53,8 @@ const Techniques = () => {
 
   return (
     <div className={classes.root}>
+                    <BackCurrent link={"/quickExercises"} name="Quick Exercises"/>
+
       <div className="technique-container">
         <h1 className="technique-head">So-Hum Meditation</h1>
         <div className="sub-content">

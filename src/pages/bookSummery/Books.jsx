@@ -8,9 +8,6 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import { bookSummeryData } from '../../data';
 import BookCard from '../../components/cards/book-card/BookCard';
-import BookDetails from './BookDetails';
-import { Link } from '@material-ui/core';
-
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -66,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const BookSummery = () => {
+const Books = () => {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -98,7 +95,6 @@ const BookSummery = () => {
             ))
           }
         </div>
-        <BookDetails />
       </TabPanel>
 
       <TabPanel value={value} index={1}>
@@ -145,4 +141,4 @@ const BookSummery = () => {
   )
 }
 
-export default BookSummery
+export default Books

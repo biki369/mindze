@@ -25,7 +25,7 @@ export const menuLits = [
   },
   {
     label: "Book Summaries",
-    path:'/bookSummery',
+    path:'/books',
     icon: "",
     components: "",
   },

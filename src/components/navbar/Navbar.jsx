@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { AppBar, Avatar, Box, Button, IconButton, Tab, Tabs, Typography, useMediaQuery } from "@material-ui/core"
+import { useState } from 'react'
+import { Avatar, Box, IconButton, Typography, useMediaQuery } from "@material-ui/core"
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import PermIdentityIcon from '@material-ui/icons/PermIdentity';
 import { Link, NavLink } from 'react-router-dom';
@@ -62,6 +62,11 @@ const useStyles = makeStyles((theme) => ({
                 color:'#000',
             },
             [theme.breakpoints.down(600)]: {}
+        },
+        "& .nav-links-md":{
+            display:"flex",
+            justifyContent:'end',
+            
         }
     },
     avatar: {
@@ -118,9 +123,9 @@ const Navbar = () => {
             }
 
             {
-                mobileDevice && <Box>
-                    <IconButton onClick={toggleDrawer} ><MenuIcon /></IconButton >
+                mobileDevice && <Box className='nav-links-md'>
                     <NavigationDrawer isOpen={drawerOpen} onClose={toggleDrawer} items={menuLits} />
+                    <IconButton onClick={toggleDrawer} ><MenuIcon /></IconButton >
                 </Box>
             }
 

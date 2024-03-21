@@ -1,5 +1,5 @@
 import { makeStyles, Container } from '@material-ui/core';
-import React from 'react'
+import BackCurrent from '../../components/back-current/BackCurrent';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -58,6 +58,7 @@ const BookDetails = () => {
   return (
     <div className={classes.root}>
       <Container>
+         <BackCurrent link="/books" name="Book Summery"/>
         <div className="book-overview">
           <h1 className="title">BOOK OVERVIEW: AWAKEN THE GIANT WITHIN</h1>
           <div className="book-desc">
