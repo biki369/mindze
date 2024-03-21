@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '3rem',
         color: theme.palette.primary.main,
         margin: '1rem 0',
-        textAlign:'center',
+        textAlign: 'center',
       },
       "& .sub-head": {
         color: theme.palette.primary.main,
@@ -26,20 +26,20 @@ const useStyles = makeStyles((theme) => ({
         }
       },
       "& .ol-sub-content": {
-        "& ol":{
+        "& ol": {
           marginLeft: '30px',
         },
       },
       "& .ul-sub-content": {
-        "& ul":{
+        "& ul": {
           marginLeft: '30px',
-        },      
+        },
         // padding: '1rem 0',
       },
       "& li": {
         fontSize: '20px',
         margin: '1rem 0',
-        "& span":{
+        "& span": {
           fontWeight: 'bold',
           fontSize: '20px',
         }
@@ -53,7 +53,7 @@ const Techniques = () => {
 
   return (
     <div className={classes.root}>
-                    <BackCurrent link={"/quickExercises"} name="Quick Exercises"/>
+      <BackCurrent link={"/quickExercises"} name="Quick Exercises" />
 
       <div className="technique-container">
         <h1 className="technique-head">So-Hum Meditation</h1>
@@ -102,4 +102,4 @@ const Techniques = () => {
   )
 }
 
-export default Techniques
+export default Techniques;

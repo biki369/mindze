@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Avatar, Button, Grid, Paper, makeStyles } from '@material-ui/core';
 import SchoolIcon from '@material-ui/icons/School';
 import { counselorsData } from '../../../data';
@@ -90,9 +90,17 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const PsychologicalCounslr = () => {
-    const classes = useStyles();
 
-    const [selectedDate, setSelectedDate] = useState(new Date());
+    const todayDate = new Date();
+
+    const classes = useStyles();
+    
+    const [date, setDate] = useState(todayDate)
+    
+    const [selectedDate, setSelectedDate] = useState();
+    
+    console.log(todayDate, "todayDate");
+
 
     const handleDateChange = (date) => {
         setSelectedDate(date);
@@ -148,7 +156,7 @@ const PsychologicalCounslr = () => {
                             </Grid>
 
                             <div className='modal-container'>
-                                <MuiModal open={openModal} onClose={handleCloseModal} data={e}>
+                                <MuiModal open={openModal} onClose={handleCloseModal} >
                                     <DatePicker selectedDate={selectedDate} onChange={handleDateChange} />
                                 </MuiModal>
                             </div>

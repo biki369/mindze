@@ -47,7 +47,7 @@ const BlogDetails = () => {
 
     return (
         <div className={classes.root}>
-         <BackCurrent link="/blogs" name="Blog Details"/>
+         <BackCurrent link="/blogs" name="Blogs"/>
 
             <div className="blog-container">
                 <h1 className="blog-title">Supporting Your Child's Mental Health</h1>

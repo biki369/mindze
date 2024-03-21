@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Avatar, Box, IconButton, Typography, useMediaQuery } from "@material-ui/core"
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import PermIdentityIcon from '@material-ui/icons/PermIdentity';
@@ -46,28 +46,50 @@ const useStyles = makeStyles((theme) => ({
         "& .nav-links": {
             // width:'100%',
             // padding:'10px',
-            position: 'sticky',
+            position: 'relative',
             // backgroundColor:'#fff',
             // padding:'10px',
-            top: 0,
             zIndex: 99,
             marginTop: '2rem',
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            transition: 'all 0.3s ease',
             // flexDirection:'column',
             gap: "0.5rem",
             "& a": {
                 padding: '10px',
-                color:'#000',
+                color: '#000',
             },
             [theme.breakpoints.down(600)]: {}
         },
-        "& .nav-links-md":{
-            display:"flex",
-            justifyContent:'end',
-            
-        }
+        "& .nav-links-md": {
+            display: "flex",
+            justifyContent: 'end',
+
+        },
+        "& .sticky": {
+            position: "fixed",
+            // backgroundColor: '#f0f0f0',
+            backgroundColor: '#fff',
+            top: "0",
+            left: 0,
+            padding: "10px",
+            marginTop: '0%',
+            width: "100%",
+            zIndex: 99,
+            // animationDuration: "0.7s",
+            // animationName: "fadeInDown",
+            // animationTimingFunction: "ease-out"
+        },
+
+        // "@keyframes fadeInDown": {
+        //     "0%": { opacity: 0, transform: "translateY(-20px)" },
+        //     "100%": { opacity: 1, transform: "translateY(0)" }
+        // },
+
+
+
     },
     avatar: {
         margin: theme.spacing(0),
@@ -78,6 +100,14 @@ const useStyles = makeStyles((theme) => ({
 
 const Navbar = () => {
     const classes = useStyles();
+    const [scroll, setScroll] = useState(false);
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            setScroll(window.scrollY > 10);
+        });
+    }, [scroll]);
+
 
     const theme = useTheme();
     const mobileDevice = useMediaQuery(theme.breakpoints.down('md'));
@@ -107,7 +137,7 @@ const Navbar = () => {
             </Box>
 
             {
-                !mobileDevice && <Box className='nav-links'>
+                !mobileDevice && <Box className={`nav-links ${scroll ? "sticky" : ""}`}>
                     {
                         menuLits.map((item, index) => (
                             <NavLink to={item.path} key={index}
@@ -123,7 +153,7 @@ const Navbar = () => {
             }
 
             {
-                mobileDevice && <Box className='nav-links-md'>
+                mobileDevice && <Box className={`nav-links-md ${scroll ? "sticky" : ""}`}>
                     <NavigationDrawer isOpen={drawerOpen} onClose={toggleDrawer} items={menuLits} />
                     <IconButton onClick={toggleDrawer} ><MenuIcon /></IconButton >
                 </Box>
