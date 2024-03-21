@@ -189,7 +189,6 @@ export const bookSummeryData = [
 ];
 
 
-
 export const quotationsData = [
   {
     url:"/src/assets/Quotation/encouragement/1.png"
@@ -298,7 +297,6 @@ export const PhilosophicalPerspectiveData = [
     img:"/src/assets/philosophers_image/mst_10.jpg",
   },
 ];
-
 
 
 export const blogPostData = [

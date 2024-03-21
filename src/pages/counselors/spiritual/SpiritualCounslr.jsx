@@ -1,5 +1,5 @@
 import React from 'react'
-import { Avatar, Paper, makeStyles,Grid,Button } from '@material-ui/core';
+import { Avatar, Paper, makeStyles, Grid, Button } from '@material-ui/core';
 import { counselorsData } from '../../../data';
 import SchoolIcon from '@material-ui/icons/School';
 import { Link } from 'react-router-dom';
@@ -104,7 +104,7 @@ const SpiritualCounslr = () => {
                                 </div>
                             </div>
                             <div className='designation-section'>
-                                <div className="designation"> <span><StarsIcon /></span> {e.designation}</div>
+                                <div className="designation"> <span><StarsIcon /></span> <strong>designation:</strong> {e.designation}</div>
                                 <div className='interest'><span><CheckCircleIcon /></span><strong>interest:</strong>{e.interest}</div>
                                 {/* <div className="edu"><span><SchoolIcon /></span> {e.education}</div> */}
                             </div>

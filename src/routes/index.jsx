@@ -1,16 +1,15 @@
-import Login from '../../pages/auth/login-out/Login';
-import Layout from '../layout/Layout';
+import Login from '../pages/auth/login-out/Login';
+import Home from '../pages/home/Home';
 
 export const routes = [
     {
-        path: '/',
-        component:Layout,
-        // component: () => import('../layout/Layout'),
-        name: 'Home'
+        path: '/login',
+        component:<Login/>,
+        name: 'Login'
     },
     {
-        path: '/login',
-        component:Login,
+        path: '/',
+        component:<Home/>,
         name: 'Login'
     },
 ];

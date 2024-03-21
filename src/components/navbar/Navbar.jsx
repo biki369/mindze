@@ -10,18 +10,19 @@ import MenuIcon from '@material-ui/icons/Menu';
 const useStyles = makeStyles((theme) => ({
     root: {
         //   flexGrow: 1,
-        backgroundColor:'#f0f0f0',
+        backgroundColor: '#f0f0f0',
+        // backgroundColor: '#fff',
         padding: 13,
-        "& .logo-img": {
-            width: "130px",
-        },
         "& .headerTop": {
             display: "flex",
             height: '10vh',
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            margin: "10px 0",
+            margin: "16px 0",
+            "& .logo-img": {
+                width: "160px",
+            },
             "& .typo-text": {
                 fontFamily: "Montserrat",
                 marginTop: 13
@@ -43,8 +44,10 @@ const useStyles = makeStyles((theme) => ({
             }
         },
         "& .nav-links": {
+            // width:'100%',
+            // padding:'10px',
             position: 'sticky',
-            // backgroundColor:'#f0f0f0',
+            // backgroundColor:'#fff',
             // padding:'10px',
             top: 0,
             zIndex: 99,
@@ -56,6 +59,7 @@ const useStyles = makeStyles((theme) => ({
             gap: "0.5rem",
             "& a": {
                 padding: '10px',
+                color:'#000',
             },
             [theme.breakpoints.down(600)]: {}
         }
@@ -78,21 +82,12 @@ const Navbar = () => {
         setDrawerOpen(!drawerOpen);
     };
 
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    };
-
-
-
-
-
-
     return (
         <Box className={classes.root}>
             <Box
                 className='headerTop'
             >
-                <img src="/src/assets/logo.png" alt="logo" className="logo-img" />
+                <img src="/src/assets/logo-removebg.png" alt="logo" className="logo-img" />
                 <Typography className='typo-text'>Blending Ancient Wisdom with Modern Mindcare</Typography>
 
                 <div className="profile">
@@ -123,7 +118,7 @@ const Navbar = () => {
             }
 
             {
-                mobileDevice &&<Box>
+                mobileDevice && <Box>
                     <IconButton onClick={toggleDrawer} ><MenuIcon /></IconButton >
                     <NavigationDrawer isOpen={drawerOpen} onClose={toggleDrawer} items={menuLits} />
                 </Box>

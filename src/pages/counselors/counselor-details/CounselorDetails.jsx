@@ -101,8 +101,8 @@ const useStyles = makeStyles((theme) => ({
           justifyContent: 'space-between',
           alignItems: 'center',
           "& button": {
-            width: 260,
-            height: 60,
+            // width: 260,
+            height: 40,
             borderRadius: 30,
             display: "flex",
             justifyContent: 'space-between',
@@ -126,11 +126,15 @@ const useStyles = makeStyles((theme) => ({
 
     "& .review-section": {
       display: 'flex',
+      [theme.breakpoints.down(700)]: {
+        flexWrap: 'wrap',
+        // width: "100%",
+      },
       gap: 10,
       "& > div": {
         width: '50%',
         padding: 6,
-        [theme.breakpoints.down(600)]: {
+        [theme.breakpoints.down(700)]: {
           width: "100%",
         },
       },
@@ -238,8 +242,9 @@ const CounselorDetails = () => {
                   <p className="designation"><span><CheckCircleIcon /></span><strong>designation:</strong>{designation}</p>
 
                   <div className="profile-btn">
-                    <button><span> <ForumIcon /></span>start chart</button>
-                    <button><span><CallIcon /> </span>start call</button>
+                    <button>Book now</button>
+                    {/* <button><span> <ForumIcon /></span>start chart</button> */}
+                    {/* <button><span><CallIcon /> </span>start call</button> */}
                   </div>
                 </div>
                 <div className="info-about">

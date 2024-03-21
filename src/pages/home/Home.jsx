@@ -6,14 +6,13 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import { heroSliderImg, psychologicalSliderImg, reviewData } from '../../data';
+import { heroSliderImg, reviewData } from '../../data';
 import ServiceSlider from '../../components/sliders/serice-sldier/ServiceSlider';
-import NavigationDrawer from '../../components/drawer/NavigationDrawer';
-import { useState } from 'react';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: "10px 0",
+    // padding: "10px 0",
     "& .heroImgBox": {
       position: "relative",
       width: "100vw",
@@ -92,7 +91,7 @@ const useStyles = makeStyles((theme) => ({
         "& h1": {
           display: "inline-block",
           marginBottom: '1rem',
-          fontSize: '2.3rem',
+          fontSize: '3rem',
           outlineOffset: "-2px",
           borderBottom: '3px solid #000'
         }
@@ -103,6 +102,7 @@ const useStyles = makeStyles((theme) => ({
     "& .review-section": {
       "& h1": {
         textAlign: 'center',
+        fontSize:"3rem"
       },
 
       position: 'relative',

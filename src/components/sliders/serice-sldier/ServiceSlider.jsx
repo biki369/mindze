@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
 
     "& .heading": {
       padding: " 1rem 0",
-      fontSize: " 3.5rem",
+      fontSize: " 3rem",
       textAlign: "center",
       [theme.breakpoints.down(600)]: {
         fontSize: " 2rem",

@@ -95,7 +95,7 @@ const PsychologicalCounslr = () => {
     const [selectedDate, setSelectedDate] = useState(new Date());
 
     const handleDateChange = (date) => {
-      setSelectedDate(date);
+        setSelectedDate(date);
     };
 
     const [openModal, setOpenModal] = useState(false);
@@ -124,7 +124,7 @@ const PsychologicalCounslr = () => {
                                 </div>
                             </div>
                             <div className='designation-section'>
-                                <div className="designation"> <span><StarsIcon /></span>  {e.designation}</div>
+                                <div className="designation"> <span><StarsIcon /></span> <strong>designation:</strong> {e.designation}</div>
                                 <div className='interest'><span><CheckCircleIcon /></span><strong>interest:</strong>{e.interest}</div>
                                 {/* <div className="edu"><span><SchoolIcon /></span> {e.education}</div> */}
                             </div>

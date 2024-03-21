@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Avatar, Box, Button, Checkbox, CssBaseline, FormControlLabel, Grid, makeStyles, Paper, TextField, Typography } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import image from "../../../assets/Home_page/1.jpg";
 
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
+import LoginUser from '../login-user/LoginUser';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -225,6 +226,14 @@ export default function Login(props) {
           </div>
         </div>
       </Grid>
+
+        
+        <Box>
+            <Routes>
+                <Route path="/login-user" element={<LoginUser/>} />
+            </Routes>
+        </Box>
+
     </Grid>
   );
 }

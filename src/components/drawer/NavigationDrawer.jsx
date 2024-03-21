@@ -21,11 +21,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
 const NavigationDrawer = ({ isOpen, onClose, items }) => {
   const classes = useStyles();
-
-
   return (
     <Drawer open={isOpen} onClose={onClose} className={classes.root}>
       <List className='nav-links'>
@@ -52,7 +49,6 @@ const NavigationDrawer = ({ isOpen, onClose, items }) => {
     </Drawer>
   );
 };
-
 export default NavigationDrawer;
 // onClick={() => handleTabChange(null, index)}
 // onClick={item.onClick}
