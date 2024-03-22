@@ -5,6 +5,9 @@ const useStyles = makeStyles((theme) => ({
     padding: '30px',
     "& .technique-container": {
       width: '53rem',
+      [theme.breakpoints.down(800)]: {
+        width: '100%',
+      },
       margin: 'auto',
       padding: '1rem 3rem',
       "& .technique-head": {

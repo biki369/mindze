@@ -1,4 +1,4 @@
-import { Avatar, Container, Grid, LinearProgress, Paper, Typography, makeStyles } from "@material-ui/core"
+import { Avatar, Button, Container, Grid, LinearProgress, Paper, Typography, makeStyles } from "@material-ui/core"
 import { Link, useParams } from "react-router-dom";
 import { counselorsData, userRating } from '../../../data/index'
 import HomeIcon from '@material-ui/icons/Home';
@@ -9,6 +9,11 @@ import Rating from '@material-ui/lab/Rating';
 import StarsIcon from '@material-ui/icons/Stars';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import EmojiEventsIcon from '@material-ui/icons/EmojiEvents';
+import LocalOfferIcon from '@material-ui/icons/LocalOffer';
+import CheckIcon from '@material-ui/icons/Check';
+import { useState } from "react";
+import MuiModal from "../../../components/modal/MuiModal";
+import DatePicker from "../../../components/mui-date-picker/DatePicker";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -206,21 +211,118 @@ const useStyles = makeStyles((theme) => ({
 
     },
 
+  },
 
+  plans: {
+    display: "flex",
+    gap: "10px",
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: '1rem',
+    "& .plan": {
+      width: '230px',
+      // height: '130px',
+      cursor: 'pointer',
+      background: "#eee",
+      // backgroundColor: theme.palette.background.paper,
+      borderRadius: 10,
+      padding: 13,
 
+      "& .plan-name": {
+        fontSize: "1.3rem",
+        fontWeight: 600,
+        margin: '13px 0',
+        textAlign: 'center',
+        // display: 'flex',
+        // justifyContent: 'center',
+        // alignItems: 'center',
+        textTransform: 'capitalize'
+      },
+      "& .plan-price": {
+        fontSize: 16,
+        fontWeight: 600,
+        margin: '10px 0',
+        textTransform: 'capitalize'
+      },
+      "& p": {
+        display: 'flex',
+        //   justifyContent:'center',
+        alignItems: 'center',
+        gap: "6px",
+        fontWeight: 600,
+        "& svg": {
+          color: '#303f9f',
+        }
+      }
+    }
 
-  }
+  },
 }))
+
 const CounselorDetails = () => {
+  const classes = useStyles()
 
   let { id } = useParams();
 
   let data = counselorsData.find((counslr) => counslr.id === Number(id))
-  const { name, desc, img, exp, interest, education, designation } = data;
+  const { name, desc, img, exp, interest, education, designation, price } = data;
 
   // console.log(name,"slkadj",id)
 
-  const classes = useStyles()
+  const handleDateChange = (date) => {
+    setSelectedDate(date);
+  };
+
+  const todayDate = new Date();
+
+  const [date, setDate] = useState(todayDate)
+
+  const [selectedDate, setSelectedDate] = useState();
+
+  const [openModal, setOpenModal] = useState(false);
+
+  const handleOpenModal = () => {
+    setOpenModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setOpenModal(false);
+  };
+
+  // ====== function fro check====
+  const CheckboxComp = ({ options }) => {
+    const [selectedOptions, setSelectedOptions] = useState([]);
+
+    const handleChange = (event) => {
+      const { value } = event.target;
+
+      if (selectedOptions.includes(value)) {
+        setSelectedOptions(selectedOptions.filter((option) => option !== value));
+      } else {
+        setSelectedOptions([...selectedOptions, value]);
+      }
+    };
+
+    return (
+      <div>
+        {options.map((option) => (
+          <>
+            <input
+              type="checkbox"
+              key={option}
+              value={option}
+              checked={selectedOptions.includes(option)}
+              onChange={handleChange}
+            />
+            {/* {option} */}
+          </>
+        ))}
+      </div>
+    );
+  };
+
+
+
 
   return (
     <div className={classes.root} >
@@ -234,15 +336,16 @@ const CounselorDetails = () => {
               </div>
               <div className="profile-info">
                 <div className="profile-info-top">
-
                   <h3>{name}</h3>
                   <p> <span><StarsIcon /></span> <strong>interest:</strong>{interest}</p>
                   <p><span><EmojiEventsIcon /></span> <strong>Exp:</strong>{exp}+ years</p>
                   <p className="edu"><span><SchoolIcon /></span>{education}</p>
                   <p className="designation"><span><CheckCircleIcon /></span><strong>designation:</strong>{designation}</p>
+                  <p className="price"> <span><LocalOfferIcon /></span> <strong>Annual price:</strong> {price.annual}</p>
+                  <p className='price'><span><LocalOfferIcon /></span><strong>Monthly price</strong>{price.monthly}</p>
 
                   <div className="profile-btn">
-                    <button>Book now</button>
+                    <button  onClick={handleOpenModal}>Book now</button>
                     {/* <button><span> <ForumIcon /></span>start chart</button> */}
                     {/* <button><span><CallIcon /> </span>start call</button> */}
                   </div>
@@ -304,8 +407,43 @@ const CounselorDetails = () => {
               </Paper>
             </div>
           </div>
-
         </div>
+
+
+
+        <div className={classes.modalContainer}>
+          <MuiModal open={openModal} onClose={handleCloseModal} title="Book an Appointment">
+            {/* <DatePicker selectedDate={selectedDate} onChange={handleDateChange} /> */}
+            <div className={classes.plans}>
+              <div className="plan">
+                <CheckboxComp options={['monthly']} />
+                <p className="plan-name">Monthly</p>
+                <p className="discount"><span><CheckIcon /></span>10% discount</p>
+                <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {price.monthly}</p>
+              </div>
+              <div className="plan">
+                <CheckboxComp options={['annual']} />
+                <p className="plan-name">Annual</p>
+                <p className="discount"><span><CheckIcon /></span>20% discount</p>
+                <p className="plan-price"> <span><LocalOfferIcon /></span> ₹ {price.annual}</p>
+              </div>
+            </div>
+
+            <div className='booked-session-btn'
+              style={{ display: 'flex', justifyContent: 'space-between', marginBottom: "1rem" }}
+
+            >
+              <DatePicker selectedDate={selectedDate} onChange={handleDateChange} />
+              <Button onClick={handleCloseModal} variant="contained" color="primary">Book</Button>
+            </div>
+          </MuiModal>
+        </div>
+
+
+
+
+
+
       </Container>
     </div>
   )

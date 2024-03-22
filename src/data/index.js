@@ -2,54 +2,54 @@ export const menuLits = [
   {
     label: "Home",
     icon: "",
-    path:"/"
+    path: "/",
     // components:<Home/>
   },
   {
     label: "Quick Exercises",
-    path:'/quickExercises',
+    path: "/quickExercises",
     icon: "",
     components: "",
   },
   {
     label: "Mental Health Tests",
-    path:"/mentalTest",
+    path: "/mentalTest",
     icon: "",
     components: "",
   },
   {
     label: "Yoga & Meditation",
-    path:'/yogaMeditations',
+    path: "/yogaMeditations",
     icon: "",
     components: "",
   },
   {
     label: "Book Summaries",
-    path:'/books',
+    path: "/books",
     icon: "",
     components: "",
   },
   {
     label: "Philosophical Perspective",
-    path:'/philosophers',
+    path: "/philosophers",
     icon: "",
     components: "",
   },
   {
     label: "Blogs",
-    path:'/blogs',
+    path: "/blogs",
     icon: "",
     components: "",
   },
   {
     label: "Spiritual Counselors",
-    path:'/spiritualCounselors',
+    path: "/spiritualCounselors",
     icon: "",
     components: "",
   },
   {
     label: "Philosophical Counselors",
-    path:'/philosophicalCounselors',
+    path: "/philosophicalCounselors",
     icon: "",
     components: "",
   },
@@ -188,183 +188,188 @@ export const bookSummeryData = [
   },
 ];
 
-
 export const quotationsData = [
   {
-    url:"/src/assets/Quotation/encouragement/1.png"
+    url: "/src/assets/Quotation/encouragement/1.png",
   },
   {
-    url:"/src/assets/Quotation/encouragement/2.png"
+    url: "/src/assets/Quotation/encouragement/2.png",
   },
   {
-    url:"/src/assets/Quotation/encouragement/3.png"
+    url: "/src/assets/Quotation/encouragement/3.png",
   },
   {
-    url:"/src/assets/Quotation/encouragement/4.png"
+    url: "/src/assets/Quotation/encouragement/4.png",
   },
   {
-    url:"/src/assets/Quotation/encouragement/5.png"
+    url: "/src/assets/Quotation/encouragement/5.png",
   },
   {
-    url:"/src/assets/Quotation/encouragement/6.png"
+    url: "/src/assets/Quotation/encouragement/6.png",
   },
 ];
-
 
 export const mentalTestData = [
   {
     title: "Anexity Test",
-    img:'/src/assets/MentalHealthTest/anxiety.jpg'
+    img: "/src/assets/MentalHealthTest/anxiety.jpg",
   },
   {
     title: "OCD Test",
-    img:'/src/assets/MentalHealthTest/ocd.jpg'
+    img: "/src/assets/MentalHealthTest/ocd.jpg",
   },
   {
     title: "Depression Test",
-    img:'/src/assets/MentalHealthTest/depression.jpg'
+    img: "/src/assets/MentalHealthTest/depression.jpg",
   },
   {
     title: "Addiction Test",
-    img:'/src/assets/MentalHealthTest/addiction.jpg'
+    img: "/src/assets/MentalHealthTest/addiction.jpg",
   },
   {
     title: "Insomnia Test",
-    img:'/src/assets/MentalHealthTest/insomania.jpg'
+    img: "/src/assets/MentalHealthTest/insomania.jpg",
   },
   {
     title: "Panic Disorder Test",
-    img:'/src/assets/MentalHealthTest/panic_disorder.jpg'
+    img: "/src/assets/MentalHealthTest/panic_disorder.jpg",
   },
   {
     title: "Eating Disorder Test",
-    img:'/src/assets/MentalHealthTest/eating_disorder.jpg'
+    img: "/src/assets/MentalHealthTest/eating_disorder.jpg",
   },
   {
     title: "Bipolar Test",
-    img:'/src/assets/MentalHealthTest/bipolar.jpg'
+    img: "/src/assets/MentalHealthTest/bipolar.jpg",
   },
   {
     title: "PTSD Test",
-    img:'/src/assets/MentalHealthTest/ptsd.jpg'
+    img: "/src/assets/MentalHealthTest/ptsd.jpg",
   },
   {
     title: "ADHD Test",
-    img:'/src/assets/MentalHealthTest/adhd.jpg'
+    img: "/src/assets/MentalHealthTest/adhd.jpg",
   },
 ];
-
 
 export const PhilosophicalPerspectiveData = [
   {
-    title:"Osho",
-    img:"/src/assets/philosophers_image/mst_1.jpg",
+    title: "Osho",
+    img: "/src/assets/philosophers_image/mst_1.jpg",
   },
   {
-    title:"Jiddu Krishnamut",
-    img:"/src/assets/philosophers_image/mst_2.jpg",
+    title: "Jiddu Krishnamut",
+    img: "/src/assets/philosophers_image/mst_2.jpg",
   },
   {
-    title:"Sadguru",
-    img:"/src/assets/philosophers_image/mst_3.jpg",
+    title: "Sadguru",
+    img: "/src/assets/philosophers_image/mst_3.jpg",
   },
   {
-    title:"Alan Watts",
-    img:"/src/assets/philosophers_image/mst_4.webp",
+    title: "Alan Watts",
+    img: "/src/assets/philosophers_image/mst_4.webp",
   },
   {
-    title:"Eckhart Tolle",
-    img:"/src/assets/philosophers_image/mst_5.jpg",
+    title: "Eckhart Tolle",
+    img: "/src/assets/philosophers_image/mst_5.jpg",
   },
   {
-    title:"Jay Shetty",
-    img:"/src/assets/philosophers_image/mst_6.jpg",
+    title: "Jay Shetty",
+    img: "/src/assets/philosophers_image/mst_6.jpg",
   },
   {
-    title:"Adyashanti",
-    img:"/src/assets/philosophers_image/mst_7.jpg",
+    title: "Adyashanti",
+    img: "/src/assets/philosophers_image/mst_7.jpg",
   },
   {
-    title:"Mooji",
-    img:"/src/assets/philosophers_image/mst_8.jpg",
+    title: "Mooji",
+    img: "/src/assets/philosophers_image/mst_8.jpg",
   },
   {
-    title:"Thich Nhat Hanh",
-    img:"/src/assets/philosophers_image/mst_9.jpg",
+    title: "Thich Nhat Hanh",
+    img: "/src/assets/philosophers_image/mst_9.jpg",
   },
   {
-    title:"Deepak Chopra",
-    img:"/src/assets/philosophers_image/mst_10.jpg",
+    title: "Deepak Chopra",
+    img: "/src/assets/philosophers_image/mst_10.jpg",
   },
 ];
-
 
 export const blogPostData = [
   {
-    title:"How can parents support their child's mental health?",
-    img:'/src/assets/Blog_pics/e1.jpg',
+    title: "How can parents support their child's mental health?",
+    img: "/src/assets/Blog_pics/e1.jpg",
   },
   {
-    title:"How can parents support their child's mental health?",
-    img:'/src/assets/Blog_pics/lifestyle/image1.jpg',
+    title: "How can parents support their child's mental health?",
+    img: "/src/assets/Blog_pics/lifestyle/image1.jpg",
   },
   {
-    title:"How can parents support their child's mental health?",
-    img:'/src/assets/Blog_pics/sports/image1.jpg',
+    title: "How can parents support their child's mental health?",
+    img: "/src/assets/Blog_pics/sports/image1.jpg",
   },
   {
-    title:"How can parents support their child's mental health?",
-    img:'/src/assets/Blog_pics/sprituality/image1.jpg',
+    title: "How can parents support their child's mental health?",
+    img: "/src/assets/Blog_pics/sprituality/image1.jpg",
   },
 ];
 
-
-export const  counselorsData = [
+export const counselorsData = [
   {
     name: "Yoga",
-    desc:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum quod atque dolore iure?",
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum quod atque dolore iure?",
     img: "/src/assets/philosophers_image/b_2.jpg",
-    exp:"6",
-    interest:"Lorem ipsum dolor sit, amet consectetur",
-    education:"MA in Psychology",
-    online:true,
-    designation:"Yoga Teacher",
-    id:0,
+    exp: "6",
+    interest: "Lorem ipsum dolor sit, amet consectetur",
+    education: "MA in Psychology",
+    online: true,
+    designation: "Yoga Teacher",
+    id: 0,
+    price: {
+      annual: "100",
+      monthly: "10",
+    },
   },
   {
     name: "Name",
-    desc:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum quod atque dolore iure?",
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum quod atque dolore iure?",
     img: "/src/assets/philosophers_image/b_2.jpg",
-    exp:"3",
-    interest:"Lorem ipsum dolor sit, amet consectetur",
-    education:"MA,BA in Psychology",
-    online:false,
-    designation:"Analyst,Stress,Depression",
-    id:1,
+    exp: "3",
+    interest: "Lorem ipsum dolor sit, amet consectetur",
+    education: "MA,BA in Psychology",
+    online: false,
+    designation: "Analyst,Stress,Depression",
+    id: 1,
+    price: {
+      annual: "100",
+      monthly: "10",
+    },
   },
 ];
 
 export const userRating = [
   {
-    name:"user name",
-    comment:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem fugiat maiores perspiciatis",
-    avatar:"/src/assets/philosophers_image/b_3.jpg",
-    rating:5,
+    name: "user name",
+    comment:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem fugiat maiores perspiciatis",
+    avatar: "/src/assets/philosophers_image/b_3.jpg",
+    rating: 5,
   },
   {
-    name:"user name",
-    comment:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem fugiat maiores perspiciatis",
-    avatar:"/src/assets/philosophers_image/b_9.jpg",
-    rating:3,
+    name: "user name",
+    comment:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem fugiat maiores perspiciatis",
+    avatar: "/src/assets/philosophers_image/b_9.jpg",
+    rating: 3,
   },
   {
-    name:"user name",
-    comment:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem fugiat maiores perspiciatis",
-    avatar:"/src/assets/philosophers_image/c_1.jpg",
-    rating:2,
+    name: "user name",
+    comment:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem fugiat maiores perspiciatis",
+    avatar: "/src/assets/philosophers_image/c_1.jpg",
+    rating: 2,
   },
-]
-
+];
 
 /* 
 name 

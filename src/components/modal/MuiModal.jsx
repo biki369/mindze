@@ -1,7 +1,6 @@
 // MuiModal
 
-import React from 'react';
-import { Modal, Typography, Button, makeStyles } from '@material-ui/core';
+import { Modal, Typography, Button, makeStyles, Box } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -16,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const MuiModal = ({ open, onClose, children }) => {
+const MuiModal = ({ open, onClose, children,title }) => {
 
   // const {name} = props.data
 
@@ -34,12 +33,12 @@ const MuiModal = ({ open, onClose, children }) => {
     >
       <div className={classes.paper}>
         <Typography variant="h6" id="modal-title" gutterBottom>
-          Book an Appointment
+          {title}
         </Typography>
-        <Typography variant="body1" id="modal-description" gutterBottom>
+        <Box variant="body1" id="modal-description" gutterBottom mx={3}> 
           {children}
-        </Typography>
-        <Button onClick={onClose}>Close</Button>
+        </Box>
+        <Button  variant="contained" color="secondary"  onClick={onClose}>Close</Button>
       </div>
     </Modal>
   );

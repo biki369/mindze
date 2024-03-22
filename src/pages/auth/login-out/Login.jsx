@@ -20,7 +20,13 @@ const useStyles = makeStyles((theme) => ({
 
     display: "flex",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    "& .link-from-switch": {
+      cursor: "pointer",
+      "&:hover": {
+        color: theme.palette.primary.main
+      }
+    }
   },
   size: {
     display: "flex",
@@ -112,12 +118,24 @@ export default function Login(props) {
               variant="outlined"
               required
               fullWidth
+              id="username"
+              label="User Name"
+              name="username"
+              autoComplete="uname"
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              variant="outlined"
+              required
+              fullWidth
               id="email"
               label="Email Address"
               name="email"
               autoComplete="email"
             />
           </Grid>
+
           <Grid item xs={12}>
             <TextField
               variant="outlined"
@@ -212,14 +230,14 @@ export default function Login(props) {
               <Grid item xs>
 
                 {
-                  !isSignUp &&<Link href="#" variant="body2">
-                  Forgot password?
-                </Link>
+                  !isSignUp && <Link href="#" variant="body2">
+                    Forgot password?
+                  </Link>
                 }
               </Grid>
-              <Grid item style={{ course: "pointer" }}>
-                <Typography onClick={() => setIsSignUp(!isSignUp)} >
-                  {"Don't have an account? Sign Up"}
+              <Grid item >
+                <Typography onClick={() => setIsSignUp(!isSignUp)} variant="body2" className='link-from-switch'>
+                  {!isSignUp ? "Don't have an account? Sign Up" : " Already have an account? Sign In"}
                 </Typography>
               </Grid>
             </Grid>
@@ -227,12 +245,6 @@ export default function Login(props) {
         </div>
       </Grid>
 
-        
-        <Box>
-            <Routes>
-                <Route path="/login-user" element={<LoginUser/>} />
-            </Routes>
-        </Box>
 
     </Grid>
   );
