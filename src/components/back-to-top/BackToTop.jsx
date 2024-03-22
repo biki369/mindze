@@ -17,9 +17,8 @@ const ScrollTop = () => {
     const classes = useStyles();
     const [isVisible, setIsVisible] = useState(false);
   
-    // Function to handle scroll behavior
     const handleScroll = () => {
-      const threshold = 100; // Adjust this value as needed
+      const threshold = 100; 
       if (window.pageYOffset > threshold) {
         setIsVisible(true);
       } else {
@@ -34,7 +33,6 @@ const ScrollTop = () => {
       };
     }, []);
   
-    // Function to scroll back to top
     const scrollToTop = () => {
       window.scrollTo({
         top: 0,

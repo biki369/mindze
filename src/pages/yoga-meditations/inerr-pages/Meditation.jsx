@@ -5,7 +5,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import { AppBar, Popper } from '@material-ui/core';
+import { AppBar, Popper, useMediaQuery, useTheme } from '@material-ui/core';
 import { quotationsData } from '../../../data';
 import YogaMediDetails from '../yoga-details-page/YogaMediDetails';
 
@@ -76,7 +76,8 @@ const useStyles = makeStyles((theme) => ({
     tabs: {
         borderRight: `1px solid ${theme.palette.divider}`,
         // height: '300px',
-        width: '300px',
+        // width: '300px',
+        // display:'none',
         padding:30,
         // position:'sticky'
     },
@@ -86,6 +87,9 @@ const useStyles = makeStyles((theme) => ({
 const Meditation = () => {
   const classes = useStyles();
     const [value, setValue] = React.useState(0);
+
+    const theme = useTheme();
+    const mobileDevice = useMediaQuery(theme.breakpoints.down('md'));
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -98,6 +102,7 @@ const Meditation = () => {
                         // position="sticky"
                         orientation="vertical"
                         variant="scrollable"
+                        
                         value={value}
                         onChange={handleChange}
                         aria-label="Vertical tabs example"

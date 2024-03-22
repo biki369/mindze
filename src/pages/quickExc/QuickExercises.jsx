@@ -1,7 +1,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -10,6 +10,7 @@ import Box from '@material-ui/core/Box';
 import ShortExercises from './short-exe/ShortExercises';
 import Quotations from './quotations/Quotations';
 import QuickMeditation from './quick-meditation/QuickMeditation';
+import { useMediaQuery } from '@material-ui/core';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -52,6 +53,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const QuickExercises = () => {
+    const theme = useTheme();
+    const mobileDevice = useMediaQuery(theme.breakpoints.down('md'));
     const classes = useStyles();
     const [value, setValue] = React.useState(0);
 
@@ -61,13 +64,15 @@ const QuickExercises = () => {
 
     return (
         <div className={classes.root}>
-            <AppBar 
-            position="static"
-           
-            >
-                <Tabs value={value} onChange={handleChange} aria-label="simple tabs example"
-                 centered
+            <AppBar
+                position="static"
 
+            >
+                <Tabs value={value} onChange={handleChange}
+                    centered
+                    // variant={mobileDevice?"scrollable":""}
+                    // scrollButtons="auto"
+                    aria-label="scrollable auto tabs example"
                 >
                     <Tab label="Short Exercises/Affirmations" {...a11yProps(0)} />
                     <Tab label="Quotations" {...a11yProps(1)} />
@@ -82,7 +87,7 @@ const QuickExercises = () => {
                 <Quotations />
             </TabPanel>
             <TabPanel value={value} index={2}>
-                <QuickMeditation/>
+                <QuickMeditation />
             </TabPanel>
         </div>
     );
