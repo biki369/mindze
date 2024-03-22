@@ -19,6 +19,7 @@ import BlogsMain from './pages/Blogs/BlogsMain';
 import PsychologicalCounslr from './pages/counselors/psychological/PsychologicalCounslr';
 import LoginUser from './pages/auth/login-user/LoginUser';
 import Books from './pages/bookSummery/Books';
+import BackToTop from './components/back-to-top/BackToTop';
 
 
 function App() {
@@ -58,6 +59,7 @@ function App() {
           } */}
         </Routes>
         <Footer />
+         <BackToTop/>
       </BrowserRouter>
     </div>
   )
