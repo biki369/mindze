@@ -58,18 +58,15 @@ const Quotations = () => {
     const toggleDrawer = () => {
         setDrawerOpen(!drawerOpen);
     };
-
-
-
+    
     const getId = (id) => {
         if (!id) {
             id = 0
         }
-        // console.log(id,"================sdkfjksgfshjgfdsk");
         return setSendId(id)
     }
 
-    const [expanded, setExpanded] = React.useState(false);
+    // const [expanded, setExpanded] = React.useState(false);
 
     const SideMenuBar = () => {
         return (
@@ -82,8 +79,8 @@ const Quotations = () => {
                                 style={{
                                     color: sendId === data.id ? '#fff' : '#545e6f',
                                     background: sendId === data.id ? '#3f51b5' : '',
-                                    width:"100%",
-                                    margin:"10px 0"
+                                    width: "100%",
+                                    margin: "10px 0"
 
                                 }}
                             >{data.category}</Button>

@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import { Accordion, AccordionDetails, AccordionSummary, Button, IconButton, useMediaQuery, useTheme } from '@material-ui/core';
 import YogaMediDetails from '../yoga-details-page/YogaMediDetails';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink} from 'react-router-dom';
 import SideMenu from '../../../components/drawer/SideMenu';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { MeditationsData } from '../../../data/yogaMediData';
@@ -49,8 +49,6 @@ const Meditation = () => {
     const theme = useTheme();
     const mobileDevice = useMediaQuery(theme.breakpoints.down('md'));
 
-
-
     const handleClick = (data) => {
         return setSendId(data.id)
     };
@@ -60,8 +58,7 @@ const Meditation = () => {
         setDrawerOpen(!drawerOpen);
     };
 
-
-    const [expanded, setExpanded] = React.useState(false);
+    // const [expanded, setExpanded] = React.useState(false);
 
     const SideMenuBar = () => {
         return (
@@ -104,7 +101,6 @@ const Meditation = () => {
             </div>
         )
     }
-
     return (
         <>
             {

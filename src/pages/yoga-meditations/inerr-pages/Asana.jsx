@@ -13,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
         height: "100%",
         width: '100%',
         display: 'flex',
-
         "& .side-menu": {
             width: '300px',
             height: '100vh',
@@ -23,7 +22,6 @@ const useStyles = makeStyles((theme) => ({
             [theme.breakpoints.down('md')]: {
                 display: 'none'
             },
-
             "& .side-link": {
                 width: "100%",
                 "& button": {
@@ -31,8 +29,6 @@ const useStyles = makeStyles((theme) => ({
                     minWidth: "100%",
                 }
             }
-
-
         },
 
         "& .sub-content": {
@@ -53,8 +49,6 @@ const Asana = () => {
     const toggleDrawer = () => {
         setDrawerOpen(!drawerOpen);
     };
-
-
 
     const getId = (id) => {
         if (!id) {

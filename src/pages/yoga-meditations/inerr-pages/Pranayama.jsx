@@ -57,12 +57,11 @@ const Pranayama = () => {
         setDrawerOpen(!drawerOpen);
     };
 
-
     const getId = (id) => {
         return setSendId(id)
     }
-
-    const [expanded, setExpanded] = React.useState(false);
+    
+    // const [expanded, setExpanded] = React.useState(false);
 
     const SideMenuBar = () => {
         return (
@@ -82,7 +81,6 @@ const Pranayama = () => {
                         </div>
 
                     ))
-                    // console.log(item)
                 }
             </div>
         )
@@ -112,4 +110,4 @@ const Pranayama = () => {
     );
 }
 
-export default Pranayama
+export default Pranayama;
