@@ -77,7 +77,6 @@ function AsanaDetails({ id }) {
     const [findData, setFindData] = useState("");
 
     const classes = useStyles();
-    //   let { id } = useParams();
     if (!id) {
         id = 0;
     }
@@ -90,7 +89,6 @@ function AsanaDetails({ id }) {
         fetchData()
     }, [id])
 
-    console.log(id, findData, "id main")
 
 
     return (

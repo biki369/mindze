@@ -28,8 +28,10 @@ const useStyles = makeStyles((theme) => ({
                 flexDirection: 'column',
                 "& .side-link": {
                     margin: '16px 0',
-                    "& a": {
-                        padding: '10px',
+                    "& button": {
+                        display: 'block',
+                        margin: "10px 0",
+                        width: "100%",
                     },
                 }
             }
@@ -41,13 +43,13 @@ const useStyles = makeStyles((theme) => ({
 
 const Meditation = () => {
     const classes = useStyles();
-    const [value, setValue] = React.useState(0);
+
     const [sendId, setSendId] = useState(null);
-    
+
     const theme = useTheme();
     const mobileDevice = useMediaQuery(theme.breakpoints.down('md'));
 
-    const history = useNavigate();
+
 
     const handleClick = (data) => {
         return setSendId(data.id)
@@ -58,9 +60,6 @@ const Meditation = () => {
         setDrawerOpen(!drawerOpen);
     };
 
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    };
 
     const [expanded, setExpanded] = React.useState(false);
 
@@ -85,15 +84,12 @@ const Meditation = () => {
                                     {
                                         item.data.map((data) => (
                                             <div key={data.id} className='side-link'>
-                                                {/* <NavLink
-                                                    style={({ isActive }) => ({
-                                                        color: isActive ? '#fff' : '#545e6f',
-                                                        background: isActive ? '#3f51b5' : '',
-                                                    })}
-
-                                                    to={`/yogaMeditations/${data.id}`}
-                                                >{data.title}</NavLink> */}
-                                                <Button  onClick={() => handleClick(data)}>{data.title}</Button>
+                                                <Button onClick={() => handleClick(data)}
+                                                    style={{
+                                                        color: sendId === data.id ? '#fff' : '#545e6f',
+                                                        background: sendId === data.id ? '#3f51b5' : '',
+                                                    }}
+                                                >{data.title}</Button>
                                             </div>
 
                                         ))
@@ -159,7 +155,7 @@ const Meditation = () => {
                     </SideMenu>
                 }
                 <div className='yoga-meditation'>
-                    <YogaMediDetails id={sendId}/>
+                    <YogaMediDetails id={sendId} />
                 </div>
             </div>
         </>

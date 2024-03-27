@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Button, IconButton, useMediaQuery, useTheme } from '@material-ui/core';
 import SideMenu from '../../../components/drawer/SideMenu';
 // import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { asanaData,} from '../../../data/yogaMediData';
+import { asanaData, } from '../../../data/yogaMediData';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import AsanaDetails from '../yoga-details-page/AsanaDetails';
 
@@ -24,24 +24,19 @@ const useStyles = makeStyles((theme) => ({
                 display: 'none'
             },
 
-            "& .side-link":{
-                width:"100%",
-                "& a":{
-                    // backgroundColor:"green",
-                    display:'block',
-                    margin:"10px 0",
-                    padding:"10px",
-                    fontSize:'1.3rem',
-                    width:"100%",
-                    
+            "& .side-link": {
+                width: "100%",
+                "& button": {
+                    // display: 'block',
+                    minWidth: "100%",
                 }
             }
 
-          
+
         },
 
-        "& .sub-content":{
-            
+        "& .sub-content": {
+
         },
     },
 
@@ -49,7 +44,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 const Asana = () => {
     const classes = useStyles();
-    const [value, setValue] = React.useState(0);
     const [sendId, setSendId] = useState(null);
 
     const theme = useTheme();
@@ -60,11 +54,12 @@ const Asana = () => {
         setDrawerOpen(!drawerOpen);
     };
 
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    };
+
 
     const getId = (id) => {
+        if (!id) {
+            id = 0
+        }
         return setSendId(id)
         // console.log(e,id,"jkzchxjcxhjzgcxhkjz")
     }
@@ -77,14 +72,17 @@ const Asana = () => {
                 {
                     asanaData.map((data) => (
                         <div key={data.id} className='side-link'>
-                            {/* <NavLink
-                                style={({ isActive }) => ({
-                                    color: isActive ? '#fff' : '#545e6f',
-                                    background: isActive ? '#3f51b5' : '',
-                                })}
+                            <Button
+                                onClick={() => getId(data.id)}
+                                style={{
+                                    color: sendId === data.id ? '#fff' : '#545e6f',
+                                    background: sendId === data.id ? '#3f51b5' : '',
+                                    width:"100%",
+                                    // padding:"13px",
+                                    margin:"10px 0"
 
-                                to={`/pranayamaAsanasDetails/${data.id}`} >{data.title}</NavLink> */}
-                            <Button onClick={() => getId(data.id)}>{data.title}</Button>
+                                }}
+                            >{data.title}</Button>
                         </div>
 
                     ))
@@ -96,7 +94,7 @@ const Asana = () => {
 
     return (
         <>
-             {
+            {
                 mobileDevice && <IconButton onClick={toggleDrawer} ><ChevronRightIcon /></IconButton >
             }
             <div className={classes.root}>
@@ -105,16 +103,12 @@ const Asana = () => {
                 }
                 {
                     mobileDevice && <SideMenu isOpen={drawerOpen} onClose={toggleDrawer} anchor='left'>
-                        <div className='side-menu'>
-
-                            <h1>Hello</h1>
-
-                        </div>
+                        <SideMenuBar />    
                     </SideMenu>
                 }
                 <div className='sub-content'>
-                 {/* {  sendId && <PranayamaAsanasDetails id={sendId}/>} */}
-                 <AsanaDetails id={sendId}/>
+                    {/* {  sendId && <PranayamaAsanasDetails id={sendId}/>} */}
+                    <AsanaDetails id={sendId} />
                 </div>
             </div>
         </>

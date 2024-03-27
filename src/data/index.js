@@ -189,24 +189,79 @@ export const bookSummeryData = [
 ];
 
 export const quotationsData = [
+
   {
-    url: "/src/assets/Quotation/encouragement/1.png",
+    category: "Encouragement",
+    id:0,
+    images:[
+      {
+        id:0,
+        url: "/src/assets/Quotation/encouragement/1.png",
+      },
+      {
+        id:1,
+        url: "/src/assets/Quotation/encouragement/2.png",
+      },
+      {
+        id :2,
+        url: "/src/assets/Quotation/encouragement/3.png",
+      },
+      {
+        id:3,
+        url: "/src/assets/Quotation/encouragement/4.png",
+      },
+      {
+        id:4,
+        url: "/src/assets/Quotation/encouragement/5.png",
+      },
+      {
+        id:5,
+        url: "/src/assets/Quotation/encouragement/6.png",
+      },
+    ]
   },
   {
-    url: "/src/assets/Quotation/encouragement/2.png",
+    category: "Famous Personality",
+    id:1,
+    images:[
+      {
+        id:3,
+        url: "/src/assets/Quotation/encouragement/4.png",
+      },
+      {
+        id:4,
+        url: "/src/assets/Quotation/encouragement/5.png",
+      },
+      {
+        id:5,
+        url: "/src/assets/Quotation/encouragement/6.png",
+      },
+    ]
   },
   {
-    url: "/src/assets/Quotation/encouragement/3.png",
+    category: "Final Positivity and Optimism",
+    id:2,
+    images:[
+      {
+        id:0,
+        url: "/src/assets/Quotation/encouragement/1.png",
+      },
+      {
+        id:1,
+        url: "/src/assets/Quotation/encouragement/2.png",
+      },
+      {
+        id :2,
+        url: "/src/assets/Quotation/encouragement/3.png",
+      },
+      {
+        id:3,
+        url: "/src/assets/Quotation/encouragement/4.png",
+      },
+     
+    ]
   },
-  {
-    url: "/src/assets/Quotation/encouragement/4.png",
-  },
-  {
-    url: "/src/assets/Quotation/encouragement/5.png",
-  },
-  {
-    url: "/src/assets/Quotation/encouragement/6.png",
-  },
+
 ];
 
 export const mentalTestData = [
@@ -296,22 +351,62 @@ export const PhilosophicalPerspectiveData = [
 ];
 
 export const blogPostData = [
-  {
-    title: "How can parents support their child's mental health?",
-    img: "/src/assets/Blog_pics/e1.jpg",
-  },
-  {
-    title: "How can parents support their child's mental health?",
-    img: "/src/assets/Blog_pics/lifestyle/image1.jpg",
-  },
-  {
-    title: "How can parents support their child's mental health?",
-    img: "/src/assets/Blog_pics/sports/image1.jpg",
-  },
-  {
-    title: "How can parents support their child's mental health?",
-    img: "/src/assets/Blog_pics/sprituality/image1.jpg",
-  },
+   {
+    category:"Parenting",
+    id:0,
+    blogs:[
+      {
+        title: "How can parents support their child's mental health?",
+        img: "/src/assets/Blog_pics/e1.jpg",
+        data:[
+          {
+            title: "How can parents support their child's mental health?",
+            
+          }
+        ]
+      },
+      {
+        title: "How can parents support their child's mental health?",
+        img: "/src/assets/Blog_pics/lifestyle/image1.jpg",
+      },
+      {
+        title: "How can parents support their child's mental health?",
+        img: "/src/assets/Blog_pics/sports/image1.jpg",
+      },
+      {
+        title: "How can parents support their child's mental health?",
+        img: "/src/assets/Blog_pics/sprituality/image1.jpg",
+      },
+    ]
+   },
+   {
+    category:"Elderly Mental Health",
+    id:1,
+    blogs:[
+      {
+        title: "How can parents support their child's mental health?",
+        img: "/src/assets/Blog_pics/e1.jpg",
+        data:[
+          {
+            title: "How can parents support their child's mental health?",
+            
+          }
+        ]
+      },
+      {
+        title: "How can parents support their child's mental health?",
+        img: "/src/assets/Blog_pics/lifestyle/image1.jpg",
+      },
+      {
+        title: "How can parents support their child's mental health?",
+        img: "/src/assets/Blog_pics/sports/image1.jpg",
+      },
+      {
+        title: "How can parents support their child's mental health?",
+        img: "/src/assets/Blog_pics/sprituality/image1.jpg",
+      },
+    ]
+   },
 ];
 
 export const counselorsData = [
