@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react'
-import { Avatar, Box, IconButton, Typography, useMediaQuery } from "@material-ui/core"
+import { useEffect, useRef, useState } from 'react'
+import { Avatar, Box, ClickAwayListener, Grow, IconButton, MenuItem, MenuList, Paper, Popper, Typography, useMediaQuery } from "@material-ui/core"
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import PermIdentityIcon from '@material-ui/icons/PermIdentity';
 import { Link, NavLink } from 'react-router-dom';
@@ -33,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
             right: "3.5vw",
             top: "5.5vh",
             cursor: "pointer",
+            zIndex: 999,
             // padding:'6px',
             // borderRadius:"50%",
             // backgroundColor: "#3f51b5",
@@ -102,6 +103,39 @@ const Navbar = () => {
     const classes = useStyles();
     const [scroll, setScroll] = useState(false);
 
+    const [open, setOpen] = useState(false);
+    const anchorRef = useRef(null);
+
+
+    const handleToggle = () => {
+        setOpen((prevOpen) => !prevOpen);
+    };
+
+    const handleClose = (event) => {
+        if (anchorRef.current && anchorRef.current.contains(event.target)) {
+            return;
+        }
+
+        setOpen(false);
+    };
+
+    function handleListKeyDown(event) {
+        if (event.key === 'Tab') {
+            event.preventDefault();
+            setOpen(false);
+        }
+    }
+
+    // return focus to the button when we transitioned from !open -> open
+    const prevOpen = useRef(open);
+    useEffect(() => {
+        if (prevOpen.current === true && open === false) {
+            anchorRef.current.focus();
+        }
+
+        prevOpen.current = open;
+    }, [open]);
+
     useEffect(() => {
         window.addEventListener("scroll", () => {
             setScroll(window.scrollY > 10);
@@ -125,12 +159,36 @@ const Navbar = () => {
                 <img src="/src/assets/logo-removebg.png" alt="logo" className="logo-img" />
                 <Typography className='typo-text'>Blending Ancient Wisdom with Modern Mindcare</Typography>
 
-                <div className="profile">
+                <div className={`profile ${scroll ? "sticky" : ""}`}>
                     <div className="p-icon" title='Profile'>
-                        <Avatar className={classes.avatar}>
-                            <Link to="login">
-                                <PermIdentityIcon />
-                            </Link>
+                        <Avatar className={classes.avatar}
+                            ef={anchorRef}
+                            aria-controls={open ? 'menu-list-grow' : undefined}
+                            aria-haspopup="true"
+                            onClick={handleToggle}
+                        >
+
+
+                            <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
+                                {({ TransitionProps, placement }) => (
+                                    <Grow
+                                        {...TransitionProps}
+                                        style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
+                                    >
+                                        <Paper>
+                                            <ClickAwayListener onClickAway={handleClose}>
+                                                <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
+                                                    <MenuItem onClick={handleClose}>
+                                                        <Link to={"/login"}> Profile </Link>
+                                                    </MenuItem>
+                                                    <MenuItem onClick={handleClose}>My account</MenuItem>
+                                                    <MenuItem onClick={handleClose}>Logout</MenuItem>
+                                                </MenuList>
+                                            </ClickAwayListener>
+                                        </Paper>
+                                    </Grow>
+                                )}
+                            </Popper>
                         </Avatar>
                     </div>
                 </div>
