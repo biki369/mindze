@@ -1,6 +1,6 @@
 import { Box, Typography, makeStyles, useMediaQuery, useTheme } from '@material-ui/core';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y,Autoplay } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -8,6 +8,8 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { heroSliderImg, reviewData } from '../../data';
 import ServiceSlider from '../../components/sliders/serice-sldier/ServiceSlider';
+import { useEffect, useState } from 'react';
+import { getConsultant } from '../../api';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -82,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down(800)]: {
           padding: '10px',
         },
-        "& p":{
+        "& p": {
           fontSize: '1.2rem',
           // [theme.breakpoints.down(800)]: {
           //   fontSize: '1rem',
@@ -102,7 +104,7 @@ const useStyles = makeStyles((theme) => ({
     "& .review-section": {
       "& h1": {
         textAlign: 'center',
-        fontSize:"3rem"
+        fontSize: "3rem"
       },
 
       position: 'relative',
@@ -149,6 +151,29 @@ const useStyles = makeStyles((theme) => ({
 const Home = () => {
   const classes = useStyles();
 
+  const [spiritualData, setSpiritualData] = useState();
+  const [psychologicalData, setPsychologicalData] = useState();
+  const [isLoading, setIsLoading] = useState(false)
+
+  useEffect(() => {
+    getConsultant("api/consultant/spiritual").then((data) =>
+      setSpiritualData(data),
+      setIsLoading(true)
+    )
+    setIsLoading(false)
+  }, [isLoading])
+
+  useEffect(() => {
+    getConsultant("api/consultant/psychological").then((data) =>
+      setPsychologicalData(data),
+      setIsLoading(true)
+    )
+    setIsLoading(false)
+  }, [isLoading])
+
+  // console.log(spiritualData, "==================s");
+  // console.log(psychologicalData, "==================");
+
 
 
 
@@ -167,7 +192,7 @@ const Home = () => {
           speed={5000}
           loop={true}
           // slidesPerView={1}
-          modules={[Pagination, Navigation, Scrollbar,Autoplay]}
+          modules={[Pagination, Navigation, Scrollbar, Autoplay]}
           navigation
           pagination={{ clickable: true }}
         // Autoplay
@@ -223,7 +248,7 @@ const Home = () => {
           <ServiceSlider text={"Trusted by"} trustbyData={reviewData} />
         </div>
       </div>
-        
+
     </div>
   )
 }

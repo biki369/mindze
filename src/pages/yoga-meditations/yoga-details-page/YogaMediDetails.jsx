@@ -1,9 +1,12 @@
 import { makeStyles } from "@material-ui/core";
+import { MeditationsData } from '../../../data/yogaMediData'
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: '30px',
+    padding: '6px',
     [theme.breakpoints.down("sm")]: {
       padding: '10px',
     },
@@ -67,16 +70,45 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-function YogaMediDetails() {
+
+function YogaMediDetails({id}) {
+
+  const [findData, setFindData] = useState("");
+
   const classes = useStyles();
+  // let { id } = useParams();
+  if (!id) {
+    id = 0;
+  }
+
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        for (let i = 0; i < MeditationsData.length; i++) {
+          let catData = await MeditationsData[i].data.find(item => item.id === id);
+          if (catData) {
+            return await setFindData(catData);
+          }
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    fetchData()
+  }, [id])
+
+
+  // console.log(findData, id, "===================== datalscjkj")
+
 
   return (
     <div className={classes.root}>
       <div className="technique-container">
-        <h1 className="technique-head">Body Scan Meditation</h1>
+        <h1 className="technique-head">{findData?.title}</h1>
         <div className="sub-content">
           <h3 className="sub-head">Introduction</h3>
-          <p>Body Scan Meditation is a mindfulness technique that promotes deep relaxation and self-awareness. This practice involves mentally scanning your body, noticing sensations, and releasing tension.</p>
+          <p>{findData?.intro}</p>
         </div>
         <div className="sub-content">
           <h3 className="sub-head">Understanding Body Scan Meditation</h3>
@@ -94,10 +126,13 @@ function YogaMediDetails() {
         <div className="ul-sub-content">
           <h3 className="sub-head">How to Practice Body Scan Meditation: A Step-by-Step Guide</h3>
           <ul>
-            <li> <span>Find a Quiet Place:</span> Choose a peaceful spot for meditation.</li>
-            <li> <span>Find a Quiet Place:</span> Choose a peaceful spot for meditation.</li>
-            <li> <span>Find a Quiet Place:</span> Choose a peaceful spot for meditation.</li>
-            <li> <span>Find a Quiet Place:</span> Choose a peaceful spot for meditation.</li>
+            {
+            findData.guid && findData.guid.map((item) => {
+                return (
+                  <li key={item.step}> <span>{item.step}:</span> {item.desc}</li>
+                )
+              })
+            }
           </ul>
         </div>
         <div className="ul-sub-content">
@@ -112,7 +147,7 @@ function YogaMediDetails() {
 
         <div className="sub-content">
           <h3 className="sub-head">Conclusion</h3>
-          <p>So-Hum Meditation is a powerful tool in discovering inner tranquility and mindfulness. This simple practice, when done regularly, can lead to profound mental and emotional balance, bringing a sense of calm and centeredness to everyday life.</p>
+          <p>{findData?.conclusion}</p>
         </div>
       </div>
     </div>

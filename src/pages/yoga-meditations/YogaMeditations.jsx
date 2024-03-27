@@ -9,6 +9,8 @@ import Box from '@material-ui/core/Box';
 import Meditation from './inerr-pages/Meditation';
 import Pranayama from './inerr-pages/Pranayama';
 import Asana from './inerr-pages/Asana';
+import { Route, Routes } from 'react-router-dom';
+import YogaMediDetails from './yoga-details-page/YogaMediDetails';
 
 
 function TabPanel(props) {
@@ -63,28 +65,29 @@ const YogaMeditations = () => {
 
     return (
         <div className={classes.root}>
-            <AppBar 
-            position="static"
-           
+            <AppBar
+                position="static"
+
             >
                 <Tabs value={value} onChange={handleChange} aria-label="simple tabs example"
-                 centered
+                    centered
                 >
                     <Tab label="Meditation" {...a11yProps(0)} />
                     <Tab label="Pranayama" {...a11yProps(1)} />
                     <Tab label="Asana" {...a11yProps(2)} />
-                    
+
                 </Tabs>
             </AppBar>
             <TabPanel value={value} index={0}>
-              <Meditation/>
+                <Meditation />
             </TabPanel>
             <TabPanel value={value} index={1}>
-              <Pranayama/>
+                <Pranayama />
             </TabPanel>
             <TabPanel value={value} index={2}>
-              <Asana/>
+                <Asana />
             </TabPanel>
+
         </div>
     );
 }

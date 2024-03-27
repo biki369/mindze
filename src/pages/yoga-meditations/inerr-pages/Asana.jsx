@@ -1,155 +1,123 @@
 
-
-
-
-
-
-import React from 'react'
-import PropTypes from 'prop-types';
+import React, { useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
-import { AppBar, Popper } from '@material-ui/core';
-import { quotationsData } from '../../../data';
-import YogaMediDetails from '../yoga-details-page/YogaMediDetails';
-
-function TabPanel(props) {
-    const { children, value, index, ...other } = props;
-
-    return (
-        <div
-            role="tabpanel"
-            hidden={value !== index}
-            id={`vertical-tabpanel-${index}`}
-            aria-labelledby={`vertical-tab-${index}`}
-            {...other}
-        >
-            {value === index && (
-                <>
-                    {children}
-                </>
-            )}
-        </div>
-    );
-}
-
-TabPanel.propTypes = {
-    children: PropTypes.node,
-    index: PropTypes.any.isRequired,
-    value: PropTypes.any.isRequired,
-};
-
-function a11yProps(index) {
-    return {
-        id: `vertical-tab-${index}`,
-        'aria-controls': `vertical-tabpanel-${index}`,
-    };
-}
+import { Button, IconButton, useMediaQuery, useTheme } from '@material-ui/core';
+import SideMenu from '../../../components/drawer/SideMenu';
+// import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { asanaData,} from '../../../data/yogaMediData';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import AsanaDetails from '../yoga-details-page/AsanaDetails';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         height: "100%",
-    },
-    root2: {
-        flexGrow: 1,
-        backgroundColor: theme.palette.background.paper,
+        width: '100%',
         display: 'flex',
-        // height: 224,
-        "& .tab-container": {
-            width: '100%',
-            // height: "90vh",
-            padding: "30px",
-        },
-        "& .qots-container": {
-            display: 'flex',
-            gap: '0.5rem',
-            // alginItem:'center',
-            // justifyContent:'center',
-            // gap: '1.3rem',
-            flexWrap: 'wrap',
-            "& .qouts-img": {
-                padding: 10,
-                backgroundColor: "#efe",
-                "& img": {
-                    width: '260px',
-                    borderRadius: '13px',
+
+        "& .side-menu": {
+            width: '300px',
+            height: '100vh',
+            padding: '16px',
+            overFlowY: 'scroll',
+            backgroundColor: '#fff',
+            [theme.breakpoints.down('md')]: {
+                display: 'none'
+            },
+
+            "& .side-link":{
+                width:"100%",
+                "& a":{
+                    // backgroundColor:"green",
+                    display:'block',
+                    margin:"10px 0",
+                    padding:"10px",
+                    fontSize:'1.3rem',
+                    width:"100%",
+                    
                 }
             }
+
+          
+        },
+
+        "& .sub-content":{
+            
         },
     },
-    tabs: {
-        borderRight: `1px solid ${theme.palette.divider}`,
-        // height: '300px',
-        width: '300px',
-        padding:30,
-        // position:'sticky'
-    },
+
 
 }));
-
 const Asana = () => {
-  const classes = useStyles();
+    const classes = useStyles();
     const [value, setValue] = React.useState(0);
+    const [sendId, setSendId] = useState(null);
+
+    const theme = useTheme();
+    const mobileDevice = useMediaQuery(theme.breakpoints.down('md'));
+
+    const [drawerOpen, setDrawerOpen] = useState(false);
+    const toggleDrawer = () => {
+        setDrawerOpen(!drawerOpen);
+    };
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
 
-    return (
-        <div className={classes.root}>
-            <div className={classes.root2}>
-                    <Tabs
-                        // position="sticky"
-                        orientation="vertical"
-                        variant="scrollable"
-                        value={value}
-                        onChange={handleChange}
-                        aria-label="Vertical tabs example"
-                        className={classes.tabs}
-                    >
-                         {/* <p>Relaxation and Stress Relief</p> */}
-                        <Tab label="Body Scan Meditation" {...a11yProps(0)} />
-                        <Tab label="Item Two" {...a11yProps(1)} />
-                        <Tab label="Item Three" {...a11yProps(2)} />
-                        <Tab label="Item Four" {...a11yProps(3)} />
-                        <Tab label="Item Five" {...a11yProps(4)} />
-                        <Tab label="Item Six" {...a11yProps(5)} />
-                        <Tab label="Item Seven" {...a11yProps(6)} />
-                    </Tabs>
-                
+    const getId = (id) => {
+        return setSendId(id)
+        // console.log(e,id,"jkzchxjcxhjzgcxhkjz")
+    }
 
-                <TabPanel value={value} index={0}>
-                    <div className="tab-container">
-                        <div className="qots-container">
-                            <YogaMediDetails />
+    const [expanded, setExpanded] = React.useState(false);
+
+    const SideMenuBar = () => {
+        return (
+            <div className='side-menu'>
+                {
+                    asanaData.map((data) => (
+                        <div key={data.id} className='side-link'>
+                            {/* <NavLink
+                                style={({ isActive }) => ({
+                                    color: isActive ? '#fff' : '#545e6f',
+                                    background: isActive ? '#3f51b5' : '',
+                                })}
+
+                                to={`/pranayamaAsanasDetails/${data.id}`} >{data.title}</NavLink> */}
+                            <Button onClick={() => getId(data.id)}>{data.title}</Button>
                         </div>
-                    </div>
-                </TabPanel>
 
-                <TabPanel value={value} index={1}>
-                    Item Two
-                </TabPanel>
-                
-                <TabPanel value={value} index={2}>
-                    Item Three
-                </TabPanel>
-                <TabPanel value={value} index={3}>
-                    Item Four
-                </TabPanel>
-                <TabPanel value={value} index={4}>
-                    Item Five
-                </TabPanel>
-                <TabPanel value={value} index={5}>
-                    Item Six
-                </TabPanel>
-                <TabPanel value={value} index={6}>
-                    Item Seven
-                </TabPanel>
+                    ))
+                    // console.log(item)
+                }
             </div>
+        )
+    }
 
-        </div>
+    return (
+        <>
+             {
+                mobileDevice && <IconButton onClick={toggleDrawer} ><ChevronRightIcon /></IconButton >
+            }
+            <div className={classes.root}>
+                {
+                    !mobileDevice && <SideMenuBar />
+                }
+                {
+                    mobileDevice && <SideMenu isOpen={drawerOpen} onClose={toggleDrawer} anchor='left'>
+                        <div className='side-menu'>
+
+                            <h1>Hello</h1>
+
+                        </div>
+                    </SideMenu>
+                }
+                <div className='sub-content'>
+                 {/* {  sendId && <PranayamaAsanasDetails id={sendId}/>} */}
+                 <AsanaDetails id={sendId}/>
+                </div>
+            </div>
+        </>
     );
 }
 

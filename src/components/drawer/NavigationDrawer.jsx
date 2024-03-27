@@ -1,7 +1,6 @@
 // NavigationDrawer
 
-import React from 'react';
-import { Drawer, List, ListItem, ListItemText, makeStyles } from '@material-ui/core';
+import { Drawer, List, ListItem, makeStyles } from '@material-ui/core';
 import { NavLink } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
@@ -24,13 +23,8 @@ const useStyles = makeStyles((theme) => ({
 const NavigationDrawer = ({ isOpen, onClose, items }) => {
   const classes = useStyles();
   return (
-    <Drawer open={isOpen} onClose={onClose} className={classes.root}>
+    <Drawer open={isOpen} onClose={onClose} className={classes.root} anchor='right'>
       <List className='nav-links'>
-        {/* {items.map((item, index) => (
-          <ListItem button key={index} onClick={item.onClick}>
-            <ListItemText primary={item.label} />
-          </ListItem>
-        ))} */}
         {
           items.map((item, index) => (
             <ListItem key={index}>
