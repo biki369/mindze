@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Avatar, Box, ClickAwayListener, Grow, IconButton, MenuItem, MenuList, Paper, Popper, Typography, useMediaQuery } from "@material-ui/core"
+import { Avatar, Box, ClickAwayListener, Grow, IconButton, Menu, MenuItem, MenuList, Paper, Popper, Typography, useMediaQuery } from "@material-ui/core"
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import PermIdentityIcon from '@material-ui/icons/PermIdentity';
 import { Link, NavLink } from 'react-router-dom';
@@ -107,24 +107,16 @@ const Navbar = () => {
     const anchorRef = useRef(null);
 
 
-    const handleToggle = () => {
-        setOpen((prevOpen) => !prevOpen);
+    const [anchorEl, setAnchorEl] = useState(null);
+
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
     };
 
-    const handleClose = (event) => {
-        if (anchorRef.current && anchorRef.current.contains(event.target)) {
-            return;
-        }
-
-        setOpen(false);
+    const handleClose = () => {
+        setAnchorEl(null);
     };
 
-    function handleListKeyDown(event) {
-        if (event.key === 'Tab') {
-            event.preventDefault();
-            setOpen(false);
-        }
-    }
 
     // return focus to the button when we transitioned from !open -> open
     const prevOpen = useRef(open);
@@ -162,63 +154,49 @@ const Navbar = () => {
                 <div className={`profile ${scroll ? "sticky" : ""}`}>
                     <div className="p-icon" title='Profile'>
                         <Avatar className={classes.avatar}
-                            ef={anchorRef}
-                            aria-controls={open ? 'menu-list-grow' : undefined}
-                            aria-haspopup="true"
-                            onClick={handleToggle}
+                            aria-haspopup="true" onClick={handleClick}
                         >
-
-
-                            <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
-                                {({ TransitionProps, placement }) => (
-                                    <Grow
-                                        {...TransitionProps}
-                                        style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
-                                    >
-                                        <Paper>
-                                            <ClickAwayListener onClickAway={handleClose}>
-                                                <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                                                    <MenuItem onClick={handleClose}>
-                                                        <Link to={"/login"}> Profile </Link>
-                                                    </MenuItem>
-                                                    <MenuItem onClick={handleClose}>My account</MenuItem>
-                                                    <MenuItem onClick={handleClose}>Logout</MenuItem>
-                                                </MenuList>
-                                            </ClickAwayListener>
-                                        </Paper>
-                                    </Grow>
-                                )}
-                            </Popper>
+                            <PermIdentityIcon />
                         </Avatar>
+
+                        <Menu
+                            id="simple-menu"
+                            anchorEl={anchorEl}
+                            keepMounted
+                            open={Boolean(anchorEl)}
+                            onClose={handleClose}
+                        >
+                            <MenuItem onClick={handleClose}>
+                                <Link to='/login'>Profile</Link>
+                            </MenuItem>
+                            <MenuItem onClick={handleClose}>
+                                <Link to="/contact-us">Contact us</Link>
+                            </MenuItem>
+                            <MenuItem onClick={handleClose}>
+                            <Link to="/join-counselor"> Join as a counselor</Link>
+                            </MenuItem>
+                        </Menu>
                     </div>
                 </div>
             </Box>
 
-            {
-                !mobileDevice && <Box className={`nav-links ${scroll ? "sticky" : ""}`}>
-                    {
-                        menuLits.map((item, index) => (
-                            <NavLink to={item.path} key={index}
-                                style={({ isActive }) => ({
-                                    color: isActive ? '#fff' : '#545e6f',
-                                    background: isActive ? '#3f51b5' : '',
-                                })}
+            {!mobileDevice && <Box className={`nav-links ${scroll ? "sticky" : ""}`}>
+                {
+                    menuLits.map((item, index) => (
+                        <NavLink to={item.path} key={index}
+                            style={({ isActive }) => ({
+                                color: isActive ? '#fff' : '#545e6f',
+                                background: isActive ? '#3f51b5' : '',
+                            })}
+                        >{item.label}</NavLink>
+                    ))
+                }
+            </Box>}
 
-                            >{item.label}</NavLink>
-                        ))
-                    }
-                </Box>
-            }
-
-            {
-                mobileDevice && <Box className={`nav-links-md ${scroll ? "sticky" : ""}`}>
-                    <NavigationDrawer isOpen={drawerOpen} onClose={toggleDrawer} items={menuLits} />
-                    <IconButton onClick={toggleDrawer} ><MenuIcon /></IconButton >
-                </Box>
-            }
-
-
-
+            {mobileDevice && <Box className={`nav-links-md ${scroll ? "sticky" : ""}`}>
+                <NavigationDrawer isOpen={drawerOpen} onClose={toggleDrawer} items={menuLits} />
+                <IconButton onClick={toggleDrawer} ><MenuIcon /></IconButton >
+            </Box>}
         </Box>
     )
 }

@@ -17,8 +17,10 @@ import PhilosopherDetails from "../pages/philosophical-pers/philosopher-details/
 import CounselorDetails from "../pages/counselors/counselor-details/CounselorDetails";
 import LoginUser from "../pages/auth/login-user/LoginUser";
 import Layout from "../layout/Layout";
-import YogaMediDetails from "../pages/yoga-meditations/yoga-details-page/YogaMediDetails";
+// import YogaMediDetails from "../pages/yoga-meditations/yoga-details-page/YogaMediDetails";
 import Meditation from "../pages/yoga-meditations/inerr-pages/Meditation";
+import ContactUs from "../pages/auth/contact-us/ContactUs";
+import JoinCounselor from "../pages/auth/join-counselor/JoinCounselor";
 
 
 export const routes = createBrowserRouter([
@@ -104,6 +106,14 @@ export const routes = createBrowserRouter([
           {
             path: "/login-user",
             element: <LoginUser/>,
+          },
+          {
+            path: "/contact-us",
+            element: <ContactUs/>,
+          },
+          {
+            path: "/join-counselor",
+            element: <JoinCounselor/>,
           },
         
           
