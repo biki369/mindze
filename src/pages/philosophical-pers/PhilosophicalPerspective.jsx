@@ -5,8 +5,6 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
 import Philosophers from './philosophers/Philosophers';
 import { useMediaQuery } from '@material-ui/core';
 
@@ -23,9 +21,10 @@ function TabPanel(props) {
             {...other}
         >
             {value === index && (
-                <Box p={3}>
-                    <Typography>{children}</Typography>
-                </Box>
+                <>
+                    {children}
+                </>
+
             )}
         </div>
     );
@@ -46,14 +45,22 @@ function a11yProps(index) {
 
 const useStyles = makeStyles((theme) => ({
     root: {
-          flexGrow: 1,
+        flexGrow: 1,
         backgroundColor: theme.palette.background.paper,
         "& .MuiTab-root": {
             padding: 0,
             [theme.breakpoints.down(600)]: {
-               width:'163px',
+                width: '163px',
             }
-        }
+        },
+        "& .MuiTabs-scrollButtonsDesktop": {
+            [theme.breakpoints.down('md')]: {
+                display: 'flex',
+            },
+        },
+        "& .MuiTabs-flexContainer": {
+            justifyContent: 'center',
+        },
 
     },
 }));

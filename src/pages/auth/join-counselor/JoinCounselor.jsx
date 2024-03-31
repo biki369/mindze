@@ -6,7 +6,14 @@ import { TextField, Button, Typography, Grid, Container, makeStyles } from '@mat
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        padding:"3.6rem 0"
+        padding: "3.6rem 0",
+        "& .form-container":{
+            padding: "1rem 6rem",
+            // boxShadow: "0 0 8px 0 rgba(0, 0, 0, 0.2)",
+            [theme.breakpoints.down('md')]: {
+                padding: "1rem 1rem",
+            },
+        }
     },
 }));
 
@@ -16,7 +23,7 @@ const JoinCounselor = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        phoneNum:'',
+        phoneNum: '',
         message: '',
 
     });
@@ -38,65 +45,75 @@ const JoinCounselor = () => {
         <dv >
             <Container maxWidth="md" className={classes.root}>
                 <Typography variant="h4" align="center" gutterBottom>
-                Join as a counselor
+                    Join as a counselor
                 </Typography>
-                <form onSubmit={handleSubmit}>
-                    <Grid container spacing={3}>
-                        <Grid item xs={12}>
-                            <TextField
-                                fullWidth
-                                required
-                                label="Your Name"
-                                name="name"
-                                value={formData.name}
-                                onChange={handleChange}
-                            />
+                <div className="form-container">
+
+                    <form onSubmit={handleSubmit}>
+                        <Grid container spacing={3}>
+                            <Grid item xs={12}>
+                                <TextField
+                                    fullWidth
+                                    required
+                                    label="Your Name"
+                                    name="name"
+                                    value={formData.name}
+                                    onChange={handleChange}
+                                    variant="outlined"
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <TextField
+                                    fullWidth
+                                    required
+                                    label="Phone number"
+                                    name="phone"
+                                    value={formData.phoneNum}
+                                    onChange={handleChange}
+                                    variant="outlined"
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <TextField
+                                    fullWidth
+                                    required
+                                    type="email"
+                                    label="Your Email"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    variant="outlined"
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <TextField
+                                    fullWidth
+                                    required
+                                    multiline
+                                    rows={4}
+                                    label="Message"
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    variant="outlined"
+                                // variant="contained"
+
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Button
+                                    type="submit"
+                                    variant="contained"
+                                    color="primary"
+                                    fullWidth
+                                >
+                                    Send Message
+                                </Button>
+                            </Grid>
                         </Grid>
-                        <Grid item xs={12}>
-                            <TextField
-                                fullWidth
-                                required
-                                label="Phone number"
-                                name="phone"
-                                value={formData.phoneNum}
-                                onChange={handleChange}
-                            />
-                        </Grid>
-                        <Grid item xs={12}>
-                            <TextField
-                                fullWidth
-                                required
-                                type="email"
-                                label="Your Email"
-                                name="email"
-                                value={formData.email}
-                                onChange={handleChange}
-                            />
-                        </Grid>
-                        <Grid item xs={12}>
-                            <TextField
-                                fullWidth
-                                required
-                                multiline
-                                rows={4}
-                                label="Message"
-                                name="message"
-                                value={formData.message}
-                                onChange={handleChange}
-                            />
-                        </Grid>
-                        <Grid item xs={12}>
-                            <Button
-                                type="submit"
-                                variant="contained"
-                                color="primary"
-                                fullWidth
-                            >
-                                Send Message
-                            </Button>
-                        </Grid>
-                    </Grid>
-                </form>
+                    </form>
+                </div>
+
             </Container>
         </dv>
 

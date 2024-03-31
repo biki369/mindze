@@ -5,8 +5,6 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
 import ShortExercises from './short-exe/ShortExercises';
 import Quotations from './quotations/Quotations';
 import QuickMeditation from './quick-meditation/QuickMeditation';
@@ -24,9 +22,9 @@ function TabPanel(props) {
             {...other}
         >
             {value === index && (
-                <Box p={3}>
-                    <Typography>{children}</Typography>
-                </Box>
+                <>
+                    {children}
+                </>
             )}
         </div>
     );
@@ -49,6 +47,17 @@ const useStyles = makeStyles((theme) => ({
     root: {
         //   flexGrow: 1,
         backgroundColor: theme.palette.background.paper,
+        "& .MuiTabs-scrollButtonsDesktop": {
+            [theme.breakpoints.down('md')]: {
+                display: 'flex',
+            },
+        },
+        "& .MuiTabs-flexContainer": {
+            justifyContent: 'center',
+            [theme.breakpoints.down('md')]: {
+                justifyContent: 'normal',
+            },
+        },
     },
 }));
 
@@ -64,15 +73,12 @@ const QuickExercises = () => {
 
     return (
         <div className={classes.root}>
-            <AppBar
-                position="static"
-
-            >
+            <AppBar position="static" >
                 <Tabs value={value} onChange={handleChange}
-                    centered
-                    // variant={mobileDevice?"scrollable":""}
-                    // scrollButtons="auto"
-                    aria-label="scrollable auto tabs example"
+                    // centered
+                    variant={mobileDevice ? "scrollable" : ""}
+                    scrollButtons="auto"
+                // aria-label="scrollable auto tabs example"
                 >
                     <Tab label="Short Exercises/Affirmations" {...a11yProps(0)} />
                     <Tab label="Quotations" {...a11yProps(1)} />
@@ -91,7 +97,6 @@ const QuickExercises = () => {
             </TabPanel>
         </div>
     );
-
 }
 
 export default QuickExercises

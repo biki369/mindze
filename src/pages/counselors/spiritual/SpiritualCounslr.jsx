@@ -93,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
             }
         },
 
-       
+
 
     },
 
@@ -166,7 +166,7 @@ const SpiritualCounslr = () => {
     const [date, setDate] = useState(todayDate)
 
     const [selectedDate, setSelectedDate] = useState();
-  
+
 
     const handleChange = (event) => {
         setChecked(event.target.checked);
@@ -221,9 +221,6 @@ const SpiritualCounslr = () => {
         );
     };
 
-
-
-
     return (
         <div className={classes.root}>
             <div className='counselor-container'>
@@ -241,13 +238,21 @@ const SpiritualCounslr = () => {
                                     </div>
                                 </div>
                                 <div className='designation-section'>
-                                    <div className="designation"> <span><StarsIcon /></span> <strong>designation:</strong> {e.designation}</div>
-                                    <div className='interest'><span><CheckCircleIcon /></span><strong>interest:</strong>{e.interest}</div>
+                                    <div className="designation">
+                                        <span><StarsIcon /></span> <strong>designation:</strong> {e.designation}
+                                    </div>
+                                    <div className='interest'>
+                                        <span><CheckCircleIcon /></span><strong>interest:</strong>{e.interest}
+                                    </div>
                                     {/* <div className="edu"><span><SchoolIcon /></span> {e.education}</div> */}
                                 </div>
                                 <div className='designation-section price-section'>
-                                    <div className="designation"> <span><LocalOfferIcon /></span> <strong>Annual price:</strong>₹  {e.price.annual}</div>
-                                    <div className='interest'><span><LocalOfferIcon /></span><strong>Monthly price</strong>₹  {e.price.monthly}</div>
+                                    <div className="designation">
+                                        <span><LocalOfferIcon /></span> <strong>Individual session price:</strong>₹ {e.price.annual}
+                                    </div>
+                                    <div className='interest'>
+                                        <span><LocalOfferIcon /></span><strong>Webinar session</strong>₹  {e.price.monthly}
+                                    </div>
 
                                 </div>
 
@@ -267,29 +272,34 @@ const SpiritualCounslr = () => {
                                     </Grid>
                                 </Grid>
                             </>
-
                             <>
                                 <div className={classes.modalContainer}>
                                     <MuiModal open={openModal} onClose={handleCloseModal} title="Book an Appointment">
                                         {/* <DatePicker selectedDate={selectedDate} onChange={handleDateChange} /> */}
                                         <div className={classes.plans}>
                                             <div className="plan">
-                                                <CheckboxComp options={['monthly']} />
-                                                <p className="plan-name">Monthly</p>
-                                                <p className="discount"><span><CheckIcon /></span>10% discount</p>
+                                                <CheckboxComp options={['individual']} />
+                                                <p className="plan-name">Individual session</p>
+                                                <p className="discount"><span><CheckIcon /></span>10% - discount </p>
+                                                <p className="discount"><span><CheckIcon /></span>1 session price: </p>
+                                                <p className="discount"><span><CheckIcon /></span>5 session price:</p>
+                                                <p className="validity"><span><CheckIcon /></span>Validity : 2 months </p>
                                                 <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {e.price.monthly}</p>
                                             </div>
                                             <div className="plan">
-                                                <CheckboxComp options={['annual']} />
-                                                <p className="plan-name">Annual</p>
-                                                <p className="discount"><span><CheckIcon /></span>20% discount</p>
-                                                <p className="plan-price"> <span><LocalOfferIcon /></span> ₹ {e.price.annual}</p>
+                                                <CheckboxComp options={['webinar']} />
+                                                <p className="plan-name">Webinar session</p>
+                                                <p className="discount"><span><CheckIcon /></span>10% - discount </p>
+                                                <p className="discount"><span><CheckIcon /></span>10 session price: </p>
+                                                <p className="discount"><span><CheckIcon /></span>5 session price:</p>
+                                                <p className="validity"><span><CheckIcon /></span>Validity : 4 months </p>
+                                                <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {e.price.annual}</p>
                                             </div>
                                         </div>
 
                                         <div className='booked-session-btn'
-                                         style={{ display: 'flex', justifyContent: 'space-between', marginBottom:"1rem"}}
-                                        
+                                            style={{ display: 'flex', justifyContent: 'space-between', marginBottom: "1rem" }}
+
                                         >
                                             <DatePicker selectedDate={selectedDate} onChange={handleDateChange} />
                                             <Button onClick={handleCloseModal} variant="contained" color="primary">Book</Button>
