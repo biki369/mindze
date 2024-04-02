@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 export function Copyright(props) {
     return (
-      <Typography variant="body2" color="text.secondary" align="center" {...props}>
+      <Typography variant="body2" align="center" {...props}>
         {'Copyright © '}
-        <Link color="inherit" href="">
-          Your Website
+        <Link color="inherit" href="/">
+          {props.title}
         </Link>{' '}
         {new Date().getFullYear()}
       </Typography>

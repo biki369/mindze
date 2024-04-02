@@ -1,7 +1,5 @@
 import { makeStyles } from "@material-ui/core";
-import { PhilosophicalPerspectiveData } from "../../../data";
 import { Link } from "react-router-dom";
-
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -61,18 +59,17 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-
-const Philosophers = () => {
+const Philosophers = ({data}) => {
     const classes = useStyles();
 
     return (
         <div className={classes.root}>
             <div className="philosophers-container">
                 {
-                    PhilosophicalPerspectiveData.map((e, i) => (
+                    data.map((e, i) => (
                         <div className="philosophers-box" key={i} style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(${e.img})` }}>
                             <div className="test-title" >
-                                <Link to={`/philosophers/369`}><h3>{e.title}</h3></Link>
+                                <Link  state={e} to={`/philosophers/369`}><h3>{e.title}</h3></Link>
                             </div>
                         </div>
                     ))

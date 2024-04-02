@@ -270,6 +270,7 @@ export const pranayamaData = [
     },
   },
 ];
+
 export const asanaData = [
   {
     title: "Tadasana",

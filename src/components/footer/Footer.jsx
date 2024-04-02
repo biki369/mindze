@@ -4,7 +4,10 @@ import EmailIcon from '@material-ui/icons/Email';
 import PhoneIcon from '@material-ui/icons/Phone';
 import { Copyright } from '../copy-right/CopyRight';
 import { Link } from 'react-router-dom';
-
+import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 const useStyles = makeStyles((theme) => ({
     root: {
         "& .footer-container": {
@@ -34,8 +37,8 @@ const useStyles = makeStyles((theme) => ({
                     gap: "10px",
                     margin: "13px 0",
                     "& a": {
-                        fontFamily:'Montserrat',
-                        fontSize:14,
+                        fontFamily: 'Montserrat',
+                        fontSize: 14,
                         textDecoration: 'none',
                         color: "#fff"
                     },
@@ -44,6 +47,9 @@ const useStyles = makeStyles((theme) => ({
                     }
                 }
             },
+            "& .social-links":{
+                marginTop:"0.8rem",
+            }
         },
         "& .cpy-right": {
             padding: '1rem',
@@ -52,6 +58,7 @@ const useStyles = makeStyles((theme) => ({
             backgroundColor: "#000",
             "& p": {
                 color: "#fff",
+                padding: '10px 13px'
             }
         }
 
@@ -81,6 +88,14 @@ const Footer = () => {
                                 <li>
                                     <PhoneIcon />
                                     +91 xxxxxxxxx
+                                </li>
+                            </ul>
+                            <ul className="social-links">
+                                <li>
+                                    <Link to={"https://www.facebook.com/people/Mindze/61556522943859/"}> <FacebookIcon /> </Link>
+                                    <Link to="https://www.instagram.com/mindze.official/"><InstagramIcon /></Link>
+                                    <Link to={"https://twitter.com/i/flow/login?redirect_after_login=%2FMindzeOfficial"}><TwitterIcon /></Link>
+                                    <Link to={"https://www.linkedin.com/company/mindze/"}><LinkedInIcon /></Link>
                                 </li>
                             </ul>
                         </div>
@@ -119,7 +134,7 @@ const Footer = () => {
                             <ul>
                                 <h3>Legal Stuff</h3>
                                 <li>
-                                    <a href="#">Disclaimer</a>
+                                    <a href="#" _blank>Disclaimer</a>
                                 </li>
                                 <li>
                                     <a href="#">Privacy Policy</a>
@@ -134,7 +149,8 @@ const Footer = () => {
                 </Container>
             </div>
             <div className="cpy-right">
-                <Typography > Mindze  <Copyright />  </Typography>
+                <Typography>"Mindze is not a crisis intervention or emergency service. In case of a crisis, severe symptoms, or a life-threatening situation, seek immediate medical help or contact emergency helplines"</Typography>
+                <Copyright title="Mindze" />
             </div>
         </div>
     )

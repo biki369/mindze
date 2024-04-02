@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
 
         },
         "& .sub-content": {
-
+            width:'fit-content',
         },
     },
 
@@ -84,7 +84,6 @@ const BlogsMain = () => {
         if (!id) {
             id = 0
         }
-        // console.log(id,"================sdkfjksgfshjgfdsk");
         return setSendId(id)
     }
 
@@ -123,7 +122,7 @@ const BlogsMain = () => {
                 }
                 <div className='sub-content'>
                     {/* <QuotationByCat id={sendId} /> */}
-                    <Blogs id={sendId} />
+                    <Blogs  />
                 </div>
             </div>
         </>

@@ -7,7 +7,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Philosophers from './philosophers/Philosophers';
 import { useMediaQuery } from '@material-ui/core';
-
+import { modernPhilosophers, stoicismData } from '../../data';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -97,20 +97,9 @@ const PhilosophicalPerspective = () => {
 
             >
                 <Tabs value={value} onChange={handleChange}
-                    centered
-                    // fullWidth={true}
-                    // centered={mobileDevice ? true : false}
-                    // scrollButtons="auto"
-                    // scrollButtons="on"
                     aria-label="scrollable auto tabs example"
-                    // variant="fullWidth" 
                     variant={mobileDevice ? "scrollable" : ""}
-                // scrollButtons="auto"
                 >
-                    {/* <Tab label="Short Exercises/Affirmations" {...a11yProps(0)} />
-                    <Tab label="Quotations" {...a11yProps(1)} />
-                    <Tab label="Quick Meditation Techniques" {...a11yProps(2)} />
-                    <Tab label="Music" {...a11yProps(3)} /> */}
                     {
                         philosophicalTabData.map((e, i) => (
                             <Tab label={e} {...a11yProps(i)} key={i} />
@@ -119,10 +108,10 @@ const PhilosophicalPerspective = () => {
                 </Tabs>
             </AppBar>
             <TabPanel value={value} index={0}>
-                <Philosophers />
+                <Philosophers  data={modernPhilosophers}/>
             </TabPanel>
             <TabPanel value={value} index={1}>
-                <Philosophers />
+                <Philosophers data={stoicismData}/>
 
             </TabPanel>
             <TabPanel value={value} index={2}>

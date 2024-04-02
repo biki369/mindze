@@ -1,3 +1,8 @@
+
+// export const useId = (prefix) => {
+//   return prefix + Math.random().toString(36).substring(2);
+// };
+
 export const menuLits = [
   {
     label: "Home",
@@ -160,6 +165,7 @@ export const bookSummeryData = [
     url: "/src/assets/Book_Summary_Pics/cd_1.jpg",
     title: "title",
     author: "author",
+
   },
   {
     url: "/src/assets/Book_Summary_Pics/cd_2.jpg",
@@ -307,10 +313,11 @@ export const mentalTestData = [
   },
 ];
 
-export const PhilosophicalPerspectiveData = [
+export const modernPhilosophers = [
   {
     title: "Osho",
     img: "/src/assets/philosophers_image/mst_1.jpg",
+    id:0
   },
   {
     title: "Jiddu Krishnamut",
@@ -350,6 +357,50 @@ export const PhilosophicalPerspectiveData = [
   },
 ];
 
+export const stoicismData = [
+  {
+    title: "Zeno of Citium",
+    img: "/src/assets/philosophers_image/mst_1.jpg",
+  },
+  {
+    title: "Seneca",
+    img: "/src/assets/philosophers_image/mst_2.jpg",
+  },
+  {
+    title: "Sadguru",
+    img: "/src/assets/philosophers_image/mst_3.jpg",
+  },
+  {
+    title: "Alan Watts",
+    img: "/src/assets/philosophers_image/mst_4.webp",
+  },
+  {
+    title: "Eckhart Tolle",
+    img: "/src/assets/philosophers_image/mst_5.jpg",
+  },
+  {
+    title: "Jay Shetty",
+    img: "/src/assets/philosophers_image/mst_6.jpg",
+  },
+  {
+    title: "Adyashanti",
+    img: "/src/assets/philosophers_image/mst_7.jpg",
+  },
+  {
+    title: "Mooji",
+    img: "/src/assets/philosophers_image/mst_8.jpg",
+  },
+  {
+    title: "Thich Nhat Hanh",
+    img: "/src/assets/philosophers_image/mst_9.jpg",
+  },
+  {
+    title: "Deepak Chopra",
+    img: "/src/assets/philosophers_image/mst_10.jpg",
+  },
+];
+
+
 export const blogPostData = [
    {
     category:"Parenting",
@@ -357,16 +408,73 @@ export const blogPostData = [
     blogs:[
       {
         title: "How can parents support their child's mental health?",
+        subTile:"Supporting Your Child's Mental Health",
         img: "/src/assets/Blog_pics/e1.jpg",
         data:[
           {
-            title: "How can parents support their child's mental health?",
+            h2: "Open Communication:",
+            p:"Encourage open and honest communication to create a safe space for the child to express their thoughts and feelings. Regularly check in with your child about their day, and actively listen without judgment to any concerns they may have."
             
-          }
+          },
+          {
+            h2: "Emotional Validation::",
+            p:"Acknowledge and validate your child's emotions, helping them understand that it's okay to feel a range of emotions. If your child expresses sadness over a situation, say,It's okay to feel sad. I'm here to talk about it and support you."
+            
+          },
+          {
+            h2: "Establishing Routine:",
+            p:"Create a consistent daily routine to provide stability and predictability. Set regular bedtimes, meal times, and study times, helping children feel secure and reducing stress."
+            
+          },
+          {
+            h2: "Promoting Healthy Sleep:",
+            p:"Ensure your child gets enough sleep as it significantly impacts mood and cognitive function. Establish a calming bedtime routine and limit screen time before bed to promote better sleep."
+          },
+          {
+            h2: "Encouraging Physical Activity:",
+            p:"Regular exercise is linked to improved mood and reduced stress. Encourage participation in sports, dance, or outdoor activities based on your child's interests."
+          },
+          {
+            h2: "Teaching Coping Skills:",
+            p:"Equip your child with healthy coping mechanisms for managing stress and challenges. Teach deep-breathing exercises or introduce a ,calm down corner with sensory tools for moments of distress."
+          },
+          {
+            h2: "Fostering Positive Friendships:",
+            p:"Encourage healthy social connections to support emotional well-being. Facilitate playdates, discuss friendship dynamics, and teach empathy to promote positive social interactions."
+          },
+          {
+            h2: "Limiting Screen Time:",
+            p:"Monitor and restrict excessive screen time, as it can impact sleep and contribute to mental health issues. Screen time limits and encourage alternative activities such as reading, playing, or engaging in hobbies."
+          },
+          {
+            h2: "Modeling Healthy Coping:",
+            p:"Demonstrate effective coping strategies through your own behavior. If faced with a challenge, express your feelings and demonstrate problem-solving or seeking support."
+          },
+          {
+            h2: "Educating on Mental Health:",
+            p:"Normalize conversations about mental health, helping your child understand and recognize their emotions. Use age-appropriate language to discuss emotions, explaining that everyone experiences a range of feelings."
+          },
+          {
+            h2: "Seeking Professional Help:",
+            p:"Be open to seeking professional support when needed, such as from counselors or therapists. If your child exhibits prolonged signs of distress, consult with a mental health professional to explore appropriate interventions."
+          },
+          {
+            h2: "Promoting Independence:",
+            p:"Encourage age-appropriate independence, fostering a sense of competence and self-esteem. Allow your child to take on responsibilities and make decisions, reinforcing their sense of capability."
+          },
+          {
+            h2: "Celebrating Achievements:",
+            p:"Acknowledge and celebrate your child's accomplishments, reinforcing a positive self-image. Praise their efforts in school projects or hobbies, emphasizing the value of hard work and perseverance."
+          },
+          {
+            h2: "Creating a Safe Home Environment:",
+            p:"Foster a physically and emotionally safe home environment where your child feels secure. Establish clear boundaries, communicate family expectations, and address conflicts with empathy and understanding \nBy integrating these strategies, parents can actively contribute to the positive mental health and well-being of their children, fostering resilience and emotional intelligence for a healthier future."
+          },
         ]
       },
       {
-        title: "How can parents support their child's mental health?",
+        title: "How does parental mental health impact children?",
+        subTile:"Impact of Parental Mental Health on Children",
         img: "/src/assets/Blog_pics/lifestyle/image1.jpg",
       },
       {

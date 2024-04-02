@@ -9,14 +9,10 @@ const useStyles = makeStyles((theme) => ({
     padding: '30px 10px',
     "& .blogs-container": {
       display: "flex",
-      gap: '1.5rem',
-      // columnGap: '3rem',
+      gap: '10px',
       flexWrap: 'wrap',
-      // justifyContent:'center',
       alignItem: 'center',
       "& .blog": {
-        // height: 460,
-        // width: '300px',
         padding: 10,
         cursor: "pointer",
         transition: "all 0.3s",
@@ -25,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
         },
         width: 400,
         "& .blog-img": {
-          // width: 400,
           width: "100%",
           height: 460,
           "& img": {
@@ -51,25 +46,29 @@ const useStyles = makeStyles((theme) => ({
 
 const Blogs = () => {
   const classes = useStyles()
+
   return (
     <div className={classes.root} >
       <div className="blogs-container">
         {
           blogPostData.map((e, i) => (
             <React.Fragment key={i}>
-              <Link to={"/blog/:369"}>
-                <Paper>
-                  <div className="blog">
-                    <div className="blog-img">
-                      <img src={e.img} alt="" />
-                    </div>
-                    <div className="b-title">
-                      <p>{e.title}</p>
-                    </div>
-                  </div>
-                </Paper>
-              </Link>
-
+              {
+                e.blogs.map((e, i) => (
+                  <Link to={"/blog/:369"} state={e} key={i}>
+                    <Paper>
+                      <div className="blog">
+                        <div className="blog-img">
+                          <img src={e.img} alt="" />
+                        </div>
+                        <div className="b-title">
+                          <p>{e.title}</p>
+                        </div>
+                      </div>
+                    </Paper>
+                  </Link>
+                ))
+              }
             </React.Fragment>
           ))
         }
