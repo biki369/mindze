@@ -1,7 +1,8 @@
-import React from 'react';
-import { Button, Checkbox, Container, FormControlLabel, FormGroup, Typography, makeStyles } from "@material-ui/core";
+import { useEffect, useState } from 'react';
+import { Button, Container, Typography, makeStyles } from "@material-ui/core";
 import BackCurrent from '../../components/back-current/BackCurrent';
 import { useLocation } from 'react-router-dom';
+import MuiModal from '../../components/modal/MuiModal';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -45,6 +46,15 @@ const useStyles = makeStyles((theme) => ({
                             fontWeight: 400,
                             lineHeight: 1.5,
                         },
+
+                        "& .test-options": {
+                            display: 'flex',
+                            gap: '0.5rem',
+                            "& .test-option": {
+                                display: 'flex',
+                                gap: '0.6rem',
+                            }
+                        },
                     },
                     "& p": {
                         padding: '0',
@@ -57,9 +67,19 @@ const useStyles = makeStyles((theme) => ({
                 justifyContent: 'center',
                 alignItems: 'center',
                 margin: "13px 0"
-            }
+            },
         },
+
+        "& .test-result": {
+            // width: '360px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexDirection: 'column',
+            margin: "1rem  auto"
+        }
     },
+
 }));
 
 const Test = () => {
@@ -67,14 +87,23 @@ const Test = () => {
     const location = useLocation();
     const data = location.state;
 
-    // console.log(data)
+    const [checked, setChecked] = useState(null);
+    const [total, setTotal] = useState(0)
+    const [openSec, setOpenSec] = useState(false)
 
-    const [checked, setChecked] = React.useState(null);
+    const handleChange = (event) => {
+        setChecked(event.target.value);
 
-    const handleChange = (val) => {
-        setChecked(val);
     };
-    console.log(checked)
+
+    useEffect(() => {
+        const TotalScore = () => {
+            setTotal(Number(checked) + total)
+        };
+        TotalScore();
+    }, [checked])
+
+    console.log(data.classificationCategories)
 
     return (
         <div className={classes.root}>
@@ -85,50 +114,58 @@ const Test = () => {
                     <h2>{data?.title}</h2>
                     <div className='test-content'>
                         <p>{data?.desc}</p>
-
                         <ol>
                             {data.questions?.map((e, i) => (
                                 <li key={i}>
                                     <p>{e.text}</p>
-                                    {
-                                        e.options?.map((el, indx) => (
-                                            // console.log(indx+i),
-                                            <div key={indx}>
-                                                <FormGroup row >
-                                                    <FormControlLabel
-                                                        control={
-                                                            <Checkbox
-                                                                // value={el.value}
-                                                                checked={checked === el.value}
-                                                                onChange={() => handleChange(el.value)}
-                                                                color="primary"
-                                                                // name={el.label}
-                                                            />}
-                                                        label={el.label}
-                                                    />
+                                    <div className='test-options'>
+                                        {
+                                            e.options?.map((el, indx) => (
+                                                <div key={indx} className='test-option'>
+                                                    <input type="radio" name={e.text} value={el.value} onChange={handleChange} />
+                                                    {el.label}
+                                                </div>
 
-                                                </FormGroup>
-                                            </div>
-
-                                        ))
-                                    }
+                                            ))
+                                        }
+                                    </div>
                                 </li>
                             ))}
                         </ol>
-
                     </div>
 
                     <div className="test-submit__btn">
                         <Button
                             variant="contained" color="primary"
+                            onClick={() => setOpenSec(!openSec)}
                         >Submit</Button>
                     </div>
+
+
+
+
+                    {openSec && <div className='test-result'>
+                        {
+                            data.classificationCategories?.map((e, i) => {
+                                if (e.low <= total && e.high >= total) {
+                                    return (
+                                        <>
+                                            <p key={i}> <strong>Total Score:{total}</strong> {e.label}</p>
+                                            <p key={i}> <strong>Suggested action:</strong> {e.action}</p>
+                                        </>
+                                    )
+                                }
+                            })
+                        }
+                    </div>}
 
 
 
                     <Typography>
                         Disclaimer: This test is not a diagnostic tool, and users should consult a healthcare professional for a proper diagnosis and treatment.
                     </Typography>
+
+
 
                 </div>
             </Container>

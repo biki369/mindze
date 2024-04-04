@@ -1,10 +1,10 @@
-import { Avatar, Button, Container, Grid, LinearProgress, Paper, Typography, makeStyles } from "@material-ui/core"
+import { Avatar, Button, Container, LinearProgress, Paper, makeStyles } from "@material-ui/core"
 import { Link, useParams } from "react-router-dom";
 import { counselorsData, userRating } from '../../../data/index'
 import HomeIcon from '@material-ui/icons/Home';
 import SchoolIcon from '@material-ui/icons/School';
-import ForumIcon from '@material-ui/icons/Forum';
-import CallIcon from '@material-ui/icons/Call';
+// import ForumIcon from '@material-ui/icons/Forum';
+// import CallIcon from '@material-ui/icons/Call';
 import Rating from '@material-ui/lab/Rating';
 import StarsIcon from '@material-ui/icons/Stars';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
@@ -45,10 +45,8 @@ const useStyles = makeStyles((theme) => ({
       display: 'flex',
       gap: 20,
       padding: 13,
-      flexWrap: 'wrap',
-      [theme.breakpoints.down(600)]: {
-        // width: "100%",
-      },
+   
+      // flexWrap: 'wrap',
 
       "& .profile-img": {
         // width:'80%',
@@ -215,10 +213,14 @@ const useStyles = makeStyles((theme) => ({
 
   plans: {
     display: "flex",
+    // flex: 'wrap',
     gap: "10px",
     alignItems: "center",
     justifyContent: "center",
     marginBottom: '1rem',
+    // [theme.breakpoints.down(500)]: {
+    //   display: 'block'
+    // },
     "& .plan": {
       width: '230px',
       // height: '130px',
@@ -345,9 +347,7 @@ const CounselorDetails = () => {
                   <p className='price'><span><LocalOfferIcon /></span><strong>Monthly price</strong>{price.monthly}</p>
 
                   <div className="profile-btn">
-                    <button  onClick={handleOpenModal}>Book now</button>
-                    {/* <button><span> <ForumIcon /></span>start chart</button> */}
-                    {/* <button><span><CallIcon /> </span>start call</button> */}
+                    <button onClick={handleOpenModal}>Book now</button>
                   </div>
                 </div>
                 <div className="info-about">

@@ -7,6 +7,10 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    // flexWrap:'wrap'
+    // [theme.breakpoints.down(500)]: {
+    //   width: "300px",
+    // },
   },
   paper: {
     backgroundColor: theme.palette.background.paper,
