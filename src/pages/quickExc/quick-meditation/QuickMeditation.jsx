@@ -1,5 +1,6 @@
 import { makeStyles } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import { quickMeditationTechiquesData } from '../../../data';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -36,20 +37,24 @@ const useStyles = makeStyles((theme) => ({
 
 const QuickMeditation = () => {
     const classes = useStyles();
-    const demoData = [0, 1, 2, 3, 4, 5];
 
     return (
         <div className={classes.root}>
             <div className="techniques-container">
                 {
-                    demoData.map((e, i) => (
+                    quickMeditationTechiquesData.map((e, i) => (
                         <div className="techniques" key={i}>
                             <div className="title">
-                                <Link to={"/techniques/:1212"} state={e}>Shikantaza("Just Sitting")</Link>
+                                <Link to={"/techniques/:1212"} state={e}>{e.title}</Link>
                             </div>
                         </div>
                     ))
                 }
+                <div className="techniques" >
+                    <div className="title">
+                        <Link to={"/yogaMeditations"}>Explore More</Link>
+                    </div>
+                </div>
             </div>
 
         </div>

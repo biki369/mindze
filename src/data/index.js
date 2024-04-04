@@ -1076,6 +1076,272 @@ Area of interest
 background education
 
 */
+export const quickMeditationTechiquesData=[
+  {
+    title:'Shikantaza ("Just Sitting")',
+    subTitle:'Shikantaza Meditation',
+    intro:'Shikantaza, or "Just Sitting," is a Zen meditation practice focused on sitting in alert attention. This form of meditation emphasizes being fully present and letting thoughts and sensations pass without engagement.',
+    understanding:"This meditation involves silently repeating the mantra 'So-Hum' in sync with the breath. It's a practice that cultivates mindfulness and promotes a sense of oneness with all beings",
+    benefits:[
+        {
+          head:'Mindful Awareness:',
+          p:'Enhances the ability to be present in the moment.'
+        },
+        {
+          head:'Emotional Balance: ',
+          p:'Helps in managing emotions by fostering a calm mind.'
+        },
+        {
+          head:'Stress Reduction: ',
+          p:'Offers a profound sense of relaxation and stress relief.'
+        },
+        {
+          head:'Spiritual Insight: ',
+          p:'Can lead to deep spiritual insights and self-awareness.'
+        },
+    ],
+    steps:[
+      {
+        step:"Quiet Space:",
+        desc:"Find a quiet and comfortable place to sit."
+      },
+      {
+        step:"Posture:",
+        desc:"Sit in a traditional meditation posture with a straight back."
+      },
+      {
+        step:"Eyes Open: ",
+        desc:"Keep the eyes open, with a soft gaze directed downwards."
+      },
+      {
+        step:"Letting Go: ",
+        desc:"Allow thoughts and sensations to arise and pass without attachment."
+      },
+      {
+        step:"Alert Attention:  ",
+        desc:"Maintain a state of alertness and presence throughout the session."
+      },
+      {
+        step:"Duration: ",
+        desc:"Start with shorter sessions and gradually increase the length."
+      },
+    ],
+    practiceTips:[
+        {
+          head:"Regular Practice:",
+          p:"Engage in Shikantaza regularly for best results."
+        },
+        {
+          head:"Patience:",
+          p:"Understand that proficiency develops over time."
+        },
+        {
+          head:"Acceptance:",
+          p:"Embrace whatever arises during meditation without judgment."
+        },
+        {
+          head:"Environment:",
+          p:"Ensure a conducive environment for uninterrupted practice."
+        },
+    ],
+    cautions :[
+        {
+          head:"Physical Discomfort: ",
+          p:"Adjust posture as needed to avoid discomfort."
+        },
+        {
+          head:"Mental Distractions: ",
+          p:"Don't be discouraged by wandering thoughts."
+        },
+        {
+          head:"Guidance: ",
+          p:"Consider seeking guidance from a qualified teacher for deeper practice."
+        },
+        {
+          head:"Expectations: ",
+          p:"Approach Shikantaza without specific expectations."
+        },
+    ],
+    conclusion:"Shikantaza is a powerful practice of pure presence and awareness. It is a journey of discovering stillness amidst the chaos of life. Through regular practice, Shikantaza can cultivate a profound sense of peace and clarity, enriching both the mind and spirit.",
+  },
+  {
+    title:'So-Hum Meditation',
+    subTitle:'So-Hum Meditation',
+    intro:'So-Hum Meditation is a simple yet profound technique rooted in the yogic tradition. It uses the mantra "So-Hum," meaning "I am That," to foster a deep sense of connection with the universe and inner self.',
 
+    understanding:"This meditation involves silently repeating the mantra 'So-Hum' in sync with the breath. It's a practice that cultivates mindfulness and promotes a sense of oneness with all beings.",
 
+    benefits:[
+        {
+          head:'Mind-Body Alignment:',
+          p:'Enhances harmony between the mind and body.'
+        },
+        {
+          head:'Stress Reduction: ',
+          p:'Offers significant relief from stress and anxiety.'
+        },
+        {
+          head:'Improved Focus:',
+          p:'Sharpens concentration and mental clarity.'
+        },
+        {
+          head:'Deep Relaxation:',
+          p:'Induces a state of deep relaxation and inner peace.'
+        },
+    ],
+    steps:[
+      {
+        step:"Find a Quiet Place:",
+        desc:"Choose a peaceful spot for meditation."
+      },
+      {
+        step:"Comfortable Posture:",
+        desc:"Sit with your back straight in a comfortable position."
+      },
+      {
+        step:"Focus on Breath:",
+        desc:"Observe the natural flow of your breath."
+      },
+      {
+        step:"Introduce the Mantra: ",
+        desc:"Silently say 'So' on the inhale and 'Hum' on the exhale."
+      },
+      {
+        step:"Gentle Attention: ",
+        desc:"Keep your focus gentle, returning to the mantra when distracted."
+      },
+      {
+        step:"Duration: ",
+        desc:"Begin with 5-10 minutes and gradually increase."
+      },
+    ],
+    practiceTips:[
+        {
+          head:"Regular Practice:",
+          p:"Aim for daily sessions to gain maximum benefits."
+        },
+        {
+          head:"Morning or Evening:",
+          p:"Ideal times are during the quiet of early morning or evening."
+        },
+        {
+          head:"Patience and Persistence:",
+          p:"Be patient and persistent for deeper experiences."
+        },
+        {
+          head:"Posture and Comfort:",
+          p:"Ensure your meditation posture is comfortable for prolonged focus."
+        },
+    ],
+    cautions :[
+        {
+          head:"Mental Distractions: ",
+          p:"Do not be discouraged by a wandering mind; gently refocus."
+        },
+        {
+          head:"Physical Comfort: ",
+          p:"Adjust your posture if discomfort arises during meditation."
+        },
+        {
+          head:"Expectations: ",
+          p:"Avoid setting expectations about the meditation experience."
+        },
+        {
+          head:"Breathing Naturally: ",
+          p:"Ensure your breathing remains natural and unforced."
+        },
+    ],
+    conclusion:"So-Hum Meditation is a powerful tool in discovering inner tranquility and mindfulness. This simple practice, when done regularly, can lead to profound mental and emotional balance, bringing a sense of calm and centeredness to everyday life.",
+  },
+  {
+    title:'Mindful Eating Meditation',
+    subTitle:'Mindful Eating Meditation',
+    intro:'Mindful eating meditation transforms the simple act of eating into a profound experience. It encourages heightened awareness of the sensory and nourishing aspects of food, promoting a healthier and more enjoyable relationship with what we eat.',
 
+    understanding:"This practice involves paying full attention to the experience of eating, observing tastes, textures, and sensations in the present moment. Originating from Buddhist teachings, it's a form of mindfulness applied to eating habits.",
+
+    benefits:[
+        {
+          head:'Mind-Body Alignment:',
+          p:'Enhances harmony between the mind and body.'
+        },
+        {
+          head:'Stress Reduction: ',
+          p:'Offers significant relief from stress and anxiety.'
+        },
+        {
+          head:'Improved Focus:',
+          p:'Sharpens concentration and mental clarity.'
+        },
+        {
+          head:'Deep Relaxation:',
+          p:'Induces a state of deep relaxation and inner peace.'
+        },
+    ],
+    steps:[
+      {
+        step:"Find a Quiet Place:",
+        desc:"Choose a peaceful spot for meditation."
+      },
+      {
+        step:"Comfortable Posture:",
+        desc:"Sit with your back straight in a comfortable position."
+      },
+      {
+        step:"Focus on Breath:",
+        desc:"Observe the natural flow of your breath."
+      },
+      {
+        step:"Introduce the Mantra: ",
+        desc:"Silently say 'So' on the inhale and 'Hum' on the exhale."
+      },
+      {
+        step:"Gentle Attention: ",
+        desc:"Keep your focus gentle, returning to the mantra when distracted."
+      },
+      {
+        step:"Duration: ",
+        desc:"Begin with 5-10 minutes and gradually increase."
+      },
+    ],
+    practiceTips:[
+        {
+          head:"Regular Practice:",
+          p:"Aim for daily sessions to gain maximum benefits."
+        },
+        {
+          head:"Morning or Evening:",
+          p:"Ideal times are during the quiet of early morning or evening."
+        },
+        {
+          head:"Patience and Persistence:",
+          p:"Be patient and persistent for deeper experiences."
+        },
+        {
+          head:"Posture and Comfort:",
+          p:"Ensure your meditation posture is comfortable for prolonged focus."
+        },
+    ],
+    cautions :[
+        {
+          head:"Mental Distractions: ",
+          p:"Do not be discouraged by a wandering mind; gently refocus."
+        },
+        {
+          head:"Physical Comfort: ",
+          p:"Adjust your posture if discomfort arises during meditation."
+        },
+        {
+          head:"Expectations: ",
+          p:"Avoid setting expectations about the meditation experience."
+        },
+        {
+          head:"Breathing Naturally: ",
+          p:"Ensure your breathing remains natural and unforced."
+        },
+    ],
+    conclusion:"Mindful eating meditation is a simple yet powerful way to transform our daily eating habits. It helps in developing a deeper, more harmonious relationship with food, leading to physical, emotional, and mental well-being. Embrace this practice to experience the joy of eating with awareness and appreciation.",
+  },
+
+  
+]
