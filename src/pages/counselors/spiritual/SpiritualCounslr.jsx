@@ -111,6 +111,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         justifyContent: "center",
         marginBottom: '1rem',
+        flexWrap:'wrap',
         "& .plan": {
             width: '230px',
             // height: '130px',
@@ -125,9 +126,6 @@ const useStyles = makeStyles((theme) => ({
                 fontWeight: 600,
                 margin: '13px 0',
                 textAlign: 'center',
-                // display: 'flex',
-                // justifyContent: 'center',
-                // alignItems: 'center',
                 textTransform: 'capitalize'
             },
             "& .plan-price": {
@@ -138,7 +136,6 @@ const useStyles = makeStyles((theme) => ({
             },
             "& p": {
                 display: 'flex',
-                //   justifyContent:'center',
                 alignItems: 'center',
                 gap: "6px",
                 fontWeight: 600,

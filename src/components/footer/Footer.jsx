@@ -103,29 +103,34 @@ const Footer = () => {
                             <ul>
                                 <h3>Quick Links</h3>
                                 <li>
-                                    <Link to={"/"}>Home</Link>
+                                    <Link to={"/quickExercises"}>Quick Exercises</Link>
                                 </li>
                                 <li>
-                                    <Link to={"/"}>Home</Link>
+                                    <Link to={"/mentalTest"}>Mental Health Tests</Link>
                                 </li>
                                 <li>
-                                    <Link to={"/"}>Home</Link>
+                                    <Link to={"/yogaMeditations"}>Yoga and Meditations</Link>
                                 </li>
-
+                                <li>
+                                    <Link to={"/books"}>Book Summaries</Link>
+                                </li>
                             </ul>
                         </div>
                         <div className="ul-items">
                             <ul>
                                 <h3>Quick Links</h3>
                                 <li>
-                                    <Link to={"/"}>Home</Link>
+                                    <Link to={"/philosophers"}>Philosophical Perspectives</Link>
                                 </li>
                                 <li>
-                                    <Link to={"/"}>Home</Link>
+                                    <Link to={"/blogs"}>Blogs</Link>
 
                                 </li>
                                 <li>
-                                    <Link to={"/"}>Home</Link>
+                                    <Link to={"/spiritualCounselors"}>Spiritual counselors</Link>
+                                </li>
+                                <li>
+                                    <Link to={"/"}>Psychological counselors</Link>
                                 </li>
 
                             </ul>
@@ -134,13 +139,13 @@ const Footer = () => {
                             <ul>
                                 <h3>Legal Stuff</h3>
                                 <li>
-                                    <a href="#" _blank>Disclaimer</a>
+                                    <a href="/src/assets/docs/DISCLAIMERS.pdf" target="_blank">Disclaimer</a>
                                 </li>
                                 <li>
-                                    <a href="#">Privacy Policy</a>
+                                    <a href="/src/assets/docs/Privacy Policy.pdf" target="_blank">Privacy Policy</a>
                                 </li>
                                 <li>
-                                    <a href="#">Terms Of Service</a>
+                                    <a href="/src/assets/docs/TERMS OF SERVICE.pdf" target="_blank">Terms Of Service</a>
                                 </li>
 
                             </ul>

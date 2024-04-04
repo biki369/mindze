@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
       display: 'flex',
       gap: 20,
       padding: 13,
-   
+
       // flexWrap: 'wrap',
 
       "& .profile-img": {
@@ -213,7 +213,7 @@ const useStyles = makeStyles((theme) => ({
 
   plans: {
     display: "flex",
-    // flex: 'wrap',
+    flexWrap: 'wrap',
     gap: "10px",
     alignItems: "center",
     justifyContent: "center",
@@ -223,10 +223,8 @@ const useStyles = makeStyles((theme) => ({
     // },
     "& .plan": {
       width: '230px',
-      // height: '130px',
       cursor: 'pointer',
       background: "#eee",
-      // backgroundColor: theme.palette.background.paper,
       borderRadius: 10,
       padding: 13,
 
@@ -235,9 +233,6 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 600,
         margin: '13px 0',
         textAlign: 'center',
-        // display: 'flex',
-        // justifyContent: 'center',
-        // alignItems: 'center',
         textTransform: 'capitalize'
       },
       "& .plan-price": {
@@ -248,7 +243,6 @@ const useStyles = makeStyles((theme) => ({
       },
       "& p": {
         display: 'flex',
-        //   justifyContent:'center',
         alignItems: 'center',
         gap: "6px",
         fontWeight: 600,
@@ -416,16 +410,22 @@ const CounselorDetails = () => {
             {/* <DatePicker selectedDate={selectedDate} onChange={handleDateChange} /> */}
             <div className={classes.plans}>
               <div className="plan">
-                <CheckboxComp options={['monthly']} />
-                <p className="plan-name">Monthly</p>
-                <p className="discount"><span><CheckIcon /></span>10% discount</p>
+                <CheckboxComp options={['individual']} />
+                <p className="plan-name">Individual session</p>
+                <p className="discount"><span><CheckIcon /></span>10% - discount </p>
+                <p className="discount"><span><CheckIcon /></span>1 session price: </p>
+                <p className="discount"><span><CheckIcon /></span>5 session price:</p>
+                <p className="validity"><span><CheckIcon /></span>Validity : 2 months </p>
                 <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {price.monthly}</p>
               </div>
               <div className="plan">
-                <CheckboxComp options={['annual']} />
-                <p className="plan-name">Annual</p>
-                <p className="discount"><span><CheckIcon /></span>20% discount</p>
-                <p className="plan-price"> <span><LocalOfferIcon /></span> ₹ {price.annual}</p>
+                <CheckboxComp options={['webinar']} />
+                <p className="plan-name">Webinar session</p>
+                <p className="discount"><span><CheckIcon /></span>10% - discount </p>
+                <p className="discount"><span><CheckIcon /></span>10 session price: </p>
+                <p className="discount"><span><CheckIcon /></span>5 session price:</p>
+                <p className="validity"><span><CheckIcon /></span>Validity : 4 months </p>
+                <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {price.annual}</p>
               </div>
             </div>
 

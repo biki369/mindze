@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Avatar, Button, Grid, Paper, makeStyles } from '@material-ui/core';
 import { counselorsData } from '../../../data';
 import { Link } from 'react-router-dom';
@@ -19,18 +19,14 @@ const useStyles = makeStyles((theme) => ({
             flexWrap: "wrap",
             "& .counselor": {
                 padding: "6px 10px",
-                width: 400,
-                // border: "1px solid #000",
+                // width: 400,
                 display: "flex",
-                // justifyContent: 'center',
-                // alignItems: 'center',
                 gap: 16,
                 cursor: "pointer",
+                [theme.breakpoints.down(500)]: {
+                    width: "100%",
+                },
                 "& .counselor-about": {
-                    // display: "flex",
-                    // justifyContent: 'center',
-                    // flexDirection:"column",
-                    // alignItems: 'center',
                     "& > div": {
                         margin: "2px 0"
                     },
@@ -38,7 +34,6 @@ const useStyles = makeStyles((theme) => ({
                         fontSize: '1rem',
                         fontWeight: 600,
                         display: "flex",
-                        // justifyContent: 'center',
                         alignItems: 'center',
                         gap: 10,
                         "& .counslr-online": {
@@ -50,17 +45,13 @@ const useStyles = makeStyles((theme) => ({
                             // boxShadow: "0 0 0 2px #00b894",
                         }
                     },
-
                     "& .edu": {
                         display: "flex",
                         gap: 10,
                         color: "#000",
-                        // justifyContent: 'center',
                         alignItems: 'center',
                     },
-
                 },
-
             },
             "& .designation-section": {
                 padding: '10px 20px 0 20px',
@@ -69,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
                     color: '#000',
                     fontWeight: 500,
                     display: 'flex',
-                    // justifyContent:'center',
+
                     alignItems: 'center',
                     gap: 10,
                     "& svg": {
@@ -81,11 +72,7 @@ const useStyles = makeStyles((theme) => ({
             "& .price-section": {
                 paddingTop: '3px',
                 marginBottom: "1rem",
-                // "& span": {
-                //     transform: "rotate(96deg)",
-                // }
             },
-
             "& .paper-dev": {
                 padding: "10px 6px",
             }
@@ -98,12 +85,11 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         justifyContent: "center",
         marginBottom: '1rem',
+        flexWrap: 'wrap',
         "& .plan": {
             width: '230px',
-            // height: '130px',
             cursor: 'pointer',
             background: "#eee",
-            // backgroundColor: theme.palette.background.paper,
             borderRadius: 10,
             padding: 13,
 
@@ -112,9 +98,6 @@ const useStyles = makeStyles((theme) => ({
                 fontWeight: 600,
                 margin: '13px 0',
                 textAlign: 'center',
-                // display: 'flex',
-                // justifyContent: 'center',
-                // alignItems: 'center',
                 textTransform: 'capitalize'
             },
             "& .plan-price": {
@@ -125,7 +108,6 @@ const useStyles = makeStyles((theme) => ({
             },
             "& p": {
                 display: 'flex',
-                //   justifyContent:'center',
                 alignItems: 'center',
                 gap: "6px",
                 fontWeight: 600,
@@ -155,7 +137,6 @@ const PsychologicalCounslr = () => {
 
     // console.log(todayDate, "todayDate");
 
-
     const handleDateChange = (date) => {
         setSelectedDate(date);
     };
@@ -169,7 +150,6 @@ const PsychologicalCounslr = () => {
     const handleCloseModal = () => {
         setOpenModal(false);
     };
-
 
     // ====== function fro check====
     const CheckboxComp = ({ options }) => {
