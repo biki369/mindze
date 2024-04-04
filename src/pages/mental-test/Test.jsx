@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Checkbox, Container, FormControlLabel, FormGroup, Typography, makeStyles } from "@material-ui/core";
 import BackCurrent from '../../components/back-current/BackCurrent';
+import { useLocation } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -33,7 +34,9 @@ const useStyles = makeStyles((theme) => ({
                         margin: "2rem 0",
                         fontSize: '1rem',
                         color: "#2c3e50",
-                        fontFamily: 'Montserrat',
+                        // display:'flex',
+                        // flexWrap:'wrap',
+                        // fontFamily: 'Montserrat',
                         fontWeight: 400,
                         lineHeight: 1.5,
                         "& .MuiTypography-body1": {
@@ -45,6 +48,7 @@ const useStyles = makeStyles((theme) => ({
                     },
                     "& p": {
                         padding: '0',
+                        width: '100%'
                     },
                 }
             },
@@ -60,37 +64,17 @@ const useStyles = makeStyles((theme) => ({
 
 const Test = () => {
     const classes = useStyles();
+    const location = useLocation();
+    const data = location.state;
 
-    const testOptions = ['Not at all', 'Several days', 'More than half the days', 'Nearly every day'];
-    const testOlData = [
-        {
-            li: "Feeling nervous, anxious, or on edge"
-        },
-        {
-            li: "Not being able to stop or control worrying"
-        },
-        {
-            li: "Worrying too much about different things"
-        },
-        {
-            li: "Trouble relaxing"
-        },
-        {
-            li: "Being so restless that it's hard to sit still"
-        },
-        {
-            li: "Becoming easily annoyed or irritable"
-        },
-        {
-            li: "Feeling afraid as if something awful might happen"
-        },
-    ]
+    // console.log(data)
 
-    const [checked, setChecked] = React.useState(false);
+    const [checked, setChecked] = React.useState(null);
 
-    const handleChange = (event) => {
-        setChecked(event.target.checked);
+    const handleChange = (val) => {
+        setChecked(val);
     };
+    console.log(checked)
 
     return (
         <div className={classes.root}>
@@ -98,44 +82,36 @@ const Test = () => {
                 <div className="test">
                     <BackCurrent link="/mentalTest" name="Mental Tests" />
 
-                    <h2>ANXIETY TEST</h2>
+                    <h2>{data?.title}</h2>
                     <div className='test-content'>
-                        <p>It is based on the GAD-7, a standardized tool used for screening generalized anxiety disorder. The frequency of the following symptoms over the past two weeks:</p>
+                        <p>{data?.desc}</p>
 
                         <ol>
-                            {testOlData.map((e, i) => (
+                            {data.questions?.map((e, i) => (
                                 <li key={i}>
-                                    <p>{e.li}</p>
-                                    <FormGroup row>
-                                        <FormControlLabel
-                                            control={<Checkbox checked={checked} onChange={handleChange} name="g"
-                                                color="primary"
+                                    <p>{e.text}</p>
+                                    {
+                                        e.options?.map((el, indx) => (
+                                            // console.log(indx+i),
+                                            <div key={indx}>
+                                                <FormGroup row >
+                                                    <FormControlLabel
+                                                        control={
+                                                            <Checkbox
+                                                                // value={el.value}
+                                                                checked={checked === el.value}
+                                                                onChange={() => handleChange(el.value)}
+                                                                color="primary"
+                                                                // name={el.label}
+                                                            />}
+                                                        label={el.label}
+                                                    />
 
-                                            />}
-                                            label="Not at all"
-                                        />
-                                        <FormControlLabel
-                                            control={<Checkbox checked={checked} onChange={handleChange} name="b"
-                                                color="primary"
+                                                </FormGroup>
+                                            </div>
 
-                                            />}
-                                            label="Several days"
-                                        />
-                                        <FormControlLabel
-                                            control={<Checkbox checked={checked} onChange={handleChange} name="c"
-                                                color="primary"
-
-                                            />}
-                                            label="More than half the days"
-                                        />
-                                        <FormControlLabel
-                                            control={<Checkbox checked={checked} onChange={handleChange} name=""
-                                                color="primary"
-
-                                            />}
-                                            label="Nearly every day"
-                                        />
-                                    </FormGroup>
+                                        ))
+                                    }
                                 </li>
                             ))}
                         </ol>
@@ -147,6 +123,8 @@ const Test = () => {
                             variant="contained" color="primary"
                         >Submit</Button>
                     </div>
+
+
 
                     <Typography>
                         Disclaimer: This test is not a diagnostic tool, and users should consult a healthcare professional for a proper diagnosis and treatment.

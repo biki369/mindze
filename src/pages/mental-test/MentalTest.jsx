@@ -1,6 +1,6 @@
 import { Typography, makeStyles } from "@material-ui/core";
-import { mentalTestData } from "../../data";
 import { Link } from "react-router-dom";
+import { mentalTestData } from "../../data/mentalTest";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -61,7 +61,7 @@ export const MentalTest = () => {
                     mentalTestData.map((e, i) => (
                         <div className="test-box" key={i} style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(${e.img})` }}>
                             <div className="test-title" >
-                                <Link to={`/mentaltest/:369`}><h3>{e.title}</h3></Link>
+                                <Link to={`/mentaltest/:369`} state={e} ><h3>{e.title}</h3></Link>
                             </div>
                         </div>
                     ))
