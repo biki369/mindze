@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
 
         "& .side-menu": {
-            width: '300px',
+            minWidth: '300px',
             height: '100vh',
             padding: '16px',
             overFlowY: 'scroll',
@@ -39,9 +39,9 @@ const useStyles = makeStyles((theme) => ({
 
 
         },
-        "& .sub-content": {
+        // "& .sub-content": {
 
-        },
+        // },
     },
 
 

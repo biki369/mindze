@@ -69,18 +69,21 @@ const useStyles = makeStyles((theme) => ({
         },
 
         "& .qots-container": {
+            padding:'10px',
             display: 'flex',
             gap: '0.5rem',
-            // alginItem:'center',
+            alginItem:'center',
             // justifyContent:'center',
             // gap: '1.3rem',
             flexWrap: 'wrap',
             "& .qouts-img": {
                 padding: 10,
-                backgroundColor: "#efe",
+                // backgroundColor: "#efe",
                 "& img": {
-                    width: '260px',
+                    width: '363px',
+                    height:'513px',
                     borderRadius: '13px',
+                    // boxShadow:theme.p
                 }
             }
         },
@@ -108,7 +111,7 @@ function QuotationByCat({ id }) {
 
     return (
         <div className={classes.root}>
-            <div className=" qots-container">
+            <div className="qots-container">
                 {
 
                     findData?.images?.map((e, i) => (
