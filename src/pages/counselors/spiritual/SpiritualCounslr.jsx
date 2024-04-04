@@ -22,18 +22,13 @@ const useStyles = makeStyles((theme) => ({
             flexWrap: "wrap",
             "& .counselor": {
                 padding: "6px 10px",
-                width: 400,
-                // border: "1px solid #000",
                 display: "flex",
-                // justifyContent: 'center',
-                // alignItems: 'center',
+                [theme.breakpoints.down(500)]: {
+                    width: "100%",
+                },
                 gap: 16,
                 cursor: "pointer",
                 "& .counselor-about": {
-                    // display: "flex",
-                    // justifyContent: 'center',
-                    // flexDirection:"column",
-                    // alignItems: 'center',
                     "& > div": {
                         margin: "2px 0"
                     },
@@ -58,7 +53,6 @@ const useStyles = makeStyles((theme) => ({
                         display: "flex",
                         gap: 10,
                         color: "#000",
-                        // justifyContent: 'center',
                         alignItems: 'center',
                     },
 
@@ -68,16 +62,25 @@ const useStyles = makeStyles((theme) => ({
             "& .designation-section": {
                 padding: '10px 20px 0 20px',
                 "& .designation, & .interest": {
-                    fontSize: 13,
-                    color: '#000',
-                    fontWeight: 500,
-                    display: 'flex',
-                    // justifyContent:'center',
-                    alignItems: 'center',
-                    gap: 10,
-                    "& svg": {
-                        color: '#303f9f',
+                    "& p": {
+                        fontSize: 13,
+                        color: '#000',
+                        fontWeight: 500,
+                        display: 'flex',
+                        [theme.breakpoints.down(460)]: {
+                            fontSize: 10,
+                        },
+                        [theme.breakpoints.down(260)]: {
+                            flexWrap: 'wrap',
+                            fontSize: 10,
+                        },
+                        alignItems: 'center',
+                        gap: 10,
+                        "& svg": {
+                            color: '#303f9f',
+                        }
                     }
+
                 },
             },
             "& .price-section": {
@@ -90,19 +93,17 @@ const useStyles = makeStyles((theme) => ({
 
             "& .paper-dev": {
                 padding: "10px 6px",
+                [theme.breakpoints.down(500)]: {
+                    width: "100%",
+                    // padding: "10px 0",
+                },
             }
         },
-
-
 
     },
 
     modalContainer: {
         position: 'relative',
-
-        // "& .booked-session-btn":{
-        //     margin:'1rem 0'
-        // }
     },
 
     plans: {
@@ -111,7 +112,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         justifyContent: "center",
         marginBottom: '1rem',
-        flexWrap:'wrap',
+        flexWrap: 'wrap',
         "& .plan": {
             width: '230px',
             // height: '130px',
@@ -230,47 +231,58 @@ const SpiritualCounslr = () => {
                                         <Avatar alt="" src={e.img} className={classes.counslrAvatar} />
                                     </div>
                                     <div className="counselor-about">
-                                        <div className="name">{e.name}</div>
-                                        <div className="exp">{e.exp}+ years of experience</div>
+                                        <p className="name">{e.name}</p>
+                                        <p className="exp">{e.exp}+ years of experience</p>
                                     </div>
                                 </div>
                                 <div className='designation-section'>
                                     <div className="designation">
-                                        <span><StarsIcon /></span> <strong>designation:</strong> {e.designation}
+                                        <p><span><StarsIcon /></span> <strong>designation:</strong> {e.designation}</p>
                                     </div>
                                     <div className='interest'>
-                                        <span><CheckCircleIcon /></span><strong>interest:</strong>{e.interest}
+
+                                        <p><span><CheckCircleIcon /></span><strong>interest:</strong>{e.interest}</p>
                                     </div>
                                     {/* <div className="edu"><span><SchoolIcon /></span> {e.education}</div> */}
                                 </div>
                                 <div className='designation-section price-section'>
                                     <div className="designation">
-                                        <span><LocalOfferIcon /></span> <strong>Individual session price:</strong>₹ {e.price.annual}
+                                        <p><span><LocalOfferIcon /></span> <strong>Individual session price:</strong>₹ {e.price.annual}</p>
                                     </div>
                                     <div className='interest'>
-                                        <span><LocalOfferIcon /></span><strong>Webinar session</strong>₹  {e.price.monthly}
+                                        <p> <span><LocalOfferIcon /></span><strong>Webinar session</strong>₹  {e.price.monthly}
+                                        </p>
                                     </div>
 
                                 </div>
 
-                                <Grid container mt={2}
+                                <Grid
+                                    container
+                                    mt={2}
                                     direction="row"
                                     justifyContent="flex-end"
                                     alignItems="center"
+                                    spacing={2}
                                 >
                                     <Grid item xs={12} sm={2}></Grid>
                                     <Grid item xs={12} sm={5}>
-                                        <Button variant="outlined" color="primary">
+                                        <Button variant="outlined"
+                                            fullWidth
+                                            color="primary">
                                             <Link to={`/counselor/${e.id}`}>View Profile</Link>
                                         </Button>
                                     </Grid>
                                     <Grid item xs={12} sm={5}>
-                                        <Button onClick={handleOpenModal} variant="contained" color="primary">Book session</Button>
+                                        <Button fullWidth
+                                            onClick={handleOpenModal}
+                                            variant="contained"
+                                            color="primary">Book session</Button>
                                     </Grid>
                                 </Grid>
                             </>
+
                             <>
-                                <div className={classes.modalContainer}>
+                                {openModal && <div className={classes.modalContainer}>
                                     <MuiModal open={openModal} onClose={handleCloseModal} title="Book an Appointment">
                                         {/* <DatePicker selectedDate={selectedDate} onChange={handleDateChange} /> */}
                                         <div className={classes.plans}>
@@ -302,7 +314,7 @@ const SpiritualCounslr = () => {
                                             <Button onClick={handleCloseModal} variant="contained" color="primary">Book</Button>
                                         </div>
                                     </MuiModal>
-                                </div>
+                                </div>}
 
                             </>
                         </Paper>

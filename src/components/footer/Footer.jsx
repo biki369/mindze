@@ -20,35 +20,42 @@ const useStyles = makeStyles((theme) => ({
                 gap: '10px',
                 flexWrap: 'wrap',
                 justifyContent: 'space-between',
-                alignItems: 'center',
+                // alignItems: 'center',
             },
             "& .ul-items": {
-
                 "& .footer-logo": {
                     "& img": {
                         width: '160px',
                     },
                 },
-                "& li": {
-                    listStyle: "none",
-                    display: 'flex',
-                    // justifyContent: 'center',
-                    alignItems: 'center',
-                    gap: "10px",
-                    margin: "13px 0",
-                    "& a": {
-                        fontFamily: 'Montserrat',
-                        fontSize: 14,
-                        textDecoration: 'none',
-                        color: "#fff"
-                    },
-                    "& h3": {
-                        marginBottom: "2rem"
+
+                "& ul": {
+                    "& li": {
+                        listStyle: "none",
+                        display: 'flex',
+                        // justifyContent: 'center',
+                        alignItems: 'center',
+                        gap: "10px",
+                        margin: "13px 0",
+                        "& a": {
+                            fontFamily: 'Montserrat',
+                            fontSize: 14,
+                            textDecoration: 'none',
+                            color: "#fff"
+                        },
+                        "& h3": {
+                            marginBottom: "2rem"
+                        }
                     }
-                }
+                },
+
+                // "& .quick-links'":{
+                //     // marginTop:'1rem',
+                //     paddingTop:'1rem'
+                // }
             },
-            "& .social-links":{
-                marginTop:"0.8rem",
+            "& .social-links": {
+                marginTop: "0.8rem",
             }
         },
         "& .cpy-right": {
@@ -100,7 +107,7 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div className="ul-items">
-                            <ul>
+                            <ul className='quick-links'>
                                 <h3>Quick Links</h3>
                                 <li>
                                     <Link to={"/quickExercises"}>Quick Exercises</Link>
@@ -117,7 +124,7 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div className="ul-items">
-                            <ul>
+                            <ul  className='quick-links'>
                                 <h3>Quick Links</h3>
                                 <li>
                                     <Link to={"/philosophers"}>Philosophical Perspectives</Link>
