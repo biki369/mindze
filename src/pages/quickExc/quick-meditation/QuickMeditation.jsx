@@ -9,22 +9,26 @@ const useStyles = makeStyles((theme) => ({
         "& .techniques-container": {
             display: "flex",
             flexWrap: "wrap",
-            // width: "100%",
             height: "100%",
             // justifyContent: "center",
-            gap: "10px",
+            alginItems: "center",
+            gap: "30px",
             "& .techniques": {
-                padding: "30px",
+                padding: "23px",
+                width:'450px',
                 backgroundColor: "#eeeeee",
                 borderRadius: "10px",
+                transition: "all 0.3s",
+                "&:hover": {
+                    boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+                },
                 "& .title": {
-                    // width:"100px",
-                    // height:"100px",
+                    textAlign:'center',
                     transition: "all 0.3s",
                     "& a": {
                         fontSize: '1.6rem',
                         "&:hover": {
-                            color: theme.palette.primary.main
+                            color: theme.palette.primary.main,
                         }
                     },
                     cursor: 'pointer',
