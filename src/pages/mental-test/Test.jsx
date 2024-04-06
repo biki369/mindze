@@ -19,13 +19,11 @@ const useStyles = makeStyles((theme) => ({
             },
             "& .test-content": {
                 "& p": {
-                    // color: "#333",
                     fontSize: '1rem',
                     color: "#2c3e50",
                     fontFamily: 'Montserrat',
                     fontWeight: 400,
                     lineHeight: 1.5,
-                    // fontWeight: "400",
                     margin: "10px 0",
                     padding: '10px 30px',
                 },
@@ -36,9 +34,6 @@ const useStyles = makeStyles((theme) => ({
                         margin: "2rem 0",
                         fontSize: '1rem',
                         color: "#2c3e50",
-                        // display:'flex',
-                        // flexWrap:'wrap',
-                        // fontFamily: 'Montserrat',
                         fontWeight: 400,
                         lineHeight: 1.5,
                         "& .MuiTypography-body1": {
@@ -47,7 +42,6 @@ const useStyles = makeStyles((theme) => ({
                             fontWeight: 400,
                             lineHeight: 1.5,
                         },
-
                         "& .test-options": {
                             display: 'flex',
                             flexWrap:'wrap',

@@ -1,32 +1,43 @@
 import { Avatar, Box, Button, makeStyles } from "@material-ui/core";
-
+import { useEffect, useState } from "react";
+import { getProfile } from "../../../api";
+import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: '30px 3rem',
+    [theme.breakpoints.down(560)]: {
+      padding: '20px',
+    },
     "& .login-user": {
       width: 'max-content',
+      [theme.breakpoints.down(560)]: {
+        width: '100%',
+      },
       padding: '10px',
-      boxShadow: '0 0 3px #000',
-      borderRadius:'6px',
+      boxShadow: '0 0 1px #000',
+      borderRadius: '6px',
       display: 'flex',
+      flexWrap:'wrap',
       justifyContent: 'center',
       alignItems: 'center',
       gap: '1rem',
       "& .login-user-icon": {
-        width: '150px',
-        height: '150px',
+        width: '130px',
+        height: '130px',
+        // [theme.breakpoints.down(560)]: {
+        //   width: '80px',
+        //   height: '80px',
+        // },
       },
-
       "& .user-content": {
         padding: '1rem 13px',
         "& .user-name": {
           fontSize: '1.2rem',
           margin: '13px 0',
           fontWeight: 500,
-          // textAlign: 'center',
-          "& span":{
-            color:theme.palette.primary.main
+          "& span": {
+            color: theme.palette.primary.main
           }
         },
         "& .name": {
@@ -36,13 +47,10 @@ const useStyles = makeStyles((theme) => ({
         },
         "& .email": {
           fontSize: '1rem',
-          // textAlign: 'center',
           margin: '10px 0',
         }
       },
-
     },
-
 
     "& .booked-consultant": {
       display: 'flex',
@@ -55,18 +63,18 @@ const useStyles = makeStyles((theme) => ({
       "& .consulter": {
         // padding: '0 13px',
         // maxWidth: 'max-content',
-        "& h3":{
-          marginTop:'10px',
-          color:theme.palette.primary.main
+        "& h3": {
+          marginTop: '10px',
+          color: theme.palette.primary.main
         },
         width: '300px',
         padding: '1rem 1.3rem 0 ',
         borderRadius: '6px',
-        boxShadow: '0 0 3px #000',
+        boxShadow: '0 0 1.3px #000',
         transition: 'all 0.3s ease-in',
         cursor: 'pointer',
         "&:hover": {
-          boxShadow: '0 0 6px #000'
+          boxShadow: '0 0 3px #000'
         },
         "& .name": {
           fontSize: '1rem',
@@ -97,17 +105,34 @@ const useStyles = makeStyles((theme) => ({
           }
         },
       }
-
     }
-
-
-
-
   },
 
 }));
 
 const LoginUser = () => {
+  let navigate = useNavigate();
+
+  const [userData, setUserData] = useState();
+
+  const logoutHandler = () => {
+    localStorage.removeItem("token");
+    navigate("/");
+  }
+
+  useEffect(() => {
+    getProfile("api/profile/", localStorage.getItem("token")).then((data) => {
+      if (data) {
+        setUserData(data)
+      }
+    }).catch((err) => {
+      console.log(err)
+    })
+    
+  }, [])
+
+  // console.log(profileData)
+
   const classes = useStyles();
   return (
     <div className={classes.root}>
@@ -115,21 +140,14 @@ const LoginUser = () => {
         <Box className="login-user">
           <Avatar className="login-user-icon" src="" alt="logo" />
           <Box className="user-content">
-            <p className="user-name"> User Name: <span>John@369</span></p>
-            <p className="name"> Name: John Doe</p>
-            <p className="email">Email: xyz@mail.com</p>
-            <Button variant="contained" color="secondary">Logout</Button>
+            <p className="user-name"> User Name: <span>{userData?.username}</span></p>
+            <p className="name"> Name: {userData?.first_name} {userData?.last_name}</p>
+            <p className="email">Email:{userData?.email}</p>
+            <Button variant="contained" color="secondary" onClick={logoutHandler}>Logout</Button>
           </Box>
         </Box>
 
         <Box className="booked-consultant">
-          <Box className="consulter">
-            <h3>Past Bookings</h3>
-            <p className="name">Name: John Doe</p>
-            <p className="date">Date: 2024-03-27</p>
-            <p className="start"><span>Start time:</span> 03:44:55</p>
-            <p className="end"><span>End time:</span> 03:44:55</p>
-          </Box>
           <Box className="consulter">
             <h3>Past Bookings</h3>
             <p className="name">Name: John Doe</p>
@@ -144,15 +162,7 @@ const LoginUser = () => {
             <p className="start"><span>Start time:</span> 03:44:55</p>
             <p className="end"><span>End time:</span> 03:44:55</p>
           </Box>
-
-
-
-
-
         </Box>
-
-
-
       </Box>
     </div>
   )

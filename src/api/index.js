@@ -15,3 +15,21 @@ export const getConsultant = async (url) => {
   const { data } = await axios.get(`${BASE_URL}/${url}`,{ headersConsultant });
   return data;
 };
+
+export const registerNewUser = async (url, payload) => {
+  const { data } = await axios.post(`${BASE_URL}/${url}`, payload);
+  return data;
+};
+export const loginUser = async (url, payload) => {
+  const { data } = await axios.post(`${BASE_URL}/${url}`, payload);
+  return data;
+};
+
+export const getProfile = async (url, payload) => {
+  const headers = {
+    // "Content-Type": "application/json",
+    Authorization: `Token ${payload}`,
+  }
+  const { data } = await axios.get(`${BASE_URL}/${url}`,{headers});
+  return data;
+};
