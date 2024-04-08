@@ -96,7 +96,6 @@ const Test = () => {
         const TotalScore = () => {
             setTotal(Number(checked) + total)
         };
-
         TotalScore();
     }, [checked])
 
