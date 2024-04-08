@@ -89,15 +89,14 @@ const Test = () => {
 
     const handleChange = (event) => {
         setChecked(event);
-
+        const score = Number(event);
+        return score;
     };
 
     useEffect(() => {
-        const TotalScore = () => {
-            setTotal(Number(checked) + total)
-        };
-
-        TotalScore();
+        if (checked) {
+            setTotal(total + checked)
+        }
     }, [checked])
 
     console.log(total)
