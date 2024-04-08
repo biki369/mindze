@@ -4,6 +4,8 @@ import DateFnsUtils from '@date-io/date-fns';
 import { TextField } from '@material-ui/core';
 
 const DatePicker = ({ selectedDate, onChange }) => {
+
+  console.log();
   return (
     // <MuiPickersUtilsProvider utils={DateFnsUtils}>
     //   <KeyboardDatePicker
@@ -28,6 +30,10 @@ const DatePicker = ({ selectedDate, onChange }) => {
         type="date"
         defaultValue={selectedDate}
         // className={classes.textField}
+        onChange={onChange}
+        // InputProps={{
+        //   inputProps: { max: new Date().toISOString().split("T")[0] },
+        // }}
         InputLabelProps={{
           shrink: true,
         }}

@@ -11,9 +11,11 @@ import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import EmojiEventsIcon from '@material-ui/icons/EmojiEvents';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import CheckIcon from '@material-ui/icons/Check';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MuiModal from "../../../components/modal/MuiModal";
 import DatePicker from "../../../components/mui-date-picker/DatePicker";
+import Loader from "../../../components/loader/Loader";
+import { consultantDetails, consultantReview } from "../../../api";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -260,22 +262,28 @@ const CounselorDetails = () => {
 
   let { id } = useParams();
 
-  let data = counselorsData.find((counslr) => counslr.id === Number(id))
-  const { name, desc, img, exp, interest, education, designation, price } = data;
+  // let data = counselorsData.find((counslr) => counslr.id === Number(id))
+
+  
+  const todayDate = new Date();
+  
+  const [date, setDate] = useState(todayDate)
+  const [reviewData, setReviewData] = useState();
+  
+  const [selectedDate, setSelectedDate] = useState();
+  
+  const [openModal, setOpenModal] = useState(false);
+  
+  const [isLoading, setIsLoading] = useState(false);
+  const [data, setData] = useState({});
+  
+  // const { name, desc, img, exp, interest, education, designation, price } = data;
 
   // console.log(name,"slkadj",id)
 
   const handleDateChange = (date) => {
     setSelectedDate(date);
   };
-
-  const todayDate = new Date();
-
-  const [date, setDate] = useState(todayDate)
-
-  const [selectedDate, setSelectedDate] = useState();
-
-  const [openModal, setOpenModal] = useState(false);
 
   const handleOpenModal = () => {
     setOpenModal(true);
@@ -284,6 +292,7 @@ const CounselorDetails = () => {
   const handleCloseModal = () => {
     setOpenModal(false);
   };
+
 
   // ====== function fro check====
   const CheckboxComp = ({ options }) => {
@@ -317,36 +326,65 @@ const CounselorDetails = () => {
     );
   };
 
+  useEffect(()=>{
+    consultantDetails("api/consultant", id).then((data)=>{
+      setIsLoading(false)
+      setData(data)
+    }).catch((err)=>{
+      // setIsLoading(false)
+      console.log(err);
+    })
+    setIsLoading(true)
+  },[]);
+
+//   useEffect(() => {
+//     consultantAddReview("api/consultant/psychological", localStorage.getItem("token")).then((data) =>
+//     setReviewData(data),
+//         setIsLoading(true)
+//     )
+//     setIsLoading(false)
+// }, [isLoading]);
 
 
+  useEffect(() => {
+    consultantReview(`api/consultants/${id}/reviews`).then((data) =>
+      setReviewData(data),
+      setIsLoading(true)
+    )
+    setIsLoading(false)
+  }, [isLoading]);
+
+  console.log(reviewData,"reviewData");
 
   return (
     <div className={classes.root} >
-      <Container>
+      {
+        isLoading && <Loader/>
+      }
+    {   !isLoading &&<Container>
         <div className="profile-content">
-          <div className="top"><h3><span><Link to={"/"}>  <HomeIcon /></Link></span>{name}'s profile</h3></div>
+          <div className="top"><h3><span><Link to={"/"}>  <HomeIcon /></Link></span>{data?.name}'s profile</h3></div>
           <Paper >
             <div className="profile">
               <div className="profile-img">
-                <img src={img} alt="" />
+                <img src={data?.img} alt="404" />
               </div>
               <div className="profile-info">
                 <div className="profile-info-top">
-                  <h3>{name}</h3>
-                  <p> <span><StarsIcon /></span> <strong>interest:</strong>{interest}</p>
-                  <p><span><EmojiEventsIcon /></span> <strong>Exp:</strong>{exp}+ years</p>
-                  <p className="edu"><span><SchoolIcon /></span>{education}</p>
-                  <p className="designation"><span><CheckCircleIcon /></span><strong>designation:</strong>{designation}</p>
-                  <p className="price"> <span><LocalOfferIcon /></span> <strong>Annual price:</strong> {price.annual}</p>
-                  <p className='price'><span><LocalOfferIcon /></span><strong>Monthly price</strong>{price.monthly}</p>
-
+                  <h3>{data?.name}</h3>
+                  <p> <span><StarsIcon /></span> <strong>interest:</strong>{data?.interest}</p>
+                  <p><span><EmojiEventsIcon /></span> <strong>Exp:</strong>{data?.exp}+ years</p>
+                  <p className="edu"><span><SchoolIcon /></span>{data?.education}</p>
+                  <p className="designation"><span><CheckCircleIcon /></span><strong>designation:</strong>{data?.designation}</p>
+                  <p className="price"> <span><LocalOfferIcon /></span> <strong>Annual price:</strong> {data?.price?.annual}</p>
+                  <p className='price'><span><LocalOfferIcon /></span><strong>Monthly price</strong>{data?.price?.monthly}</p>
                   <div className="profile-btn">
                     <button onClick={handleOpenModal}>Book now</button>
                   </div>
                 </div>
                 <div className="info-about">
                   <h4>About Me</h4>
-                  <p>{desc}</p>
+                  <p>{data?.full_description}</p>
                 </div>
               </div>
             </div>
@@ -375,10 +413,7 @@ const CounselorDetails = () => {
                         <div className="bar-number">2</div>
                         <div className="d-bar"><LinearProgress color="primary" variant="determinate" value={46} /></div>
                       </div>
-                      <div className="bar">
-                        <div className="bar-number">1</div>
-                        <div className="d-bar"><LinearProgress color="secondary" variant="determinate" value={26} /></div>
-                      </div>
+                     
 
                     </div>
                   </div>
@@ -390,11 +425,12 @@ const CounselorDetails = () => {
               <Paper className="other-rating">
                 <h4>User Ratings</h4>
                 {
-                  userRating.map((e, i) => (
+                  reviewData?.map((e, i) => (
                     <Paper className="user-rating" key={i} elevation={3} >
-                      <div className="user-name"><Avatar src={e.avatar} /><h5>{e.name}</h5></div>
-                      <div><Rating name="read-only" value={e.rating} readOnly /></div>
-                      <div><p>{e.comment}</p></div>
+                      <div className="user-name"><Avatar src={e?.avatar} /><h5>{e?.username}</h5></div>
+                      {/* <div><Rating name="read-only" value={e.rating} readOnly /></div> */}
+                      <div><p>{e?.date}</p></div>
+                      <div><p>{e?.review}</p></div>
                     </Paper>
                   ))
                 }
@@ -402,8 +438,6 @@ const CounselorDetails = () => {
             </div>
           </div>
         </div>
-
-
 
         <div className={classes.modalContainer}>
           <MuiModal open={openModal} onClose={handleCloseModal} title="Book an Appointment">
@@ -416,7 +450,7 @@ const CounselorDetails = () => {
                 <p className="discount"><span><CheckIcon /></span>1 session price: </p>
                 <p className="discount"><span><CheckIcon /></span>5 session price:</p>
                 <p className="validity"><span><CheckIcon /></span>Validity : 2 months </p>
-                <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {price.monthly}</p>
+                <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {data?.price?.monthly}</p>
               </div>
               <div className="plan">
                 <CheckboxComp options={['webinar']} />
@@ -425,26 +459,19 @@ const CounselorDetails = () => {
                 <p className="discount"><span><CheckIcon /></span>10 session price: </p>
                 <p className="discount"><span><CheckIcon /></span>5 session price:</p>
                 <p className="validity"><span><CheckIcon /></span>Validity : 4 months </p>
-                <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {price.annual}</p>
+                <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {data.price?.annual}</p>
               </div>
             </div>
 
             <div className='booked-session-btn'
               style={{ display: 'flex', justifyContent: 'space-between', marginBottom: "1rem" }}
-
             >
               <DatePicker selectedDate={selectedDate} onChange={handleDateChange} />
               <Button onClick={handleCloseModal} variant="contained" color="primary">Book</Button>
             </div>
           </MuiModal>
         </div>
-
-
-
-
-
-
-      </Container>
+      </Container>}
     </div>
   )
 }
