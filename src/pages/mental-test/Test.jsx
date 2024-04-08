@@ -89,7 +89,8 @@ const Test = () => {
 
     const handleChange = (event) => {
         setChecked(event);
-
+        const score = Number(event);
+        return score;
     };
 
     useEffect(() => {
