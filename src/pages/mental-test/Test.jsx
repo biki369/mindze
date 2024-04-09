@@ -2,12 +2,13 @@ import { useEffect, useState } from 'react';
 import { Button, Container, Typography, makeStyles } from "@material-ui/core";
 import BackCurrent from '../../components/back-current/BackCurrent';
 import { useLocation } from 'react-router-dom';
-import MuiModal from '../../components/modal/MuiModal';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         padding: 30,
-
+        [theme.breakpoints.down(600)]: {
+            padding: 3,
+        },
         "& .test": {
             "& h2": {
                 fontSize: "1.8rem",
@@ -18,13 +19,11 @@ const useStyles = makeStyles((theme) => ({
             },
             "& .test-content": {
                 "& p": {
-                    // color: "#333",
                     fontSize: '1rem',
                     color: "#2c3e50",
                     fontFamily: 'Montserrat',
                     fontWeight: 400,
                     lineHeight: 1.5,
-                    // fontWeight: "400",
                     margin: "10px 0",
                     padding: '10px 30px',
                 },
@@ -35,9 +34,6 @@ const useStyles = makeStyles((theme) => ({
                         margin: "2rem 0",
                         fontSize: '1rem',
                         color: "#2c3e50",
-                        // display:'flex',
-                        // flexWrap:'wrap',
-                        // fontFamily: 'Montserrat',
                         fontWeight: 400,
                         lineHeight: 1.5,
                         "& .MuiTypography-body1": {
@@ -46,9 +42,9 @@ const useStyles = makeStyles((theme) => ({
                             fontWeight: 400,
                             lineHeight: 1.5,
                         },
-
                         "& .test-options": {
                             display: 'flex',
+                            flexWrap:'wrap',
                             gap: '0.5rem',
                             "& .test-option": {
                                 display: 'flex',
@@ -92,8 +88,9 @@ const Test = () => {
     const [openSec, setOpenSec] = useState(false)
 
     const handleChange = (event) => {
-        setChecked(event.target.value);
-
+        setChecked(event);
+        const score = Number(event);
+        return score;
     };
 
     useEffect(() => {
@@ -103,7 +100,7 @@ const Test = () => {
         TotalScore();
     }, [checked])
 
-    console.log(data.classificationCategories)
+    console.log(total)
 
     return (
         <div className={classes.root}>
@@ -122,7 +119,7 @@ const Test = () => {
                                         {
                                             e.options?.map((el, indx) => (
                                                 <div key={indx} className='test-option'>
-                                                    <input type="radio" name={e.text} value={el.value} onChange={handleChange} />
+                                                    <input type="radio" name={e.text} value={el.value} onChange={()=> handleChange(el.value)} />
                                                     {el.label}
                                                 </div>
 
@@ -141,9 +138,6 @@ const Test = () => {
                         >Submit</Button>
                     </div>
 
-
-
-
                     {openSec && <div className='test-result'>
                         {
                             data.classificationCategories?.map((e, i) => {
@@ -155,6 +149,7 @@ const Test = () => {
                                         </>
                                     )
                                 }
+
                             })
                         }
                     </div>}

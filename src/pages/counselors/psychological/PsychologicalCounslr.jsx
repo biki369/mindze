@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Avatar, Button, Grid, Paper, makeStyles } from '@material-ui/core';
 import { counselorsData } from '../../../data';
 import { Link } from 'react-router-dom';
@@ -8,12 +8,15 @@ import MuiModal from '../../../components/modal/MuiModal';
 import DatePicker from '../../../components/mui-date-picker/DatePicker';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import CheckIcon from '@material-ui/icons/Check';
+import { getConsultant } from '../../../api';
+import Loader from '../../../components/loader/Loader';
 
 
 
 const useStyles = makeStyles((theme) => ({
     root: {
         padding: 20,
+        margin: '1rem 0',
         "& .counselor-container": {
             display: "flex",
             gap: 10,
@@ -155,15 +158,14 @@ const useStyles = makeStyles((theme) => ({
 const PsychologicalCounslr = () => {
 
     const todayDate = new Date();
-
     const classes = useStyles();
-
     const [date, setDate] = useState(todayDate)
 
     const [selectedDate, setSelectedDate] = useState();
+    const [isLoading, setIsLoading] = useState(false)
+    const [psychologicalData, setPsychologicalData] = useState();
 
     // console.log(todayDate, "todayDate");
-
     const handleDateChange = (date) => {
         setSelectedDate(date);
     };
@@ -177,7 +179,6 @@ const PsychologicalCounslr = () => {
     const handleCloseModal = () => {
         setOpenModal(false);
     };
-
     // ====== function fro check====
     const CheckboxComp = ({ options }) => {
         const [selectedOptions, setSelectedOptions] = useState([]);
@@ -210,11 +211,25 @@ const PsychologicalCounslr = () => {
         );
     };
 
+    useEffect(() => {
+        getConsultant("api/consultant/psychological", localStorage.getItem("token")).then((data) =>
+            setPsychologicalData(data),
+            setIsLoading(true)
+        )
+        setIsLoading(false)
+    }, [isLoading])
+
+    // console.log(psychologicalData, "psychologicalData")
+
     return (
         <div className={classes.root}>
             <div className='counselor-container'>
-                {
-                    counselorsData.map((e, i) => (
+                    {
+                        isLoading && <Loader /> 
+                        // !isLoading &&"loading..........."
+                    }
+                {  !isLoading &&
+                    psychologicalData?.map((e, i) => (
                         <Paper key={i} className='paper-dev'>
                             <>
                                 <div className="counselor" >
@@ -247,8 +262,8 @@ const PsychologicalCounslr = () => {
 
                                 </div>
 
-                                <Grid 
-                                    container 
+                                <Grid
+                                    container
                                     mt={2}
                                     direction="row"
                                     justifyContent="flex-end"
@@ -257,17 +272,17 @@ const PsychologicalCounslr = () => {
                                 >
                                     <Grid item xs={12} sm={2}></Grid>
                                     <Grid item xs={12} sm={5}>
-                                        <Button variant="outlined" 
-                                        fullWidth
-                                        color="primary">
+                                        <Button variant="outlined"
+                                            fullWidth
+                                            color="primary">
                                             <Link to={`/counselor/${e.id}`}>View Profile</Link>
                                         </Button>
                                     </Grid>
                                     <Grid item xs={12} sm={5}>
                                         <Button fullWidth
-                                         onClick={handleOpenModal} 
-                                         variant="contained" 
-                                         color="primary">Book session</Button>
+                                            onClick={handleOpenModal}
+                                            variant="contained"
+                                            color="primary">Book session</Button>
                                     </Grid>
                                 </Grid>
                             </>

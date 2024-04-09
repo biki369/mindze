@@ -91,7 +91,7 @@ function PranayamaDetails({ id }) {
         fetchData()
     }, [id])
 
-    console.log(id, findData, "id main")
+    // console.log(id, findData, "id main")
 
 
     return (

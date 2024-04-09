@@ -151,12 +151,13 @@ const useStyles = makeStyles((theme) => ({
 const Home = () => {
   const classes = useStyles();
 
+
   const [spiritualData, setSpiritualData] = useState();
   const [psychologicalData, setPsychologicalData] = useState();
   const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
-    getConsultant("api/consultant/spiritual").then((data) =>
+    getConsultant("api/consultant/spiritual",localStorage.getItem("token")).then((data) =>
       setSpiritualData(data),
       setIsLoading(true)
     )
@@ -164,18 +165,15 @@ const Home = () => {
   }, [isLoading])
 
   useEffect(() => {
-    getConsultant("api/consultant/psychological").then((data) =>
+    getConsultant("api/consultant/psychological",localStorage.getItem("token")).then((data) =>
       setPsychologicalData(data),
       setIsLoading(true)
     )
     setIsLoading(false)
   }, [isLoading])
 
-  // console.log(spiritualData, "==================s");
-  // console.log(psychologicalData, "==================");
-
-
-
+  console.log(spiritualData, "==================s");
+  console.log(psychologicalData, "==================");
 
   return (
     <div className={classes.root}>
@@ -204,7 +202,7 @@ const Home = () => {
             heroSliderImg.map((e, i) => (
               <SwiperSlide key={i}>
                 <Box className='heroImgBox'>
-                  <img src={e.img} alt="slider" />
+                  <img src={e.img} alt="slider" className='heroImg'/>
                   <Typography className='sliderText'>{e.text}</Typography>
                 </Box>
               </SwiperSlide>

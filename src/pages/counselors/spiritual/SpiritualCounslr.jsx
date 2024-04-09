@@ -8,9 +8,11 @@ import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import MuiModal from '../../../components/modal/MuiModal';
 import DatePicker from '../../../components/mui-date-picker/DatePicker';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { CheckBox } from '@material-ui/icons';
 import CheckIcon from '@material-ui/icons/Check';
+import { bookingsSlot, getConsultant } from '../../../api';
+import Loader from '../../../components/loader/Loader';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -93,6 +95,7 @@ const useStyles = makeStyles((theme) => ({
 
             "& .paper-dev": {
                 padding: "10px 6px",
+                width: '400px',
                 [theme.breakpoints.down(500)]: {
                     width: "100%",
                     // padding: "10px 0",
@@ -162,19 +165,23 @@ const SpiritualCounslr = () => {
     const todayDate = new Date();
 
     const [date, setDate] = useState(todayDate)
-
-    const [selectedDate, setSelectedDate] = useState();
-
-
-    const handleChange = (event) => {
-        setChecked(event.target.checked);
-    }
-
-    // console.log(todayDate, "todayDate");
+    const [isLoading, setIsLoading] = useState(false)
 
 
-    const handleDateChange = (date) => {
-        setSelectedDate(date);
+    const [spiritualData, setSpiritualData] = useState();
+
+    const [bookingsSlotData, setBookingsSlotData] = useState()
+
+
+
+    // const handleChange = (event) => {
+    //     setChecked(event.target.checked);
+    // }
+
+    const handleDateChange = (event,id) => {
+        setDate(event.target.value);
+
+        
     };
 
     const [openModal, setOpenModal] = useState(false);
@@ -219,38 +226,64 @@ const SpiritualCounslr = () => {
         );
     };
 
+    useEffect(() => {
+        getConsultant("api/consultant/spiritual", localStorage.getItem("token")).then((data) =>
+            setSpiritualData(data),
+            setIsLoading(true)
+        ).catch((err) => {
+            console.log(err)
+        })
+        setIsLoading(false)
+    }, [isLoading]);
+
+    useEffect(() => {
+        bookingsSlot("api/review/", localStorage.getItem("token")).then((data) => {
+            setBookingsSlotData(data)
+            console.log(data);
+        }).catch((err) => {
+            console.log(err)
+        })
+    }, [])
+
+
+    // console.log(date, "spiritualData")
+
     return (
         <div className={classes.root}>
-            <div className='counselor-container'>
+            {
+                isLoading && <Loader />
+                // isLoading && "loading..........."
+            }
+            {!isLoading && <div className='counselor-container'>
                 {
-                    counselorsData.map((e, i) => (
+                    spiritualData?.map((e, i) => (
                         <Paper key={i} className='paper-dev'>
                             <>
                                 <div className="counselor" >
                                     <div className="counselor-img">
-                                        <Avatar alt="" src={e.img} className={classes.counslrAvatar} />
+                                        <Avatar alt="counselor-img" src={e?.img} className={classes.counslrAvatar} />
                                     </div>
                                     <div className="counselor-about">
-                                        <p className="name">{e.name}</p>
-                                        <p className="exp">{e.exp}+ years of experience</p>
+                                        <p className="name">{e?.name}</p>
+                                        <p className="exp">{e?.exp}+ years of experience</p>
                                     </div>
                                 </div>
                                 <div className='designation-section'>
                                     <div className="designation">
-                                        <p><span><StarsIcon /></span> <strong>designation:</strong> {e.designation}</p>
+                                        <p><span><StarsIcon /></span> <strong>designation:</strong> {e?.designation}</p>
                                     </div>
                                     <div className='interest'>
 
-                                        <p><span><CheckCircleIcon /></span><strong>interest:</strong>{e.interest}</p>
+                                        <p><span><CheckCircleIcon /></span><strong>interest:</strong>{e?.interest}</p>
                                     </div>
                                     {/* <div className="edu"><span><SchoolIcon /></span> {e.education}</div> */}
                                 </div>
                                 <div className='designation-section price-section'>
                                     <div className="designation">
-                                        <p><span><LocalOfferIcon /></span> <strong>Individual session price:</strong>₹ {e.price.annual}</p>
+                                        <p><span><LocalOfferIcon /></span> <strong>Individual session price:</strong>₹ {e.price?.annual}</p>
                                     </div>
                                     <div className='interest'>
-                                        <p> <span><LocalOfferIcon /></span><strong>Webinar session</strong>₹  {e.price.monthly}
+                                        <p> <span><LocalOfferIcon /></span><strong>Webinar session</strong>₹  {e.price?.monthly}
                                         </p>
                                     </div>
 
@@ -293,7 +326,7 @@ const SpiritualCounslr = () => {
                                                 <p className="discount"><span><CheckIcon /></span>1 session price: </p>
                                                 <p className="discount"><span><CheckIcon /></span>5 session price:</p>
                                                 <p className="validity"><span><CheckIcon /></span>Validity : 2 months </p>
-                                                <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {e.price.monthly}</p>
+                                                <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {e.price?.monthly}</p>
                                             </div>
                                             <div className="plan">
                                                 <CheckboxComp options={['webinar']} />
@@ -302,7 +335,7 @@ const SpiritualCounslr = () => {
                                                 <p className="discount"><span><CheckIcon /></span>10 session price: </p>
                                                 <p className="discount"><span><CheckIcon /></span>5 session price:</p>
                                                 <p className="validity"><span><CheckIcon /></span>Validity : 4 months </p>
-                                                <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {e.price.annual}</p>
+                                                <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {e.price?.annual}</p>
                                             </div>
                                         </div>
 
@@ -310,7 +343,8 @@ const SpiritualCounslr = () => {
                                             style={{ display: 'flex', justifyContent: 'space-between', marginBottom: "1rem" }}
 
                                         >
-                                            <DatePicker selectedDate={selectedDate} onChange={handleDateChange} />
+                                            {/* <DatePicker selectedDate={selectedDate} onChange={handleDateChange} /> */}
+                                             <input  type="date" value={date} onChange={(event)=>handleDateChange(event,e.id)}/>
                                             <Button onClick={handleCloseModal} variant="contained" color="primary">Book</Button>
                                         </div>
                                     </MuiModal>
@@ -320,11 +354,9 @@ const SpiritualCounslr = () => {
                         </Paper>
                     ))
                 }
-            </div>
-
-
-        </div >
+            </div>}
+        </div>
     )
-}
+}       
 
 export default SpiritualCounslr

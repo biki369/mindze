@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
-import { Avatar, Box, Button, Checkbox, CssBaseline, FormControlLabel, Grid, makeStyles, Paper, TextField, Typography } from "@material-ui/core";
-import { Link, Route, Routes } from "react-router-dom";
+import React, { useEffect,} from 'react';
+import { Avatar, Button, Grid, makeStyles, Paper, TextField, Typography } from "@material-ui/core";
+import { Link, useNavigate, } from "react-router-dom";
 import image from "../../../assets/Home_page/1.jpg";
 
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
-import LoginUser from '../login-user/LoginUser';
+import Swal from 'sweetalert2';
+import { loginUser, registerNewUser } from '../../../api';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -13,11 +14,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     backgroundSize: "cover",
-    // backgroundColor:
-    //   theme.palette.type === "light"
-    //     ? theme.palette.grey[50]
-    //     : theme.palette.grey[900],
-
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -55,51 +51,70 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-
-
 export default function Login(props) {
-  //   if(authService.isLoggedIn()){
-  //     props.history.push("./home");
-  //   }
-
   const classes = useStyles();
-  //   console.log(typeof classes.root);
-
+  let navigate = useNavigate();
   const [isSignUp, setIsSignUp] = React.useState(false);
-  const [account, setAccount] = React.useState({ username: "", password: "" });
-
+  const [account, setAccount] = React.useState({ username: "", password: "", email: "", first_name: "", last_name: "" });
+  // const [isLoading, setIsLoading] = useState(false)
   const handelAccount = (property, event) => {
     const accountCopy = { ...account };
     accountCopy[property] = event.target.value;
     setAccount(accountCopy);
   }
-  //   const isVarifiedUser=(username, password)=>{
-  //     return users.find((user)=> user.username === username && user.password === password);
-  //   };
-
-  const handelLogin = () => {
-    //   if(isVarifiedUser(account.username,account.password)){
-    //     authService.doLogIn(account.username);
-    //     setAccount({username:"",password:""});
-    //     props.history.push("/home");
-    //   }
+  const handelSubmit = (e) => {
+    e.preventDefault();
+    if (isSignUp) {
+      registerNewUser("api/register/", account).then((e) => {
+        Swal.fire({
+          icon: "success",
+          title: e.Success,
+          showConfirmButton: false,
+          timer: 1500
+        })
+        setIsSignUp(false);
+      }).catch((e) => console.log(e.response.data));
+    }
+    else {
+      loginUser("api/login/", account).then((e) => {
+        if (e.token) {
+          localStorage.setItem("token", e.token);
+          navigate("/login-user");
+          Swal.fire({
+            icon: "success",
+            title: "success",
+            showConfirmButton: false,
+            timer: 1500
+          })
+        }
+        else {
+          Swal.fire({
+            icon: "error",
+            title: e.error,
+            showConfirmButton: false,
+            timer: 1500
+          })
+        }
+      }).catch((e) => {
+        console.log(e);
+      })
+    }
   };
-
-
   const signUpForm = () => {
     return (
-      <form className={classes.form} noValidate>
+      <form className={classes.form} noValidate onSubmit={(e) => handelSubmit(e)}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
             <TextField
               autoComplete="fname"
-              name="firstName"
+              name="first_name"
               variant="outlined"
               required
               fullWidth
               id="firstName"
               label="First Name"
               autoFocus
+              onChange={(e) => handelAccount("first_name", e)}
             />
           </Grid>
           <Grid item xs={12} sm={6}>
@@ -109,8 +124,9 @@ export default function Login(props) {
               fullWidth
               id="lastName"
               label="Last Name"
-              name="lastName"
+              name="last_name"
               autoComplete="lname"
+              onChange={(e) => handelAccount("last_name", e)}
             />
           </Grid>
           <Grid item xs={12}>
@@ -122,6 +138,7 @@ export default function Login(props) {
               label="User Name"
               name="username"
               autoComplete="uname"
+              onChange={(e) => handelAccount("username", e)}
             />
           </Grid>
           <Grid item xs={12}>
@@ -133,6 +150,7 @@ export default function Login(props) {
               label="Email Address"
               name="email"
               autoComplete="email"
+              onChange={(e) => handelAccount("email", e)}
             />
           </Grid>
 
@@ -146,34 +164,35 @@ export default function Login(props) {
               type="password"
               id="password"
               autoComplete="current-password"
+              onChange={(e) => handelAccount("password", e)}
             />
           </Grid>
-          {/* <Grid item xs={12}>
-          <FormControlLabel
-            control={<Checkbox value="allowExtraEmails" color="primary" />}
-            label="I want to receive inspiration, marketing promotions and updates via email."
-          />
-        </Grid> */}
+          <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            color="primary"
+            className={classes.submit}
+          >
+            {isSignUp ? "Sign Up" : "Sign In"}
+          </Button>
         </Grid>
       </form>
     )
   }
 
-
   const signInform = () => {
-
     return (
-      <form className={classes.form} noValidate>
+      <form className={classes.form} noValidate onSubmit={(e) => handelSubmit(e)}>
         <TextField
           variant="outlined"
-          margin="normal"
           required
           fullWidth
-          id="email"
-          label="Email Address"
-          name="email"
-          autoComplete="email"
-          autoFocus
+          id="username"
+          label="User Name"
+          name="username"
+          autoComplete="uname"
+          onChange={(e) => handelAccount("username", e)}
         />
         <TextField
           variant="outlined"
@@ -185,14 +204,30 @@ export default function Login(props) {
           type="password"
           id="password"
           autoComplete="current-password"
+          onChange={(e) => handelAccount("password", e)}
         />
         {/* <FormControlLabel
       control={<Checkbox value="remember" color="primary" />}
       label="Remember me"
     /> */}
+        <Button
+          type="submit"
+          fullWidth
+          variant="contained"
+          color="primary"
+          className={classes.submit}
+        >
+          {isSignUp ? "Sign Up" : "Sign In"}
+        </Button>
 
       </form>)
   }
+
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      navigate("/login-user");
+    }
+  }, [])
 
   return (
     <Grid container component="main" className={classes.root}>
@@ -217,15 +252,6 @@ export default function Login(props) {
           </Typography>
           <div>
             {isSignUp ? signUpForm() : signInform()}
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              color="primary"
-              className={classes.submit}
-            >
-              {isSignUp ? "Sign Up" : "Sign In"}
-            </Button>
             <Grid container>
               <Grid item xs>
 

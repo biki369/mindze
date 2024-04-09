@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
       "& .sub-content": {
         padding: '1rem 0',
         "& p": {
-          fontSize: '20px'
+          fontSize: '18px'
         }
       },
       "& .ol-sub-content": {
