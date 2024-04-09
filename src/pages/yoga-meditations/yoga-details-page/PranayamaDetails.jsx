@@ -4,7 +4,8 @@ import { MeditationsData, pranayamaData } from '../../../data/yogaMediData'
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import YogaMediDetails from "./YogaMediDetails";
-
+import Markdown from 'markdown-to-jsx';
+import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -78,69 +79,31 @@ function PranayamaDetails({ id }) {
     const [findData, setFindData] = useState("");
 
     const classes = useStyles();
-    //   let { id } = useParams();
-      if (!id) {
+    if (!id) {
         id = 0;
-      }
+    }
 
     useEffect(() => {
         const fetchData = async () => {
             const response = await pranayamaData
-            setFindData(response.find(data => data.id === Number(id)))
+            //    get the markdown file from the data
+            const data = response.find((item) => item.id === id)
+            const markown = data.data
+            setFindData(markown)
         }
         fetchData()
     }, [id])
 
-    // console.log(id, findData, "id main")
-
 
     return (
         <div className={classes.root}>
-            {
-                findData && findData.data  && (
-                    <div className="technique-container">
-                        <div className="sub-content">
-                            <h3 className="sub-head">{findData.title}</h3>
-                        </div>
-                        <div className="sub-content">
-                            <h3 className="sub-head">{findData.data.head}</h3>
-                            <p>{findData.data.desc}</p>
-                        </div>
-                        <div className="ol-sub-content">
-                            <h3 className="sub-head">Steps</h3>
-                            <ol>
-                                {
-                                    findData.data?.steps.map((item ,i) => {
-                                        return (
-                                            <li key={i}> <span>{item.step}:</span> {item.desc}</li>
-                                        )
-                                    })
-                                }
-
-                            </ol>
-                        </div>
-                        <div className="ul-sub-content">
-                            <h3 className="sub-head">Benefits</h3>
-                            <ul>
-                                {
-                                    findData?.data && findData.data.benefits.map((item,i) => {
-                                        return (
-                                            <li key={i}> {item.benefit}</li>
-                                        )
-                                    })
-                                }
-                            </ul>
-                        </div>
-
-
-                        <div className="sub-content">
-                            <h3 className="sub-head">Conclusion</h3>
-                            <p>{findData?.data.Conclusion}</p>
-                        </div>
-                    </div>
-                )
-            }
-
+            <div className="technique-container">
+                <article className="prose lg:prose-xl prose-headings:text-indigo-500 prose-strong:text-indigo-500 prose-h1:text-5xl">
+                    <Markdown>
+                        {findData}
+                    </Markdown>
+                </article>
+            </div>
         </div>
     )
 }
