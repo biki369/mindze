@@ -7,6 +7,7 @@ import Tab from '@material-ui/core/Tab';
 import { bookSummeryData } from '../../data';
 import BookCard from '../../components/cards/book-card/BookCard';
 import { useMediaQuery } from '@material-ui/core';
+import { PersonalityDev } from '../../data/bookSummery';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -101,7 +102,7 @@ const Books = () => {
       <TabPanel value={value} index={0}>
         <div className='book-container'>
           {
-            bookSummeryData.map((e, i) => (
+            PersonalityDev.map((e, i) => (
               <div className='' key={i}>
                 <BookCard
                   data={e}
