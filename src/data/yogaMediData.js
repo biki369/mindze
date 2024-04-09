@@ -4246,119 +4246,1446 @@ export const pranayamaData = [
   {
     title: "Anulom Vilom",
     id: 0,
-    data: {
-      head: "Anulom Vilom: Alternate Nostril Breathing",
-      desc: "Anulom Vilom, or Alternate Nostril Breathing, is a traditional yogic breathing technique. Practitioners inhale through one nostril while closing the other, alternating with exhales. This practice aims to balance the flow of prana (life force energy), enhance respiratory function, and induce a state of relaxation. Anulom Vilom is believed to harmonize the nervous system, reduce stress, and promote mental clarity. Regular practice is thought to contribute to overall well-being by fostering a sense of balance in mind, body, and spirit.",
-      steps: [
-        {
-          step: "Comfortable Seating",
-          desc: "Sit comfortably in a cross-legged position (Padmasana or Sukhasana) with a straight spine. Rest your hands on your knees in a relaxed gesture (mudra)",
-        },
-        {
-          step: "Nasal Hand Position:",
-          desc: "Use your right thumb to close your right nostril and your right ring finger to close your left nostril.",
-        },
-        {
-          step: "Initial Breath",
-          desc: "Close your eyes. Inhale deeply through both nostrils.",
-        },
-      ],
-      benefits: [
-        {
-          benefit:
-            "Anulom Vilom improves lung function and respiratory efficiency, enhancing oxygen intake and promoting healthier breathing.",
-        },
-        {
-          benefit:
-            "Anulom Vilom enhances concentration, focus, and cognitive function, fostering mental clarity and alertness.",
-        },
-        {
-          benefit:
-            "By balancing the activity of the sympathetic and parasympathetic nervous systems, it promotes overall nervous system equilibrium.",
-        },
-      ],
+    data: `Anulom Vilom: Alternate Nostril Breathing
+=========================================
 
-      Conclusion:
-        "Anulom Vilom is generally safe, but caution is needed for those with respiratory or cardiovascular concerns. Pregnant individuals should practice under guidance, adjusting for their pregnancy stage. Caution is urged for individuals with hypertension, emphasizing controlled breathing.",
-    },
+Anulom Vilom, or Alternate Nostril Breathing, is a traditional yogic breathing technique. Practitioners inhale through one nostril while closing the other, alternating with exhales. This practice aims to balance the flow of prana (life force energy), enhance respiratory function, and induce a state of relaxation. Anulom Vilom is believed to harmonize the nervous system, reduce stress, and promote mental clarity. Regular practice is thought to contribute to overall well-being by fostering a sense of balance in mind, body, and spirit.
+
+Steps
+-----
+
+1.  **Comfortable Seating:** Sit comfortably in a cross-legged position (Padmasana or Sukhasana) with a straight spine. Rest your hands on your knees in a relaxed gesture (mudra).
+2.  **Nasal Hand Position:** Use your right thumb to close your right nostril and your right ring finger to close your left nostril.
+3.  **Initial Breath:** Close your eyes. Inhale deeply through both nostrils.
+4.  **Alternate Nostril Breathing:** Close your right nostril with your right thumb and exhale completely through the left nostril. Inhale deeply through the left nostril. Close the left nostril with your right ring finger, release the right nostril, and exhale through the right nostril. Inhale deeply through the right nostril. Close the right nostril again, release the left nostril, and exhale through the left nostril. This completes one cycle.
+5.  **Repeat:** Continue this rhythmic pattern, alternating between inhaling and exhaling through each nostril, for several cycles.
+6.  **Equal Duration:** Ensure that the duration of inhalation and exhalation is equal for both nostrils.
+7.  **Smooth and Controlled Breathing:** Maintain a smooth and controlled breath throughout the practice, avoiding any forceful or abrupt movements.
+8.  **Complete the Session:** After completing the desired number of cycles (start with 5-10 minutes for beginners), conclude the practice by finishing with an exhale through the left nostril.
+9.  **Observation:** Sit quietly for a moment with your eyes closed, observing the natural flow of your breath and the sense of balance and calmness within.
+10.  **Gradual Progression:** If you are new to Anulom Vilom, start with a few minutes and gradually increase the duration as you become more comfortable with the practice.
+
+Benefits
+--------
+
+*   Anulom Vilom improves lung function and respiratory efficiency, enhancing oxygen intake and promoting healthier breathing.
+*   Anulom Vilom enhances concentration, focus, and cognitive function, fostering mental clarity and alertness.
+*   By balancing the activity of the sympathetic and parasympathetic nervous systems, it promotes overall nervous system equilibrium.
+*   The practice helps regulate blood pressure and improves blood circulation, supporting heart health.
+*   Anulom Vilom increases oxygen supply to the body, boosting energy levels and combating fatigue.
+*   The calming effects on the nervous system can enhance sleep quality, reducing insomnia and promoting restful sleep.
+*   Anulom Vilom aids in the elimination of toxins, supporting the body's natural detoxification processes.
+
+Cautions
+--------
+
+Anulom Vilom is generally safe, but caution is needed for those with respiratory or cardiovascular concerns. Pregnant individuals should practice under guidance, adjusting for their pregnancy stage. Caution is urged for individuals with hypertension, emphasizing controlled breathing.`
   },
   {
-    title: "Kapalbhati",
-    id: 1,
-    data: {
-      head: "Anulom Vilom: Alternate Nostril Breathing",
-      desc: "Anulom Vilom, or Alternate Nostril Breathing, is a traditional yogic breathing technique. Practitioners inhale through one nostril while closing the other, alternating with exhales. This practice aims to balance the flow of prana (life force energy), enhance respiratory function, and induce a state of relaxation. Anulom Vilom is believed to harmonize the nervous system, reduce stress, and promote mental clarity. Regular practice is thought to contribute to overall well-being by fostering a sense of balance in mind, body, and spirit.",
-      steps: [
-        {
-          step: "Comfortable Seating",
-          desc: "Sit comfortably in a cross-legged position (Padmasana or Sukhasana) with a straight spine. Rest your hands on your knees in a relaxed gesture (mudra)",
-        },
-        {
-          step: "Nasal Hand Position:",
-          desc: "Use your right thumb to close your right nostril and your right ring finger to close your left nostril.",
-        },
-        {
-          step: "Initial Breath",
-          desc: "Close your eyes. Inhale deeply through both nostrils.",
-        },
-      ],
-      benefits: [
-        {
-          benefit:
-            "Anulom Vilom improves lung function and respiratory efficiency, enhancing oxygen intake and promoting healthier breathing.",
-        },
-        {
-          benefit:
-            "Anulom Vilom enhances concentration, focus, and cognitive function, fostering mental clarity and alertness.",
-        },
-        {
-          benefit:
-            "By balancing the activity of the sympathetic and parasympathetic nervous systems, it promotes overall nervous system equilibrium.",
-        },
-      ],
+    "title": "Kapalbhati",
+    "id": 1,
+    "data": `Kapalbhati: Skull-Shining Breath
+================================
 
-      Conclusion:
-        "Anulom Vilom is generally safe, but caution is needed for those with respiratory or cardiovascular concerns. Pregnant individuals should practice under guidance, adjusting for their pregnancy stage. Caution is urged for individuals with hypertension, emphasizing controlled breathing.",
-    },
+Kapalbhati, a yogic breathing technique, involves forceful exhalations through the nose while maintaining passive inhalations. Translated as "Skull-Shining Breath," Kapalbhati is renowned for its cleansing benefits. The rapid exhalations help expel toxins, energize the body, and improve lung capacity. Regular practice is believed to enhance respiratory health, clear the mind, and stimulate abdominal organs. As a dynamic form of pranayama, Kapalbhati contributes to overall well-being by promoting vitality and mental clarity.
+
+Steps
+-----
+
+1.  **Sit Comfortably:** Find a comfortable seated position, either in Padmasana (lotus pose) or Sukhasana (easy pose), with a straight spine.
+2.  **Hands Placement:** Place your hands on your knees with palms facing upward in a receptive gesture (mudra).
+3.  **Deep Inhalation:** Inhale deeply through both nostrils, expanding your lungs fully.
+4.  **Forceful Exhalations:** Exhale forcefully and rapidly through the nose by contracting the abdominal muscles. Focus on the exhalation, allowing the inhalation to happen passively.
+5.  **Rhythmic Repetitions:** Continue the rhythmic pumping motion, emphasizing the forceful exhalations. The pace should be brisk but controlled.
+6.  **Abdominal Contractions:** Coordinate each exhalation with a quick, powerful contraction of the abdominal muscles. The emphasis is on the exhalation, and the inhalation occurs naturally.
+7.  **Relaxation Between Rounds:** After completing a round (about 20-30 rapid breaths), take a deep inhalation and exhale slowly. Allow your breath to return to normal before starting the next round.
+8.  **Gradual Progression:** For beginners, start with a few rounds and gradually increase the duration as you build stamina. Avoid overexertion.
+9.  **Awareness and Focus:** Maintain mental focus on the breath and the rhythmic movement of the abdominal muscles. Keep the mind calm and attentive.
+10.  **Post-Practice Relaxation:** After completing the desired number of rounds, sit quietly for a few moments, observing the effects of the practice. Allow the breath to return to its natural rhythm.
+
+Benefits
+--------
+
+*   Kapalbhati enhances lung capacity, improves respiratory function, and cleanses the respiratory system, promoting overall respiratory health.
+*   The abdominal contractions stimulate digestive organs, aiding in digestion, reducing bloating, and supporting gastrointestinal health.
+*   It invigorates the body by increasing oxygen supply to cells, resulting in heightened energy levels.
+*   Regular practice clears the mind, enhances mental alertness, and improves concentration, fostering mental clarity and focus.
+*   The practice activates the parasympathetic nervous system, leading to a relaxation response, reducing stress, and promoting emotional well-being.
+*   The rapid exhalations expel carbon dioxide and metabolic waste, supporting the body's natural detoxification processes.
+
+Cautions
+--------
+
+Individuals with hypertension, heart conditions, or abdominal pain should practice Kapalbhati under the guidance of a qualified instructor. Pregnant women and those with recent abdominal surgeries should avoid this practice.
+
+Kapalbhati: Skull-Shining Breath
+================================
+
+Kapalbhati, a yogic breathing technique, involves forceful exhalations through the nose while maintaining passive inhalations. Translated as "Skull-Shining Breath," Kapalbhati is renowned for its cleansing benefits. The rapid exhalations help expel toxins, energize the body, and improve lung capacity. Regular practice is believed to enhance respiratory health, clear the mind, and stimulate abdominal organs. As a dynamic form of pranayama, Kapalbhati contributes to overall well-being by promoting vitality and mental clarity.
+
+Steps
+-----
+
+1.  **Sit Comfortably:** Find a comfortable seated position, either in Padmasana (lotus pose) or Sukhasana (easy pose), with a straight spine.
+2.  **Hands Placement:** Place your hands on your knees with palms facing upward in a receptive gesture (mudra).
+3.  **Deep Inhalation:** Inhale deeply through both nostrils, expanding your lungs fully.
+4.  **Forceful Exhalations:** Exhale forcefully and rapidly through the nose by contracting the abdominal muscles. Focus on the exhalation, allowing the inhalation to happen passively.
+5.  **Rhythmic Repetitions:** Continue the rhythmic pumping motion, emphasizing the forceful exhalations. The pace should be brisk but controlled.
+6.  **Abdominal Contractions:** Coordinate each exhalation with a quick, powerful contraction of the abdominal muscles. The emphasis is on the exhalation, and the inhalation occurs naturally.
+7.  **Relaxation Between Rounds:** After completing a round (about 20-30 rapid breaths), take a deep inhalation and exhale slowly. Allow your breath to return to normal before starting the next round.
+8.  **Gradual Progression:** For beginners, start with a few rounds and gradually increase the duration as you build stamina. Avoid overexertion.
+9.  **Awareness and Focus:** Maintain mental focus on the breath and the rhythmic movement of the abdominal muscles. Keep the mind calm and attentive.
+10.  **Post-Practice Relaxation:** After completing the desired number of rounds, sit quietly for a few moments, observing the effects of the practice. Allow the breath to return to its natural rhythm.
+
+Benefits
+--------
+
+*   Kapalbhati enhances lung capacity, improves respiratory function, and cleanses the respiratory system, promoting overall respiratory health.
+*   The abdominal contractions stimulate digestive organs, aiding in digestion, reducing bloating, and supporting gastrointestinal health.
+*   It invigorates the body by increasing oxygen supply to cells, resulting in heightened energy levels.
+*   Regular practice clears the mind, enhances mental alertness, and improves concentration, fostering mental clarity and focus.
+*   The practice activates the parasympathetic nervous system, leading to a relaxation response, reducing stress, and promoting emotional well-being.
+*   The rapid exhalations expel carbon dioxide and metabolic waste, supporting the body's natural detoxification processes.
+
+Cautions
+--------
+
+Individuals with hypertension, heart conditions, or abdominal pain should practice Kapalbhati under the guidance of a qualified instructor. Pregnant women and those with recent abdominal surgeries should avoid this practice.`
   },
   {
-    title: "Bhramari",
-    id: 2,
-    data: {
-      head: "Anulom Vilom: Alternate Nostril Breathing",
-      desc: "Anulom Vilom, or Alternate Nostril Breathing, is a traditional yogic breathing technique. Practitioners inhale through one nostril while closing the other, alternating with exhales. This practice aims to balance the flow of prana (life force energy), enhance respiratory function, and induce a state of relaxation. Anulom Vilom is believed to harmonize the nervous system, reduce stress, and promote mental clarity. Regular practice is thought to contribute to overall well-being by fostering a sense of balance in mind, body, and spirit.",
-      steps: [
-        {
-          step: "Comfortable Seating",
-          desc: "Sit comfortably in a cross-legged position (Padmasana or Sukhasana) with a straight spine. Rest your hands on your knees in a relaxed gesture (mudra)",
-        },
-        {
-          step: "Nasal Hand Position:",
-          desc: "Use your right thumb to close your right nostril and your right ring finger to close your left nostril.",
-        },
-        {
-          step: "Initial Breath",
-          desc: "Close your eyes. Inhale deeply through both nostrils.",
-        },
-      ],
-      benefits: [
-        {
-          benefit:
-            "Anulom Vilom improves lung function and respiratory efficiency, enhancing oxygen intake and promoting healthier breathing.",
-        },
-        {
-          benefit:
-            "Anulom Vilom enhances concentration, focus, and cognitive function, fostering mental clarity and alertness.",
-        },
-        {
-          benefit:
-            "By balancing the activity of the sympathetic and parasympathetic nervous systems, it promotes overall nervous system equilibrium.",
-        },
-      ],
+    "title": "Bhramari",
+    "id": 2,
+    "data": `**
 
-      Conclusion:
-        "Bhramari Pranayama is an effective and soothing technique for enhancing mental well-being. Its simplicity makes it accessible for practitioners of all levels. Incorporating Humming Bee Breath into your daily routine can be a gateway to a more relaxed and focused state of mind.",
-    },
+Bhramari Pranayama (Humming Bee Breath)
+=======================================
+
+**
+
+**
+
+Introduction
+------------
+
+**
+
+Bhramari Pranayama, often known as Humming Bee Breath, is a calming breathing technique in yoga. It mimics the soothing sound of a humming bee and is known for its stress-relieving and calming effects.
+
+**
+
+Understanding Bhramari Pranayama
+--------------------------------
+
+**
+
+Bhramari, derived from the Sanskrit word 'Bhramar' meaning 'bee', involves making a humming sound during exhalation. This practice is a part of pranayama or yogic breathing techniques, focusing on the control of breath to enhance mental and physical well-being.
+
+**
+
+Benefits of Bhramari Pranayama
+------------------------------
+
+**
+
+*   **Stress Reduction:** The vibrations from humming help in reducing stress and anxiety.
+*   **Improved Focus:** It enhances concentration and mental clarity.
+*   **Better Sleep:** Regular practice can improve sleep quality.
+*   **Relief from Headaches:** It's known to offer relief from headaches and migraines.
+
+**
+
+How to Practice Bhramari Pranayama: A Step-by-Step Guide
+--------------------------------------------------------
+
+**
+
+1.  **Comfortable Position:** Sit in a relaxed posture with a straight spine.
+2.  **Gentle Breath:** Take a deep, gentle breath in.
+3.  **Humming Exhalation:** Exhale slowly with a steady humming sound.
+4.  **Fingers on Face:** Optionally, place your fingers lightly on your eyelids or ears.
+5.  **Repetition:** Repeat the cycle for 5-10 rounds.
+
+**
+
+Tips for a Fruitful Practice
+----------------------------
+
+**
+
+*   **Consistent Practice:** Daily practice yields the best results.
+*   **Quiet Environment:** Choose a peaceful place for practice.
+*   **Gentle Approach:** Start with a soft hum and gradually increase intensity.
+*   **Mindful Breathing:** Focus on your breath and the sound of the hum.
+
+**
+
+Cautions and Considerations
+---------------------------
+
+**
+
+*   **Ear Pressure:** Avoid pressing too hard on the ears.
+*   **Not for Everyone:** Those with ear infections or severe respiratory issues should avoid this practice.
+*   **Comfort Level:** Do not force the breath; keep it smooth and natural.
+*   **Pregnancy:** Pregnant women should consult a doctor before practicing.
+
+**
+
+Conclusion
+----------
+
+**
+
+Bhramari Pranayama is an effective and soothing technique for enhancing mental well-being. Its simplicity makes it accessible for practitioners of all levels. Incorporating Humming Bee Breath into your daily routine can be a gateway to a more relaxed and focused state of mind.`
+  },
+  {
+    "title": "Ujjayi",
+    "id": 3,
+    "data": `Ujjayi: Victorious Breath or Ocean Breath
+=========================================
+
+Ujjayi, known as "Victorious" or "Ocean Breath," is a yoga pranayama involving a slight throat constriction during inhalation and exhalation. Creating a soft, audible sound, it promotes calmness, concentration, and internal heat generation. Integral to yoga, Ujjayi enhances the mind-body connection and overall well-being with mindfulness and breath control.
+
+Steps
+-----
+
+1.  **Posture:** Sit comfortably with an upright spine, or find a suitable lying position.
+2.  **Relaxation:** Relax your face, jaw, and shoulders. Keep the body at ease.
+3.  **Inhalation:** Inhale deeply through your nose, expanding your chest.
+4.  **Throat Constriction:** Gently constrict the back of your throat, creating a subtle resistance to the airflow.
+5.  **Exhalation:** Exhale slowly and audibly through your nose, maintaining the throat constriction.
+6.  **Sound Awareness:** Focus on the soft, ocean-like sound produced during both inhalation and exhalation.
+7.  **Rhythm:** Establish a rhythmic and controlled breath, maintaining the constriction throughout.
+8.  **Lengthening Breath:** Lengthen each breath, making it both deep and smooth.
+9.  **Mindful Practice:** Practice Ujjayi mindfully, linking the breath with movement if incorporated into yoga asanas.
+10.  **Relaxation:** End the practice with a few normal breaths and enjoy a moment of relaxation.
+
+Benefits
+--------
+
+*   Ujjayi induces a sense of calmness, promoting relaxation.
+*   The audible breath helps in maintaining focus during meditation and asana practice.
+*   Generates internal heat, aiding in detoxification and increasing circulation.
+*   Helps balance the autonomic nervous system, promoting overall well-being.
+*   Enhances the connection between breath, movement, and mindfulness.
+
+Cautions
+--------
+
+Exercise caution in Ujjayi for individuals with respiratory conditions like asthma, consult if discomfort arises. If dizziness occurs, return to normal breathing, and pregnant individuals should practice gently, consulting healthcare professionals.`
+  },
+  {
+    "title": "Sheetali",
+    "id": 4,
+    "data": `Sheetali: Cooling Breath
+========================
+
+Sheetali, also known as Sheetkari, is a yogic breathing technique (pranayama) that is designed to cool the body and calm the mind. The word "Sheetali" is derived from the Sanskrit word "Sheetal," which means cool or soothing. This practice is believed to have various benefits for both the physical and mental well-being.
+
+How to Practice Sheetali
+------------------------
+
+1.  **Sit in a Comfortable Position:** Find a comfortable seated position. This can be on the floor with crossed legs (sukhasana) or in a chair with your feet flat on the ground.
+2.  **Straighten the Spine:** Sit with a straight spine, allowing the energy to flow freely through your body.
+3.  **Relax the Shoulders:** Release any tension in your shoulders and place your hands on your knees in a comfortable position.
+4.  **Mouth Positioning:** Roll your tongue into a tube-like shape. If you can't roll your tongue, you can simply part your lips, keeping the teeth slightly apart.
+5.  **Inhale:** Inhale slowly and deeply through the rolled tongue or parted lips. Feel the coolness of the breath as it enters your body.
+6.  **Pause:** Once you've inhaled fully, close your mouth and hold your breath for a moment.
+7.  **Exhale:** Exhale slowly and completely through your nose.
+8.  **Repeat:** Continue this process for several rounds, gradually increasing the duration of the practice as you become more comfortable.
+
+Benefits
+--------
+
+*   The cooling effect of Sheetali is said to be beneficial for reducing stress, anxiety, and anger.
+*   It is also believed to help regulate body temperature, blood pressure, improve digestion, and enhance overall respiratory health.
+*   Additionally, Sheetali pranayama is often recommended during hot weather to cool down the body.
+*   Can be beneficial for those with insomnia, promoting better sleep.
+
+Cautions
+--------
+
+If you have any respiratory or medical conditions, or if you're pregnant, it's advisable to consult with a healthcare professional or a qualified yoga instructor before attempting pranayama techniques.`
+  },
+  {
+    "title": "Sheetkari",
+    "id": 5,
+    "data": `Sheetkari: Hissing Breath
+=========================
+
+Sheetkari is a yogic breathing technique where the practitioner inhales through the teeth, with the lips parted and the tongue against the upper palate. The exhalation is done through the nostrils. This practice induces a cooling effect, reduces stress, and calms the nervous system. Sheetkari is known for promoting mental tranquility and is beneficial in balancing emotions, making it a useful pranayama for overall well-being.
+
+Steps
+-----
+
+1.  **Posture:** Sit comfortably with an upright spine in a relaxed position.
+2.  **Mouth Position:** Keep the lips parted, exposing the teeth.
+3.  **Tongue Position:** Place the tip of the tongue against the upper palate.
+4.  **Inhalation:** Inhale slowly and deeply through the teeth, allowing a hissing sound.
+5.  **Breath Retention:** Retain the breath comfortably if desired.
+6.  **Exhalation:** Exhale slowly and completely through the nostrils.
+7.  **Repeat:** Repeat the process for several rounds, gradually increasing the duration.
+8.  **Mindful Practice:** Practice with mindfulness, focusing on the hissing sound and breath.
+9.  **Closure:** End the practice with normal breathing, observing the calming effects.
+
+Benefits
+--------
+
+*   Sheetkari induces a calming effect, reducing stress and anxiety while creating a refreshing cooling sensation in the body and mind.
+*   By calming the nervous system, it promotes relaxation and helps stabilize emotions.
+*   This practice enhances concentration, strengthens the mind-body connection, and may contribute to blood pressure regulation.
+*   Sheetkari also offers respiratory benefits, improving lung capacity and overall well-being.
+
+Cautions
+--------
+
+Individuals with respiratory conditions, temperature and dental sensitivity, or general health concerns, including cardiovascular issues, should consult professionals before attempting. Pregnant individuals should practice pranayama cautiously.`
+  },
+  {
+    "title": "Bhastrika",
+    "id": 6,
+    "data": `Bhastrika: Bellows Breath
+=========================
+
+Bhastrika, or Bellows Breath, is a powerful yogic breathing technique involving forceful inhalation and exhalation through the nose. The practice resembles the bellows of a blacksmith and is known for its energizing and purifying effects. Bhastrika enhances lung capacity, increases oxygen supply, and promotes mental clarity. Regular practice is believed to strengthen the respiratory system and invigorate the entire body, fostering vitality and well-being.
+
+Steps
+-----
+
+1.  **Posture:** Sit comfortably with an upright spine in a relaxed position.
+2.  **Relaxation:** Relax your shoulders, jaw, and face.
+3.  **Breath Awareness:** Begin with deep inhalation and exhalation to center yourself.
+4.  **Forceful Inhalation:** Inhale forcefully through both nostrils, expanding the chest.
+5.  **Forceful Exhalation:** Exhale forcefully through both nostrils, contracting the abdomen.
+6.  **Rapid Breathing:** Continue the rapid, forceful breathing with equal emphasis on inhalation and exhalation.
+7.  **Breath Retention:** Optionally, incorporate breath retention after exhalation for a few moments.
+8.  **Repeat:** Repeat the process for several rounds, gradually increasing the duration.
+9.  **Mindful Practice:** Maintain mindfulness, focusing on the powerful and rhythmic breath.
+10.  **Closure:** End the practice with normal breathing, observing the energizing effects.
+
+Benefits
+--------
+
+*   Bhastrika Pranayama, or Bellows Breath, enhances oxygen intake, improving cellular oxygenation and offering a rapid energy boost.
+*   Activating the sympathetic nervous system heightens alertness.
+*   This practice strengthens lung capacity, aiding respiratory efficiency and detoxification. Aligned with Ayurveda, Bhastrika balances doshas for overall well-being, stimulates digestion through increased abdominal movement, and clears nasal passages.
+*   Additionally, it induces relaxation, reducing stress, and may enhance focus by promoting optimal oxygen flow to the brain through regular practice.
+
+Cautions
+--------
+
+Exercise caution in Bhastrika for individuals with hypertension and cardiovascular issues, emphasizing a controlled and moderate pace. People with respiratory conditions, recent surgeries, or during pregnancy should approach Bhastrika gently. If discomfort occurs, discontinue and resume normal breathing.`
+  },
+  {
+    "title": "Dirgha Pranayama",
+    "id": 7,
+    "data": `Dirgha Pranayama: Three-Part Breath
+===================================
+
+Dirgha, or Three-Part Breath, is a foundational yogic breathing technique involving conscious inhalation and exhalation into three parts of the lungs: abdomen, chest, and upper chest. This deep, diaphragmatic breathing promotes relaxation, improves lung capacity, and enhances oxygenation. Dirgha Pranayama is often used to reduce stress, calm the nervous system, and establish a steady, mindful breath for overall well-being.
+
+Steps
+-----
+
+1.  **Comfortable Posture:** Sit or lie down comfortably with an upright spine.
+2.  **Relaxation:** Relax your shoulders, jaw, and face.
+3.  **Hand Placement:** Place one hand on the abdomen and the other on the chest.
+4.  **Inhalation:** Inhale deeply through the nose, allowing the abdomen to expand first, then the chest, and finally the upper chest.
+5.  **Exhalation:** Exhale slowly and completely, reversing the process: upper chest, chest, and then abdomen.
+6.  **Rhythmic Breathing:** Establish a rhythmic and smooth breath, allowing each part to inflate and deflate sequentially.
+7.  **Mindful Practice:** Practice with mindfulness, focusing on the movement of breath through the three parts.
+8.  **Repeat:** Repeat the process for several rounds, gradually extending the duration.
+9.  **Closure:** End the practice with a few normal breaths, observing the calming effects.
+
+Benefits
+--------
+
+*   Dirgha Pranayama, or Three-Part Breath, induces deep relaxation through slow, deep breaths, calming the nervous system.
+*   It maximizes oxygen intake, enhancing cellular oxygenation and strengthening respiratory muscles for improved lung capacity.
+*   Stress reduction is achieved by activating the parasympathetic nervous system, fostering a sense of calm and aiding emotional regulation.
+*   This practice promotes better posture, balanced energy flow, and a heightened mind-body connection, contributing to improved focus, digestion, and overall well-being.
+
+Cautions
+--------
+
+To prevent hyperventilation, maintain a natural and controlled breathing pace, avoiding rapid or forced breaths. Individuals with respiratory conditions should approach the practice gently. Pregnant women and those with recent surgeries should modify the practice for comfort, avoiding strain.`
+  },
+  {
+    "title": "Surya Bhedana",
+    "id": 8,
+    "data": `Surya Bhedana: Right Nostril Breathing
+======================================
+
+Surya Bhedana, or Right Nostril Breathing, is a yogic breathing technique involving inhalation through the right nostril and exhalation through the left. This practice is believed to stimulate the sympathetic nervous system, increasing alertness and energy. Surya Bhedana is often used for balancing energy, enhancing vitality, and promoting a sense of warmth and invigoration in the body and mind.
+
+Steps
+-----
+
+1.  **Sit Comfortably:** Find a comfortable seated position. This can be on the floor with crossed legs (sukhasana) or in a chair with your feet flat on the ground. Ensure that your spine is straight and your shoulders are relaxed.
+2.  **Nasal Preparation:** Before beginning Surya Bhedana, ensure that both nostrils are clear. You may want to blow your nose if needed.
+3.  **Hand Positioning:** Use your right thumb to close your left nostril and keep the other fingers extended. Your left hand can rest on your knee in a comfortable position (Chin Mudra).
+4.  **Inhale through the Right Nostril:** Close your left nostril with your right thumb. Inhale slowly and deeply through your right nostril. Focus on the sensation of the breath as it enters your body.
+5.  **Switch Nostrils:** After completing the inhalation, release your right nostril and use your ring finger or pinky to close your right nostril.
+6.  **Exhale through the Left Nostril:** Exhale slowly and completely through your left nostril. Focus on the breath leaving your body.
+7.  **Inhale through the Left Nostril:** Keep your right nostril closed. Inhale slowly and deeply through your left nostril.
+8.  **Switch Nostrils:** After completing the inhalation, release your left nostril and use your right thumb to close your left nostril.
+9.  **Exhale through the Right Nostril:** Exhale slowly and completely through your right nostril.
+10.  **Repeat:** Continue this alternating pattern, inhaling through one nostril and exhaling through the other. Aim for a smooth and controlled breath.
+11.  **Duration:** Practice Surya Bhedana for a few minutes initially, gradually increasing the duration as you become more comfortable.
+
+Benefits
+--------
+
+*   Surya Bhedana is thought to energize the body, increase vitality, and stimulate the system.
+*   It generates heat, potentially aiding circulation in colder weather.
+*   Activating the sympathetic nervous system enhances alertness and readiness, improving concentration for sustained tasks.
+*   Believed to aid detoxification by promoting prana flow, it also enhances lung capacity, regulates body temperature, aids digestion, reduces fatigue, and harmonizes energy flow, aligning with yoga and Ayurvedic principles for overall well-being.
+
+Cautions
+--------
+
+For individuals with high blood pressure, practice cautiously, avoiding forceful breaths and return to normal if dizziness occurs. People with respiratory conditions, pregnant women, and those with heart conditions should approach the practice gently.`
+  },
+  {
+    "title": "Chandra Bhedana",
+    "id": 9,
+    "data": `Chandra Bhedana: Left Nostril Breathing
+=======================================
+
+Chandra Bhedana, or Left Nostril Breathing, is a yogic pranayama technique involving inhalation through the left nostril, believed to cool and calm the nervous system. This practice is associated with the lunar or calming energy (Chandra) in yoga, promoting relaxation and reducing stress. It is often practiced in the evening or during times when a calming effect is desired, complementing the energizing effects of Surya Bhedana (Right Nostril Breathing).
+
+Steps
+-----
+
+1.  **Comfortable Posture:** Sit in a comfortable position with an upright spine.
+2.  **Hand Position:** Adopt Vishnu Mudra by folding the index and middle fingers towards the palm.
+3.  **Right Nostril Closure:** Use the right thumb to close the right nostril.
+4.  **Inhalation:** Inhale slowly and deeply through the left nostril.
+5.  **Breath Retention:** Optionally, retain the breath for a comfortable duration.
+6.  **Exhalation:** Release the right nostril and exhale slowly and completely through the right nostril.
+7.  **Repeat:** Repeat the process for several rounds, focusing on the lunar, calming energy.
+8.  **Mindful Practice:** Practice with mindfulness, emphasizing the soothing effect of the left nostril breath.
+9.  **Closure:** Conclude the practice with normal breathing, observing the calming effects.
+
+Benefits
+--------
+
+*   Chandra Bhedana induces a calming impact on the nervous system, fostering relaxation and stress reduction.
+*   Aligned with lunar energy, it balances overall bodily energy and may enhance sleep quality when practiced in the evening.
+*   The left nostril's breath is believed to cool the body, beneficial during heightened heat or agitation.
+*   This technique harmonizes menstrual cycles, regulates body temperature, soothes the mind, encourages introspection, enhances emotional stability, and complements Surya Bhedana for a balanced energy approach.
+
+Cautions
+--------
+
+For individuals with low blood pressure, practice cautiously, avoiding prolonged breath retention. People with respiratory conditions, pregnant women, and those with heart conditions should approach the practice gently and seek guidance.`
+  },
+  {
+    "title": "Murcha Pranayama",
+    "id": 10,
+    "data": `Murcha Pranayama: Swooning Breath
+=================================
+
+Murcha Pranayama, also known as the Fainting Breath, is an advanced yogic breathing technique involving controlled breath retention. Practitioners inhale deeply, retain the breath, and tilt the head, aiming to induce a state of suspended animation. This ancient pranayama is said to enhance spiritual experiences, deepen meditation, and promote mental clarity. Due to its advanced nature, Murcha Pranayama should be approached with caution under expert guidance.
+
+How to Practice Murcha Pranayama
+--------------------------------
+
+1.  **Comfortable Posture:** Sit comfortably in a cross-legged position with an upright spine.
+2.  **Breath Awareness:** Begin with deep awareness of your breath.
+3.  **Slow Inhalation:** Inhale slowly and deeply through the nose.
+4.  **Breath Retention:** Retain the breath comfortably.
+5.  **Chin Lock:** Lower the chin toward the chest, creating a gentle lock by placing it against the sternum.
+6.  **Jalandhara Bandha:** Engage the throat lock by lowering the head further, allowing the chin to press against the chest.
+7.  **Release Locks:** Release the locks and slowly exhale.
+8.  **Repeat:** Repeat the process gradually, focusing on breath awareness and the locks.
+9.  **Mindful Practice:** Practice with mindfulness, observing the effects on the nervous system.
+10.  **Closure:** Conclude the practice with normal breathing, maintaining a calm and centered state.
+
+Benefits
+--------
+
+*   The meditative aspects of Murcha Pranayama can help reduce stress, inducing a calm state.
+*   It may enhance mental clarity, balance the flow of vital energy (prana), and contribute to improved concentration.
+*   Murcha Pranayama is believed to deepen meditation, fostering a heightened spiritual experience.
+*   The practice establishes a strong mind-body connection, promoting holistic well-being, and practitioners develop advanced breath control and respiratory awareness through its techniques.
+
+Cautions
+--------
+
+As an advanced technique, Murcha Pranayama should be attempted only by experienced individuals under the guidance of a qualified yoga instructor.`
+  },
+  {
+    "title": "Plavini Pranayama",
+    "id": 11,
+    "data": `Plavini Pranayama: Floating Breath
+==================================
+
+Plavini, a unique yogic breath practice, involves swallowing air to expand the stomach. After filling the stomach, the practitioner holds the breath, creating a buoyant feeling. This practice is thought to purify the digestive system, enhance energy flow, and increase vitality. Plavini is considered an advanced technique, and guidance from an experienced yoga instructor is recommended to ensure proper understanding and execution for optimal benefits and safety.
+
+Steps
+-----
+
+1.  **Comfortable Posture:** Sit in a comfortable and upright position.
+2.  **Breath Awareness:** Begin with awareness of your natural breath.
+3.  **Swallowing Air:** Inhale deeply through the nose, swallowing a significant amount of air to fill the stomach.
+4.  **Stomach Expansion:** Expand the stomach as much as possible with the swallowed air.
+5.  **Breath Retention:** Hold the breath while maintaining the stomach expansion.
+6.  **Release Air:** Slowly release the swallowed air.
+7.  **Repeat:** Repeat the process gradually, focusing on the expansion and release of the stomach.
+8.  **Mindful Practice:** Practice with mindfulness, paying attention to the sensations and the subtle energy in the abdominal area.
+9.  **Closure:** Conclude the practice with normal breathing, maintaining a calm and centered state.
+
+Benefits
+--------
+
+*   Plavini Pranayama is believed to enhance digestion by stimulating digestive organs.
+*   It may contribute to balancing the flow of prana, fostering energy equilibrium.
+*   The practice is thought to aid detoxification by releasing stagnant air and toxins.
+*   Regular engagement potentially improves respiratory efficiency and lung capacity.
+*   Plavini induces calmness, promoting mental clarity, and is associated with physical and energetic expansion, involving both the physical body and subtle energy fields.
+
+Cautions
+--------
+
+Expert guidance is essential for Plavini, an advanced technique, to mitigate potential risks. Individuals with digestive disorders, recent abdominal surgery, hypertension, or during pregnancy should exercise caution and consult healthcare professionals.`
+  },
+  {
+    "title": "Kevali Kumbhaka",
+    "id": 12,
+    "data": `Kevali Kumbhaka: Absolute or Complete Breath Retention
+======================================================
+
+Kevali Kumbhaka is an advanced yogic breath-holding technique, where the practitioner experiences spontaneous breath suspension without conscious effort. This advanced stage of pranayama is associated with deep states of meditation and heightened spiritual awareness. Kevali Kumbhaka is considered a profound practice, and individuals are advised to approach it with caution, learning under the guidance of experienced yoga instructors.
+
+How to Practice Kevali Kumbhaka
+-------------------------------
+
+1.  **Comfortable Posture:** Sit comfortably in a stable and relaxed posture.
+2.  **Deep Inhalation:** Inhale deeply and fully through the nose.
+3.  **Complete Exhalation:** Exhale completely through the nose.
+4.  **Breath Retention:** After exhaling, hold the breath outside the body (without inhaling) for as long as comfortable.
+5.  **Release and Repeat:** Release the breath, and repeat the process gradually.
+6.  **Mindful Awareness:** Practice with mindful awareness, focusing on the stillness and internal awareness during the breath retention.
+7.  **Gradual Progress:** Progress gradually, increasing the duration of breath retention as your practice develops.
+8.  **Expert Guidance:** Due to its advanced nature, practice Kevali Kumbhaka under the guidance of an experienced yoga instructor to ensure safety and proper understanding.
+
+Benefits
+--------
+
+*   Enhances lung capacity and respiratory efficiency.
+*   Cultivates mental focus and facilitates the smooth flow of life force energy (prana).
+*   Promotes a balanced autonomic nervous system and supports spiritual development.
+*   Induces a state of calmness, reduces stress, and strengthens the mind-body connection.
+
+Cautions
+--------
+
+Those with respiratory or cardiovascular issues, beginners, and pregnant individuals should exercise caution, prioritize mental stability, and respect individual limits to prevent potential risks.`
+  },
+  {
+    "title": "Viloma Pranayama",
+    "id": 13,
+    "data": `Viloma Pranayama: Interrupted Breath
+====================================
+
+Viloma Pranayama is a yogic breathing technique that involves interrupted, controlled inhalation and exhalation. Practitioners deliberately pause during the breath cycle, creating segments. This intentional disruption enhances awareness of the breath, improves respiratory control, and cultivates mindfulness. Viloma can be practiced in different variations, allowing for gradual advancement. It is recommended for those with some pranayama experience and should be learned under the guidance of a knowledgeable yoga instructor.
+
+Steps
+-----
+
+1.  **Comfortable Posture:** Sit comfortably in a relaxed and stable position.
+2.  **Breath Awareness:** Begin with awareness of your natural breath.
+3.  **Inhalation (Interrupted):** Inhale in segments, pausing briefly during inhalation.
+4.  **Exhalation (Interrupted):** Exhale in segments, introducing short pauses during exhalation.
+5.  **Smooth Transitions:** Ensure smooth transitions between inhalation, pauses, and exhalation segments.
+6.  **Gradual Progress:** Start with shorter segments and gradually increase the duration as your practice advances.
+7.  **Mindful Awareness:** Practice with mindful awareness, focusing on the interrupted breath pattern.
+8.  **Expert Guidance:** Due to its nuanced nature, practice Viloma Pranayama under the guidance of an experienced yoga instructor to ensure correct technique and safe progression.
+
+Benefits
+--------
+
+*   It enhances lung capacity and respiratory efficiency, fostering increased awareness of breath patterns.
+*   The practice promotes a balanced flow of life force energy throughout the body, alleviates stress, and induces a calm state.
+*   Additionally, it cultivates mental focus, strengthens the mind-body connection, supports respiratory health, and contributes to overall vitality and holistic well-being.
+*   As with any pranayama, it is recommended to practice under expert guidance for optimal results.
+
+Cautions
+--------
+
+Individuals with respiratory and mental issues should approach Viloma cautiously, beginners should start with simpler techniques, and pregnant individuals should consult healthcare professionals.`
+  },
+  {
+    "title": "Kaki Mudra",
+    "id": 14,
+    "data": `Kaki Mudra Pranayama: Crow's Beak Breath
+========================================
+
+Kaki Mudra Pranayama is a yogic breathing technique involving a specific hand gesture. In this practice, the fingers are interlocked, with the thumbs and index fingers forming a circular shape. The hands are placed at the chest, and the breath is taken in deeply through the nostrils. Kaki Mudra is believed to promote lung health, enhance concentration, and foster a sense of calm. It is advisable to learn this pranayama under the guidance of an experienced instructor.
+
+How to Practice Kaki Mudra
+--------------------------
+
+1.  **Comfortable Posture:** Sit comfortably in a stable and relaxed posture.
+2.  **Hand Placement:** Place the hands in Kaki Mudra by interlocking the fingers, keeping the index fingers extended and touching.
+3.  **Breath Awareness:** Begin with awareness of your natural breath.
+4.  **Inhalation:** Inhale deeply through the nose, filling the lungs.
+5.  **Breath Retention:** Hold the breath inside (retention) for a comfortable duration.
+6.  **Exhalation:** Exhale slowly and completely through the nose.
+7.  **Repeat:** Repeat the cycle gradually, focusing on the breath and maintaining the Kaki Mudra hand position.
+8.  **Mindful Practice:** Practice with mindfulness, paying attention to the sensations and the energy flow during the breath cycle.
+9.  **Closure:** Conclude the practice with normal breathing, maintaining a calm and centered state.
+
+Benefits
+--------
+
+*   Kaki Mudra Pranayama is believed to enhance respiratory well-being by improving lung capacity.
+*   It is thought to boost concentration and mental focus, inducing a calming and relaxing effect through breath control and specific hand gestures.
+*   This pranayama is associated with balancing the flow of vital energy in the body, contributing to stress reduction and mental tranquility.
+*   Additionally, regular practice may foster an improved and conscious breathing pattern, promoting overall respiratory health and well-being.
+
+Cautions
+--------
+
+If you have hand, wrist, or finger injuries, modify hand position and individuals with respiratory conditions or hypertension should approach gently. Pregnant practitioners should modify and consult professionals.`
+  },
+  {
+    "title": "Sahita Kumbhaka",
+    "id": 15,
+    "data": `Sahita Kumbhaka: Retention with Inhalation
+==========================================
+
+Sahita Kumbhaka, or controlled breath retention, is a pranayama technique involving the intentional pause between inhalation and exhalation. Practitioners inhale deeply, hold the breath, and exhale consciously. This controlled breath retention enhances lung capacity, oxygenates the body, and promotes mental focus. Sahita Kumbhaka is integral to pranayama, fostering a harmonious connection between breath, body, and mind, contributing to overall well-being when practiced mindfully and progressively.
+
+Steps
+-----
+
+1.  **Comfortable Posture:** Sit in a comfortable and stable posture, ensuring an upright spine.
+2.  **Deep Inhalation:** Inhale deeply and fully through the nose, filling the lungs with air.
+3.  **Breath Retention:** Hold the breath inside the body for a comfortable duration.
+4.  **Conscious Exhalation:** Exhale slowly and consciously through the nose or mouth.
+5.  **Repeat the Cycle:** Repeat the cycle, gradually increasing the duration of breath retention.
+6.  **Mindful Awareness:** Practice with mindful awareness, focusing on the breath and the internal sensations.
+7.  **Regular Breathing:** Return to regular breathing after each cycle, maintaining a calm and centered state.
+8.  **Progress Gradually:** Progress gradually in duration and intensity, listening to your body's cues.
+9.  **Expert Guidance:** Seek guidance from an experienced yoga instructor for proper technique and progression, especially if you're new to breath retention practices.
+
+Benefits
+--------
+
+*   It enhances respiratory efficiency and lung capacity, promoting conscious respiratory control.
+*   The technique, involving breath retention, facilitates increased oxygen absorption, benefiting the body's overall oxygen supply.
+*   Sahita Kumbhaka induces a parasympathetic response, reducing stress.
+*   Its concentration requirements contribute to improved mental focus, and, in yogic tradition, breath retention is associated with spiritual development and heightened awareness.
+*   The practice is believed to balance and regulate the flow of vital energy in the body.
+
+Cautions
+--------
+
+Exercise caution with respiratory and cardiovascular issues, consulting healthcare professionals. Avoid overexertion, prioritize mental stability, and pregnant individuals should consult professionals due to potential effects on oxygen levels.`
+  },
+  {
+    "title": "Surabhi Pranayama",
+    "id": 16,
+    "data": `Surabhi Pranayama: Cow's Breath
+===============================
+
+Surabhi Pranayama, also known as Nadi Shodhana or Anulom Vilom, is a yogic breathing technique that involves alternate nostril breathing. Practitioners inhale through one nostril while blocking the other, alternating sides. This practice is believed to balance the flow of vital energy (prana), promote relaxation, and enhance mental clarity. It is often used to prepare the mind and body for meditation, fostering a sense of balance and harmony in the practitioner's overall well-being.
+
+Steps
+-----
+
+1.  **Comfortable Posture:** Sit comfortably in a stable and relaxed posture.
+2.  **Hand Placement:** Form Surabhi Mudra by folding the ring and little fingers into each palm, keeping the other fingers extended.
+3.  **Breath Awareness:** Begin with awareness of your natural breath.
+4.  **Inhalation:** Inhale deeply and slowly through the nose, filling the lungs.
+5.  **Breath Retention:** Hold the breath comfortably.
+6.  **Exhalation:** Exhale slowly and completely through the nose.
+7.  **Mudra Movement:** During the breath retention, move the folded fingers upward, creating a subtle lifting motion.
+8.  **Repeat:** Repeat the cycle gradually, coordinating the hand movement with the breath.
+9.  **Mindful Practice:** Practice with mindfulness, paying attention to the breath, hand movement, and the energy flow.
+10.  **Closure:** Conclude the practice with normal breathing, maintaining a calm and centered state.
+
+Benefits
+--------
+
+*   It is believed to balance vital energy flow, harmonizing subtle energy channels in the body.
+*   The practice induces relaxation, activating the parasympathetic nervous system and reducing stress.
+*   Alternating breath patterns enhance respiratory efficiency and lung capacity through controlled breathing, fostering inner calm and clarity.
+*   Regular practice contributes to heightened mental focus and emotional equilibrium.
+
+Cautions
+--------
+
+Exercise caution if you have hand or wrist issues during Surabhi Pranayama, modifying hand movements as needed. Those with respiratory conditions, like asthma, should approach the practice gradually to avoid overexertion.`
+  },
+  {
+    "title": "Udgeeth Pranayama",
+    "id": 17,
+    "data": `Udgeeth Pranayama: Chanting Breath
+==================================
+
+Udgeeth Pranayama involves chanting the sound "Om" with a prolonged and regulated breath. Sit comfortably, take a deep breath, and chant "Om" slowly, allowing the sound to resonate. Focus on the vibrations and maintain a calm, meditative state. This practice enhances concentration, induces relaxation, and connects the practitioner with inner peace. Udgeeth is often incorporated into meditation routines for its calming and centering effects.
+
+Steps
+-----
+
+1.  **Comfortable Posture:** Sit in a comfortable and stable meditation posture.
+2.  **Deep Inhalation:** Inhale deeply and slowly through the nose.
+3.  **Chanting "Om":** While exhaling, chant the sound "Om" in a prolonged and resonant manner.
+4.  **Focus on Vibration:** Concentrate on the vibrations and the sound of "Om" as you chant.
+5.  **Repeat:** Repeat the process with each breath, maintaining a steady and calming rhythm.
+6.  **Mindful Presence:** Practice with mindfulness, being fully present in the moment.
+7.  **Relaxed State:** Continue the practice, allowing it to induce a relaxed and meditative state.
+
+Benefits
+--------
+
+*   Udgeeth Pranayama, characterized by chanting 'Om' with controlled breath, induces calmness, stress reduction, and relaxation.
+*   The rhythmic chanting enhances concentration and fosters a spiritual connection, contributing to mindfulness.
+*   The controlled breath promotes respiratory health, and the practice is believed to balance vital energy in the body.
+*   Regular practice may result in an improved mood and emotional well-being, making Udgeeth Pranayama a holistic approach to mental and spiritual wellness.
+
+Cautions
+--------
+
+When practicing Udgeeth Pranayama, be cautious of potential voice strain, especially when chanting 'Om' loudly and avoid excessive chanting to prevent fatigue, and stay hydrated.`
+  },
+  {
+    "title": "Anuloma Kumbhaka",
+    "id": 18,
+    "data": `Anuloma Kumbhaka: Breath Retention with Alternating Nostrils
+============================================================
+
+Anuloma Kumbhaka is a breath retention technique where inhalation and exhalation occur in a regulated manner. Inhale slowly through one nostril, then exhale through the other nostril. This alternating nostril breathing promotes balance in the body's energy channels. Practiced in a seated posture, Anuloma Kumbhaka enhances respiratory control, mental focus, and is often integrated into pranayama routines for its calming effects on the nervous system.
+
+Steps
+-----
+
+1.  **Comfortable Seated Posture:** Sit comfortably in a stable and relaxed posture.
+2.  **Nadi Shodhana (Alternate Nostril Breathing):** Begin with Nadi Shodhana, alternating inhalation and exhalation between the nostrils.
+3.  **Regulated Breath:** Inhale slowly through one nostril, then exhale through the other, maintaining a regulated and controlled breath.
+4.  **Alternate Nostrils:** Continue the alternate nostril breathing, ensuring a smooth transition between inhalation and exhalation.
+5.  **Focus on Breath:** Concentrate on the breath and the flow of air through each nostril.
+6.  **Gradual Progress:** Practice gradually, increasing the duration of breath retention over time.
+7.  **Mindful Awareness:** Approach the practice with mindful awareness, staying present with each breath cycle.
+
+Benefits
+--------
+
+*   It enhances respiratory efficiency and lung capacity while promoting conscious breath control.
+*   The practice allows for increased oxygen absorption, benefiting overall oxygen supply.
+*   Controlled breath retention induces a relaxation response, reducing stress levels and fostering mental clarity through concentration.
+*   Anuloma Kumbhaka is believed to balance and regulate the flow of vital energy in the body, and, in yogic tradition, it is associated with spiritual development and heightened awareness.
+
+Cautions
+--------
+
+Practice Anuloma Kumbhaka with caution if you have respiratory conditions like asthma, and consult a healthcare professional. Individuals with hypertension should approach breath retention cautiously.`
+  },
+  {
+    "title": "Bhramari Kumbhaka",
+    "id": 19,
+    "data": `Bhramari Kumbhaka: Breath Retention with Bee Breath
+===================================================
+
+Bhramari Kumbhaka is a yogic breath retention practice associated with the Bhramari pranayama technique. It involves inhaling deeply, retaining the breath, and producing a humming sound during exhalation, resembling the gentle hum of a bee. This technique is believed to calm the mind, reduce stress, and promote mental clarity. Bhramari Kumbhaka is often practiced in conjunction with the Bhramari pranayama for a holistic approach to breathwork and relaxation.
+
+Steps
+-----
+
+1.  **Comfortable Seated Posture:** Sit comfortably in a stable and relaxed posture, ensuring a straight spine.
+2.  **Deep Inhalation:** Inhale deeply through the nostrils, filling the lungs with air.
+3.  **Gentle Exhalation with Humming:** Exhale slowly while producing a gentle humming sound, focusing on the vibration in the throat.
+4.  **Retain Breath (Kumbhaka):** After exhaling, retain the breath for a comfortable duration, maintaining a sense of calm.
+5.  **Release and Repeat:** Release the breath and repeat the process, inhaling deeply, humming during exhalation, and retaining the breath.
+6.  **Mindful Awareness:** Practice Bhramari Kumbhaka with mindful awareness, concentrating on the humming vibration and the sensations in the throat.
+7.  **Gradual Progress:** Begin with shorter durations and gradually extend the practice as comfort and familiarity increase.
+
+Benefits
+--------
+
+*   Bhramari Kumbhaka, a breath retention technique accompanied by humming, offers a multitude of benefits.
+*   It reduces stress and anxiety, induces mindful relaxation, and enhances concentration.
+*   The gentle vibration in the throat contributes to throat health, and the practice aids in emotional balance and tension release in the face and neck.
+*   Improved respiratory function, holistic well-being through breath control and mindfulness, and a potential spiritual connection are additional advantages attributed to Bhramari Kumbhaka.
+
+Cautions
+--------
+
+Caution is advised for individuals with respiratory conditions like asthma or COPD when practicing Bhramari Kumbhaka, and those with ear problems should practice gently. Individuals with specific mental health conditions or during pregnancy should seek guidance.`
+  },
+  {
+    "title": "Bhramari Anuloma Vilom",
+    "id": 20,
+    "data": `Bhramari Anuloma Vilom: Combined Bee Breath and Alternate Nostril Breathing
+===========================================================================
+
+Bhramari Anuloma Vilom is a combined pranayama practice that integrates Bhramari, known for its soothing hum, with Anuloma Vilom, an alternate nostril breathing technique. Practitioners inhale through one nostril, retain the breath, produce the Bhramari humming sound during exhalation, and then switch nostrils. This harmonious blend aims to balance energy, calm the mind, and enhance respiratory function, providing a comprehensive approach to breathwork and relaxation.
+
+Steps
+-----
+
+1.  **Comfortable Seated Posture:** Sit in a comfortable and stable seated posture, keeping your spine straight.
+2.  **Nadi Shodhana (Alternate Nostril Breathing):** Begin with a few rounds of Nadi Shodhana. Close one nostril while inhaling through the other, then switch, and exhale through the open nostril. Repeat this process, focusing on the breath.
+3.  **Bhramari (Humming Bee Breath):** After completing several rounds of Nadi Shodhana, transition into Bhramari. Inhale deeply through both nostrils.
+4.  **Humming Exhalation:** As you exhale, produce a humming sound by closing your eyes, closing your ears with your thumbs, and gently pressing the tragus of your ears to cover them partially.
+5.  **Mindful Humming:** Focus on the vibration and sound created during the humming, allowing it to resonate in your head.
+6.  **Combine Practices:** Integrate the humming exhalation of Bhramari with the alternate nostril breathing of Anuloma Vilom. Inhale through one nostril, switch, and exhale with the humming sound through the other nostril.
+7.  **Repeat:** Continue this combination for several rounds, maintaining a calm and focused state of mind.
+
+Benefits
+--------
+
+*   The practices jointly alleviate stress through controlled breathing and humming sounds, enhance respiratory function, and foster mental clarity and emotional equilibrium.
+*   By balancing brain hemispheres, improving concentration, and harmonizing prana flow, this combination aids in reducing anxiety and tension, creating an overall sense of calmness and ease.
+*   Consistent and mindful practice is essential for optimal benefits.
+
+Cautions
+--------
+
+For Bhramari Anuloma Vilom, individuals with respiratory conditions like asthma should seek healthcare advice and Gentle practice is advised for those with ear issues, and individuals with specific mental health concerns or during pregnancy should consult professionals before engaging in the practice.`
+  },
+  {
+    "title": "Chandranadi Pranayama",
+    "id": 21,
+    "data": `Chandranadi Pranayama: Moon Energy Breath
+=========================================
+
+Chandranadi Pranayama is a yogic breath control technique focusing on the left nostril, associated with the lunar or cooling energy (Chandra). Practitioners inhale and exhale exclusively through the left nostril. This practice is believed to have a calming effect on the nervous system, reduce heat in the body, and balance the dual energies within. Chandranadi Pranayama is often performed as part of a broader pranayama regimen, promoting overall well-being and balance.
+
+How to Practice Chandranadi Pranayama
+-------------------------------------
+
+1.  **Sit Comfortably:** Find a comfortable seated position, either on the floor with crossed legs or on a chair with your feet flat on the ground.
+2.  **Relaxation:** Begin with a few moments of relaxation, focusing on your breath and calming the mind.
+3.  **Left Nostril Breathing:** Close your right nostril with your right thumb and inhale slowly and deeply through your left nostril.
+4.  **Breath Retention:** Close both nostrils and hold your breath for a comfortable duration.
+5.  **Right Nostril Exhalation:** Release your right nostril and exhale slowly and completely through the right nostril.
+6.  **Reverse the Process:** Inhale through the right nostril, close both nostrils, and exhale through the left nostril.
+7.  **Repeat:** Continue this alternate nostril breathing, focusing on the flow of breath and maintaining a relaxed state.
+8.  **Gradual Increase:** With practice, gradually increase the duration of breath retention and aim for a smooth, controlled rhythm.
+9.  **Conclusion:** Conclude the practice by taking a few normal breaths and allowing the breath to return to its natural state.
+
+Benefits
+--------
+
+*   The cooling effect of Chandranadi Pranayama promotes calmness and relaxation, reducing stress and anxiety.
+*   Believed to balance lunar energy (ida nadi), it fosters harmony in body and mind, offering a cooling effect through left nostril breathing.
+*   Regular practice may improve sleep quality, emotional balance, and mental clarity while encouraging conscious breath control for enhanced respiratory function.
+*   The practice effectively reduces stress and tension through mindful breathing and energy balance.
+
+Cautions
+--------
+
+Dizziness should prompt a return to normal breathing, and prolonged practice in cold environments may increase hypothermia risk. Pregnant individuals should approach the practice cautiously, seeking guidance from healthcare professionals.`
+  },
+  {
+    "title": "Suryanadi Pranayama",
+    "id": 22,
+    "data": `Suryanadi Pranayama: Sun Energy Breath
+======================================
+
+Suryanadi Pranayama is a yogic breath control technique emphasizing the right nostril, linked with solar or energizing energy (Surya). Practitioners exclusively inhale and exhale through the right nostril, aiming to activate the sympathetic nervous system. This practice is believed to enhance vitality, increase alertness, and bring balance to the dual energies within. Suryanadi Pranayama is often integrated into broader pranayama practices, contributing to overall well-being and energy regulation.
+
+Steps
+-----
+
+1.  **Preparation:** Begin in a comfortable seated position with an erect spine.
+2.  **Hand Position:** Use the right thumb to close the right nostril and the remaining fingers to keep the left nostril closed or partially closed.
+3.  **Breathing Technique:** Inhale and exhale exclusively through the right nostril, using slow and controlled breaths.
+4.  **Focus:** Concentrate on the breath and the flow of air through the right nostril.
+5.  **Duration:** Practice for a predetermined duration, gradually increasing the time as per your comfort.
+6.  **Transition:** After completing the practice, release the right nostril and resume normal breathing.
+7.  **Mindfulness:** Maintain mindfulness throughout the practice, staying present with each breath.
+
+Benefits
+--------
+
+*   The Suryanadi Pranayama is believed to boost vitality and energy levels.
+*   It increases alertness by activating the sympathetic nervous system.
+*   Harmonizes the dual energies within the body.
+*   Enhances respiratory efficiency through right nostril emphasis.
+*   Promotes mental clarity and concentration.
+*   Reduces stress levels by sympathetic nervous system activation.
+*   Contributes to overall well-being by aiding in body temperature regulation.
+
+Cautions
+--------
+
+Individuals with hypertension and respiratory problems should practice with moderation, avoiding forceful breaths.`
+  },
+  {
+    "title": "Surya Trataka",
+    "id": 23,
+    "data": `Surya Trataka: Sun Gazing
+=========================
+
+Surya Trataka is a yogic practice involving concentrated gazing at the sun. This technique encourages focusing the eyes on the sun during specific times, such as sunrise or sunset, while maintaining a steady posture. Practitioners believe Surya Trataka enhances mental clarity, concentration, and stimulates the pineal gland. Caution is advised, and it's essential to follow safety guidelines, ensuring minimal risk to the eyes and overall well-being during this practice.
+
+Steps
+-----
+
+1.  **Choose the Right Time:** Practice during the early morning or late evening when the sun is not too harsh.
+2.  **Find a Comfortable Posture:** Sit in a comfortable and steady posture.
+3.  **Gaze at the Sun:** Focus your gaze on the rising or setting sun without blinking.
+4.  **Maintain a Soft Focus:** Keep a soft gaze without straining the eyes.
+5.  **Blink as Needed:** Blink your eyes when necessary, but try to maintain a continuous and steady gaze.
+6.  **Close Your Eyes:** After a few minutes, close your eyes and visualize the sun between your eyebrows.
+7.  **Internalize the Image:** Internalize the image of the sun, feeling its warmth and brightness within.
+8.  **Duration:** Start with a few minutes and gradually increase the duration as you become more comfortable.
+9.  **Conclude Mindfully:** Slowly open your eyes, bringing your awareness back to the surroundings.
+10.  **Rest Your Eyes:** Close your eyes for a moment, allowing them to rest.
+
+Benefits
+--------
+
+*   The cooling effect of Sheetali is said to be beneficial for reducing stress, anxiety, and anger.
+*   It is also believed to help regulate body temperature, blood pressure, improve digestion, and enhance overall respiratory health.
+*   Additionally, Sheetali pranayama is often recommended during hot weather to cool down the body.
+*   Can be beneficial for those with insomnia, promoting better sleep.
+
+Cautions
+--------
+
+If you have any respiratory or medical conditions, or if you're pregnant, it's advisable to consult with a healthcare professional or a qualified yoga instructor before attempting pranayama techniques.`
+  },
+  {
+    "title": "Chandra Trataka",
+    "id": 24,
+    "data": `Chandra Trataka: Moon Gazing
+============================
+
+Chandra Trataka is a yogic practice involving focused gazing at the moon. This technique requires practitioners to concentrate on the moon's image during specific times, fostering a sense of tranquility and mental stillness. Chandra Trataka is believed to promote relaxation, improve concentration, and align with the lunar energy. As with any gazing practice, it's essential to approach Chandra Trataka with mindfulness, ensuring a comfortable and safe environment for optimal well-being.
+
+Steps
+-----
+
+1.  **Choose a Comfortable Posture:** Sit in a comfortable and stable meditation posture. You can use a cushion or blanket to support your hips.
+2.  **Select a Quiet Place:** Practice Chandra Trataka in a quiet and serene environment where you won't be disturbed.
+3.  **Time the Practice:** Ideally, practice Chandra Trataka during the night when the moon is visible. If that's not possible, find a suitable time during the evening.
+4.  **Gaze at the Moon:** Look at the moon without straining your eyes. Keep your gaze soft and relaxed. If the moon is too bright, you can soften your gaze by looking at the moon through a thin veil or curtain.
+5.  **Focus on a Specific Point:** Choose a specific point or feature on the moon, such as a crater or a distinct shape. Direct your gaze to that point.
+6.  **Avoid Blinking:** Try to minimize blinking during the practice. However, do not force yourself to keep your eyes open; let it be a gentle and relaxed gaze.
+7.  **Maintain Stillness:** Keep your body still and avoid unnecessary movements. The focus is on developing concentration and stillness of the mind.
+8.  **Hold the Gaze:** Hold your gaze on the moon for as long as it feels comfortable. Initially, you might start with a few minutes and gradually extend the duration over time.
+9.  **Close Your Eyes:** When you feel the need to close your eyes, do so gently. Take a few moments to visualize the image of the moon in your mind's eye.
+10.  **Reflect on Sensations:** After completing the practice, reflect on any sensations, feelings, or experiences that arose during the practice.
+11.  **Conclude Mindfully:** Conclude the practice mindfully, expressing gratitude for the moon's energy and the experience.
+
+Benefits
+--------
+
+*   It is believed to induce a calming and relaxing effect, enhance concentration and mental focus through focused moon gazing.
+*   Contribute to stress reduction and foster a tranquil state of mind.
+*   Promote emotional equilibrium and stability, potentially supporting better sleep when practiced before bedtime.
+*   Additionally, Chandra Trataka is associated with harmonizing the mind and body with lunar energy, bringing balance to the practitioner's overall well-being.
+
+Cautions
+--------
+
+To ensure a safe Chandra Trataka practice, avoid eye strain, especially if discomfort arises; consult Adjust for bright moonlight, start with shorter durations, choose serene environments, and prioritize safety outdoors.`
+  },
+  {
+    "title": "Savita Pranayama",
+    "id": 25,
+    "data": `Savita Pranayama: Solar Breath
+==============================
+
+Savita Pranayama is a yogic breathing technique centered around the solar energy, often associated with the sun (Savita). This practice involves regulated inhalation and exhalation, emphasizing breath control and mindfulness. By harnessing the vital life force within the breath, Savita Pranayama aims to invigorate the body and mind. Practitioners believe it enhances energy levels, mental clarity, and overall well-being. As with any pranayama practice, learning Savita Pranayama under the guidance of an experienced instructor is recommended for optimal benefits and safety.`
+  },
+  {
+    "title": "Chandra Bhavana",
+    "id": 26,
+    "data": `Chandra Bhavana: Moon Visualization
+===================================
+
+"Chandra Bhavana" typically refers to the practice of "Moon Meditation" or cultivating a connection with the energy of the moon. This meditation is rooted in yogic and spiritual traditions, and its objective is to attune oneself with the calming and nurturing qualities associated with the moon.
+
+Steps for Chandra Bhavana (Moon Meditation):
+--------------------------------------------
+
+1.  **Choose a Comfortable Posture:** Sit in a comfortable and stable meditation posture. You can sit cross-legged on the floor or on a chair with your spine straight.
+2.  **Relaxation:** Close your eyes and take a few moments to relax your body and mind. Focus on releasing tension from your muscles.
+3.  **Deep Breathing:** Begin with a few rounds of deep and conscious breathing. Inhale slowly and deeply through your nose, and exhale completely.
+4.  **Visualize the Moon:** In your mind's eye, visualize the moon. Picture its soft and radiant light. Imagine the moon's serene presence in the night sky.
+5.  **Connect with Moon Energy:** As you continue to visualize the moon, focus on absorbing its soothing energy. Feel the gentle, cooling light of the moon enveloping you.
+6.  **Cultivate Calmness:** Allow the moon's energy to bring a sense of calmness and tranquility to your entire being. Feel the peaceful and nurturing qualities associated with the moon.
+7.  **Intentions or Affirmations:** If you wish, set positive intentions or affirmations during this practice. Align your thoughts with qualities you associate with the moon, such as serenity, reflection, or emotional balance.
+8.  **Silent Contemplation:** Spend some time in silent contemplation, absorbing the energy of the moon and reflecting on its influence on your inner state.
+9.  **Gratitude:** Express gratitude for the moon's energy and the sense of peace it brings. Acknowledge the interconnectedness of the lunar energy with your own.
+10.  **Conclusion:** When you are ready, gently open your eyes and transition back to your surroundings. Carry the sense of calmness with you into your daily life.
+
+Benefits of Chandra Bhavana:
+----------------------------
+
+*   Stress reduction and emotional balance.
+*   Improved mental clarity and focus.
+*   Enhanced connection with nature and the cycles of the moon.
+*   Deepened meditation practice.
+
+Tips for a Fruitful Practice:
+-----------------------------
+
+*   Practice Chandra Bhavana in a quiet and comfortable space.
+*   Customize the practice based on your personal beliefs and intentions.
+*   It's advisable to learn meditation practices from experienced instructors or spiritual guides.`
+  },
+  {
+    "title": "Shankh Prakshalana",
+    "id": 27,
+    "data": `Shankh Prakshalana: Conch Cleansing Breath
+==========================================
+
+Shankh Prakshalana, a yogic practice known as a purification technique. It involves a series of specific movements and the consumption of a large quantity of saline water to cleanse the entire digestive tract.
+
+Practice Details:
+-----------------
+
+1.  **Morning Practice:** It is typically performed early in the morning on an empty stomach.
+2.  **Drink Saline Water:**
+    *   Start by drinking a specific quantity of saline water (water with added salt), which acts as a natural saline laxative.
+    *   The water is consumed in a specific manner, emphasizing the intake of each sip with certain breath control.
+3.  **Perform Specific Asanas:**
+    *   After drinking the water, a series of yoga postures, including forward bends, backward bends, and twists, are performed.
+    *   These asanas help in the natural peristaltic movement of the digestive system, aiding in the expulsion of water and toxins.
+4.  **Repetitions:** The practitioner repeats the cycle of drinking saline water and performing the asanas. This cycle is repeated until the water that is eliminated is clear, indicating the completion of the purification process.
+
+Benefits:
+---------
+
+*   It is thought to deeply detoxify the digestive tract, stimulate and tone the digestive system for better efficiency and regular bowel movements.
+*   Providing relief from constipation, it is associated with balancing doshas in Ayurveda, increasing energy levels, enhancing mental clarity, aiding weight management, reducing stress, and promoting holistic well-being by harmonizing physical, mental, and spiritual aspects.
+*   Individual experiences may vary, and guidance from a qualified instructor is recommended.
+
+Caution:
+--------
+
+Shankh Prakshalana should be learned under the guidance of a qualified yoga instructor. It may not be suitable for everyone, and individuals with specific health conditions or concerns should consult a healthcare professional before attempting this practice.`
+  },
+  {
+    "title": "Jalandhara Bandha",
+    "id": 28,
+    "data": `Jalandhara Bandha: Throat Lock
+==============================
+
+Jalandhara Bandha is a yoga throat lock that involves lowering the chin to the chest and locking it against the collarbone notch. Part of the yogic bandha system, this practice regulates energy flow. Sit with an erect spine, inhale deeply, and hold the breath while engaging the throat lock. Jalandhara Bandha stimulates the thyroid gland, balances throat energy, and fosters inner calmness. Caution and guidance from an instructor are advised, especially for those with neck concerns.
+
+Steps
+-----
+
+1.  **Sit in a Comfortable Meditation Posture:** Choose a posture like Padmasana or Sukhasana.
+2.  **Engage in Controlled Breathing:** Begin with a pranayama practice such as Ujjayi.
+3.  **Inhale Deeply:** Fill your lungs through the nose.
+4.  **Lower Chin to Chest:** While exhaling, gently press the chin down.
+5.  **Lift Sternum and Lower Shoulders:** Create a gentle lock by lifting the chest upward and bringing the shoulders down.
+6.  **Hold Position:** Maintain this lock for the duration of your comfortable breath retention.
+7.  **Release and Inhale:** Unlock and inhale, preparing for the next cycle.
+
+Benefits
+--------
+
+*   Stimulates the thyroid gland, promoting hormonal balance.
+*   Enhances energy balance in the throat region.
+*   Induces a sense of inner calm and tranquility.
+*   Activates the Vishuddhi (Throat) Chakra, influencing communication and expression.
+
+Cautions
+--------
+
+Exercise caution if you have neck issues, injuries, or high blood pressure. Avoid this practice if it causes breathing difficulties, especially for individuals with respiratory conditions.`
+  },
+  {
+    "title": "Moola Bandha",
+    "id": 29,
+    "data": `Moola Bandha: Root Lock
+=======================
+
+Moola Bandha, often called the root lock, is a yogic practice involving the contraction of the perineum. This engagement of the pelvic floor muscles is believed to awaken and channel the dormant energy at the base of the spine. Moola Bandha is an integral component of pranayama and meditation practices, contributing to physical and energetic alignment. It is considered a key element in the yogic journey toward spiritual awakening and self-realization.
+
+How to Practice Moola Bandha
+----------------------------
+
+1.  **Begin in a Comfortable Position:** Start in a comfortable seated position, such as Sukhasana (Easy Pose) or Padmasana (Lotus Pose).
+2.  **Lengthen the Spine:** Sit with a straight spine, allowing energy to flow freely through your body.
+3.  **Focus on Your Breath:** Bring your awareness to your breath, taking slow and deep inhalations and exhalations through your nose.
+4.  **Engage the Pelvic Floor:** Contract the muscles of the pelvic floor, lifting and drawing them upward.
+5.  **Maintain the Contraction:** Keep the contraction for as long as comfortable, ensuring you can still breathe naturally.
+6.  **Release:** Relax the pelvic floor muscles, allowing them to return to their natural state.
+7.  **Practice Regularly:** Gradually increase the duration and repetitions as your practice progresses.
+
+Benefits
+--------
+
+*   Strengthens the pelvic floor, promoting stability and a grounded sensation.
+*   Enhances meditation and concentration, facilitating smoother energy flow.
+*   Supports balanced energy circulation, improves digestion, and increases awareness of the pelvic region.
+*   Crucial for spiritual growth, aiding in self-realization, emotional stability, and reinforcing the mind-body connection.
+
+Cautions
+--------
+
+Those who are pregnant should consult with healthcare professionals before engaging in Moola Bandha. It's also advisable for individuals with menstrual concerns or pelvic issues to seek professional advice prior to practice.`
+  },
+  {
+    "title": "Uddiyana Bandha",
+    "id": 30,
+    "data": `Uddiyana Bandha: Abdominal Lock
+===============================
+
+Uddiyana Bandha is a yogic practice involving the intentional contraction of the abdominal muscles and diaphragm. In this technique, the practitioner exhales fully, pulls the abdomen upward and inward, creating a vacuum-like effect. Uddiyana Bandha is believed to enhance digestion, stimulate internal organs, and promote energy flow through the body. It is often incorporated into pranayama and meditation practices for its potential physical and energetic benefits.
+
+Steps:
+------
+
+1.  **Begin in a Comfortable Position:** Find a comfortable seated position. This can be on the floor with crossed legs (sukhasana) or in a chair with your feet flat on the ground.
+2.  **Straighten the Spine:** Sit with a straight spine, allowing the energy to flow freely through your body.
+3.  **Relax the Shoulders:** Release any tension in your shoulders and place your hands on your knees in a comfortable position.
+4.  **Mouth Positioning:** Roll your tongue into a tube-like shape. If you can't roll your tongue, you can simply part your lips, keeping the teeth slightly apart.
+5.  **Inhale:** Inhale slowly and deeply through the rolled tongue or parted lips. Feel the coolness of the breath as it enters your body.
+6.  **Pause:** Once you've inhaled fully, close your mouth and hold your breath for a moment.
+7.  **Exhale:** Exhale slowly and completely through your nose.
+8.  **Repeat:** Continue this process for several rounds, gradually increasing the duration of the practice as you become more comfortable.
+
+Benefits
+--------
+
+*   Uddiyana Bandha offers a range of benefits, including strengthening the abdominal muscles for core stability and promoting digestive health by stimulating abdominal organs.
+*   It directs vital energy flow, fostering a sense of vitality, and activates the Manipura Chakra, associated with personal power.
+*   The practice enhances respiratory capacity, potentially alleviating anxiety.
+*   Considered a purification technique, it removes toxins and contributes to improved breath control, balancing the nervous system for overall well-being.
+
+Cautions:
+---------
+
+*   Approach Uddiyana Bandha with caution if you have heart conditions, as it may briefly raise blood pressure.
+*   Modify or avoid it with severe digestive issues or recent abdominal surgeries, consulting professionals.
+*   Pregnant individuals, particularly in later stages, and those with hypertension should be cautious.`
+  },
+  {
+    "title": "Shanmukhi Mudra Pranayama",
+    "id": 31,
+    "data": `Shanmukhi Mudra Pranayama: Six-Gate Breath
+==========================================
+
+Shanmukhi Mudra is a yogic breath control technique that involves closing six gates or openings of the face using specific hand positions. The Sanskrit term "Shanmukhi" translates to "six-faced," symbolizing the practice's impact on the sensory organs.
+
+How to Practice Shanmukhi Mudra
+-------------------------------
+
+1.  Sit comfortably in a meditative pose with a straight spine.
+2.  Use the fingers to gently close the ears (with thumbs), eyes (with index fingers), nostrils (with middle fingers), and the mouth (with ring fingers) while the pinky fingers lightly touch each other behind the head.
+3.  Inhale deeply through both nostrils.
+4.  Close the nostrils and mouth, holding the breath inside.
+5.  Open one gate, either the mouth or one nostril, and exhale.
+6.  Inhale again, close all gates, retain breath, and release through a different gate.
+7.  Cycle through all six gates with each breath cycle.
+
+Benefits
+--------
+
+*   Enhances concentration and mental focus.
+*   Calms the mind and reduces stress.
+*   Balances energy flow in the body.
+*   Promotes mindfulness and self-awareness.
+*   Activates and harmonizes the sensory organs.
+
+Cautions
+--------
+
+Individuals with ear, nose, or eye conditions should be cautious and may need to modify the practice. Avoid forceful or uncomfortable movements while closing the gates. Pregnant individuals or those with specific health concerns should consult healthcare professionals.`
+  },
+  {
+    "title": "Bhoochari Mudra",
+    "id": 32,
+    "data": `Bhoochari Mudra: Gazing at Earth
+================================
+
+Bhoochari Mudra is a yogic hand gesture that connects the practitioner to the earth's energy. Also known as "Earth Witness" or "Globe-trotter Mudra," it involves touching the ground with the ring finger while the other fingers point upward. This mudra helps ground and stabilize energy, fostering a sense of balance and connection to the Earth during meditation and yoga practice.
+
+Steps:
+------
+
+1.  Sit comfortably in a meditative position, such as Sukhasana or Padmasana.
+2.  Place your hands on your knees with palms facing down.
+3.  Touch the ground with the tip of your ring finger.
+4.  Keep the other fingers pointing upward, extending naturally.
+5.  Apply a gentle pressure with the ring finger on the ground.
+6.  Close your eyes and focus on your breath or a point of meditation.
+7.  Relax your shoulders and facial muscles.
+8.  Inhale and exhale deeply and steadily.
+9.  Hold the Bhoochari Mudra for several minutes, allowing a sense of grounding to develop.
+10.  To release, lift the ring finger from the ground and bring your hands back to your knees.
+11.  Be mindful of the connection between your finger and the earth, fostering a sense of stability and rootedness.
+12.  Incorporate Bhoochari Mudra into your meditation or yoga practice for enhanced grounding and centeredness.
+
+Benefits:
+---------
+
+*   Enhances mental focus during meditation, promoting concentration.
+*   Harmonizes the body's elements, contributing to overall well-being and reducing anxiety and restlessness.
+*   Deepens spiritual connection, facilitating a profound link to the inner self and spiritual energies.
+*   Enriches meditation by anchoring attention and promoting good posture.
+*   Supports the smooth flow of vital life force for mind-body harmony.
+
+Cautions:
+---------
+
+*   Exercise caution with Bhoochari Mudra if you have joint issues, avoiding strain and consulting a healthcare professional for pre-existing conditions or during pregnancy.
+*   Elderly practitioners should practice with care.`
+  },
+  {
+    "title": "Nabho Mudra Pranayama",
+    "id": 33,
+    "data": `Nabho Mudra Pranayama: Sky Gazing
+=================================
+
+Nabho Mudra Pranayama is a yogic breathing technique involving a specific hand gesture. With palms facing upward, join the tips of the index and middle fingers while keeping the other fingers extended. Inhale deeply through the mouth, focusing on the sound of breath. Close the mouth, exhaling gently through the nose. This practice is believed to enhance concentration, calm the mind, and promote overall well-being.
+
+Steps:
+------
+
+1.  Sit comfortably in a meditative pose, like Sukhasana or Padmasana.
+2.  Bring your hands to your knees with palms facing upward.
+3.  Join the tips of your index and middle fingers, keeping the other fingers extended.
+4.  Inhale deeply through your mouth, allowing the breath to be audible.
+5.  Close your mouth and exhale gently through the nose.
+6.  Concentrate on the sound and sensation of your breath.
+7.  Repeat this process for several breath cycles, gradually increasing duration.
+8.  Stay present and mindful throughout the practice, focusing on breath and inner sensations.
+
+Benefits:
+---------
+
+*   Enriches mental faculties, refining focus by centering on breath sounds.
+*   Induces a serene mental state, alleviating stress through mindful breathing.
+*   Fosters a strengthened mind-body bond through conscious breath control.
+*   Cultivates an overall sense of well-being, elevating breath awareness for heightened mindfulness.
+
+Cautions:
+---------
+
+*   Exercise caution if you have respiratory conditions or discomfort in fingers.
+*   Discontinue if you experience dizziness.
+*   Pregnant individuals should consult healthcare providers.
+*   Practitioners should be mindful of surroundings and individual responses.`
+  },
+  {
+    "title": "Agni Prasana Pranayama",
+    "id": 34,
+    "data": `Agni Prasana Pranayama: Fire Breath
+===================================
+
+Agni Prasana Pranayama is a yogic breathing exercise that involves focused abdominal breathing. Sit comfortably with hands on the abdomen. Inhale deeply, expanding the abdomen, and exhale completely, contracting the abdominal muscles. This technique enhances digestion, stimulates the abdominal organs, and activates the Manipura Chakra, associated with personal power.
+
+Steps:
+------
+
+1.  Sit comfortably in a cross-legged or any meditative posture.
+2.  Place your hands on your abdomen, with the fingertips touching and forming a triangle, palms facing upward.
+3.  Inhale deeply through your nose, expanding your abdomen. Feel your diaphragm move downward.
+4.  Exhale completely through your nose, contracting your abdominal muscles. Feel your diaphragm move upward.
+5.  Focus your attention on the rise and fall of your abdomen with each breath.
+6.  Ensure that your breath is smooth, controlled, and synchronized with your abdominal movements.
+7.  Continue the rhythmic inhalation and exhalation for several breath cycles.
+8.  Maintain mindfulness, staying present with the sensations of breath and abdominal movement.
+9.  If comfortable, gradually increase the duration of your practice over time.
+10.  Conclude the practice with a few normal breaths and sit quietly for a moment.
+
+Benefits:
+---------
+
+*   Enhanced digestion by stimulating abdominal organs.
+*   Strengthening of abdominal muscles through controlled breathing.
+*   Reduction of stress and induction of calmness of mind.
+*   Activation of the Manipura Chakra, associated with personal power.
+*   Promotion of energy balancing, improved breath control, and enhanced focus.
+
+Cautions:
+---------
+
+*   Exercise caution after recent abdominal surgery, for those with respiratory conditions, and during pregnancy.
+*   Modify practices as needed, and discontinue if experiencing discomfort, dizziness, or pain.
+*   Adjust according to comfort.`
+  },
+  {
+    "title": "Vayu Prasana Pranayama",
+    "id": 35,
+    "data": `Vayu Prasana Pranayama: Wind Breath
+===================================
+
+Vayu Prasana Pranayama is a yogic breathing exercise focusing on controlled exhalation. In a seated position, inhale deeply through the nose, then exhale slowly and completely through pursed lips. This practice engages the abdominal muscles and promotes a sense of calm. It is believed to balance the Vata dosha, enhance lung capacity, and alleviate anxiety. Regular practice contributes to overall respiratory well-being and mental harmony.
+
+Steps:
+------
+
+1.  Sit comfortably in a meditative pose, such as Sukhasana or Padmasana.
+2.  Place your hands on your knees with palms facing upward.
+3.  Inhale deeply through your nose, expanding your lungs fully.
+4.  Exhale slowly and completely through pursed lips, engaging the abdominal muscles.
+5.  Focus on making the exhalation controlled and gradual, allowing the breath to release steadily.
+6.  Engage your abdominal muscles during the entire exhalation process.
+7.  Be mindful of the breath, emphasizing the smooth and controlled exhalation.
+8.  Repeat this process for several breath cycles, gradually increasing the duration over time.
+9.  Maintain awareness of the breath and its effects on your body and mind.
+10.  Conclude the practice with a few normal breaths and sit quietly for a moment.
+
+Benefits:
+---------
+
+*   Enhances respiratory health by strengthening lungs and muscles.
+*   Alleviates anxiety and engages abdominal muscles.
+*   Balances the Vata dosha for overall doshic harmony.
+*   Cultivates mindfulness and a calming effect.
+*   Improves concentration, reduces stress, and promotes mental well-being.
+*   Facilitates a smooth flow of prana, contributing to overall physical and mental health.
+
+Cautions:
+---------
+
+Exercise caution with Vayu Prasana Pranayama if you have respiratory conditions, recent abdominal surgery, or are pregnant. Discontinue if you feel dizzy or experience discomfort, adjusting the practice to personal comfort levels. Be mindful of surroundings to prevent accidents.`
+  },
+  {
+    "title": "Apa Prasana Pranayama",
+    "id": 36,
+    "data": `Apa Prasana Pranayama: Water Breath
+===================================
+
+Apa Prasana Pranayama is a yogic breathing exercise focusing on inhalation. Sit comfortably, inhale deeply through the nose, and expand the chest. Exhale slowly and completely through the mouth, releasing tension. This practice promotes lung capacity, oxygenates the body, and enhances respiratory health. Apa Prasana is believed to balance the Prana Vayu, fostering a sense of calmness, and promoting mental clarity and well-being.
+
+Steps:
+------
+
+1.  Sit comfortably in a meditative pose like Sukhasana or Padmasana.
+2.  Place your hands on your knees with palms facing upward.
+3.  Inhale deeply and slowly through your nose, expanding your chest.
+4.  Exhale slowly and completely through your mouth, releasing tension.
+5.  Ensure that both the inhalation and exhalation are controlled and deliberate.
+6.  Maintain mindful focus on the breath and the sensations of inhalation and exhalation.
+7.  Repeat this process for several breath cycles, gradually extending the duration.
+8.  Allow the breath to bring a sense of relaxation to both the body and mind.
+9.  Stay aware of the calming effects on the Prana Vayu (life force energy).
+10.  Conclude the practice with a few normal breaths, and sit quietly for a moment.
+
+Benefits:
+---------
+
+*   Increased respiratory efficiency and lung capacity through deep inhalation.
+*   Enhanced oxygen intake for overall body oxygenation, releasing tension and stress during mouth exhalation.
+*   Cultivates mental clarity and focus, contributes to stress reduction, and supports improved respiratory control.
+*   Fosters a balanced Prana Vayu, promoting overall well-being, harmonious energy flow, and a serene state of mind.
+
+Cautions:
+---------
+
+*   Exercise caution with Apa Prasana Pranayama if you have respiratory conditions, dizziness, recent abdominal surgery, or are pregnant.
+*   Adjust the intensity according to personal comfort, be mindful of surroundings, and discontinue in case of discomfort or pain.`
+  },
+  {
+    "title": "Prithvi Prasana Pranayama",
+    "id": 37,
+    "data": `Prithvi Prasana Pranayama: Earth Breath
+=======================================
+
+Prithvi Prasana Pranayama is a yogic breathing exercise focusing on earth element connection. Sit comfortably, grounding the body. Inhale deeply through the nose, emphasizing the earth's stability. Exhale slowly, releasing breath with awareness. This practice is believed to enhance grounding, balance the Muladhara Chakra, and promote a sense of stability and security. Regular practice contributes to overall well-being by fostering a harmonious connection with the earth element.
+
+Steps
+-----
+
+1.  Sit comfortably in a meditative pose like Sukhasana or Padmasana.
+2.  Place your hands on your knees with palms facing downward.
+3.  Embrace a grounding gesture by pressing the fingertips into the floor.
+4.  Inhale deeply through your nose, focusing on the stability and grounding energy of the earth.
+5.  Exhale slowly and completely through your nose, maintaining awareness of the earth's stability.
+6.  Be mindful of the breath, emphasizing the connection to the earth element.
+7.  Repeat this process for several breath cycles, gradually extending the duration.
+8.  Stay aware of the grounding sensation and stability throughout the practice.
+9.  Conclude the practice with a few normal breaths and sit quietly for a moment.
+
+Benefits
+--------
+
+*   Fosters grounding and stability through connection with the earth element.
+*   Balances the Muladhara Chakra, fostering energetic equilibrium, and induces a serene state, reducing stress and promoting security.
+*   Cultivates harmonious mind-body balance, enhances concentration with earth element awareness, and strengthens the connection with the earth's energy.
+
+Cautions
+--------
+
+*   Exercise caution with Prithvi Prasana Pranayama if you have joint issues, back or hip pain, recent injuries, or are pregnant.
+*   Modify hand placement or discontinue if discomfort arises, staying mindful and aware of surroundings.`
+  },
+  {
+    "title": "Akasha Prasana Pranayama",
+    "id": 38,
+    "data": `Akasha Prasana Pranayama: Space Breath
+======================================
+
+Akasha Prasana Pranayama is a yogic breathing practice focusing on the space or ether element. Seated comfortably, practitioners inhale deeply through the nose, visualizing the vastness of space. Exhalation is slow and deliberate, emphasizing a sense of spaciousness. This practice is believed to enhance a connection with the subtle energy of space, fostering mental clarity, expansiveness, and a deeper understanding of consciousness.
+
+Steps:
+------
+
+1.  Sit comfortably in a meditative pose like Sukhasana or Padmasana.
+2.  Place your hands on your knees with palms facing upward.
+3.  Inhale deeply through your nose, focusing on the idea of drawing in the expansive energy of space.
+4.  Exhale slowly and completely through your nose, visualizing a release of any limiting or constricting energy.
+5.  Be mindful of the breath, emphasizing the connection with the space element.
+6.  Visualize the vastness of space during both inhalation and exhalation.
+7.  Repeat this process for several breath cycles, gradually extending the duration.
+8.  Stay aware of the sense of spaciousness and expansiveness throughout the practice.
+9.  Conclude the practice with a few normal breaths and sit quietly for a moment.
+
+Benefits:
+---------
+
+*   Enriches mental clarity and focus through space visualization, fostering a broader perspective.
+*   Strengthens the connection with the subtle energy of space, encouraging a profound understanding of consciousness and inner exploration.
+*   Reduces stress by cultivating a sense of spaciousness and promoting energetic balance.
+*   Enhances emotional equanimity, complements meditation by fostering a receptive mental state, and harmonizes the mind-body connection.
+*   Supports the experience of inner peace and tranquility.
+
+Cautions:
+---------
+
+*   Practice gradually if psychologically sensitive, consult a healthcare professional for mental health conditions, and adjust posture for seated discomfort.
+*   Be mindful of surroundings to prevent injury, especially during deep visualization.`
+  },
+  {
+    "title": "Chidakasha Dharana Pranayama",
+    "id": 39,
+    "data": `Chidakasha Dharana Pranayama: Awareness of the Infinite Space
+=============================================================
+
+Chidakasha Dharana Pranayama is a yogic practice focusing on inner space awareness. In a comfortable seated position, practitioners turn attention inward, concentrating on the space between the eyebrows (ajna chakra). The breath is observed mindfully, and the awareness expands to the inner space of consciousness. This practice is believed to enhance mental clarity, stimulate the third eye, and deepen spiritual awareness through focused inner attention.
+
+Steps
+-----
+
+1.  Sit comfortably in a meditative pose like Sukhasana or Padmasana.
+2.  Place your hands on your knees with palms facing upward.
+3.  Close your eyes gently.
+4.  Direct your attention to the space between the eyebrows (ajna chakra).
+5.  Observe your breath mindfully, noticing the inhalation and exhalation.
+6.  Gradually expand your awareness to the inner space of consciousness.
+7.  Concentrate on the inner space, letting go of external distractions.
+8.  Continue to observe your breath, syncing it with your inner awareness.
+9.  Deepen your concentration on the inner space, allowing a sense of inner stillness.
+10.  Conclude the practice with a few deep breaths, and open your eyes gently.
+
+Benefits
+--------
+
+*   Enhances mental clarity by directing focus inward, activating the ajna chakra for heightened intuition and elevated consciousness.
+*   Concentrated inner awareness fosters a deep connection to spiritual consciousness, reducing stress and instilling inner calm.
+*   Improves mindfulness, promotes balanced prana flow, and nurtures emotional equanimity, fostering a harmonious mind-body connection.
+*   Regular engagement aids spiritual growth, self-awareness, and the development of intuitive capacities through third-eye activation.
+
+Cautions
+--------
+
+Individuals with psychological conditions should seek guidance, discontinue, or seek help if experiencing intense meditative episodes. Modify posture for seated discomfort, progress gradually, stay aware of surroundings, and practice mindfulness.`
   },
 ];
 
@@ -4366,155 +5693,123 @@ export const asanaData = [
   {
     title: "Tadasana",
     id: 0,
-    data: {
-      head: "Anulom Vilom: Alternate Nostril Breathing",
-      desc: "Anulom Vilom, or Alternate Nostril Breathing, is a traditional yogic breathing technique. Practitioners inhale through one nostril while closing the other, alternating with exhales. This practice aims to balance the flow of prana (life force energy), enhance respiratory function, and induce a state of relaxation. Anulom Vilom is believed to harmonize the nervous system, reduce stress, and promote mental clarity. Regular practice is thought to contribute to overall well-being by fostering a sense of balance in mind, body, and spirit.",
-      steps: [
-        {
-          step: "Comfortable Seating",
-          desc: "Sit comfortably in a cross-legged position (Padmasana or Sukhasana) with a straight spine. Rest your hands on your knees in a relaxed gesture (mudra)",
-        },
-        {
-          step: "Nasal Hand Position:",
-          desc: "Use your right thumb to close your right nostril and your right ring finger to close your left nostril.",
-        },
-        {
-          step: "Initial Breath",
-          desc: "Close your eyes. Inhale deeply through both nostrils.",
-        },
-      ],
-      benefits: [
-        {
-          benefit:
-            "Anulom Vilom improves lung function and respiratory efficiency, enhancing oxygen intake and promoting healthier breathing.",
-        },
-        {
-          benefit:
-            "Anulom Vilom enhances concentration, focus, and cognitive function, fostering mental clarity and alertness.",
-        },
-        {
-          benefit:
-            "By balancing the activity of the sympathetic and parasympathetic nervous systems, it promotes overall nervous system equilibrium.",
-        },
-      ],
-
-      Conclusion: [
-        {
-          sub: "People with low blood pressure should be mindful when transitioning to and from Tadasana to prevent dizziness.",
-        },
-        {
-          sub: "Those with spinal issues should practice Tadasana with awareness and may need modifications.",
-        },
-        {
-          sub: "People with low blood pressure should be mindful when transitioning to and from Tadasana to prevent dizziness.",
-        },
-        {
-          sub: "Pregnant women, especially in later stages, should modify Tadasana to accommodate changes in balance and avoid strain.",
-        },
-      ],
-    },
+    markdown: './asanas/0.md'
   },
   {
-    title: "Kapalbhati",
+    title: "Adho Mukha Svanasana",
     id: 1,
-    data: {
-      head: "Anulom Vilom: Alternate Nostril Breathing",
-      desc: "Anulom Vilom, or Alternate Nostril Breathing, is a traditional yogic breathing technique. Practitioners inhale through one nostril while closing the other, alternating with exhales. This practice aims to balance the flow of prana (life force energy), enhance respiratory function, and induce a state of relaxation. Anulom Vilom is believed to harmonize the nervous system, reduce stress, and promote mental clarity. Regular practice is thought to contribute to overall well-being by fostering a sense of balance in mind, body, and spirit.",
-      steps: [
-        {
-          step: "Comfortable Seating",
-          desc: "Sit comfortably in a cross-legged position (Padmasana or Sukhasana) with a straight spine. Rest your hands on your knees in a relaxed gesture (mudra)",
-        },
-        {
-          step: "Nasal Hand Position:",
-          desc: "Use your right thumb to close your right nostril and your right ring finger to close your left nostril.",
-        },
-        {
-          step: "Initial Breath",
-          desc: "Close your eyes. Inhale deeply through both nostrils.",
-        },
-      ],
-      benefits: [
-        {
-          benefit:
-            "Anulom Vilom improves lung function and respiratory efficiency, enhancing oxygen intake and promoting healthier breathing.",
-        },
-        {
-          benefit:
-            "Anulom Vilom enhances concentration, focus, and cognitive function, fostering mental clarity and alertness.",
-        },
-        {
-          benefit:
-            "By balancing the activity of the sympathetic and parasympathetic nervous systems, it promotes overall nervous system equilibrium.",
-        },
-      ],
-
-      Conclusion: [
-        {
-          sub: "People with low blood pressure should be mindful when transitioning to and from Tadasana to prevent dizziness.",
-        },
-        {
-          sub: "Those with spinal issues should practice Tadasana with awareness and may need modifications.",
-        },
-        {
-          sub: "People with low blood pressure should be mindful when transitioning to and from Tadasana to prevent dizziness.",
-        },
-        {
-          sub: "Pregnant women, especially in later stages, should modify Tadasana to accommodate changes in balance and avoid strain.",
-        },
-      ],
-    },
+    markdown: './asanas/1.md'
   },
-
   {
-    title: "Bhramari",
+    title: "Urdhva Mukha Svanasana",
     id: 2,
-    data: {
-      head: "Anulom Vilom: Alternate Nostril Breathing",
-      desc: "Anulom Vilom, or Alternate Nostril Breathing, is a traditional yogic breathing technique. Practitioners inhale through one nostril while closing the other, alternating with exhales. This practice aims to balance the flow of prana (life force energy), enhance respiratory function, and induce a state of relaxation. Anulom Vilom is believed to harmonize the nervous system, reduce stress, and promote mental clarity. Regular practice is thought to contribute to overall well-being by fostering a sense of balance in mind, body, and spirit.",
-      steps: [
-        {
-          step: "Comfortable Seating",
-          desc: "Sit comfortably in a cross-legged position (Padmasana or Sukhasana) with a straight spine. Rest your hands on your knees in a relaxed gesture (mudra)",
-        },
-        {
-          step: "Nasal Hand Position:",
-          desc: "Use your right thumb to close your right nostril and your right ring finger to close your left nostril.",
-        },
-        {
-          step: "Initial Breath",
-          desc: "Close your eyes. Inhale deeply through both nostrils.",
-        },
-      ],
-      benefits: [
-        {
-          benefit:
-            "Anulom Vilom improves lung function and respiratory efficiency, enhancing oxygen intake and promoting healthier breathing.",
-        },
-        {
-          benefit:
-            "Anulom Vilom enhances concentration, focus, and cognitive function, fostering mental clarity and alertness.",
-        },
-        {
-          benefit:
-            "By balancing the activity of the sympathetic and parasympathetic nervous systems, it promotes overall nervous system equilibrium.",
-        },
-      ],
-
-      Conclusion: [
-        {
-          sub: "",
-        },
-        {
-          sub: "Those with spinal issues should practice Tadasana with awareness and may need modifications.",
-        },
-        {
-          sub: "",
-        },
-        {
-          sub: "Pregnant women, especially in later stages, should modify Tadasana to accommodate changes in balance and avoid strain.",
-        },
-      ],
-    },
+    markdown: './asanas/2.md'
+  },
+  {
+    title: "Balasana",
+    id: 3,
+    markdown: './asanas/3.md'
+  },
+  {
+    title: "Virabhadrasana",
+    id: 4,
+    markdown: './asanas/4.md'
+  },
+  {
+    title: "Virabhadrasana II",
+    id: 5,
+    markdown: './asanas/5.md'
+  },
+  {
+    title: "Virabhadrasana III",
+    id: 6,
+    markdown: './asanas/6.md'
+  },
+  {
+    title: "Trikonasana",
+    id: 7,
+    markdown: './asanas/7.md'
+  },
+  {
+    title: "Sukhasana",
+    id: 8,
+    markdown: './asanas/8.md'
+  }, {
+    title: "Paschimottanasana",
+    id: 9,
+    markdown: './asanas/9.md'
+  }, {
+    title: "Dhanurasana",
+    id: 10,
+    markdown: './asanas/10.md'
+  }, {
+    title: "Setu Bandhasana",
+    id: 11,
+    markdown: './asanas/11.md'
+  }, {
+    title: "Marjarasana",
+    id: 12,
+    markdown: './asanas/12.md'
+  }, {
+    title: "Utthita Parsvakonasana",
+    id: 13,
+    markdown: './asanas/13.md'
+  }, {
+    title: "Vrikshasana",
+    id: 14,
+    markdown: './asanas/14.md'
+  }, {
+    title: "Halasana",
+    id: 15,
+    markdown: './asanas/15.md'
+  }, {
+    title: "Garudasana",
+    id: 16,
+    markdown: './asanas/16.md'
+  },
+  {
+    title: "Navasana",
+    id: 17,
+    markdown: './asanas/17.md'
+  },
+  {
+    title: "Savasana",
+    id: 18,
+    markdown: './asanas/18.md'
+  },
+  {
+    title: "Bhujangasana",
+    id: 19,
+    markdown: './asanas/19.md'
+  },
+  {
+    title: "Baddha Konasana",
+    id: 20,
+    markdown: './asanas/20.md'
+  },
+  {
+    title: "Sirsasana",
+    id: 21,
+    markdown: './asanas/21.md'
+  },
+  {
+    title: "Sarvangasana",
+    id: 22,
+    markdown: './asanas/22.md'
+  },
+  {
+    title: "Phalakasana",
+    id: 23,
+    markdown: './asanas/23.md'
+  },
+  {
+    title: "Shalabhasana",
+    id: 24,
+    markdown: './asanas/24.md'
+  },
+  {
+    title: "Kapotasana",
+    id: 25,
+    markdown: './asanas/25.md'
   },
 ];
