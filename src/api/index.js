@@ -76,3 +76,12 @@ export const get_time_slots = async (url, payload) => {
   const { data } = await axios.get(`${BASE_URL}/${url}/`,{ headers });
   return data;
 }
+
+export const bookedByUser = async (url, payload) => {
+  const headers = {
+    "Content-Type": "application/json",
+    Authorization: `Token ${payload}`,
+  };
+  const { data } = await axios.get(`${BASE_URL}/${url}/`,{ headers });
+  return data;
+}
