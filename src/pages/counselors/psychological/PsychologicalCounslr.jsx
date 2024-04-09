@@ -162,7 +162,7 @@ const PsychologicalCounslr = () => {
     const [date, setDate] = useState(todayDate)
 
     const [selectedDate, setSelectedDate] = useState();
-    const [isLoading, setIsLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(false);
     const [psychologicalData, setPsychologicalData] = useState();
 
     // console.log(todayDate, "todayDate");
@@ -212,10 +212,14 @@ const PsychologicalCounslr = () => {
     };
 
     useEffect(() => {
-        getConsultant("api/consultant/psychological", localStorage.getItem("token")).then((data) =>
-            setPsychologicalData(data),
-            setIsLoading(true)
-        )
+        if (localStorage.getItem("token") != null) {
+            getConsultant("api/consultant/psychological", localStorage.getItem("token")).then((data) =>
+                setPsychologicalData(data),
+                setIsLoading(true)
+            ).catch((err) => {
+                console.log(err)
+            })
+        }
         setIsLoading(false)
     }, [isLoading])
 
@@ -224,11 +228,11 @@ const PsychologicalCounslr = () => {
     return (
         <div className={classes.root}>
             <div className='counselor-container'>
-                    {
-                        isLoading && <Loader /> 
-                        // !isLoading &&"loading..........."
-                    }
-                {  !isLoading &&
+                {
+                    isLoading && <Loader />
+                    // !isLoading &&"loading..........."
+                }
+                {!isLoading &&
                     psychologicalData?.map((e, i) => (
                         <Paper key={i} className='paper-dev'>
                             <>

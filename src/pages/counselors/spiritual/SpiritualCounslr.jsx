@@ -13,7 +13,7 @@ import { CheckBox } from '@material-ui/icons';
 import CheckIcon from '@material-ui/icons/Check';
 import { bookingsSlot, getConsultant } from '../../../api';
 import Loader from '../../../components/loader/Loader';
-
+import { useNavigate } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -161,6 +161,8 @@ const useStyles = makeStyles((theme) => ({
 const SpiritualCounslr = () => {
 
     const classes = useStyles();
+    let navigate = useNavigate();
+
 
     const todayDate = new Date();
 
@@ -172,16 +174,12 @@ const SpiritualCounslr = () => {
 
     const [bookingsSlotData, setBookingsSlotData] = useState()
 
-
-
     // const handleChange = (event) => {
     //     setChecked(event.target.checked);
     // }
 
-    const handleDateChange = (event,id) => {
+    const handleDateChange = (event, id) => {
         setDate(event.target.value);
-
-        
     };
 
     const [openModal, setOpenModal] = useState(false);
@@ -227,27 +225,28 @@ const SpiritualCounslr = () => {
     };
 
     useEffect(() => {
-        getConsultant("api/consultant/spiritual", localStorage.getItem("token")).then((data) =>
-            setSpiritualData(data),
-            setIsLoading(true)
-        ).catch((err) => {
-            console.log(err)
-        })
+        if (localStorage.getItem("token") != null) {
+            getConsultant("api/consultant/spiritual", localStorage.getItem("token")).then((data) =>
+                setSpiritualData(data),
+                setIsLoading(true)
+            ).catch((err) => {
+                console.log(err)
+            })
+        }
         setIsLoading(false)
     }, [isLoading]);
 
-    useEffect(() => {
-        bookingsSlot("api/review/", localStorage.getItem("token")).then((data) => {
-            setBookingsSlotData(data)
-            console.log(data);
-        }).catch((err) => {
-            console.log(err)
-        })
-    }, [])
-
-
+    // useEffect(() => {
+    //     bookingsSlot("api/review/", localStorage.getItem("token")).then((data) => {
+    //         setBookingsSlotData(data)
+    //         console.log(data);
+    //     }).catch((err) => {
+    //         console.log(err)
+    //     })
+    // }, [])
     // console.log(date, "spiritualData")
 
+    
     return (
         <div className={classes.root}>
             {
@@ -344,7 +343,7 @@ const SpiritualCounslr = () => {
 
                                         >
                                             {/* <DatePicker selectedDate={selectedDate} onChange={handleDateChange} /> */}
-                                             <input  type="date" value={date} onChange={(event)=>handleDateChange(event,e.id)}/>
+                                            <input type="date" value={date} onChange={(event) => handleDateChange(event, e.id)} />
                                             <Button onClick={handleCloseModal} variant="contained" color="primary">Book</Button>
                                         </div>
                                     </MuiModal>
@@ -357,6 +356,6 @@ const SpiritualCounslr = () => {
             </div>}
         </div>
     )
-}       
+}
 
 export default SpiritualCounslr

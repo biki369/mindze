@@ -1,7 +1,8 @@
 import { Avatar, Box, Button, makeStyles } from "@material-ui/core";
 import { useEffect, useState } from "react";
-import { getProfile } from "../../../api";
+import { bookedByUser, getProfile } from "../../../api";
 import { useNavigate } from "react-router-dom";
+import Loader from "../../../components/loader/Loader";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
       boxShadow: '0 0 1px #000',
       borderRadius: '6px',
       display: 'flex',
-      flexWrap:'wrap',
+      flexWrap: 'wrap',
       justifyContent: 'center',
       alignItems: 'center',
       gap: '1rem',
@@ -114,6 +115,9 @@ const LoginUser = () => {
   let navigate = useNavigate();
 
   const [userData, setUserData] = useState();
+  const [isLoading, setIsLoading] = useState(false);
+  const [bookingUser, setBookingUser] = useState([]);
+
 
   const logoutHandler = () => {
     localStorage.removeItem("token");
@@ -124,46 +128,78 @@ const LoginUser = () => {
     getProfile("api/profile/", localStorage.getItem("token")).then((data) => {
       if (data) {
         setUserData(data)
+        // setIsLoading(true)
       }
     }).catch((err) => {
       console.log(err)
     })
-    
+    // return () => {
+    //   setIsLoading(false)
+    // }
+  }, []);
+
+
+  useEffect(() => {
+    bookedByUser("api/bookings/user", localStorage.getItem("token")).then((data) => {
+      if (data) {
+        setBookingUser(data)
+      }
+    }).catch((err) => {
+      console.log(err)
+    })
+
   }, [])
 
-  // console.log(profileData)
+
+  console.log(bookingUser,"ajsfdjhfkhgadffdd")
 
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Box>
-        <Box className="login-user">
-          <Avatar className="login-user-icon" src="" alt="logo" />
-          <Box className="user-content">
-            <p className="user-name"> User Name: <span>{userData?.username}</span></p>
-            <p className="name"> Name: {userData?.first_name} {userData?.last_name}</p>
-            <p className="email">Email:{userData?.email}</p>
-            <Button variant="contained" color="secondary" onClick={logoutHandler}>Logout</Button>
+      {/* {
+        isLoading && <Loader />
+      } */}
+      {
+        <Box>
+          <Box className="login-user">
+            <Avatar className="login-user-icon" src="" alt="logo" />
+            <Box className="user-content">
+              <p className="user-name"> User Name: <span>{userData?.username}</span></p>
+              <p className="name"> Name: {userData?.first_name} {userData?.last_name}</p>
+              <p className="email">Email:{userData?.email}</p>
+              <Button variant="contained" color="secondary" onClick={logoutHandler}>Logout</Button>
+            </Box>
           </Box>
-        </Box>
 
-        <Box className="booked-consultant">
-          <Box className="consulter">
-            <h3>Past Bookings</h3>
-            <p className="name">Name: John Doe</p>
-            <p className="date">Date: 2024-03-27</p>
-            <p className="start"><span>Start time:</span> 03:44:55</p>
-            <p className="end"><span>End time:</span> 03:44:55</p>
-          </Box>
-          <Box className="consulter">
-            <h3>Upcoming Bookings</h3>
-            <p className="name">Name: John Doe</p>
-            <p className="date">Date: 2024-03-27</p>
-            <p className="start"><span>Start time:</span> 03:44:55</p>
-            <p className="end"><span>End time:</span> 03:44:55</p>
+          <Box className="booked-consultant">
+            <Box className="consulter">
+              <h3>{userData?.username} 's Bookings</h3>
+              {
+                bookingUser?.length === 0 && <p>No Bookings</p>
+              }
+              {
+                bookingUser?.map((e, i) => (
+                  <div key={i}>
+                    <p className="name">Name: {e?.consultant.name}</p>
+                    <p className="date">Date: {e?.slot.date}</p>
+                    <p className="start"><span>Start time:</span> {e?.slot.start_time}</p>
+                    <p className="end"><span>End time:</span>  {e?.slot.end_time}</p>
+                  </div>
+                ))
+              }
+
+            </Box>
+            {/* <Box className="consulter">
+              <h3>Upcoming Bookings</h3>
+              <p className="name">Name: John Doe</p>
+              <p className="date">Date: 2024-03-27</p>
+              <p className="start"><span>Start time:</span> 03:44:55</p>
+              <p className="end"><span>End time:</span> 03:44:55</p>
+            </Box> */}
           </Box>
         </Box>
-      </Box>
+      }
+
     </div>
   )
 }
