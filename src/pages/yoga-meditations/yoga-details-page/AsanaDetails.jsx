@@ -2,6 +2,7 @@
 import { makeStyles } from "@material-ui/core";
 import { asanaData } from '../../../data/yogaMediData'
 import { useEffect, useState } from "react";
+import Markdown from "markdown-to-jsx";
 
 
 
@@ -82,71 +83,29 @@ function AsanaDetails({ id }) {
     }
 
     useEffect(() => {
-        const fetchData = async () => {
-            const response = await asanaData
-            setFindData(response.find(data => data.id === Number(id)))
-        }
-        fetchData()
-    }, [id])
+        const data = asanaData.find((item) => item.id === id);
 
+        const markdown = import(`../../../data/${data.markdown}`);
+        markdown.then((res) => {
+            fetch(res.default)
+                .then((res) => res.text())
+                .then((res) => {
+                    console.log(res);
+                    setFindData(res);
+                });
+        });
+    }, [id]);
 
 
     return (
         <div className={classes.root}>
-            {
-                findData && findData.data && (
-                    <div className="technique-container">
-                        <div className="sub-content">
-                            <h3 className="sub-head">{findData.title}</h3>
-                        </div>
-                        <div className="sub-content">
-                            <h3 className="sub-head">{findData.data.head}</h3>
-                            <p>{findData.data.desc}</p>
-                        </div>
-                        <div className="ol-sub-content">
-                            <h3 className="sub-head">Steps</h3>
-                            <ol>
-                                {
-                                    findData.data?.steps.map((item, i) => {
-                                        return (
-                                            <li key={i}> <span>{item.step}:</span> {item.desc}</li>
-                                        )
-                                    })
-                                }
-
-                            </ol>
-                        </div>
-                        <div className="ul-sub-content">
-                            <h3 className="sub-head">Benefits</h3>
-                            <ul>
-                                {
-                                    findData?.data && findData.data.benefits.map((item, i) => {
-                                        return (
-                                            <li key={i}> {item.benefit}</li>
-                                        )
-                                    })
-                                }
-                            </ul>
-                        </div>
-
-
-                        <div className="sub-content">
-                            <h3 className="sub-head">Conclusion</h3>
-                            <ul>
-                                {
-                                    findData?.data && findData.data.Conclusion.map((item, i) => {
-                                        return (
-                                            <li key={i}> {item.sub}</li>
-                                        )
-                                    })
-                                }
-                            </ul>
-                            {/* <p>{findData?.data.Conclusion}</p> */}
-                        </div>
-                    </div>
-                )
-            }
-
+            <div className="technique-container">
+                <article className="prose lg:prose-xl prose-headings:text-indigo-500 prose-strong:text-indigo-500 prose-h1:text-5xl">
+                    <Markdown>
+                        {findData}
+                    </Markdown>
+                </article>
+            </div>
         </div>
     )
 }
