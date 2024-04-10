@@ -101,7 +101,6 @@ function YogaMediDetails({id}) {
 
   // console.log(findData, id, "===================== datalscjkj")
 
-
   return (
     <div className={classes.root}>
       <div className="technique-container">
@@ -111,16 +110,19 @@ function YogaMediDetails({id}) {
           <p>{findData?.intro}</p>
         </div>
         <div className="sub-content">
-          <h3 className="sub-head">Understanding Body Scan Meditation</h3>
-          <p>Body Scan Meditation is a form of mindfulness that encourages heightened body awareness. Practitioners focus on each part of their body in turn, observing sensations without judgment. This practice originates from mindfulness traditions and is accessible to al</p>
+          <h3 className="sub-head">Understanding {findData?.title}</h3>
+          <p>{findData?.understandingBodyScan}</p>
         </div>
         <div className="ol-sub-content">
           <h3 className="sub-head">Benefits of Body Scan Meditation</h3>
           <ol>
-            <li> <span>Stress Reduction:</span> It significantly lowers stress by shifting focus to physical sensations.</li>
-            <li> <span>Increased Awareness:</span> Enhances awareness of the body, helping to identify and address discomfort.</li>
-            <li> <span>Improved Sleep:</span> Promotes better sleep by relaxing the mind and body..</li>
-            <li> <span>Emotional Regulation:</span> Helps in understanding and managing emotions effectively.</li>
+            {
+            findData.benefits && findData.benefits.map((item) => {
+                return (
+                  <li key={item.head}> <span>{item.head}:</span> {item.content}</li>
+                )
+              })
+            }
           </ol>
         </div>
         <div className="ul-sub-content">
@@ -138,10 +140,25 @@ function YogaMediDetails({id}) {
         <div className="ul-sub-content">
           <h3 className="sub-head">Tips for Enhancing Practice</h3>
           <ul>
-            <li> <span>Find a Quiet Place:</span> Choose a peaceful spot for meditation.</li>
-            <li> <span>Find a Quiet Place:</span> Choose a peaceful spot for meditation.</li>
-            <li> <span>Find a Quiet Place:</span> Choose a peaceful spot for meditation.</li>
-            <li> <span>Find a Quiet Place:</span> Choose a peaceful spot for meditation.</li>
+          {
+            findData.tips && findData.tips.map((item) => {
+                return (
+                  <li key={item.head}> <span>{item.head}:</span> {item.content}</li>
+                )
+              })
+            }
+          </ul>
+        </div>
+        <div className="ul-sub-content">
+          <h3 className="sub-head">Cautions and Considerations</h3>
+          <ul>
+          {
+            findData.cautions && findData.cautions.map((item) => {
+                return (
+                  <li key={item.head}> <span>{item.head}:</span> {item.content}</li>
+                )
+              })
+            }
           </ul>
         </div>
 

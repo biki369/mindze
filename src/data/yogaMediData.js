@@ -64,6 +64,18 @@ export const MeditationsData = [
             head: "Physical Discomfort",
             content: "If pain occurs, adjust your focus or posture as needed.",
           },
+          {
+            head: "Emotional Reactions: ",
+            content: "Be prepared for any emotional responses and handle them gently.",
+          },
+          {
+            head: "Pre-existing Conditions:",
+            content: "Consult a healthcare professional if you have underlying health issues.",
+          },
+          {
+            head: "Patience Required:",
+            content: "Benefits accumulate over time with consistent practice.",
+          },
         ],
         conclusion:
           "Body Scan Meditation is a powerful tool for mental and physical well-being. It fosters a deep connection with your body, offering relaxation and insight. With regular practice, this meditation can become a cornerstone of your wellness routine, leading to improved health and tranquility.",
