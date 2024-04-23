@@ -172,8 +172,8 @@ const Home = () => {
     setIsLoading(false)
   }, [isLoading])
 
-  console.log(spiritualData, "==================s");
-  console.log(psychologicalData, "==================");
+  // console.log(spiritualData, "==================s");
+  // console.log(psychologicalData, "==================");
 
   return (
     <div className={classes.root}>

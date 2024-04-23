@@ -24,6 +24,9 @@ const useStyles = makeStyles((theme) => ({
         "& .philosophers-content": {
             padding: '30px',
             marginTop: 23,
+            [theme.breakpoints.down("sm")]: {
+                padding: '0px',
+            },
 
             "& .desc-section": {
                 padding: '20px 0',

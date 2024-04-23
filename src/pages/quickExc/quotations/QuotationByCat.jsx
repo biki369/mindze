@@ -82,6 +82,9 @@ const useStyles = makeStyles((theme) => ({
                 "& img": {
                     width: '363px',
                     height:'513px',
+                    [theme.breakpoints.down("sm")]: {
+                        width: '263px',
+                    },
                     borderRadius: '13px',
                     // boxShadow:theme.p
                 }

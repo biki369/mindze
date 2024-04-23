@@ -82,25 +82,12 @@ const Test = () => {
     const classes = useStyles();
     const location = useLocation();
     const data = location.state;
-
-    const [checked, setChecked] = useState(null);
     const [total, setTotal] = useState(0)
     const [openSec, setOpenSec] = useState(false)
 
     const handleChange = (event) => {
-        setChecked(event);
-        const score = Number(event);
-        return score;
+        setTotal(event + total)
     };
-
-    useEffect(() => {
-        const TotalScore = () => {
-            setTotal(Number(checked) + total)
-        };
-        TotalScore();
-    }, [checked])
-
-    console.log(total)
 
     return (
         <div className={classes.root}>

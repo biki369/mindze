@@ -2,7 +2,7 @@ export const mentalTestData = [
   {
     title: "Anexity Test",
     desc: "It is based on the GAD-7, a standardized tool used for screening generalized anxiety disorder. The frequency of the following symptoms over the past two weeks:",
-    img: "/src/assets/MentalHealthTest/anxiety.jpg",
+    img: "MentalHealthTest/anxiety.jpg",
 
     questions: [
       {
@@ -109,7 +109,7 @@ export const mentalTestData = [
 
   {
     title: "OCD Test",
-    img: "/src/assets/MentalHealthTest/ocd.jpg",
+    img: "MentalHealthTest/OCD.jpg",
     questions: [
       {
         text: "Do you experience recurrent and persistent thoughts that are intrusive and unwanted?",
@@ -215,7 +215,7 @@ export const mentalTestData = [
   },
   {
     title: "Depression Test",
-    img: "/src/assets/MentalHealthTest/depression.jpg",
+    img: "MentalHealthTest/depression.jpg",
     questions: [
       {
         text: "Little interest or pleasure in doing things",
@@ -347,7 +347,7 @@ export const mentalTestData = [
   },
   {
     title: "Addiction Test",
-    img: "/src/assets/MentalHealthTest/addiction.jpg",
+    img: "MentalHealthTest/addiction.jpg",
     questions: [
       {
         text: "Have you ever felt you should cut down on your [substance or behavior]?",
@@ -439,7 +439,7 @@ export const mentalTestData = [
   },
   {
     title: "Insomnia Test",
-    img: "/src/assets/MentalHealthTest/insomania.jpg",
+    img: "MentalHealthTest/insomania.jpg",
     questions: [
       {
         text: "Difficulty falling asleep:",
@@ -552,7 +552,7 @@ export const mentalTestData = [
   },
   {
     title: "Panic Disorder Test",
-    img: "/src/assets/MentalHealthTest/panic_disorder.jpg",
+    img: "MentalHealthTest/panic_disorder.jpg",
     questions: [
       {
         text: "Frequency of Panic Attacks",
@@ -684,7 +684,7 @@ export const mentalTestData = [
   },
   {
     title: "Eating Disorder Test",
-    img: "/src/assets/MentalHealthTest/eating_disorder.jpg",
+    img: "MentalHealthTest/eating_disorder.jpg",
     questions: [
       {
         text: "Am I terrified about being overweight?",
@@ -840,7 +840,7 @@ export const mentalTestData = [
   },
   {
     title: "Bipolar Test",
-    img: "/src/assets/MentalHealthTest/bipolar.jpg",
+    img: "MentalHealthTest/bipolar.jpg",
     questions: [
       {
         text: "Have there been times when you were not your usual self and... You felt so good or hyper that other people thought you were not your normal self or were so hyper that you got into trouble?",
@@ -974,7 +974,7 @@ export const mentalTestData = [
   },
   {
     title: "PTSD Test",
-    img: "/src/assets/MentalHealthTest/ptsd.jpg",
+    img: "MentalHealthTest/ptsd.jpg",
     questions: [
       {
         text: "Repeated, disturbing, and unwanted memories of the stressful experience",
@@ -1219,7 +1219,7 @@ export const mentalTestData = [
   },
   {
     title: "ADHD Test",
-    img: "/src/assets/MentalHealthTest/adhd.jpg",
+    img: "MentalHealthTest/adhd.jpg",
     questions: [
       {
         text: "How often do you have trouble wrapping up the final details of a project, once the challenging parts have been done?",

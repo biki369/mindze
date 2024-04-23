@@ -12,6 +12,9 @@ const useStyles = makeStyles((theme) => ({
       },
       margin: 'auto',
       padding: '1rem 3rem',
+      [theme.breakpoints.down("sm")]: {
+        padding: '10px 0',
+      },
       "& .technique-head": {
         fontSize: '2rem',
         color: theme.palette.primary.main,

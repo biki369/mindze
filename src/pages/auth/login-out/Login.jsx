@@ -1,7 +1,7 @@
 import React, { useEffect,} from 'react';
 import { Avatar, Button, Grid, makeStyles, Paper, TextField, Typography } from "@material-ui/core";
 import { Link, useNavigate, } from "react-router-dom";
-import image from "../../../assets/Home_page/1.jpg";
+import image from "../../../../public/Home_page/1.jpg";
 
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Swal from 'sweetalert2';

@@ -85,3 +85,12 @@ export const bookedByUser = async (url, payload) => {
   const { data } = await axios.get(`${BASE_URL}/${url}/`,{ headers });
   return data;
 }
+
+export const giveReview = async (url,parameters,token) => {
+  const headers = {
+    "Content-Type": "application/json",
+    Authorization: `Token ${token}`,
+  };
+  const { data } = await axios.post(`${BASE_URL}/${url}/`,parameters,{ headers });
+  return data;
+}

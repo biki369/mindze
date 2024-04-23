@@ -22,6 +22,9 @@ const useStyles = makeStyles((theme) => ({
                 // fontSize: " 3.5rem",
                 margin: '20px 10px',
                 padding: '10px 3.5rem',
+                [theme.breakpoints.down("sm")]: {
+                    padding: '10px 0',
+                },
                 "& .b-sub-title": {
                     fontSize: 20,
                     color: "#555",

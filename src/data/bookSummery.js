@@ -1,7 +1,7 @@
 export const PersonalityDev = [
   {
     title: "How to Win Friends and Influence People",
-    url: "/src/assets/Book_Summary_Pics/pd_1.jpg",
+    url: "Book_Summary_Pics/pd_1.jpg",
     author: " Dale Carnegie",
     publication_Date: "1936",
     genre: "Self-Help, Communication, Business",

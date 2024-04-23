@@ -6,7 +6,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { menuLits } from '../../data';
 import NavigationDrawer from '../drawer/NavigationDrawer';
 import MenuIcon from '@material-ui/icons/Menu';
-
+import logoImg from '../../assets/logo-removebg.png'
 const useStyles = makeStyles((theme) => ({
     root: {
         //   flexGrow: 1,
@@ -146,7 +146,7 @@ const Navbar = () => {
             <Box
                 className='headerTop'
             >
-                <img src="/src/assets/logo-removebg.png" alt="logo" className="logo-img" />
+                <img src={logoImg} alt="logo" className="logo-img" />
                 <Typography className='typo-text'>Blending Ancient Wisdom with Modern Mindcare</Typography>
 
                 <div className={`profile ${scroll ? "sticky" : ""}`}>

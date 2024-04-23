@@ -1,6 +1,6 @@
-import { Avatar, Button, Container, LinearProgress, Paper, makeStyles } from "@material-ui/core"
+import { Avatar, Button, Container, IconButton, LinearProgress, Paper, TextField, makeStyles } from "@material-ui/core"
 import { Link, useParams } from "react-router-dom";
-import { counselorsData, userRating } from '../../../data/index'
+// import { counselorsData, userRating } from '../../../data/index'
 import HomeIcon from '@material-ui/icons/Home';
 import SchoolIcon from '@material-ui/icons/School';
 // import ForumIcon from '@material-ui/icons/Forum';
@@ -15,7 +15,8 @@ import { useEffect, useState } from "react";
 import MuiModal from "../../../components/modal/MuiModal";
 import DatePicker from "../../../components/mui-date-picker/DatePicker";
 import Loader from "../../../components/loader/Loader";
-import { consultantDetails, consultantReview } from "../../../api";
+import { consultantDetails, consultantReview, giveReview } from "../../../api";
+import MessageIcon from '@material-ui/icons/Message';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -211,6 +212,17 @@ const useStyles = makeStyles((theme) => ({
 
     },
 
+    "& .write-review": {
+      width: '100%',
+      "& .write-review-form": {
+        width: '100%',
+        padding: '10px 16px',
+        // "& button":{
+        //   float:'right'
+        // }
+      }
+    }
+
   },
 
   plans: {
@@ -264,19 +276,20 @@ const CounselorDetails = () => {
 
   // let data = counselorsData.find((counslr) => counslr.id === Number(id))
 
-  
   const todayDate = new Date();
-  
+
   const [date, setDate] = useState(todayDate)
   const [reviewData, setReviewData] = useState();
-  
+
   const [selectedDate, setSelectedDate] = useState();
-  
+
   const [openModal, setOpenModal] = useState(false);
-  
+
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState({});
-  
+
+  const [writeReview, setWriteReview] = useState();
+
   // const { name, desc, img, exp, interest, education, designation, price } = data;
 
   // console.log(name,"slkadj",id)
@@ -291,6 +304,25 @@ const CounselorDetails = () => {
 
   const handleCloseModal = () => {
     setOpenModal(false);
+  };
+
+  const handleWriteReview = (e) => {
+    e.preventDefault();
+    giveReview("api/review", 
+    {
+      consultant: id,
+      review: writeReview
+    },
+    localStorage.getItem("token")
+  ).then((data) => {
+      // console.log(data, "data")
+      setIsLoading(false)
+      // setReviewData(data)
+    }).catch((err) => {
+      console.log(err);
+      setIsLoading(true)
+    })
+
   };
 
 
@@ -326,25 +358,24 @@ const CounselorDetails = () => {
     );
   };
 
-  useEffect(()=>{
-    consultantDetails("api/consultant", id).then((data)=>{
+  useEffect(() => {
+    consultantDetails("api/consultant", id).then((data) => {
       setIsLoading(false)
       setData(data)
-    }).catch((err)=>{
+    }).catch((err) => {
       // setIsLoading(false)
       console.log(err);
     })
     setIsLoading(true)
-  },[]);
+  }, []);
 
-//   useEffect(() => {
-//     consultantAddReview("api/consultant/psychological", localStorage.getItem("token")).then((data) =>
-//     setReviewData(data),
-//         setIsLoading(true)
-//     )
-//     setIsLoading(false)
-// }, [isLoading]);
-
+  //   useEffect(() => {
+  //     consultantAddReview("api/consultant/psychological", localStorage.getItem("token")).then((data) =>
+  //     setReviewData(data),
+  //         setIsLoading(true)
+  //     )
+  //     setIsLoading(false)
+  // }, [isLoading]);
 
   useEffect(() => {
     consultantReview(`api/consultants/${id}/reviews`).then((data) =>
@@ -352,16 +383,13 @@ const CounselorDetails = () => {
       setIsLoading(true)
     )
     setIsLoading(false)
-  }, [isLoading]);
+  }, [isLoading,]);
 
-  console.log(reviewData,"reviewData");
+  // console.log(writeReview,"reviewData");
 
   return (
-    <div className={classes.root} >
-      {
-        isLoading && <Loader/>
-      }
-    {   !isLoading &&<Container>
+    <div className={classes.root}>
+      {!isLoading? <Container>
         <div className="profile-content">
           <div className="top"><h3><span><Link to={"/"}>  <HomeIcon /></Link></span>{data?.name}'s profile</h3></div>
           <Paper >
@@ -413,9 +441,31 @@ const CounselorDetails = () => {
                         <div className="bar-number">2</div>
                         <div className="d-bar"><LinearProgress color="primary" variant="determinate" value={46} /></div>
                       </div>
-                     
+
 
                     </div>
+                  </div>
+                  <div className="write-review">
+                    {/* <h4>Write a review</h4> */}
+                    <div className="write-review-form">
+                      <form noValidate autoComplete="off" onSubmit={handleWriteReview}>
+                        <TextField
+                          variant="outlined"
+                          label="Write your review"
+                          // variant="filled"
+                          // variant="outlined"
+                          value={writeReview}
+                          style={{ width: '100%', marginBottom: "10px" }}
+                          onChange={(e) => setWriteReview(e.target.value)}
+                        />
+                        <Button
+                          type="submit"
+                          variant="contained"
+                          color="primary"
+                        >Submit</Button>
+                      </form>
+                    </div>
+
                   </div>
                 </div>
               </Paper>
@@ -471,7 +521,7 @@ const CounselorDetails = () => {
             </div>
           </MuiModal>
         </div>
-      </Container>}
+      </Container>:<Loader />}
     </div>
   )
 }
