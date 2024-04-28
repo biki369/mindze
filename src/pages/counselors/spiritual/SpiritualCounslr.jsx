@@ -13,7 +13,6 @@ import { CheckBox } from '@material-ui/icons';
 import CheckIcon from '@material-ui/icons/Check';
 import { bookingsSlot, getConsultant } from '../../../api';
 import Loader from '../../../components/loader/Loader';
-import { useNavigate } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -103,6 +102,21 @@ const useStyles = makeStyles((theme) => ({
             }
         },
 
+        "& .loader": {
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            padding: '2rem 0',
+            flexDirection: 'column',
+            "& a": {
+                fontSize: '1.6rem',
+                color: theme.palette.primary.main,
+                "&:hover": {
+                    textDecoration: 'underline',
+                }
+            }
+        }
+
     },
 
     modalContainer: {
@@ -161,7 +175,6 @@ const useStyles = makeStyles((theme) => ({
 const SpiritualCounslr = () => {
 
     const classes = useStyles();
-    let navigate = useNavigate();
 
 
     const todayDate = new Date();
@@ -172,7 +185,7 @@ const SpiritualCounslr = () => {
 
     const [spiritualData, setSpiritualData] = useState();
 
-    const [bookingsSlotData, setBookingsSlotData] = useState()
+    // const [bookingsSlotData, setBookingsSlotData] = useState()
 
     // const handleChange = (event) => {
     //     setChecked(event.target.checked);
@@ -227,13 +240,12 @@ const SpiritualCounslr = () => {
     useEffect(() => {
         if (localStorage.getItem("token") != null) {
             getConsultant("api/consultant/spiritual", localStorage.getItem("token")).then((data) =>
-                setSpiritualData(data),
-                setIsLoading(true)
+            setSpiritualData(data),
+            setIsLoading(true)
             ).catch((err) => {
                 console.log(err)
             })
         }
-        setIsLoading(false)
     }, [isLoading]);
 
     // useEffect(() => {
@@ -245,15 +257,15 @@ const SpiritualCounslr = () => {
     //     })
     // }, [])
     // console.log(date, "spiritualData")
-
-    
     return (
         <div className={classes.root}>
-            {
-                isLoading && <Loader />
-                // isLoading && "loading..........."
+              {
+                !isLoading && <div className='loader'>
+                    <Loader />
+                    <Link to="/login" className="back-link">Login to see details</Link>
+                </div>
             }
-            {!isLoading && <div className='counselor-container'>
+            {isLoading && <div className='counselor-container'>
                 {
                     spiritualData?.map((e, i) => (
                         <Paper key={i} className='paper-dev'>

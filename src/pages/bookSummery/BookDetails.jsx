@@ -1,6 +1,8 @@
-import { makeStyles, Container } from '@material-ui/core';
-import BackCurrent from '../../components/back-current/BackCurrent';
-import { useLocation } from 'react-router-dom';
+import { makeStyles, Container } from "@material-ui/core";
+import BackCurrent from "../../components/back-current/BackCurrent";
+import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import Markdown from "markdown-to-jsx";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,19 +26,19 @@ const useStyles = makeStyles((theme) => ({
           "& strong": {
             marginRight: 6,
           },
-          textAlign: 'justify'
+          textAlign: "justify",
           // fontSize:16,
-        }
+        },
       },
     },
     "& .book-summery": {
       "& .title": {
         color: "#333",
         fontSize: "2em",
-        margin: '1.6rem 0',
-        padding: '10px 0',
+        margin: "1.6rem 0",
+        padding: "10px 0",
         lineHeight: 1.6,
-      }
+      },
     },
 
     "& .ul-content": {
@@ -45,65 +47,53 @@ const useStyles = makeStyles((theme) => ({
         "& li": {
           fontSize: 16,
           color: "#333",
-          margin: '10px 0',
+          margin: "10px 0",
           lineHeight: 1.6,
-        }
+        },
       },
-    }
-
-  }
+    },
+  },
 }));
 const BookDetails = () => {
   const classes = useStyles();
   const location = useLocation();
+  const [findData, setFindData] = useState("");
   const data = location.state;
+
+  useEffect(() => {
+    if (!data || !data.markdown) {
+      console.error("Markdown data is missing");
+      return;
+    }
+    const markdown = import(`../../data/${data.markdown}`);
+    markdown
+      .then((res) => {
+        fetch(res.default)
+          .then((res) => res.text())
+          .then((res) => {
+            setFindData(res);
+          })
+          .catch((error) => {
+            console.error("Failed to fetch markdown content", error);
+          });
+      })
+      .catch((error) => {
+        console.error("Failed to import markdown file", error);
+      });
+  }, [data]);
 
   return (
     <div className={classes.root}>
       <Container>
         <BackCurrent link="/books" name="Book Summery" />
-        <div className="book-overview">
-          <h1 className="title">BOOK OVERVIEW:{data.title}</h1>
-          <div className="book-desc">
-            <p><strong>Title:</strong>{data.title}</p>
-            <p><strong>Author:</strong>{data.author} </p>
-            <p><strong>Publication Date:</strong> {data.publication_Date}</p>
-            <p><strong>Genre:</strong>{data.genre}</p>
-          </div>
-        </div>
-        <div className="book-summery">
-          <h2 className="title">Book Summery:</h2>
-          <p className="summery">
-            {data.summery}
-          </p>
-
-          <h2 className="title">Major Takeaways:</h2>
-          {
-            data.majorTakeaways.map((e, i) => (
-              <div key={i}>
-                <strong>Mastering Emotions:{e.title}</strong>
-                <p className="summery">
-                  <strong>Mastering Emotions:{e.head}</strong>{e.desc}
-                  </p>
-              </div>
-            ))
-          }
-
-          <div className='ul-content'>
-            <h2 className="title">Notable Quotes:</h2>
-            <ul>
-              {
-                data.quotes.map((e, i) => (
-                  <li key={i}>{e.quote}</li>
-                ))
-              }
-            </ul>
-          </div>
-
+        <div className="w-full">
+          <article className="prose lg:prose-xl max-w-full prose-headings:text-indigo-500 prose-strong:text-indigo-500 prose-h1:text-5xl">
+            <Markdown>{findData}</Markdown>
+          </article>
         </div>
       </Container>
     </div>
-  )
-}
+  );
+};
 
-export default BookDetails
+export default BookDetails;

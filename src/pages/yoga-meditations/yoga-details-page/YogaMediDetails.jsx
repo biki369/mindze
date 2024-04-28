@@ -114,7 +114,7 @@ function YogaMediDetails({id}) {
           <p>{findData?.understandingBodyScan}</p>
         </div>
         <div className="ol-sub-content">
-          <h3 className="sub-head">Benefits of Body Scan Meditation</h3>
+          <h3 className="sub-head">Benefits of {findData?.title}</h3>
           <ol>
             {
             findData.benefits && findData.benefits.map((item) => {
@@ -126,7 +126,7 @@ function YogaMediDetails({id}) {
           </ol>
         </div>
         <div className="ul-sub-content">
-          <h3 className="sub-head">How to Practice Body Scan Meditation: A Step-by-Step Guide</h3>
+          <h3 className="sub-head">How to Practice {findData?.title}: A Step-by-Step Guide</h3>
           <ul>
             {
             findData.guid && findData.guid.map((item) => {

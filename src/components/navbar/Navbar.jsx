@@ -16,10 +16,16 @@ const useStyles = makeStyles((theme) => ({
         "& .headerTop": {
             display: "flex",
             height: '10vh',
-            flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
             margin: "16px 0",
+            "& .logo":{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexDirection:'column'
+                // gap: 10,
+            },
             "& .logo-img": {
                 width: "160px",
             },
@@ -146,8 +152,10 @@ const Navbar = () => {
             <Box
                 className='headerTop'
             >
-                <img src={logoImg} alt="logo" className="logo-img" />
-                <Typography className='typo-text'>Blending Ancient Wisdom with Modern Mindcare</Typography>
+                <Box component={Link} to='/' className="logo">
+                    <img src={logoImg} alt="logo" className="logo-img" />
+                    <Typography className='typo-text'>Blending Ancient Wisdom with Modern Mindcare</Typography>
+                </Box>
 
                 <div className={`profile ${scroll ? "sticky" : ""}`}>
                     <div className="p-icon" title='Profile'>
@@ -171,7 +179,7 @@ const Navbar = () => {
                                 <Link to="/contact-us">Contact us</Link>
                             </MenuItem>
                             <MenuItem onClick={handleClose}>
-                            <Link to="/join-counselor"> Join as a counselor</Link>
+                                <Link to="/join-counselor"> Join as a counselor</Link>
                             </MenuItem>
                         </Menu>
                     </div>

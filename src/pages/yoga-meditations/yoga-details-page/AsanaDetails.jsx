@@ -90,7 +90,6 @@ function AsanaDetails({ id }) {
             fetch(res.default)
                 .then((res) => res.text())
                 .then((res) => {
-                    console.log(res);
                     setFindData(res);
                 });
         });

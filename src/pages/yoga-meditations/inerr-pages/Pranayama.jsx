@@ -13,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
         height: "100%",
         width: '100%',
         display: 'flex',
-
         "& .side-menu": {
             width: '300px',
             height: '100vh',
@@ -28,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
                 width: "100%",
                 "& button": {
                     display: 'block',
-                    margin: "10px 0",
+                    // margin: "10px 0",
                     width: "100%",
 
                 }

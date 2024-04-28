@@ -87,16 +87,22 @@ export default function Login(props) {
             timer: 1500
           })
         }
-        else {
-          Swal.fire({
+        // else {
+        //   Swal.fire({
+        //     icon: "error",
+        //     title: e.error,
+        //     showConfirmButton: false,
+        //     timer: 1500
+        //   })
+        // }
+      }).catch((e) => {
+        // console.log(e.response.data.non_field_errors,"jkdsfhrkdfhg")
+            Swal.fire({
             icon: "error",
-            title: e.error,
+            title: `${e.response.data.non_field_errors[0]}`,
             showConfirmButton: false,
             timer: 1500
           })
-        }
-      }).catch((e) => {
-        console.log(e);
       })
     }
   };
@@ -231,8 +237,6 @@ export default function Login(props) {
 
   return (
     <Grid container component="main" className={classes.root}>
-      {/* <CssBaseline /> */}
-      {/* <Grid item xs={false} sm={4} md={7} className={classes.image} /> */}
       <Grid
         className={classes.size}
         item
@@ -270,8 +274,6 @@ export default function Login(props) {
           </div>
         </div>
       </Grid>
-
-
     </Grid>
   );
 }

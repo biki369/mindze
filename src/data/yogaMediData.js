@@ -1,3 +1,5 @@
+import { md, md1 } from "./asanas";
+
 export const MeditationsData = [
   {
     category: "Relaxation and Stress Relief",
@@ -5705,12 +5707,15 @@ export const asanaData = [
   {
     title: "Tadasana",
     id: 0,
+    // markdown: md
     markdown: './asanas/0.md'
+
   },
   {
     title: "Adho Mukha Svanasana",
     id: 1,
     markdown: './asanas/1.md'
+    // markdown: md1,
   },
   {
     title: "Urdhva Mukha Svanasana",

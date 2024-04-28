@@ -11,8 +11,6 @@ import CheckIcon from '@material-ui/icons/Check';
 import { getConsultant } from '../../../api';
 import Loader from '../../../components/loader/Loader';
 
-
-
 const useStyles = makeStyles((theme) => ({
     root: {
         padding: 20,
@@ -101,59 +99,74 @@ const useStyles = makeStyles((theme) => ({
             }
         },
 
-    },
-
-    modalContainer: {
-        position: 'relative',
-    },
-
-    plans: {
-        display: "flex",
-        gap: "10px",
-        alignItems: "center",
-        justifyContent: "center",
-        marginBottom: '1rem',
-        flexWrap: 'wrap',
-        "& .plan": {
-            width: '230px',
-            // height: '130px',
-            cursor: 'pointer',
-            background: "#eee",
-            // backgroundColor: theme.palette.background.paper,
-            borderRadius: 10,
-            padding: 13,
-
-            "& .plan-name": {
-                fontSize: "1.3rem",
-                fontWeight: 600,
-                margin: '13px 0',
-                textAlign: 'center',
-                textTransform: 'capitalize'
-            },
-            "& .plan-price": {
-                fontSize: 16,
-                fontWeight: 600,
-                margin: '10px 0',
-                textTransform: 'capitalize'
-            },
-            "& p": {
-                display: 'flex',
-                alignItems: 'center',
-                gap: "6px",
-                fontWeight: 600,
-                "& svg": {
-                    color: '#303f9f',
+        "& .loader": {
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            padding: '2rem 0',
+            flexDirection: 'column',
+            "& a": {
+                fontSize: '1.6rem',
+                color: theme.palette.primary.main,
+                "&:hover": {
+                    textDecoration: 'underline',
                 }
             }
         }
 
-    },
+        },
 
-    counslrAvatar: {
-        width: 90,
-        height: 90,
-    }
-}));
+        modalContainer: {
+            position: 'relative',
+        },
+
+        plans: {
+            display: "flex",
+            gap: "10px",
+            alignItems: "center",
+            justifyContent: "center",
+            marginBottom: '1rem',
+            flexWrap: 'wrap',
+            "& .plan": {
+                width: '230px',
+                // height: '130px',
+                cursor: 'pointer',
+                background: "#eee",
+                // backgroundColor: theme.palette.background.paper,
+                borderRadius: 10,
+                padding: 13,
+
+                "& .plan-name": {
+                    fontSize: "1.3rem",
+                    fontWeight: 600,
+                    margin: '13px 0',
+                    textAlign: 'center',
+                    textTransform: 'capitalize'
+                },
+                "& .plan-price": {
+                    fontSize: 16,
+                    fontWeight: 600,
+                    margin: '10px 0',
+                    textTransform: 'capitalize'
+                },
+                "& p": {
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: "6px",
+                    fontWeight: 600,
+                    "& svg": {
+                        color: '#303f9f',
+                    }
+                }
+            }
+
+        },
+
+        counslrAvatar: {
+            width: 90,
+            height: 90,
+        }
+    }));
 
 const PsychologicalCounslr = () => {
 
@@ -220,19 +233,19 @@ const PsychologicalCounslr = () => {
                 console.log(err)
             })
         }
-        setIsLoading(false)
     }, [isLoading])
-
-    // console.log(psychologicalData, "psychologicalData")
 
     return (
         <div className={classes.root}>
+            {
+                !isLoading && <div className='loader'>
+                    <Loader />
+                    <Link to="/login" className="back-link">Login to see details</Link>
+                </div>
+            }
             <div className='counselor-container'>
-                {
-                    isLoading && <Loader />
-                    // !isLoading &&"loading..........."
-                }
-                {!isLoading &&
+
+                {isLoading &&
                     psychologicalData?.map((e, i) => (
                         <Paper key={i} className='paper-dev'>
                             <>

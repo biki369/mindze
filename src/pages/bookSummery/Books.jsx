@@ -7,7 +7,7 @@ import Tab from '@material-ui/core/Tab';
 import { bookSummeryData } from '../../data';
 import BookCard from '../../components/cards/book-card/BookCard';
 import { useMediaQuery } from '@material-ui/core';
-import { PersonalityDev } from '../../data/bookSummery';
+import { PersonalityDev, careerDev, spirituality, psychology } from '../../data/bookSummery';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -89,8 +89,6 @@ const Books = () => {
         <Tabs value={value} onChange={handleChange} aria-label="simple tabs example"
           // centered
           variant={mobileDevice ? "scrollable" : ""}
-
-
         >
           <Tab label="Personality Development" {...a11yProps(0)} />
           <Tab label="Psychology" {...a11yProps(1)} />
@@ -117,7 +115,7 @@ const Books = () => {
       <TabPanel value={value} index={1}>
         <div className='book-container'>
           {
-            bookSummeryData.map((e, i) => (
+            psychology.map((e, i) => (
               <div className='' key={i}>
                 <BookCard
                   data={e}
@@ -131,7 +129,7 @@ const Books = () => {
       <TabPanel value={value} index={2}>
         <div className='book-container'>
           {
-            bookSummeryData.map((e, i) => (
+            spirituality.map((e, i) => (
               <div className='' key={i}>
                 <BookCard
                   data={e}
@@ -144,7 +142,7 @@ const Books = () => {
       <TabPanel value={value} index={3}>
         <div className='book-container'>
           {
-            bookSummeryData.map((e, i) => (
+            careerDev.map((e, i) => (
               <div className='' key={i}>
                 <BookCard
                   data={e}

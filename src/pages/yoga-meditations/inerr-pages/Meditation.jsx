@@ -24,17 +24,22 @@ const useStyles = makeStyles((theme) => ({
             },
 
             "& .side-menu__links": {
-                display: 'flex',
-                flexDirection: 'column',
+                // display: 'flex',
+                // flexDirection: 'column',
+                width:'100%',
                 "& .side-link": {
-                    margin: '16px 0',
+                    margin: '6.9px 0',
                     "& button": {
                         display: 'block',
-                        margin: "10px 0",
+                        // margin: "10px 0",
                         width: "100%",
                     },
                 }
+            },
+            "& .MuiAccordionDetails-root":{
+                justifyContent:'center',
             }
+            
         }
     },
 

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import {useState } from 'react';
 import { Button, Container, Typography, makeStyles } from "@material-ui/core";
 import BackCurrent from '../../components/back-current/BackCurrent';
 import { useLocation } from 'react-router-dom';
@@ -85,9 +85,17 @@ const Test = () => {
     const [total, setTotal] = useState(0)
     const [openSec, setOpenSec] = useState(false)
 
-    const handleChange = (event) => {
-        setTotal(event + total)
+   
+    const handleSubmit = () => {
+        setOpenSec(true);
+        // Calculate the total score from selected options
+        const score = data.questions.reduce((acc, question) => {
+            const selectedOption = question.options.find(option => option.value === parseInt(document.querySelector(`input[name="${question.text}"]:checked`)?.value));
+            return acc + (selectedOption ? selectedOption.value : 0);
+        }, 0);
+        setTotal(score);
     };
+
 
     return (
         <div className={classes.root}>
@@ -106,7 +114,7 @@ const Test = () => {
                                         {
                                             e.options?.map((el, indx) => (
                                                 <div key={indx} className='test-option'>
-                                                    <input type="radio" name={e.text} value={el.value} onChange={()=> handleChange(el.value)} />
+                                                    <input type="radio" name={e.text} value={el.value} />
                                                     {el.label}
                                                 </div>
 
@@ -121,7 +129,7 @@ const Test = () => {
                     <div className="test-submit__btn">
                         <Button
                             variant="contained" color="primary"
-                            onClick={() => setOpenSec(!openSec)}
+                            onClick={handleSubmit}
                         >Submit</Button>
                     </div>
 
@@ -131,7 +139,7 @@ const Test = () => {
                                 if (e.low <= total && e.high >= total) {
                                     return (
                                         <>
-                                            <p key={i}> <strong>Total Score:{total}</strong> {e.label}</p>
+                                            <p key={i}> <strong>Total Score: {total}</strong> {e.label}</p>
                                             <p key={i}> <strong>Suggested action:</strong> {e.action}</p>
                                         </>
                                     )

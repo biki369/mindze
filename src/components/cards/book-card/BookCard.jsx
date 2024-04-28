@@ -16,32 +16,33 @@ const useStyles = makeStyles((theme) => ({
             "& .boxShadow": "0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)",
 
             "& .book-card__book": {
-                transform: "rotate3d(0, -1, 0, 30deg) translate(-15px, -30px)"
+                // transform: "rotate3d(0, -1, 0, 30deg) translate(-15px, -30px)"
+                transform: "rotate3d(0, 0, 0, 0deg) translate(0,0)"
             },
             "& .book-card__book-back": {
-                boxShadow: "5px 10px 15px rgba(0, 0, 0, 0.35)"
+                boxShadow: "none"
+                // boxShadow: "5px 10px 15px rgba(0, 0, 0, 0.35)"
             },
             "& .book-card__book-side": { opacity: 1 },
+            " &:hover": {
+                "& .book-card__book": {
+                    transform: "rotate3d(0, -1, 0, 30deg) translate(-15px, -30px)"
+                },
+                "& .book-card__book-back": {
+                    boxShadow: "5px 10px 15px rgba(0, 0, 0, 0.35)"
+                },
+                "& .book-card__book-side": { opacity: 1 }
+            },
 
             // " &:hover": {
             //     "& .book-card__book": {
-            //         transform: "rotate3d(0, -1, 0, 30deg) translate(-15px, -30px)"
+            //         transform: "rotate3d(0, 0, 0, 0deg) translate(0,0)"
             //     },
             //     "& .book-card__book-back": {
-            //         boxShadow: "5px 10px 15px rgba(0, 0, 0, 0.35)"
+            //         boxShadow: "none"
             //     },
-            //     "& .book-card__book-side": { opacity: 1 }
+            //     "& .book-card__book-side": { opacity: 0 }
             // },
-
-            " &:hover": {
-                "& .book-card__book": {
-                    transform: "rotate3d(0, 0, 0, 0deg) translate(0,0)"
-                },
-                "& .book-card__book-back": {
-                    boxShadow: "none"
-                },
-                "& .book-card__book-side": { opacity: 0 }
-            },
         },
 
         "& .book-card__cover": {

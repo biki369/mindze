@@ -128,14 +128,10 @@ const LoginUser = () => {
     getProfile("api/profile/", localStorage.getItem("token")).then((data) => {
       if (data) {
         setUserData(data)
-        // setIsLoading(true)
       }
     }).catch((err) => {
-      console.log(err)
+      console.log(err.response.data,"err")
     })
-    // return () => {
-    //   setIsLoading(false)
-    // }
   }, []);
 
 
@@ -149,9 +145,6 @@ const LoginUser = () => {
     })
 
   }, [])
-
-
-  console.log(bookingUser,"ajsfdjhfkhgadffdd")
 
   const classes = useStyles();
   return (
