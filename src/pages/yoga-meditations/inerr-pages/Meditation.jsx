@@ -57,7 +57,6 @@ const Meditation = () => {
     const handleClick = (data) => {
         return setSendId(data.id)
     };
-
     const [drawerOpen, setDrawerOpen] = useState(false);
     const toggleDrawer = () => {
         setDrawerOpen(!drawerOpen);
@@ -82,7 +81,8 @@ const Meditation = () => {
                                     {
                                         item.data.map((data) => (
                                             <div key={data.id} className='side-link'>
-                                                <Button onClick={() => handleClick(data)}
+                                                <Button
+                                                    onClick={() => { handleClick(data), toggleDrawer() }}
                                                     style={{
                                                         color: sendId === data.id ? '#fff' : '#545e6f',
                                                         background: sendId === data.id ? '#3f51b5' : '',
@@ -102,7 +102,6 @@ const Meditation = () => {
             </div>
         )
     }
-
     return (
         <>
             {
