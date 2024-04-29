@@ -105,7 +105,6 @@ const Books = () => {
                 <BookCard
                   data={e}
                 />
-
               </div>
             ))
           }

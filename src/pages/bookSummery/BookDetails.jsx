@@ -54,11 +54,12 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
-const BookDetails = () => {
+const BookDetails = (props) => {
   const classes = useStyles();
   const location = useLocation();
   const [findData, setFindData] = useState("");
   const data = location.state;
+  // const data = props.location.state;
 
   useEffect(() => {
     if (!data || !data.markdown) {
@@ -82,6 +83,7 @@ const BookDetails = () => {
       });
   }, [data]);
 
+  // console.log(data,"data2")
   return (
     <div className={classes.root}>
       <Container>
