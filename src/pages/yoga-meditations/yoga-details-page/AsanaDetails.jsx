@@ -4,8 +4,6 @@ import { asanaData } from '../../../data/yogaMediData'
 import { useEffect, useState } from "react";
 import Markdown from "markdown-to-jsx";
 
-
-
 const useStyles = makeStyles((theme) => ({
     root: {
         padding: '6px',
@@ -81,18 +79,16 @@ function AsanaDetails({ id }) {
     if (!id) {
         id = 0;
     }
+    const data = asanaData.find((item) => item.id === id);
 
+    // read markdown file
+    const markdownPath = `${import.meta.env.BASE_URL}/${data.markdown}.txt`;
     useEffect(() => {
-        const data = asanaData.find((item) => item.id === id);
-
-        const markdown = import(`../../../data/${data.markdown}`);
-        markdown.then((res) => {
-            fetch(res.default)
-                .then((res) => res.text())
-                .then((res) => {
-                    setFindData(res);
-                });
-        });
+        fetch(markdownPath)
+            .then((res) => res.text())
+            .then((res) => {
+                setFindData(res);
+            });
     }, [id]);
 
 

@@ -66,23 +66,16 @@ const BookDetails = (props) => {
       console.error("Markdown data is missing");
       return;
     }
-    const markdown = import(`../../data/${data.markdown}`);
-    markdown
+    const markdown = `${import.meta.env.BASE_URL}/${data.markdown}.txt`;
+    fetch(markdown)
+      .then((res) => res.text())
       .then((res) => {
-        fetch(res.default)
-          .then((res) => res.text())
-          .then((res) => {
-            setFindData(res);
-          })
-          .catch((error) => {
-            console.error("Failed to fetch markdown content", error);
-          });
+        setFindData(res);
       })
       .catch((error) => {
-        console.error("Failed to import markdown file", error);
+        console.error("Failed to fetch markdown content", error);
       });
   }, [data]);
-  // console.log(data,"data2")
   return (
     <div className={classes.root}>
       <Container>
