@@ -3,11 +3,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import { Accordion, AccordionDetails, AccordionSummary, Button, IconButton, useMediaQuery, useTheme } from '@material-ui/core';
 import YogaMediDetails from '../yoga-details-page/YogaMediDetails';
-import { NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import SideMenu from '../../../components/drawer/SideMenu';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { MeditationsData } from '../../../data/yogaMediData';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+
 const useStyles = makeStyles((theme) => ({
     root: {
         height: "100%",
@@ -26,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
             "& .side-menu__links": {
                 // display: 'flex',
                 // flexDirection: 'column',
-                width:'100%',
+                width: '100%',
                 "& .side-link": {
                     margin: '6.9px 0',
                     "& button": {
@@ -36,16 +37,15 @@ const useStyles = makeStyles((theme) => ({
                     },
                 }
             },
-            "& .MuiAccordionDetails-root":{
-                justifyContent:'center',
+            "& .MuiAccordionDetails-root": {
+                justifyContent: 'center',
             }
-            
+
         }
     },
 
 
 }));
-
 const Meditation = () => {
     const classes = useStyles();
 
@@ -62,13 +62,10 @@ const Meditation = () => {
     const toggleDrawer = () => {
         setDrawerOpen(!drawerOpen);
     };
-
     // const [expanded, setExpanded] = React.useState(false);
-
     const SideMenuBar = () => {
         return (
             <div className='side-menu'>
-
                 {
                     MeditationsData.map((item, index) => (
                         <Accordion key={index}>
@@ -82,7 +79,6 @@ const Meditation = () => {
                             <AccordionDetails>
 
                                 <div className="side-menu__links">
-
                                     {
                                         item.data.map((data) => (
                                             <div key={data.id} className='side-link'>
@@ -106,6 +102,7 @@ const Meditation = () => {
             </div>
         )
     }
+
     return (
         <>
             {
@@ -117,42 +114,7 @@ const Meditation = () => {
                 }
                 {
                     mobileDevice && <SideMenu isOpen={drawerOpen} onClose={toggleDrawer} anchor='left'>
-                        <div className='side-menu'>
-                            {
-                                MeditationsData.map((item, index) => (
-                                    <Accordion key={index}>
-                                        <AccordionSummary
-                                            expandIcon={<ExpandMoreIcon />}
-                                            ria-controls="panel1bh-content"
-                                            id="panel1a-header"
-                                        >
-                                            <Typography>{item.category}</Typography>
-                                        </AccordionSummary>
-                                        <AccordionDetails>
-
-                                            <div className="side-menu__links">
-
-                                                {
-                                                    item.data.map((data) => (
-                                                        <div key={data.id} className='side-link'>
-                                                            <NavLink
-                                                                style={({ isActive }) => ({
-                                                                    color: isActive ? '#fff' : '#545e6f',
-                                                                    background: isActive ? '#3f51b5' : '',
-                                                                })}
-
-                                                                to={`/yogaMeditations/${data.id}`} >{data.title}</NavLink>
-                                                        </div>
-
-                                                    ))
-                                                }
-
-                                            </div>
-                                        </AccordionDetails>
-                                    </Accordion>
-                                ))
-                            }
-                        </div>
+                        <SideMenuBar />
                     </SideMenu>
                 }
                 <div className='yoga-meditation'>

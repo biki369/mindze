@@ -82,7 +82,6 @@ const BookDetails = (props) => {
         console.error("Failed to import markdown file", error);
       });
   }, [data]);
-
   // console.log(data,"data2")
   return (
     <div className={classes.root}>

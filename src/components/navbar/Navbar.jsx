@@ -7,6 +7,7 @@ import { menuLits } from '../../data';
 import NavigationDrawer from '../drawer/NavigationDrawer';
 import MenuIcon from '@material-ui/icons/Menu';
 import logoImg from '../../assets/logo-removebg.png'
+
 const useStyles = makeStyles((theme) => ({
     root: {
         //   flexGrow: 1,
@@ -104,14 +105,12 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "#000",
     },
 }));
-
 const Navbar = () => {
     const classes = useStyles();
     const [scroll, setScroll] = useState(false);
 
     const [open, setOpen] = useState(false);
     const anchorRef = useRef(null);
-
 
     const [anchorEl, setAnchorEl] = useState(null);
 
@@ -122,7 +121,6 @@ const Navbar = () => {
     const handleClose = () => {
         setAnchorEl(null);
     };
-
 
     const prevOpen = useRef(open);
     useEffect(() => {
@@ -138,10 +136,9 @@ const Navbar = () => {
         });
     }, [scroll]);
 
-
     const theme = useTheme();
     const mobileDevice = useMediaQuery(theme.breakpoints.down('md'));
-
+    
     const [drawerOpen, setDrawerOpen] = useState(false);
     const toggleDrawer = () => {
         setDrawerOpen(!drawerOpen);

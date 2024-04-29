@@ -1,4 +1,3 @@
-import { md, md1 } from "./asanas";
 
 export const MeditationsData = [
   {
