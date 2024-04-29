@@ -1,6 +1,8 @@
 import { Container, makeStyles } from '@material-ui/core';
 import BackCurrent from '../../../components/back-current/BackCurrent';
 import { useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import Markdown from 'markdown-to-jsx';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -53,40 +55,28 @@ const PhilosopherDetails = () => {
     const classes = useStyles();
 
     const location = useLocation();
+    const [findData, setFindData] = useState("");
     const data = location.state;
-
-    // console.log(data, "data","ajksdgjhasfghgasdf");
+    // read markdown file
+    const markdownPath = `${import.meta.env.BASE_URL}/${data.description}.txt`;
+    useEffect(() => {
+        fetch(markdownPath)
+            .then((response) => response.text())
+            .then((text) => {
+                setFindData(text);
+            });
+    }, [markdownPath]);
 
     return (
         <div className={classes.root}>
             <BackCurrent link="/philosophers" name="Philosophers" />
 
             <Container>
-                <h1 className="title">JIDDU KRISHNAMURTI</h1>
-                <h2 className="sub-title">Jiddu Krishnamurti on Mental Health: An Exploration of Inner Freedom</h2>
-                <div className='philosophers-content'>
-
-                    <div className="desc-section">
-                        <p className="into-red">Introduction: Krishnamurti's Revolutionary Perspective on the Mind</p>
-                        <p className="desc">Jiddu Krishnamurti, an influential philosopher and speaker, offered a radical approach to understanding the human mind and its impact on well-being. His teachings, free from traditional dogmas, focus on the importance of personal inquiry and self-awareness for mental health. Krishnamurti's insights delve into the nature of thought, emotion, and the structures that govern our psychological experiences, providing a unique lens to view and address mental health issues.</p>
-                    </div>
-
-                    <div className="desc-section">
-                        <p className="into">The Mirror of Relationship: Understanding the Self</p>
-                        <p className="desc">Krishnamurti emphasized the role of relationships in understanding the self. He believed that interactions with others act as a mirror, reflecting aspects of our inner world. “The understanding of oneself is the beginning of wisdom,” he stated. This perspective encourages deep introspection in the context of relationships, allowing individuals to recognize and work through personal fears, desires, and conflicts. For instance, conflicts in relationships can reveal underlying insecurities or conditioned responses, offering opportunities for self-discovery and growth. By understanding and resolving these inner conflicts, one can achieve greater mental clarity and emotional stability.</p>
-                    </div>
-                    <div className="desc-section">
-                        <p className="into">Freedom from the Known: Breaking Psychological Boundaries</p>
-                        <p className="desc">Krishnamurti emphasized the role of relationships in understanding the self. He believed that interactions with others act as a mirror, reflecting aspects of our inner world. “The understanding of oneself is the beginning of wisdom,” he stated. This perspective encourages deep introspection in the context of relationships, allowing individuals to recognize and work through personal fears, desires, and conflicts. For instance, conflicts in relationships can reveal underlying insecurities or conditioned responses, offering opportunities for self-discovery and growth. By understanding and resolving these inner conflicts, one can achieve greater mental clarity and emotional stability.</p>
-                    </div>
-                    <div className="desc-section">
-                        <p className="into-red">Conclusion: Embracing Krishnamurti’s Vision for Mental Wellness</p>
-                        <p className="desc">Jiddu Krishnamurti’s approach to mental health, characterized by deep introspection and a quest for inner freedom, offers a profound way to understand and navigate the complexities of the human psyche. His teachings encourage a journey towards self-awareness and mental liberation, fostering a state of mental well-being that transcends conventional approaches.</p>
-                        <p>Exploring Krishnamurti’s teachings reveals a path to mental wellness that is both introspective and liberating. His emphasis on understanding the self, observing the mind, and embracing total awareness provides a comprehensive approach to achieving mental and emotional harmony in our contemporary world.</p>
-                    </div>
-
-
-                </div>
+                <article className="prose lg:prose-xl prose-headings:text-indigo-500 prose-strong:text-indigo-500 prose-h1:text-5xl">
+                    <Markdown>
+                        {findData}
+                    </Markdown>
+                </article>
             </Container>
         </div>
     )

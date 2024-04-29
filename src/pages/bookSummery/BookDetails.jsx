@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
-const BookDetails = (props) => {
+const BookDetails = () => {
   const classes = useStyles();
   const location = useLocation();
   const [findData, setFindData] = useState("");

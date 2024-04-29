@@ -8,7 +8,7 @@ import Tab from '@material-ui/core/Tab';
 import Philosophers from './philosophers/Philosophers';
 import { useMediaQuery } from '@material-ui/core';
 import { modernPhilosophers, stoicismData } from '../../data';
-
+import { philosophicalPerspective } from '../../data/philosophicalPerspective';
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
 
@@ -108,10 +108,10 @@ const PhilosophicalPerspective = () => {
                 </Tabs>
             </AppBar>
             <TabPanel value={value} index={0}>
-                <Philosophers  data={modernPhilosophers}/>
+                <Philosophers data={philosophicalPerspective} />
             </TabPanel>
             <TabPanel value={value} index={1}>
-                <Philosophers data={stoicismData}/>
+                <Philosophers data={stoicismData} />
 
             </TabPanel>
             <TabPanel value={value} index={2}>
