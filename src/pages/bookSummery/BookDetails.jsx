@@ -1,7 +1,7 @@
 import { makeStyles, Container } from "@material-ui/core";
 import BackCurrent from "../../components/back-current/BackCurrent";
 import { useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Markdown from "markdown-to-jsx";
 
 const useStyles = makeStyles((theme) => ({
@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
-const BookDetails = (props) => {
+const BookDetails = () => {
   const classes = useStyles();
   const location = useLocation();
   const [findData, setFindData] = useState("");
@@ -66,30 +66,24 @@ const BookDetails = (props) => {
       console.error("Markdown data is missing");
       return;
     }
-    const markdown = import(`../../data/${data.markdown}`);
-    markdown
-      .then((res) => {
-        fetch(res.default)
+    const markdown = `${import.meta.env.BASE_URL}/${data.markdown}.txt`;
+        fetch(markdown)
           .then((res) => res.text())
           .then((res) => {
             setFindData(res);
           })
           .catch((error) => {
             console.error("Failed to fetch markdown content", error);
-          });
-      })
-      .catch((error) => {
-        console.error("Failed to import markdown file", error);
       });
   }, [data]);
-  // console.log(data,"data2")
+
   return (
     <div className={classes.root}>
       <Container>
         <BackCurrent link="/books" name="Book Summery" />
         <div className="w-full">
           <article className="prose lg:prose-xl max-w-full prose-headings:text-indigo-500 prose-strong:text-indigo-500 prose-h1:text-5xl">
-            <Markdown>{findData}</Markdown>
+            <Markdown>{findData && findData}</Markdown>
           </article>
         </div>
       </Container>

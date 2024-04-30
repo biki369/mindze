@@ -82,33 +82,38 @@ export const heroSliderImg = [
 
 export const reviewData = [
   {
-    name: "Spider-Men",
+    name: "Name",
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum quod atque dolore iure? ",
     img: "philosophers_image/b_2.jpg",
   },
   {
     img: "philosophers_image/b_3.jpg",
-    name: "X men",
+    name: "Name",
+
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum quod ",
   },
   {
     img: "philosophers_image/b_4.jpg",
-    name: "Ram",
+    name: "Name",
+
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum quod ",
   },
   {
     img: "philosophers_image/mst_1.jpg",
-    name: "Fire",
+    name: "Name",
+
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum quod ",
   },
   {
     img: "philosophers_image/b_6.jpg",
-    name: "Hulk",
+    name: "Name",
+
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum quod ",
   },
   {
     img: "philosophers_image/s_3.jpg",
-    name: "dr .Stranger",
+    name: "Name",
+
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum quod ",
   },
 ];
@@ -730,6 +735,7 @@ export const modernPhilosophers = [
     title: "Osho",
     img: "philosophers_image/mst_1.jpg",
     id: 0,
+    markdown: "philosophicalPerspective/modernSpiritualityThinkers/0.md"
   },
   {
     title: "Jiddu Krishnamut",
@@ -811,6 +817,10 @@ export const stoicismData = [
     img: "philosophers_image/mst_10.jpg",
   },
 ];
+
+
+
+
 
 export const blogPostData = [
   {

@@ -1,7 +1,7 @@
 
 import { makeStyles } from "@material-ui/core";
 import { asanaData } from '../../../data/yogaMediData'
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Markdown from "markdown-to-jsx";
 
 
@@ -81,18 +81,15 @@ function AsanaDetails({ id }) {
     if (!id) {
         id = 0;
     }
+    const data = asanaData.find((item) => item.id === id);
+    const markdown = `${import.meta.env.BASE_URL}/${data.markdown}.txt`;
 
     useEffect(() => {
-        const data = asanaData.find((item) => item.id === id);
-
-        const markdown = import(`../../../data/${data.markdown}`);
-        markdown.then((res) => {
-            fetch(res.default)
+            fetch(markdown)
                 .then((res) => res.text())
                 .then((res) => {
                     setFindData(res);
                 });
-        });
     }, [id]);
 
 
@@ -100,9 +97,7 @@ function AsanaDetails({ id }) {
         <div className={classes.root}>
             <div className="technique-container">
                 <article className="prose lg:prose-xl prose-headings:text-indigo-500 prose-strong:text-indigo-500 prose-h1:text-5xl">
-                    <Markdown>
-                        {findData}
-                    </Markdown>
+                <Markdown>{findData && findData}</Markdown>
                 </article>
             </div>
         </div>

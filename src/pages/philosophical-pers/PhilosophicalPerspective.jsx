@@ -94,7 +94,6 @@ const PhilosophicalPerspective = () => {
         <div className={classes.root}>
             <AppBar
                 position="static"
-
             >
                 <Tabs value={value} onChange={handleChange}
                     aria-label="scrollable auto tabs example"
