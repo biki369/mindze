@@ -7,7 +7,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Philosophers from './philosophers/Philosophers';
 import { useMediaQuery } from '@material-ui/core';
-import { modernPhilosophers, stoicismData } from '../../data';
+import { buddhism, christianMysticism, existentialism, hindunism, modernPhilosophers, stoicismData, sufism, taoism } from '../../data/philosophicalPerspectiveData';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -114,7 +114,22 @@ const PhilosophicalPerspective = () => {
 
             </TabPanel>
             <TabPanel value={value} index={2}>
-                <Philosophers />
+                <Philosophers data={hindunism}/>
+            </TabPanel>
+            <TabPanel value={value} index={3}>
+                <Philosophers data={buddhism}/>
+            </TabPanel>
+            <TabPanel value={value} index={4}>
+                <Philosophers data={taoism}/>
+            </TabPanel>
+            <TabPanel value={value} index={5}>
+                <Philosophers data={existentialism}/>
+            </TabPanel>
+            <TabPanel value={value} index={6}>
+                <Philosophers data={sufism}/>
+            </TabPanel>
+            <TabPanel value={value} index={7}>
+                <Philosophers data={christianMysticism}/>
             </TabPanel>
         </div>
     );
