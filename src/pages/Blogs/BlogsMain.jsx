@@ -78,8 +78,6 @@ const BlogsMain = () => {
         setDrawerOpen(!drawerOpen);
     };
 
-
-
     const getId = (id) => {
         if (!id) {
             id = 0

@@ -2,8 +2,6 @@
 //   return prefix + Math.random().toString(36).substring(2);
 // };
 
-
-
 export const menuLits = [
   {
     label: "Home",
@@ -731,10 +729,6 @@ export const quotationsData = [
 ];
 
 
-
-
-
-
 export const blogPostData = [
   {
     category: "Parenting",
@@ -744,132 +738,13 @@ export const blogPostData = [
         title: "How can parents support their child's mental health?",
         subTile: "Supporting Your Child's Mental Health",
         img: "Blog_pics/e1.jpg",
-        data: [
-          {
-            h2: "Open Communication:",
-            p: "Encourage open and honest communication to create a safe space for the child to express their thoughts and feelings. Regularly check in with your child about their day, and actively listen without judgment to any concerns they may have.",
-          },
-          {
-            h2: "Emotional Validation::",
-            p: "Acknowledge and validate your child's emotions, helping them understand that it's okay to feel a range of emotions. If your child expresses sadness over a situation, say,It's okay to feel sad. I'm here to talk about it and support you.",
-          },
-          {
-            h2: "Establishing Routine:",
-            p: "Create a consistent daily routine to provide stability and predictability. Set regular bedtimes, meal times, and study times, helping children feel secure and reducing stress.",
-          },
-          {
-            h2: "Promoting Healthy Sleep:",
-            p: "Ensure your child gets enough sleep as it significantly impacts mood and cognitive function. Establish a calming bedtime routine and limit screen time before bed to promote better sleep.",
-          },
-          {
-            h2: "Encouraging Physical Activity:",
-            p: "Regular exercise is linked to improved mood and reduced stress. Encourage participation in sports, dance, or outdoor activities based on your child's interests.",
-          },
-          {
-            h2: "Teaching Coping Skills:",
-            p: "Equip your child with healthy coping mechanisms for managing stress and challenges. Teach deep-breathing exercises or introduce a ,calm down corner with sensory tools for moments of distress.",
-          },
-          {
-            h2: "Fostering Positive Friendships:",
-            p: "Encourage healthy social connections to support emotional well-being. Facilitate playdates, discuss friendship dynamics, and teach empathy to promote positive social interactions.",
-          },
-          {
-            h2: "Limiting Screen Time:",
-            p: "Monitor and restrict excessive screen time, as it can impact sleep and contribute to mental health issues. Screen time limits and encourage alternative activities such as reading, playing, or engaging in hobbies.",
-          },
-          {
-            h2: "Modeling Healthy Coping:",
-            p: "Demonstrate effective coping strategies through your own behavior. If faced with a challenge, express your feelings and demonstrate problem-solving or seeking support.",
-          },
-          {
-            h2: "Educating on Mental Health:",
-            p: "Normalize conversations about mental health, helping your child understand and recognize their emotions. Use age-appropriate language to discuss emotions, explaining that everyone experiences a range of feelings.",
-          },
-          {
-            h2: "Seeking Professional Help:",
-            p: "Be open to seeking professional support when needed, such as from counselors or therapists. If your child exhibits prolonged signs of distress, consult with a mental health professional to explore appropriate interventions.",
-          },
-          {
-            h2: "Promoting Independence:",
-            p: "Encourage age-appropriate independence, fostering a sense of competence and self-esteem. Allow your child to take on responsibilities and make decisions, reinforcing their sense of capability.",
-          },
-          {
-            h2: "Celebrating Achievements:",
-            p: "Acknowledge and celebrate your child's accomplishments, reinforcing a positive self-image. Praise their efforts in school projects or hobbies, emphasizing the value of hard work and perseverance.",
-          },
-          {
-            h2: "Creating a Safe Home Environment:",
-            p: "Foster a physically and emotionally safe home environment where your child feels secure. Establish clear boundaries, communicate family expectations, and address conflicts with empathy and understanding \nBy integrating these strategies, parents can actively contribute to the positive mental health and well-being of their children, fostering resilience and emotional intelligence for a healthier future.",
-          },
-        ],
+        markdown:'blogs/perenting/0.md'
       },
       {
         title: "How does parental mental health impact children?",
         subTile: "Impact of Parental Mental Health on Children",
         img: "Blog_pics/lifestyle/image1.jpg",
-        desc: "It's important to note that the impact of parental habits on children is complex and influenced by various factors, including the child's temperament, overall family environment, and external influences. Positive parental habits contribute to a nurturing and supportive environment, while negative habits may pose challenges to a child's well-being. Recognizing the influence of parental mental health on children emphasizes the importance of promoting positive habits and seeking support when needed to create a healthy family dynamic.",
-        data: [
-          {
-            h2: "Communication and Emotional Expression:",
-            p: "Limited emotional expression or poor communication skills.",
-            desc: "Impact on Children: Children may struggle with expressing emotions or face challenges in forming healthy relationships due to a lack of modeling.",
-          },
-          {
-            h2: "Stress Management:",
-            p: "Unhealthy stress management, such as constant worry or ineffective coping mechanisms.",
-            desc: "Impact on Children: Children may adopt similar stress management patterns, experiencing heightened anxiety or struggling to cope with stressors.",
-          },
-          {
-            h2: "Self-Care Practices:",
-            p: "Neglecting self-care and prioritizing others constantly.",
-            desc: "Impact on Children: Children may learn to prioritize others' needs over their own, potentially leading to challenges in setting boundaries and practicing self-care.",
-          },
-          {
-            h2: "Healthy Lifestyle Choices:",
-            p: "Poor lifestyle choices, including sedentary behavior and unhealthy eating.",
-            desc: "Impact on Children: Children may adopt similar habits, potentially leading to health issues, low energy, and challenges with focus and concentration.",
-          },
-          {
-            h2: "Conflict Resolution Skills:",
-            p: "Unhealthy conflict resolution, such as frequent arguments or avoiding conflict altogether.",
-            desc: "Impact on Children: Children may struggle with conflict resolution, either becoming overly confrontational or avoiding conflict to an extent that impedes healthy interpersonal relationships.",
-          },
-          {
-            h2: "Positive Role Modeling:",
-            p: "Engaging in positive behaviors and displaying a strong work ethic.",
-            desc: "Impact on Children: Children may be inspired to adopt positive behaviors, a strong work ethic, and a positive attitude toward challenges.",
-          },
-          {
-            h2: "Addiction and Substance Use:",
-            p: "Substance abuse or addiction issues.",
-            desc: "Impact on Children: Children may be at a higher risk of developing substance abuse issues themselves or facing emotional and psychological challenges due to the instability associated with addiction.",
-          },
-          {
-            h2: "Mental Health Stigma:",
-            p: "Stigmatizing mental health or avoiding seeking help.",
-            desc: "Impact on Children: Children may internalize negative attitudes toward mental health, potentially hindering their ability to seek support when needed.",
-          },
-          {
-            h2: "Educational Engagement:",
-            p: "Limited involvement in a child's education or dismissive attitude toward academic achievements.",
-            desc: "IImpact on Children: Children may struggle academically and may not develop a positive attitude toward learning if parental involvement and encouragement are lacking.",
-          },
-          {
-            h2: "Resilience and Coping Skills:",
-            p: "Demonstrating resilience and effective coping strategies in the face of challenges.",
-            desc: "Impact on Children: Children are more likely to develop resilience and positive coping mechanisms when exposed to effective modeling by their parents.",
-          },
-          {
-            h2: "Time Management:",
-            p: "Poor time management skills, leading to constant stress and disorganization.",
-            desc: "Impact on Children: Children may struggle with time management and organizational skills, impacting academic performance and daily responsibilities.",
-          },
-          {
-            h2: "Empathy and Compassion:",
-            p: "Demonstrating empathy and compassion toward others.",
-            desc: "Impact on Children: Children are likely to develop strong interpersonal skills and empathy when they witness and experience these qualities in their parents.",
-          },
-        ],
+        markdown:'blogs/perenting/1.md'
       },
 
       {
@@ -881,6 +756,7 @@ export const blogPostData = [
         img: "Blog_pics/sprituality/image1.jpg",
       },
     ],
+   
   },
   {
     category: "Elderly Mental Health",
@@ -889,11 +765,7 @@ export const blogPostData = [
       {
         title: "How can parents support their child's mental health?",
         img: "Blog_pics/e1.jpg",
-        data: [
-          {
-            title: "How can parents support their child's mental health?",
-          },
-        ],
+        
       },
       {
         title: "How can parents support their child's mental health?",

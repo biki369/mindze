@@ -83,7 +83,7 @@ const BookDetails = () => {
         <BackCurrent link="/books" name="Book Summery" />
         <div className="w-full">
           <article className="prose lg:prose-xl max-w-full prose-headings:text-indigo-500 prose-strong:text-indigo-500 prose-h1:text-5xl">
-            <Markdown>{findData && findData}</Markdown>
+            <Markdown>{findData}</Markdown>
           </article>
         </div>
       </Container>

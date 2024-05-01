@@ -4,8 +4,6 @@ import { asanaData } from '../../../data/yogaMediData'
 import React, { useEffect, useState } from "react";
 import Markdown from "markdown-to-jsx";
 
-
-
 const useStyles = makeStyles((theme) => ({
     root: {
         padding: '6px',
@@ -71,12 +69,8 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-
-
 function AsanaDetails({ id }) {
-
     const [findData, setFindData] = useState("");
-
     const classes = useStyles();
     if (!id) {
         id = 0;
@@ -92,12 +86,11 @@ function AsanaDetails({ id }) {
                 });
     }, [id]);
 
-
     return (
         <div className={classes.root}>
             <div className="technique-container">
                 <article className="prose lg:prose-xl prose-headings:text-indigo-500 prose-strong:text-indigo-500 prose-h1:text-5xl">
-                <Markdown>{findData && findData}</Markdown>
+                <Markdown>{findData}</Markdown>
                 </article>
             </div>
         </div>

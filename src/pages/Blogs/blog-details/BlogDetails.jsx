@@ -1,6 +1,8 @@
 import { makeStyles } from '@material-ui/core';
 import BackCurrent from '../../../components/back-current/BackCurrent';
 import { useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import Markdown from 'markdown-to-jsx';
 const useStyles = makeStyles((theme) => ({
     root: {
         height: "100%",
@@ -28,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
                 "& .b-sub-title": {
                     fontSize: 20,
                     color: "#555",
-                    fontWeight:400,
+                    fontWeight: 400,
                     lineHeight: 1.6,
                 },
                 "& p": {
@@ -46,17 +48,38 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const BlogDetails = () => {
-
     const classes = useStyles()
     const location = useLocation();
     const data = location.state;
+    const [findData, setFindData] = useState("");
+
     // console.log(data, "data", "ajksdgjhasfghgasdf");
+    useEffect(() => {
+        if (!data || !data.markdown) {
+            console.error("Markdown data is missing");
+            return;
+        }
+        const markdown = `${import.meta.env.BASE_URL}/${data.markdown}.txt`;
+        fetch(markdown)
+            .then((res) => res.text())
+            .then((res) => {
+                setFindData(res);
+            })
+            .catch((error) => {
+                console.error("Failed to fetch markdown content", error);
+            });
+    }, [data]);
 
     return (
         <div className={classes.root}>
             <BackCurrent link="/blogs" name="Blogs" />
+            <div className="w-full">
+                <article className="prose lg:prose-xl max-w-full prose-headings:text-indigo-500 prose-strong:text-indigo-500 prose-h1:text-5xl">
+                    <Markdown>{findData}</Markdown>
+                </article>
+            </div>
 
-            <div className="blog-container">
+            {/* <div className="blog-container">
                 <h1 className="blog-title">{data.subTile}</h1>
                 <div className="blog-content">
                     {
@@ -74,7 +97,7 @@ const BlogDetails = () => {
                         data.desc && <p>{data.desc}</p>
                     }
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }
