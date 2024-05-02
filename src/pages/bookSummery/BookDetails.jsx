@@ -61,12 +61,13 @@ const BookDetails = () => {
   const data = location.state;
   // const data = props.location.state;
 
+  const markdown = `${import.meta.env.BASE_URL}/${data.markdown}.txt`;
+
   useEffect(() => {
     if (!data || !data.markdown) {
       console.error("Markdown data is missing");
       return;
     }
-    const markdown = `${import.meta.env.BASE_URL}/${data.markdown}.txt`;
         fetch(markdown)
           .then((res) => res.text())
           .then((res) => {
@@ -75,7 +76,7 @@ const BookDetails = () => {
           .catch((error) => {
             console.error("Failed to fetch markdown content", error);
       });
-  }, [data]);
+  }, []);
 
   return (
     <div className={classes.root}>
