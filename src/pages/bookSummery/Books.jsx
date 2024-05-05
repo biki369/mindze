@@ -8,6 +8,7 @@ import { bookSummeryData } from '../../data';
 import BookCard from '../../components/cards/book-card/BookCard';
 import { useMediaQuery } from '@material-ui/core';
 import { PersonalityDev, careerDev, spirituality, psychology } from '../../data/bookSummery';
+import { useLocation } from 'react-router-dom';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -85,6 +86,9 @@ const Books = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+  const location = useLocation();
+
+  console.log(location, "location");
 
   return (
     <div className={classes.root}>
@@ -107,6 +111,7 @@ const Books = () => {
               <div className='' key={i}>
                 <BookCard
                   data={e}
+                  tabId={0}
                 />
               </div>
             ))
@@ -121,6 +126,7 @@ const Books = () => {
               <div className='' key={i}>
                 <BookCard
                   data={e}
+                  tabId={1}
                 />
               </div>
             ))
@@ -135,6 +141,7 @@ const Books = () => {
               <div className='' key={i}>
                 <BookCard
                   data={e}
+                  tabId={2}
                 />
               </div>
             ))
@@ -148,6 +155,7 @@ const Books = () => {
               <div className='' key={i}>
                 <BookCard
                   data={e}
+                  tabId={3}
                 />
               </div>
             ))

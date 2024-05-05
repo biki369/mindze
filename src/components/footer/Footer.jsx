@@ -163,7 +163,7 @@ const Footer = () => {
             </div>
             <div className="cpy-right">
                 <Typography>"Mindze is not a crisis intervention or emergency service. In case of a crisis, severe symptoms, or a life-threatening situation, seek immediate medical help or contact emergency helplines"</Typography>
-                <Copyright title="Mindze" />
+                <Copyright title="Mindze" to="/" />
             </div>
         </div>
     )

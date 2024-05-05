@@ -15,11 +15,14 @@ const useStyles = makeStyles((theme) => ({
       "& .blog": {
         padding: 10,
         cursor: "pointer",
+        width: 400,
         transition: "all 0.3s",
         "&:hover": {
           transform: 'scale(0.990)'
         },
-        width: 400,
+        [theme.breakpoints.down(500)]: {
+          width: "100%",
+        },
         "& .blog-img": {
           width: "100%",
           height: 460,

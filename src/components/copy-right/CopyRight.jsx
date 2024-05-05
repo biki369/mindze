@@ -5,7 +5,7 @@ export function Copyright(props) {
     return (
       <Typography variant="body2" align="center" {...props}>
         {'Copyright © '}
-        <Link color="inherit" href="/">
+        <Link color="inherit" href={props.to}>
           {props.title}
         </Link>{' '}
         {new Date().getFullYear()}

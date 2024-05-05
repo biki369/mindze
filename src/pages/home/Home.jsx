@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         // height:"100%",
         objectFit: "cover",
+        filter: "brightness(0.5)",
         zIndex: 1,
         [theme.breakpoints.down(600)]: {
           height: "100%",
@@ -34,15 +35,17 @@ const useStyles = makeStyles((theme) => ({
       "& .sliderText": {
         position: "absolute",
         zIndex: 99,
-        top: '30%',
-        left: "30%",
+        top: '50%',
+        left: "50%",
+        transform: "translate(-50%,-50%)",
+        fontFamily:  "Grape Nuts, cursive",
         color: "#fff",
-        fontSize: '40px',
+        fontSize: '50px',
         [theme.breakpoints.down(600)]: {
-          fontSize: '30px',
-          top: '40%',
+          fontSize: '36px',
+          // top: '40%',
           textAlign: "center",
-          left: "10%",
+          // left: "10%",
         },
       }
     },
@@ -150,38 +153,32 @@ const useStyles = makeStyles((theme) => ({
 
 const Home = () => {
   const classes = useStyles();
+  // const [spiritualData, setSpiritualData] = useState();
+  // const [psychologicalData, setPsychologicalData] = useState();
+  // const [isLoading, setIsLoading] = useState(false)
 
+  // useEffect(() => {
+  //   getConsultant("api/consultant/spiritual",localStorage.getItem("token")).then((data) =>
+  //     setSpiritualData(data),
+  //   )
+  // }, [isLoading])
 
-  const [spiritualData, setSpiritualData] = useState();
-  const [psychologicalData, setPsychologicalData] = useState();
-  const [isLoading, setIsLoading] = useState(false)
-
-  useEffect(() => {
-    getConsultant("api/consultant/spiritual",localStorage.getItem("token")).then((data) =>
-      setSpiritualData(data),
-      setIsLoading(true)
-    )
-    // setIsLoading(false)
-  }, [isLoading])
-
-  useEffect(() => {
-    getConsultant("api/consultant/psychological",localStorage.getItem("token")).then((data) =>
-      setPsychologicalData(data),
-      setIsLoading(true)
-    )
-    // setIsLoading(false)
-  }, [isLoading])
+  // useEffect(() => {
+  //   getConsultant("api/consultant/psychological",localStorage.getItem("token")).then((data) =>
+  //     setIsLoading(true)
+  //   )
+  // }, [isLoading])
 
   // console.log(spiritualData, "==================s");
   // console.log(psychologicalData, "==================");
+  // style={{backgroundImage: `url(${e.img}), linearGradient(#0001, #0001)`, 
+  //               backgroundPosition:"center center",backgroundSize:"cover" }}
 
   return (
     <div className={classes.root}>
 
       <div className="hero">
         <Swiper
-          // spaceBetween={50}
-          // spaceBetween={30}
           centeredSlides={true}
           autoplay={{
             delay: 1000,
@@ -193,15 +190,11 @@ const Home = () => {
           modules={[Pagination, Navigation, Scrollbar, Autoplay]}
           navigation
           pagination={{ clickable: true }}
-        // Autoplay
-        // scrollbar={{ draggable: true }}
-        // onSlideChange={() => console.log('slide change')}
-        // onSwiper={(swiper) => console.log(swiper)}
         >
           {
             heroSliderImg.map((e, i) => (
               <SwiperSlide key={i}>
-                <Box className='heroImgBox'>
+                <Box className='heroImgBox' >
                   <img src={e.img} alt="slider" className='heroImg'/>
                   <Typography className='sliderText'>{e.text}</Typography>
                 </Box>

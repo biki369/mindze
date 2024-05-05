@@ -11,12 +11,12 @@ const useStyles = makeStyles((theme) => ({
         }
     },
 }));
-const BackCurrent = ({ link,name }) => {
+const BackCurrent = ({ link,name, id}) => {
     const classes = useStyles();
     return (
         <div className={classes.root}>
             <Box>
-                <Link to={link} className="link-back">
+                <Link to={link} className="link-back" state={id}>
                     <IconButton>
                         <ArrowBackIcon />
                     </IconButton>

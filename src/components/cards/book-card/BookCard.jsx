@@ -2,11 +2,6 @@ import { makeStyles } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
     root: {
-        // flexGrow: 1,
-        // display: "flex",
-        // alignItems: "center",
-        // justifyContent: "center",
-
         "& .book-card ": {
             width: " 280px",
             padding: "16px",
@@ -16,12 +11,10 @@ const useStyles = makeStyles((theme) => ({
             "& .boxShadow": "0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)",
 
             "& .book-card__book": {
-                // transform: "rotate3d(0, -1, 0, 30deg) translate(-15px, -30px)"
-                transform: "rotate3d(0, 0, 0, 0deg) translate(0,0)"
+                transform: "rotate3d(0, 0, 0, 0deg) translate(0,0)",
             },
             "& .book-card__book-back": {
-                boxShadow: "none"
-                // boxShadow: "5px 10px 15px rgba(0, 0, 0, 0.35)"
+                boxShadow: "none",
             },
             "& .book-card__book-side": { opacity: 1 },
             " &:hover": {
@@ -33,16 +26,6 @@ const useStyles = makeStyles((theme) => ({
                 },
                 "& .book-card__book-side": { opacity: 1 }
             },
-
-            // " &:hover": {
-            //     "& .book-card__book": {
-            //         transform: "rotate3d(0, 0, 0, 0deg) translate(0,0)"
-            //     },
-            //     "& .book-card__book-back": {
-            //         boxShadow: "none"
-            //     },
-            //     "& .book-card__book-side": { opacity: 0 }
-            // },
         },
 
         "& .book-card__cover": {
@@ -89,32 +72,33 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const BookCard = ({ data }) => {
+const BookCard = ({ data, tabId }) => {
+
     const classes = useStyles();
+
     return (
         <div className={classes.root}>
             <Link to={"/booksummery/:3232"} state={data}>
-            <div className="book-card">
-                <div className="book-card__cover">
-                    <div className="book-card__book">
-                        <div className="book-card__book-front">
-                            <img className="book-card__img" src={data.url} />
+                <div className="book-card">
+                    <div className="book-card__cover">
+                        <div className="book-card__book">
+                            <div className="book-card__book-front">
+                                <img className="book-card__img" src={data.url} />
+                            </div>
+                            <div className="book-card__book-back"></div>
+                            <div className="book-card__book-side"></div>
                         </div>
-                        <div className="book-card__book-back"></div>
-                        <div className="book-card__book-side"></div>
+                    </div>
+                    <div>
+                        <div className="book-card__title">
+                            {data.title}
+                        </div>
+                        <div className="book-card__author">
+                            {data.author}
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <div className="book-card__title">
-                        {data.title}
-                    </div>
-                    <div className="book-card__author">
-                        {data.author}
-                    </div>
-                </div>
-            </div>
             </Link>
-
         </div>
     )
 }

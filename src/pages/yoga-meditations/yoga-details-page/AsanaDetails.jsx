@@ -79,7 +79,7 @@ function AsanaDetails({ id }) {
         id = 0;
     }
     const data = asanaData.find((item) => item.id === id);
-    
+
     // read markdown file
     // const markdownPath = `${import.meta.env.BASE_URL}/${data.markdown}.txt`;
     const markdownPath = `${data.markdown}.txt`;

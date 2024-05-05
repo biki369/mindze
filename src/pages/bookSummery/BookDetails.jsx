@@ -78,6 +78,8 @@ const BookDetails = () => {
       })
   }, [data]);
 
+  // console.log( location.state);
+
   return (
     <div className={classes.root}>
       {

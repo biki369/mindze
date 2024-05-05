@@ -26,16 +26,23 @@ const useStyles = makeStyles((theme) => ({
                 display: 'none'
             },
 
+            // "& .side-link": {
+            //     width: "100%",
+            //     "& button": {
+            //         // backgroundColor:"green",
+            //         display: 'block',
+            //         margin: "10px 0",
+            //         // padding:"10px",
+            //         // fontSize:'1.3rem',
+            //         width: "100%",
+
+            //     }
+            // },
             "& .side-link": {
                 width: "100%",
                 "& button": {
-                    // backgroundColor:"green",
-                    display: 'block',
-                    margin: "10px 0",
-                    // padding:"10px",
-                    // fontSize:'1.3rem',
-                    width: "100%",
-
+                    // display: 'block',
+                    minWidth: "100%",
                 }
             },
 
@@ -78,8 +85,6 @@ const BlogsMain = () => {
         setDrawerOpen(!drawerOpen);
     };
 
-
-
     const getId = (id) => {
         if (!id) {
             id = 0
@@ -96,7 +101,7 @@ const BlogsMain = () => {
                     blogPostData.map((data) => (
                         <div key={data.id} className='side-link'>
                             <Button
-                                onClick={() => getId(data.id)}
+                                onClick={() => getId(data.id,toggleDrawer())}
                                 style={{
                                     color: sendId === data.id ? '#fff' : '#545e6f',
                                     background: sendId === data.id ? '#3f51b5' : '',
