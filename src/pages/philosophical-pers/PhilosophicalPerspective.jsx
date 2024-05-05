@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
         "& .MuiTab-root": {
             padding: 0,
             [theme.breakpoints.down(600)]: {
-                width: '163px',
+                width: '173px',
             }
         },
         "& .MuiTabs-scrollButtonsDesktop": {
@@ -57,9 +57,13 @@ const useStyles = makeStyles((theme) => ({
                 display: 'flex',
             },
         },
-        "& .MuiTabs-flexContainer": {
+        
+          "& .MuiTabs-flexContainer": {
             justifyContent: 'center',
-        },
+            [theme.breakpoints.down('md')]: {
+              justifyContent: 'start',
+            },
+          },
 
     },
 }));
@@ -91,6 +95,7 @@ const PhilosophicalPerspective = () => {
         <div className={classes.root}>
             <AppBar
                 position="static"
+                
             >
                 <Tabs value={value} onChange={handleChange}
                     aria-label="scrollable auto tabs example"
