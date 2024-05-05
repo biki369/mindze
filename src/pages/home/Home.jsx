@@ -161,7 +161,7 @@ const Home = () => {
       setSpiritualData(data),
       setIsLoading(true)
     )
-    setIsLoading(false)
+    // setIsLoading(false)
   }, [isLoading])
 
   useEffect(() => {
@@ -169,7 +169,7 @@ const Home = () => {
       setPsychologicalData(data),
       setIsLoading(true)
     )
-    setIsLoading(false)
+    // setIsLoading(false)
   }, [isLoading])
 
   // console.log(spiritualData, "==================s");

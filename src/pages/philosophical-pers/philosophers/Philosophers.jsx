@@ -66,8 +66,8 @@ const Philosophers = ({data}) => {
         <div className={classes.root}>
             <div className="philosophers-container">
                 {
-                    data.map((e, i) => (
-                        <div className="philosophers-box" key={i} style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(${e.img})` }}>
+                    data?.map((e, i) => (
+                        <div className="philosophers-box" key={i} style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(${e.image})` }}>
                             <div className="test-title" >
                                 <Link  state={e} to={`/philosophers/369`}><h3>{e.title}</h3></Link>
                             </div>

@@ -7,8 +7,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Philosophers from './philosophers/Philosophers';
 import { useMediaQuery } from '@material-ui/core';
-import { buddhism, christianMysticism, existentialism, hindunism, modernPhilosophers, stoicismData, sufism, taoism } from '../../data/philosophicalPerspectiveData';
-
+import {stoicismData,modernPhilosophers, hindunismData, buddhismData, taoismData, existentialismData, christianData, sufismData} from '../../data/philosophicalPerspective'
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
 
@@ -70,7 +69,6 @@ const PhilosophicalPerspective = () => {
     const theme = useTheme();
     const mobileDevice = useMediaQuery(theme.breakpoints.down('md'));
 
-
     const philosophicalTabData = [
         "Modern Spirituality Thinkers",
         "Stoicism",
@@ -81,7 +79,6 @@ const PhilosophicalPerspective = () => {
         "Sufism",
         "Christian Mysticism",
     ]
-
 
     const classes = useStyles();
     const [value, setValue] = React.useState(0);
@@ -107,29 +104,29 @@ const PhilosophicalPerspective = () => {
                 </Tabs>
             </AppBar>
             <TabPanel value={value} index={0}>
-                <Philosophers  data={modernPhilosophers}/>
+                <Philosophers data={modernPhilosophers} />
             </TabPanel>
             <TabPanel value={value} index={1}>
-                <Philosophers data={stoicismData}/>
+                <Philosophers data={stoicismData} />
 
             </TabPanel>
             <TabPanel value={value} index={2}>
-                <Philosophers data={hindunism}/>
+                <Philosophers data={hindunismData}/>
             </TabPanel>
             <TabPanel value={value} index={3}>
-                <Philosophers data={buddhism}/>
+                <Philosophers data={buddhismData}/>
             </TabPanel>
             <TabPanel value={value} index={4}>
-                <Philosophers data={taoism}/>
+                <Philosophers data={taoismData}/>
             </TabPanel>
             <TabPanel value={value} index={5}>
-                <Philosophers data={existentialism}/>
+                <Philosophers data={existentialismData}/>
             </TabPanel>
             <TabPanel value={value} index={6}>
-                <Philosophers data={sufism}/>
+                <Philosophers data={sufismData}/>
             </TabPanel>
             <TabPanel value={value} index={7}>
-                <Philosophers data={christianMysticism}/>
+                <Philosophers data={christianData}/>
             </TabPanel>
         </div>
     );

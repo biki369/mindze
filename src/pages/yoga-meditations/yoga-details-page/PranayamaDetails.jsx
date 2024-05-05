@@ -98,7 +98,7 @@ function PranayamaDetails({ id }) {
     return (
         <div className={classes.root}>
             <div className="technique-container">
-                <article className="prose lg:prose-xl prose-headings:text-indigo-500 prose-strong:text-indigo-500 prose-h1:text-5xl">
+                <article className="prose lg:prose-xl prose-headings:text-indigo-500 prose-strong:text-indigo-500 prose-h1:text-5xl mt-6">
                     <Markdown>
                         {findData}
                     </Markdown>

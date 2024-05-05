@@ -171,14 +171,9 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-
 const SpiritualCounslr = () => {
-
     const classes = useStyles();
-
-
     const todayDate = new Date();
-
     const [date, setDate] = useState(todayDate)
     const [isLoading, setIsLoading] = useState(false)
 

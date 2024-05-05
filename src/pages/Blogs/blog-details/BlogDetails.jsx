@@ -1,8 +1,9 @@
-import { makeStyles } from '@material-ui/core';
+import { Container, makeStyles } from '@material-ui/core';
 import BackCurrent from '../../../components/back-current/BackCurrent';
 import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import Markdown from 'markdown-to-jsx';
+import Markdown from "markdown-to-jsx";
+import Loader from '../../../components/loader/Loader';
 const useStyles = makeStyles((theme) => ({
     root: {
         height: "100%",
@@ -48,56 +49,42 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const BlogDetails = () => {
-    const classes = useStyles()
+
+    const classes = useStyles();
     const location = useLocation();
-    const data = location.state;
     const [findData, setFindData] = useState("");
 
-    // console.log(data, "data", "ajksdgjhasfghgasdf");
+    const data = location.state;
+    // const baseUrl = "http://localhost:5173/blogs";
+
+    const markdown = `${data.markdown}.txt`;
+
     useEffect(() => {
-        if (!data || !data.markdown) {
-            console.error("Markdown data is missing");
-            return;
-        }
-        const markdown = `${import.meta.env.BASE_URL}/${data.markdown}.txt`;
         fetch(markdown)
             .then((res) => res.text())
             .then((res) => {
-                setFindData(res);
+                setFindData(res)
             })
-            .catch((error) => {
-                console.error("Failed to fetch markdown content", error);
-            });
     }, [data]);
+    // console.log(markdown,"blogs");
 
     return (
         <div className={classes.root}>
-            <BackCurrent link="/blogs" name="Blogs" />
-            <div className="w-full">
-                <article className="prose lg:prose-xl max-w-full prose-headings:text-indigo-500 prose-strong:text-indigo-500 prose-h1:text-5xl">
-                    <Markdown>{findData}</Markdown>
-                </article>
-            </div>
-
-            {/* <div className="blog-container">
-                <h1 className="blog-title">{data.subTile}</h1>
-                <div className="blog-content">
-                    {
-                        data.data.map((item, index) => (
-                            <div key={index}>
-                                <h2 className="b-sub-title">{item.h2}</h2>
-                                <p className="desc">{item.p}</p>
-                                {
-                                    item.desc && <p className="desc">{item.desc}</p>
-                                }
+            {
+                findData.length === 0 ? (<Loader />) : (
+                    <>
+                        <BackCurrent link="/blogs" name="Blogs" />
+                        <Container className="blog-container">
+                            <div className="w-full">
+                                <article className="prose lg:prose-xl max-w-full prose-headings:text-indigo-500 prose-strong:text-indigo-500 prose-h1:text-5xl mt-6">
+                                    <Markdown>{findData}</Markdown>
+                                </article>
                             </div>
-                        ))
-                    }
-                    {
-                        data.desc && <p>{data.desc}</p>
-                    }
-                </div>
-            </div> */}
+                        </Container>
+                    </>
+                )
+            }
+
         </div>
     )
 }

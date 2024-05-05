@@ -80,37 +80,37 @@ export const heroSliderImg = [
 
 export const reviewData = [
   {
-    name: "Name",
+    name: "Title",
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum quod atque dolore iure? ",
     img: "philosophers_image/b_2.jpg",
   },
   {
     img: "philosophers_image/b_3.jpg",
-    name: "Name",
+    name: "Title",
 
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum quod ",
   },
   {
     img: "philosophers_image/b_4.jpg",
-    name: "Name",
+    name: "Title",
 
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum quod ",
   },
   {
     img: "philosophers_image/mst_1.jpg",
-    name: "Name",
+    name: "Title",
 
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum quod ",
   },
   {
     img: "philosophers_image/b_6.jpg",
-    name: "Name",
+    name: "Title",
 
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum quod ",
   },
   {
     img: "philosophers_image/s_3.jpg",
-    name: "Name",
+    name: "Title",
 
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum quod ",
   },
@@ -728,7 +728,6 @@ export const quotationsData = [
   },
 ];
 
-
 export const blogPostData = [
   {
     category: "Parenting",
@@ -736,49 +735,101 @@ export const blogPostData = [
     blogs: [
       {
         title: "How can parents support their child's mental health?",
-        subTile: "Supporting Your Child's Mental Health",
-        img: "Blog_pics/e1.jpg",
-        markdown:'blogs/perenting/0.md'
-      },
-      {
-        title: "How does parental mental health impact children?",
-        subTile: "Impact of Parental Mental Health on Children",
-        img: "Blog_pics/lifestyle/image1.jpg",
-        markdown:'blogs/perenting/1.md'
+        img: "Blog_pics/p1.png",
+        markdown: "/blogs_post_data/parenting/1",
       },
 
       {
-        title: "How can parents support their child's mental health?",
-        img: "Blog_pics/sports/image1.jpg",
-      },
-      {
-        title: "How can parents support their child's mental health?",
-        img: "Blog_pics/sprituality/image1.jpg",
+        title: "How does parental mental health impact children?",
+        img: "Blog_pics/p2.png",
+        markdown: "/blogs_post_data/parenting/2",
       },
     ],
-   
   },
   {
     category: "Elderly Mental Health",
     id: 1,
     blogs: [
       {
-        title: "How can parents support their child's mental health?",
+        title: "How does mental health change with age?",
         img: "Blog_pics/e1.jpg",
-        
+        markdown: "/blogs_post_data/elderlyMentalHealth/1",
       },
+    ],
+  },
+  {
+    category: "Sports",
+    id: 2,
+    blogs: [
       {
-        title: "How can parents support their child's mental health?",
-        img: "Blog_pics/lifestyle/image1.jpg",
-      },
-      {
-        title: "How can parents support their child's mental health?",
+        title: "HOW DOES PARTICIPATING IN SPORTS IMPACT MENTAL HEALTH?",
         img: "Blog_pics/sports/image1.jpg",
+        markdown: "/blogs_post_data/sports/1",
       },
+
+    ],
+  },
+  {
+    category: "Technology",
+    id: 3,
+    blogs: [
       {
-        title: "How can parents support their child's mental health?",
-        img: "Blog_pics/sprituality/image1.jpg",
+        title: "How is technology affecting our mental health in the digital age?",
+        img: "Blog_pics/tech/image1.jpg",
+        markdown: "/blogs_post_data/technology/1",
       },
+
+    ],
+  },
+  {
+    category: "Society",
+    id: 4,
+    blogs: [
+      {
+        title: "How does societal stigma impact the willingness of individuals to seek mental health support?",
+        img: "Blog_pics/e1.jpg",
+        markdown: "/blogs_post_data/society/1",
+      },
+
+    ],
+  },
+  {
+    category: "Teenagers Mental Health",
+    id: 5,
+    blogs: [
+      {
+        title: "How do societal expectations and stereotypes affect the mental health of teenagers?",
+        img: "Blog_pics/t1.png",
+        markdown: "/blogs_post_data/teenagersMentalHealth/1",
+      },
+
+     
+    ],
+  },
+  {
+    category: "Spiritualityh",
+    id: 6,
+    blogs: [
+      {
+        title: "How does the concept of 'being present' relate to mental health and spiritual awareness?",
+        img: "Blog_pics/sprituality/image1.jpg",
+        markdown: "/blogs_post_data/spirituality/1",
+      },
+
+   
+    ],
+  },
+  {
+    category: "Lifestyle",
+    id: 7,
+    blogs: [
+      {
+        title: "How does financial stress affect mental health?",
+        img: "Blog_pics/lifestyle/image1.jpg",
+        markdown: "/blogs_post_data/lifestyle/1",
+      },
+
+     
     ],
   },
 ];
@@ -1370,11 +1421,11 @@ export const quickMeditationTechiquesData = [
       },
       {
         head: "Patience and Persistence:",
-        p:"Allow your feelings of compassion to develop naturally.",
+        p: "Allow your feelings of compassion to develop naturally.",
       },
       {
-        head:"Mindful Reminders:",
-        p:"Throughout the day, remind yourself to view situations and people with loving eyes.",
+        head: "Mindful Reminders:",
+        p: "Throughout the day, remind yourself to view situations and people with loving eyes.",
       },
     ],
     cautions: [
@@ -1383,15 +1434,15 @@ export const quickMeditationTechiquesData = [
         p: "Be prepared for emotional responses and handle them gently.",
       },
       {
-        head:"Respecting Boundaries:",
+        head: "Respecting Boundaries:",
         p: " Avoid forcing feelings of forgiveness; let them develop naturally.",
       },
       {
-        head:"Self-Compassion:",
+        head: "Self-Compassion:",
         p: "Remember to direct loving eyes towards yourself as well.",
       },
       {
-        head:"Balance:",
+        head: "Balance:",
         p: " Balance this practice with other forms of meditation for a well-rounded approach.",
       },
     ],
@@ -1402,14 +1453,16 @@ export const quickMeditationTechiquesData = [
     title: "Sufi Heart Meditation (Hridaya)",
     subTitle: "Sufi Heart Meditation",
 
-    intro:"Sufi Heart Meditation, known as Hridaya, is a spiritual journey inward, focusing on the heart to discover inner peace and connection. This form of meditation is a cornerstone in Sufi practice, emphasizing love, compassion, and emotional healing.",
+    intro:
+      "Sufi Heart Meditation, known as Hridaya, is a spiritual journey inward, focusing on the heart to discover inner peace and connection. This form of meditation is a cornerstone in Sufi practice, emphasizing love, compassion, and emotional healing.",
 
-    understanding:"Hridaya meditation originates from Sufi traditions, where the heart is seen as a spiritual center. This practice involves deep contemplation and connection with one's heart, fostering a sense of unity and inner serenity.",
+    understanding:
+      "Hridaya meditation originates from Sufi traditions, where the heart is seen as a spiritual center. This practice involves deep contemplation and connection with one's heart, fostering a sense of unity and inner serenity.",
 
     benefits: [
       {
         head: "Emotional Healing:",
-        p:"Helps in processing and healing emotional wounds.",
+        p: "Helps in processing and healing emotional wounds.",
       },
       {
         head: "Enhanced Compassion: ",
@@ -1417,7 +1470,7 @@ export const quickMeditationTechiquesData = [
       },
       {
         head: "Spiritual Connection:",
-        p:"Strengthens the connection with the inner self and the divine.",
+        p: "Strengthens the connection with the inner self and the divine.",
       },
       {
         head: "Stress Reduction: ",
@@ -1463,11 +1516,11 @@ export const quickMeditationTechiquesData = [
       },
       {
         head: "Patience and Persistence:",
-        p:"Approach the practice with an open heart and patience.",
+        p: "Approach the practice with an open heart and patience.",
       },
       {
-        head:"Journaling Post Meditation:",
-        p:"Consider journaling any insights or feelings post-meditation.",
+        head: "Journaling Post Meditation:",
+        p: "Consider journaling any insights or feelings post-meditation.",
       },
     ],
 
@@ -1477,15 +1530,15 @@ export const quickMeditationTechiquesData = [
         p: "Be prepared for emotional experiences; seek guidance if overwhelming.",
       },
       {
-        head:"Physical Comfort: ",
+        head: "Physical Comfort: ",
         p: " Adjust your position if discomfort arises.",
       },
       {
-        head:"Distractions",
+        head: "Distractions",
         p: "Gently refocus if the mind wanders.",
       },
       {
-        head:"Medical Advice: ",
+        head: "Medical Advice: ",
         p: " Those with mental health conditions should consult a professional before beginning.",
       },
     ],
@@ -1497,25 +1550,27 @@ export const quickMeditationTechiquesData = [
     title: "Taoist Inner Smile Meditation",
     subTitle: "Taoist Inner Smile Meditation",
 
-    intro:"Taoist Inner Smile Meditation is a transformative practice rooted in ancient Chinese Taoism. This meditation focuses on cultivating joy and healing by directing a smile inward to various parts of the body.",
+    intro:
+      "Taoist Inner Smile Meditation is a transformative practice rooted in ancient Chinese Taoism. This meditation focuses on cultivating joy and healing by directing a smile inward to various parts of the body.",
 
-    understanding:"This unique form of meditation combines visualization and mindfulness to encourage emotional balance and internal harmony. It involves visualizing a smile and directing it towards different organs and areas within the body, promoting a sense of deep relaxation and well-being.",
+    understanding:
+      "This unique form of meditation combines visualization and mindfulness to encourage emotional balance and internal harmony. It involves visualizing a smile and directing it towards different organs and areas within the body, promoting a sense of deep relaxation and well-being.",
 
     benefits: [
       {
         head: "Emotional Balance: ",
-        p:"Helps in managing and stabilizing emotions.",
+        p: "Helps in managing and stabilizing emotions.",
       },
       {
-        head:"Stress Reduction:",
+        head: "Stress Reduction:",
         p: "Effectively lowers stress and anxiety levels.",
       },
       {
-        head:"Internal Healing: ",
-        p:"Enhances the healing processes within the body.",
+        head: "Internal Healing: ",
+        p: "Enhances the healing processes within the body.",
       },
       {
-        head:"Increased Self-Awareness:",
+        head: "Increased Self-Awareness:",
         p: "Fosters a deeper understanding of oneself.",
       },
     ],
@@ -1562,11 +1617,11 @@ export const quickMeditationTechiquesData = [
       },
       {
         head: "Gentle Focus:",
-        p:"Keep the focus gentle and loving.",
+        p: "Keep the focus gentle and loving.",
       },
       {
-        head:"Patience:",
-        p:"Allow the effects to manifest gradually with regular practice.",
+        head: "Patience:",
+        p: "Allow the effects to manifest gradually with regular practice.",
       },
     ],
 
@@ -1576,15 +1631,15 @@ export const quickMeditationTechiquesData = [
         p: "Be aware of how your body responds to the meditation.",
       },
       {
-        head:"Emotional Sensitivity: ",
+        head: "Emotional Sensitivity: ",
         p: "Approach the practice with care if you are emotionally vulnerable.",
       },
       {
-        head:"Personal Space: ",
+        head: "Personal Space: ",
         p: "Ensure a private and undisturbed space for practice.",
       },
       {
-        head:"Medical Conditions: ",
+        head: "Medical Conditions: ",
         p: "Consult with a healthcare provider if you have serious health issues.",
       },
     ],
@@ -1596,25 +1651,27 @@ export const quickMeditationTechiquesData = [
     title: "Gratitude Meditation",
     subTitle: "Gratitude Meditation",
 
-    intro:"Gratitude Meditation is a transformative practice that focuses on appreciating life's blessings. This form of meditation fosters an attitude of thankfulness, enhancing overall well-being and happiness.",
+    intro:
+      "Gratitude Meditation is a transformative practice that focuses on appreciating life's blessings. This form of meditation fosters an attitude of thankfulness, enhancing overall well-being and happiness.",
 
-    understanding:"Gratitude Meditation involves consciously reflecting on aspects of life you are thankful for. This practice, deeply rooted in various spiritual traditions, is known for its ability to uplift and bring positivity to everyday experiences.",
+    understanding:
+      "Gratitude Meditation involves consciously reflecting on aspects of life you are thankful for. This practice, deeply rooted in various spiritual traditions, is known for its ability to uplift and bring positivity to everyday experiences.",
 
     benefits: [
       {
         head: "Increased Positivity: ",
-        p:" Regularly practicing gratitude boosts overall optimism.",
+        p: " Regularly practicing gratitude boosts overall optimism.",
       },
       {
-        head:"Stress Reduction: ",
+        head: "Stress Reduction: ",
         p: " It helps in alleviating stress by shifting focus to positive aspects.",
       },
       {
-        head:"Enhanced Well-being:",
-        p:"Fosters a sense of contentment and well-being.",
+        head: "Enhanced Well-being:",
+        p: "Fosters a sense of contentment and well-being.",
       },
       {
-        head:"Improved Relationships:",
+        head: "Improved Relationships:",
         p: " Encourages appreciation and strengthens connections with others.",
       },
     ],
@@ -1657,11 +1714,11 @@ export const quickMeditationTechiquesData = [
       },
       {
         head: "Short Sessions: ",
-        p:" Begin with short durations and gradually extend the time.",
+        p: " Begin with short durations and gradually extend the time.",
       },
       {
-        head:"Diverse Focus: ",
-        p:"Vary the aspects you reflect on to keep the practice fresh.",
+        head: "Diverse Focus: ",
+        p: "Vary the aspects you reflect on to keep the practice fresh.",
       },
     ],
 
@@ -1671,15 +1728,15 @@ export const quickMeditationTechiquesData = [
         p: "Acknowledge that it's normal to have days when gratitude feels more challenging.",
       },
       {
-        head:"Personal Limits:",
+        head: "Personal Limits:",
         p: "Be mindful of your emotional state and practice accordingly.",
       },
       {
-        head:"Realistic Expectations:",
+        head: "Realistic Expectations:",
         p: "Understand that changes in outlook may take time.",
       },
       {
-        head:"Mindful Practice:",
+        head: "Mindful Practice:",
         p: "Stay present and avoid mechanical repetition.",
       },
     ],

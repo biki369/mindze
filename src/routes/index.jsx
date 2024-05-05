@@ -115,8 +115,6 @@ export const routes = createBrowserRouter([
             path: "/join-counselor",
             element: <JoinCounselor/>,
           },
-        
-          
         ],
       },
 ])

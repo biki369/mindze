@@ -3,6 +3,7 @@ import BackCurrent from '../../../components/back-current/BackCurrent';
 import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Markdown from 'markdown-to-jsx';
+import Loader from '../../../components/loader/Loader';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -52,37 +53,36 @@ const PhilosopherDetails = () => {
     const classes = useStyles();
 
     const location = useLocation();
-    const data = location.state;
     const [findData, setFindData] = useState("");
+    const data = location.state;
+
+    const markdown = `${data.markdown}.txt`;
 
     useEffect(() => {
-        if (!data || !data.markdown) {
-            console.error("Markdown data is missing");
-            return;
-        }
-        const markdown = `${import.meta.env.BASE_URL}/${data.markdown}.txt`;
         fetch(markdown)
             .then((res) => res.text())
             .then((res) => {
-                setFindData(res);
+                setFindData(res)
             })
-            .catch((error) => {
-                console.error("Failed to fetch markdown content", error);
-            });
-    }, [data])
+    }, [data]);
 
     return (
         <div className={classes.root}>
-            <BackCurrent link="/philosophers" name="Philosophers" />
-            <Container>
-                <div className="w-full">
-                    <article className="prose lg:prose-xl max-w-full prose-headings:text-indigo-500 prose-strong:text-indigo-500 prose-h1:text-5xl">
-                        <Markdown>{findData}</Markdown>
-                    </article>
-                </div>
-            </Container>
+            {
+                findData.length === 0 ? (<Loader />) : (<>
+                    <BackCurrent link="/philosophers" name="Philosophers" />
+                    <Container>
+                        <article className="prose lg:prose-xl prose-headings:text-indigo-500 prose-strong:text-indigo-500 prose-h1:text-5xl">
+                            <Markdown>
+                                {findData}
+                            </Markdown>
+                        </article>
+                    </Container>
+
+                </>)
+            }
         </div>
     )
 }
 
-export default PhilosopherDetails
+export default PhilosopherDetails;

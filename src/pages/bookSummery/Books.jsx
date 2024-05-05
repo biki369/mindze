@@ -67,6 +67,9 @@ const useStyles = makeStyles((theme) => ({
     },
     "& .MuiTabs-flexContainer": {
       justifyContent: 'center',
+      [theme.breakpoints.down('md')]: {
+        justifyContent: 'start',
+      },
     },
 
   },

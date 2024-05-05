@@ -5707,125 +5707,125 @@ export const asanaData = [
     title: "Tadasana",
     id: 0,
     // markdown: md
-    markdown: './asanas/0.md'
+    markdown: '/asanas/0'
 
   },
   {
     title: "Adho Mukha Svanasana",
     id: 1,
-    markdown: './asanas/1.md'
+    markdown: '/asanas/1'
     // markdown: md1,
   },
   {
     title: "Urdhva Mukha Svanasana",
     id: 2,
-    markdown: './asanas/2.md'
+    markdown: '/asanas/2'
   },
   {
     title: "Balasana",
     id: 3,
-    markdown: './asanas/3.md'
+    markdown: '/asanas/3'
   },
   {
     title: "Virabhadrasana",
     id: 4,
-    markdown: './asanas/4.md'
+    markdown: '/asanas/4'
   },
   {
     title: "Virabhadrasana II",
     id: 5,
-    markdown: './asanas/5.md'
+    markdown: '/asanas/5'
   },
   {
     title: "Virabhadrasana III",
     id: 6,
-    markdown: './asanas/6.md'
+    markdown: '/asanas/6'
   },
   {
     title: "Trikonasana",
     id: 7,
-    markdown: './asanas/7.md'
+    markdown: '/asanas/7'
   },
   {
     title: "Sukhasana",
     id: 8,
-    markdown: './asanas/8.md'
+    markdown: '/asanas/8'
   }, {
     title: "Paschimottanasana",
     id: 9,
-    markdown: './asanas/9.md'
+    markdown: '/asanas/9'
   }, {
     title: "Dhanurasana",
     id: 10,
-    markdown: './asanas/10.md'
+    markdown: '/asanas/10'
   }, {
     title: "Setu Bandhasana",
     id: 11,
-    markdown: './asanas/11.md'
+    markdown: '/asanas/11'
   }, {
     title: "Marjarasana",
     id: 12,
-    markdown: './asanas/12.md'
+    markdown: '/asanas/12'
   }, {
     title: "Utthita Parsvakonasana",
     id: 13,
-    markdown: './asanas/13.md'
+    markdown: '/asanas/13'
   }, {
     title: "Vrikshasana",
     id: 14,
-    markdown: './asanas/14.md'
+    markdown: '/asanas/14'
   }, {
     title: "Halasana",
     id: 15,
-    markdown: './asanas/15.md'
+    markdown: '/asanas/15'
   }, {
     title: "Garudasana",
     id: 16,
-    markdown: './asanas/16.md'
+    markdown: '/asanas/16'
   },
   {
     title: "Navasana",
     id: 17,
-    markdown: './asanas/17.md'
+    markdown: '/asanas/17'
   },
   {
     title: "Savasana",
     id: 18,
-    markdown: './asanas/18.md'
+    markdown: '/asanas/18'
   },
   {
     title: "Bhujangasana",
     id: 19,
-    markdown: './asanas/19.md'
+    markdown: '/asanas/19'
   },
   {
     title: "Baddha Konasana",
     id: 20,
-    markdown: './asanas/20.md'
+    markdown: '/asanas/20'
   },
   {
     title: "Sirsasana",
     id: 21,
-    markdown: './asanas/21.md'
+    markdown: '/asanas/21'
   },
   {
     title: "Sarvangasana",
     id: 22,
-    markdown: './asanas/22.md'
+    markdown: '/asanas/22'
   },
   {
     title: "Phalakasana",
     id: 23,
-    markdown: './asanas/23.md'
+    markdown: '/asanas/23'
   },
   {
     title: "Shalabhasana",
     id: 24,
-    markdown: './asanas/24.md'
+    markdown: '/asanas/24'
   },
   {
     title: "Kapotasana",
     id: 25,
-    markdown: './asanas/25.md'
+    markdown: '/asanas/25'
   },
 ];

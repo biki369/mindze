@@ -33,7 +33,8 @@ const useStyles = makeStyles((theme) => ({
         "& .b-title": {
           margin: '10px 0',
           "& p": {
-            fontSize: "22px"
+            fontSize: "22px",
+            textTransform: "capitalize",
           }
         },
 
@@ -44,18 +45,21 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-const Blogs = () => {
-  const classes = useStyles()
+const Blogs = ({id}) => {
+  const classes = useStyles();
 
+  if (!id) {
+    id = 0;
+  }
+
+  const data = blogPostData.find((item) => item.id === id);
   return (
     <div className={classes.root} >
       <div className="blogs-container">
         {
-          blogPostData.map((e, i) => (
-            <React.Fragment key={i}>
-              {
-                e.blogs.map((e, i) => (
-                  <Link to={"/blog/:369"} state={e} key={i}>
+          data?.blogs.map((e, i) => (
+            <div key={i}>
+                  <Link to={"/blog/:369"} state={e} >
                     <Paper>
                       <div className="blog">
                         <div className="blog-img">
@@ -67,9 +71,7 @@ const Blogs = () => {
                       </div>
                     </Paper>
                   </Link>
-                ))
-              }
-            </React.Fragment>
+            </div>
           ))
         }
 

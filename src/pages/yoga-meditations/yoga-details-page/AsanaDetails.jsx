@@ -1,7 +1,7 @@
 
 import { makeStyles } from "@material-ui/core";
 import { asanaData } from '../../../data/yogaMediData'
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Markdown from "markdown-to-jsx";
 
 const useStyles = makeStyles((theme) => ({
@@ -70,27 +70,36 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function AsanaDetails({ id }) {
+
     const [findData, setFindData] = useState("");
+    // const baseUrl = "http://localhost:5173"
+
     const classes = useStyles();
     if (!id) {
         id = 0;
     }
     const data = asanaData.find((item) => item.id === id);
-    const markdown = `${import.meta.env.BASE_URL}/${data.markdown}.txt`;
+    
+    // read markdown file
+    // const markdownPath = `${import.meta.env.BASE_URL}/${data.markdown}.txt`;
+    const markdownPath = `${data.markdown}.txt`;
 
     useEffect(() => {
-            fetch(markdown)
-                .then((res) => res.text())
-                .then((res) => {
-                    setFindData(res);
-                });
+        fetch(markdownPath)
+            .then((res) => res.text())
+            .then((res) => {
+                setFindData(res);
+            });
     }, [id]);
+
 
     return (
         <div className={classes.root}>
             <div className="technique-container">
-                <article className="prose lg:prose-xl prose-headings:text-indigo-500 prose-strong:text-indigo-500 prose-h1:text-5xl">
-                <Markdown>{findData}</Markdown>
+                <article className="prose lg:prose-xl prose-headings:text-indigo-500 prose-strong:text-indigo-500 prose-h1:text-5xl mt-6">
+                    <Markdown>
+                        {findData}
+                    </Markdown>
                 </article>
             </div>
         </div>

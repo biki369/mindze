@@ -73,6 +73,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 const Footer = () => {
     const classes = useStyles();
+
     return (
         <div className={classes.root}>
             <div className="footer-container">
@@ -137,7 +138,7 @@ const Footer = () => {
                                     <Link to={"/spiritualCounselors"}>Spiritual counselors</Link>
                                 </li>
                                 <li>
-                                    <Link to={"/"}>Psychological counselors</Link>
+                                    <Link to={"/philosophicalCounselors"}>Psychological counselors</Link>
                                 </li>
 
                             </ul>
@@ -146,13 +147,13 @@ const Footer = () => {
                             <ul>
                                 <h3>Legal Stuff</h3>
                                 <li>
-                                    <a href="/src/assets/docs/DISCLAIMERS.pdf" target="_blank">Disclaimer</a>
+                                    <a href="/docs/DISCLAIMERS.pdf" target="_blank">Disclaimer</a>
                                 </li>
                                 <li>
-                                    <a href="/src/assets/docs/Privacy Policy.pdf" target="_blank">Privacy Policy</a>
+                                    <a href="/docs/Privacy Policy.pdf" target="_blank">Privacy Policy</a>
                                 </li>
                                 <li>
-                                    <a href="/src/assets/docs/TERMS OF SERVICE.pdf" target="_blank">Terms Of Service</a>
+                                    <a href="/docs/TERMS OF SERVICE.pdf" target="_blank">Terms Of Service</a>
                                 </li>
 
                             </ul>

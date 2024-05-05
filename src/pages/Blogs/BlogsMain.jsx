@@ -78,6 +78,8 @@ const BlogsMain = () => {
         setDrawerOpen(!drawerOpen);
     };
 
+
+
     const getId = (id) => {
         if (!id) {
             id = 0
@@ -119,8 +121,7 @@ const BlogsMain = () => {
                     </SideMenu>
                 }
                 <div className='sub-content'>
-                    {/* <QuotationByCat id={sendId} /> */}
-                    <Blogs  />
+                    <Blogs  id={sendId}/>
                 </div>
             </div>
         </>

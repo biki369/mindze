@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ScrollTop = () => {
+const ScrollToTop = () => {
     const classes = useStyles();
     const [isVisible, setIsVisible] = useState(false);
   
@@ -51,5 +51,5 @@ const ScrollTop = () => {
     );
   };
   
-  export default ScrollTop;
+  export default ScrollToTop;
   

@@ -1,8 +1,9 @@
 import { makeStyles, Container } from "@material-ui/core";
 import BackCurrent from "../../components/back-current/BackCurrent";
 import { useLocation } from "react-router-dom";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Markdown from "markdown-to-jsx";
+import Loader from "../../components/loader/Loader";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -54,40 +55,46 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
+
 const BookDetails = () => {
   const classes = useStyles();
   const location = useLocation();
   const [findData, setFindData] = useState("");
-  const data = location.state;
-  // const data = props.location.state;
 
-  const markdown = `${import.meta.env.BASE_URL}/${data.markdown}.txt`;
+  const data = location.state;
+
+  // const baseUrl = "http://localhost:5173";
+  // const data = props.location.state;
+  // const markdown = `${baseUrl}/${data.markdown}.txt`;
+  // const markdown =`${import.meta.env.BASE_URL}/${data.markdown}`;
+
+  const markdown = `${data.markdown}.txt`;
 
   useEffect(() => {
-    if (!data || !data.markdown) {
-      console.error("Markdown data is missing");
-      return;
-    }
-        fetch(markdown)
-          .then((res) => res.text())
-          .then((res) => {
-            setFindData(res);
-          })
-          .catch((error) => {
-            console.error("Failed to fetch markdown content", error);
-      });
-  }, []);
+    fetch(markdown)
+      .then((res) => res.text())
+      .then((res) => {
+        setFindData(res)
+      })
+  }, [data]);
 
   return (
     <div className={classes.root}>
-      <Container>
-        <BackCurrent link="/books" name="Book Summery" />
-        <div className="w-full">
-          <article className="prose lg:prose-xl max-w-full prose-headings:text-indigo-500 prose-strong:text-indigo-500 prose-h1:text-5xl">
-            <Markdown>{findData}</Markdown>
-          </article>
-        </div>
-      </Container>
+      {
+        findData.length === 0 ? (<Loader />) : (
+          <>
+            <Container >
+              <BackCurrent link="/books" name="Book Summery" />
+              <div className="w-full">
+                <article className="prose lg:prose-xl max-w-full prose-headings:text-indigo-500 prose-strong:text-indigo-500 prose-h1:text-5xl mt-6">
+                  <Markdown>{findData}</Markdown>
+                </article>
+              </div>
+            </Container>
+          </>
+        )
+      }
+
     </div>
   );
 };
