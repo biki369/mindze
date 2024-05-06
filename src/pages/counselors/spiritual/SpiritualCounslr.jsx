@@ -11,8 +11,9 @@ import DatePicker from '../../../components/mui-date-picker/DatePicker';
 import { useEffect, useState } from 'react';
 import { CheckBox } from '@material-ui/icons';
 import CheckIcon from '@material-ui/icons/Check';
-import { bookingsSlot, getConsultant } from '../../../api';
+import { bookingsSlot, getConsultant, get_time_slots } from '../../../api';
 import Loader from '../../../components/loader/Loader';
+import Swal from 'sweetalert2';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -176,9 +177,9 @@ const SpiritualCounslr = () => {
     const todayDate = new Date();
     const [date, setDate] = useState(todayDate)
     const [isLoading, setIsLoading] = useState(false)
-
-
+    const [getConsltId, setGetConsltId] = useState()
     const [spiritualData, setSpiritualData] = useState();
+    const [openModal, setOpenModal] = useState(false);
 
     // const [bookingsSlotData, setBookingsSlotData] = useState()
 
@@ -188,9 +189,10 @@ const SpiritualCounslr = () => {
 
     const handleDateChange = (event, id) => {
         setDate(event.target.value);
+        setGetConsltId(id)
+        // console.log(id);
     };
 
-    const [openModal, setOpenModal] = useState(false);
 
     const handleOpenModal = () => {
         setOpenModal(true);
@@ -198,6 +200,21 @@ const SpiritualCounslr = () => {
 
     const handleCloseModal = () => {
         setOpenModal(false);
+    };
+
+    const bookSession = () => {
+        setOpenModal(false);
+        const parameters = {
+            consultant: getConsltId,
+            date: date
+        }
+        get_time_slots("api/get_time_slots", parameters).then((data) => console.log(data)).catch((e) =>Swal.fire({
+            icon: "error",
+            title: `Consultant ID and date are required.`,
+            showConfirmButton: false,
+            timer: 1500
+          }))
+        // console.log(id);
     };
 
     // ====== function fro check====
@@ -232,11 +249,56 @@ const SpiritualCounslr = () => {
         );
     };
 
+    const BookingSessionComp = ({ consultant}) => {
+        // console.log(uid "consltId");
+        return (
+            <div className={classes.modalContainer}>
+                <MuiModal open={openModal} onClose={handleCloseModal} title="Book an Appointment">
+                    {/* <DatePicker selectedDate={selectedDate} onChange={handleDateChange} /> */}
+                    <div className={classes.plans}>
+                        <div className="plan">
+                            <CheckboxComp options={['individual']} />
+                            <p className="plan-name">Individual session</p>
+                            <p className="discount"><span><CheckIcon /></span>10% - discount </p>
+                            <p className="discount"><span><CheckIcon /></span>1 session price: </p>
+                            <p className="discount"><span><CheckIcon /></span>5 session price:</p>
+                            <p className="validity"><span><CheckIcon /></span>Validity : 2 months </p>
+                            <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {consultant.price?.monthly}</p>
+                        </div>
+                        <div className="plan">
+                            <CheckboxComp options={['webinar']} />
+                            <p className="plan-name">Webinar session</p>
+                            <p className="discount"><span><CheckIcon /></span>10% - discount </p>
+                            <p className="discount"><span><CheckIcon /></span>10 session price: </p>
+                            <p className="discount"><span><CheckIcon /></span>5 session price:</p>
+                            <p className="validity"><span><CheckIcon /></span>Validity : 4 months </p>
+                            <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {consultant.price?.annual}</p>
+                        </div>
+                    </div>
+
+                    <div className='booked-session-btn'
+                        style={{ display: 'flex', justifyContent: 'space-between', marginBottom: "1rem" }}
+
+                    >
+                        {/* <DatePicker selectedDate={selectedDate} onChange={handleDateChange} /> */}
+                        <input type="date" onChange={(event) => handleDateChange(event,consultant.id)} />
+                        <Button variant="contained" onClick={bookSession} color="primary">Book</Button>
+                    </div>
+                </MuiModal>
+            </div>
+        )
+    };
+
+    const TestComp = ({ud}) =>{
+        return <h1>{ud}</h1>
+    }
+
+
     useEffect(() => {
         if (localStorage.getItem("token") != null) {
             getConsultant("api/consultant/spiritual", localStorage.getItem("token")).then((data) =>
-            setSpiritualData(data),
-            setIsLoading(true)
+                setSpiritualData(data),
+                setIsLoading(true)
             ).catch((err) => {
                 console.log(err)
             })
@@ -254,7 +316,7 @@ const SpiritualCounslr = () => {
     // console.log(date, "spiritualData")
     return (
         <div className={classes.root}>
-              {
+            {
                 !isLoading && <div className='loader'>
                     <Loader />
                     <Link to="/login" className="back-link">Login to see details</Link>
@@ -262,103 +324,70 @@ const SpiritualCounslr = () => {
             }
             {isLoading && <div className='counselor-container'>
                 {
-                    spiritualData?.map((e, i) => (
-                        <Paper key={i} className='paper-dev'>
-                            <>
-                                <div className="counselor" >
-                                    <div className="counselor-img">
-                                        <Avatar alt="counselor-img" src={e?.img} className={classes.counslrAvatar} />
+                    spiritualData?.map((e, i) => {
+                        return (
+                            <Paper key={i} className='paper-dev'>
+                                <>
+                                    <div className="counselor" >
+                                        <div className="counselor-img">
+                                            <Avatar alt="counselor-img" src={e?.img} className={classes.counslrAvatar} />
+                                        </div>
+                                        <div className="counselor-about">
+                                            <p className="name">{e?.name}</p>
+                                            <p className="exp">{e?.exp}+ years of experience</p>
+                                        </div>
                                     </div>
-                                    <div className="counselor-about">
-                                        <p className="name">{e?.name}</p>
-                                        <p className="exp">{e?.exp}+ years of experience</p>
-                                    </div>
-                                </div>
-                                <div className='designation-section'>
-                                    <div className="designation">
-                                        <p><span><StarsIcon /></span> <strong>designation:</strong> {e?.designation}</p>
-                                    </div>
-                                    <div className='interest'>
+                                    <div className='designation-section'>
+                                        <div className="designation">
+                                            <p><span><StarsIcon /></span> <strong>designation:</strong> {e?.designation}</p>
+                                        </div>
+                                        <div className='interest'>
 
-                                        <p><span><CheckCircleIcon /></span><strong>interest:</strong>{e?.interest}</p>
+                                            <p><span><CheckCircleIcon /></span><strong>interest:</strong>{e?.interest}</p>
+                                        </div>
+                                        {/* <div className="edu"><span><SchoolIcon /></span> {e.education}</div> */}
                                     </div>
-                                    {/* <div className="edu"><span><SchoolIcon /></span> {e.education}</div> */}
-                                </div>
-                                <div className='designation-section price-section'>
-                                    <div className="designation">
-                                        <p><span><LocalOfferIcon /></span> <strong>Individual session price:</strong>₹ {e.price?.annual}</p>
-                                    </div>
-                                    <div className='interest'>
-                                        <p> <span><LocalOfferIcon /></span><strong>Webinar session</strong>₹  {e.price?.monthly}
-                                        </p>
-                                    </div>
-
-                                </div>
-
-                                <Grid
-                                    container
-                                    mt={2}
-                                    direction="row"
-                                    justifyContent="flex-end"
-                                    alignItems="center"
-                                    spacing={2}
-                                >
-                                    <Grid item xs={12} sm={2}></Grid>
-                                    <Grid item xs={12} sm={5}>
-                                        <Button variant="outlined"
-                                            fullWidth
-                                            color="primary">
-                                            <Link to={`/counselor/${e.id}`}>View Profile</Link>
-                                        </Button>
-                                    </Grid>
-                                    <Grid item xs={12} sm={5}>
-                                        <Button fullWidth
-                                            onClick={handleOpenModal}
-                                            variant="contained"
-                                            color="primary">Book session</Button>
-                                    </Grid>
-                                </Grid>
-                            </>
-
-                            <>
-                                {openModal && <div className={classes.modalContainer}>
-                                    <MuiModal open={openModal} onClose={handleCloseModal} title="Book an Appointment">
-                                        {/* <DatePicker selectedDate={selectedDate} onChange={handleDateChange} /> */}
-                                        <div className={classes.plans}>
-                                            <div className="plan">
-                                                <CheckboxComp options={['individual']} />
-                                                <p className="plan-name">Individual session</p>
-                                                <p className="discount"><span><CheckIcon /></span>10% - discount </p>
-                                                <p className="discount"><span><CheckIcon /></span>1 session price: </p>
-                                                <p className="discount"><span><CheckIcon /></span>5 session price:</p>
-                                                <p className="validity"><span><CheckIcon /></span>Validity : 2 months </p>
-                                                <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {e.price?.monthly}</p>
-                                            </div>
-                                            <div className="plan">
-                                                <CheckboxComp options={['webinar']} />
-                                                <p className="plan-name">Webinar session</p>
-                                                <p className="discount"><span><CheckIcon /></span>10% - discount </p>
-                                                <p className="discount"><span><CheckIcon /></span>10 session price: </p>
-                                                <p className="discount"><span><CheckIcon /></span>5 session price:</p>
-                                                <p className="validity"><span><CheckIcon /></span>Validity : 4 months </p>
-                                                <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {e.price?.annual}</p>
-                                            </div>
+                                    <div className='designation-section price-section'>
+                                        <div className="designation">
+                                            <p><span><LocalOfferIcon /></span> <strong>Individual session price:</strong>₹ {e.price?.annual}</p>
+                                        </div>
+                                        <div className='interest'>
+                                            <p> <span><LocalOfferIcon /></span><strong>Webinar session</strong>₹  {e.price?.monthly}
+                                            </p>
                                         </div>
 
-                                        <div className='booked-session-btn'
-                                            style={{ display: 'flex', justifyContent: 'space-between', marginBottom: "1rem" }}
+                                    </div>
 
-                                        >
-                                            {/* <DatePicker selectedDate={selectedDate} onChange={handleDateChange} /> */}
-                                            <input type="date" value={date} onChange={(event) => handleDateChange(event, e.id)} />
-                                            <Button onClick={handleCloseModal} variant="contained" color="primary">Book</Button>
-                                        </div>
-                                    </MuiModal>
-                                </div>}
-
-                            </>
-                        </Paper>
-                    ))
+                                    <Grid
+                                        container
+                                        mt={2}
+                                        direction="row"
+                                        justifyContent="flex-end"
+                                        alignItems="center"
+                                        spacing={2}
+                                    >
+                                        <Grid item xs={12} sm={2}></Grid>
+                                        <Grid item xs={12} sm={5}>
+                                            <Button variant="outlined"
+                                                fullWidth
+                                                color="primary">
+                                                <Link to={`/counselor/${e.id}`}>View Profile</Link>
+                                            </Button>
+                                        </Grid>
+                                        <Grid item xs={12} sm={5}>
+                                            <Button fullWidth
+                                                onClick={handleOpenModal}
+                                                variant="contained"
+                                                color="primary">Book session</Button>
+                                        </Grid>
+                                    </Grid>
+                                </>
+                                 
+                                 {/* <TestComp ud={e.id} /> */}
+                                <BookingSessionComp consultant={e}/>
+                            </Paper>
+                        )}
+                    )
                 }
             </div>}
         </div>

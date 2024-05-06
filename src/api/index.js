@@ -69,11 +69,7 @@ export const consultantReview = async (url) => {
 };
 
 export const get_time_slots = async (url, payload) => {
-  const headers = {
-    "Content-Type": "application/json",
-    Authorization: `Token ${payload}`,
-  };
-  const { data } = await axios.get(`${BASE_URL}/${url}/`,{ headers });
+  const { data } = await axios.post(`${BASE_URL}/${url}/`,payload);
   return data;
 }
 
