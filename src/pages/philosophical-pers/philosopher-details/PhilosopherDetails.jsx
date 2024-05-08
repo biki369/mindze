@@ -71,8 +71,8 @@ const PhilosopherDetails = () => {
             {
                 findData.length === 0 ? (<Loader />) : (<>
                     <BackCurrent link="/philosophers" name="Philosophers" />
-                    <Container>
-                        <article className="prose lg:prose-xl prose-headings:text-indigo-500 prose-strong:text-indigo-500 prose-h1:text-5xl">
+                    <Container className="mt-[30px]">
+                        <article className="prose lg:prose-xl prose-headings:text-indigo-500 prose-strong:text-indigo-500 prose-h1:text-5xl mt-3">
                             <Markdown>
                                 {findData}
                             </Markdown>

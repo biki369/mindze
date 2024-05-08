@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
       // height:" 52rem",
       height:'80vh',
       [theme.breakpoints.down(769)]: {
-        height:'56vh',
+        height:'66vh',
       },
       padding: "2rem 0",
       position: " relative",
@@ -49,6 +49,10 @@ const useStyles = makeStyles((theme) => ({
     "& .swiper-slide": {
       width: " 23rem",
       height: " 23rem",
+      [theme.breakpoints.down(769)]: {
+        width: " 18rem",
+        height: " 18rem",
+      },
       position: " relative",
       "& img": {
         width: "100%",

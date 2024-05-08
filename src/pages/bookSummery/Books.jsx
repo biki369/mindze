@@ -1,12 +1,12 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import { bookSummeryData } from '../../data';
+// import { bookSummeryData } from '../../data';
 import BookCard from '../../components/cards/book-card/BookCard';
-import { useMediaQuery } from '@material-ui/core';
+import { TableContainer, useMediaQuery } from '@material-ui/core';
 import { PersonalityDev, careerDev, spirituality, psychology } from '../../data/bookSummery';
 import { useLocation } from 'react-router-dom';
 
@@ -81,20 +81,26 @@ const Books = () => {
   const mobileDevice = useMediaQuery(theme.breakpoints.down('md'));
 
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
+  const [activeTab, setActiveTab] = useState(0);
+
+  useEffect(() => {
+    const storedValue = localStorage.getItem('activeTab');
+    if (storedValue) {
+      setActiveTab(parseInt(storedValue));
+    }
+    localStorage.clear()
+   
+}, []);
 
   const handleChange = (event, newValue) => {
-    setValue(newValue);
+    setActiveTab(newValue);
+      localStorage.setItem('activeTab', newValue);
+
   };
-  const location = useLocation();
-
-  console.log(location, "location");
-
   return (
     <div className={classes.root}>
       <AppBar position="static">
-        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example"
-          // centered
+        <Tabs value={activeTab} onChange={handleChange} aria-label="simple tabs example"
           variant={mobileDevice ? "scrollable" : ""}
         >
           <Tab label="Personality Development" {...a11yProps(0)} />
@@ -104,64 +110,84 @@ const Books = () => {
         </Tabs>
       </AppBar>
 
-      <TabPanel value={value} index={0}>
-        <div className='book-container'>
-          {
-            PersonalityDev.map((e, i) => (
-              <div className='' key={i}>
-                <BookCard
-                  data={e}
-                  tabId={0}
-                />
-              </div>
-            ))
-          }
-        </div>
-      </TabPanel>
+      {/* <TabPanel value={activeTab} index={0}> */}
 
-      <TabPanel value={value} index={1}>
-        <div className='book-container'>
-          {
-            psychology.map((e, i) => (
-              <div className='' key={i}>
-                <BookCard
-                  data={e}
-                  tabId={1}
-                />
-              </div>
-            ))
-          }
-        </div>
-      </TabPanel>
+      {
+        activeTab === 0 &&
+        <TableContainer>
+          <div className='book-container'>
+            {
+              PersonalityDev.map((e, i) => (
+                <div className='' key={i}>
+                  <BookCard
+                    data={e}
+                  />
+                </div>
+              ))
+            }
+          </div>
 
-      <TabPanel value={value} index={2}>
-        <div className='book-container'>
-          {
-            spirituality.map((e, i) => (
-              <div className='' key={i}>
-                <BookCard
-                  data={e}
-                  tabId={2}
-                />
-              </div>
-            ))
-          }
-        </div>
-      </TabPanel>
-      <TabPanel value={value} index={3}>
-        <div className='book-container'>
-          {
-            careerDev.map((e, i) => (
-              <div className='' key={i}>
-                <BookCard
-                  data={e}
-                  tabId={3}
-                />
-              </div>
-            ))
-          }
-        </div>
-      </TabPanel>
+        </TableContainer>
+      }
+      {/* </TabPanel> */}
+
+      {/* <TabPanel value={activeTab} index={1}> */}
+      {
+        activeTab === 1 && <TableContainer>
+          <div className='book-container'>
+            {
+              psychology.map((e, i) => (
+                <div className='' key={i}>
+                  <BookCard
+                    data={e}
+                  />
+                </div>
+              ))
+            }
+          </div>
+        </TableContainer>
+      }
+      {/* </TabPanel> */}
+
+      {
+        activeTab === 2 &&
+        <TableContainer>
+          <div className='book-container'>
+            {
+              spirituality.map((e, i) => (
+                <div className='' key={i}>
+                  <BookCard
+                    data={e}
+                  />
+                </div>
+              ))
+            }
+          </div>
+        </TableContainer>
+      }
+
+
+
+      {/* <TabPanel value={activeTab} index={2}> */}
+      {/* </TabPanel> */}
+      {/* <TabPanel value={activeTab} index={3}> </TabPanel> */}
+      {
+
+        activeTab === 3 &&
+        <TableContainer>
+          <div className='book-container'>
+            {
+              careerDev.map((e, i) => (
+                <div className='' key={i}>
+                  <BookCard
+                    data={e}
+                  />
+                </div>
+              ))
+            }
+          </div>
+        </TableContainer>
+      }
     </div>
   )
 }

@@ -65,9 +65,7 @@ const Techniques = () => {
   const location = useLocation();
   const data = location?.state
 
-  const { title, subTitle, intro, benefits, understanding, steps, practiceTips, cautions, conclusion } = data
-
-  console.log(benefits);
+  const { title, subTitle, intro, benefits, understanding, steps, practiceTips, cautions, conclusion } = data;
   return (
     <div className={classes.root}>
       <BackCurrent link={"/quickExercises"} name="Quick Exercises" />

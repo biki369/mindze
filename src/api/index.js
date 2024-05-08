@@ -7,12 +7,8 @@ export const getData = async (url) => {
   return data;
 };
 
-export const getConsultant = async (url, payload) => {
-  const headersConsultant = {
-    "Content-Type": "application/json",
-    Authorization: `Token ${payload}`,
-  };
-  const { data } = await axios.get(`${BASE_URL}/${url}`, { headersConsultant });
+export const getConsultant = async (url) => {
+  const { data } = await axios.get(`${BASE_URL}/${url}`);
   return data;
 };
 

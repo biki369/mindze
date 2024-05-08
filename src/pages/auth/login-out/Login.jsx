@@ -70,10 +70,17 @@ export default function Login(props) {
           icon: "success",
           title: e.Success,
           showConfirmButton: false,
-          timer: 1500
+          timer: 1600
         })
         setIsSignUp(false);
-      }).catch((e) => console.log(e.response.data));
+      }).catch((e) =>{
+        Swal.fire({
+          icon: "error",
+          title: `${e.email[0]}`,
+          showConfirmButton: false,
+          timer: 1500
+        })
+      });
     }
     else {
       loginUser("api/login/", account).then((e) => {
@@ -87,16 +94,7 @@ export default function Login(props) {
             timer: 1500
           })
         }
-        // else {
-        //   Swal.fire({
-        //     icon: "error",
-        //     title: e.error,
-        //     showConfirmButton: false,
-        //     timer: 1500
-        //   })
-        // }
       }).catch((e) => {
-        // console.log(e.response.data.non_field_errors,"jkdsfhrkdfhg")
             Swal.fire({
             icon: "error",
             title: `${e.response.data.non_field_errors[0]}`,

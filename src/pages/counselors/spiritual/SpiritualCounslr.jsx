@@ -177,25 +177,18 @@ const SpiritualCounslr = () => {
     const todayDate = new Date();
     const [date, setDate] = useState(todayDate)
     const [isLoading, setIsLoading] = useState(false)
-    const [getConsltId, setGetConsltId] = useState()
-    const [spiritualData, setSpiritualData] = useState();
+    const [spiritualData, setSpiritualData] = useState(null);
     const [openModal, setOpenModal] = useState(false);
+    const [item, setItem] = useState();
 
-    // const [bookingsSlotData, setBookingsSlotData] = useState()
-
-    // const handleChange = (event) => {
-    //     setChecked(event.target.checked);
-    // }
-
-    const handleDateChange = (event, id) => {
+    const handleDateChange = (event) => {
         setDate(event.target.value);
-        setGetConsltId(id)
-        // console.log(id);
+        // setGetConsltId(id)
     };
 
-
-    const handleOpenModal = () => {
+    const handleOpenModal = (evn,e) => {
         setOpenModal(true);
+        setItem(e);
     };
 
     const handleCloseModal = () => {
@@ -205,18 +198,16 @@ const SpiritualCounslr = () => {
     const bookSession = () => {
         setOpenModal(false);
         const parameters = {
-            consultant: getConsltId,
+            consultant: item?.id,
             date: date
         }
-        get_time_slots("api/get_time_slots", parameters).then((data) => console.log(data)).catch((e) =>Swal.fire({
+        get_time_slots("api/get_time_slots", parameters).then((data) => console.log(data)).catch((e) => Swal.fire({
             icon: "error",
             title: `Consultant ID and date are required.`,
             showConfirmButton: false,
             timer: 1500
-          }))
-        // console.log(id);
+        }))
     };
-
     // ====== function fro check====
     const CheckboxComp = ({ options }) => {
         const [selectedOptions, setSelectedOptions] = useState([]);
@@ -249,7 +240,7 @@ const SpiritualCounslr = () => {
         );
     };
 
-    const BookingSessionComp = ({ consultant}) => {
+    const BookingSessionComp = ({ consultant }) => {
         // console.log(uid "consltId");
         return (
             <div className={classes.modalContainer}>
@@ -263,7 +254,7 @@ const SpiritualCounslr = () => {
                             <p className="discount"><span><CheckIcon /></span>1 session price: </p>
                             <p className="discount"><span><CheckIcon /></span>5 session price:</p>
                             <p className="validity"><span><CheckIcon /></span>Validity : 2 months </p>
-                            <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {consultant.price?.monthly}</p>
+                            <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {consultant?.price?.monthly}</p>
                         </div>
                         <div className="plan">
                             <CheckboxComp options={['webinar']} />
@@ -272,7 +263,7 @@ const SpiritualCounslr = () => {
                             <p className="discount"><span><CheckIcon /></span>10 session price: </p>
                             <p className="discount"><span><CheckIcon /></span>5 session price:</p>
                             <p className="validity"><span><CheckIcon /></span>Validity : 4 months </p>
-                            <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {consultant.price?.annual}</p>
+                            <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {consultant?.price?.annual}</p>
                         </div>
                     </div>
 
@@ -281,7 +272,7 @@ const SpiritualCounslr = () => {
 
                     >
                         {/* <DatePicker selectedDate={selectedDate} onChange={handleDateChange} /> */}
-                        <input type="date" onChange={(event) => handleDateChange(event,consultant.id)} />
+                        <input type="date" value={date} onChange={(event) => handleDateChange(event)} />
                         <Button variant="contained" onClick={bookSession} color="primary">Book</Button>
                     </div>
                 </MuiModal>
@@ -289,107 +280,91 @@ const SpiritualCounslr = () => {
         )
     };
 
-    const TestComp = ({ud}) =>{
-        return <h1>{ud}</h1>
-    }
-
-
     useEffect(() => {
-        if (localStorage.getItem("token") != null) {
-            getConsultant("api/consultant/spiritual", localStorage.getItem("token")).then((data) =>
-                setSpiritualData(data),
-                setIsLoading(true)
-            ).catch((err) => {
-                console.log(err)
-            })
-        }
+        getConsultant("api/consultant/spiritual").then((data) =>
+            setSpiritualData(data),
+            setIsLoading(true)
+        ).catch((err) => {
+            console.log(err)
+        })
     }, [isLoading]);
-
-    // useEffect(() => {
-    //     bookingsSlot("api/review/", localStorage.getItem("token")).then((data) => {
-    //         setBookingsSlotData(data)
-    //         console.log(data);
-    //     }).catch((err) => {
-    //         console.log(err)
-    //     })
-    // }, [])
-    // console.log(date, "spiritualData")
+    
     return (
         <div className={classes.root}>
             {
-                !isLoading && <div className='loader'>
+                spiritualData === null ? (<div className='loader'>
                     <Loader />
-                    <Link to="/login" className="back-link">Login to see details</Link>
-                </div>
+                </div>) : (
+                    <div className='counselor-container'>
+                        {
+                            spiritualData?.map((e, i) => {
+                                return (
+                                    <Paper key={i} className='paper-dev'>
+                                        <>
+                                            <div className="counselor" >
+                                                <div className="counselor-img">
+                                                    <Avatar alt="counselor-img" src={e?.img} className={classes.counslrAvatar} />
+                                                </div>
+                                                <div className="counselor-about">
+                                                    <p className="name">{e?.name}</p>
+                                                    <p className="exp">{e?.exp}+ years of experience</p>
+                                                </div>
+                                            </div>
+                                            <div className='designation-section'>
+                                                <div className="designation">
+                                                    <p><span><StarsIcon /></span> <strong>designation:</strong> {e?.designation}</p>
+                                                </div>
+                                                <div className='interest'>
+
+                                                    <p><span><CheckCircleIcon /></span><strong>interest:</strong>{e?.interest}</p>
+                                                </div>
+                                                {/* <div className="edu"><span><SchoolIcon /></span> {e.education}</div> */}
+                                            </div>
+                                            <div className='designation-section price-section'>
+                                                <div className="designation">
+                                                    <p><span><LocalOfferIcon /></span> <strong>Individual session price:</strong>₹ {e.price?.annual}</p>
+                                                </div>
+                                                <div className='interest'>
+                                                    <p> <span><LocalOfferIcon /></span><strong>Webinar session</strong>₹  {e.price?.monthly}
+                                                    </p>
+                                                </div>
+
+                                            </div>
+
+                                            <Grid
+                                                container
+                                                mt={2}
+                                                direction="row"
+                                                justifyContent="flex-end"
+                                                alignItems="center"
+                                                spacing={2}
+                                            >
+                                                <Grid item xs={12} sm={2}></Grid>
+                                                <Grid item xs={12} sm={5}>
+                                                    <Button variant="outlined"
+                                                        fullWidth
+                                                        color="primary">
+                                                        <Link to={`/counselor/${e.id}`}>View Profile</Link>
+                                                    </Button>
+                                                </Grid>
+                                                <Grid item xs={12} sm={5}>
+                                                    <Button fullWidth
+                                                        onClick={(evn) => handleOpenModal(evn,e)}
+                                                        // onClick={handleOpenModal}
+                                                        variant="contained"
+                                                        color="primary">Book session</Button>
+                                                </Grid>
+                                            </Grid>
+                                        </>
+                                    </Paper>
+                                )
+                            }
+                        )
+                    }
+                    </div>
+                )
             }
-            {isLoading && <div className='counselor-container'>
-                {
-                    spiritualData?.map((e, i) => {
-                        return (
-                            <Paper key={i} className='paper-dev'>
-                                <>
-                                    <div className="counselor" >
-                                        <div className="counselor-img">
-                                            <Avatar alt="counselor-img" src={e?.img} className={classes.counslrAvatar} />
-                                        </div>
-                                        <div className="counselor-about">
-                                            <p className="name">{e?.name}</p>
-                                            <p className="exp">{e?.exp}+ years of experience</p>
-                                        </div>
-                                    </div>
-                                    <div className='designation-section'>
-                                        <div className="designation">
-                                            <p><span><StarsIcon /></span> <strong>designation:</strong> {e?.designation}</p>
-                                        </div>
-                                        <div className='interest'>
-
-                                            <p><span><CheckCircleIcon /></span><strong>interest:</strong>{e?.interest}</p>
-                                        </div>
-                                        {/* <div className="edu"><span><SchoolIcon /></span> {e.education}</div> */}
-                                    </div>
-                                    <div className='designation-section price-section'>
-                                        <div className="designation">
-                                            <p><span><LocalOfferIcon /></span> <strong>Individual session price:</strong>₹ {e.price?.annual}</p>
-                                        </div>
-                                        <div className='interest'>
-                                            <p> <span><LocalOfferIcon /></span><strong>Webinar session</strong>₹  {e.price?.monthly}
-                                            </p>
-                                        </div>
-
-                                    </div>
-
-                                    <Grid
-                                        container
-                                        mt={2}
-                                        direction="row"
-                                        justifyContent="flex-end"
-                                        alignItems="center"
-                                        spacing={2}
-                                    >
-                                        <Grid item xs={12} sm={2}></Grid>
-                                        <Grid item xs={12} sm={5}>
-                                            <Button variant="outlined"
-                                                fullWidth
-                                                color="primary">
-                                                <Link to={`/counselor/${e.id}`}>View Profile</Link>
-                                            </Button>
-                                        </Grid>
-                                        <Grid item xs={12} sm={5}>
-                                            <Button fullWidth
-                                                onClick={handleOpenModal}
-                                                variant="contained"
-                                                color="primary">Book session</Button>
-                                        </Grid>
-                                    </Grid>
-                                </>
-                                 
-                                 {/* <TestComp ud={e.id} /> */}
-                                <BookingSessionComp consultant={e}/>
-                            </Paper>
-                        )}
-                    )
-                }
-            </div>}
+            <BookingSessionComp consultant={item} />
         </div>
     )
 }

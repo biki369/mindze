@@ -75,6 +75,8 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         "& img": {
           width: '500px',
+          height:'330px',
+          marginTop:'1rem',
           borderRadius: '30px',
           [theme.breakpoints.down('md')]: {
             width: '360px',
@@ -84,8 +86,8 @@ const useStyles = makeStyles((theme) => ({
       },
       "& .about-us": {
         padding: '0 6rem',
-        [theme.breakpoints.down(800)]: {
-          padding: '10px',
+        [theme.breakpoints.down("md")]: {
+          padding: '0 10px',
         },
         "& p": {
           fontSize: '1.2rem',
@@ -211,7 +213,7 @@ const Home = () => {
           <p>Mindze blends psychological insight, philosophical depth, and spiritual wellness to guide you through life's challenges. Our team believes in integrating these dimensions for healing, growth, and transformation.</p>
         </div>
         <div className="about-img">
-          <img src="/src/assets/Blog_pics/t9.png" alt="" />
+          <img src="/Blog_pics/t9.png" alt="" />
         </div>
       </div>
 

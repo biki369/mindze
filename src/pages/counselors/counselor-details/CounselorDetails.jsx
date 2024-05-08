@@ -15,7 +15,7 @@ import { useEffect, useState } from "react";
 import MuiModal from "../../../components/modal/MuiModal";
 import DatePicker from "../../../components/mui-date-picker/DatePicker";
 import Loader from "../../../components/loader/Loader";
-import { consultantDetails, consultantReview, giveReview } from "../../../api";
+import { consultantDetails, consultantReview, get_time_slots, giveReview } from "../../../api";
 import MessageIcon from '@material-ui/icons/Message';
 
 const useStyles = makeStyles((theme) => ({
@@ -274,14 +274,9 @@ const CounselorDetails = () => {
 
   let { id } = useParams();
 
-  // let data = counselorsData.find((counslr) => counslr.id === Number(id))
-
-  const todayDate = new Date();
-
-  const [date, setDate] = useState(todayDate)
   const [reviewData, setReviewData] = useState();
-
-  const [selectedDate, setSelectedDate] = useState();
+  const todayDate = new Date();
+  const [date, setDate] = useState(todayDate)
 
   const [openModal, setOpenModal] = useState(false);
 
@@ -290,13 +285,9 @@ const CounselorDetails = () => {
 
   const [writeReview, setWriteReview] = useState();
 
-  // const { name, desc, img, exp, interest, education, designation, price } = data;
-
-  // console.log(name,"slkadj",id)
-
-  const handleDateChange = (date) => {
-    setSelectedDate(date);
-  };
+  const handleDateChange = (event) => {
+    setDate(event.target.value);
+}
 
   const handleOpenModal = () => {
     setOpenModal(true);
@@ -308,13 +299,13 @@ const CounselorDetails = () => {
 
   const handleWriteReview = (e) => {
     e.preventDefault();
-    giveReview("api/review", 
-    {
-      consultant: id,
-      review: writeReview
-    },
-    localStorage.getItem("token")
-  ).then((data) => {
+    giveReview("api/review",
+      {
+        consultant: id,
+        review: writeReview
+      },
+      localStorage.getItem("token")
+    ).then((data) => {
       // console.log(data, "data")
       setIsLoading(false)
       // setReviewData(data)
@@ -324,6 +315,21 @@ const CounselorDetails = () => {
     })
 
   };
+
+  const bookSession = () => {
+    setOpenModal(false);
+    const parameters = {
+        consultant: data?.id,
+        date: date
+    }
+    console.log(parameters)
+    get_time_slots("api/get_time_slots", parameters).then((data) => console.log(data)).catch((e) => Swal.fire({
+        icon: "error",
+        title: `Consultant ID and date are required.`,
+        showConfirmButton: false,
+        timer: 1500
+    }))
+};
 
 
   // ====== function fro check====
@@ -358,6 +364,46 @@ const CounselorDetails = () => {
     );
   };
 
+  const BookingSessionComp = ({ consultant }) => {
+    // console.log(uid "consltId");
+    return (
+      <div className={classes.modalContainer}>
+        <MuiModal open={openModal} onClose={handleCloseModal} title="Book an Appointment">
+          {/* <DatePicker selectedDate={selectedDate} onChange={handleDateChange} /> */}
+          <div className={classes.plans}>
+            <div className="plan">
+              <CheckboxComp options={['individual']} />
+              <p className="plan-name">Individual session</p>
+              <p className="discount"><span><CheckIcon /></span>10% - discount </p>
+              <p className="discount"><span><CheckIcon /></span>1 session price: </p>
+              <p className="discount"><span><CheckIcon /></span>5 session price:</p>
+              <p className="validity"><span><CheckIcon /></span>Validity : 2 months </p>
+              <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {consultant?.price?.monthly}</p>
+            </div>
+            <div className="plan">
+              <CheckboxComp options={['webinar']} />
+              <p className="plan-name">Webinar session</p>
+              <p className="discount"><span><CheckIcon /></span>10% - discount </p>
+              <p className="discount"><span><CheckIcon /></span>10 session price: </p>
+              <p className="discount"><span><CheckIcon /></span>5 session price:</p>
+              <p className="validity"><span><CheckIcon /></span>Validity : 4 months </p>
+              <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {consultant?.price?.annual}</p>
+            </div>
+          </div>
+
+          <div className='booked-session-btn'
+            style={{ display: 'flex', justifyContent: 'space-between', marginBottom: "1rem" }}
+
+          >
+            {/* <DatePicker selectedDate={selectedDate} onChange={handleDateChange} /> */}
+            <input type="date" value={date} onChange={(event) => handleDateChange(event)} />
+            <Button variant="contained" onClick={bookSession} color="primary">Book</Button>
+          </div>
+        </MuiModal>
+      </div>
+    )
+  };
+
   useEffect(() => {
     consultantDetails("api/consultant", id).then((data) => {
       setIsLoading(false)
@@ -369,14 +415,6 @@ const CounselorDetails = () => {
     setIsLoading(true)
   }, []);
 
-  //   useEffect(() => {
-  //     consultantAddReview("api/consultant/psychological", localStorage.getItem("token")).then((data) =>
-  //     setReviewData(data),
-  //         setIsLoading(true)
-  //     )
-  //     setIsLoading(false)
-  // }, [isLoading]);
-
   useEffect(() => {
     consultantReview(`api/consultants/${id}/reviews`).then((data) =>
       setReviewData(data),
@@ -385,11 +423,10 @@ const CounselorDetails = () => {
     setIsLoading(false)
   }, [isLoading,]);
 
-  // console.log(writeReview,"reviewData");
 
   return (
     <div className={classes.root}>
-      {!isLoading? <Container>
+      {!isLoading ? <Container>
         <div className="profile-content">
           <div className="top"><h3><span><Link to={"/"}>  <HomeIcon /></Link></span>{data?.name}'s profile</h3></div>
           <Paper >
@@ -488,40 +525,9 @@ const CounselorDetails = () => {
             </div>
           </div>
         </div>
+        <BookingSessionComp consultant={data} />
 
-        <div className={classes.modalContainer}>
-          <MuiModal open={openModal} onClose={handleCloseModal} title="Book an Appointment">
-            {/* <DatePicker selectedDate={selectedDate} onChange={handleDateChange} /> */}
-            <div className={classes.plans}>
-              <div className="plan">
-                <CheckboxComp options={['individual']} />
-                <p className="plan-name">Individual session</p>
-                <p className="discount"><span><CheckIcon /></span>10% - discount </p>
-                <p className="discount"><span><CheckIcon /></span>1 session price: </p>
-                <p className="discount"><span><CheckIcon /></span>5 session price:</p>
-                <p className="validity"><span><CheckIcon /></span>Validity : 2 months </p>
-                <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {data?.price?.monthly}</p>
-              </div>
-              <div className="plan">
-                <CheckboxComp options={['webinar']} />
-                <p className="plan-name">Webinar session</p>
-                <p className="discount"><span><CheckIcon /></span>10% - discount </p>
-                <p className="discount"><span><CheckIcon /></span>10 session price: </p>
-                <p className="discount"><span><CheckIcon /></span>5 session price:</p>
-                <p className="validity"><span><CheckIcon /></span>Validity : 4 months </p>
-                <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {data.price?.annual}</p>
-              </div>
-            </div>
-
-            <div className='booked-session-btn'
-              style={{ display: 'flex', justifyContent: 'space-between', marginBottom: "1rem" }}
-            >
-              <DatePicker selectedDate={selectedDate} onChange={handleDateChange} />
-              <Button onClick={handleCloseModal} variant="contained" color="primary">Book</Button>
-            </div>
-          </MuiModal>
-        </div>
-      </Container>:<Loader />}
+      </Container> : <Loader />}
     </div>
   )
 }

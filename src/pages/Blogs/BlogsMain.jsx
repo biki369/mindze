@@ -1,6 +1,6 @@
 
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import { Button, IconButton, useMediaQuery, useTheme } from '@material-ui/core';
 // import SideMenu from '../../../components/drawer/SideMenu';
@@ -85,14 +85,21 @@ const BlogsMain = () => {
         setDrawerOpen(!drawerOpen);
     };
 
+    useEffect(() => {
+        const storedValue = localStorage.getItem('activeTab');
+        if (storedValue) {
+            setSendId(parseInt(storedValue));
+        }
+        localStorage.clear()
+    }, []);
+
     const getId = (id) => {
         if (!id) {
             id = 0
         }
-        return setSendId(id)
+        setSendId(id)
+        localStorage.setItem('activeTab', id)
     }
-
-    const [expanded, setExpanded] = React.useState(false);
 
     const SideMenuBar = () => {
         return (

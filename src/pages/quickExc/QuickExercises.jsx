@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -67,8 +67,18 @@ const QuickExercises = () => {
     const classes = useStyles();
     const [value, setValue] = React.useState(0);
 
+    useEffect(() => {
+        const storedValue = localStorage.getItem('activeTab');
+        if (storedValue) {
+            setValue(parseInt(storedValue));
+        }
+        localStorage.clear()
+       
+    }, []);
+
     const handleChange = (event, newValue) => {
         setValue(newValue);
+        localStorage.setItem('activeTab', newValue);
     };
 
     return (

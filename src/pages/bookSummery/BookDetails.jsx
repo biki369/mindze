@@ -4,7 +4,6 @@ import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Markdown from "markdown-to-jsx";
 import Loader from "../../components/loader/Loader";
-
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: "30px 23px",
@@ -62,6 +61,7 @@ const BookDetails = () => {
   const [findData, setFindData] = useState("");
 
   const data = location.state;
+
 
   // const baseUrl = "http://localhost:5173";
   // const data = props.location.state;

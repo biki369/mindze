@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -7,7 +7,8 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Philosophers from './philosophers/Philosophers';
 import { useMediaQuery } from '@material-ui/core';
-import {stoicismData,modernPhilosophers, hindunismData, buddhismData, taoismData, existentialismData, christianData, sufismData} from '../../data/philosophicalPerspective'
+import { stoicismData, modernPhilosophers, hindunismData, buddhismData, taoismData, existentialismData, christianData, sufismData } from '../../data/philosophicalPerspective'
+import { useLocation } from 'react-router-dom';
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
 
@@ -57,13 +58,13 @@ const useStyles = makeStyles((theme) => ({
                 display: 'flex',
             },
         },
-        
-          "& .MuiTabs-flexContainer": {
+
+        "& .MuiTabs-flexContainer": {
             justifyContent: 'center',
             [theme.breakpoints.down('md')]: {
-              justifyContent: 'start',
+                justifyContent: 'start',
             },
-          },
+        },
 
     },
 }));
@@ -72,6 +73,8 @@ const PhilosophicalPerspective = () => {
 
     const theme = useTheme();
     const mobileDevice = useMediaQuery(theme.breakpoints.down('md'));
+    const { pathname } = useLocation()
+
 
     const philosophicalTabData = [
         "Modern Spirituality Thinkers",
@@ -87,15 +90,26 @@ const PhilosophicalPerspective = () => {
     const classes = useStyles();
     const [value, setValue] = React.useState(0);
 
+    useEffect(() => {
+        const storedValue = localStorage.getItem('activeTab');
+        if (storedValue) {
+            setValue(parseInt(storedValue));
+        }
+        localStorage.clear()
+       
+    }, []);
+
     const handleChange = (event, newValue) => {
         setValue(newValue);
+        localStorage.setItem('activeTab', newValue);
     };
+
 
     return (
         <div className={classes.root}>
             <AppBar
                 position="static"
-                
+
             >
                 <Tabs value={value} onChange={handleChange}
                     aria-label="scrollable auto tabs example"
@@ -116,22 +130,22 @@ const PhilosophicalPerspective = () => {
 
             </TabPanel>
             <TabPanel value={value} index={2}>
-                <Philosophers data={hindunismData}/>
+                <Philosophers data={hindunismData} />
             </TabPanel>
             <TabPanel value={value} index={3}>
-                <Philosophers data={buddhismData}/>
+                <Philosophers data={buddhismData} />
             </TabPanel>
             <TabPanel value={value} index={4}>
-                <Philosophers data={taoismData}/>
+                <Philosophers data={taoismData} />
             </TabPanel>
             <TabPanel value={value} index={5}>
-                <Philosophers data={existentialismData}/>
+                <Philosophers data={existentialismData} />
             </TabPanel>
             <TabPanel value={value} index={6}>
-                <Philosophers data={sufismData}/>
+                <Philosophers data={sufismData} />
             </TabPanel>
             <TabPanel value={value} index={7}>
-                <Philosophers data={christianData}/>
+                <Philosophers data={christianData} />
             </TabPanel>
         </div>
     );
