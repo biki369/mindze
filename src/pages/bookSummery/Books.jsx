@@ -8,8 +8,6 @@ import Tab from '@material-ui/core/Tab';
 import BookCard from '../../components/cards/book-card/BookCard';
 import { TableContainer, useMediaQuery } from '@material-ui/core';
 import { PersonalityDev, careerDev, spirituality, psychology } from '../../data/bookSummery';
-import { useLocation } from 'react-router-dom';
-
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 

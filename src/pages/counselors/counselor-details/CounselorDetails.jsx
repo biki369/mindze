@@ -1,10 +1,7 @@
-import { Avatar, Button, Container, IconButton, LinearProgress, Paper, TextField, makeStyles } from "@material-ui/core"
-import { Link, useParams } from "react-router-dom";
-// import { counselorsData, userRating } from '../../../data/index'
+import { Avatar, Button, Container, LinearProgress, Paper, TextField, makeStyles } from "@material-ui/core"
+import { Link, useLocation, useParams } from "react-router-dom";
 import HomeIcon from '@material-ui/icons/Home';
 import SchoolIcon from '@material-ui/icons/School';
-// import ForumIcon from '@material-ui/icons/Forum';
-// import CallIcon from '@material-ui/icons/Call';
 import Rating from '@material-ui/lab/Rating';
 import StarsIcon from '@material-ui/icons/Stars';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
@@ -13,16 +10,19 @@ import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import CheckIcon from '@material-ui/icons/Check';
 import { useEffect, useState } from "react";
 import MuiModal from "../../../components/modal/MuiModal";
-import DatePicker from "../../../components/mui-date-picker/DatePicker";
 import Loader from "../../../components/loader/Loader";
 import { consultantDetails, consultantReview, get_time_slots, giveReview } from "../../../api";
-import MessageIcon from '@material-ui/icons/Message';
+// import MessageIcon from '@material-ui/icons/Message';
+import BackCurrent from "../../../components/back-current/BackCurrent";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: "30px 10px",
+    width: "100%",
     "& .top": {
-      width: "fit-content",
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
       margin: "13px 0",
       "& h3": {
         display: "flex",
@@ -43,13 +43,17 @@ const useStyles = makeStyles((theme) => ({
       }
     },
     "& .profile-content":
-      { display: 'flex', flexDirection: 'column', gap: 10 },
+      { display: 'flex', flexDirection: 'column', gap: 10, },
     "& .profile": {
       display: 'flex',
       gap: 20,
       padding: 13,
-
-      // flexWrap: 'wrap',
+      flexWrap: 'wrap',
+      alignItems: 'center',
+      justifyContent: 'center',
+      [theme.breakpoints.down(600)]: {
+        padding: '1.3rem'
+      },
 
       "& .profile-img": {
         // width:'80%',
@@ -141,6 +145,7 @@ const useStyles = makeStyles((theme) => ({
         width: '50%',
         padding: 6,
         [theme.breakpoints.down(700)]: {
+          padding: 0,
           width: "100%",
         },
       },
@@ -153,8 +158,12 @@ const useStyles = makeStyles((theme) => ({
           alignItems: 'center',
           gap: 10,
           padding: '10px 20px',
+          flexWrap: 'wrap',
           "& .review-stars": {
             padding: 30,
+            [theme.breakpoints.down(600)]: {
+              width: '100%',
+            },
             "& h5": {
               fontSize: "3rem",
               fontWeight: 400,
@@ -163,6 +172,9 @@ const useStyles = makeStyles((theme) => ({
           },
           "& .review-bar": {
             width: '60%',
+            [theme.breakpoints.down(600)]: {
+              width: '100%',
+            },
             "& .bar": {
               display: 'flex',
               alignItems: 'center',
@@ -272,6 +284,8 @@ const useStyles = makeStyles((theme) => ({
 const CounselorDetails = () => {
   const classes = useStyles()
 
+  // const {pathname} = useLocation()
+
   let { id } = useParams();
 
   const [reviewData, setReviewData] = useState();
@@ -287,7 +301,7 @@ const CounselorDetails = () => {
 
   const handleDateChange = (event) => {
     setDate(event.target.value);
-}
+  }
 
   const handleOpenModal = () => {
     setOpenModal(true);
@@ -319,17 +333,17 @@ const CounselorDetails = () => {
   const bookSession = () => {
     setOpenModal(false);
     const parameters = {
-        consultant: data?.id,
-        date: date
+      consultant: data?.id,
+      date: date
     }
     console.log(parameters)
     get_time_slots("api/get_time_slots", parameters).then((data) => console.log(data)).catch((e) => Swal.fire({
-        icon: "error",
-        title: `Consultant ID and date are required.`,
-        showConfirmButton: false,
-        timer: 1500
+      icon: "error",
+      title: `Consultant ID and date are required.`,
+      showConfirmButton: false,
+      timer: 1500
     }))
-};
+  };
 
 
   // ====== function fro check====
@@ -424,11 +438,16 @@ const CounselorDetails = () => {
   }, [isLoading,]);
 
 
+
+
   return (
     <div className={classes.root}>
       {!isLoading ? <Container>
         <div className="profile-content">
-          <div className="top"><h3><span><Link to={"/"}>  <HomeIcon /></Link></span>{data?.name}'s profile</h3></div>
+          <div className="top">
+            <h3><span><Link to={"/"}>  <HomeIcon /></Link></span>{data?.name}'s profile</h3>
+              {/* <BackCurrent link={"/spiritualCounselors"} name={"spiritual Counselors"} /> */}
+          </div>
           <Paper >
             <div className="profile">
               <div className="profile-img">

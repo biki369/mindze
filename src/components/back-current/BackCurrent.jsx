@@ -4,7 +4,7 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 // import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: '100%',
+        // width: '100%',
         "& .link-back": {
             color: theme.palette.primary.main,
             fontSize: '1.03rem',
