@@ -8,7 +8,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+/* 
+    const [psychologicalData, setPsychologicalData] = useState(null);
 
+
+*/
 body {
   /* font-family: "Montserrat", sans-serif; */
   font-style: normal;

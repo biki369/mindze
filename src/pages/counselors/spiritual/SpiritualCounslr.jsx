@@ -1,15 +1,11 @@
 // import React from 'react'
-import { Avatar, Paper, makeStyles, Grid, Button, Checkbox } from '@material-ui/core';
-import { counselorsData } from '../../../data';
-// import SchoolIcon from '@material-ui/icons/School';
+import { Avatar, Paper, makeStyles, Grid, Button, } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import StarsIcon from '@material-ui/icons/Stars';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import MuiModal from '../../../components/modal/MuiModal';
-import DatePicker from '../../../components/mui-date-picker/DatePicker';
 import { useEffect, useState } from 'react';
-import { CheckBox } from '@material-ui/icons';
 import CheckIcon from '@material-ui/icons/Check';
 import { bookingsSlot, getConsultant, get_time_slots } from '../../../api';
 import Loader from '../../../components/loader/Loader';
@@ -174,7 +170,7 @@ const useStyles = makeStyles((theme) => ({
 
 const SpiritualCounslr = () => {
     const classes = useStyles();
-    const todayDate = new Date();
+    const todayDate = new Date().toISOString().split('T')[0];
     const [date, setDate] = useState(todayDate)
     const [isLoading, setIsLoading] = useState(false)
     const [spiritualData, setSpiritualData] = useState(null);
@@ -183,16 +179,37 @@ const SpiritualCounslr = () => {
 
     const handleDateChange = (event) => {
         setDate(event.target.value);
-        // setGetConsltId(id)
     };
+    const handleOpenModal = (evn, e) => {
+        if (localStorage.getItem("token") !== null) {
+            setOpenModal(true);
+            setItem(e);
+            setDate(todayDate)
+        } else {
+            Swal.fire({
+                // icon: "error",
+                // title: `Please login to booked session.`,
+                // showConfirmButton: false,
+                // timer: 2300
+                icon: 'warning',
+                showCancelButton: true,
+                title: `Please login to booked session.`,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Go to login page',
+                cancelButtonText: 'No'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.open("/login");
+                }
+            })
 
-    const handleOpenModal = (evn,e) => {
-        setOpenModal(true);
-        setItem(e);
+        }
     };
 
     const handleCloseModal = () => {
         setOpenModal(false);
+        setDate(todayDate)
     };
 
     const bookSession = () => {
@@ -201,7 +218,10 @@ const SpiritualCounslr = () => {
             consultant: item?.id,
             date: date
         }
-        get_time_slots("api/get_time_slots", parameters).then((data) => console.log(data)).catch((e) => Swal.fire({
+        get_time_slots("api/get_time_slots", parameters).then((data) =>
+        console.log(data,"book success")
+        
+        ).catch((e) => Swal.fire({
             icon: "error",
             title: `Consultant ID and date are required.`,
             showConfirmButton: false,
@@ -240,8 +260,7 @@ const SpiritualCounslr = () => {
         );
     };
 
-    const BookingSessionComp = ({ consultant }) => {
-        // console.log(uid "consltId");
+    const BookingSessionModalComp = ({ consultant }) => {
         return (
             <div className={classes.modalContainer}>
                 <MuiModal open={openModal} onClose={handleCloseModal} title="Book an Appointment">
@@ -272,7 +291,7 @@ const SpiritualCounslr = () => {
 
                     >
                         {/* <DatePicker selectedDate={selectedDate} onChange={handleDateChange} /> */}
-                        <input type="date" value={date} onChange={(event) => handleDateChange(event)} />
+                        <input type="date" value={date} min={todayDate} onChange={(event) => handleDateChange(event)} />
                         <Button variant="contained" onClick={bookSession} color="primary">Book</Button>
                     </div>
                 </MuiModal>
@@ -288,14 +307,13 @@ const SpiritualCounslr = () => {
             console.log(err)
         })
     }, [isLoading]);
-    
     return (
         <div className={classes.root}>
             {
                 spiritualData === null ? (<div className='loader'>
                     <Loader />
                 </div>) : (
-                    <div className='counselor-container'>
+                    <div className='counselor-container' >
                         {
                             spiritualData?.map((e, i) => {
                                 return (
@@ -349,7 +367,7 @@ const SpiritualCounslr = () => {
                                                 </Grid>
                                                 <Grid item xs={12} sm={5}>
                                                     <Button fullWidth
-                                                        onClick={(evn) => handleOpenModal(evn,e)}
+                                                        onClick={(evn) => handleOpenModal(evn, e)}
                                                         // onClick={handleOpenModal}
                                                         variant="contained"
                                                         color="primary">Book session</Button>
@@ -359,12 +377,12 @@ const SpiritualCounslr = () => {
                                     </Paper>
                                 )
                             }
-                        )
-                    }
+                            )
+                        }
                     </div>
                 )
             }
-            <BookingSessionComp consultant={item} />
+            <BookingSessionModalComp consultant={item} />
         </div>
     )
 }

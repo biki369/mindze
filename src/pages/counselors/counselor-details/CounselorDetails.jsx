@@ -12,8 +12,9 @@ import { useEffect, useState } from "react";
 import MuiModal from "../../../components/modal/MuiModal";
 import Loader from "../../../components/loader/Loader";
 import { consultantDetails, consultantReview, get_time_slots, giveReview } from "../../../api";
+import Swal from "sweetalert2";
 // import MessageIcon from '@material-ui/icons/Message';
-import BackCurrent from "../../../components/back-current/BackCurrent";
+// import BackCurrent from "../../../components/back-current/BackCurrent";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -50,23 +51,20 @@ const useStyles = makeStyles((theme) => ({
       padding: 13,
       flexWrap: 'wrap',
       alignItems: 'center',
-      justifyContent: 'center',
+      justifyContent: 'space-evenly',
       [theme.breakpoints.down(600)]: {
         padding: '1.3rem'
       },
 
-      "& .profile-img": {
-        // width:'80%',
-        width: 260,
-        // hight:300,
-        // borderRadius:'50%',
-        "& img": {
-          width: '100%',
-          borderRadius: '50%',
-          height: 260,
-          // objectFit:'cover',
-        },
-      },
+      // "& .profile-img": {
+      //   // width:'80%',
+      //   width: 260,
+      //   "& img": {
+      //     width: '100%',
+      //     borderRadius: '50%',
+      //     height: 260,
+      //   },
+      // },
       "& .profile-info": {
         width: '60%',
         [theme.breakpoints.down(600)]: {
@@ -233,8 +231,7 @@ const useStyles = makeStyles((theme) => ({
         //   float:'right'
         // }
       }
-    }
-
+    },
   },
 
   plans: {
@@ -279,6 +276,11 @@ const useStyles = makeStyles((theme) => ({
     }
 
   },
+
+  counslrAvatar: {
+    width: 230,
+    height: 230,
+  }
 }))
 
 const CounselorDetails = () => {
@@ -289,7 +291,7 @@ const CounselorDetails = () => {
   let { id } = useParams();
 
   const [reviewData, setReviewData] = useState();
-  const todayDate = new Date();
+  const todayDate = new Date().toISOString().split('T')[0];
   const [date, setDate] = useState(todayDate)
 
   const [openModal, setOpenModal] = useState(false);
@@ -303,12 +305,36 @@ const CounselorDetails = () => {
     setDate(event.target.value);
   }
 
-  const handleOpenModal = () => {
-    setOpenModal(true);
+  const handleOpenModal = (evn, e) => {
+    if (localStorage.getItem("token") !== null) {
+      setOpenModal(true);
+      // setItem(e);
+      setDate(todayDate)
+    } else {
+      Swal.fire({
+        // icon: "error",
+        // title: `Please login to booked session.`,
+        // showConfirmButton: false,
+        // timer: 2300
+        icon: 'warning',
+        showCancelButton: true,
+        title: `Please login to booked session.`,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Go to login page',
+        cancelButtonText: 'No'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.open("/login");
+        }
+      })
+
+    }
   };
 
   const handleCloseModal = () => {
     setOpenModal(false);
+    setDate(todayDate)
   };
 
   const handleWriteReview = (e) => {
@@ -378,8 +404,7 @@ const CounselorDetails = () => {
     );
   };
 
-  const BookingSessionComp = ({ consultant }) => {
-    // console.log(uid "consltId");
+  const BookingSessionModalComp = ({ consultant }) => {
     return (
       <div className={classes.modalContainer}>
         <MuiModal open={openModal} onClose={handleCloseModal} title="Book an Appointment">
@@ -410,7 +435,7 @@ const CounselorDetails = () => {
 
           >
             {/* <DatePicker selectedDate={selectedDate} onChange={handleDateChange} /> */}
-            <input type="date" value={date} onChange={(event) => handleDateChange(event)} />
+            <input type="date" value={date} min={todayDate} onChange={(event) => handleDateChange(event)} />
             <Button variant="contained" onClick={bookSession} color="primary">Book</Button>
           </div>
         </MuiModal>
@@ -439,19 +464,19 @@ const CounselorDetails = () => {
 
 
 
-
   return (
     <div className={classes.root}>
       {!isLoading ? <Container>
         <div className="profile-content">
           <div className="top">
             <h3><span><Link to={"/"}>  <HomeIcon /></Link></span>{data?.name}'s profile</h3>
-              {/* <BackCurrent link={"/spiritualCounselors"} name={"spiritual Counselors"} /> */}
+            {/* <BackCurrent link={"/spiritualCounselors"} name={"spiritual Counselors"} /> */}
           </div>
           <Paper >
             <div className="profile">
               <div className="profile-img">
-                <img src={data?.img} alt="404" />
+                <Avatar alt="counselor-img" src={data.img} className={classes.counslrAvatar} />
+                {/* <img src={data?.img || "" } alt="404" /> */}
               </div>
               <div className="profile-info">
                 <div className="profile-info-top">
@@ -544,7 +569,7 @@ const CounselorDetails = () => {
             </div>
           </div>
         </div>
-        <BookingSessionComp consultant={data} />
+        <BookingSessionModalComp consultant={data} />
 
       </Container> : <Loader />}
     </div>
