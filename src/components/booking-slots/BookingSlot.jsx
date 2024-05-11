@@ -140,6 +140,16 @@ const BookingSlot = (props) => {
             //         }
             //     });
             // }
+
+            if(date === null){
+                Swal.fire({
+                    icon: "error",
+                    title: `Date is required.`,
+                    showConfirmButton: false,
+                    timer: 1500,
+                })
+                return
+            }
             const parameters = {
                 consultant: item?.id,
                 date: date
@@ -266,14 +276,14 @@ const BookingSlot = (props) => {
                             id="standard-select-currency"
                             select
                             label="Available Slots"
-                            value={slot}
+                            // value={slot}
                             onChange={handleChangeSlot}
                             style={{ width: '200px' }}
                            // helperText="Please select your currency"
                         >
                             {/* {fetchSlots.length === 0 ? " No slots available" : ""} */}
                             {fetchSlots?.map((option) => (
-                                <MenuItem key={option.value} value={option.value}>
+                                <MenuItem key={option.id} value={option.id}>
                                     Slot: {option.id}
                                 </MenuItem>
                             ))}

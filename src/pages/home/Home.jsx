@@ -1,6 +1,6 @@
-import { Box, Typography, makeStyles, useMediaQuery, useTheme } from '@material-ui/core';
+import { Box, Typography, makeStyles,} from '@material-ui/core';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -8,9 +8,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { heroSliderImg, reviewData } from '../../data';
 import ServiceSlider from '../../components/sliders/serice-sldier/ServiceSlider';
-import { useEffect, useState } from 'react';
-import { getConsultant } from '../../api';
-
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -178,7 +175,6 @@ const Home = () => {
 
   return (
     <div className={classes.root}>
-
       <div className="hero">
         <Swiper
           centeredSlides={true}

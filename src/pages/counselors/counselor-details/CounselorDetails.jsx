@@ -440,6 +440,10 @@ const CounselorDetails = () => {
                         <div className="bar-number">2</div>
                         <div className="d-bar"><LinearProgress color="primary" variant="determinate" value={46} /></div>
                       </div>
+                      <div className="bar">
+                        <div className="bar-number">1</div>
+                        <div className="d-bar"><LinearProgress color="secondary" variant="determinate" value={16} /></div>
+                      </div>
 
 
                     </div>
