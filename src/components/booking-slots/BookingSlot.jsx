@@ -117,7 +117,30 @@ const BookingSlot = (props) => {
 
         const bookSession = () => {
             setOpenModal(false);
-
+            // const fetchingSlots = () => {
+            //     let timerInterval;
+            //     Swal.fire({
+            //         // title: "Auto close alert!",
+            //         html: "Slots will be available in <b></b> milliseconds.",
+            //         timer: 2000,
+            //         timerProgressBar: true,
+            //         didOpen: () => {
+            //             Swal.showLoading();
+            //             const timer = Swal.getPopup().querySelector("b");
+            //             timerInterval = setInterval(() => {
+            //                 timer.textContent = `${Swal.getTimerLeft()}`;
+            //             }, 100);
+            //         },
+            //         willClose: () => {
+            //             clearInterval(timerInterval);
+            //         }
+            //     }).then((result) => {
+            //         /* Read more about handling dismissals below */
+            //         if (result.dismiss === Swal.DismissReason.timer) {
+            //             console.log("I was closed by the timer");
+            //         }
+            //     });
+            // }
             const parameters = {
                 consultant: item?.id,
                 date: date
@@ -130,6 +153,12 @@ const BookingSlot = (props) => {
                     //     showConfirmButton: false,
                     //     timer: 1500
                     // })
+                    // if (data.length === 0) {
+                    //     fetchingSlots();
+                    // }else{
+                    //     setFetchSlots(data);
+                    //     setOpenModalSlots(true)
+                    // }
                     setFetchSlots(data);
                     setOpenModalSlots(true)
                 }
@@ -187,9 +216,12 @@ const BookingSlot = (props) => {
         }
         const BookedSlot = () => {
             if (slot === null) {
+                setOpenModalSlots(false);
+
                 Swal.fire({
                     icon: "error",
-                    title: `Please select slot.`,
+                    // title: `Please select slot.`,
+                    title: `Slots are not available.`,
                     showConfirmButton: false,
                     timer: 1500
                 })
@@ -211,16 +243,15 @@ const BookingSlot = (props) => {
             }).catch((err) => {
                 if (err) {
                     setOpenModalSlots(false);
-                    Swal.fire({
-                        icon: "error",
-                        title: `Something went wrong. Please try again.`,
-                        showConfirmButton: false,
-                        timer: 1500
-                    })
+                    // Swal.fire({
+                    //     icon: "error",
+                    //     title: `Something went wrong. Please try again.`,
+                    //     showConfirmButton: false,
+                    //     timer: 1500
+                    // })
                 }
             })
         }
-
         const handleCloseSlotsModal = () => {
             setOpenModalSlots(false);
         }
@@ -238,7 +269,7 @@ const BookingSlot = (props) => {
                             value={slot}
                             onChange={handleChangeSlot}
                             style={{ width: '200px' }}
-                        // helperText="Please select your currency"
+                           // helperText="Please select your currency"
                         >
                             {/* {fetchSlots.length === 0 ? " No slots available" : ""} */}
                             {fetchSlots?.map((option) => (
@@ -247,16 +278,11 @@ const BookingSlot = (props) => {
                                 </MenuItem>
                             ))}
                         </TextField>
-
-                        <Button variant="contained" onClick={BookedSlot} color="primary">Book Slot</Button>
+                        <Button variant="contained" onClick={BookedSlot} color="primary">Book Now</Button>
                     </div>
-
                 </MuiModal>
-
             </>
-
         )
-
     }
 
     return (
