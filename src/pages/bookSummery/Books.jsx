@@ -86,7 +86,7 @@ const Books = () => {
     if (storedValue) {
       setActiveTab(parseInt(storedValue));
     }
-    localStorage.clear()
+    localStorage.removeItem("activeTab");
    
 }, []);
 

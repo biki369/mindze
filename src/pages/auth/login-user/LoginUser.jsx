@@ -61,19 +61,21 @@ const useStyles = makeStyles((theme) => ({
       // justifyContent: 'center',
       alignItems: 'center',
       gap: '1rem',
+      "& h4": {
+        marginTop: '10px',
+        color: theme.palette.primary.main,
+        fontWeight: 500,
+        width: '100%',
+        paddingLeft:'3px',
+      },
       "& .consulter": {
-        // padding: '0 13px',
-        // maxWidth: 'max-content',
-        "& h3": {
-          marginTop: '10px',
-          color: theme.palette.primary.main
-        },
+
         width: '300px',
         padding: '1rem 1.3rem 0 ',
         borderRadius: '6px',
         boxShadow: '0 0 1.3px #000',
         transition: 'all 0.3s ease-in',
-        cursor: 'pointer',
+        // cursor: 'pointer',
         "&:hover": {
           boxShadow: '0 0 3px #000'
         },
@@ -106,6 +108,13 @@ const useStyles = makeStyles((theme) => ({
           }
         },
       }
+    },
+    "& .consulter-container": {
+      display: 'flex',
+      flexWrap: 'wrap',
+      // justifyContent: 'center',
+      alignItems: 'center',
+      gap: '10px',
     }
   },
 
@@ -130,7 +139,7 @@ const LoginUser = () => {
         setUserData(data)
       }
     }).catch((err) => {
-      console.log(err.response.data,"err")
+      console.log(err.response.data, "err")
     })
   }, []);
 
@@ -154,32 +163,39 @@ const LoginUser = () => {
       } */}
       {
         <Box>
-          <Box className="login-user">
-            <Avatar className="login-user-icon" src="" alt="logo" />
-            <Box className="user-content">
-              <p className="user-name"> User Name: <span>{userData?.username}</span></p>
-              <p className="name"> Name: {userData?.first_name} {userData?.last_name}</p>
-              <p className="email">Email:{userData?.email}</p>
-              <Button variant="contained" color="secondary" onClick={logoutHandler}>Logout</Button>
-            </Box>
-          </Box>
+          {
+            userData ? <>
+              <Box className="login-user">
+                <Avatar className="login-user-icon" src="" alt="logo" />
+                <Box className="user-content">
+                  <p className="user-name"> User Name: <span>{userData?.username}</span></p>
+                  <p className="name"> Name: {userData?.first_name} {userData?.last_name}</p>
+                  <p className="email">Email:{userData?.email}</p>
+                  <Button variant="contained" color="secondary" onClick={logoutHandler}>Logout</Button>
+                </Box>
+              </Box>
+
+            </> : <Loader />
+          }
+
 
           <Box className="booked-consultant">
-            <Box className="consulter">
-              <h3>{userData?.username} 's Bookings</h3>
-              {
-                bookingUser?.length === 0 && <p>No Bookings</p>
-              }
-              {
-                bookingUser?.map((e, i) => (
-                  <div key={i}>
-                    <p className="name">Name: {e?.consultant.name}</p>
+            <h4>{userData?.username} 's Bookings</h4>
+            <Box className="consulter-container ">
+              {bookingUser?.length === 0 && <Box className="consulter" p={2}>
+                <p>No Bookings</p>
+              </Box>}
+              {bookingUser?.map((e, i) => (
+                <Box key={i} className="consulter">
+                  <div >
+                    <p className="name">Consultant's Name: {e?.consultant.name}</p>
                     <p className="date">Date: {e?.slot.date}</p>
                     <p className="start"><span>Start time:</span> {e?.slot.start_time}</p>
                     <p className="end"><span>End time:</span>  {e?.slot.end_time}</p>
                   </div>
-                ))
-              }
+                </Box>
+              ))}
+
 
             </Box>
             {/* <Box className="consulter">

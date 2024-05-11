@@ -30,12 +30,14 @@ export const getProfile = async (url, payload) => {
   return data;
 };
 
-export const bookingsSlot = async (url, payload) => {
+export const bookingsSlot = async (url, parameters, token) => {
   const headers = {
     "Content-Type": "application/json",
-    Authorization: `Token ${payload}`,
+    Authorization: `Token ${token}`,
   };
-  const { data } = await axios.get(`${BASE_URL}/${url}`, { headers });
+  const { data } = await axios.post(`${BASE_URL}/${url}/`, parameters, {
+    headers,
+  });
   return data;
 };
 
@@ -65,24 +67,26 @@ export const consultantReview = async (url) => {
 };
 
 export const get_time_slots = async (url, payload) => {
-  const { data } = await axios.post(`${BASE_URL}/${url}/`,payload);
+  const { data } = await axios.post(`${BASE_URL}/${url}/`, payload);
   return data;
-}
+};
 
 export const bookedByUser = async (url, payload) => {
   const headers = {
     "Content-Type": "application/json",
     Authorization: `Token ${payload}`,
   };
-  const { data } = await axios.get(`${BASE_URL}/${url}/`,{ headers });
+  const { data } = await axios.get(`${BASE_URL}/${url}/`, { headers });
   return data;
-}
+};
 
-export const giveReview = async (url,parameters,token) => {
+export const giveReview = async (url, parameters, token) => {
   const headers = {
     "Content-Type": "application/json",
     Authorization: `Token ${token}`,
   };
-  const { data } = await axios.post(`${BASE_URL}/${url}/`,parameters,{ headers });
+  const { data } = await axios.post(`${BASE_URL}/${url}/`, parameters, {
+    headers,
+  });
   return data;
-}
+};

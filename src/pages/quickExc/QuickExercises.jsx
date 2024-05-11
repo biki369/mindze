@@ -72,7 +72,7 @@ const QuickExercises = () => {
         if (storedValue) {
             setValue(parseInt(storedValue));
         }
-        localStorage.clear()
+        localStorage.removeItem("activeTab");
        
     }, []);
 
@@ -93,7 +93,7 @@ const QuickExercises = () => {
                     <Tab label="Short Exercises/Affirmations" {...a11yProps(0)} />
                     <Tab label="Quotations" {...a11yProps(1)} />
                     <Tab label="Quick Meditation Techniques" {...a11yProps(2)} />
-                    <Tab label="Music" {...a11yProps(3)} />
+                    {/* <Tab label="Music" {...a11yProps(3)} /> */}
                 </Tabs>
             </AppBar>
             <TabPanel value={value} index={0}>

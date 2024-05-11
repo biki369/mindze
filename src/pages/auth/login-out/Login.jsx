@@ -1,4 +1,4 @@
-import React, { useEffect,} from 'react';
+import React, { useEffect, } from 'react';
 import { Avatar, Button, Grid, makeStyles, Paper, TextField, Typography } from "@material-ui/core";
 import { Link, useNavigate, } from "react-router-dom";
 import image from "../../../../public/Home_page/1.jpg";
@@ -64,60 +64,86 @@ export default function Login(props) {
   }
   const handelSubmit = (e) => {
     e.preventDefault();
-    if (isSignUp) {
-      registerNewUser("api/register/", account).then((e) => {
-        Swal.fire({
-          icon: "success",
-          title: e.Success,
-          showConfirmButton: false,
-          timer: 1600
-        })
-        setIsSignUp(false);
-      }).catch((e) =>{
-        Swal.fire({
-          icon: "error",
-          title: `${e.email[0]}`,
-          showConfirmButton: false,
-          timer: 1500
-        })
-      });
-    }
-    else {
-      loginUser("api/login/", account).then((e) => {
-        if (e.token) {
-          localStorage.setItem("token", e.token);
-          navigate("/login-user");
+
+    if (account.password.length < 6) {
+      Swal.fire({
+        icon: "error",
+        title: `Password must be at least 6 characters`,
+        showConfirmButton: false,
+        timer: 1500
+      })
+    } else {
+
+      if (isSignUp) {
+
+        registerNewUser("api/register/", account).then((e) => {
           Swal.fire({
             icon: "success",
-            title: "success",
+            title: e.Success,
             showConfirmButton: false,
-            timer: 1500
+            timer: 1600
           })
-        }
-      }).catch((e) => {
-            Swal.fire({
+          setIsSignUp(false);
+        }).catch((e) => {
+          const { email, password, username, last_name } = e.response.data;
+          const errorMsg = `
+          <p> ${email || ""}</p>
+          <p> ${last_name && "Last Name "} ${last_name || ""}</p>
+          <p> ${username || ''}</p>
+          <p> ${password || ''}</p>
+          `;
+          Swal.fire({
             icon: "error",
-            title: `${e.response.data.non_field_errors[0]}`,
+            html: errorMsg,
+            // title: `${email[0] || password[0] || username[0] || last_name[0]}`,
             showConfirmButton: false,
-            timer: 1500
+            timer: 2300
           })
-      })
+        });
+      }
+      else {
+        loginUser("api/login/", account).then((e) => {
+          if (e.token) {
+            localStorage.setItem("token", e.token);
+            navigate("/login-user");
+            Swal.fire({
+              icon: "success",
+              title: "success",
+              showConfirmButton: false,
+              timer: 1600
+            })
+          }
+        }).catch((e) => {
+          const { non_field_errors, info } = e.response.data
+          Swal.fire({
+            icon: "error",
+            title: `${info || "PLease check your credentials"}`,
+            showConfirmButton: false,
+            timer: 900
+          })
+        })
+      }
     }
+
+    //form validation
+
+
+
   };
   const signUpForm = () => {
     return (
-      <form className={classes.form} noValidate onSubmit={(e) => handelSubmit(e)}>
+      <form className={classes.form}  onSubmit={(e) => handelSubmit(e)}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
             <TextField
-              autoComplete="fname"
-              name="first_name"
               variant="outlined"
               required
               fullWidth
+              name="first_name"
               id="firstName"
               label="First Name"
-              autoFocus
+              // autoFocus
+              // value={account.first_name}
               onChange={(e) => handelAccount("first_name", e)}
             />
           </Grid>
@@ -129,7 +155,7 @@ export default function Login(props) {
               id="lastName"
               label="Last Name"
               name="last_name"
-              autoComplete="lname"
+              // value={account.last_name}
               onChange={(e) => handelAccount("last_name", e)}
             />
           </Grid>
@@ -141,7 +167,8 @@ export default function Login(props) {
               id="username"
               label="User Name"
               name="username"
-              autoComplete="uname"
+              // value={account.username}
+              // autoComplete="uname"
               onChange={(e) => handelAccount("username", e)}
             />
           </Grid>
@@ -154,6 +181,7 @@ export default function Login(props) {
               label="Email Address"
               name="email"
               autoComplete="email"
+              value={account.email}
               onChange={(e) => handelAccount("email", e)}
             />
           </Grid>
@@ -167,6 +195,7 @@ export default function Login(props) {
               label="Password"
               type="password"
               id="password"
+              // value={account.password}
               autoComplete="current-password"
               onChange={(e) => handelAccount("password", e)}
             />
@@ -187,7 +216,7 @@ export default function Login(props) {
 
   const signInform = () => {
     return (
-      <form className={classes.form} noValidate onSubmit={(e) => handelSubmit(e)}>
+      <form className={classes.form} onSubmit={(e) => handelSubmit(e)}>
         <TextField
           variant="outlined"
           required
@@ -195,7 +224,8 @@ export default function Login(props) {
           id="username"
           label="User Name"
           name="username"
-          autoComplete="uname"
+          // value={account.username}
+          // autoComplete="uname"
           onChange={(e) => handelAccount("username", e)}
         />
         <TextField
@@ -207,7 +237,8 @@ export default function Login(props) {
           label="Password"
           type="password"
           id="password"
-          autoComplete="current-password"
+          // value={account.password}
+          // autoComplete="current-password"
           onChange={(e) => handelAccount("password", e)}
         />
         {/* <FormControlLabel

@@ -95,8 +95,7 @@ const PhilosophicalPerspective = () => {
         if (storedValue) {
             setValue(parseInt(storedValue));
         }
-        localStorage.clear()
-       
+        localStorage.removeItem("activeTab");
     }, []);
 
     const handleChange = (event, newValue) => {

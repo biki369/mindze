@@ -1,15 +1,14 @@
 // import React from 'react'
-import { Avatar, Paper, makeStyles, Grid, Button, } from '@material-ui/core';
-import { Link } from 'react-router-dom';
+import { Avatar, Paper, makeStyles, Grid, Button} from '@material-ui/core';
+import { Link,} from 'react-router-dom';
 import StarsIcon from '@material-ui/icons/Stars';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
-import MuiModal from '../../../components/modal/MuiModal';
 import { useEffect, useState } from 'react';
-import CheckIcon from '@material-ui/icons/Check';
-import { bookingsSlot, getConsultant, get_time_slots } from '../../../api';
+import { getConsultant} from '../../../api';
 import Loader from '../../../components/loader/Loader';
 import Swal from 'sweetalert2';
+import BookingSlot from '../../../components/booking-slots/BookingSlot';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -170,27 +169,17 @@ const useStyles = makeStyles((theme) => ({
 
 const SpiritualCounslr = () => {
     const classes = useStyles();
-    const todayDate = new Date().toISOString().split('T')[0];
-    const [date, setDate] = useState(todayDate)
     const [isLoading, setIsLoading] = useState(false)
     const [spiritualData, setSpiritualData] = useState(null);
     const [openModal, setOpenModal] = useState(false);
     const [item, setItem] = useState();
-
-    const handleDateChange = (event) => {
-        setDate(event.target.value);
-    };
     const handleOpenModal = (evn, e) => {
         if (localStorage.getItem("token") !== null) {
             setOpenModal(true);
             setItem(e);
-            setDate(todayDate)
+            // setDate(todayDate)
         } else {
             Swal.fire({
-                // icon: "error",
-                // title: `Please login to booked session.`,
-                // showConfirmButton: false,
-                // timer: 2300
                 icon: 'warning',
                 showCancelButton: true,
                 title: `Please login to booked session.`,
@@ -206,99 +195,7 @@ const SpiritualCounslr = () => {
 
         }
     };
-
-    const handleCloseModal = () => {
-        setOpenModal(false);
-        setDate(todayDate)
-    };
-
-    const bookSession = () => {
-        setOpenModal(false);
-        const parameters = {
-            consultant: item?.id,
-            date: date
-        }
-        get_time_slots("api/get_time_slots", parameters).then((data) =>
-        console.log(data,"book success")
-        
-        ).catch((e) => Swal.fire({
-            icon: "error",
-            title: `Consultant ID and date are required.`,
-            showConfirmButton: false,
-            timer: 1500
-        }))
-    };
-    // ====== function fro check====
-    const CheckboxComp = ({ options }) => {
-        const [selectedOptions, setSelectedOptions] = useState([]);
-
-        const handleChange = (event) => {
-            const { value } = event.target;
-
-            if (selectedOptions.includes(value)) {
-                setSelectedOptions(selectedOptions.filter((option) => option !== value));
-            } else {
-                setSelectedOptions([...selectedOptions, value]);
-            }
-        };
-
-        return (
-            <div>
-                {options.map((option) => (
-                    <>
-                        <input
-                            type="checkbox"
-                            key={option}
-                            value={option}
-                            checked={selectedOptions.includes(option)}
-                            onChange={handleChange}
-                        />
-                        {/* {option} */}
-                    </>
-                ))}
-            </div>
-        );
-    };
-
-    const BookingSessionModalComp = ({ consultant }) => {
-        return (
-            <div className={classes.modalContainer}>
-                <MuiModal open={openModal} onClose={handleCloseModal} title="Book an Appointment">
-                    {/* <DatePicker selectedDate={selectedDate} onChange={handleDateChange} /> */}
-                    <div className={classes.plans}>
-                        <div className="plan">
-                            <CheckboxComp options={['individual']} />
-                            <p className="plan-name">Individual session</p>
-                            <p className="discount"><span><CheckIcon /></span>10% - discount </p>
-                            <p className="discount"><span><CheckIcon /></span>1 session price: </p>
-                            <p className="discount"><span><CheckIcon /></span>5 session price:</p>
-                            <p className="validity"><span><CheckIcon /></span>Validity : 2 months </p>
-                            <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {consultant?.price?.monthly}</p>
-                        </div>
-                        <div className="plan">
-                            <CheckboxComp options={['webinar']} />
-                            <p className="plan-name">Webinar session</p>
-                            <p className="discount"><span><CheckIcon /></span>10% - discount </p>
-                            <p className="discount"><span><CheckIcon /></span>10 session price: </p>
-                            <p className="discount"><span><CheckIcon /></span>5 session price:</p>
-                            <p className="validity"><span><CheckIcon /></span>Validity : 4 months </p>
-                            <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {consultant?.price?.annual}</p>
-                        </div>
-                    </div>
-
-                    <div className='booked-session-btn'
-                        style={{ display: 'flex', justifyContent: 'space-between', marginBottom: "1rem" }}
-
-                    >
-                        {/* <DatePicker selectedDate={selectedDate} onChange={handleDateChange} /> */}
-                        <input type="date" value={date} min={todayDate} onChange={(event) => handleDateChange(event)} />
-                        <Button variant="contained" onClick={bookSession} color="primary">Book</Button>
-                    </div>
-                </MuiModal>
-            </div>
-        )
-    };
-
+  
     useEffect(() => {
         getConsultant("api/consultant/spiritual").then((data) =>
             setSpiritualData(data),
@@ -307,6 +204,7 @@ const SpiritualCounslr = () => {
             console.log(err)
         })
     }, [isLoading]);
+
     return (
         <div className={classes.root}>
             {
@@ -382,7 +280,7 @@ const SpiritualCounslr = () => {
                     </div>
                 )
             }
-            <BookingSessionModalComp consultant={item} />
+            <BookingSlot  openModal={openModal} setOpenModal={setOpenModal} item={item} />
         </div>
     )
 }

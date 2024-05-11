@@ -16,13 +16,16 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
+    "& #modal-title":{
+      textAlign:"center",
+      margin:'1rem 0'
+    }
   },
 }));
 
 const MuiModal = ({ open, onClose, children,title }) => {
 
   // const {name} = props.data
-
   // console.log(name,"lskahdxah");
 
   const classes = useStyles();
@@ -36,7 +39,7 @@ const MuiModal = ({ open, onClose, children,title }) => {
       aria-describedby="modal-description"
     >
       <div className={classes.paper}>
-        <Typography variant="h6" id="modal-title" gutterBottom>
+        <Typography variant="h6" id="modal-title" gutterBottom >
           {title}
         </Typography>
         <Box variant="body1" id="modal-description" gutterBottom mx={3}> 
@@ -46,6 +49,7 @@ const MuiModal = ({ open, onClose, children,title }) => {
       </div>
     </Modal>
   );
+  
 };
 
 export default MuiModal;
