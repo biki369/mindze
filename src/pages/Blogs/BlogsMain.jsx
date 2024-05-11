@@ -40,10 +40,10 @@ const useStyles = makeStyles((theme) => ({
             // },
             "& .side-link": {
                 width: "100%",
-                "& button": {
-                    // display: 'block',
-                    minWidth: "100%",
-                }
+                // "& .MuiButton-root ": {
+                //     textAlign: 'left',
+                //     width: "100%",
+                // }
             },
 
             "& .qots-container": {
@@ -112,6 +112,7 @@ const BlogsMain = () => {
                                 style={{
                                     color: sendId === data.id ? '#fff' : '#545e6f',
                                     background: sendId === data.id ? '#3f51b5' : '',
+                                    // textAlign: 'left',
                                 }}
                             >{data.category}</Button>
                         </div>

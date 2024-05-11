@@ -1,4 +1,4 @@
-import { Button, MenuItem, TextField, makeStyles } from "@material-ui/core";
+import { Button, IconButton, MenuItem, TextField, makeStyles } from "@material-ui/core";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import MuiModal from "../modal/MuiModal";
@@ -6,7 +6,6 @@ import CheckIcon from '@material-ui/icons/Check';
 import { bookingsSlot, get_time_slots } from "../../api";
 import Swal from "sweetalert2";;
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
-
 const useStyles = makeStyles((theme) => ({
     modalContainer: {
         position: 'relative',
@@ -203,6 +202,7 @@ const BookingSlot = (props) => {
                     >
                         {/* <DatePicker selectedDate={selectedDate} onChange={handleDateChange} /> */}
                         <input type="date" value={date} min={todayDate} onChange={(event) => handleDateChange(event)} />
+
                         <Button variant="contained" onClick={bookSession} color="primary">Fetch Slots</Button>
                     </div>
                 </MuiModal>

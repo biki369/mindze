@@ -1,9 +1,6 @@
 import { makeStyles } from "@material-ui/core";
 import { MeditationsData } from '../../../data/yogaMediData'
-import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-
-
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: '6px',
@@ -68,13 +65,9 @@ const useStyles = makeStyles((theme) => ({
     }
   },
 }));
-
-
-
 function YogaMediDetails({id}) {
 
   const [findData, setFindData] = useState("");
-
   const classes = useStyles();
   // let { id } = useParams();
   if (!id) {
@@ -92,7 +85,7 @@ function YogaMediDetails({id}) {
           }
         }
       } catch (error) {
-        console.log(error);
+        // console.log(error);
       }
     }
     fetchData()

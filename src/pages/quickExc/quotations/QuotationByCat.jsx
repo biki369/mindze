@@ -83,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
                     width: '363px',
                     height:'513px',
                     [theme.breakpoints.down("sm")]: {
-                        width: '263px',
+                        width: '100%',
                     },
                     borderRadius: '13px',
                     // boxShadow:theme.p

@@ -775,579 +775,559 @@ export const MeditationsData = [
         conclusion: "Vipassana Meditation offers a profound journey into self-awareness and mindfulness. By practicing regularly, you can unlock the doors to mental clarity and emotional balance, paving the way for a more peaceful and fulfilling life."
       },
       {
-        "id": 9,
-        "title": "Zazen (Seated) Meditation",
-        "intro": "Zazen, or seated meditation, is a core practice in Zen Buddhism. It focuses on achieving deep mental stillness and insight through disciplined sitting. This ancient technique offers a path to tranquility and self-awareness.",
-        "understandingBodyScan": "Zazen means 'sitting meditation' in Japanese. It is a meditative discipline that emphasizes sitting in a stable, alert position to quiet the mind and observe the self. This practice is central to Zen Buddhism, aiming to uncover the nature of existence.",
-        "benefits": [
+        id: 9,
+        title: "Zazen (Seated) Meditation",
+        intro: "Zazen, or seated meditation, is a core practice in Zen Buddhism. It focuses on achieving deep mental stillness and insight through disciplined sitting. This ancient technique offers a path to tranquility and self-awareness.",
+        understandingBodyScan: "Zazen means 'sitting meditation' in Japanese. It is a meditative discipline that emphasizes sitting in a stable, alert position to quiet the mind and observe the self. This practice is central to Zen Buddhism, aiming to uncover the nature of existence.",
+        benefits: [
           {
-            "head": "Mental Clarity",
-            "content": "Regular practice enhances mindfulness and mental focus."
+            head: "Mental Clarity",
+            content: "Regular practice enhances mindfulness and mental focus."
           },
           {
-            "head": "Stress Reduction",
-            "content": "Zazen is effective in reducing anxiety and stress."
+            head: "Stress Reduction",
+            content: "Zazen is effective in reducing anxiety and stress."
           },
           {
-            "head": "Emotional Balance",
-            "content": "It aids in cultivating emotional stability and resilience."
+            head: "Emotional Balance",
+            content: "It aids in cultivating emotional stability and resilience."
           },
           {
-            "head": "Spiritual Insight",
-            "content": "Practitioners often experience profound spiritual growth."
+            head: "Spiritual Insight",
+            content: "Practitioners often experience profound spiritual growth."
           }
         ],
-        "howToPractice": {
-          "Quiet Space": "Find a peaceful area free from distractions.",
-          "Correct Posture": "Sit on a cushion or chair with a straight but relaxed spine.",
-          "Hand Position": "Place your hands in the cosmic mudra, palms up, resting on your lap.",
-          "Gentle Gaze": "Keep your eyes half-open, softly gazing downwards.",
-          "Focus on Breath": "Observe your breath naturally without trying to control it.",
-          "Let Thoughts Pass": "Acknowledge wandering thoughts and return focus to your breath.",
-          "Maintain Stillness": "Sit in quietude, allowing inner stillness to develop."
-        },
-        "tips": {
-          "Routine": "Practice Zazen daily for consistency.",
-          "Session Length": "Begin with short periods and gradually extend your sessions.",
-          "Mindset": "Approach each session with an open, non-judgmental attitude.",
-          "Patience": "Understand that progress in Zazen is slow and incremental."
-        },
-        "cautionsAndConsiderations": {
-          "Physical Discomfort": "Adjust your position if you experience pain or numbness.",
-          "Mental Challenges": "Stay patient with any mental discomfort or restlessness.",
-          "Guidance": "Seek instruction from experienced practitioners if possible.",
-          "Balance": "Avoid excessive practice; balance Zazen with everyday activities."
-        },
-        "conclusion": "Zazen is a powerful tool for cultivating mental peace and spiritual insight. Through disciplined practice, it offers a pathway to deeper self-understanding and mindfulness. Embracing Zazen can lead to a more centered and balanced life."
+        guid: [
+          {
+            step: "Quiet Space",
+            desc: "Find a peaceful area free from distractions."
+          },
+          {
+            step: "Correct Posture",
+            desc: "Sit on a cushion or chair with a straight but relaxed spine."
+          },
+          {
+            step: "Hand Position",
+            desc: "Place your hands in the cosmic mudra, palms up, resting on your lap."
+          },
+          {
+            step: "Gentle Gaze",
+            desc: "Keep your eyes half-open, softly gazing downwards."
+          },
+          {
+            step: "Focus on Breath",
+            desc: "Observe your breath naturally without trying to control it."
+          },
+          {
+            step: "Let Thoughts Pass",
+            desc: "Acknowledge wandering thoughts and return focus to your breath."
+          },
+          {
+            step: "Maintain Stillness",
+            desc: "Sit in quietude, allowing inner stillness to develop."
+          },
+        ],
+        tips: [
+        {  head:'Routine',
+          content:"Practice Zazen daily for consistency.",},
+        {  head:"Session Length", 
+          content:"Begin with short periods and gradually extend your sessions.",},
+    {      head:"Mindset",
+          content:"Approach each session with an open, non-judgmental attitude.",},
+         { head:"Patience",
+          content:"Understand that progress in Zazen is slow and incremental."}
+        ],
+        cautions: [
+           {head:"Physical Discomfort", content: "Adjust your position if you experience pain or numbness.",},
+          {head:"Mental Challenges",content: "Stay patient with any mental discomfort or restlessness.",},
+          {head:"Guidance",content: "Seek instruction from experienced practitioners if possible.",},
+          {head:"Balance",content: "Avoid excessive practice; balance Zazen with everyday activities.",},
+        ],
+        conclusion: "Zazen is a powerful tool for cultivating mental peace and spiritual insight. Through disciplined practice, it offers a pathway to deeper self-understanding and mindfulness. Embracing Zazen can lead to a more centered and balanced life."
       },
       {
-        "id": 3,
-        "title": "Sky Gazing Meditation",
-        "intro": "Sky Gazing Meditation is a serene practice that involves looking at the sky to cultivate a sense of openness and peace. This form of meditation is rooted in various spiritual traditions and offers a unique way to connect with the natural world.",
-        "understandingBodyScan": "Sky Gazing Meditation is about observing the vastness of the sky with a relaxed, unfocused gaze. It encourages a broadening of perspective, both literally and metaphorically, allowing practitioners to experience a sense of expansiveness.",
-        "benefits": [
+        id: 10,
+        title: "Sky Gazing Meditation",
+        intro: "Sky Gazing Meditation is a serene practice that involves looking at the sky to cultivate a sense of openness and peace. This form of meditation is rooted in various spiritual traditions and offers a unique way to connect with the natural world.",
+        understandingBodyScan: "Sky Gazing Meditation is about observing the vastness of the sky with a relaxed, unfocused gaze. It encourages a broadening of perspective, both literally and metaphorically, allowing practitioners to experience a sense of expansiveness.",
+        benefits: [
           {
-            "head": "Inner Peace",
-            "content": "Fosters a deep sense of tranquility and peace."
+            head: "Inner Peace",
+            content: "Fosters a deep sense of tranquility and peace."
           },
           {
-            "head": "Expanded Awareness",
-            "content": "Heightened awareness of the world around them."
+            head: "Expanded Awareness",
+            content: "Heightened awareness of the world around them."
           },
           {
-            "head": "Stress Reduction",
-            "content": "Effective in alleviating stress and calming the mind."
+            head: "Stress Reduction",
+            content: "Effective in alleviating stress and calming the mind."
           },
           {
-            "head": "Connection with Nature",
-            "content": "Enhances one's connection to the natural environment."
+            head: "Connection with Nature",
+            content: "Enhances one's connection to the natural environment."
           }
         ],
-        "howToPractice": {
-          "Find an Open Space": "Choose a location with a clear view of the sky.",
-          "Comfortable Position": "Sit or lie down in a comfortable position.",
-          "Relaxed Gaze": "Look at the sky with a soft, relaxed gaze.",
-          "Let Thoughts Pass": "Allow thoughts to come and go without attachment.",
-          "Breathe Deeply": "Incorporate deep, mindful breathing.",
-          "Duration": "Continue for a comfortable period, gradually increasing time with practice."
-        },
-        "tips": {
-          "Regular Practice": "Incorporate it into your daily routine for best results.",
-          "Sun Safety": "Avoid direct gazing at the sun, especially during midday.",
-          "Patience": "Allow the mind to settle into the practice without expectations.",
-          "Weather Considerations": "Choose clear days for optimal experience."
-        },
-        "cautionsAndConsiderations": {
-          "Eye Safety": "Be mindful of eye comfort, especially on brighter days.",
-          "Outdoor Conditions": "Prepare for the outdoor environment (e.g., sunscreen, comfortable clothing).",
-          "Mindful Awareness": "Stay aware of your surroundings, especially in public spaces.",
-          "Adapting to Weather": "Be flexible and adapt your practice to different weather conditions."
-        },
-        "conclusion": "Sky Gazing Meditation is a simple yet profound practice that opens the mind to the vastness of the sky and the possibilities within. By regularly engaging in this practice, one can find a sense of calm and expansiveness, deepening their connection with the natural world."
+        guid: [
+        {  step:"Find an Open Space",desc: "Choose a location with a clear view of the sky.",},
+        {  step:"Comfortable Position",desc: "Sit or lie down in a comfortable position.",},
+        {step:"Relaxed Gaze",desc: "Look at the sky with a soft, relaxed gaze.",},
+         { step:"Let Thoughts Pass",desc: "Allow thoughts to come and go without attachment.",},
+          {step:"Breathe Deeply",desc: "Incorporate deep, mindful breathing.",},
+          {step:"Duration",desc: "Continue for a comfortable period, gradually increasing time with practice."},
+        ],
+        tips: [
+        {  head:"Regular Practice",content: "Incorporate it into your daily routine for best results.",},
+          {head:"Sun Safety",content: "Avoid direct gazing at the sun, especially during midday.",},
+          {head:"Patience",content: "Allow the mind to settle into the practice without expectations.",},
+          {head:"Weather Considerations",content: "Choose clear days for optimal experience."},
+        ],
+        cautions: [
+          {head:"Eye Safety",content: "Be mindful of eye comfort, especially on brighter days.",},
+          {head:"Outdoor Conditions",content: "Prepare for the outdoor environment (e.g., sunscreen, comfortable clothing).",},
+          {head:"Mindful Awareness",content: "Stay aware of your surroundings, especially in public spaces.",},
+          {head:"Adapting to Weather",content: "Be flexible and adapt your practice to different weather conditions."},
+        ],
+        conclusion: "Sky Gazing Meditation is a simple yet profound practice that opens the mind to the vastness of the sky and the possibilities within. By regularly engaging in this practice, one can find a sense of calm and expansiveness, deepening their connection with the natural world."
       },
       {
-        "id": 10,
-        "title": "Sky Gazing Meditation",
-        "intro": "Sky Gazing Meditation is a serene practice that involves looking at the sky to cultivate a sense of openness and peace. This form of meditation is rooted in various spiritual traditions and offers a unique way to connect with the natural world.",
-        "understandingBodyScan": "Sky Gazing Meditation is about observing the vastness of the sky with a relaxed, unfocused gaze. It encourages a broadening of perspective, both literally and metaphorically, allowing practitioners to experience a sense of expansiveness.",
-        "benefits": [
+        id: 11,
+        title: "Shikantaza Meditation",
+        intro: "Shikantaza, or 'Just Sitting,' is a Zen meditation practice focused on sitting in alert attention. This form of meditation emphasizes being fully present and letting thoughts and sensations pass without engagement.",
+        understandingBodyScan: "Originating in the Zen Buddhist tradition, Shikantaza is a form of silent, objectless meditation. It is a practice of open awareness, where the meditator sits without a specific focus or goal, embodying a state of conscious alertness.",
+        benefits: [
           {
-            "head": "Inner Peace",
-            "content": "Fosters a deep sense of tranquility and peace."
+            head: "Mindful Awareness",
+            content: "Enhances the ability to be present in the moment."
           },
           {
-            "head": "Expanded Awareness",
-            "content": "Heightened awareness of the world around them."
+            head: "Emotional Balance",
+            content: "Helps in managing emotions by fostering a calm mind."
           },
           {
-            "head": "Stress Reduction",
-            "content": "Effective in alleviating stress and calming the mind."
+            head: "Stress Reduction",
+            content: "Offers a profound sense of relaxation and stress relief."
           },
           {
-            "head": "Connection with Nature",
-            "content": "Enhances one's connection to the natural environment."
+            head: "Spiritual Insight",
+            content: "Can lead to deep spiritual insights and self-awareness."
           }
         ],
-        "howToPractice": {
-          "Find an Open Space": "Choose a location with a clear view of the sky.",
-          "Comfortable Position": "Sit or lie down in a comfortable position.",
-          "Relaxed Gaze": "Look at the sky with a soft, relaxed gaze.",
-          "Let Thoughts Pass": "Allow thoughts to come and go without attachment.",
-          "Breathe Deeply": "Incorporate deep, mindful breathing.",
-          "Duration": "Continue for a comfortable period, gradually increasing time with practice."
-        },
-        "tips": {
-          "Regular Practice": "Incorporate it into your daily routine for best results.",
-          "Sun Safety": "Avoid direct gazing at the sun, especially during midday.",
-          "Patience": "Allow the mind to settle into the practice without expectations.",
-          "Weather Considerations": "Choose clear days for optimal experience."
-        },
-        "cautionsAndConsiderations": {
-          "Eye Safety": "Be mindful of eye comfort, especially on brighter days.",
-          "Outdoor Conditions": "Prepare for the outdoor environment (e.g., sunscreen, comfortable clothing).",
-          "Mindful Awareness": "Stay aware of your surroundings, especially in public spaces.",
-          "Adapting to Weather": "Be flexible and adapt your practice to different weather conditions."
-        },
-        "conclusion": "Sky Gazing Meditation is a simple yet profound practice that opens the mind to the vastness of the sky and the possibilities within. By regularly engaging in this practice, one can find a sense of calm and expansiveness, deepening their connection with the natural world."
+        guid: [
+          {
+            step: "Quiet Space",
+            desc: "Find a quiet and comfortable place to sit."
+          },
+          {
+            step: "Posture",
+            desc: "Sit in a traditional meditation posture with a straight back."
+          },
+          {
+            step: "Eyes Open",
+            desc: "Keep the eyes open, with a soft gaze directed downwards."
+          },
+          {
+            step: "Letting Go",
+            desc: "Allow thoughts and sensations to arise and pass without attachment."
+          },
+          {
+            step: "Alert Attention",
+            desc: "Maintain a state of alertness and presence throughout the session."
+          },
+          {
+            step: "Duration",
+            desc: "Start with shorter sessions and gradually increase the length."
+          }
+        ],
+        tips: [
+          {
+            head: "Regular Practice",
+            content: "Engage in Shikantaza regularly for best results."
+          },
+          {
+            head: "Patience",
+            content: "Understand that proficiency develops over time."
+          },
+          {
+            head: "Acceptance",
+            content: "Embrace whatever arises during meditation without judgment."
+          },
+          {
+            head: "Environment",
+            content: "Ensure a conducive environment for uninterrupted practice."
+          }
+        ],
+        cautions: [
+          {
+            head: "Physical Discomfort",
+            content: "Adjust posture as needed to avoid discomfort."
+          },
+          {
+            head: "Mental Distractions",
+            content: "Don't be discouraged by wandering thoughts."
+          },
+          {
+            head: "Guidance",
+            content: "Consider seeking guidance from a qualified teacher for deeper practice."
+          },
+          {
+            head: "Expectations",
+            content: "Approach Shikantaza without specific expectations."
+          }
+        ],
+        conclusion: "Shikantaza is a powerful practice of pure presence and awareness. It is a journey of discovering stillness amidst the chaos of life. Through regular practice, Shikantaza can cultivate a profound sense of peace and clarity, enriching both the mind and spirit."
       },
       {
-        "id": 12,
-        "title": "Shikantaza Meditation",
-        "intro": "Shikantaza, or 'Just Sitting,' is a Zen meditation practice focused on sitting in alert attention. This form of meditation emphasizes being fully present and letting thoughts and sensations pass without engagement.",
-        "understandingBodyScan": "Originating in the Zen Buddhist tradition, Shikantaza is a form of silent, objectless meditation. It is a practice of open awareness, where the meditator sits without a specific focus or goal, embodying a state of conscious alertness.",
-        "benefits": [
+        id: 12,
+        title: "So-Hum Meditation",
+        intro: "So-Hum Meditation is a simple yet profound technique rooted in the yogic tradition. It uses the mantra 'So-Hum,' meaning 'I am That,' to foster a deep sense of connection with the universe and inner self.",
+        understandingBodyScan: "This meditation involves silently repeating the mantra 'So-Hum' in sync with the breath. It's a practice that cultivates mindfulness and promotes a sense of oneness with all beings.",
+        benefits: [
           {
-            "head": "Mindful Awareness",
-            "content": "Enhances the ability to be present in the moment."
+            head: "Mind-Body Alignment",
+            content: "Enhances harmony between the mind and body."
           },
           {
-            "head": "Emotional Balance",
-            "content": "Helps in managing emotions by fostering a calm mind."
+            head: "Stress Reduction",
+            content: "Offers significant relief from stress and anxiety."
           },
           {
-            "head": "Stress Reduction",
-            "content": "Offers a profound sense of relaxation and stress relief."
+            head: "Improved Focus",
+            content: "Sharpens concentration and mental clarity."
           },
           {
-            "head": "Spiritual Insight",
-            "content": "Can lead to deep spiritual insights and self-awareness."
+            head: "Deep Relaxation",
+            content: "Induces a state of deep relaxation and inner peace."
           }
         ],
-        "guid": [
+        guid: [
           {
-            "step": "Quiet Space",
-            "desc": "Find a quiet and comfortable place to sit."
+            step: "Find a Quiet Place",
+            desc: "Choose a peaceful spot for meditation."
           },
           {
-            "step": "Posture",
-            "desc": "Sit in a traditional meditation posture with a straight back."
+            step: "Comfortable Posture",
+            desc: "Sit with your back straight in a comfortable position."
           },
           {
-            "step": "Eyes Open",
-            "desc": "Keep the eyes open, with a soft gaze directed downwards."
+            step: "Focus on Breath",
+            desc: "Observe the natural flow of your breath."
           },
           {
-            "step": "Letting Go",
-            "desc": "Allow thoughts and sensations to arise and pass without attachment."
+            step: "Introduce the Mantra",
+            desc: "Silently say 'So' on the inhale and 'Hum' on the exhale."
           },
           {
-            "step": "Alert Attention",
-            "desc": "Maintain a state of alertness and presence throughout the session."
+            step: "Gentle Attention",
+            desc: "Keep your focus gentle, returning to the mantra when distracted."
           },
           {
-            "step": "Duration",
-            "desc": "Start with shorter sessions and gradually increase the length."
+            step: "Duration",
+            desc: "Begin with 5-10 minutes and gradually increase."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Regular Practice",
-            "content": "Engage in Shikantaza regularly for best results."
+            head: "Regular Practice",
+            content: "Aim for daily sessions to gain maximum benefits."
           },
           {
-            "head": "Patience",
-            "content": "Understand that proficiency develops over time."
+            head: "Morning or Evening",
+            content: "Ideal times are during the quiet of early morning or evening."
           },
           {
-            "head": "Acceptance",
-            "content": "Embrace whatever arises during meditation without judgment."
+            head: "Patience and Persistence",
+            content: "Be patient and persistent for deeper experiences."
           },
           {
-            "head": "Environment",
-            "content": "Ensure a conducive environment for uninterrupted practice."
+            head: "Posture and Comfort",
+            content: "Ensure your meditation posture is comfortable for prolonged focus."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Physical Discomfort",
-            "content": "Adjust posture as needed to avoid discomfort."
+            head: "Mental Distractions",
+            content: "Do not be discouraged by a wandering mind; gently refocus."
           },
           {
-            "head": "Mental Distractions",
-            "content": "Don't be discouraged by wandering thoughts."
+            head: "Physical Comfort",
+            content: "Adjust your posture if discomfort arises during meditation."
           },
           {
-            "head": "Guidance",
-            "content": "Consider seeking guidance from a qualified teacher for deeper practice."
+            head: "Expectations",
+            content: "Avoid setting expectations about the meditation experience."
           },
           {
-            "head": "Expectations",
-            "content": "Approach Shikantaza without specific expectations."
+            head: "Breathing Naturally",
+            content: "Ensure your breathing remains natural and unforced."
           }
         ],
-        "conclusion": "Shikantaza is a powerful practice of pure presence and awareness. It is a journey of discovering stillness amidst the chaos of life. Through regular practice, Shikantaza can cultivate a profound sense of peace and clarity, enriching both the mind and spirit."
+        conclusion: "So-Hum Meditation is a powerful tool in discovering inner tranquility and mindfulness. This simple practice, when done regularly, can lead to profound mental and emotional balance, bringing a sense of calm and centeredness to everyday life."
       },
       {
-        "id": 13,
-        "title": "So-Hum Meditation",
-        "intro": "So-Hum Meditation is a simple yet profound technique rooted in the yogic tradition. It uses the mantra 'So-Hum,' meaning 'I am That,' to foster a deep sense of connection with the universe and inner self.",
-        "understandingBodyScan": "This meditation involves silently repeating the mantra 'So-Hum' in sync with the breath. It's a practice that cultivates mindfulness and promotes a sense of oneness with all beings.",
-        "benefits": [
+        id: 13,
+        title: "Mindful Eating Meditation",
+        intro: "Mindful eating meditation transforms the simple act of eating into a profound experience. It encourages heightened awareness of the sensory and nourishing aspects of food, promoting a healthier and more enjoyable relationship with what we eat.",
+        understandingBodyScan: "This practice involves paying full attention to the experience of eating, observing tastes, textures, and sensations in the present moment. Originating from Buddhist teachings, it's a form of mindfulness applied to eating habits.",
+        benefits: [
           {
-            "head": "Mind-Body Alignment",
-            "content": "Enhances harmony between the mind and body."
+            head: "Enhanced Enjoyment",
+            content: "Mindful eating helps in appreciating the flavors and textures of food more deeply."
           },
           {
-            "head": "Stress Reduction",
-            "content": "Offers significant relief from stress and anxiety."
+            head: "Reduced Overeating",
+            content: "It aids in recognizing hunger and fullness cues, preventing overeating."
           },
           {
-            "head": "Improved Focus",
-            "content": "Sharpens concentration and mental clarity."
+            head: "Improved Digestion",
+            content: "Slower, more conscious eating can improve digestion."
           },
           {
-            "head": "Deep Relaxation",
-            "content": "Induces a state of deep relaxation and inner peace."
+            head: "Stress Reduction",
+            content: "The practice offers a calming break from the day’s stresses."
           }
         ],
-        "guid": [
+        guid: [
           {
-            "step": "Find a Quiet Place",
-            "desc": "Choose a peaceful spot for meditation."
+            step: "Choose a Quiet Place",
+            desc: "Eat in a distraction-free environment."
           },
           {
-            "step": "Comfortable Posture",
-            "desc": "Sit with your back straight in a comfortable position."
+            step: "Portion Control",
+            desc: "Start with a small amount of food."
           },
           {
-            "step": "Focus on Breath",
-            "desc": "Observe the natural flow of your breath."
+            step: "Engage Senses",
+            desc: "Before eating, observe the food’s colors, smells, and textures."
           },
           {
-            "step": "Introduce the Mantra",
-            "desc": "Silently say 'So' on the inhale and 'Hum' on the exhale."
+            step: "Chew Slowly",
+            desc: "Chew each bite thoroughly, noticing the flavors and textures."
           },
           {
-            "step": "Gentle Attention",
-            "desc": "Keep your focus gentle, returning to the mantra when distracted."
+            step: "Mindful Breathing",
+            desc: "Incorporate mindful breathing between bites."
           },
           {
-            "step": "Duration",
-            "desc": "Begin with 5-10 minutes and gradually increase."
+            step: "Reflect",
+            desc: "Think about the food’s origin and the effort taken to prepare it."
+          },
+          {
+            step: "Gratitude",
+            desc: "Conclude with a moment of gratitude for the meal."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Regular Practice",
-            "content": "Aim for daily sessions to gain maximum benefits."
+            head: "Routine",
+            content: "Try to incorporate mindful eating into one meal daily."
           },
           {
-            "head": "Morning or Evening",
-            "content": "Ideal times are during the quiet of early morning or evening."
+            head: "Avoid Distractions",
+            content: "Turn off electronic devices during meals."
           },
           {
-            "head": "Patience and Persistence",
-            "content": "Be patient and persistent for deeper experiences."
+            head: "Mindful Choices",
+            content: "Be conscious about the food selections you make."
           },
           {
-            "head": "Posture and Comfort",
-            "content": "Ensure your meditation posture is comfortable for prolonged focus."
+            head: "Patience",
+            content: "Develop mindfulness gradually with each meal."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Mental Distractions",
-            "content": "Do not be discouraged by a wandering mind; gently refocus."
+            head: "Individual Needs",
+            content: "Adapt the practice to fit your dietary and health requirements."
           },
           {
-            "head": "Physical Comfort",
-            "content": "Adjust your posture if discomfort arises during meditation."
+            head: "Emotional Eating",
+            content: "Be aware of emotional triggers that might affect eating."
           },
           {
-            "head": "Expectations",
-            "content": "Avoid setting expectations about the meditation experience."
+            head: "Judgment-Free",
+            content: "Approach mindful eating without self-judgment or guilt."
           },
           {
-            "head": "Breathing Naturally",
-            "content": "Ensure your breathing remains natural and unforced."
+            head: "Balance",
+            content: "Maintain a balanced approach, enjoying occasional indulgences mindfully."
           }
         ],
-        "conclusion": "So-Hum Meditation is a powerful tool in discovering inner tranquility and mindfulness. This simple practice, when done regularly, can lead to profound mental and emotional balance, bringing a sense of calm and centeredness to everyday life."
+        conclusion: "Mindful eating meditation is a simple yet powerful way to transform our daily eating habits. It helps in developing a deeper, more harmonious relationship with food, leading to physical, emotional, and mental well-being. Embrace this practice to experience the joy of eating with awareness and appreciation."
       },
       {
-        "id": 14,
-        "title": "Mindful Eating Meditation",
-        "intro": "Mindful eating meditation transforms the simple act of eating into a profound experience. It encourages heightened awareness of the sensory and nourishing aspects of food, promoting a healthier and more enjoyable relationship with what we eat.",
-        "understandingBodyScan": "This practice involves paying full attention to the experience of eating, observing tastes, textures, and sensations in the present moment. Originating from Buddhist teachings, it's a form of mindfulness applied to eating habits.",
-        "benefits": [
+        id: 14,
+        title: "Neiguan (Inner Observing)",
+        intro: "Neiguan, or Inner Observing, is a traditional Chinese meditation practice focused on cultivating inner tranquility and self-awareness. This technique involves inward attention to harmonize the mind and body.",
+        understandingBodyScan: "Neiguan, meaning 'inner observing' in Chinese, is part of Qigong and traditional Chinese medicine. It emphasizes introspection and mindfulness to achieve mental clarity and emotional balance.",
+        benefits: [
           {
-            "head": "Enhanced Enjoyment",
-            "content": "Mindful eating helps in appreciating the flavors and textures of food more deeply."
+            head: "Reduced Stress",
+            content: "Helps in managing stress by promoting calmness."
           },
           {
-            "head": "Reduced Overeating",
-            "content": "It aids in recognizing hunger and fullness cues, preventing overeating."
+            head: "Emotional Regulation",
+            content: "Aids in balancing emotions and fostering resilience."
           },
           {
-            "head": "Improved Digestion",
-            "content": "Slower, more conscious eating can improve digestion."
+            head: "Increased Mindfulness",
+            content: "Enhances present-moment awareness and mindfulness."
           },
           {
-            "head": "Stress Reduction",
-            "content": "The practice offers a calming break from the day’s stresses."
+            head: "Improved Health",
+            content: "Often linked with better overall health and well-being."
           }
         ],
-        "guid": [
+        guid: [
           {
-            "step": "Choose a Quiet Place",
-            "desc": "Eat in a distraction-free environment."
+            step: "Find a Quiet Space",
+            desc: "Choose a peaceful place for practice."
           },
           {
-            "step": "Portion Control",
-            "desc": "Start with a small amount of food."
+            step: "Comfortable Posture",
+            desc: "Sit or lie down in a relaxed position."
           },
           {
-            "step": "Engage Senses",
-            "desc": "Before eating, observe the food’s colors, smells, and textures."
+            step: "Focus on Breathing",
+            desc: "Pay attention to your natural breathing pattern."
           },
           {
-            "step": "Chew Slowly",
-            "desc": "Chew each bite thoroughly, noticing the flavors and textures."
+            step: "Inward Attention",
+            desc: "Turn your focus inward, observing thoughts and sensations without judgment."
           },
           {
-            "step": "Mindful Breathing",
-            "desc": "Incorporate mindful breathing between bites."
+            step: "Use Visualization",
+            desc: "Visualize energy flow or use other imagery to deepen the practice."
           },
           {
-            "step": "Reflect",
-            "desc": "Think about the food’s origin and the effort taken to prepare it."
-          },
-          {
-            "step": "Gratitude",
-            "desc": "Conclude with a moment of gratitude for the meal."
+            step: "Gentle Awareness",
+            desc: "Maintain a gentle, non-critical awareness of your inner state."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Routine",
-            "content": "Try to incorporate mindful eating into one meal daily."
+            head: "Daily Routine",
+            content: "Incorporate Neiguan into your daily routine for consistency."
           },
           {
-            "head": "Avoid Distractions",
-            "content": "Turn off electronic devices during meals."
+            head: "Patience",
+            content: "Allow time for the practice to evolve naturally."
           },
           {
-            "head": "Mindful Choices",
-            "content": "Be conscious about the food selections you make."
+            head: "Duration",
+            content: "Start with shorter sessions, gradually extending as comfort increases."
           },
           {
-            "head": "Patience",
-            "content": "Develop mindfulness gradually with each meal."
+            head: "Mindful Approach",
+            content: "Approach each session with openness and curiosity."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Individual Needs",
-            "content": "Adapt the practice to fit your dietary and health requirements."
+            head: "Mindfulness of Discomfort",
+            content: "If you experience discomfort or agitation, adjust your practice accordingly."
           },
           {
-            "head": "Emotional Eating",
-            "content": "Be aware of emotional triggers that might affect eating."
+            head: "Realistic Expectations",
+            content: "Set realistic goals and expectations for your practice."
           },
           {
-            "head": "Judgment-Free",
-            "content": "Approach mindful eating without self-judgment or guilt."
+            head: "Balanced Practice",
+            content: "Balance Neiguan with other activities and responsibilities."
           },
           {
-            "head": "Balance",
-            "content": "Maintain a balanced approach, enjoying occasional indulgences mindfully."
+            head: "Seeking Guidance",
+            content: "Consider seeking guidance from a qualified instructor if needed."
           }
         ],
-        "conclusion": "Mindful eating meditation is a simple yet powerful way to transform our daily eating habits. It helps in developing a deeper, more harmonious relationship with food, leading to physical, emotional, and mental well-being. Embrace this practice to experience the joy of eating with awareness and appreciation."
+        conclusion: "Neiguan offers a path to inner peace and self-awareness, fostering a harmonious balance between mind and body. By regularly practicing Neiguan, you can cultivate a deeper sense of calm and mindfulness, enriching both your mental and physical well-being."
       },
       {
-        "id": 15,
-        "title": "Neiguan (Inner Observing)",
-        "intro": "Neiguan, or Inner Observing, is a traditional Chinese meditation practice focused on cultivating inner tranquility and self-awareness. This technique involves inward attention to harmonize the mind and body.",
-        "understandingBodyScan": "Neiguan, meaning 'inner observing' in Chinese, is part of Qigong and traditional Chinese medicine. It emphasizes introspection and mindfulness to achieve mental clarity and emotional balance.",
-        "benefits": [
+        id: 15,
+        title: "Nature Meditation",
+        intro: "Nature Meditation is a tranquil practice that connects us with the natural world. It offers a unique way to achieve peace and mindfulness by immersing oneself in the beauty of the outdoors.",
+        understandingBodyScan: "This meditation technique involves being present and fully engaged with the natural environment. It is about observing and absorbing the sights, sounds, and sensations of nature, facilitating a deep connection with the earth and its rhythms.",
+        benefits: [
           {
-            "head": "Reduced Stress",
-            "content": "Helps in managing stress by promoting calmness."
+            head: "Stress Reduction",
+            content: "Natural settings provide a calming backdrop that reduces stress."
           },
           {
-            "head": "Emotional Regulation",
-            "content": "Aids in balancing emotions and fostering resilience."
+            head: "Enhanced Awareness",
+            content: "Engaging with nature heightens sensory awareness."
           },
           {
-            "head": "Increased Mindfulness",
-            "content": "Enhances present-moment awareness and mindfulness."
+            head: "Emotional Well-being",
+            content: "Time in nature is linked to improved mood and emotional health."
           },
           {
-            "head": "Improved Health",
-            "content": "Often linked with better overall health and well-being."
+            head: "Increased Connection",
+            content: "Fosters a deeper connection with the environment and oneself."
           }
         ],
-        "guid": [
+        guid: [
           {
-            "step": "Find a Quiet Space",
-            "desc": "Choose a peaceful place for practice."
+            step: "Choose a Natural Setting",
+            desc: "Find a quiet spot in a garden, park, or forest."
           },
           {
-            "step": "Comfortable Posture",
-            "desc": "Sit or lie down in a relaxed position."
+            step: "Comfortable Position",
+            desc: "Sit or stand comfortably, feeling grounded in your surroundings."
           },
           {
-            "step": "Focus on Breathing",
-            "desc": "Pay attention to your natural breathing pattern."
+            step: "Engage Your Senses",
+            desc: "Observe the natural elements around you; listen to sounds, inhale scents, and watch movements."
           },
           {
-            "step": "Inward Attention",
-            "desc": "Turn your focus inward, observing thoughts and sensations without judgment."
+            step: "Mindful Breathing",
+            desc: "Breathe deeply, syncing your breath with the natural rhythm around you."
           },
           {
-            "step": "Use Visualization",
-            "desc": "Visualize energy flow or use other imagery to deepen the practice."
+            step: "Let Thoughts Pass",
+            desc: "Allow thoughts to come and go without attachment."
           },
           {
-            "step": "Gentle Awareness",
-            "desc": "Maintain a gentle, non-critical awareness of your inner state."
+            step: "Stay Present",
+            desc: "Focus on the present moment and your connection with nature."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Daily Routine",
-            "content": "Incorporate Neiguan into your daily routine for consistency."
+            head: "Regular Practice",
+            content: "Incorporate it into your routine for best results."
           },
           {
-            "head": "Patience",
-            "content": "Allow time for the practice to evolve naturally."
+            head: "Diverse Environments",
+            content: "Try different natural settings for varied experiences."
           },
           {
-            "head": "Duration",
-            "content": "Start with shorter sessions, gradually extending as comfort increases."
+            head: "Length of Sessions",
+            content: "Start with short periods, gradually increasing over time."
           },
           {
-            "head": "Mindful Approach",
-            "content": "Approach each session with openness and curiosity."
+            head: "Embrace Weather Changes",
+            content: "Experience nature meditation in different weather conditions for a unique perspective."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Mindfulness of Discomfort",
-            "content": "If you experience discomfort or agitation, adjust your practice accordingly."
+            head: "Safety First",
+            content: "Ensure the chosen spot is safe and secure."
           },
           {
-            "head": "Realistic Expectations",
-            "content": "Set realistic goals and expectations for your practice."
+            head: "Weather Awareness",
+            content: "Be mindful of weather conditions and dress appropriately."
           },
           {
-            "head": "Balanced Practice",
-            "content": "Balance Neiguan with other activities and responsibilities."
+            head: "Environmental Respect",
+            content: "Practice without disturbing the natural habitat."
           },
           {
-            "head": "Seeking Guidance",
-            "content": "Consider seeking guidance from a qualified instructor if needed."
+            head: "Personal Comfort",
+            content: "Address any allergies or sensitivities to outdoor elements."
           }
         ],
-        "conclusion": "Neiguan offers a path to inner peace and self-awareness, fostering a harmonious balance between mind and body. By regularly practicing Neiguan, you can cultivate a deeper sense of calm and mindfulness, enriching both your mental and physical well-being."
-      },
-      {
-        "id": 17,
-        "title": "Nature Meditation",
-        "intro": "Nature Meditation is a tranquil practice that connects us with the natural world. It offers a unique way to achieve peace and mindfulness by immersing oneself in the beauty of the outdoors.",
-        "understandingBodyScan": "This meditation technique involves being present and fully engaged with the natural environment. It is about observing and absorbing the sights, sounds, and sensations of nature, facilitating a deep connection with the earth and its rhythms.",
-        "benefits": [
-          {
-            "head": "Stress Reduction",
-            "content": "Natural settings provide a calming backdrop that reduces stress."
-          },
-          {
-            "head": "Enhanced Awareness",
-            "content": "Engaging with nature heightens sensory awareness."
-          },
-          {
-            "head": "Emotional Well-being",
-            "content": "Time in nature is linked to improved mood and emotional health."
-          },
-          {
-            "head": "Increased Connection",
-            "content": "Fosters a deeper connection with the environment and oneself."
-          }
-        ],
-        "guid": [
-          {
-            "step": "Choose a Natural Setting",
-            "desc": "Find a quiet spot in a garden, park, or forest."
-          },
-          {
-            "step": "Comfortable Position",
-            "desc": "Sit or stand comfortably, feeling grounded in your surroundings."
-          },
-          {
-            "step": "Engage Your Senses",
-            "desc": "Observe the natural elements around you; listen to sounds, inhale scents, and watch movements."
-          },
-          {
-            "step": "Mindful Breathing",
-            "desc": "Breathe deeply, syncing your breath with the natural rhythm around you."
-          },
-          {
-            "step": "Let Thoughts Pass",
-            "desc": "Allow thoughts to come and go without attachment."
-          },
-          {
-            "step": "Stay Present",
-            "desc": "Focus on the present moment and your connection with nature."
-          }
-        ],
-        "tips": [
-          {
-            "head": "Regular Practice",
-            "content": "Incorporate it into your routine for best results."
-          },
-          {
-            "head": "Diverse Environments",
-            "content": "Try different natural settings for varied experiences."
-          },
-          {
-            "head": "Length of Sessions",
-            "content": "Start with short periods, gradually increasing over time."
-          },
-          {
-            "head": "Embrace Weather Changes",
-            "content": "Experience nature meditation in different weather conditions for a unique perspective."
-          }
-        ],
-        "cautions": [
-          {
-            "head": "Safety First",
-            "content": "Ensure the chosen spot is safe and secure."
-          },
-          {
-            "head": "Weather Awareness",
-            "content": "Be mindful of weather conditions and dress appropriately."
-          },
-          {
-            "head": "Environmental Respect",
-            "content": "Practice without disturbing the natural habitat."
-          },
-          {
-            "head": "Personal Comfort",
-            "content": "Address any allergies or sensitivities to outdoor elements."
-          }
-        ],
-        "conclusion": "Nature Meditation is a powerful tool for fostering serenity and mindfulness. By engaging with the natural world, we can find a sense of peace and rejuvenation. This practice not only benefits our mental health but also deepens our appreciation for the environment."
+        conclusio: "Nature Meditation is a powerful tool for fostering serenity and mindfulness. By engaging with the natural world, we can find a sense of peace and rejuvenation. This practice not only benefits our mental health but also deepens our appreciation for the environment."
       }
     ],
   },
@@ -1355,534 +1335,534 @@ export const MeditationsData = [
     category: "Concentration and Focus",
     data: [
       {
-        "id": 18,
-        "title": "Sound Meditation",
-        "intro": "In our quest for inner peace, sound meditation emerges as a unique and powerful practice. This article explores the essence of sound meditation, a technique that uses auditory elements to promote relaxation and mental clarity.",
-        "understandingBodyScan": "Sound meditation involves focusing on different sounds to enhance mindfulness and concentration. This practice, deeply rooted in various cultural traditions, uses sound as a means to anchor the mind and encourage a state of deep relaxation.",
-        "benefits": [
+        id: 18,
+        title: "Sound Meditation",
+        intro: "In our quest for inner peace, sound meditation emerges as a unique and powerful practice. This article explores the essence of sound meditation, a technique that uses auditory elements to promote relaxation and mental clarity.",
+        understandingBodyScan: "Sound meditation involves focusing on different sounds to enhance mindfulness and concentration. This practice, deeply rooted in various cultural traditions, uses sound as a means to anchor the mind and encourage a state of deep relaxation.",
+        benefits: [
           {
-            "head": "Stress Reduction",
-            "content": "Regular sessions can significantly lower stress levels."
+            head: "Stress Reduction",
+            content: "Regular sessions can significantly lower stress levels."
           },
           {
-            "head": "Improved Concentration",
-            "content": "It sharpens focus and enhances cognitive abilities."
+            head: "Improved Concentration",
+            content: "It sharpens focus and enhances cognitive abilities."
           },
           {
-            "head": "Emotional Healing",
-            "content": "Sound meditation can facilitate emotional release and healing."
+            head: "Emotional Healing",
+            content: "Sound meditation can facilitate emotional release and healing."
           },
           {
-            "head": "Enhanced Self-awareness",
-            "content": "Practitioners often report increased self-awareness and mindfulness."
+            head: "Enhanced Self-awareness",
+            content: "Practitioners often report increased self-awareness and mindfulness."
           }
         ],
-        "guid": [
+        guid: [
           {
-            "step": "Selecting a Sound Source",
-            "desc": "Choose calming sounds like Tibetan singing bowls, chimes, or nature sounds."
+            step: "Selecting a Sound Source",
+            desc: "Choose calming sounds like Tibetan singing bowls, chimes, or nature sounds."
           },
           {
-            "step": "Comfortable Setting",
-            "desc": "Find a quiet, comfortable space."
+            step: "Comfortable Setting",
+            desc: "Find a quiet, comfortable space."
           },
           {
-            "step": "Relaxed Posture",
-            "desc": "Sit or lie down in a relaxed position."
+            step: "Relaxed Posture",
+            desc: "Sit or lie down in a relaxed position."
           },
           {
-            "step": "Focus on Sound",
-            "desc": "Close your eyes and focus your attention on the sounds."
+            step: "Focus on Sound",
+            desc: "Close your eyes and focus your attention on the sounds."
           },
           {
-            "step": "Mindful Listening",
-            "desc": "Observe the quality, patterns, and layers of the sounds."
+            step: "Mindful Listening",
+            desc: "Observe the quality, patterns, and layers of the sounds."
           },
           {
-            "step": "Breathing",
-            "desc": "Maintain steady, relaxed breathing."
+            step: "Breathing",
+            desc: "Maintain steady, relaxed breathing."
           },
           {
-            "step": "Concluding the Session",
-            "desc": "Gently bring your awareness back and open your eyes."
+            step: "Concluding the Session",
+            desc: "Gently bring your awareness back and open your eyes."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Consistency",
-            "content": "Practice regularly for the best results."
+            head: "Consistency",
+            content: "Practice regularly for the best results."
           },
           {
-            "head": "Volume Level",
-            "content": "Ensure the sound is at a comfortable level."
+            head: "Volume Level",
+            content: "Ensure the sound is at a comfortable level."
           },
           {
-            "head": "Duration",
-            "content": "Start with short sessions and gradually increase."
+            head: "Duration",
+            content: "Start with short sessions and gradually increase."
           },
           {
-            "head": "Incorporation into Routine",
-            "content": "Try integrating sound meditation into your daily schedule."
+            head: "Incorporation into Routine",
+            content: "Try integrating sound meditation into your daily schedule."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Volume Caution",
-            "content": "Avoid excessively loud sounds."
+            head: "Volume Caution",
+            content: "Avoid excessively loud sounds."
           },
           {
-            "head": "Distraction Management",
-            "content": "If you get distracted, gently refocus on the sound."
+            head: "Distraction Management",
+            content: "If you get distracted, gently refocus on the sound."
           },
           {
-            "head": "Personal Comfort",
-            "content": "Choose sounds that you find soothing and not irritating."
+            head: "Personal Comfort",
+            content: "Choose sounds that you find soothing and not irritating."
           },
           {
-            "head": "Realistic Expectations",
-            "content": "Understand that benefits develop over time."
+            head: "Realistic Expectations",
+            content: "Understand that benefits develop over time."
           }
         ],
-        "conclusion": "Sound meditation is a unique journey into the world of auditory mindfulness. It's an accessible practice that can bring about profound changes in mental and emotional well-being. Embrace the sounds, and let them guide you to a place of greater peace and clarity."
+        conclusion: "Sound meditation is a unique journey into the world of auditory mindfulness. It's an accessible practice that can bring about profound changes in mental and emotional well-being. Embrace the sounds, and let them guide you to a place of greater peace and clarity."
       },
       {
-        "id": 20,
-        "title": "Forgiveness Meditation",
-        "intro": "Forgiveness Meditation is a transformative practice that fosters emotional healing and inner peace. By cultivating forgiveness, this meditation helps release resentment and fosters a sense of harmony.",
-        "understandingBodyScan": "Forgiveness Meditation is a mindful practice focusing on letting go of grudges and forgiving oneself and others. Rooted in various spiritual and therapeutic traditions, it is a pathway to emotional liberation and self-healing.",
-        "benefits": [
+        id: 20,
+        title: "Forgiveness Meditation",
+        intro: "Forgiveness Meditation is a transformative practice that fosters emotional healing and inner peace. By cultivating forgiveness, this meditation helps release resentment and fosters a sense of harmony.",
+        understandingBodyScan: "Forgiveness Meditation is a mindful practice focusing on letting go of grudges and forgiving oneself and others. Rooted in various spiritual and therapeutic traditions, it is a pathway to emotional liberation and self-healing.",
+        benefits: [
           {
-            "head": "Emotional Healing",
-            "content": "Helps heal emotional wounds and past hurts."
+            head: "Emotional Healing",
+            content: "Helps heal emotional wounds and past hurts."
           },
           {
-            "head": "Reduced Anger and Stress",
-            "content": "Lowers feelings of anger and decreases stress levels."
+            head: "Reduced Anger and Stress",
+            content: "Lowers feelings of anger and decreases stress levels."
           },
           {
-            "head": "Improved Relationships",
-            "content": "Encourages healthier and more compassionate relationships."
+            head: "Improved Relationships",
+            content: "Encourages healthier and more compassionate relationships."
           },
           {
-            "head": "Enhanced Well-being",
-            "content": "Promotes overall emotional and mental well-being."
+            head: "Enhanced Well-being",
+            content: "Promotes overall emotional and mental well-being."
           }
         ],
-        "guid": [
+        guid: [
           {
-            "step": "Find a Quiet Space",
-            "desc": "Choose a peaceful location for meditation."
+            step: "Find a Quiet Space",
+            desc: "Choose a peaceful location for meditation."
           },
           {
-            "step": "Comfortable Posture",
-            "desc": "Sit or lie in a comfortable position."
+            step: "Comfortable Posture",
+            desc: "Sit or lie in a comfortable position."
           },
           {
-            "step": "Focus on Breath",
-            "desc": "Begin with deep, calming breaths to center yourself."
+            step: "Focus on Breath",
+            desc: "Begin with deep, calming breaths to center yourself."
           },
           {
-            "step": "Reflect on Forgiveness",
-            "desc": "Think of someone you want to forgive or seek forgiveness from."
+            step: "Reflect on Forgiveness",
+            desc: "Think of someone you want to forgive or seek forgiveness from."
           },
           {
-            "step": "Recite Forgiveness Phrases",
-            "desc": "Silently repeat phrases of forgiveness towards yourself or others."
+            step: "Recite Forgiveness Phrases",
+            desc: "Silently repeat phrases of forgiveness towards yourself or others."
           },
           {
-            "step": "Release Negative Emotions",
-            "desc": "Visualize letting go of resentment and pain."
+            step: "Release Negative Emotions",
+            desc: "Visualize letting go of resentment and pain."
           },
           {
-            "step": "Close with Gratitude",
-            "desc": "End the session with a moment of gratitude for this healing journey."
+            step: "Close with Gratitude",
+            desc: "End the session with a moment of gratitude for this healing journey."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Regular Practice",
-            "content": "Engage in forgiveness meditation regularly for deeper impact."
+            head: "Regular Practice",
+            content: "Engage in forgiveness meditation regularly for deeper impact."
           },
           {
-            "head": "Patience and Compassion",
-            "content": "Be patient and compassionate with yourself during the process."
+            head: "Patience and Compassion",
+            content: "Be patient and compassionate with yourself during the process."
           },
           {
-            "head": "Duration",
-            "content": "Start with short sessions, gradually increasing over time."
+            head: "Duration",
+            content: "Start with short sessions, gradually increasing over time."
           },
           {
-            "head": "Journaling After Sessions",
-            "content": "Write down feelings and thoughts post-meditation for deeper insight."
+            head: "Journaling After Sessions",
+            content: "Write down feelings and thoughts post-meditation for deeper insight."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Emotional Intensity",
-            "content": "Be prepared for strong emotions and handle them gently."
+            head: "Emotional Intensity",
+            content: "Be prepared for strong emotions and handle them gently."
           },
           {
-            "head": "No Forced Forgiveness",
-            "content": "Avoid forcing feelings of forgiveness; let them develop naturally."
+            head: "No Forced Forgiveness",
+            content: "Avoid forcing feelings of forgiveness; let them develop naturally."
           },
           {
-            "head": "Seeking Professional Help",
-            "content": "Consider professional guidance if dealing with deep-seated trauma."
+            head: "Seeking Professional Help",
+            content: "Consider professional guidance if dealing with deep-seated trauma."
           },
           {
-            "head": "Respect Personal Boundaries",
-            "content": "Maintain personal boundaries while practicing forgiveness towards others."
+            head: "Respect Personal Boundaries",
+            content: "Maintain personal boundaries while practicing forgiveness towards others."
           }
         ],
-        "conclusion": "Forgiveness Meditation is a powerful tool for emotional healing and personal growth. This practice not only helps in releasing past grievances but also paves the way for a more peaceful and fulfilling life. Embracing forgiveness can lead to profound transformations in both personal well-being and interpersonal relationships."
+        conclusion: "Forgiveness Meditation is a powerful tool for emotional healing and personal growth. This practice not only helps in releasing past grievances but also paves the way for a more peaceful and fulfilling life. Embracing forgiveness can lead to profound transformations in both personal well-being and interpersonal relationships."
       },
       {
-        "id": 22,
-        "title": "Japa/Mantra Meditation",
-        "intro": "Japa Meditation is a spiritual practice involving the repetition of a mantra or a divine name. This meditative technique is rooted in various spiritual traditions and is known for its calming and transformative effects.",
-        "understandingBodyScan": "Japa, derived from Sanskrit, means 'to repeat quietly.' It involves silently repeating a mantra, which can be a word, phrase, or sound. This practice is often associated with aiding concentration, developing focus, and fostering a deeper connection with the spiritual self.",
-        "benefits": [
+        id: 22,
+        title: "Japa/Mantra Meditation",
+        intro: "Japa Meditation is a spiritual practice involving the repetition of a mantra or a divine name. This meditative technique is rooted in various spiritual traditions and is known for its calming and transformative effects.",
+        understandingBodyScan: "Japa, derived from Sanskrit, means 'to repeat quietly.' It involves silently repeating a mantra, which can be a word, phrase, or sound. This practice is often associated with aiding concentration, developing focus, and fostering a deeper connection with the spiritual self.",
+        benefits: [
           {
-            "head": "Enhanced Focus",
-            "content": "Regular Japa practice sharpens concentration and mental clarity."
+            head: "Enhanced Focus",
+            content: "Regular Japa practice sharpens concentration and mental clarity."
           },
           {
-            "head": "Stress Reduction",
-            "content": "The repetitive nature of the mantra induces a state of relaxation, helping to reduce stress."
+            head: "Stress Reduction",
+            content: "The repetitive nature of the mantra induces a state of relaxation, helping to reduce stress."
           },
           {
-            "head": "Spiritual Connection",
-            "content": "Japa aids in fostering a deeper spiritual awareness and connection."
+            head: "Spiritual Connection",
+            content: "Japa aids in fostering a deeper spiritual awareness and connection."
           },
           {
-            "head": "Emotional Balance",
-            "content": "It brings emotional stability and peace of mind."
+            head: "Emotional Balance",
+            content: "It brings emotional stability and peace of mind."
           }
         ],
-        "guid": [
+        guid: [
           {
-            "step": "Choose a Mantra",
-            "desc": "Select a mantra that resonates with you."
+            step: "Choose a Mantra",
+            desc: "Select a mantra that resonates with you."
           },
           {
-            "step": "Comfortable Posture",
-            "desc": "Sit in a relaxed position with a straight back."
+            step: "Comfortable Posture",
+            desc: "Sit in a relaxed position with a straight back."
           },
           {
-            "step": "Use of Beads",
-            "desc": "Optionally use Japa beads (mala) for counting repetitions."
+            step: "Use of Beads",
+            desc: "Optionally use Japa beads (mala) for counting repetitions."
           },
           {
-            "step": "Repetition",
-            "desc": "Silently repeat the mantra in your mind or softly whisper it."
+            step: "Repetition",
+            desc: "Silently repeat the mantra in your mind or softly whisper it."
           },
           {
-            "step": "Focus",
-            "desc": "Concentrate on the sound and meaning of the mantra."
+            step: "Focus",
+            desc: "Concentrate on the sound and meaning of the mantra."
           },
           {
-            "step": "Duration",
-            "desc": "Decide on a set amount of time or number of repetitions."
+            step: "Duration",
+            desc: "Decide on a set amount of time or number of repetitions."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Regular Practice",
-            "content": "Make Japa a daily routine for greater benefits."
+            head: "Regular Practice",
+            content: "Make Japa a daily routine for greater benefits."
           },
           {
-            "head": "Mindfulness",
-            "content": "Be mindful of each repetition to deepen the practice."
+            head: "Mindfulness",
+            content: "Be mindful of each repetition to deepen the practice."
           },
           {
-            "head": "Pacing",
-            "content": "Recite the mantra at a comfortable pace."
+            head: "Pacing",
+            content: "Recite the mantra at a comfortable pace."
           },
           {
-            "head": "Patience",
-            "content": "Allow the practice to develop naturally over time."
+            head: "Patience",
+            content: "Allow the practice to develop naturally over time."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Choice of Mantra",
-            "content": "Ensure the mantra is meaningful and comfortable for you."
+            head: "Choice of Mantra",
+            content: "Ensure the mantra is meaningful and comfortable for you."
           },
           {
-            "head": "Physical Comfort",
-            "content": "Adjust your sitting position if you feel discomfort."
+            head: "Physical Comfort",
+            content: "Adjust your sitting position if you feel discomfort."
           },
           {
-            "head": "Mental Focus",
-            "content": "Gently bring back your focus if your mind wanders."
+            head: "Mental Focus",
+            content: "Gently bring back your focus if your mind wanders."
           },
           {
-            "head": "Expectations",
-            "content": "Approach Japa without specific expectations for best results."
+            head: "Expectations",
+            content: "Approach Japa without specific expectations for best results."
           }
         ],
-        "conclusion": "Japa Meditation offers a simple yet profound path to mental clarity and spiritual enrichment. Its repetitive nature serves as a tool for calming the mind and deepening one's meditation practice. Embracing Japa can lead to significant benefits in both personal and spiritual aspects of life."
+        conclusion: "Japa Meditation offers a simple yet profound path to mental clarity and spiritual enrichment. Its repetitive nature serves as a tool for calming the mind and deepening one's meditation practice. Embracing Japa can lead to significant benefits in both personal and spiritual aspects of life."
       },
       {
-        "id": 24,
-        "title": "Yantra Meditation",
-        "intro": "Yantra Meditation is a unique form of meditation that uses geometric symbols to focus the mind and access deeper states of consciousness. It combines visual elements with mindful focus to achieve mental clarity and spiritual insight.",
-        "understandingBodyScan": "A Yantra is a complex geometric design that serves as a visual aid for meditation. These designs symbolize cosmic truths and are used to concentrate and internalize spiritual concepts. Yantra Meditation is part of tantric practices and is closely linked with the better-known Mantra Meditation.",
-        "benefits": [
+        id: 24,
+        title: "Yantra Meditation",
+        intro: "Yantra Meditation is a unique form of meditation that uses geometric symbols to focus the mind and access deeper states of consciousness. It combines visual elements with mindful focus to achieve mental clarity and spiritual insight.",
+        understandingBodyScan: "A Yantra is a complex geometric design that serves as a visual aid for meditation. These designs symbolize cosmic truths and are used to concentrate and internalize spiritual concepts. Yantra Meditation is part of tantric practices and is closely linked with the better-known Mantra Meditation.",
+        benefits: [
           {
-            "head": "Improved Concentration",
-            "content": "Engaging with Yantras enhances focus and attention."
+            head: "Improved Concentration",
+            content: "Engaging with Yantras enhances focus and attention."
           },
           {
-            "head": "Spiritual Insight",
-            "content": "Regular practice can lead to deeper spiritual understanding."
+            head: "Spiritual Insight",
+            content: "Regular practice can lead to deeper spiritual understanding."
           },
           {
-            "head": "Mental Balance",
-            "content": "It helps in achieving a calm and balanced state of mind."
+            head: "Mental Balance",
+            content: "It helps in achieving a calm and balanced state of mind."
           },
           {
-            "head": "Stress Reduction",
-            "content": "This meditation form is effective in reducing stress and anxiety."
+            head: "Stress Reduction",
+            content: "This meditation form is effective in reducing stress and anxiety."
           }
         ],
-        "guid": [
+        guid: [
           {
-            "step": "Choose a Yantra",
-            "desc": "Select a Yantra that resonates with your spiritual goals."
+            step: "Choose a Yantra",
+            desc: "Select a Yantra that resonates with your spiritual goals."
           },
           {
-            "step": "Prepare the Space",
-            "desc": "Find a quiet and comfortable meditation spot."
+            step: "Prepare the Space",
+            desc: "Find a quiet and comfortable meditation spot."
           },
           {
-            "step": "Gaze at the Yantra",
-            "desc": "Sit comfortably and focus your gaze on the center of the Yantra."
+            step: "Gaze at the Yantra",
+            desc: "Sit comfortably and focus your gaze on the center of the Yantra."
           },
           {
-            "step": "Mindful Observation",
-            "desc": "Observe the design without analysis, letting your mind absorb its patterns."
+            step: "Mindful Observation",
+            desc: "Observe the design without analysis, letting your mind absorb its patterns."
           },
           {
-            "step": "Close Your Eyes",
-            "desc": "After a few minutes, close your eyes and visualize the Yantra internally."
+            step: "Close Your Eyes",
+            desc: "After a few minutes, close your eyes and visualize the Yantra internally."
           },
           {
-            "step": "Deepen the Practice",
-            "desc": "Alternate between gazing at the Yantra and internal visualization."
+            step: "Deepen the Practice",
+            desc: "Alternate between gazing at the Yantra and internal visualization."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Consistency",
-            "content": "Practice regularly to deepen your experience."
+            head: "Consistency",
+            content: "Practice regularly to deepen your experience."
           },
           {
-            "head": "Duration",
-            "content": "Start with short sessions, gradually increasing the time."
+            head: "Duration",
+            content: "Start with short sessions, gradually increasing the time."
           },
           {
-            "head": "Relaxed Focus",
-            "content": "Keep your gaze soft and relaxed to avoid eye strain."
+            head: "Relaxed Focus",
+            content: "Keep your gaze soft and relaxed to avoid eye strain."
           },
           {
-            "head": "Mindfulness",
-            "content": "Stay present and mindful during the practice."
+            head: "Mindfulness",
+            content: "Stay present and mindful during the practice."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Eye Comfort",
-            "content": "Be mindful of eye comfort, especially during prolonged sessions."
+            head: "Eye Comfort",
+            content: "Be mindful of eye comfort, especially during prolonged sessions."
           },
           {
-            "head": "Understanding Yantras",
-            "content": "Take time to learn about the specific Yantra you are using."
+            head: "Understanding Yantras",
+            content: "Take time to learn about the specific Yantra you are using."
           },
           {
-            "head": "Mindful Approach",
-            "content": "Approach the practice with an open and non-judgmental mindset."
+            head: "Mindful Approach",
+            content: "Approach the practice with an open and non-judgmental mindset."
           },
           {
-            "head": "Seek Guidance",
-            "content": "If possible, seek guidance from an experienced practitioner."
+            head: "Seek Guidance",
+            content: "If possible, seek guidance from an experienced practitioner."
           }
         ],
-        "conclusion": "Yantra Meditation is a powerful tool for those seeking a focused and spiritually enriching meditation practice. By regularly engaging with Yantras, practitioners can unlock new levels of concentration, balance, and spiritual insight, making it a valuable addition to any meditation routine."
+        conclusion: "Yantra Meditation is a powerful tool for those seeking a focused and spiritually enriching meditation practice. By regularly engaging with Yantras, practitioners can unlock new levels of concentration, balance, and spiritual insight, making it a valuable addition to any meditation routine."
       },
       {
-        "id": 26,
-        "title": "Shambhavi Mudra",
-        "intro": "Shambhavi Mudra, a yoga technique, involves gazing at the eyebrow center to enhance concentration and spiritual awareness. This practice is pivotal in many yoga and meditation traditions, known for its profound impact on the mind and spirit.",
-        "understandingBodyScan": "Shambhavi Mudra is a yogic gaze technique focusing on the area between the eyebrows, often referred to as the 'third eye.' This ancient practice is renowned for deepening meditation and encouraging inner tranquility.",
-        "benefits": [
+        id: 26,
+        title: "Shambhavi Mudra",
+        intro: "Shambhavi Mudra, a yoga technique, involves gazing at the eyebrow center to enhance concentration and spiritual awareness. This practice is pivotal in many yoga and meditation traditions, known for its profound impact on the mind and spirit.",
+        understandingBodyScan: "Shambhavi Mudra is a yogic gaze technique focusing on the area between the eyebrows, often referred to as the 'third eye.' This ancient practice is renowned for deepening meditation and encouraging inner tranquility.",
+        benefits: [
           {
-            "head": "Enhanced Focus",
-            "content": "It sharpens concentration and mental clarity."
+            head: "Enhanced Focus",
+            content: "It sharpens concentration and mental clarity."
           },
           {
-            "head": "Spiritual Insights",
-            "content": "Practitioners often report increased spiritual awareness."
+            head: "Spiritual Insights",
+            content: "Practitioners often report increased spiritual awareness."
           },
           {
-            "head": "Stress Reduction",
-            "content": "Helps in reducing stress and promoting relaxation."
+            head: "Stress Reduction",
+            content: "Helps in reducing stress and promoting relaxation."
           },
           {
-            "head": "Balanced Emotional State",
-            "content": "Aids in achieving emotional balance."
+            head: "Balanced Emotional State",
+            content: "Aids in achieving emotional balance."
           }
         ],
-        "guid": [
+        guid: [
           {
-            "step": "Comfortable Seating",
-            "desc": "Sit in a relaxed yet alert posture."
+            step: "Comfortable Seating",
+            desc: "Sit in a relaxed yet alert posture."
           },
           {
-            "step": "Eye Positioning",
-            "desc": "Gently lift your eyes to focus on the eyebrow center."
+            step: "Eye Positioning",
+            desc: "Gently lift your eyes to focus on the eyebrow center."
           },
           {
-            "step": "Steady Gaze",
-            "desc": "Maintain the gaze without straining your eyes."
+            step: "Steady Gaze",
+            desc: "Maintain the gaze without straining your eyes."
           },
           {
-            "step": "Normal Breathing",
-            "desc": "Keep your breathing relaxed and natural."
+            step: "Normal Breathing",
+            desc: "Keep your breathing relaxed and natural."
           },
           {
-            "step": "Duration",
-            "desc": "Start with a few minutes, gradually increasing the time."
+            step: "Duration",
+            desc: "Start with a few minutes, gradually increasing the time."
           },
           {
-            "step": "Release and Relax",
-            "desc": "Gently release the gaze and relax your eyes."
+            step: "Release and Relax",
+            desc: "Gently release the gaze and relax your eyes."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Regular Practice",
-            "content": "Incorporate Shambhavi Mudra into your daily meditation routine."
+            head: "Regular Practice",
+            content: "Incorporate Shambhavi Mudra into your daily meditation routine."
           },
           {
-            "head": "Patience and Persistence",
-            "content": "Progress comes with consistent practice."
+            head: "Patience and Persistence",
+            content: "Progress comes with consistent practice."
           },
           {
-            "head": "Avoid Strain",
-            "content": "Never force the gaze; keep it gentle to avoid eye strain."
+            head: "Avoid Strain",
+            content: "Never force the gaze; keep it gentle to avoid eye strain."
           },
           {
-            "head": "Mindful Approach",
-            "content": "Engage in the practice with mindfulness and intention."
+            head: "Mindful Approach",
+            content: "Engage in the practice with mindfulness and intention."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Eye Health",
-            "content": "Those with eye problems should consult a doctor before practicing."
+            head: "Eye Health",
+            content: "Those with eye problems should consult a doctor before practicing."
           },
           {
-            "head": "Initial Dizziness",
-            "content": "Beginners might experience slight dizziness, which is normal."
+            head: "Initial Dizziness",
+            content: "Beginners might experience slight dizziness, which is normal."
           },
           {
-            "head": "Balanced Practice",
-            "content": "Balance Shambhavi Mudra with other meditative practices."
+            head: "Balanced Practice",
+            content: "Balance Shambhavi Mudra with other meditative practices."
           },
           {
-            "head": "Realistic Expectations",
-            "content": "Benefits unfold gradually; patience is key."
+            head: "Realistic Expectations",
+            content: "Benefits unfold gradually; patience is key."
           }
         ],
-        "conclusion": "Shambhavi Mudra is a powerful tool in the journey towards inner peace and heightened awareness. This practice, while simple, requires dedication and patience. By integrating Shambhavi Mudra into your meditation routine, you can explore new depths of focus and spiritual insight."
+        conclusion: "Shambhavi Mudra is a powerful tool in the journey towards inner peace and heightened awareness. This practice, while simple, requires dedication and patience. By integrating Shambhavi Mudra into your meditation routine, you can explore new depths of focus and spiritual insight."
       },
       {
-        "id": 27,
-        "title": "Aumkar Meditation",
-        "intro": "Aumkar Meditation, centered around the sacred sound 'Aum,' is a profound practice for achieving harmony and inner peace. This meditation technique harnesses the vibrational power of sound to enhance mental and spiritual well-being.",
-        "understandingBodyScan": "Aumkar Meditation involves chanting the sound 'Aum,' considered the universal sound symbolizing the essence of the ultimate reality. This practice is deeply rooted in various spiritual traditions and is known for its simplicity and profound impact.",
-        "benefits": [
+        id: 27,
+        title: "Aumkar Meditation",
+        intro: "Aumkar Meditation, centered around the sacred sound 'Aum,' is a profound practice for achieving harmony and inner peace. This meditation technique harnesses the vibrational power of sound to enhance mental and spiritual well-being.",
+        understandingBodyScan: "Aumkar Meditation involves chanting the sound 'Aum,' considered the universal sound symbolizing the essence of the ultimate reality. This practice is deeply rooted in various spiritual traditions and is known for its simplicity and profound impact.",
+        benefits: [
           {
-            "head": "Physical Engagement",
-            "content": "Regular chanting of Aum brings about a sense of calm and serenity."
+            head: "Physical Engagement",
+            content: "Regular chanting of Aum brings about a sense of calm and serenity."
           },
           {
-            "head": "Enhanced Focus",
-            "content": "This meditation improves concentration and mental clarity."
+            head: "Enhanced Focus",
+            content: "This meditation improves concentration and mental clarity."
           },
           {
-            "head": "Emotional Balance",
-            "content": "It aids in achieving emotional stability and resilience."
+            head: "Emotional Balance",
+            content: "It aids in achieving emotional stability and resilience."
           },
           {
-            "head": "Spiritual Growth",
-            "content": "Aumkar Meditation deepens spiritual understanding and connection."
+            head: "Spiritual Growth",
+            content: "Aumkar Meditation deepens spiritual understanding and connection."
           }
         ],
-        "guid": [
+        guid: [
           {
-            "step": "Quiet Space",
-            "desc": "Find a peaceful and comfortable place."
+            step: "Quiet Space",
+            desc: "Find a peaceful and comfortable place."
           },
           {
-            "step": "Relaxed Posture",
-            "desc": "Sit in a relaxed position with a straight back."
+            step: "Relaxed Posture",
+            desc: "Sit in a relaxed position with a straight back."
           },
           {
-            "step": "Deep Breathing",
-            "desc": "Start with a few deep breaths to settle in."
+            step: "Deep Breathing",
+            desc: "Start with a few deep breaths to settle in."
           },
           {
-            "step": "Chanting Aum",
-            "desc": "Chant the sound Aum slowly and steadily, focusing on the vibrations."
+            step: "Chanting Aum",
+            desc: "Chant the sound Aum slowly and steadily, focusing on the vibrations."
           },
           {
-            "step": "Mindful Listening",
-            "desc": "Pay attention to the sound and its resonance."
+            step: "Mindful Listening",
+            desc: "Pay attention to the sound and its resonance."
           },
           {
-            "step": "Silent Reflection",
-            "desc": "After chanting, sit quietly and absorb the silence."
+            step: "Silent Reflection",
+            desc: "After chanting, sit quietly and absorb the silence."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Regular Practice",
-            "content": "Make Aumkar Meditation a daily routine."
+            head: "Regular Practice",
+            content: "Make Aumkar Meditation a daily routine."
           },
           {
-            "head": "Morning or Evening",
-            "content": "Ideal times for practice are during the quiet hours of dawn or dusk."
+            head: "Morning or Evening",
+            content: "Ideal times for practice are during the quiet hours of dawn or dusk."
           },
           {
-            "head": "Comfortable Duration",
-            "content": "Begin with short sessions and gradually increase."
+            head: "Comfortable Duration",
+            content: "Begin with short sessions and gradually increase."
           },
           {
-            "head": "Mindful Chanting",
-            "content": "Focus on the sound and your breath for deeper impact."
+            head: "Mindful Chanting",
+            content: "Focus on the sound and your breath for deeper impact."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Voice Care",
-            "content": "Avoid straining your voice; chant within a comfortable pitch and volume."
+            head: "Voice Care",
+            content: "Avoid straining your voice; chant within a comfortable pitch and volume."
           },
           {
-            "head": "Distractions",
-            "content": "If your mind wanders, gently bring your focus back to the sound."
+            head: "Distractions",
+            content: "If your mind wanders, gently bring your focus back to the sound."
           },
           {
-            "head": "Physical Space",
-            "content": "Ensure your meditation space is safe and won’t be disturbed."
+            head: "Physical Space",
+            content: "Ensure your meditation space is safe and won’t be disturbed."
           },
           {
-            "head": "Expectations",
-            "content": "Allow the practice to unfold naturally without expecting immediate results."
+            head: "Expectations",
+            content: "Allow the practice to unfold naturally without expecting immediate results."
           }
         ],
-        "conclusion": "Aumkar Meditation is a powerful tool for those seeking mental tranquility and spiritual depth. By incorporating this practice into your daily routine, you can experience the profound impact of the sacred sound Aum, leading to greater peace and clarity in your life."
+        conclusion: "Aumkar Meditation is a powerful tool for those seeking mental tranquility and spiritual depth. By incorporating this practice into your daily routine, you can experience the profound impact of the sacred sound Aum, leading to greater peace and clarity in your life."
       }
     ]
   },
@@ -1890,439 +1870,439 @@ export const MeditationsData = [
     category: "Movement-Based Meditation",
     data: [
       {
-        "id": 28,
-        "title": "Walking Meditation",
-        "intro": "Walking Meditation is a form of mindfulness practice that combines walking with focused awareness. Unlike traditional seated meditation, it emphasizes movement, making it a dynamic way to cultivate a calm and attentive mind.",
-        "understandingBodyScan": "In Walking Meditation, the act of walking is transformed into a meditative practice. It involves paying close attention to the experience of walking, observing the sensations in your body, and staying present in the moment.",
-        "benefits": [
+        id: 28,
+        title: "Walking Meditation",
+        intro: "Walking Meditation is a form of mindfulness practice that combines walking with focused awareness. Unlike traditional seated meditation, it emphasizes movement, making it a dynamic way to cultivate a calm and attentive mind.",
+        understandingBodyScan: "In Walking Meditation, the act of walking is transformed into a meditative practice. It involves paying close attention to the experience of walking, observing the sensations in your body, and staying present in the moment.",
+        benefits: [
           {
-            "head": "Physical Activity",
-            "content": "It offers the dual benefits of meditation and gentle exercise."
+            head: "Physical Activity",
+            content: "It offers the dual benefits of meditation and gentle exercise."
           },
           {
-            "head": "Increased Awareness",
-            "content": "Enhances sensory awareness and mindfulness."
+            head: "Increased Awareness",
+            content: "Enhances sensory awareness and mindfulness."
           },
           {
-            "head": "Stress Reduction",
-            "content": "Helps in reducing stress and promoting relaxation."
+            head: "Stress Reduction",
+            content: "Helps in reducing stress and promoting relaxation."
           },
           {
-            "head": "Accessibility",
-            "content": "Can be practiced anywhere, from a park to your living room."
+            head: "Accessibility",
+            content: "Can be practiced anywhere, from a park to your living room."
           }
         ],
-        "guid": [
+        guid: [
           {
-            "step": "Choose a Quiet Path",
-            "desc": "Find a peaceful place where you can walk back and forth."
+            step: "Choose a Quiet Path",
+            desc: "Find a peaceful place where you can walk back and forth."
           },
           {
-            "step": "Start Slowly",
-            "desc": "Begin walking at a slower pace than usual."
+            step: "Start Slowly",
+            desc: "Begin walking at a slower pace than usual."
           },
           {
-            "step": "Focus on Sensations",
-            "desc": "Pay attention to the sensations in your feet and body as you move."
+            step: "Focus on Sensations",
+            desc: "Pay attention to the sensations in your feet and body as you move."
           },
           {
-            "step": "Mindful Breathing",
-            "desc": "Coordinate your breathing with your steps."
+            step: "Mindful Breathing",
+            desc: "Coordinate your breathing with your steps."
           },
           {
-            "step": "Turn Mindfully",
-            "desc": "At the end of your path, pause and mindfully turn around."
+            step: "Turn Mindfully",
+            desc: "At the end of your path, pause and mindfully turn around."
           },
           {
-            "step": "Repeat",
-            "desc": "Continue walking back and forth, maintaining focus on your movements and sensations."
+            step: "Repeat",
+            desc: "Continue walking back and forth, maintaining focus on your movements and sensations."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Regular Sessions",
-            "content": "Practice regularly to reap the full benefits."
+            head: "Regular Sessions",
+            content: "Practice regularly to reap the full benefits."
           },
           {
-            "head": "Short Walks",
-            "content": "Begin with short 10-15 minute walks."
+            head: "Short Walks",
+            content: "Begin with short 10-15 minute walks."
           },
           {
-            "head": "Posture",
-            "content": "Keep your back straight but relaxed."
+            head: "Posture",
+            content: "Keep your back straight but relaxed."
           },
           {
-            "head": "Distractions",
-            "content": "If your mind wanders, gently bring your focus back to your walking."
+            head: "Distractions",
+            content: "If your mind wanders, gently bring your focus back to your walking."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Safety First",
-            "content": "Be aware of your surroundings, especially if walking outdoors."
+            head: "Safety First",
+            content: "Be aware of your surroundings, especially if walking outdoors."
           },
           {
-            "head": "Comfortable Footwear",
-            "content": "Wear shoes that are comfortable and supportive."
+            head: "Comfortable Footwear",
+            content: "Wear shoes that are comfortable and supportive."
           },
           {
-            "head": "Pace",
-            "content": "Walk at a pace that feels natural and sustainable."
+            head: "Pace",
+            content: "Walk at a pace that feels natural and sustainable."
           },
           {
-            "head": "Physical Limitations",
-            "content": "Adjust the practice to accommodate any physical constraints."
+            head: "Physical Limitations",
+            content: "Adjust the practice to accommodate any physical constraints."
           }
         ],
-        "conclusion": "Walking Meditation is a simple yet profound practice that brings mindfulness to everyday activity. By turning walking into a meditative exercise, you can cultivate a sense of peace and awareness that permeates your daily life."
+        conclusion: "Walking Meditation is a simple yet profound practice that brings mindfulness to everyday activity. By turning walking into a meditative exercise, you can cultivate a sense of peace and awareness that permeates your daily life."
       },
       {
-        "id": 29,
-        "title": "Five Rhythms",
-        "intro": "The Five Rhythms is a dynamic movement practice that combines dance, mindfulness, and expressive arts. It encourages emotional and physical release through rhythmic movement, fostering self-awareness and healing.",
-        "understandingBodyScan": "Developed by Gabrielle Roth, the Five Rhythms are Flowing, Staccato, Chaos, Lyrical, and Stillness. Each rhythm represents a different energy pattern found in nature, and together they form a wave of movement that mirrors the natural flow of life.",
-        "benefits": [
+        id: 29,
+        title: "Five Rhythms",
+        intro: "The Five Rhythms is a dynamic movement practice that combines dance, mindfulness, and expressive arts. It encourages emotional and physical release through rhythmic movement, fostering self-awareness and healing.",
+        understandingBodyScan: "Developed by Gabrielle Roth, the Five Rhythms are Flowing, Staccato, Chaos, Lyrical, and Stillness. Each rhythm represents a different energy pattern found in nature, and together they form a wave of movement that mirrors the natural flow of life.",
+        benefits: [
           {
-            "head": "Emotional Release",
-            "content": "Offers a safe space for releasing and exploring emotions."
+            head: "Emotional Release",
+            content: "Offers a safe space for releasing and exploring emotions."
           },
           {
-            "head": "Physical Fitness",
-            "content": "Enhances physical stamina, flexibility, and coordination."
+            head: "Physical Fitness",
+            content: "Enhances physical stamina, flexibility, and coordination."
           },
           {
-            "head": "Mental Clarity",
-            "content": "Clears the mind, reducing stress and anxiety."
+            head: "Mental Clarity",
+            content: "Clears the mind, reducing stress and anxiety."
           },
           {
-            "head": "Creativity Boost",
-            "content": "Encourages creative expression and exploration."
+            head: "Creativity Boost",
+            content: "Encourages creative expression and exploration."
           }
         ],
-        "guid": [
+        guid: [
           {
-            "step": "Find Space",
-            "desc": "Choose a spacious area where you can move freely."
+            step: "Find Space",
+            desc: "Choose a spacious area where you can move freely."
           },
           {
-            "step": "Start with Flowing",
-            "desc": "Begin with gentle, fluid movements, feeling your body's weight and grounding."
+            step: "Start with Flowing",
+            desc: "Begin with gentle, fluid movements, feeling your body's weight and grounding."
           },
           {
-            "step": "Move to Staccato",
-            "desc": "Transition to sharp, defined movements, expressing clarity and direction."
+            step: "Move to Staccato",
+            desc: "Transition to sharp, defined movements, expressing clarity and direction."
           },
           {
-            "step": "Enter Chaos",
-            "desc": "Let go of control, allowing your body to move freely and release tension."
+            step: "Enter Chaos",
+            desc: "Let go of control, allowing your body to move freely and release tension."
           },
           {
-            "step": "Explore Lyrical",
-            "desc": "Adopt a light, playful approach to movement, exploring space and creativity."
+            step: "Explore Lyrical",
+            desc: "Adopt a light, playful approach to movement, exploring space and creativity."
           },
           {
-            "step": "Embrace Stillness",
-            "desc": "Slow down, moving minimally, focusing on breath and internal sensations."
+            step: "Embrace Stillness",
+            desc: "Slow down, moving minimally, focusing on breath and internal sensations."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "No Experience Needed",
-            "content": "Embrace your natural movement; no dance background is required."
+            head: "No Experience Needed",
+            content: "Embrace your natural movement; no dance background is required."
           },
           {
-            "head": "Listen to Your Body",
-            "content": "Move in ways that feel right for you."
+            head: "Listen to Your Body",
+            content: "Move in ways that feel right for you."
           },
           {
-            "head": "Be Present",
-            "content": "Focus on the present moment and your internal experience."
+            head: "Be Present",
+            content: "Focus on the present moment and your internal experience."
           },
           {
-            "head": "Regular Practice",
-            "content": "Engage with the rhythms regularly to deepen your experience."
+            head: "Regular Practice",
+            content: "Engage with the rhythms regularly to deepen your experience."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Physical Limitations",
-            "content": "Be mindful of any physical restrictions and move within your comfort zone."
+            head: "Physical Limitations",
+            content: "Be mindful of any physical restrictions and move within your comfort zone."
           },
           {
-            "head": "Emotional Intensity",
-            "content": "Be prepared for intense emotions and practice self-care."
+            head: "Emotional Intensity",
+            content: "Be prepared for intense emotions and practice self-care."
           },
           {
-            "head": "Hydration",
-            "content": "Stay hydrated, especially during longer sessions."
+            head: "Hydration",
+            content: "Stay hydrated, especially during longer sessions."
           },
           {
-            "head": "Safe Environment",
-            "content": "Ensure you have enough space to move without injury."
+            head: "Safe Environment",
+            content: "Ensure you have enough space to move without injury."
           }
         ],
-        "conclusion": "The Five Rhythms offer a unique path to emotional, physical, and mental wellness through movement. This practice is more than dance; it's a journey of self-discovery and healing, inviting you to explore and express your authentic self."
+        conclusion: "The Five Rhythms offer a unique path to emotional, physical, and mental wellness through movement. This practice is more than dance; it's a journey of self-discovery and healing, inviting you to explore and express your authentic self."
       },
       {
-        "id": 30,
-        "title": "Kinhin - Walking Meditation",
-        "intro": "Kinhin, the practice of walking meditation, merges movement with mindfulness. Originating from Zen Buddhism, this form of meditation offers a dynamic way to cultivate calmness and presence through deliberate, slow walking.",
-        "understandingBodyScan": "Kinhin translates to 'walking the talk,' embodying the act of walking with full awareness. It's a complement to seated meditation, allowing practitioners to carry mindfulness into movement and everyday activities.",
-        "benefits": [
+        id: 30,
+        title: "Kinhin - Walking Meditation",
+        intro: "Kinhin, the practice of walking meditation, merges movement with mindfulness. Originating from Zen Buddhism, this form of meditation offers a dynamic way to cultivate calmness and presence through deliberate, slow walking.",
+        understandingBodyScan: "Kinhin translates to 'walking the talk,' embodying the act of walking with full awareness. It's a complement to seated meditation, allowing practitioners to carry mindfulness into movement and everyday activities.",
+        benefits: [
           {
-            "head": "Physical Activity",
-            "content": "Combines the benefits of meditation and gentle physical exercise."
+            head: "Physical Activity",
+            content: "Combines the benefits of meditation and gentle physical exercise."
           },
           {
-            "head": "Mind-Body Connection",
-            "content": "Enhances awareness of the body in motion."
+            head: "Mind-Body Connection",
+            content: "Enhances awareness of the body in motion."
           },
           {
-            "head": "Stress Reduction",
-            "content": "Offers a calming effect, reducing stress and anxiety."
+            head: "Stress Reduction",
+            content: "Offers a calming effect, reducing stress and anxiety."
           },
           {
-            "head": "Accessibility",
-            "content": "Can be practiced by anyone, anywhere, without special equipment."
+            head: "Accessibility",
+            content: "Can be practiced by anyone, anywhere, without special equipment."
           }
         ],
-        "guid": [
+        guid: [
           {
-            "step": "Prepare",
-            "desc": "Start in a quiet space with minimal distractions."
+            step: "Prepare",
+            desc: "Start in a quiet space with minimal distractions."
           },
           {
-            "step": "Posture",
-            "desc": "Stand straight with your hands held in a specific mudra or comfortably at your sides."
+            step: "Posture",
+            desc: "Stand straight with your hands held in a specific mudra or comfortably at your sides."
           },
           {
-            "step": "Mindful Steps",
-            "desc": "Walk slowly, focusing on each movement of your feet."
+            step: "Mindful Steps",
+            desc: "Walk slowly, focusing on each movement of your feet."
           },
           {
-            "step": "Breathing",
-            "desc": "Coordinate your breath with your steps, inhaling and exhaling deliberately."
+            step: "Breathing",
+            desc: "Coordinate your breath with your steps, inhaling and exhaling deliberately."
           },
           {
-            "step": "Awareness",
-            "desc": "Maintain awareness of your surroundings, your body, and your mind."
+            step: "Awareness",
+            desc: "Maintain awareness of your surroundings, your body, and your mind."
           },
           {
-            "step": "Duration",
-            "desc": "Continue for a set period, typically 10-20 minutes."
+            step: "Duration",
+            desc: "Continue for a set period, typically 10-20 minutes."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Regular Practice",
-            "content": "Integrate Kinhin into your daily routine for consistency."
+            head: "Regular Practice",
+            content: "Integrate Kinhin into your daily routine for consistency."
           },
           {
-            "head": "Mindful Attention",
-            "content": "Keep bringing your attention back to the experience of walking."
+            head: "Mindful Attention",
+            content: "Keep bringing your attention back to the experience of walking."
           },
           {
-            "head": "Pace",
-            "content": "Find a pace that allows for mindfulness without causing strain."
+            head: "Pace",
+            content: "Find a pace that allows for mindfulness without causing strain."
           },
           {
-            "head": "Adaptation",
-            "content": "Adjust the practice to fit your physical abilities and environment."
+            head: "Adaptation",
+            content: "Adjust the practice to fit your physical abilities and environment."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Space",
-            "content": "Ensure you have enough space to walk without obstacles."
+            head: "Space",
+            content: "Ensure you have enough space to walk without obstacles."
           },
           {
-            "head": "Balance",
-            "content": "Pay attention to maintaining balance, especially if you have mobility issues."
+            head: "Balance",
+            content: "Pay attention to maintaining balance, especially if you have mobility issues."
           },
           {
-            "head": "Distractions",
-            "content": "If distracted, gently refocus without self-criticism."
+            head: "Distractions",
+            content: "If distracted, gently refocus without self-criticism."
           },
           {
-            "head": "Physical Limitations",
-            "content": "Adapt the practice to any physical limitations you may have."
+            head: "Physical Limitations",
+            content: "Adapt the practice to any physical limitations you may have."
           }
         ],
-        "conclusion": "Kinhin provides an accessible way to integrate mindfulness into daily life. This walking meditation can be a refreshing break from seated practices, offering a unique blend of physical movement and mental stillness. Embracing Kinhin can enhance your meditation experience and bring mindfulness into every step of your journey."
+        conclusion: "Kinhin provides an accessible way to integrate mindfulness into daily life. This walking meditation can be a refreshing break from seated practices, offering a unique blend of physical movement and mental stillness. Embracing Kinhin can enhance your meditation experience and bring mindfulness into every step of your journey."
       },
       {
-        "id": 31,
-        "title": "Yoga Nidra",
-        "intro": "Yoga Nidra, known as yogic sleep, is a meditation practice that offers deep relaxation and rejuvenation. This technique is an effective tool for reducing stress and promoting mental well-being.",
+        id: 31,
+        title: "Yoga Nidra",
+        intro: "Yoga Nidra, known as yogic sleep, is a meditation practice that offers deep relaxation and rejuvenation. This technique is an effective tool for reducing stress and promoting mental well-being.",
         "understanding": "Yoga Nidra is a state of conscious deep sleep that allows practitioners to relax physically, mentally, and emotionally. It's a structured meditation that guides you through body awareness and breath control, leading to a state of complete relaxation.",
-        "benefits": [
+        benefits: [
           {
-            "head": "Stress Reduction",
-            "content": "Significantly lowers stress and anxiety levels."
+            head: "Stress Reduction",
+            content: "Significantly lowers stress and anxiety levels."
           },
           {
-            "head": "Improved Sleep",
-            "content": "Enhances sleep quality and helps combat insomnia."
+            head: "Improved Sleep",
+            content: "Enhances sleep quality and helps combat insomnia."
           },
           {
-            "head": "Emotional Healing",
-            "content": "Offers a space for emotional release and healing."
+            head: "Emotional Healing",
+            content: "Offers a space for emotional release and healing."
           },
           {
-            "head": "Enhanced Mindfulness",
-            "content": "Increases awareness and presence in daily life."
+            head: "Enhanced Mindfulness",
+            content: "Increases awareness and presence in daily life."
           }
         ],
-        "steps": [
+        steps: [
           {
-            "step": "Find a Quiet Space",
-            "desc": "Choose a peaceful area where you won't be disturbed."
+            step: "Find a Quiet Space",
+            desc: "Choose a peaceful area where you won't be disturbed."
           },
           {
-            "step": "Comfortable Position",
-            "desc": "Lie down in a comfortable position, using a mat or blanket."
+            step: "Comfortable Position",
+            desc: "Lie down in a comfortable position, using a mat or blanket."
           },
           {
-            "step": "Relax the Body",
-            "desc": "Focus on relaxing each part of your body, starting from the toes and moving upwards."
+            step: "Relax the Body",
+            desc: "Focus on relaxing each part of your body, starting from the toes and moving upwards."
           },
           {
-            "step": "Breath Awareness",
-            "desc": "Pay attention to your breath, observing its natural rhythm."
+            step: "Breath Awareness",
+            desc: "Pay attention to your breath, observing its natural rhythm."
           },
           {
-            "step": "Visualization",
-            "desc": "Follow guided visualizations or mental images as directed in a Yoga Nidra session."
+            step: "Visualization",
+            desc: "Follow guided visualizations or mental images as directed in a Yoga Nidra session."
           },
           {
-            "step": "Deep Relaxation",
-            "desc": "Allow yourself to drift into a state of deep, conscious relaxation."
+            step: "Deep Relaxation",
+            desc: "Allow yourself to drift into a state of deep, conscious relaxation."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Regular Sessions",
-            "content": "Practice Yoga Nidra regularly for maximum benefit."
+            head: "Regular Sessions",
+            content: "Practice Yoga Nidra regularly for maximum benefit."
           },
           {
-            "head": "Use of Recordings",
-            "content": "Guided recordings can be helpful for beginners."
+            head: "Use of Recordings",
+            content: "Guided recordings can be helpful for beginners."
           },
           {
-            "head": "Comfort is Key",
-            "content": "Ensure you are warm and comfortable throughout the session."
+            head: "Comfort is Key",
+            content: "Ensure you are warm and comfortable throughout the session."
           },
           {
-            "head": "Allow the Process",
-            "content": "Embrace the experience without expectation."
+            head: "Allow the Process",
+            content: "Embrace the experience without expectation."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Physical Limitations",
-            "content": "Adapt the posture for any physical restrictions."
+            head: "Physical Limitations",
+            content: "Adapt the posture for any physical restrictions."
           },
           {
-            "head": "Emotional Sensitivity",
-            "content": "Be aware that deep relaxation can sometimes release suppressed emotions."
+            head: "Emotional Sensitivity",
+            content: "Be aware that deep relaxation can sometimes release suppressed emotions."
           },
           {
-            "head": "Time and Place",
-            "content": "Avoid practicing when tired or just before bed to prevent falling asleep."
+            head: "Time and Place",
+            content: "Avoid practicing when tired or just before bed to prevent falling asleep."
           },
           {
-            "head": "Medical Conditions",
-            "content": "Consult a doctor if you have a history of mental health issues."
+            head: "Medical Conditions",
+            content: "Consult a doctor if you have a history of mental health issues."
           }
         ],
-        "conclusion": "Yoga Nidra is a transformative practice that nurtures deep relaxation and emotional healing. This gentle yet powerful technique can be a valuable addition to your self-care routine, offering a unique way to unwind and rejuvenate your mind and body."
+        conclusion: "Yoga Nidra is a transformative practice that nurtures deep relaxation and emotional healing. This gentle yet powerful technique can be a valuable addition to your self-care routine, offering a unique way to unwind and rejuvenate your mind and body."
       },
       {
-        "id": 32,
-        "title": "Active Meditation",
-        "intro": "Active Meditation breaks the mold of traditional meditation practices, offering a dynamic path to mindfulness. This method integrates movement with mental focus, making it ideal for those who find stillness challenging.",
+        id: 32,
+        title: "Active Meditation",
+        intro: "Active Meditation breaks the mold of traditional meditation practices, offering a dynamic path to mindfulness. This method integrates movement with mental focus, making it ideal for those who find stillness challenging.",
         "understanding": "Active Meditation involves mindful movement to achieve a meditative state. It's a fusion of physical activity and meditation, providing an alternative for those who prefer a more dynamic approach to mindfulness.",
-        "benefits": [
+        benefits: [
           {
-            "head": "Physical Engagement",
-            "content": "Combines the benefits of exercise with meditation."
+            head: "Physical Engagement",
+            content: "Combines the benefits of exercise with meditation."
           },
           {
-            "head": "Stress Reduction",
-            "content": "Physical activity helps in releasing stress and tension."
+            head: "Stress Reduction",
+            content: "Physical activity helps in releasing stress and tension."
           },
           {
-            "head": "Enhanced Focus",
-            "content": "Movement demands and develops greater concentration."
+            head: "Enhanced Focus",
+            content: "Movement demands and develops greater concentration."
           },
           {
-            "head": "Accessibility",
-            "content": "Ideal for people who find stillness in meditation challenging."
+            head: "Accessibility",
+            content: "Ideal for people who find stillness in meditation challenging."
           }
         ],
-        "steps": [
+        steps: [
           {
-            "step": "Choose an Activity",
-            "desc": "Walking, yoga, or even simple stretching can be effective."
+            step: "Choose an Activity",
+            desc: "Walking, yoga, or even simple stretching can be effective."
           },
           {
-            "step": "Set Intention",
-            "desc": "Begin with a clear intention or focus for your session."
+            step: "Set Intention",
+            desc: "Begin with a clear intention or focus for your session."
           },
           {
-            "step": "Mindful Movement",
-            "desc": "Engage in your chosen activity with full awareness."
+            step: "Mindful Movement",
+            desc: "Engage in your chosen activity with full awareness."
           },
           {
-            "step": "Synchronized Breathing",
-            "desc": "Coordinate your breath with your movements."
+            step: "Synchronized Breathing",
+            desc: "Coordinate your breath with your movements."
           },
           {
-            "step": "Focus on the Present",
-            "desc": "Keep your mind attuned to the current moment."
+            step: "Focus on the Present",
+            desc: "Keep your mind attuned to the current moment."
           },
           {
-            "step": "Conclude Mindfully",
-            "desc": "End your session with a few moments of stillness."
+            step: "Conclude Mindfully",
+            desc: "End your session with a few moments of stillness."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Regular Practice",
-            "content": "Incorporate active meditation into your daily routine."
+            head: "Regular Practice",
+            content: "Incorporate active meditation into your daily routine."
           },
           {
-            "head": "Variety of Activities",
-            "content": "Experiment with different activities to maintain engagement."
+            head: "Variety of Activities",
+            content: "Experiment with different activities to maintain engagement."
           },
           {
-            "head": "Mindful Awareness",
-            "content": "Focus on being present throughout the practice."
+            head: "Mindful Awareness",
+            content: "Focus on being present throughout the practice."
           },
           {
-            "head": "Patience and Persistence",
-            "content": "Allow time to adapt to this form of meditation."
+            head: "Patience and Persistence",
+            content: "Allow time to adapt to this form of meditation."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Physical Limits",
-            "content": "Respect your body's limitations and avoid overexertion."
+            head: "Physical Limits",
+            content: "Respect your body's limitations and avoid overexertion."
           },
           {
-            "head": "Safe Environment",
-            "content": "Ensure your surroundings are safe for physical activity."
+            head: "Safe Environment",
+            content: "Ensure your surroundings are safe for physical activity."
           },
           {
-            "head": "Distraction Management",
-            "content": "Choose a setting with minimal distractions."
+            head: "Distraction Management",
+            content: "Choose a setting with minimal distractions."
           },
           {
-            "head": "Health Conditions",
-            "content": "Consult a doctor if you have any health concerns."
+            head: "Health Conditions",
+            content: "Consult a doctor if you have any health concerns."
           }
         ],
-        "conclusion": "Active Meditation offers a unique approach to mindfulness, blending movement with meditative focus. It is an effective practice for those seeking a more dynamic and engaging path to mental clarity and stress relief. With regular practice, active meditation can become a rewarding and integral part of your wellness routine."
+        conclusion: "Active Meditation offers a unique approach to mindfulness, blending movement with meditative focus. It is an effective practice for those seeking a more dynamic and engaging path to mental clarity and stress relief. With regular practice, active meditation can become a rewarding and integral part of your wellness routine."
       }
     ]
   },
@@ -2330,447 +2310,447 @@ export const MeditationsData = [
     category: "Loving-kindness and Compassion",
     data: [
       {
-        "id": 33,
-        "title": "Loving-kindness Meditation (Metta)",
-        "intro": "Loving-kindness Meditation, known as Metta Meditation, is a practice focused on developing unconditional love and compassion. It's a transformative technique that nurtures positive emotions towards oneself and others.",
+        id: 33,
+        title: "Loving-kindness Meditation (Metta)",
+        intro: "Loving-kindness Meditation, known as Metta Meditation, is a practice focused on developing unconditional love and compassion. It's a transformative technique that nurtures positive emotions towards oneself and others.",
         "understanding": "Metta, meaning loving-kindness in Pali, is a meditation practice where individuals cultivate feelings of love, kindness, and compassion. Originating from Buddhist traditions, this practice has gained global popularity for its profound emotional benefits.",
-        "benefits": [
+        benefits: [
           {
-            "head": "Boosts Well-being",
-            "content": "It enhances overall emotional well-being and happiness."
+            head: "Boosts Well-being",
+            content: "It enhances overall emotional well-being and happiness."
           },
           {
-            "head": "Reduces Negative Emotions",
-            "content": "Practicing Metta helps in diminishing feelings of anger, resentment, and anxiety."
+            head: "Reduces Negative Emotions",
+            content: "Practicing Metta helps in diminishing feelings of anger, resentment, and anxiety."
           },
           {
-            "head": "Improves Relationships",
-            "content": "It fosters a sense of empathy and understanding towards others."
+            head: "Improves Relationships",
+            content: "It fosters a sense of empathy and understanding towards others."
           },
           {
-            "head": "Enhances Self-Compassion",
-            "content": "Metta meditation increases feelings of self-love and acceptance."
+            head: "Enhances Self-Compassion",
+            content: "Metta meditation increases feelings of self-love and acceptance."
           }
         ],
-        "steps": [
+        steps: [
           {
-            "step": "Quiet Space",
-            "desc": "Find a comfortable and peaceful environment."
+            step: "Quiet Space",
+            desc: "Find a comfortable and peaceful environment."
           },
           {
-            "step": "Relaxed Posture",
-            "desc": "Sit in a relaxed position with closed eyes."
+            step: "Relaxed Posture",
+            desc: "Sit in a relaxed position with closed eyes."
           },
           {
-            "step": "Focus on Feelings",
-            "desc": "Begin by focusing on feelings of love and kindness."
+            step: "Focus on Feelings",
+            desc: "Begin by focusing on feelings of love and kindness."
           },
           {
-            "step": "Recite Phrases",
-            "desc": "Silently recite phrases like 'May I be happy, may I be healthy'."
+            step: "Recite Phrases",
+            desc: "Silently recite phrases like 'May I be happy, may I be healthy'."
           },
           {
-            "step": "Extend to Others",
-            "desc": "Gradually extend these wishes to friends, family, strangers, and even those you have conflicts with."
+            step: "Extend to Others",
+            desc: "Gradually extend these wishes to friends, family, strangers, and even those you have conflicts with."
           },
           {
-            "step": "Practice Regularly",
-            "desc": "Consistency is key for cultivating deeper compassion."
+            step: "Practice Regularly",
+            desc: "Consistency is key for cultivating deeper compassion."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Start with Yourself",
-            "content": "Begin by directing kindness towards yourself."
+            head: "Start with Yourself",
+            content: "Begin by directing kindness towards yourself."
           },
           {
-            "head": "Be Genuine",
-            "content": "Cultivate authentic feelings rather than just repeating words."
+            head: "Be Genuine",
+            content: "Cultivate authentic feelings rather than just repeating words."
           },
           {
-            "head": "Regular Sessions",
-            "content": "Incorporate Metta into your daily meditation routine."
+            head: "Regular Sessions",
+            content: "Incorporate Metta into your daily meditation routine."
           },
           {
-            "head": "Patience is Essential",
-            "content": "Allow the practice to develop naturally over time."
+            head: "Patience is Essential",
+            content: "Allow the practice to develop naturally over time."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Emotional Intensity",
-            "content": "Be prepared for intense emotions and handle them with care."
+            head: "Emotional Intensity",
+            content: "Be prepared for intense emotions and handle them with care."
           },
           {
-            "head": "Avoid Strain",
-            "content": "Do not force feelings of kindness if they don't come naturally."
+            head: "Avoid Strain",
+            content: "Do not force feelings of kindness if they don't come naturally."
           },
           {
-            "head": "Adjust Phrases",
-            "content": "Feel free to modify the phrases to ones that resonate more with you."
+            head: "Adjust Phrases",
+            content: "Feel free to modify the phrases to ones that resonate more with you."
           },
           {
-            "head": "Seek Guidance if Needed",
-            "content": "If you encounter challenges, consider seeking advice from a meditation teacher."
+            head: "Seek Guidance if Needed",
+            content: "If you encounter challenges, consider seeking advice from a meditation teacher."
           }
         ],
-        "conclusion": "Loving-kindness Meditation is a powerful tool for fostering compassion and empathy. Regular practice can transform your mindset, leading to a more loving and connected life. Embrace the journey of Metta to unlock a deeper sense of peace and kindness within yourself and towards others."
+        conclusion: "Loving-kindness Meditation is a powerful tool for fostering compassion and empathy. Regular practice can transform your mindset, leading to a more loving and connected life. Embrace the journey of Metta to unlock a deeper sense of peace and kindness within yourself and towards others."
       },
       {
-        "id": 34,
-        "title": "Tonglen Meditation",
-        "intro": "Tonglen Meditation is a Tibetan Buddhist practice focused on cultivating compassion and empathy. This unique form of meditation involves visualizing taking in others' pain and sending out relief, fostering a deep sense of connection and altruism.",
+        id: 34,
+        title: "Tonglen Meditation",
+        intro: "Tonglen Meditation is a Tibetan Buddhist practice focused on cultivating compassion and empathy. This unique form of meditation involves visualizing taking in others' pain and sending out relief, fostering a deep sense of connection and altruism.",
         "understanding": "Tonglen, meaning 'giving and taking' in Tibetan, is a practice that reverses our usual logic of avoiding suffering and seeking pleasure. By mentally taking on the suffering of others and giving them happiness, practitioners develop greater compassion and empathy.",
-        "benefits": [
+        benefits: [
           {
-            "head": "Cultivates Compassion",
-            "content": "Enhances one's capacity for empathy and altruism."
+            head: "Cultivates Compassion",
+            content: "Enhances one's capacity for empathy and altruism."
           },
           {
-            "head": "Reduces Personal Suffering",
-            "content": "Helps in dealing with personal pain and anxiety."
+            head: "Reduces Personal Suffering",
+            content: "Helps in dealing with personal pain and anxiety."
           },
           {
-            "head": "Emotional Healing",
-            "content": "Offers a way to heal and find peace."
+            head: "Emotional Healing",
+            content: "Offers a way to heal and find peace."
           },
           {
-            "head": "Promotes Positive Outlook",
-            "content": "Encourages a more loving and positive approach to life."
+            head: "Promotes Positive Outlook",
+            content: "Encourages a more loving and positive approach to life."
           }
         ],
-        "steps": [
+        steps: [
           {
-            "step": "Quiet Space",
-            "desc": "Find a peaceful place for meditation."
+            step: "Quiet Space",
+            desc: "Find a peaceful place for meditation."
           },
           {
-            "step": "Relaxed Posture",
-            "desc": "Sit in a comfortable position with a straight back."
+            step: "Relaxed Posture",
+            desc: "Sit in a comfortable position with a straight back."
           },
           {
-            "step": "Focus on Breathing",
-            "desc": "Start with deep, calm breaths to center yourself."
+            step: "Focus on Breathing",
+            desc: "Start with deep, calm breaths to center yourself."
           },
           {
-            "step": "Visualize Suffering",
-            "desc": "Imagine the suffering of others as a dark, heavy smoke."
+            step: "Visualize Suffering",
+            desc: "Imagine the suffering of others as a dark, heavy smoke."
           },
           {
-            "step": "Inhale Suffering",
-            "desc": "Breathe in this smoke, taking in others' pain."
+            step: "Inhale Suffering",
+            desc: "Breathe in this smoke, taking in others' pain."
           },
           {
-            "step": "Exhale Relief",
-            "desc": "Visualize exhaling a bright, soothing light that brings happiness and relief."
+            step: "Exhale Relief",
+            desc: "Visualize exhaling a bright, soothing light that brings happiness and relief."
           },
           {
-            "step": "Repeat",
-            "desc": "Continue this process, gradually expanding your compassion to more beings."
+            step: "Repeat",
+            desc: "Continue this process, gradually expanding your compassion to more beings."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Start Small",
-            "content": "Begin with someone close to you before extending to others."
+            head: "Start Small",
+            content: "Begin with someone close to you before extending to others."
           },
           {
-            "head": "Regular Practice",
-            "content": "Incorporate Tonglen into your daily meditation routine."
+            head: "Regular Practice",
+            content: "Incorporate Tonglen into your daily meditation routine."
           },
           {
-            "head": "Mindful Breathing",
-            "content": "Stay focused on your breath to maintain concentration."
+            head: "Mindful Breathing",
+            content: "Stay focused on your breath to maintain concentration."
           },
           {
-            "head": "Balance Emotions",
-            "content": "Be mindful of your emotional state and practice self-care."
+            head: "Balance Emotions",
+            content: "Be mindful of your emotional state and practice self-care."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Emotional Intensity",
-            "content": "Be prepared for intense emotions and practice self-compassion."
+            head: "Emotional Intensity",
+            content: "Be prepared for intense emotions and practice self-compassion."
           },
           {
-            "head": "Mental Health Concerns",
-            "content": "Those with mental health issues should consult a therapist."
+            head: "Mental Health Concerns",
+            content: "Those with mental health issues should consult a therapist."
           },
           {
-            "head": "Balanced Approach",
-            "content": "Ensure your emotional well-being while practicing empathy."
+            head: "Balanced Approach",
+            content: "Ensure your emotional well-being while practicing empathy."
           },
           {
-            "head": "Realistic Expectations",
-            "content": "Understand that benefits develop over time with consistent practice."
+            head: "Realistic Expectations",
+            content: "Understand that benefits develop over time with consistent practice."
           }
         ],
-        "conclusion": "Tonglen Meditation is a profound tool for developing compassion and empathy. This practice not only benefits others by cultivating a mindset of altruism but also enhances the practitioner's emotional well-being. Regular practice can lead to a more compassionate and empathetic approach to life."
+        conclusion: "Tonglen Meditation is a profound tool for developing compassion and empathy. This practice not only benefits others by cultivating a mindset of altruism but also enhances the practitioner's emotional well-being. Regular practice can lead to a more compassionate and empathetic approach to life."
       },
       {
-        "id": 35,
-        "title": "Bhakti Yoga",
-        "intro": "Bhakti Yoga, often described as the yoga of devotion, is a spiritual path centered on love and devotion towards a personal deity. This form of yoga transcends physical practices, focusing on the heart and devotion.",
+        id: 35,
+        title: "Bhakti Yoga",
+        intro: "Bhakti Yoga, often described as the yoga of devotion, is a spiritual path centered on love and devotion towards a personal deity. This form of yoga transcends physical practices, focusing on the heart and devotion.",
         "understanding": "Bhakti Yoga is one of the several paths of yoga, emphasizing a personal relationship with the divine. It is less about physical postures and more about cultivating a deep sense of devotion and emotional connection with a higher power.",
-        "benefits": [
+        benefits: [
           {
-            "head": "Emotional Healing",
-            "content": "It offers a pathway to emotional release and healing."
+            head: "Emotional Healing",
+            content: "It offers a pathway to emotional release and healing."
           },
           {
-            "head": "Spiritual Connection",
-            "content": "Deepens the practitioner's connection to the divine."
+            head: "Spiritual Connection",
+            content: "Deepens the practitioner's connection to the divine."
           },
           {
-            "head": "Inner Peace",
-            "content": "Encourages a state of peace and contentment."
+            head: "Inner Peace",
+            content: "Encourages a state of peace and contentment."
           },
           {
-            "head": "Compassion and Love",
-            "content": "Fosters feelings of love, compassion, and empathy."
+            head: "Compassion and Love",
+            content: "Fosters feelings of love, compassion, and empathy."
           }
         ],
-        "steps": [
+        steps: [
           {
-            "step": "Choose a Deity",
-            "desc": "Select a personal deity or a higher power to focus your devotion on."
+            step: "Choose a Deity",
+            desc: "Select a personal deity or a higher power to focus your devotion on."
           },
           {
-            "step": "Chanting Mantras",
-            "desc": "Recite mantras or devotional songs to connect with the deity."
+            step: "Chanting Mantras",
+            desc: "Recite mantras or devotional songs to connect with the deity."
           },
           {
-            "step": "Prayer and Worship",
-            "desc": "Engage in prayer and worship as acts of devotion."
+            step: "Prayer and Worship",
+            desc: "Engage in prayer and worship as acts of devotion."
           },
           {
-            "step": "Read Sacred Texts",
-            "desc": "Study spiritual texts relevant to your chosen deity."
+            step: "Read Sacred Texts",
+            desc: "Study spiritual texts relevant to your chosen deity."
           },
           {
-            "step": "Serve Others",
-            "desc": "Practice selfless service as an expression of your devotion."
+            step: "Serve Others",
+            desc: "Practice selfless service as an expression of your devotion."
           },
           {
-            "step": "Meditation",
-            "desc": "Meditate on the divine qualities of your deity."
+            step: "Meditation",
+            desc: "Meditate on the divine qualities of your deity."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Daily Devotion",
-            "content": "Incorporate Bhakti practices into your daily routine."
+            head: "Daily Devotion",
+            content: "Incorporate Bhakti practices into your daily routine."
           },
           {
-            "head": "Community",
-            "content": "Join a community of fellow practitioners for support."
+            head: "Community",
+            content: "Join a community of fellow practitioners for support."
           },
           {
-            "head": "Sincerity",
-            "content": "Approach your practices with sincerity and heartfelt devotion."
+            head: "Sincerity",
+            content: "Approach your practices with sincerity and heartfelt devotion."
           },
           {
-            "head": "Mindfulness",
-            "content": "Stay mindful of the presence of the divine in everyday life."
+            head: "Mindfulness",
+            content: "Stay mindful of the presence of the divine in everyday life."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Balance",
-            "content": "Balance emotional devotion with practical aspects of life."
+            head: "Balance",
+            content: "Balance emotional devotion with practical aspects of life."
           },
           {
-            "head": "Respect for Beliefs",
-            "content": "Practice with respect for different beliefs and practices."
+            head: "Respect for Beliefs",
+            content: "Practice with respect for different beliefs and practices."
           },
           {
-            "head": "Personal Comfort",
-            "content": "Engage in practices that resonate with you personally."
+            head: "Personal Comfort",
+            content: "Engage in practices that resonate with you personally."
           },
           {
-            "head": "Avoid Extremes",
-            "content": "Steer clear of extreme emotional or fanatical practices."
+            head: "Avoid Extremes",
+            content: "Steer clear of extreme emotional or fanatical practices."
           }
         ],
-        "conclusion": "Bhakti Yoga offers a unique spiritual path centered on love and devotion. This form of yoga nurtures an emotional and spiritual connection with a higher power, leading to inner peace and compassion. Embracing Bhakti Yoga can transform one's spiritual journey with its emphasis on heartfelt devotion."
+        conclusion: "Bhakti Yoga offers a unique spiritual path centered on love and devotion. This form of yoga nurtures an emotional and spiritual connection with a higher power, leading to inner peace and compassion. Embracing Bhakti Yoga can transform one's spiritual journey with its emphasis on heartfelt devotion."
       },
       {
-        "id": 36,
-        "title": "Forgiveness Meditation",
-        "intro": "Forgiveness Meditation is a transformative practice that fosters emotional healing and inner peace. By cultivating forgiveness, this meditation helps release resentment and fosters a sense of harmony.",
+        id: 36,
+        title: "Forgiveness Meditation",
+        intro: "Forgiveness Meditation is a transformative practice that fosters emotional healing and inner peace. By cultivating forgiveness, this meditation helps release resentment and fosters a sense of harmony.",
         "understanding": "Forgiveness Meditation is a mindful practice focusing on letting go of grudges and forgiving oneself and others. Rooted in various spiritual and therapeutic traditions, it is a pathway to emotional liberation and self-healing.",
-        "benefits": [
+        benefits: [
           {
-            "head": "Emotional Healing",
-            "content": "Helps heal emotional wounds and past hurts."
+            head: "Emotional Healing",
+            content: "Helps heal emotional wounds and past hurts."
           },
           {
-            "head": "Reduced Anger and Stress",
-            "content": "Lowers feelings of anger and decreases stress levels."
+            head: "Reduced Anger and Stress",
+            content: "Lowers feelings of anger and decreases stress levels."
           },
           {
-            "head": "Improved Relationships",
-            "content": "Encourages healthier and more compassionate relationships."
+            head: "Improved Relationships",
+            content: "Encourages healthier and more compassionate relationships."
           },
           {
-            "head": "Enhanced Well-being",
-            "content": "Promotes overall emotional and mental well-being."
+            head: "Enhanced Well-being",
+            content: "Promotes overall emotional and mental well-being."
           }
         ],
-        "steps": [
+        steps: [
           {
-            "step": "Find a Quiet Space",
-            "desc": "Choose a peaceful location for meditation."
+            step: "Find a Quiet Space",
+            desc: "Choose a peaceful location for meditation."
           },
           {
-            "step": "Comfortable Posture",
-            "desc": "Sit or lie in a comfortable position."
+            step: "Comfortable Posture",
+            desc: "Sit or lie in a comfortable position."
           },
           {
-            "step": "Focus on Breath",
-            "desc": "Begin with deep, calming breaths to center yourself."
+            step: "Focus on Breath",
+            desc: "Begin with deep, calming breaths to center yourself."
           },
           {
-            "step": "Reflect on Forgiveness",
-            "desc": "Think of someone you want to forgive or seek forgiveness from."
+            step: "Reflect on Forgiveness",
+            desc: "Think of someone you want to forgive or seek forgiveness from."
           },
           {
-            "step": "Recite Forgiveness Phrases",
-            "desc": "Silently repeat phrases of forgiveness towards yourself or others."
+            step: "Recite Forgiveness Phrases",
+            desc: "Silently repeat phrases of forgiveness towards yourself or others."
           },
           {
-            "step": "Release Negative Emotions",
-            "desc": "Visualize letting go of resentment and pain."
+            step: "Release Negative Emotions",
+            desc: "Visualize letting go of resentment and pain."
           },
           {
-            "step": "Close with Gratitude",
-            "desc": "End the session with a moment of gratitude for this healing journey."
+            step: "Close with Gratitude",
+            desc: "End the session with a moment of gratitude for this healing journey."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Regular Practice",
-            "content": "Engage in forgiveness meditation regularly for deeper impact."
+            head: "Regular Practice",
+            content: "Engage in forgiveness meditation regularly for deeper impact."
           },
           {
-            "head": "Patience and Compassion",
-            "content": "Be patient and compassionate with yourself during the process."
+            head: "Patience and Compassion",
+            content: "Be patient and compassionate with yourself during the process."
           },
           {
-            "head": "Duration",
-            "content": "Start with short sessions, gradually increasing over time."
+            head: "Duration",
+            content: "Start with short sessions, gradually increasing over time."
           },
           {
-            "head": "Journaling After Sessions",
-            "content": "Write down feelings and thoughts post-meditation for deeper insight."
+            head: "Journaling After Sessions",
+            content: "Write down feelings and thoughts post-meditation for deeper insight."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Emotional Intensity",
-            "content": "Be prepared for strong emotions and handle them gently."
+            head: "Emotional Intensity",
+            content: "Be prepared for strong emotions and handle them gently."
           },
           {
-            "head": "No Forced Forgiveness",
-            "content": "Avoid forcing feelings of forgiveness; let them develop naturally."
+            head: "No Forced Forgiveness",
+            content: "Avoid forcing feelings of forgiveness; let them develop naturally."
           },
           {
-            "head": "Seeking Professional Help",
-            "content": "Consider professional guidance if dealing with deep-seated trauma."
+            head: "Seeking Professional Help",
+            content: "Consider professional guidance if dealing with deep-seated trauma."
           },
           {
-            "head": "Respect Personal Boundaries",
-            "content": "Maintain personal boundaries while practicing forgiveness towards others."
+            head: "Respect Personal Boundaries",
+            content: "Maintain personal boundaries while practicing forgiveness towards others."
           }
         ],
-        "conclusion": "Forgiveness Meditation is a powerful tool for emotional healing and personal growth. This practice not only helps in releasing past grievances but also paves the way for a more peaceful and fulfilling life. Embracing forgiveness can lead to profound transformations in both personal well-being and interpersonal relationships."
+        conclusion: "Forgiveness Meditation is a powerful tool for emotional healing and personal growth. This practice not only helps in releasing past grievances but also paves the way for a more peaceful and fulfilling life. Embracing forgiveness can lead to profound transformations in both personal well-being and interpersonal relationships."
       },
       {
-        "id": 37,
-        "title": "Loving Eyes Meditation",
-        "intro": "Loving Eyes Meditation is a transformative practice centered around cultivating compassion and empathy. This meditation technique involves visualizing others through a lens of unconditional love and kindness.",
+        id: 37,
+        title: "Loving Eyes Meditation",
+        intro: "Loving Eyes Meditation is a transformative practice centered around cultivating compassion and empathy. This meditation technique involves visualizing others through a lens of unconditional love and kindness.",
         "understanding": "This meditation form is rooted in the principle of seeing the world and others with love and compassion. It's an exercise in changing our perspective to foster a deeper understanding and connection with those around us.",
-        "benefits": [
+        benefits: [
           {
-            "head": "Increased Empathy",
-            "content": "Helps in developing a stronger sense of empathy towards others."
+            head: "Increased Empathy",
+            content: "Helps in developing a stronger sense of empathy towards others."
           },
           {
-            "head": "Reduced Negative Judgments",
-            "content": "Aids in diminishing critical and judgmental thoughts."
+            head: "Reduced Negative Judgments",
+            content: "Aids in diminishing critical and judgmental thoughts."
           },
           {
-            "head": "Enhanced Relationships",
-            "content": "Improves interpersonal relationships through greater understanding."
+            head: "Enhanced Relationships",
+            content: "Improves interpersonal relationships through greater understanding."
           },
           {
-            "head": "Inner Peace",
-            "content": "Promotes a sense of inner calm and peace."
+            head: "Inner Peace",
+            content: "Promotes a sense of inner calm and peace."
           }
         ],
-        "steps": [
+        steps: [
           {
-            "step": "Find a Quiet Space",
-            "desc": "Choose a peaceful spot for your meditation."
+            step: "Find a Quiet Space",
+            desc: "Choose a peaceful spot for your meditation."
           },
           {
-            "step": "Relax and Breathe",
-            "desc": "Sit comfortably and focus on your breath."
+            step: "Relax and Breathe",
+            desc: "Sit comfortably and focus on your breath."
           },
           {
-            "step": "Visualize a Loved One",
-            "desc": "Picture someone you love and observe your feelings of warmth and affection."
+            step: "Visualize a Loved One",
+            desc: "Picture someone you love and observe your feelings of warmth and affection."
           },
           {
-            "step": "Extend to Others",
-            "desc": "Gradually extend this vision to others, including those you have neutral or difficult feelings towards."
+            step: "Extend to Others",
+            desc: "Gradually extend this vision to others, including those you have neutral or difficult feelings towards."
           },
           {
-            "step": "Embrace Kindness",
-            "desc": "Visualize looking at each person with 'loving eyes', sending feelings of love and kindness."
+            step: "Embrace Kindness",
+            desc: "Visualize looking at each person with 'loving eyes', sending feelings of love and kindness."
           },
           {
-            "step": "Reflect on the Experience",
-            "desc": "Conclude by reflecting on the feelings of compassion and connection experienced."
+            step: "Reflect on the Experience",
+            desc: "Conclude by reflecting on the feelings of compassion and connection experienced."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Daily Practice",
-            "content": "Incorporate this meditation into your daily routine."
+            head: "Daily Practice",
+            content: "Incorporate this meditation into your daily routine."
           },
           {
-            "head": "Start with Familiar Faces",
-            "content": "Begin with loved ones before moving to others."
+            head: "Start with Familiar Faces",
+            content: "Begin with loved ones before moving to others."
           },
           {
-            "head": "Patience and Persistence",
-            "content": "Allow your feelings of compassion to develop naturally."
+            head: "Patience and Persistence",
+            content: "Allow your feelings of compassion to develop naturally."
           },
           {
-            "head": "Mindful Reminders",
-            "content": "Throughout the day, remind yourself to view situations and people with loving eyes."
+            head: "Mindful Reminders",
+            content: "Throughout the day, remind yourself to view situations and people with loving eyes."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Emotional Sensitivity",
-            "content": "Be prepared for emotional responses and handle them gently."
+            head: "Emotional Sensitivity",
+            content: "Be prepared for emotional responses and handle them gently."
           },
           {
-            "head": "Respecting Boundaries",
-            "content": "Ensure that your practice respects both your emotional boundaries and those of others."
+            head: "Respecting Boundaries",
+            content: "Ensure that your practice respects both your emotional boundaries and those of others."
           },
           {
-            "head": "Self-Compassion",
-            "content": "Remember to direct loving eyes towards yourself as well."
+            head: "Self-Compassion",
+            content: "Remember to direct loving eyes towards yourself as well."
           },
           {
-            "head": "Balance",
-            "content": "Balance this practice with other forms of meditation for a well-rounded approach."
+            head: "Balance",
+            content: "Balance this practice with other forms of meditation for a well-rounded approach."
           }
         ],
-        "conclusion": "Loving Eyes Meditation is a powerful tool for fostering compassion and empathy. By practicing to see the world with loving eyes, we can transform our relationships and nurture a more empathetic and understanding heart."
+        conclusion: "Loving Eyes Meditation is a powerful tool for fostering compassion and empathy. By practicing to see the world with loving eyes, we can transform our relationships and nurture a more empathetic and understanding heart."
       }
     ]
   },
@@ -2778,348 +2758,348 @@ export const MeditationsData = [
     category: "Guided Meditation",
     data: [
       {
-        "id": 38,
-        "title": "Osho Dynamic Meditation",
-        "intro": "Osho Dynamic Meditation is a modern, active form of meditation designed to release pent-up energy and emotions. Created by the spiritual teacher Osho, it's a transformative practice that involves movement, breathing, and expressive techniques.",
+        id: 38,
+        title: "Osho Dynamic Meditation",
+        intro: "Osho Dynamic Meditation is a modern, active form of meditation designed to release pent-up energy and emotions. Created by the spiritual teacher Osho, it's a transformative practice that involves movement, breathing, and expressive techniques.",
         "understanding": "This unique form of meditation breaks from traditional stillness-based practices. It consists of five stages, each designed to encourage emotional release, deep breathing, and physical activity. Osho developed this method to help people embrace and express their true selves.",
-        "benefits": [
+        benefits: [
           {
-            "head": "Emotional Release",
-            "content": "Aids in releasing suppressed emotions and stress."
+            head: "Emotional Release",
+            content: "Aids in releasing suppressed emotions and stress."
           },
           {
-            "head": "Increased Vitality",
-            "content": "Boosts energy and revitalizes the body."
+            head: "Increased Vitality",
+            content: "Boosts energy and revitalizes the body."
           },
           {
-            "head": "Mindfulness and Presence",
-            "content": "Enhances awareness of the present moment."
+            head: "Mindfulness and Presence",
+            content: "Enhances awareness of the present moment."
           },
           {
-            "head": "Inner Balance",
-            "content": "Promotes emotional and psychological balance."
+            head: "Inner Balance",
+            content: "Promotes emotional and psychological balance."
           }
         ],
-        "steps": [
+        steps: [
           {
-            "step": "Breathing Vigorously",
-            "desc": "Start with chaotic and deep breathing to energize the body."
+            step: "Breathing Vigorously",
+            desc: "Start with chaotic and deep breathing to energize the body."
           },
           {
-            "step": "Express Emotions",
-            "desc": "Let go of inhibitions and express emotions freely."
+            step: "Express Emotions",
+            desc: "Let go of inhibitions and express emotions freely."
           },
           {
-            "step": "Jump and Chant",
-            "desc": "Jump up and down while chanting a mantra to activate energy centers."
+            step: "Jump and Chant",
+            desc: "Jump up and down while chanting a mantra to activate energy centers."
           },
           {
-            "step": "Freeze",
-            "desc": "Stop all activity suddenly and remain motionless."
+            step: "Freeze",
+            desc: "Stop all activity suddenly and remain motionless."
           },
           {
-            "step": "Celebrate",
-            "desc": "Finish with a celebration, dancing, and expressing joy."
+            step: "Celebrate",
+            desc: "Finish with a celebration, dancing, and expressing joy."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Privacy",
-            "content": "Practice in a private, spacious area."
+            head: "Privacy",
+            content: "Practice in a private, spacious area."
           },
           {
-            "head": "Comfortable Clothing",
-            "content": "Wear loose, comfortable clothing."
+            head: "Comfortable Clothing",
+            content: "Wear loose, comfortable clothing."
           },
           {
-            "head": "Morning Practice",
-            "content": "Ideal when done in the early morning."
+            head: "Morning Practice",
+            content: "Ideal when done in the early morning."
           },
           {
-            "head": "Letting Go",
-            "content": "Fully immerse yourself in each stage without holding back."
+            head: "Letting Go",
+            content: "Fully immerse yourself in each stage without holding back."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Physical Limitations",
-            "content": "Be mindful of any physical constraints."
+            head: "Physical Limitations",
+            content: "Be mindful of any physical constraints."
           },
           {
-            "head": "Emotional Intensity",
-            "content": "Be prepared for intense emotional experiences."
+            head: "Emotional Intensity",
+            content: "Be prepared for intense emotional experiences."
           },
           {
-            "head": "Supervision for Beginners",
-            "content": "New practitioners should consider guidance from an experienced instructor."
+            head: "Supervision for Beginners",
+            content: "New practitioners should consider guidance from an experienced instructor."
           },
           {
-            "head": "Quiet Environment Post-Meditation",
-            "content": "Allow time for relaxation and integration after the session."
+            head: "Quiet Environment Post-Meditation",
+            content: "Allow time for relaxation and integration after the session."
           }
         ],
-        "conclusion": "Osho Dynamic Meditation is a powerful practice that combines physical activity with meditation to foster emotional release and energy renewal. This practice can be transformative, leading to a deeper understanding of oneself and enhanced vitality. Regular practice can unlock new levels of self-awareness and emotional freedom."
+        conclusion: "Osho Dynamic Meditation is a powerful practice that combines physical activity with meditation to foster emotional release and energy renewal. This practice can be transformative, leading to a deeper understanding of oneself and enhanced vitality. Regular practice can unlock new levels of self-awareness and emotional freedom."
       },
       {
-        "id": 39,
-        "title": "Samarpan Meditation",
-        "intro": "Samarpan Meditation is a spiritual practice focused on surrender and self-realization. It encourages letting go of the ego and connecting with the inner self.",
+        id: 39,
+        title: "Samarpan Meditation",
+        intro: "Samarpan Meditation is a spiritual practice focused on surrender and self-realization. It encourages letting go of the ego and connecting with the inner self.",
         "understanding": "Samarpan, meaning 'surrender' in Sanskrit, is a form of meditation that emphasizes the release of control and submission to a higher consciousness. This meditative practice is rooted in the belief that true peace comes from within and surrendering oneself leads to spiritual enlightenment.",
-        "benefits": [
+        benefits: [
           {
-            "head": "Inner Peace",
-            "content": "It fosters a deep sense of calm and peace."
+            head: "Inner Peace",
+            content: "It fosters a deep sense of calm and peace."
           },
           {
-            "head": "Self-Discovery",
-            "content": "The practice aids in self-exploration and understanding."
+            head: "Self-Discovery",
+            content: "The practice aids in self-exploration and understanding."
           },
           {
-            "head": "Stress Reduction",
-            "content": "Regular meditation reduces stress and anxiety."
+            head: "Stress Reduction",
+            content: "Regular meditation reduces stress and anxiety."
           },
           {
-            "head": "Spiritual Growth",
-            "content": "It accelerates the journey towards spiritual awakening."
+            head: "Spiritual Growth",
+            content: "It accelerates the journey towards spiritual awakening."
           }
         ],
-        "steps": [
+        steps: [
           {
-            "step": "Quiet Place",
-            "desc": "Find a peaceful spot free from distractions."
+            step: "Quiet Place",
+            desc: "Find a peaceful spot free from distractions."
           },
           {
-            "step": "Comfortable Posture",
-            "desc": "Sit comfortably, keeping your back straight."
+            step: "Comfortable Posture",
+            desc: "Sit comfortably, keeping your back straight."
           },
           {
-            "step": "Relaxation",
-            "desc": "Close your eyes and take deep breaths to relax."
+            step: "Relaxation",
+            desc: "Close your eyes and take deep breaths to relax."
           },
           {
-            "step": "Surrendering Ego",
-            "desc": "Focus on surrendering your ego and thoughts."
+            step: "Surrendering Ego",
+            desc: "Focus on surrendering your ego and thoughts."
           },
           {
-            "step": "Conscious Awareness",
-            "desc": "Stay aware of your thoughts and feelings without attachment."
+            step: "Conscious Awareness",
+            desc: "Stay aware of your thoughts and feelings without attachment."
           },
           {
-            "step": "Deeper Connection",
-            "desc": "With practice, deepen your connection with your inner self."
+            step: "Deeper Connection",
+            desc: "With practice, deepen your connection with your inner self."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Regular Practice",
-            "content": "Engage in daily meditation for consistency."
+            head: "Regular Practice",
+            content: "Engage in daily meditation for consistency."
           },
           {
-            "head": "Patience and Persistence",
-            "content": "Allow time for the practice to evolve naturally."
+            head: "Patience and Persistence",
+            content: "Allow time for the practice to evolve naturally."
           },
           {
-            "head": "Mindful Awareness",
-            "content": "Be mindful of your thoughts and emotions during meditation."
+            head: "Mindful Awareness",
+            content: "Be mindful of your thoughts and emotions during meditation."
           },
           {
-            "head": "Post-Meditation Reflection",
-            "content": "Spend time reflecting on your experience after each session."
+            head: "Post-Meditation Reflection",
+            content: "Spend time reflecting on your experience after each session."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Emotional Sensitivity",
-            "content": "Be prepared for heightened emotions or memories."
+            head: "Emotional Sensitivity",
+            content: "Be prepared for heightened emotions or memories."
           },
           {
-            "head": "Physical Discomfort",
-            "content": "Adjust your posture if discomfort arises."
+            head: "Physical Discomfort",
+            content: "Adjust your posture if discomfort arises."
           },
           {
-            "head": "Mental Health",
-            "content": "Those with mental health issues should consult a professional before practicing."
+            head: "Mental Health",
+            content: "Those with mental health issues should consult a professional before practicing."
           },
           {
-            "head": "Expectation Management",
-            "content": "Approach the practice without specific expectations for best results."
+            head: "Expectation Management",
+            content: "Approach the practice without specific expectations for best results."
           }
         ],
-        "conclusion": "Samarpan Meditation is a path to inner tranquility and spiritual discovery. By practicing surrender and acceptance, individuals can embark on a transformative journey, uncovering deeper insights into their true selves and the nature of existence."
+        conclusion: "Samarpan Meditation is a path to inner tranquility and spiritual discovery. By practicing surrender and acceptance, individuals can embark on a transformative journey, uncovering deeper insights into their true selves and the nature of existence."
       },
       {
-        "id": 40,
-        "title": "Gratitude Meditation",
-        "intro": "Gratitude Meditation is a transformative practice that focuses on appreciating life's blessings. This form of meditation fosters an attitude of thankfulness, enhancing overall well-being and happiness.",
+        id: 40,
+        title: "Gratitude Meditation",
+        intro: "Gratitude Meditation is a transformative practice that focuses on appreciating life's blessings. This form of meditation fosters an attitude of thankfulness, enhancing overall well-being and happiness.",
         "understanding": "Gratitude Meditation involves consciously reflecting on aspects of life you are thankful for. This practice, deeply rooted in various spiritual traditions, is known for its ability to uplift and bring positivity to everyday experiences.",
-        "benefits": [
+        benefits: [
           {
-            "head": "Increased Positivity",
-            "content": "Regularly practicing gratitude boosts overall optimism."
+            head: "Increased Positivity",
+            content: "Regularly practicing gratitude boosts overall optimism."
           },
           {
-            "head": "Stress Reduction",
-            "content": "It helps in alleviating stress by shifting focus to positive aspects."
+            head: "Stress Reduction",
+            content: "It helps in alleviating stress by shifting focus to positive aspects."
           },
           {
-            "head": "Enhanced Well-being",
-            "content": "Fosters a sense of contentment and well-being."
+            head: "Enhanced Well-being",
+            content: "Fosters a sense of contentment and well-being."
           },
           {
-            "head": "Improved Relationships",
-            "content": "Encourages appreciation and strengthens connections with others."
+            head: "Improved Relationships",
+            content: "Encourages appreciation and strengthens connections with others."
           }
         ],
-        "steps": [
+        steps: [
           {
-            "step": "Find a Quiet Space",
-            "desc": "Choose a peaceful area for your practice."
+            step: "Find a Quiet Space",
+            desc: "Choose a peaceful area for your practice."
           },
           {
-            "step": "Comfortable Seating",
-            "desc": "Sit in a relaxed yet alert posture."
+            step: "Comfortable Seating",
+            desc: "Sit in a relaxed yet alert posture."
           },
           {
-            "step": "Focus on Gratitude",
-            "desc": "Reflect on things you're grateful for, starting with simple aspects."
+            step: "Focus on Gratitude",
+            desc: "Reflect on things you're grateful for, starting with simple aspects."
           },
           {
-            "step": "Deepen Reflection",
-            "desc": "Expand your thoughts to include people, experiences, and personal strengths."
+            step: "Deepen Reflection",
+            desc: "Expand your thoughts to include people, experiences, and personal strengths."
           },
           {
-            "step": "Feel the Gratitude",
-            "desc": "Allow yourself to genuinely feel thankful for these blessings."
+            step: "Feel the Gratitude",
+            desc: "Allow yourself to genuinely feel thankful for these blessings."
           },
           {
-            "step": "Conclude with Thanks",
-            "desc": "End your meditation by expressing a quiet word of thanks."
+            step: "Conclude with Thanks",
+            desc: "End your meditation by expressing a quiet word of thanks."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Daily Practice",
-            "content": "Integrate gratitude meditation into your daily routine."
+            head: "Daily Practice",
+            content: "Integrate gratitude meditation into your daily routine."
           },
           {
-            "head": "Journaling",
-            "content": "Consider keeping a gratitude journal to complement your practice."
+            head: "Journaling",
+            content: "Consider keeping a gratitude journal to complement your practice."
           },
           {
-            "head": "Short Sessions",
-            "content": "Begin with short durations and gradually extend the time."
+            head: "Short Sessions",
+            content: "Begin with short durations and gradually extend the time."
           },
           {
-            "head": "Diverse Focus",
-            "content": "Vary the aspects you reflect on to keep the practice fresh."
+            head: "Diverse Focus",
+            content: "Vary the aspects you reflect on to keep the practice fresh."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Emotional Balance",
-            "content": "Acknowledge that it's normal to have days when gratitude feels more challenging."
+            head: "Emotional Balance",
+            content: "Acknowledge that it's normal to have days when gratitude feels more challenging."
           },
           {
-            "head": "Personal Limits",
-            "content": "Be mindful of your emotional state and practice accordingly."
+            head: "Personal Limits",
+            content: "Be mindful of your emotional state and practice accordingly."
           },
           {
-            "head": "Realistic Expectations",
-            "content": "Understand that changes in outlook may take time."
+            head: "Realistic Expectations",
+            content: "Understand that changes in outlook may take time."
           },
           {
-            "head": "Mindful Practice",
-            "content": "Stay present and avoid mechanical repetition."
+            head: "Mindful Practice",
+            content: "Stay present and avoid mechanical repetition."
           }
         ],
-        "conclusion": "Gratitude Meditation is a powerful tool that enriches life with a sense of appreciation and joy. This practice, while simple, can profoundly impact your mental and emotional health, leading to a more fulfilled and content life."
+        conclusion: "Gratitude Meditation is a powerful tool that enriches life with a sense of appreciation and joy. This practice, while simple, can profoundly impact your mental and emotional health, leading to a more fulfilled and content life."
       },
       {
-        "id": 41,
-        "title": "Gibberish Meditation",
-        "intro": "Gibberish Meditation, a unique form of meditation, involves vocalizing nonsensical sounds to release mental clutter and emotional blockages. This technique, rooted in the teachings of Zen masters, is both liberating and rejuvenating.",
+        id: 41,
+        title: "Gibberish Meditation",
+        intro: "Gibberish Meditation, a unique form of meditation, involves vocalizing nonsensical sounds to release mental clutter and emotional blockages. This technique, rooted in the teachings of Zen masters, is both liberating and rejuvenating.",
         "understanding": "Gibberish Meditation is the practice of expressing oneself using nonsensical, made-up language. It bypasses intellectual barriers and allows for a direct release of pent-up emotions and thoughts.",
-        "benefits": [
+        benefits: [
           {
-            "head": "Stress Release",
-            "content": "Provides an outlet for releasing accumulated stress and tension."
+            head: "Stress Release",
+            content: "Provides an outlet for releasing accumulated stress and tension."
           },
           {
-            "head": "Enhanced Creativity",
-            "content": "Frees the mind, potentially leading to heightened creativity."
+            head: "Enhanced Creativity",
+            content: "Frees the mind, potentially leading to heightened creativity."
           },
           {
-            "head": "Emotional Release",
-            "content": "Helps in letting go of repressed emotions."
+            head: "Emotional Release",
+            content: "Helps in letting go of repressed emotions."
           },
           {
-            "head": "Mental Clarity",
-            "content": "Clears the mind, fostering a state of inner calmness."
+            head: "Mental Clarity",
+            content: "Clears the mind, fostering a state of inner calmness."
           }
         ],
-        "steps": [
+        steps: [
           {
-            "step": "Comfortable Space",
-            "desc": "Find a private, comfortable space where you won't be disturbed."
+            step: "Comfortable Space",
+            desc: "Find a private, comfortable space where you won't be disturbed."
           },
           {
-            "step": "Loosen Up",
-            "desc": "Start by relaxing your body with a few deep breaths."
+            step: "Loosen Up",
+            desc: "Start by relaxing your body with a few deep breaths."
           },
           {
-            "step": "Speak Gibberish",
-            "desc": "Begin vocalizing random, nonsensical sounds without any structure or language."
+            step: "Speak Gibberish",
+            desc: "Begin vocalizing random, nonsensical sounds without any structure or language."
           },
           {
-            "step": "Let Go",
-            "desc": "Allow yourself to fully express whatever comes up without any judgment."
+            step: "Let Go",
+            desc: "Allow yourself to fully express whatever comes up without any judgment."
           },
           {
-            "step": "Silent Reflection",
-            "desc": "After a period of gibberish, sit silently, observing the quietness of your mind."
+            step: "Silent Reflection",
+            desc: "After a period of gibberish, sit silently, observing the quietness of your mind."
           },
           {
-            "step": "Conclude Gently",
-            "desc": "End the session by taking a few deep breaths and grounding yourself."
+            step: "Conclude Gently",
+            desc: "End the session by taking a few deep breaths and grounding yourself."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "No Inhibition",
-            "content": "Let go of inhibitions to fully embrace the practice."
+            head: "No Inhibition",
+            content: "Let go of inhibitions to fully embrace the practice."
           },
           {
-            "head": "Regular Sessions",
-            "content": "Practice regularly for more profound effects."
+            head: "Regular Sessions",
+            content: "Practice regularly for more profound effects."
           },
           {
-            "head": "Duration",
-            "content": "Start with short sessions and gradually increase the time."
+            head: "Duration",
+            content: "Start with short sessions and gradually increase the time."
           },
           {
-            "head": "Post-Practice Relaxation",
-            "content": "Allow some time to relax and reflect after each session."
+            head: "Post-Practice Relaxation",
+            content: "Allow some time to relax and reflect after each session."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Privacy",
-            "content": "Practice in a private space to ensure freedom of expression."
+            head: "Privacy",
+            content: "Practice in a private space to ensure freedom of expression."
           },
           {
-            "head": "Vocal Care",
-            "content": "Be mindful not to strain your voice."
+            head: "Vocal Care",
+            content: "Be mindful not to strain your voice."
           },
           {
-            "head": "Emotional Intensity",
-            "content": "Be prepared for intense emotional responses."
+            head: "Emotional Intensity",
+            content: "Be prepared for intense emotional responses."
           },
           {
-            "head": "Respect Boundaries",
-            "content": "If practicing in a group, respect others' space and comfort."
+            head: "Respect Boundaries",
+            content: "If practicing in a group, respect others' space and comfort."
           }
         ],
-        "conclusion": "Gibberish Meditation offers a unique and powerful way to cleanse the mind and release emotional baggage. This practice, simple yet profound, can be a transformative tool in your journey towards mental clarity and emotional well-being."
+        conclusion: "Gibberish Meditation offers a unique and powerful way to cleanse the mind and release emotional baggage. This practice, simple yet profound, can be a transformative tool in your journey towards mental clarity and emotional well-being."
       }
     ]
   },
@@ -3127,779 +3107,779 @@ export const MeditationsData = [
     category: "Spiritual and Self-Exploration",
     data: [
       {
-        "id": 42,
-        "title": "Self-Inquiry Meditation (Atma Vichara)",
-        "intro": "Self-Inquiry Meditation, known as Atma Vichara in Sanskrit, is a profound technique for self-discovery and inner peace. This practice involves deep introspection, leading to a clearer understanding of the self and one's true nature.",
+        id: 42,
+        title: "Self-Inquiry Meditation (Atma Vichara)",
+        intro: "Self-Inquiry Meditation, known as Atma Vichara in Sanskrit, is a profound technique for self-discovery and inner peace. This practice involves deep introspection, leading to a clearer understanding of the self and one's true nature.",
         "understanding": "Atma Vichara, translating to 'self-inquiry,' is a form of meditation rooted in the teachings of the sage Ramana Maharshi. It's centered around the question 'Who am I?' and is aimed at transcending the ego to realize the true self.",
-        "benefits": [
+        benefits: [
           {
-            "head": "Enhanced Self-Awareness",
-            "content": "Cultivates a deeper understanding of one's thoughts and emotions."
+            head: "Enhanced Self-Awareness",
+            content: "Cultivates a deeper understanding of one's thoughts and emotions."
           },
           {
-            "head": "Ego Transcendence",
-            "content": "Helps in identifying and transcending ego-driven thoughts."
+            head: "Ego Transcendence",
+            content: "Helps in identifying and transcending ego-driven thoughts."
           },
           {
-            "head": "Inner Peace",
-            "content": "Leads to profound inner peace and contentment."
+            head: "Inner Peace",
+            content: "Leads to profound inner peace and contentment."
           },
           {
-            "head": "Clarity of Thought",
-            "content": "Clears the mind, leading to better decision-making and problem-solving skills."
+            head: "Clarity of Thought",
+            content: "Clears the mind, leading to better decision-making and problem-solving skills."
           }
         ],
-        "steps": [
+        steps: [
           {
-            "step": "Quiet Space",
-            "desc": "Find a peaceful place where you can sit undisturbed."
+            step: "Quiet Space",
+            desc: "Find a peaceful place where you can sit undisturbed."
           },
           {
-            "step": "Comfortable Position",
-            "desc": "Sit in a comfortable position with a straight back."
+            step: "Comfortable Position",
+            desc: "Sit in a comfortable position with a straight back."
           },
           {
-            "step": "Focus on the Inner Question",
-            "desc": "Ask yourself 'Who am I?' and focus on this inquiry."
+            step: "Focus on the Inner Question",
+            desc: "Ask yourself 'Who am I?' and focus on this inquiry."
           },
           {
-            "step": "Observe Thoughts",
-            "desc": "Watch your thoughts without attachment or judgment."
+            step: "Observe Thoughts",
+            desc: "Watch your thoughts without attachment or judgment."
           },
           {
-            "step": "Seek the Source",
-            "desc": "Try to trace thoughts back to their origin."
+            step: "Seek the Source",
+            desc: "Try to trace thoughts back to their origin."
           },
           {
-            "step": "Deepen Inquiry",
-            "desc": "Continue to ask and delve deeper with each meditation session."
+            step: "Deepen Inquiry",
+            desc: "Continue to ask and delve deeper with each meditation session."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Regular Practice",
-            "content": "Make Atma Vichara a daily habit."
+            head: "Regular Practice",
+            content: "Make Atma Vichara a daily habit."
           },
           {
-            "head": "Patience",
-            "content": "Allow insights to arise naturally over time."
+            head: "Patience",
+            content: "Allow insights to arise naturally over time."
           },
           {
-            "head": "Journaling",
-            "content": "Record insights and experiences post-meditation."
+            head: "Journaling",
+            content: "Record insights and experiences post-meditation."
           },
           {
-            "head": "Guidance",
-            "content": "Seek guidance from experienced practitioners if possible."
+            head: "Guidance",
+            content: "Seek guidance from experienced practitioners if possible."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Emotional Intensity",
-            "content": "Be prepared for intense emotions or thoughts that may surface."
+            head: "Emotional Intensity",
+            content: "Be prepared for intense emotions or thoughts that may surface."
           },
           {
-            "head": "Mental Health",
-            "content": "Those with mental health conditions should consult a professional."
+            head: "Mental Health",
+            content: "Those with mental health conditions should consult a professional."
           },
           {
-            "head": "Expectations",
-            "content": "Approach each session without specific expectations."
+            head: "Expectations",
+            content: "Approach each session without specific expectations."
           },
           {
-            "head": "Duration",
-            "content": "Start with shorter sessions and gradually extend the duration."
+            head: "Duration",
+            content: "Start with shorter sessions and gradually extend the duration."
           }
         ],
-        "conclusion": "Self-Inquiry Meditation is a transformative practice that offers deep insights into the self and the nature of reality. It encourages a journey of self-discovery, leading to lasting inner peace and self-realization. As a practice of introspection and reflection, Atma Vichara can be a cornerstone of your meditation routine."
+        conclusion: "Self-Inquiry Meditation is a transformative practice that offers deep insights into the self and the nature of reality. It encourages a journey of self-discovery, leading to lasting inner peace and self-realization. As a practice of introspection and reflection, Atma Vichara can be a cornerstone of your meditation routine."
       },
       {
-        "id": 43,
-        "title": "Centering Prayer",
-        "intro": "Centering Prayer is a form of Christian contemplative prayer that emphasizes interior silence and spiritual growth. Rooted in ancient Christian tradition, it is a pathway to deepen one's relationship with the divine.",
+        id: 43,
+        title: "Centering Prayer",
+        intro: "Centering Prayer is a form of Christian contemplative prayer that emphasizes interior silence and spiritual growth. Rooted in ancient Christian tradition, it is a pathway to deepen one's relationship with the divine.",
         "understanding": "This meditative practice focuses on reconnecting with God through silence and stillness. It differs from other forms of prayer by its emphasis on quieting the mind to experience God's presence.",
-        "benefits": [
+        benefits: [
           {
-            "head": "Spiritual Intimacy",
-            "content": "Enhances one's personal connection with God."
+            head: "Spiritual Intimacy",
+            content: "Enhances one's personal connection with God."
           },
           {
-            "head": "Inner Peace",
-            "content": "Offers a sense of calm and peace in a hectic world."
+            head: "Inner Peace",
+            content: "Offers a sense of calm and peace in a hectic world."
           },
           {
-            "head": "Increased Awareness",
-            "content": "Cultivates a deeper awareness of the self and the divine."
+            head: "Increased Awareness",
+            content: "Cultivates a deeper awareness of the self and the divine."
           },
           {
-            "head": "Emotional Balance",
-            "content": "Aids in managing stress and emotional upheaval."
+            head: "Emotional Balance",
+            content: "Aids in managing stress and emotional upheaval."
           }
         ],
-        "steps": [
+        steps: [
           {
-            "step": "Quiet Space",
-            "desc": "Find a place where you can be undisturbed."
+            step: "Quiet Space",
+            desc: "Find a place where you can be undisturbed."
           },
           {
-            "step": "Comfortable Posture",
-            "desc": "Sit comfortably with your eyes closed."
+            step: "Comfortable Posture",
+            desc: "Sit comfortably with your eyes closed."
           },
           {
-            "step": "Choose a Sacred Word",
-            "desc": "Select a word that symbolizes your intention to be in God's presence."
+            step: "Choose a Sacred Word",
+            desc: "Select a word that symbolizes your intention to be in God's presence."
           },
           {
-            "step": "Gentle Focus",
-            "desc": "Silently repeat the sacred word as a symbol of your consent to God's presence and action within."
+            step: "Gentle Focus",
+            desc: "Silently repeat the sacred word as a symbol of your consent to God's presence and action within."
           },
           {
-            "step": "Let Go of Thoughts",
-            "desc": "When distracted, gently return to your sacred word."
+            step: "Let Go of Thoughts",
+            desc: "When distracted, gently return to your sacred word."
           },
           {
-            "step": "Duration",
-            "desc": "Start with a 10-20 minute session, gradually extending the time."
+            step: "Duration",
+            desc: "Start with a 10-20 minute session, gradually extending the time."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Regular Sessions",
-            "content": "Practice daily to deepen the spiritual experience."
+            head: "Regular Sessions",
+            content: "Practice daily to deepen the spiritual experience."
           },
           {
-            "head": "Morning or Evening",
-            "content": "Ideal times are morning and before bedtime."
+            head: "Morning or Evening",
+            content: "Ideal times are morning and before bedtime."
           },
           {
-            "head": "Patience and Consistency",
-            "content": "Allow the practice to evolve naturally."
+            head: "Patience and Consistency",
+            content: "Allow the practice to evolve naturally."
           },
           {
-            "head": "Journaling",
-            "content": "Reflect on your experience in a journal."
+            head: "Journaling",
+            content: "Reflect on your experience in a journal."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Expectations",
-            "content": "Approach the practice without specific expectations."
+            head: "Expectations",
+            content: "Approach the practice without specific expectations."
           },
           {
-            "head": "Emotional Comfort",
-            "content": "Be aware of and prepared for emotional experiences."
+            head: "Emotional Comfort",
+            content: "Be aware of and prepared for emotional experiences."
           },
           {
-            "head": "Physical Position",
-            "content": "Adjust your sitting position for comfort as needed."
+            head: "Physical Position",
+            content: "Adjust your sitting position for comfort as needed."
           },
           {
-            "head": "Guidance",
-            "content": "Seek guidance from experienced practitioners if needed."
+            head: "Guidance",
+            content: "Seek guidance from experienced practitioners if needed."
           }
         ],
-        "conclusion": "Centering Prayer is a profound practice for those seeking a deeper spiritual connection and inner peace. It offers a unique way to experience God's presence, fostering spiritual growth and emotional well-being. Through regular practice, Centering Prayer can become a transformative element in your spiritual journey."
+        conclusion: "Centering Prayer is a profound practice for those seeking a deeper spiritual connection and inner peace. It offers a unique way to experience God's presence, fostering spiritual growth and emotional well-being. Through regular practice, Centering Prayer can become a transformative element in your spiritual journey."
       },
       {
-        "id": 44,
-        "title": "Isha Kriya",
-        "intro": "Isha Kriya is a powerful yoga practice rooted in the timeless wisdom of the yogic sciences. Designed to foster inner peace and well-being, this meditation technique is a path to spiritual growth and self-discovery.",
+        id: 44,
+        title: "Isha Kriya",
+        intro: "Isha Kriya is a powerful yoga practice rooted in the timeless wisdom of the yogic sciences. Designed to foster inner peace and well-being, this meditation technique is a path to spiritual growth and self-discovery.",
         "understanding": "Isha Kriya is part of Isha Yoga and was popularized by Sadhguru, a renowned yogi and mystic. It is a simple yet potent process that combines specific sounds, breath, and thought to create a harmonious experience within the body and mind.",
-        "benefits": [
+        benefits: [
           {
-            "head": "Enhanced Well-being",
-            "content": "Regular practice promotes overall physical and mental health."
+            head: "Enhanced Well-being",
+            content: "Regular practice promotes overall physical and mental health."
           },
           {
-            "head": "Stress Reduction",
-            "content": "It helps in effectively reducing stress and anxiety."
+            head: "Stress Reduction",
+            content: "It helps in effectively reducing stress and anxiety."
           },
           {
-            "head": "Increased Vitality",
-            "content": "Practitioners often report greater energy and vitality."
+            head: "Increased Vitality",
+            content: "Practitioners often report greater energy and vitality."
           },
           {
-            "head": "Spiritual Growth",
-            "content": "Isha Kriya opens avenues for deeper spiritual exploration."
+            head: "Spiritual Growth",
+            content: "Isha Kriya opens avenues for deeper spiritual exploration."
           }
         ],
-        "steps": [
+        steps: [
           {
-            "step": "Comfortable Position",
-            "desc": "Sit in a relaxed posture with a straight back."
+            step: "Comfortable Position",
+            desc: "Sit in a relaxed posture with a straight back."
           },
           {
-            "step": "Breathing",
-            "desc": "Follow guided breathing techniques focusing on inhalation and exhalation."
+            step: "Breathing",
+            desc: "Follow guided breathing techniques focusing on inhalation and exhalation."
           },
           {
-            "step": "Sound Vibration",
-            "desc": "Chant the sound 'Aa,' focusing on its vibration."
+            step: "Sound Vibration",
+            desc: "Chant the sound 'Aa,' focusing on its vibration."
           },
           {
-            "step": "Affirmation",
-            "desc": "Silently utter the affirmation provided in the Isha Kriya instructions."
+            step: "Affirmation",
+            desc: "Silently utter the affirmation provided in the Isha Kriya instructions."
           },
           {
-            "step": "Duration",
-            "desc": "Practice for the recommended duration, usually around 12-18 minutes."
+            step: "Duration",
+            desc: "Practice for the recommended duration, usually around 12-18 minutes."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Regular Practice",
-            "content": "Engage in Isha Kriya daily for optimal benefits."
+            head: "Regular Practice",
+            content: "Engage in Isha Kriya daily for optimal benefits."
           },
           {
-            "head": "Quiet Environment",
-            "content": "Choose a peaceful area to enhance focus."
+            head: "Quiet Environment",
+            content: "Choose a peaceful area to enhance focus."
           },
           {
-            "head": "Empty Stomach",
-            "content": "Practice on an empty stomach or at least 4 hours after a meal."
+            head: "Empty Stomach",
+            content: "Practice on an empty stomach or at least 4 hours after a meal."
           },
           {
-            "head": "Open Mind",
-            "content": "Approach the practice with openness and without expectations."
+            head: "Open Mind",
+            content: "Approach the practice with openness and without expectations."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Physical Limitations",
-            "content": "Adapt the posture if you have physical constraints."
+            head: "Physical Limitations",
+            content: "Adapt the posture if you have physical constraints."
           },
           {
-            "head": "Mental Health",
-            "content": "Those with severe mental health issues should consult a healthcare provider."
+            head: "Mental Health",
+            content: "Those with severe mental health issues should consult a healthcare provider."
           },
           {
-            "head": "Distractions",
-            "content": "Avoid practicing in a noisy or disruptive environment."
+            head: "Distractions",
+            content: "Avoid practicing in a noisy or disruptive environment."
           },
           {
-            "head": "Expectations",
-            "content": "Understand that progress in meditation is gradual and varies for each individual."
+            head: "Expectations",
+            content: "Understand that progress in meditation is gradual and varies for each individual."
           }
         ],
-        "conclusion": "Isha Kriya is a transformative practice that offers a pathway to inner peace and spiritual awakening. By integrating it into your daily routine, you can embark on a journey of self-discovery and heightened awareness, leading to a more balanced and fulfilling life."
+        conclusion: "Isha Kriya is a transformative practice that offers a pathway to inner peace and spiritual awakening. By integrating it into your daily routine, you can embark on a journey of self-discovery and heightened awareness, leading to a more balanced and fulfilling life."
       },
       {
-        "id": 45,
-        "title": "Anapana Meditation",
-        "intro": "Anapana Meditation focuses on mindful breathing. This ancient practice, rooted in Buddhist traditions, enhances self-awareness and mental tranquility through the simple act of observing the breath.",
+        id: 45,
+        title: "Anapana Meditation",
+        intro: "Anapana Meditation focuses on mindful breathing. This ancient practice, rooted in Buddhist traditions, enhances self-awareness and mental tranquility through the simple act of observing the breath.",
         "understanding": "Anapana, derived from Sanskrit, means breathing in and out. It is a preliminary meditation practice that emphasizes awareness of the breath, serving as a foundation for deeper meditative states.",
-        "benefits": [
+        benefits: [
           {
-            "head": "Mindfulness",
-            "content": "Cultivates a heightened state of awareness and presence."
+            head: "Mindfulness",
+            content: "Cultivates a heightened state of awareness and presence."
           },
           {
-            "head": "Stress Reduction",
-            "content": "Reduces stress by calming the mind."
+            head: "Stress Reduction",
+            content: "Reduces stress by calming the mind."
           },
           {
-            "head": "Improved Focus",
-            "content": "Enhances concentration and mental clarity."
+            head: "Improved Focus",
+            content: "Enhances concentration and mental clarity."
           },
           {
-            "head": "Emotional Regulation",
-            "content": "Aids in managing emotions effectively."
+            head: "Emotional Regulation",
+            content: "Aids in managing emotions effectively."
           }
         ],
-        "steps": [
+        steps: [
           {
-            "step": "Find a Quiet Place",
-            "desc": "Choose a peaceful spot for meditation."
+            step: "Find a Quiet Place",
+            desc: "Choose a peaceful spot for meditation."
           },
           {
-            "step": "Comfortable Seating",
-            "desc": "Sit in a relaxed but upright position."
+            step: "Comfortable Seating",
+            desc: "Sit in a relaxed but upright position."
           },
           {
-            "step": "Focus on Breath",
-            "desc": "Pay attention to the natural rhythm of your breathing."
+            step: "Focus on Breath",
+            desc: "Pay attention to the natural rhythm of your breathing."
           },
           {
-            "step": "Observe Sensations",
-            "desc": "Notice the sensations at the nostrils or upper lip as you breathe."
+            step: "Observe Sensations",
+            desc: "Notice the sensations at the nostrils or upper lip as you breathe."
           },
           {
-            "step": "Return to Breath",
-            "desc": "If your mind wanders, gently guide it back to your breath."
+            step: "Return to Breath",
+            desc: "If your mind wanders, gently guide it back to your breath."
           },
           {
-            "step": "Duration",
-            "desc": "Begin with short sessions, gradually increasing the time."
+            step: "Duration",
+            desc: "Begin with short sessions, gradually increasing the time."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Daily Practice",
-            "content": "Aim for consistency in your meditation routine."
+            head: "Daily Practice",
+            content: "Aim for consistency in your meditation routine."
           },
           {
-            "head": "Distraction Handling",
-            "content": "Acknowledge distractions and return focus to your breath."
+            head: "Distraction Handling",
+            content: "Acknowledge distractions and return focus to your breath."
           },
           {
-            "head": "Posture",
-            "content": "Maintain a posture that is alert yet comfortable."
+            head: "Posture",
+            content: "Maintain a posture that is alert yet comfortable."
           },
           {
-            "head": "Patience",
-            "content": "Allow progress to unfold naturally over time."
+            head: "Patience",
+            content: "Allow progress to unfold naturally over time."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Physical Discomfort",
-            "content": "Adjust your posture if you experience discomfort."
+            head: "Physical Discomfort",
+            content: "Adjust your posture if you experience discomfort."
           },
           {
-            "head": "Breathing Difficulty",
-            "content": "If breathing becomes labored, pause and resume normal breathing."
+            head: "Breathing Difficulty",
+            content: "If breathing becomes labored, pause and resume normal breathing."
           },
           {
-            "head": "Expectations",
-            "content": "Approach the practice without specific expectations for best results."
+            head: "Expectations",
+            content: "Approach the practice without specific expectations for best results."
           },
           {
-            "head": "Health Conditions",
-            "content": "Consult a healthcare provider if you have respiratory or mental health concerns."
+            head: "Health Conditions",
+            content: "Consult a healthcare provider if you have respiratory or mental health concerns."
           }
         ],
-        "conclusion": "Anapana Meditation offers a path to inner peace and mindfulness through the simple act of observing the breath. This practice, accessible to everyone, can profoundly impact mental well-being and daily life."
+        conclusion: "Anapana Meditation offers a path to inner peace and mindfulness through the simple act of observing the breath. This practice, accessible to everyone, can profoundly impact mental well-being and daily life."
       },
       {
-        "id": 46,
-        "title": "Buddhist Chanting Meditation",
-        "intro": "Buddhist Chanting Meditation is a profound practice that combines vocal expression with mindfulness. This form of meditation uses rhythmic chanting to deepen spiritual connection and promote inner peace.",
+        id: 46,
+        title: "Buddhist Chanting Meditation",
+        intro: "Buddhist Chanting Meditation is a profound practice that combines vocal expression with mindfulness. This form of meditation uses rhythmic chanting to deepen spiritual connection and promote inner peace.",
         "understanding": "This meditation involves the repetition of sacred mantras or phrases. Rooted in Buddhist traditions, it aims to foster concentration, compassion, and a heightened sense of well-being.",
-        "benefits": [
+        benefits: [
           {
-            "head": "Emotional Balance",
-            "content": "Regular chanting helps in managing emotions and reducing stress."
+            head: "Emotional Balance",
+            content: "Regular chanting helps in managing emotions and reducing stress."
           },
           {
-            "head": "Enhanced Focus",
-            "content": "The repetitive nature of chanting aids in improving concentration."
+            head: "Enhanced Focus",
+            content: "The repetitive nature of chanting aids in improving concentration."
           },
           {
-            "head": "Spiritual Connection",
-            "content": "Chanting can deepen one's spiritual practice and understanding."
+            head: "Spiritual Connection",
+            content: "Chanting can deepen one's spiritual practice and understanding."
           },
           {
-            "head": "Community Bonding",
-            "content": "Group chanting sessions create a sense of community and shared experience."
+            head: "Community Bonding",
+            content: "Group chanting sessions create a sense of community and shared experience."
           }
         ],
-        "steps": [
+        steps: [
           {
-            "step": "Find a Quiet Place",
-            "desc": "Choose a peaceful spot for your practice."
+            step: "Find a Quiet Place",
+            desc: "Choose a peaceful spot for your practice."
           },
           {
-            "step": "Comfortable Posture",
-            "desc": "Sit with a straight back in a comfortable position."
+            step: "Comfortable Posture",
+            desc: "Sit with a straight back in a comfortable position."
           },
           {
-            "step": "Select a Mantra",
-            "desc": "Choose a Buddhist mantra or phrase that resonates with you."
+            step: "Select a Mantra",
+            desc: "Choose a Buddhist mantra or phrase that resonates with you."
           },
           {
-            "step": "Chant Rhythmically",
-            "desc": "Repeat the mantra rhythmically and with focused attention."
+            step: "Chant Rhythmically",
+            desc: "Repeat the mantra rhythmically and with focused attention."
           },
           {
-            "step": "Mindful Breathing",
-            "desc": "Coordinate your breathing with the chant for a deeper experience."
+            step: "Mindful Breathing",
+            desc: "Coordinate your breathing with the chant for a deeper experience."
           },
           {
-            "step": "Silent Reflection",
-            "desc": "After chanting, spend a few moments in silent meditation."
+            step: "Silent Reflection",
+            desc: "After chanting, spend a few moments in silent meditation."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Regular Practice",
-            "content": "Engage in chanting meditation daily for consistent benefits."
+            head: "Regular Practice",
+            content: "Engage in chanting meditation daily for consistent benefits."
           },
           {
-            "head": "Voice Modulation",
-            "content": "Adjust the volume and pitch to what feels most natural."
+            head: "Voice Modulation",
+            content: "Adjust the volume and pitch to what feels most natural."
           },
           {
-            "head": "Group Sessions",
-            "content": "Consider participating in group chanting for a communal experience."
+            head: "Group Sessions",
+            content: "Consider participating in group chanting for a communal experience."
           },
           {
-            "head": "Patience and Persistence",
-            "content": "Be patient and persistent as the practice deepens over time."
+            head: "Patience and Persistence",
+            content: "Be patient and persistent as the practice deepens over time."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Vocal Strain",
-            "content": "Avoid straining your voice; chant within a comfortable range."
+            head: "Vocal Strain",
+            content: "Avoid straining your voice; chant within a comfortable range."
           },
           {
-            "head": "Respectful Practice",
-            "content": "Understand and respect the cultural and spiritual origins of the mantras."
+            head: "Respectful Practice",
+            content: "Understand and respect the cultural and spiritual origins of the mantras."
           },
           {
-            "head": "Mindful Engagement",
-            "content": "Focus on the meaning and sentiment of the mantras."
+            head: "Mindful Engagement",
+            content: "Focus on the meaning and sentiment of the mantras."
           },
           {
-            "head": "Personal Comfort",
-            "content": "Adapt the practice to suit your personal comfort and beliefs."
+            head: "Personal Comfort",
+            content: "Adapt the practice to suit your personal comfort and beliefs."
           }
         ],
-        "conclusion": "Buddhist Chanting Meditation offers a unique pathway to tranquility and mindfulness. Through the power of voice and repetition, this practice can enhance mental clarity, emotional stability, and spiritual awareness. Embracing chanting meditation can lead to a harmonious balance in life."
+        conclusion: "Buddhist Chanting Meditation offers a unique pathway to tranquility and mindfulness. Through the power of voice and repetition, this practice can enhance mental clarity, emotional stability, and spiritual awareness. Embracing chanting meditation can lead to a harmonious balance in life."
       },
       {
-        "id": 47,
-        "title": "Shambhavi Mahamudra",
-        "intro": "Shambhavi Mahamudra, a profound yogic practice, offers a pathway to deep spiritual growth and emotional balance. This ancient technique, rooted in the science of yoga, is known for its potential to transform one's life and well-being.",
+        id: 47,
+        title: "Shambhavi Mahamudra",
+        intro: "Shambhavi Mahamudra, a profound yogic practice, offers a pathway to deep spiritual growth and emotional balance. This ancient technique, rooted in the science of yoga, is known for its potential to transform one's life and well-being.",
         "understanding": "Shambhavi Mahamudra is a meditation technique involving a combination of breathing patterns, yogic postures, and a specific focus of the eyes. It aims to align your physical and mental energies, facilitating a deeper state of meditation.",
-        "benefits": [
+        benefits: [
           {
-            "head": "Enhanced Vitality",
-            "content": "It energizes and revitalizes the body."
+            head: "Enhanced Vitality",
+            content: "It energizes and revitalizes the body."
           },
           {
-            "head": "Mental Clarity",
-            "content": "The practice leads to improved concentration and focus."
+            head: "Mental Clarity",
+            content: "The practice leads to improved concentration and focus."
           },
           {
-            "head": "Emotional Balance",
-            "content": "It helps in regulating emotions and reducing stress."
+            head: "Emotional Balance",
+            content: "It helps in regulating emotions and reducing stress."
           },
           {
-            "head": "Spiritual Growth",
-            "content": "Many practitioners experience profound spiritual insights."
+            head: "Spiritual Growth",
+            content: "Many practitioners experience profound spiritual insights."
           }
         ],
-        "steps": [
+        steps: [
           {
-            "step": "Preparation",
-            "desc": "Begin with basic yoga postures to relax the body."
+            step: "Preparation",
+            desc: "Begin with basic yoga postures to relax the body."
           },
           {
-            "step": "Breathing Techniques",
-            "desc": "Incorporate specific pranayama (breathing exercises) to prepare the mind."
+            step: "Breathing Techniques",
+            desc: "Incorporate specific pranayama (breathing exercises) to prepare the mind."
           },
           {
-            "step": "Eye Focus",
-            "desc": "Gently focus the eyes between the eyebrows."
+            step: "Eye Focus",
+            desc: "Gently focus the eyes between the eyebrows."
           },
           {
-            "step": "Mudra Position",
-            "desc": "Hold the Shambhavi mudra, maintaining the eye position."
+            step: "Mudra Position",
+            desc: "Hold the Shambhavi mudra, maintaining the eye position."
           },
           {
-            "step": "Meditation",
-            "desc": "Stay in this state, allowing the mind to calm and settle."
+            step: "Meditation",
+            desc: "Stay in this state, allowing the mind to calm and settle."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Regular Practice",
-            "content": "Make Shambhavi Mahamudra a daily routine."
+            head: "Regular Practice",
+            content: "Make Shambhavi Mahamudra a daily routine."
           },
           {
-            "head": "Guided Learning",
-            "content": "Initially learn the technique from a qualified instructor."
+            head: "Guided Learning",
+            content: "Initially learn the technique from a qualified instructor."
           },
           {
-            "head": "Comfortable Environment",
-            "content": "Choose a quiet and comfortable space for practice."
+            head: "Comfortable Environment",
+            content: "Choose a quiet and comfortable space for practice."
           },
           {
-            "head": "Progressive Approach",
-            "content": "Gradually deepen your practice over time."
+            head: "Progressive Approach",
+            content: "Gradually deepen your practice over time."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Physical Strain",
-            "content": "Avoid overexertion in yoga postures and breathing."
+            head: "Physical Strain",
+            content: "Avoid overexertion in yoga postures and breathing."
           },
           {
-            "head": "Eye Health",
-            "content": "If you have eye issues, proceed with caution or consult a doctor."
+            head: "Eye Health",
+            content: "If you have eye issues, proceed with caution or consult a doctor."
           },
           {
-            "head": "Mental Health",
-            "content": "Be mindful of your mental state; seek guidance if needed."
+            head: "Mental Health",
+            content: "Be mindful of your mental state; seek guidance if needed."
           },
           {
-            "head": "Realistic Expectations",
-            "content": "Understand that benefits unfold over time with consistent practice."
+            head: "Realistic Expectations",
+            content: "Understand that benefits unfold over time with consistent practice."
           }
         ],
-        "conclusion": "Shambhavi Mahamudra is not just a practice but a journey towards inner peace and self-discovery. It offers a unique blend of physical, mental, and spiritual benefits, making it a valuable addition to any meditation or yoga routine. Embrace this practice to explore the depths of your inner self and experience transformative growth."
+        conclusion: "Shambhavi Mahamudra is not just a practice but a journey towards inner peace and self-discovery. It offers a unique blend of physical, mental, and spiritual benefits, making it a valuable addition to any meditation or yoga routine. Embrace this practice to explore the depths of your inner self and experience transformative growth."
       },
       {
-        "id": 48,
-        "title": "Taoist Inner Smile Meditation",
-        "intro": "Taoist Inner Smile Meditation is a transformative practice rooted in ancient Chinese Taoism. This meditation focuses on cultivating joy and healing by directing a smile inward to various parts of the body.",
+        id: 48,
+        title: "Taoist Inner Smile Meditation",
+        intro: "Taoist Inner Smile Meditation is a transformative practice rooted in ancient Chinese Taoism. This meditation focuses on cultivating joy and healing by directing a smile inward to various parts of the body.",
         "understanding": "This unique form of meditation combines visualization and mindfulness to encourage emotional balance and internal harmony. It involves visualizing a smile and directing it towards different organs and areas within the body, promoting a sense of deep relaxation and well-being.",
-        "benefits": [
+        benefits: [
           {
-            "head": "Emotional Balance",
-            "content": "Helps in managing and stabilizing emotions."
+            head: "Emotional Balance",
+            content: "Helps in managing and stabilizing emotions."
           },
           {
-            "head": "Stress Reduction",
-            "content": "Effectively lowers stress and anxiety levels."
+            head: "Stress Reduction",
+            content: "Effectively lowers stress and anxiety levels."
           },
           {
-            "head": "Internal Healing",
-            "content": "Enhances the healing processes within the body."
+            head: "Internal Healing",
+            content: "Enhances the healing processes within the body."
           },
           {
-            "head": "Increased Self-Awareness",
-            "content": "Fosters a deeper understanding of oneself."
+            head: "Increased Self-Awareness",
+            content: "Fosters a deeper understanding of oneself."
           }
         ],
-        "steps": [
+        steps: [
           {
-            "step": "Relaxation",
-            "desc": "Find a comfortable and quiet place to sit or lie down."
+            step: "Relaxation",
+            desc: "Find a comfortable and quiet place to sit or lie down."
           },
           {
-            "step": "Deep Breathing",
-            "desc": "Begin with deep, slow breaths to relax the body."
+            step: "Deep Breathing",
+            desc: "Begin with deep, slow breaths to relax the body."
           },
           {
-            "step": "Smile Gently",
-            "desc": "Start with a subtle smile and focus on its sensation."
+            step: "Smile Gently",
+            desc: "Start with a subtle smile and focus on its sensation."
           },
           {
-            "step": "Visualize the Smile",
-            "desc": "Direct this smile to each organ, starting from the heart and moving to other organs."
+            step: "Visualize the Smile",
+            desc: "Direct this smile to each organ, starting from the heart and moving to other organs."
           },
           {
-            "step": "Feel the Energy",
-            "desc": "Notice the warmth and positive energy each smile brings."
+            step: "Feel the Energy",
+            desc: "Notice the warmth and positive energy each smile brings."
           },
           {
-            "step": "Spread the Smile",
-            "desc": "Extend the smile to every part of your body."
+            step: "Spread the Smile",
+            desc: "Extend the smile to every part of your body."
           },
           {
-            "step": "Conclude with Gratitude",
-            "desc": "Finish the session with a moment of gratitude for your body."
+            step: "Conclude with Gratitude",
+            desc: "Finish the session with a moment of gratitude for your body."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Regular Practice",
-            "content": "Incorporate this meditation into your daily routine."
+            head: "Regular Practice",
+            content: "Incorporate this meditation into your daily routine."
           },
           {
-            "head": "Mindful Visualization",
-            "content": "Engage in mindful visualization for a deeper experience."
+            head: "Mindful Visualization",
+            content: "Engage in mindful visualization for a deeper experience."
           },
           {
-            "head": "Gentle Focus",
-            "content": "Keep the focus gentle and loving."
+            head: "Gentle Focus",
+            content: "Keep the focus gentle and loving."
           },
           {
-            "head": "Patience",
-            "content": "Allow the effects to manifest gradually with regular practice."
+            head: "Patience",
+            content: "Allow the effects to manifest gradually with regular practice."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Mind-Body Connection",
-            "content": "Be aware of how your body responds to the meditation."
+            head: "Mind-Body Connection",
+            content: "Be aware of how your body responds to the meditation."
           },
           {
-            "head": "Emotional Sensitivity",
-            "content": "Approach the practice with care if you are emotionally vulnerable."
+            head: "Emotional Sensitivity",
+            content: "Approach the practice with care if you are emotionally vulnerable."
           },
           {
-            "head": "Personal Space",
-            "content": "Ensure a private and undisturbed space for practice."
+            head: "Personal Space",
+            content: "Ensure a private and undisturbed space for practice."
           },
           {
-            "head": "Medical Conditions",
-            "content": "Consult with a healthcare provider if you have serious health issues."
+            head: "Medical Conditions",
+            content: "Consult with a healthcare provider if you have serious health issues."
           }
         ],
-        "conclusion": "Taoist Inner Smile Meditation offers a unique pathway to inner peace and emotional well-being. This practice, through its simplicity and depth, can lead to profound personal insights and a heightened sense of harmony."
+        conclusion: "Taoist Inner Smile Meditation offers a unique pathway to inner peace and emotional well-being. This practice, through its simplicity and depth, can lead to profound personal insights and a heightened sense of harmony."
       },
       {
-        "id": 49,
-        "title": "Jnana Mudra Meditation",
-        "intro": "Jnana Mudra Meditation is a powerful technique in the realm of spiritual practices. Known for its simplicity and profundity, this meditation utilizes a specific hand gesture to foster mental peace and deeper understanding.",
+        id: 49,
+        title: "Jnana Mudra Meditation",
+        intro: "Jnana Mudra Meditation is a powerful technique in the realm of spiritual practices. Known for its simplicity and profundity, this meditation utilizes a specific hand gesture to foster mental peace and deeper understanding.",
         "understanding": "Jnana Mudra, often associated with wisdom and knowledge, is a hand gesture in which the thumb and index finger form a circle. This gesture is symbolic of the union of the individual soul with the universal spirit. It is a key aspect of various meditation practices, particularly in yoga.",
-        "benefits": [
+        benefits: [
           {
-            "head": "Enhanced Focus",
-            "content": "It aids in improving concentration and mental clarity."
+            head: "Enhanced Focus",
+            content: "It aids in improving concentration and mental clarity."
           },
           {
-            "head": "Spiritual Awakening",
-            "content": "The mudra is believed to facilitate spiritual enlightenment."
+            head: "Spiritual Awakening",
+            content: "The mudra is believed to facilitate spiritual enlightenment."
           },
           {
-            "head": "Stress Reduction",
-            "content": "Regular practice can significantly reduce stress and anxiety."
+            head: "Stress Reduction",
+            content: "Regular practice can significantly reduce stress and anxiety."
           },
           {
-            "head": "Balanced Energy",
-            "content": "It helps in balancing the body's energetic system."
+            head: "Balanced Energy",
+            content: "It helps in balancing the body's energetic system."
           }
         ],
-        "steps": [
+        steps: [
           {
-            "step": "Comfortable Seating",
-            "desc": "Sit in a relaxed position with a straight spine."
+            step: "Comfortable Seating",
+            desc: "Sit in a relaxed position with a straight spine."
           },
           {
-            "step": "Hand Position",
-            "desc": "Place the hands on the knees with palms facing upwards. Touch the tips of the thumb and index finger, forming a circle."
+            step: "Hand Position",
+            desc: "Place the hands on the knees with palms facing upwards. Touch the tips of the thumb and index finger, forming a circle."
           },
           {
-            "step": "Relaxed Breathing",
-            "desc": "Breathe naturally and focus on your breath."
+            step: "Relaxed Breathing",
+            desc: "Breathe naturally and focus on your breath."
           },
           {
-            "step": "Gentle Focus",
-            "desc": "Maintain a gentle focus on the hand gesture or your breath."
+            step: "Gentle Focus",
+            desc: "Maintain a gentle focus on the hand gesture or your breath."
           },
           {
-            "step": "Duration",
-            "desc": "Start with a few minutes and gradually increase the time."
+            step: "Duration",
+            desc: "Start with a few minutes and gradually increase the time."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Regular Practice",
-            "content": "Consistency is key for reaping the benefits."
+            head: "Regular Practice",
+            content: "Consistency is key for reaping the benefits."
           },
           {
-            "head": "Quiet Environment",
-            "content": "Choose a peaceful area for meditation."
+            head: "Quiet Environment",
+            content: "Choose a peaceful area for meditation."
           },
           {
-            "head": "Mindfulness",
-            "content": "Stay aware and present during the practice."
+            head: "Mindfulness",
+            content: "Stay aware and present during the practice."
           },
           {
-            "head": "Posture",
-            "content": "Ensure your back is straight but relaxed."
+            head: "Posture",
+            content: "Ensure your back is straight but relaxed."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Hand Comfort",
-            "content": "Avoid straining the fingers in the mudra."
+            head: "Hand Comfort",
+            content: "Avoid straining the fingers in the mudra."
           },
           {
-            "head": "Mind Wandering",
-            "content": "Gently bring back your focus when the mind wanders."
+            head: "Mind Wandering",
+            content: "Gently bring back your focus when the mind wanders."
           },
           {
-            "head": "Physical Limitations",
-            "content": "Adapt the posture as needed for physical comfort."
+            head: "Physical Limitations",
+            content: "Adapt the posture as needed for physical comfort."
           },
           {
-            "head": "Expectations",
-            "content": "Let go of any expectations and embrace the experience."
+            head: "Expectations",
+            content: "Let go of any expectations and embrace the experience."
           }
         ],
-        "conclusion": "Jnana Mudra Meditation is a gateway to inner peace and wisdom. Its simplicity makes it accessible to everyone, regardless of their meditation experience. By incorporating this practice into your routine, you can embark on a journey towards mental clarity and spiritual growth."
+        conclusion: "Jnana Mudra Meditation is a gateway to inner peace and wisdom. Its simplicity makes it accessible to everyone, regardless of their meditation experience. By incorporating this practice into your routine, you can embark on a journey towards mental clarity and spiritual growth."
       },
       {
-        "id": 50,
-        "title": "Samyama",
-        "intro": "Samyama is a profound technique in yogic philosophy, offering a pathway to deeper understanding and self-awareness. This advanced practice combines concentration, meditation, and absorption, leading to extraordinary states of consciousness.",
+        id: 50,
+        title: "Samyama",
+        intro: "Samyama is a profound technique in yogic philosophy, offering a pathway to deeper understanding and self-awareness. This advanced practice combines concentration, meditation, and absorption, leading to extraordinary states of consciousness.",
         "understanding": "Rooted in Patanjali's Yoga Sutras, Samyama is a fusion of three elements: Dharana (concentration), Dhyana (meditation), and Samadhi (absorption). It's a process of deepening focus to achieve a state of complete unity with the object of meditation.",
-        "benefits": [
+        benefits: [
           {
-            "head": "Enhanced Intuition",
-            "content": "Samyama develops heightened intuition and inner knowledge."
+            head: "Enhanced Intuition",
+            content: "Samyama develops heightened intuition and inner knowledge."
           },
           {
-            "head": "Emotional Mastery",
-            "content": "It aids in gaining control over emotions and thoughts."
+            head: "Emotional Mastery",
+            content: "It aids in gaining control over emotions and thoughts."
           },
           {
-            "head": "Spiritual Insight",
-            "content": "Practitioners often experience profound spiritual insights."
+            head: "Spiritual Insight",
+            content: "Practitioners often experience profound spiritual insights."
           },
           {
-            "head": "Mental Clarity",
-            "content": "Regular practice leads to a clearer and more focused mind."
+            head: "Mental Clarity",
+            content: "Regular practice leads to a clearer and more focused mind."
           }
         ],
-        "steps": [
+        steps: [
           {
-            "step": "Proper Foundation",
-            "desc": "Begin with foundational practices like Asana and Pranayama."
+            step: "Proper Foundation",
+            desc: "Begin with foundational practices like Asana and Pranayama."
           },
           {
-            "step": "Quiet Space",
-            "desc": "Choose a peaceful environment for practice."
+            step: "Quiet Space",
+            desc: "Choose a peaceful environment for practice."
           },
           {
-            "step": "Concentration (Dharana)",
-            "desc": "Focus on a single object or idea intensely."
+            step: "Concentration (Dharana)",
+            desc: "Focus on a single object or idea intensely."
           },
           {
-            "step": "Meditation (Dhyana)",
-            "desc": "Maintain a continuous flow of attention toward the object."
+            step: "Meditation (Dhyana)",
+            desc: "Maintain a continuous flow of attention toward the object."
           },
           {
-            "step": "Absorption (Samadhi)",
-            "desc": "Merge with the object of focus, experiencing unity."
+            step: "Absorption (Samadhi)",
+            desc: "Merge with the object of focus, experiencing unity."
           },
           {
-            "step": "Integration",
-            "desc": "Gently return to normal consciousness, integrating the experience."
+            step: "Integration",
+            desc: "Gently return to normal consciousness, integrating the experience."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Gradual Progression",
-            "content": "Move from Dharana to Dhyana to Samadhi step by step."
+            head: "Gradual Progression",
+            content: "Move from Dharana to Dhyana to Samadhi step by step."
           },
           {
-            "head": "Regular Practice",
-            "content": "Consistency is key to mastering Samyama."
+            head: "Regular Practice",
+            content: "Consistency is key to mastering Samyama."
           },
           {
-            "head": "Patience",
-            "content": "Allow the process to unfold naturally without forcing experiences."
+            head: "Patience",
+            content: "Allow the process to unfold naturally without forcing experiences."
           },
           {
-            "head": "Guidance",
-            "content": "Seek guidance from a knowledgeable teacher if possible."
+            head: "Guidance",
+            content: "Seek guidance from a knowledgeable teacher if possible."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Advanced Practice",
-            "content": "Samyama is suitable for those with a strong meditation background."
+            head: "Advanced Practice",
+            content: "Samyama is suitable for those with a strong meditation background."
           },
           {
-            "head": "Mental Preparedness",
-            "content": "Ensure emotional and mental stability before practicing."
+            head: "Mental Preparedness",
+            content: "Ensure emotional and mental stability before practicing."
           },
           {
-            "head": "Expectations",
-            "content": "Approach the practice without specific expectations of outcomes."
+            head: "Expectations",
+            content: "Approach the practice without specific expectations of outcomes."
           },
           {
-            "head": "Physical and Mental Health",
-            "content": "Maintain good physical and mental health as a foundation."
+            head: "Physical and Mental Health",
+            content: "Maintain good physical and mental health as a foundation."
           }
         ],
-        "conclusion": "Samyama is a powerful yogic practice that unlocks deep layers of consciousness and understanding. While challenging, it offers profound benefits in terms of mental clarity, emotional control, and spiritual growth. With dedication and proper guidance, Samyama can be a transformative element in one’s spiritual journey."
+        conclusion: "Samyama is a powerful yogic practice that unlocks deep layers of consciousness and understanding. While challenging, it offers profound benefits in terms of mental clarity, emotional control, and spiritual growth. With dedication and proper guidance, Samyama can be a transformative element in one’s spiritual journey."
       }
     ]
   },
@@ -3907,348 +3887,348 @@ export const MeditationsData = [
     category: "Creative and Visual Meditation",
     data: [
       {
-        "id": 51,
-        "title": "Mandala Meditation",
-        "intro": "Mandala Meditation is a visually engaging practice that combines art and mindfulness. This meditation technique involves focusing on mandalas, intricate geometric patterns that symbolize the universe and inner tranquility.",
+        id: 51,
+        title: "Mandala Meditation",
+        intro: "Mandala Meditation is a visually engaging practice that combines art and mindfulness. This meditation technique involves focusing on mandalas, intricate geometric patterns that symbolize the universe and inner tranquility.",
         "understanding": "A mandala is a spiritual and ritual symbol in various cultures, representing the cosmos. In meditation, it serves as a tool for focusing attention, drawing the mind inward, and promoting a sense of serenity.",
-        "benefits": [
+        benefits: [
           {
-            "head": "Stress Reduction",
-            "content": "Engaging with mandalas can significantly lower stress levels."
+            head: "Stress Reduction",
+            content: "Engaging with mandalas can significantly lower stress levels."
           },
           {
-            "head": "Enhanced Creativity",
-            "content": "This meditation stimulates creative thinking and expression."
+            head: "Enhanced Creativity",
+            content: "This meditation stimulates creative thinking and expression."
           },
           {
-            "head": "Improved Focus",
-            "content": "Concentrating on mandalas helps sharpen attention and concentration."
+            head: "Improved Focus",
+            content: "Concentrating on mandalas helps sharpen attention and concentration."
           },
           {
-            "head": "Emotional Healing",
-            "content": "The practice can be soothing, promoting emotional balance and healing."
+            head: "Emotional Healing",
+            content: "The practice can be soothing, promoting emotional balance and healing."
           }
         ],
-        "steps": [
+        steps: [
           {
-            "step": "Select a Mandala",
-            "desc": "Choose a mandala that resonates with you, whether it's a drawing, painting, or digital image."
+            step: "Select a Mandala",
+            desc: "Choose a mandala that resonates with you, whether it's a drawing, painting, or digital image."
           },
           {
-            "step": "Comfortable Seating",
-            "desc": "Sit in a relaxed position in a quiet space."
+            step: "Comfortable Seating",
+            desc: "Sit in a relaxed position in a quiet space."
           },
           {
-            "step": "Focused Gazing",
-            "desc": "Gently gaze at the center of the mandala, letting your eyes take in the colors and design without strain."
+            step: "Focused Gazing",
+            desc: "Gently gaze at the center of the mandala, letting your eyes take in the colors and design without strain."
           },
           {
-            "step": "Mindful Observation",
-            "desc": "Notice the patterns and shapes, allowing your mind to wander through the intricate designs."
+            step: "Mindful Observation",
+            desc: "Notice the patterns and shapes, allowing your mind to wander through the intricate designs."
           },
           {
-            "step": "Closing the Practice",
-            "desc": "Gradually withdraw your gaze, taking a few moments to sit in silence, absorbing the experience."
+            step: "Closing the Practice",
+            desc: "Gradually withdraw your gaze, taking a few moments to sit in silence, absorbing the experience."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Regular Sessions",
-            "content": "Incorporate mandala meditation into your daily routine."
+            head: "Regular Sessions",
+            content: "Incorporate mandala meditation into your daily routine."
           },
           {
-            "head": "Quiet Environment",
-            "content": "Ensure a calm and undisturbed environment for meditation."
+            head: "Quiet Environment",
+            content: "Ensure a calm and undisturbed environment for meditation."
           },
           {
-            "head": "Personal Connection",
-            "content": "Use a mandala that you personally find appealing."
+            head: "Personal Connection",
+            content: "Use a mandala that you personally find appealing."
           },
           {
-            "head": "Duration",
-            "content": "Start with short periods, gradually increasing the time spent in meditation."
+            head: "Duration",
+            content: "Start with short periods, gradually increasing the time spent in meditation."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Visual Comfort",
-            "content": "Ensure the mandala is at a comfortable viewing distance."
+            head: "Visual Comfort",
+            content: "Ensure the mandala is at a comfortable viewing distance."
           },
           {
-            "head": "Individual Preferences",
-            "content": "Remember that the response to color and design is subjective."
+            head: "Individual Preferences",
+            content: "Remember that the response to color and design is subjective."
           },
           {
-            "head": "Avoid Overstraining",
-            "content": "Do not strain your eyes or mind; the practice should be relaxing."
+            head: "Avoid Overstraining",
+            content: "Do not strain your eyes or mind; the practice should be relaxing."
           },
           {
-            "head": "Mindful Approach",
-            "content": "Approach the practice with an open and non-judgmental mind."
+            head: "Mindful Approach",
+            content: "Approach the practice with an open and non-judgmental mind."
           }
         ],
-        "conclusion": "Mandala Meditation offers a unique and colorful path to inner peace and mindfulness. Through the simple act of focusing on a mandala, this practice can unlock doors to deeper concentration, creativity, and emotional well-being."
+        conclusion: "Mandala Meditation offers a unique and colorful path to inner peace and mindfulness. Through the simple act of focusing on a mandala, this practice can unlock doors to deeper concentration, creativity, and emotional well-being."
       },
       {
-        "id": 52,
-        "title": "Blue Sky Meditation",
-        "intro": "Blue Sky Meditation is a mindfulness technique that uses the imagery of a clear blue sky to foster inner peace and mental expansiveness. This practice encourages a state of openness and calm, akin to gazing into an endless, serene sky.",
+        id: 52,
+        title: "Blue Sky Meditation",
+        intro: "Blue Sky Meditation is a mindfulness technique that uses the imagery of a clear blue sky to foster inner peace and mental expansiveness. This practice encourages a state of openness and calm, akin to gazing into an endless, serene sky.",
         "understanding": "At its core, Blue Sky Meditation is about visualizing an unclouded, vast blue sky as a metaphor for the mind's potential for spaciousness and tranquility. Originating from Buddhist meditation practices, it is a powerful tool for cultivating clarity and stillness.",
-        "benefits": [
+        benefits: [
           {
-            "head": "Stress Reduction",
-            "content": "Helps alleviate stress by promoting a sense of peace."
+            head: "Stress Reduction",
+            content: "Helps alleviate stress by promoting a sense of peace."
           },
           {
-            "head": "Enhanced Creativity",
-            "content": "Encourages creative thinking by opening the mind."
+            head: "Enhanced Creativity",
+            content: "Encourages creative thinking by opening the mind."
           },
           {
-            "head": "Emotional Balance",
-            "content": "Aids in achieving emotional equilibrium."
+            head: "Emotional Balance",
+            content: "Aids in achieving emotional equilibrium."
           },
           {
-            "head": "Mindfulness",
-            "content": "Deepens overall mindfulness and present moment awareness."
+            head: "Mindfulness",
+            content: "Deepens overall mindfulness and present moment awareness."
           }
         ],
-        "steps": [
+        steps: [
           {
-            "step": "Find a Quiet Place",
-            "desc": "Choose a peaceful location for meditation."
+            step: "Find a Quiet Place",
+            desc: "Choose a peaceful location for meditation."
           },
           {
-            "step": "Comfortable Seating",
-            "desc": "Sit in a relaxed, comfortable posture."
+            step: "Comfortable Seating",
+            desc: "Sit in a relaxed, comfortable posture."
           },
           {
-            "step": "Visualize the Blue Sky",
-            "desc": "Imagine a vast, clear blue sky in your mind's eye."
+            step: "Visualize the Blue Sky",
+            desc: "Imagine a vast, clear blue sky in your mind's eye."
           },
           {
-            "step": "Focus on Spaciousness",
-            "desc": "Feel the expansiveness and openness of the sky."
+            step: "Focus on Spaciousness",
+            desc: "Feel the expansiveness and openness of the sky."
           },
           {
-            "step": "Observe Your Thoughts",
-            "desc": "Let thoughts pass like clouds without attachment."
+            step: "Observe Your Thoughts",
+            desc: "Let thoughts pass like clouds without attachment."
           },
           {
-            "step": "Return to the Sky",
-            "desc": "Whenever distracted, gently come back to the visualization of the blue sky."
+            step: "Return to the Sky",
+            desc: "Whenever distracted, gently come back to the visualization of the blue sky."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Regular Sessions",
-            "content": "Practice consistently for better results."
+            head: "Regular Sessions",
+            content: "Practice consistently for better results."
           },
           {
-            "head": "Morning Practice",
-            "content": "Ideal for setting a calm tone for the day."
+            head: "Morning Practice",
+            content: "Ideal for setting a calm tone for the day."
           },
           {
-            "head": "Gentle Focus",
-            "content": "Maintain a soft, relaxed focus during visualization."
+            head: "Gentle Focus",
+            content: "Maintain a soft, relaxed focus during visualization."
           },
           {
-            "head": "Patience and Persistence",
-            "content": "Allow the practice to develop naturally over time."
+            head: "Patience and Persistence",
+            content: "Allow the practice to develop naturally over time."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Expectation Management",
-            "content": "Understand that experiences may vary with each session."
+            head: "Expectation Management",
+            content: "Understand that experiences may vary with each session."
           },
           {
-            "head": "Comfort",
-            "content": "Ensure physical comfort to avoid distractions."
+            head: "Comfort",
+            content: "Ensure physical comfort to avoid distractions."
           },
           {
-            "head": "Mindful Visualization",
-            "content": "Engage in the practice without straining the mind."
+            head: "Mindful Visualization",
+            content: "Engage in the practice without straining the mind."
           },
           {
-            "head": "Handling Distractions",
-            "content": "Accept and acknowledge distractions without judgment."
+            head: "Handling Distractions",
+            content: "Accept and acknowledge distractions without judgment."
           }
         ],
-        "conclusion": "Blue Sky Meditation offers a simple yet profound way to explore the mind's capacity for peace and openness. This practice, embodying the vastness of the sky, invites you to a journey of serenity and self-discovery. With dedication and patience, it can be a transformative tool in your meditation repertoire."
+        conclusion: "Blue Sky Meditation offers a simple yet profound way to explore the mind's capacity for peace and openness. This practice, embodying the vastness of the sky, invites you to a journey of serenity and self-discovery. With dedication and patience, it can be a transformative tool in your meditation repertoire."
       },
       {
-        "id": 53,
-        "title": "Sufi Heart Meditation (Hridaya)",
-        "intro": "Sufi Heart Meditation, known as Hridaya, is a spiritual journey inward, focusing on the heart to discover inner peace and connection. This form of meditation is a cornerstone in Sufi practice, emphasizing love, compassion, and emotional healing.",
+        id: 53,
+        title: "Sufi Heart Meditation (Hridaya)",
+        intro: "Sufi Heart Meditation, known as Hridaya, is a spiritual journey inward, focusing on the heart to discover inner peace and connection. This form of meditation is a cornerstone in Sufi practice, emphasizing love, compassion, and emotional healing.",
         "understanding": "Hridaya meditation originates from Sufi traditions, where the heart is seen as a spiritual center. This practice involves deep contemplation and connection with one's heart, fostering a sense of unity and inner serenity.",
-        "benefits": [
+        benefits: [
           {
-            "head": "Emotional Healing",
-            "content": "Helps in processing and healing emotional wounds."
+            head: "Emotional Healing",
+            content: "Helps in processing and healing emotional wounds."
           },
           {
-            "head": "Enhanced Compassion",
-            "content": "Cultivates a deep sense of empathy and understanding towards others."
+            head: "Enhanced Compassion",
+            content: "Cultivates a deep sense of empathy and understanding towards others."
           },
           {
-            "head": "Spiritual Connection",
-            "content": "Strengthens the connection with the inner self and the divine."
+            head: "Spiritual Connection",
+            content: "Strengthens the connection with the inner self and the divine."
           },
           {
-            "head": "Stress Reduction",
-            "content": "Offers relief from stress and anxiety, promoting overall well-being."
+            head: "Stress Reduction",
+            content: "Offers relief from stress and anxiety, promoting overall well-being."
           }
         ],
-        "steps": [
+        steps: [
           {
-            "step": "Find a Quiet Space",
-            "desc": "Choose a peaceful area to meditate."
+            step: "Find a Quiet Space",
+            desc: "Choose a peaceful area to meditate."
           },
           {
-            "step": "Comfortable Seating",
-            "desc": "Sit in a relaxed position with a straight back."
+            step: "Comfortable Seating",
+            desc: "Sit in a relaxed position with a straight back."
           },
           {
-            "step": "Focus on the Heart",
-            "desc": "Direct your attention gently to the heart area."
+            step: "Focus on the Heart",
+            desc: "Direct your attention gently to the heart area."
           },
           {
-            "step": "Deep Breathing",
-            "desc": "Breathe slowly and deeply, syncing with the heart's rhythm."
+            step: "Deep Breathing",
+            desc: "Breathe slowly and deeply, syncing with the heart's rhythm."
           },
           {
-            "step": "Embrace Emotions",
-            "desc": "Allow yourself to feel and accept any emotions that arise."
+            step: "Embrace Emotions",
+            desc: "Allow yourself to feel and accept any emotions that arise."
           },
           {
-            "step": "Chanting or Silent Contemplation",
-            "desc": "Optionally, incorporate a mantra or silent reflection."
+            step: "Chanting or Silent Contemplation",
+            desc: "Optionally, incorporate a mantra or silent reflection."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Daily Practice",
-            "content": "Engage in Hridaya meditation regularly for deeper benefits."
+            head: "Daily Practice",
+            content: "Engage in Hridaya meditation regularly for deeper benefits."
           },
           {
-            "head": "Duration",
-            "content": "Start with shorter sessions, gradually extending the time."
+            head: "Duration",
+            content: "Start with shorter sessions, gradually extending the time."
           },
           {
-            "head": "Patience and Openness",
-            "content": "Approach the practice with an open heart and patience."
+            head: "Patience and Openness",
+            content: "Approach the practice with an open heart and patience."
           },
           {
-            "head": "Journaling Post Meditation",
-            "content": "Consider journaling any insights or feelings post-meditation."
+            head: "Journaling Post Meditation",
+            content: "Consider journaling any insights or feelings post-meditation."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Handling Intense Emotions",
-            "content": "Be prepared for emotional experiences; seek guidance if overwhelming."
+            head: "Handling Intense Emotions",
+            content: "Be prepared for emotional experiences; seek guidance if overwhelming."
           },
           {
-            "head": "Physical Comfort",
-            "content": "Adjust your position if discomfort arises."
+            head: "Physical Comfort",
+            content: "Adjust your position if discomfort arises."
           },
           {
-            "head": "Distractions",
-            "content": "Gently refocus if the mind wanders."
+            head: "Distractions",
+            content: "Gently refocus if the mind wanders."
           },
           {
-            "head": "Medical Advice",
-            "content": "Those with mental health conditions should consult a professional before beginning."
+            head: "Medical Advice",
+            content: "Those with mental health conditions should consult a professional before beginning."
           }
         ],
-        "conclusion": "Sufi Heart Meditation is a profound journey towards emotional balance, spiritual awakening, and inner peace. Its practice can unlock deep layers of compassion and understanding, leading to a harmonious and balanced life."
+        conclusion: "Sufi Heart Meditation is a profound journey towards emotional balance, spiritual awakening, and inner peace. Its practice can unlock deep layers of compassion and understanding, leading to a harmonious and balanced life."
       },
       {
-        "id": 54,
-        "title": "Nondirective Meditation",
-        "intro": "Nondirective Meditation is a modern approach to meditation that emphasizes effortless relaxation and mental freedom. Unlike traditional forms, it allows thoughts to flow freely without focusing on a specific object or mantra.",
+        id: 54,
+        title: "Nondirective Meditation",
+        intro: "Nondirective Meditation is a modern approach to meditation that emphasizes effortless relaxation and mental freedom. Unlike traditional forms, it allows thoughts to flow freely without focusing on a specific object or mantra.",
         "understanding": "This form of meditation encourages a natural, unguided mental process. It stems from the principle that the mind, when left alone, naturally moves toward a state of balance and tranquility.",
-        "benefits": [
+        benefits: [
           {
-            "head": "Stress Reduction",
-            "content": "It significantly lowers stress levels."
+            head: "Stress Reduction",
+            content: "It significantly lowers stress levels."
           },
           {
-            "head": "Enhanced Creativity",
-            "content": "The practice opens up channels for creative thinking."
+            head: "Enhanced Creativity",
+            content: "The practice opens up channels for creative thinking."
           },
           {
-            "head": "Improved Emotional Health",
-            "content": "Regular practice leads to better emotional regulation."
+            head: "Improved Emotional Health",
+            content: "Regular practice leads to better emotional regulation."
           },
           {
-            "head": "Mental Clarity",
-            "content": "It provides clarity of thought by allowing the mind to unwind."
+            head: "Mental Clarity",
+            content: "It provides clarity of thought by allowing the mind to unwind."
           }
         ],
-        "steps": [
+        steps: [
           {
-            "step": "Choose a Quiet Space",
-            "desc": "Find a peaceful spot to meditate."
+            step: "Choose a Quiet Space",
+            desc: "Find a peaceful spot to meditate."
           },
           {
-            "step": "Comfortable Seating",
-            "desc": "Sit in a relaxed but upright position."
+            step: "Comfortable Seating",
+            desc: "Sit in a relaxed but upright position."
           },
           {
-            "step": "Close Your Eyes",
-            "desc": "Gently close your eyes and take a few deep breaths."
+            step: "Close Your Eyes",
+            desc: "Gently close your eyes and take a few deep breaths."
           },
           {
-            "step": "Let Go of Control",
-            "desc": "Allow thoughts to come and go without interference."
+            step: "Let Go of Control",
+            desc: "Allow thoughts to come and go without interference."
           },
           {
-            "step": "Observe",
-            "desc": "Be a passive observer of your thoughts and sensations."
+            step: "Observe",
+            desc: "Be a passive observer of your thoughts and sensations."
           },
           {
-            "step": "Duration",
-            "desc": "Start with 10-15 minutes and gradually extend your sessions."
+            step: "Duration",
+            desc: "Start with 10-15 minutes and gradually extend your sessions."
           }
         ],
-        "tips": [
+        tips: [
           {
-            "head": "Regular Sessions",
-            "content": "Incorporate it into your daily routine."
+            head: "Regular Sessions",
+            content: "Incorporate it into your daily routine."
           },
           {
-            "head": "No Expectations",
-            "content": "Approach each session without specific goals."
+            head: "No Expectations",
+            content: "Approach each session without specific goals."
           },
           {
-            "head": "Patience",
-            "content": "Understand that mastery comes with time."
+            head: "Patience",
+            content: "Understand that mastery comes with time."
           },
           {
-            "head": "Flexibility",
-            "content": "Adapt your practice to suit your personal comfort."
+            head: "Flexibility",
+            content: "Adapt your practice to suit your personal comfort."
           }
         ],
-        "cautions": [
+        cautions: [
           {
-            "head": "Mental Discomfort",
-            "content": "If you experience discomfort, take a break."
+            head: "Mental Discomfort",
+            content: "If you experience discomfort, take a break."
           },
           {
-            "head": "Distractions",
-            "content": "Don't be discouraged by external distractions."
+            head: "Distractions",
+            content: "Don't be discouraged by external distractions."
           },
           {
-            "head": "Individual Variations",
-            "content": "Embrace your unique experience in each session."
+            head: "Individual Variations",
+            content: "Embrace your unique experience in each session."
           },
           {
-            "head": "Professional Guidance",
-            "content": "Seek advice if you have pre-existing mental health conditions."
+            head: "Professional Guidance",
+            content: "Seek advice if you have pre-existing mental health conditions."
           }
         ],
-        "conclusion": "Nondirective Meditation offers a liberating approach to mindfulness and relaxation. Its simplicity and effectiveness make it suitable for anyone seeking mental tranquility and emotional balance. By practicing regularly, you can unlock a deeper sense of peace and clarity in your life."
+        conclusion: "Nondirective Meditation offers a liberating approach to mindfulness and relaxation. Its simplicity and effectiveness make it suitable for anyone seeking mental tranquility and emotional balance. By practicing regularly, you can unlock a deeper sense of peace and clarity in your life."
       }
 
     ]
@@ -4295,8 +4275,8 @@ Cautions
 Anulom Vilom is generally safe, but caution is needed for those with respiratory or cardiovascular concerns. Pregnant individuals should practice under guidance, adjusting for their pregnancy stage. Caution is urged for individuals with hypertension, emphasizing controlled breathing.`
   },
   {
-    "title": "Kapalbhati",
-    "id": 1,
+    title: "Kapalbhati",
+    id: 1,
     "data": `Kapalbhati: Skull-Shining Breath
 ================================
 
@@ -4366,8 +4346,8 @@ Cautions
 Individuals with hypertension, heart conditions, or abdominal pain should practice Kapalbhati under the guidance of a qualified instructor. Pregnant women and those with recent abdominal surgeries should avoid this practice.`
   },
   {
-    "title": "Bhramari",
-    "id": 2,
+    title: "Bhramari",
+    id: 2,
     "data": `**
 
 Bhramari Pranayama (Humming Bee Breath)
@@ -4452,8 +4432,8 @@ Conclusion
 Bhramari Pranayama is an effective and soothing technique for enhancing mental well-being. Its simplicity makes it accessible for practitioners of all levels. Incorporating Humming Bee Breath into your daily routine can be a gateway to a more relaxed and focused state of mind.`
   },
   {
-    "title": "Ujjayi",
-    "id": 3,
+    title: "Ujjayi",
+    id: 3,
     "data": `Ujjayi: Victorious Breath or Ocean Breath
 =========================================
 
@@ -4488,8 +4468,8 @@ Cautions
 Exercise caution in Ujjayi for individuals with respiratory conditions like asthma, consult if discomfort arises. If dizziness occurs, return to normal breathing, and pregnant individuals should practice gently, consulting healthcare professionals.`
   },
   {
-    "title": "Sheetali",
-    "id": 4,
+    title: "Sheetali",
+    id: 4,
     "data": `Sheetali: Cooling Breath
 ========================
 
@@ -4521,8 +4501,8 @@ Cautions
 If you have any respiratory or medical conditions, or if you're pregnant, it's advisable to consult with a healthcare professional or a qualified yoga instructor before attempting pranayama techniques.`
   },
   {
-    "title": "Sheetkari",
-    "id": 5,
+    title: "Sheetkari",
+    id: 5,
     "data": `Sheetkari: Hissing Breath
 =========================
 
@@ -4555,8 +4535,8 @@ Cautions
 Individuals with respiratory conditions, temperature and dental sensitivity, or general health concerns, including cardiovascular issues, should consult professionals before attempting. Pregnant individuals should practice pranayama cautiously.`
   },
   {
-    "title": "Bhastrika",
-    "id": 6,
+    title: "Bhastrika",
+    id: 6,
     "data": `Bhastrika: Bellows Breath
 =========================
 
@@ -4590,8 +4570,8 @@ Cautions
 Exercise caution in Bhastrika for individuals with hypertension and cardiovascular issues, emphasizing a controlled and moderate pace. People with respiratory conditions, recent surgeries, or during pregnancy should approach Bhastrika gently. If discomfort occurs, discontinue and resume normal breathing.`
   },
   {
-    "title": "Dirgha Pranayama",
-    "id": 7,
+    title: "Dirgha Pranayama",
+    id: 7,
     "data": `Dirgha Pranayama: Three-Part Breath
 ===================================
 
@@ -4624,8 +4604,8 @@ Cautions
 To prevent hyperventilation, maintain a natural and controlled breathing pace, avoiding rapid or forced breaths. Individuals with respiratory conditions should approach the practice gently. Pregnant women and those with recent surgeries should modify the practice for comfort, avoiding strain.`
   },
   {
-    "title": "Surya Bhedana",
-    "id": 8,
+    title: "Surya Bhedana",
+    id: 8,
     "data": `Surya Bhedana: Right Nostril Breathing
 ======================================
 
@@ -4660,8 +4640,8 @@ Cautions
 For individuals with high blood pressure, practice cautiously, avoiding forceful breaths and return to normal if dizziness occurs. People with respiratory conditions, pregnant women, and those with heart conditions should approach the practice gently.`
   },
   {
-    "title": "Chandra Bhedana",
-    "id": 9,
+    title: "Chandra Bhedana",
+    id: 9,
     "data": `Chandra Bhedana: Left Nostril Breathing
 =======================================
 
@@ -4694,8 +4674,8 @@ Cautions
 For individuals with low blood pressure, practice cautiously, avoiding prolonged breath retention. People with respiratory conditions, pregnant women, and those with heart conditions should approach the practice gently and seek guidance.`
   },
   {
-    "title": "Murcha Pranayama",
-    "id": 10,
+    title: "Murcha Pranayama",
+    id: 10,
     "data": `Murcha Pranayama: Swooning Breath
 =================================
 
@@ -4729,8 +4709,8 @@ Cautions
 As an advanced technique, Murcha Pranayama should be attempted only by experienced individuals under the guidance of a qualified yoga instructor.`
   },
   {
-    "title": "Plavini Pranayama",
-    "id": 11,
+    title: "Plavini Pranayama",
+    id: 11,
     "data": `Plavini Pranayama: Floating Breath
 ==================================
 
@@ -4764,8 +4744,8 @@ Cautions
 Expert guidance is essential for Plavini, an advanced technique, to mitigate potential risks. Individuals with digestive disorders, recent abdominal surgery, hypertension, or during pregnancy should exercise caution and consult healthcare professionals.`
   },
   {
-    "title": "Kevali Kumbhaka",
-    "id": 12,
+    title: "Kevali Kumbhaka",
+    id: 12,
     "data": `Kevali Kumbhaka: Absolute or Complete Breath Retention
 ======================================================
 
@@ -4797,8 +4777,8 @@ Cautions
 Those with respiratory or cardiovascular issues, beginners, and pregnant individuals should exercise caution, prioritize mental stability, and respect individual limits to prevent potential risks.`
   },
   {
-    "title": "Viloma Pranayama",
-    "id": 13,
+    title: "Viloma Pranayama",
+    id: 13,
     "data": `Viloma Pranayama: Interrupted Breath
 ====================================
 
@@ -4830,8 +4810,8 @@ Cautions
 Individuals with respiratory and mental issues should approach Viloma cautiously, beginners should start with simpler techniques, and pregnant individuals should consult healthcare professionals.`
   },
   {
-    "title": "Kaki Mudra",
-    "id": 14,
+    title: "Kaki Mudra",
+    id: 14,
     "data": `Kaki Mudra Pranayama: Crow's Beak Breath
 ========================================
 
@@ -4864,8 +4844,8 @@ Cautions
 If you have hand, wrist, or finger injuries, modify hand position and individuals with respiratory conditions or hypertension should approach gently. Pregnant practitioners should modify and consult professionals.`
   },
   {
-    "title": "Sahita Kumbhaka",
-    "id": 15,
+    title: "Sahita Kumbhaka",
+    id: 15,
     "data": `Sahita Kumbhaka: Retention with Inhalation
 ==========================================
 
@@ -4899,8 +4879,8 @@ Cautions
 Exercise caution with respiratory and cardiovascular issues, consulting healthcare professionals. Avoid overexertion, prioritize mental stability, and pregnant individuals should consult professionals due to potential effects on oxygen levels.`
   },
   {
-    "title": "Surabhi Pranayama",
-    "id": 16,
+    title: "Surabhi Pranayama",
+    id: 16,
     "data": `Surabhi Pranayama: Cow's Breath
 ===============================
 
@@ -4934,8 +4914,8 @@ Cautions
 Exercise caution if you have hand or wrist issues during Surabhi Pranayama, modifying hand movements as needed. Those with respiratory conditions, like asthma, should approach the practice gradually to avoid overexertion.`
   },
   {
-    "title": "Udgeeth Pranayama",
-    "id": 17,
+    title: "Udgeeth Pranayama",
+    id: 17,
     "data": `Udgeeth Pranayama: Chanting Breath
 ==================================
 
@@ -4966,8 +4946,8 @@ Cautions
 When practicing Udgeeth Pranayama, be cautious of potential voice strain, especially when chanting 'Om' loudly and avoid excessive chanting to prevent fatigue, and stay hydrated.`
   },
   {
-    "title": "Anuloma Kumbhaka",
-    "id": 18,
+    title: "Anuloma Kumbhaka",
+    id: 18,
     "data": `Anuloma Kumbhaka: Breath Retention with Alternating Nostrils
 ============================================================
 
@@ -4998,8 +4978,8 @@ Cautions
 Practice Anuloma Kumbhaka with caution if you have respiratory conditions like asthma, and consult a healthcare professional. Individuals with hypertension should approach breath retention cautiously.`
   },
   {
-    "title": "Bhramari Kumbhaka",
-    "id": 19,
+    title: "Bhramari Kumbhaka",
+    id: 19,
     "data": `Bhramari Kumbhaka: Breath Retention with Bee Breath
 ===================================================
 
@@ -5030,8 +5010,8 @@ Cautions
 Caution is advised for individuals with respiratory conditions like asthma or COPD when practicing Bhramari Kumbhaka, and those with ear problems should practice gently. Individuals with specific mental health conditions or during pregnancy should seek guidance.`
   },
   {
-    "title": "Bhramari Anuloma Vilom",
-    "id": 20,
+    title: "Bhramari Anuloma Vilom",
+    id: 20,
     "data": `Bhramari Anuloma Vilom: Combined Bee Breath and Alternate Nostril Breathing
 ===========================================================================
 
@@ -5061,8 +5041,8 @@ Cautions
 For Bhramari Anuloma Vilom, individuals with respiratory conditions like asthma should seek healthcare advice and Gentle practice is advised for those with ear issues, and individuals with specific mental health concerns or during pregnancy should consult professionals before engaging in the practice.`
   },
   {
-    "title": "Chandranadi Pranayama",
-    "id": 21,
+    title: "Chandranadi Pranayama",
+    id: 21,
     "data": `Chandranadi Pranayama: Moon Energy Breath
 =========================================
 
@@ -5095,8 +5075,8 @@ Cautions
 Dizziness should prompt a return to normal breathing, and prolonged practice in cold environments may increase hypothermia risk. Pregnant individuals should approach the practice cautiously, seeking guidance from healthcare professionals.`
   },
   {
-    "title": "Suryanadi Pranayama",
-    "id": 22,
+    title: "Suryanadi Pranayama",
+    id: 22,
     "data": `Suryanadi Pranayama: Sun Energy Breath
 ======================================
 
@@ -5130,8 +5110,8 @@ Cautions
 Individuals with hypertension and respiratory problems should practice with moderation, avoiding forceful breaths.`
   },
   {
-    "title": "Surya Trataka",
-    "id": 23,
+    title: "Surya Trataka",
+    id: 23,
     "data": `Surya Trataka: Sun Gazing
 =========================
 
@@ -5165,8 +5145,8 @@ Cautions
 If you have any respiratory or medical conditions, or if you're pregnant, it's advisable to consult with a healthcare professional or a qualified yoga instructor before attempting pranayama techniques.`
   },
   {
-    "title": "Chandra Trataka",
-    "id": 24,
+    title: "Chandra Trataka",
+    id: 24,
     "data": `Chandra Trataka: Moon Gazing
 ============================
 
@@ -5201,16 +5181,16 @@ Cautions
 To ensure a safe Chandra Trataka practice, avoid eye strain, especially if discomfort arises; consult Adjust for bright moonlight, start with shorter durations, choose serene environments, and prioritize safety outdoors.`
   },
   {
-    "title": "Savita Pranayama",
-    "id": 25,
+    title: "Savita Pranayama",
+    id: 25,
     "data": `Savita Pranayama: Solar Breath
 ==============================
 
 Savita Pranayama is a yogic breathing technique centered around the solar energy, often associated with the sun (Savita). This practice involves regulated inhalation and exhalation, emphasizing breath control and mindfulness. By harnessing the vital life force within the breath, Savita Pranayama aims to invigorate the body and mind. Practitioners believe it enhances energy levels, mental clarity, and overall well-being. As with any pranayama practice, learning Savita Pranayama under the guidance of an experienced instructor is recommended for optimal benefits and safety.`
   },
   {
-    "title": "Chandra Bhavana",
-    "id": 26,
+    title: "Chandra Bhavana",
+    id: 26,
     "data": `Chandra Bhavana: Moon Visualization
 ===================================
 
@@ -5246,8 +5226,8 @@ Tips for a Fruitful Practice:
 *   It's advisable to learn meditation practices from experienced instructors or spiritual guides.`
   },
   {
-    "title": "Shankh Prakshalana",
-    "id": 27,
+    title: "Shankh Prakshalana",
+    id: 27,
     "data": `Shankh Prakshalana: Conch Cleansing Breath
 ==========================================
 
@@ -5278,8 +5258,8 @@ Caution:
 Shankh Prakshalana should be learned under the guidance of a qualified yoga instructor. It may not be suitable for everyone, and individuals with specific health conditions or concerns should consult a healthcare professional before attempting this practice.`
   },
   {
-    "title": "Jalandhara Bandha",
-    "id": 28,
+    title: "Jalandhara Bandha",
+    id: 28,
     "data": `Jalandhara Bandha: Throat Lock
 ==============================
 
@@ -5310,8 +5290,8 @@ Cautions
 Exercise caution if you have neck issues, injuries, or high blood pressure. Avoid this practice if it causes breathing difficulties, especially for individuals with respiratory conditions.`
   },
   {
-    "title": "Moola Bandha",
-    "id": 29,
+    title: "Moola Bandha",
+    id: 29,
     "data": `Moola Bandha: Root Lock
 =======================
 
@@ -5342,8 +5322,8 @@ Cautions
 Those who are pregnant should consult with healthcare professionals before engaging in Moola Bandha. It's also advisable for individuals with menstrual concerns or pelvic issues to seek professional advice prior to practice.`
   },
   {
-    "title": "Uddiyana Bandha",
-    "id": 30,
+    title: "Uddiyana Bandha",
+    id: 30,
     "data": `Uddiyana Bandha: Abdominal Lock
 ===============================
 
@@ -5377,8 +5357,8 @@ Cautions:
 *   Pregnant individuals, particularly in later stages, and those with hypertension should be cautious.`
   },
   {
-    "title": "Shanmukhi Mudra Pranayama",
-    "id": 31,
+    title: "Shanmukhi Mudra Pranayama",
+    id: 31,
     "data": `Shanmukhi Mudra Pranayama: Six-Gate Breath
 ==========================================
 
@@ -5410,8 +5390,8 @@ Cautions
 Individuals with ear, nose, or eye conditions should be cautious and may need to modify the practice. Avoid forceful or uncomfortable movements while closing the gates. Pregnant individuals or those with specific health concerns should consult healthcare professionals.`
   },
   {
-    "title": "Bhoochari Mudra",
-    "id": 32,
+    title: "Bhoochari Mudra",
+    id: 32,
     "data": `Bhoochari Mudra: Gazing at Earth
 ================================
 
@@ -5449,8 +5429,8 @@ Cautions:
 *   Elderly practitioners should practice with care.`
   },
   {
-    "title": "Nabho Mudra Pranayama",
-    "id": 33,
+    title: "Nabho Mudra Pranayama",
+    id: 33,
     "data": `Nabho Mudra Pranayama: Sky Gazing
 =================================
 
@@ -5485,8 +5465,8 @@ Cautions:
 *   Practitioners should be mindful of surroundings and individual responses.`
   },
   {
-    "title": "Agni Prasana Pranayama",
-    "id": 34,
+    title: "Agni Prasana Pranayama",
+    id: 34,
     "data": `Agni Prasana Pranayama: Fire Breath
 ===================================
 
@@ -5523,8 +5503,8 @@ Cautions:
 *   Adjust according to comfort.`
   },
   {
-    "title": "Vayu Prasana Pranayama",
-    "id": 35,
+    title: "Vayu Prasana Pranayama",
+    id: 35,
     "data": `Vayu Prasana Pranayama: Wind Breath
 ===================================
 
@@ -5560,8 +5540,8 @@ Cautions:
 Exercise caution with Vayu Prasana Pranayama if you have respiratory conditions, recent abdominal surgery, or are pregnant. Discontinue if you feel dizzy or experience discomfort, adjusting the practice to personal comfort levels. Be mindful of surroundings to prevent accidents.`
   },
   {
-    "title": "Apa Prasana Pranayama",
-    "id": 36,
+    title: "Apa Prasana Pranayama",
+    id: 36,
     "data": `Apa Prasana Pranayama: Water Breath
 ===================================
 
@@ -5596,8 +5576,8 @@ Cautions:
 *   Adjust the intensity according to personal comfort, be mindful of surroundings, and discontinue in case of discomfort or pain.`
   },
   {
-    "title": "Prithvi Prasana Pranayama",
-    "id": 37,
+    title: "Prithvi Prasana Pranayama",
+    id: 37,
     "data": `Prithvi Prasana Pranayama: Earth Breath
 =======================================
 
@@ -5630,8 +5610,8 @@ Cautions
 *   Modify hand placement or discontinue if discomfort arises, staying mindful and aware of surroundings.`
   },
   {
-    "title": "Akasha Prasana Pranayama",
-    "id": 38,
+    title: "Akasha Prasana Pranayama",
+    id: 38,
     "data": `Akasha Prasana Pranayama: Space Breath
 ======================================
 
@@ -5666,8 +5646,8 @@ Cautions:
 *   Be mindful of surroundings to prevent injury, especially during deep visualization.`
   },
   {
-    "title": "Chidakasha Dharana Pranayama",
-    "id": 39,
+    title: "Chidakasha Dharana Pranayama",
+    id: 39,
     "data": `Chidakasha Dharana Pranayama: Awareness of the Infinite Space
 =============================================================
 

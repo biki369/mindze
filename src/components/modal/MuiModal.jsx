@@ -1,6 +1,7 @@
 // MuiModal
 
-import { Modal, Typography, Button, makeStyles, Box } from '@material-ui/core';
+import { Modal, Typography, Button, makeStyles, Box, IconButton } from '@material-ui/core';
+import CloseIcon from '@material-ui/icons/Close';
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -21,6 +22,11 @@ const useStyles = makeStyles((theme) => ({
       margin:'1rem 0'
     }
   },
+  closeBtn: {
+    // color: "#fff",
+    // background:theme.palette.error.main,
+    "&:hover": {color:theme.palette.error.main},
+  },
 }));
 
 const MuiModal = ({ open, onClose, children,title }) => {
@@ -39,13 +45,17 @@ const MuiModal = ({ open, onClose, children,title }) => {
       aria-describedby="modal-description"
     >
       <div className={classes.paper}>
+      <IconButton onClick={onClose} className={classes.closeBtn}>
+            <CloseIcon />
+        </IconButton>
         <Typography variant="h6" id="modal-title" gutterBottom >
           {title}
         </Typography>
         <Box variant="body1" id="modal-description" gutterBottom mx={3}> 
           {children}
         </Box>
-        <Button  variant="contained" color="secondary"  onClick={onClose}>Close</Button>
+    
+        {/* <Button  variant="contained" color="secondary"  onClick={onClose}>Close</Button> */}
       </div>
     </Modal>
   );

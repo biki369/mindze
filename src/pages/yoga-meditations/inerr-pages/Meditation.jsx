@@ -50,7 +50,7 @@ const Meditation = () => {
     const classes = useStyles();
 
     const [sendId, setSendId] = useState(null);
-
+    const [expanded, setExpanded] = React.useState('');
     const theme = useTheme();
     const mobileDevice = useMediaQuery(theme.breakpoints.down('md'));
 
@@ -61,13 +61,15 @@ const Meditation = () => {
     const toggleDrawer = () => {
         setDrawerOpen(!drawerOpen);
     };
-    // const [expanded, setExpanded] = React.useState(false);
+    const handleChange = (panel) => (event, newExpanded) => {
+        setExpanded(newExpanded ? panel : false);
+      };
     const SideMenuBar = () => {
         return (
             <div className='side-menu'>
                 {
                     MeditationsData.map((item, index) => (
-                        <Accordion key={index}>
+                        <Accordion key={index} expanded={expanded === index} onChange={handleChange(index)}>
                             <AccordionSummary
                                 expandIcon={<ExpandMoreIcon />}
                                 ria-controls="panel1bh-content"
@@ -76,11 +78,10 @@ const Meditation = () => {
                                 <Typography>{item.category}</Typography>
                             </AccordionSummary>
                             <AccordionDetails>
-
                                 <div className="side-menu__links">
                                     {
-                                        item.data.map((data) => (
-                                            <div key={data.id} className='side-link'>
+                                        item.data.map((data,indx) => (
+                                            <div key={indx} className='side-link'>
                                                 <Button
                                                     onClick={() => { handleClick(data), toggleDrawer() }}
                                                     style={{
