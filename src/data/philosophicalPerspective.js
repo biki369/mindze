@@ -21,7 +21,7 @@ export const modernPhilosophers = [
     id: 4,
     title: "Alan Watts",
     markdown: "/philosophicalPerspective/MST/PhilosophicalMST4",
-    image: "/philosophers_image/mst_4.jpg",
+    image: "/philosophers_image/mst_4.webp",
   },
   {
     id: 3,

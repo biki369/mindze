@@ -17,6 +17,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
+    [theme.breakpoints.down(500)]: {
+      padding:0,
+    },
     "& #modal-title":{
       textAlign:"center",
       margin:'1rem 0'

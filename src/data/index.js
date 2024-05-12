@@ -260,31 +260,31 @@ export const quotationsData = [
       },
       {
         // id: 5,
-        url: "encouragement/10.png",
+        url: "Quotation/encouragement/10.png",
       },
       {
         // id: 5,
-        url: "encouragement/15.png",
+        url: "Quotation/encouragement/15.png",
       },
       {
         // id: 5,
-        url: "encouragement/16.png",
+        url: "Quotation/encouragement/16.png",
       },
       {
         // id: 5,
-        url: "encouragement/17.png",
+        url: "Quotation/encouragement/17.png",
       },
       {
         // id: 5,
-        url: "encouragement/18.png",
+        url: "Quotation/encouragement/18.png",
       },
       {
         // id: 5,
-        url: "encouragement/19.png",
+        url: "Quotation/encouragement/19.png",
       },
       {
         // id: 5,
-        url: "encouragement/20.png",
+        url: "Quotation/encouragement/20.png",
       },
     ],
   },

@@ -106,14 +106,17 @@ const BlogsMain = () => {
             <div className='side-menu'>
                 {
                     blogPostData.map((data) => (
-                        <div key={data.id} className='side-link'>
+                        <div key={data.id} className='side-link'
+                        style={{
+                            background: sendId === data.id ? '#3f51b5' : '',
+                        }}
+                        >
                             <Button
                                 onClick={() => getId(data.id,toggleDrawer())}
                                 style={{
-                                    color: sendId === data.id ? '#fff' : '#545e6f',
-                                    background: sendId === data.id ? '#3f51b5' : '',
-                                    // textAlign: 'left',
+                                    color: sendId === data.id ? '#fff' : '#545e6f',                      
                                 }}
+                              
                             >{data.category}</Button>
                         </div>
 
