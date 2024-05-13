@@ -72,8 +72,7 @@ const QuickExercises = () => {
         if (storedValue) {
             setValue(parseInt(storedValue));
         }
-        localStorage.removeItem("activeTab");
-       
+        localStorage.removeItem('activeTab')
     }, []);
 
     const handleChange = (event, newValue) => {

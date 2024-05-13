@@ -86,11 +86,12 @@ const BlogsMain = () => {
     };
 
     useEffect(() => {
-        const storedValue = localStorage.getItem('activeTab');
+        const storedValue = localStorage.getItem('activeTab') ;
         if (storedValue) {
             setSendId(parseInt(storedValue));
         }
-        localStorage.removeItem("activeTab");
+        localStorage.removeItem('activeTab')
+
     }, []);
 
     const getId = (id) => {

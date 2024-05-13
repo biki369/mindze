@@ -164,38 +164,7 @@ export const shortsExe = [
   },
 ];
 
-export const bookSummeryData = [
-  {
-    url: "Book_Summary_Pics/cd_1.jpg",
-    title: "title",
-    author: "author",
-  },
-  {
-    url: "Book_Summary_Pics/cd_2.jpg",
-    title: "title",
-    author: "author",
-  },
-  {
-    url: "Book_Summary_Pics/cd_3.jpg",
-    title: "title",
-    author: "author",
-  },
-  {
-    url: "Book_Summary_Pics/cd_4.jpg",
-    title: "title",
-    author: "author",
-  },
-  {
-    url: "Book_Summary_Pics/p_3.jpg",
-    title: "title",
-    author: "author",
-  },
-  {
-    url: "Book_Summary_Pics/s_1.jpg",
-    title: "title",
-    author: "author",
-  },
-];
+
 
 export const quotationsData = [
   {
@@ -736,13 +705,83 @@ export const blogPostData = [
       {
         title: "How can parents support their child's mental health?",
         img: "Blog_pics/p1.png",
-        markdown: "/blogs_post_data/parenting/1",
+        markdown: "/blogs_post_data/parenting/1"
       },
-
+      
       {
         title: "How does parental mental health impact children?",
         img: "Blog_pics/p2.png",
-        markdown: "/blogs_post_data/parenting/2",
+        markdown:"/blogs_post_data/parenting/2"
+      },
+      {
+        title: "What signs indicate that a child may be struggling with their mental health?",
+        img: "Blog_pics/p3.jpg",
+        markdown:"/blogs_post_data/parenting/3"
+      },
+      {
+        title: "What role does play and creativity play in supporting children's mental health?",
+        img: "Blog_pics/p4.png",
+        markdown:"/blogs_post_data/parenting/4"
+      },
+      {
+        title: "What are the long-term effects of early childhood experiences on mental health, and how can parents provide a nurturing environment?",
+        img: "Blog_pics/p5.png",
+        markdown:"/blogs_post_data/parenting/5"
+      },
+      {
+        title: "What role does nutrition play in children's mental health?",
+        img: "Blog_pics/p6.png",
+        markdown:"/blogs_post_data/parenting/6"
+      },
+      {
+        title: "What are the potential impacts of social media on children's mental health, and how can parents mitigate risks?",
+        img: "Blog_pics/p7.jpg",
+        markdown:"/blogs_post_data/parenting/7"
+      },
+      {
+        title: "How can parents address the challenges of raising a child with a mental health diagnosis?",
+        img: "Blog_pics/p8.png",
+        markdown:"/blogs_post_data/parenting/8"
+      },
+      {
+        title: "How should parents approach discussions about substance use and its impact on mental health?",
+        img: "Blog_pics/p9.png",
+        markdown:"/blogs_post_data/parenting/9"
+      },
+      {
+        title: "What resources are available for parents seeking mental health support?",
+        img: "Blog_pics/p10.jpg",
+        markdown:"/blogs_post_data/parenting/10"
+      },
+      {
+        title: "How does parental involvement in extracurricular activities impact children's mental health?",
+        img: "Blog_pics/p11.png",
+        markdown:"/blogs_post_data/parenting/11"
+      },
+      {
+        title: "What resources are available for parents of children with autism or other developmental disorders?",
+        img: "Blog_pics/p12.jpg",
+        markdown:"/blogs_post_data/parenting/12"
+      },
+      {
+        title: "How can parents support a child who is transitioning to a new school or facing major life changes?",
+        img: "Blog_pics/p13.png",
+        markdown:"/blogs_post_data/parenting/13"
+      },
+      {
+        title: "How can parents help children navigate and cope with societal pressures and expectations?",
+        img: "Blog_pics/p14.png",
+        markdown:"/blogs_post_data/parenting/14"
+      },
+      {
+        title: "What are the challenges of balancing work  parenting and mental health?",
+        img: "Blog_pics/p15.png",
+        markdown:"/blogs_post_data/parenting/15"
+      },
+      {
+        title: "How do cultural factors influence mental health practices in parenting?",
+        img: "Blog_pics/p16.jpg",
+        markdown:"/blogs_post_data/parenting/16"
       },
     ],
   },
@@ -753,83 +792,447 @@ export const blogPostData = [
       {
         title: "How does mental health change with age?",
         img: "Blog_pics/e1.jpg",
-        markdown: "/blogs_post_data/elderlyMentalHealth/1",
+        markdown:"/blogs_post_data/elderlyMentalHealth/1"
       },
-    ],
-  },
-  {
-    category: "Sports",
-    id: 2,
-    blogs: [
       {
-        title: "HOW DOES PARTICIPATING IN SPORTS IMPACT MENTAL HEALTH?",
-        img: "Blog_pics/sports/image1.jpg",
-        markdown: "/blogs_post_data/sports/1",
+        title: "Exploring the benefits of creative activities for the mental health of seniors.",
+        img: "Blog_pics/e2.jpg",
+        markdown:"/blogs_post_data/elderlyMentalHealth/2"
+      },
+      {
+        title: "Tips for caregivers in promoting the mental well-being of older adults.",
+        img: "Blog_pics/e10.jpg",
+        markdown:"/blogs_post_data/elderlyMentalHealth/3"
+      },
+      {
+        title: "Exploring the benefits of pet therapy for the mental well-being of seniors.",
+        img: "Blog_pics/e4.png",
+        markdown:"/blogs_post_data/elderlyMentalHealth/4"
+      },
+      {
+        title: "How can society promote a positive attitude toward aging for improved mental well-being?",
+        img: "Blog_pics/e5.png",
+        markdown:"/blogs_post_data/elderlyMentalHealth/5"
       },
 
+      {
+        title: "The role of nutrition in promoting mental well-being in aging populations.",
+        img: "Blog_pics/e6.jpg",
+        markdown:"/blogs_post_data/elderlyMentalHealth/6"
+      },
+      {
+        title: "Discussing the impact of cultural diversity on mental health approaches for seniors.",
+        img: "Blog_pics/e7.jpg",
+        markdown:"/blogs_post_data/elderlyMentalHealth/7"
+      },
+      {
+        title: "The role of reminiscence therapy in supporting mental health.",
+        img: "Blog_pics/e8.png",
+        markdown:"/blogs_post_data/elderlyMentalHealth/8"
+      },
+      {
+        title: "How can family members support the mental well-being of aging parents?",
+        img: "Blog_pics/e9.jpg",
+        markdown:"/blogs_post_data/elderlyMentalHealth/9"
+
+      },
+      {
+        title: "Name specific mental health challenges that are more prevalent in older adults?",
+        img: "Blog_pics/e9.jpg",
+        markdown:"/blogs_post_data/elderlyMentalHealth/10"
+      },
+      {
+        title: "How can spirituality and religion contribute to mental health in older individuals?",
+        img: "Blog_pics/last.jpg",
+        markdown:"/blogs_post_data/elderlyMentalHealth/11",
+      },
+      {
+        title: "Short exercises that boosts elderly people mind",
+        img: "Blog_pics/e11.png",
+        markdown:"/blogs_post_data/elderlyMentalHealth/12"
+      },
+     
     ],
   },
+
   {
     category: "Technology",
-    id: 3,
+    id: 2,
     blogs: [
       {
         title: "How is technology affecting our mental health in the digital age?",
         img: "Blog_pics/tech/image1.jpg",
-        markdown: "/blogs_post_data/technology/1",
+        markdown: "/blogs_post_data/technology/1"
       },
-
-    ],
-  },
-  {
-    category: "Society",
-    id: 4,
-    blogs: [
+      
       {
-        title: "How does societal stigma impact the willingness of individuals to seek mental health support?",
-        img: "Blog_pics/e1.jpg",
-        markdown: "/blogs_post_data/society/1",
+        title: "Can social media usage exacerbate mental health issues?",
+        img: "Blog_pics/tech/image2.jpg",
+        markdown:"/blogs_post_data/technology/2"
       },
-
-    ],
-  },
-  {
-    category: "Teenagers Mental Health",
-    id: 5,
-    blogs: [
       {
-        title: "How do societal expectations and stereotypes affect the mental health of teenagers?",
-        img: "Blog_pics/t1.png",
-        markdown: "/blogs_post_data/teenagersMentalHealth/1",
+        title: "How can we use technology to improve mental health care access?",
+        img: "Blog_pics/tech/image3.jpg",
+        markdown:"/blogs_post_data/technology/3"
       },
-
+      {
+        title: "What are the benefits and drawbacks of digital detoxes for mental well-being?",
+        img: "Blog_pics/tech/image4.jpg",
+        markdown:"/blogs_post_data/technology/4"
+      },
+      {
+        title: "How can parents and educators address the mental health implications of technology use among children?",
+        img: "Blog_pics/tech/image5.jpg",
+        markdown:"/blogs_post_data/technology/5"
+      },
+      {
+        title: "In What Ways Can AI-Powered Chatbots Be Used to Provide Initial Mental Health Support?",
+        img: "Blog_pics/tech/image6.jpg",
+        markdown:"/blogs_post_data/technology/6"
+      },
+      {
+        title: "How Can AI Be Used to Personalize Mental Health Treatment Plans?",
+        img: "Blog_pics/tech/image7.jpg",
+        markdown:"/blogs_post_data/technology/7"
+      },
+      {
+        title: "What are the Mental Health Impacts of Prolonged Work-From-Home?",
+        img: "Blog_pics/tech/image8.jpg",
+        markdown:"/blogs_post_data/technology/8"
+      },
+      {
+        title: "Can virtual reality (VR) be used for therapeutic purposes in mental health treatment?",
+        img: "Blog_pics/tech/image9.jpg",
+        markdown:"/blogs_post_data/technology/9"
+      },
+      {
+        title: "How can phobias be cured from virtual reality?",
+        img: "Blog_pics/tech/image10.jpg",
+        markdown:"/blogs_post_data/technology/10"
+      },
+      {
+        title: "Are online therapy and counseling as effective as face-to-face sessions?",
+        img: "Blog_pics/tech/image11.jpg",
+        markdown:"/blogs_post_data/technology/11"
+      },
+      {
+        title: "What Are the Challenges and Opportunities in Integrating Wearable Tech with Professional Mental Health Services?",
+        img: "Blog_pics/tech/image12.jpg",
+        markdown:"/blogs_post_data/technology/12"
+      },
      
     ],
   },
+
   {
-    category: "Spiritualityh",
-    id: 6,
+    category: "Sports",
+    id: 3,
+    blogs: [
+      {
+        title: "How does participating in sports impact mental health?",
+        img: "Blog_pics/sports/image1.jpg",
+        markdown: "/blogs_post_data/sports/1"
+      },
+      
+      {
+        title: "Explore the role of goal-setting in improving mental health outcomes for athletes.",
+        img: "Blog_pics/sports/image2.jpg",
+        markdown:"/blogs_post_data/sports/2"
+      },
+      {
+        title: "Discuss the unique mental health challenges faced by professional athletes.",
+        img: "Blog_pics/sports/image15.jpg",
+        markdown:"/blogs_post_data/sports/3"
+      },
+      {
+        title: "Explore the concept of 'burnout' in sports and its impact on mental well-being.",
+        img: "Blog_pics/sports/image3.png",
+        markdown:"/blogs_post_data/sports/4"
+      },
+      {
+        title: "Discuss the role of nutrition in supporting mental health for athletes.",
+        img: "Blog_pics/sports/image4.jpg",
+        markdown:"/blogs_post_data/sports/5"
+      },
+      {
+        title: "How does the transition from competitive sports to retirement affect mental health?",
+        img: "Blog_pics/sports/image5.jpg",
+        markdown:"/blogs_post_data/sports/6"
+      },
+      {
+        title: "Explore the impact of social media on the mental health of young athletes.",
+        img: "Blog_pics/sports/image6.jpg",
+        markdown:"/blogs_post_data/sports/7"
+      },
+      {
+        title: "Discuss the stigma surrounding mental health in the sports industry.",
+        img: "Blog_pics/sports/image7.png",
+        markdown:"/blogs_post_data/sports/8"
+      },
+      {
+        title: "Explore the connection between team sports and social well-being.",
+        img: "Blog_pics/sports/image8.jpg",
+        markdown:"/blogs_post_data/sports/9"
+      },
+      {
+        title: "Explore the impact of sports on self-esteem and body image.",
+        img: "Blog_pics/sports/image9.jpg",
+        markdown:"/blogs_post_data/sports/10"
+      },
+      {
+        title: "Discuss the long-term impact of childhood participation in sports on adult mental health.",
+        img: "Blog_pics/sports/image10.jpg",
+        markdown:"/blogs_post_data/sports/11"
+      },
+      {
+        title: "Discuss the importance of a balanced approach to training for both physical and mental health.",
+        img: "Blog_pics/sports/image11.jpg",
+        markdown:"/blogs_post_data/sports/12"
+      },
+      {
+        title: "How sports act as a preventive measure against the development of mental health disorders?",
+        img: "Blog_pics/sports/image16.jpg",
+        markdown:"/blogs_post_data/sports/13"
+      },
+      {
+        title: "Are there specific sports or activities that are more beneficial for mental well-being?",
+        img: "Blog_pics/sports/image12.jpg",
+        markdown:"/blogs_post_data/sports/14"
+      },
+  
+      {
+        title: "How can coaches promote positive mental health among their athletes?",
+        img: "Blog_pics/sports/image13.png",
+        markdown:"/blogs_post_data/sports/15"
+      },
+      {
+        title: "How does the structure and organization of sports leagues impact mental health outcomes?",
+        img: "Blog_pics/sports/image14.jpg",
+        markdown:"/blogs_post_data/sports/16"
+      },
+     
+    ],
+  },
+
+  {
+    category: "Spirituality",
+    id: 4,
     blogs: [
       {
         title: "How does the concept of 'being present' relate to mental health and spiritual awareness?",
         img: "Blog_pics/sprituality/image1.jpg",
-        markdown: "/blogs_post_data/spirituality/1",
+        markdown: "/blogs_post_data/spirituality/1"
       },
-
-   
+      
+      {
+        title: "What role does self-compassion play in both spiritual growth and mental well-being?",
+        img: "Blog_pics/sprituality/image2.jpg",
+        markdown:"/blogs_post_data/spirituality/2"
+      },
+      {
+        title: "How does forgiveness, a spiritual concept, relate to mental well-being?",
+        img: "Blog_pics/sprituality/image3.jpg",
+        markdown:"/blogs_post_data/spirituality/3"
+      },
+      {
+        title: "Is there a link between gratitude and mental health from a spiritual perspective?",
+        img: "Blog_pics/sprituality/image4.jpg",
+        markdown:"/blogs_post_data/spirituality/4"
+      },
+      {
+        title: "How does the concept of surrender relate to mental health recovery and resilience?",
+        img: "Blog_pics/sprituality/image5.jpg",
+        markdown:"/blogs_post_data/spirituality/5"
+      },
+      {
+        title: "How engaging in acts of kindness align with spiritual principles and improve mental health?",
+        img: "Blog_pics/sprituality/image6.png",
+        markdown:"/blogs_post_data/spirituality/6"
+      },
+      {
+        title: "How spiritual practices provide a framework for overcoming negative thought patterns?",
+        img: "Blog_pics/sprituality/image7.png",
+        markdown:"/blogs_post_data/spirituality/7"
+      },
+      {
+        title: "Can the exploration of one's purpose in life contribute to better mental health?",
+        img: "Blog_pics/sprituality/image8.jpg",
+        markdown:"/blogs_post_data/spirituality/8"
+      },
+      {
+        title: "How do different spiritual traditions approach the concept of self-love and acceptance?",
+        img: "Blog_pics/sprituality/image9.png",
+        markdown:"/blogs_post_data/spirituality/9"
+      },
+      {
+        title: "How can individuals integrate spiritual practices into their mental health self-care routines?",
+        img: "Blog_pics/sprituality/image10.png",
+        markdown:"/blogs_post_data/spirituality/10"
+      },
+      {
+        title: "Can connecting with nature be considered a spiritual practice, and how does it affect mental health?",
+        img: "Blog_pics/sprituality/image11.png",
+        markdown:"/blogs_post_data/spirituality/11"
+      },
+      {
+        title: "How the concept of karma have implications for mental health and well-being?",
+        img: "Blog_pics/sprituality/image12.jpg",
+        markdown:"/blogs_post_data/spirituality/12"
+      },
+     
     ],
   },
+
   {
     category: "Lifestyle",
-    id: 7,
+    id: 5,
     blogs: [
       {
         title: "How does financial stress affect mental health?",
         img: "Blog_pics/lifestyle/image1.jpg",
-        markdown: "/blogs_post_data/lifestyle/1",
+        markdown: "/blogs_post_data/lifestyle/1"
       },
-
+      
+      {
+        title: "How does mental health differ from mental illness?",
+        img: "Blog_pics/lifestyle/image2.jpg",
+        markdown:"/blogs_post_data/lifestyle/2"
+      },
+      {
+        title: "What are some signs that indicate good mental health?",
+        img: "Blog_pics/lifestyle/image3.jpg",
+        markdown:"/blogs_post_data/lifestyle/3"
+      },
+      {
+        title: "How do you define self-awareness in the context of mental health?",
+        img: "Blog_pics/lifestyle/image4.jpg",
+        markdown:"/blogs_post_data/lifestyle/4"
+      },
+      {
+        title: "What is a growth mindset, and how does it impact mental health?",
+        img: "Blog_pics/lifestyle/image5.png",
+        markdown:"/blogs_post_data/lifestyle/5"
+      },
+      {
+        title: "How does laughter contribute to mental well-being?",
+        img: "Blog_pics/lifestyle/image6.png",
+        markdown:"/blogs_post_data/lifestyle/6"
+      },
+      {
+        title: "What strategies are effective for dealing with uncertainty?",
+        img: "Blog_pics/lifestyle/image7.jpg",
+        markdown:"/blogs_post_data/lifestyle/7"
+      },
+      {
+        title: "What strategies can individuals use to set realistic expectations for themselves and others?",
+        img: "Blog_pics/lifestyle/image8.jpg",
+        markdown:"/blogs_post_data/lifestyle/8"
+      },
+      {
+        title: "How do strong social connections contribute to mental well-being?",
+        img: "Blog_pics/lifestyle/image10.jpg",
+        markdown:"/blogs_post_data/lifestyle/9"
+      },
+      {
+        title: "How does substance abuse affect mental health?",
+        img: "Blog_pics/lifestyle/image9.jpg",
+        markdown:"/blogs_post_data/lifestyle/10"
+      },
+      {
+        title: "Are there specific time-management techniques that promote mental health?",
+        img: "Blog_pics/lifestyle/image11.png",
+        markdown:"/blogs_post_data/lifestyle/11"
+      },
+      {
+        title: "How does spending time in nature benefit mental well-being?",
+        img: "Blog_pics/lifestyle/image12.png",
+        markdown:"/blogs_post_data/lifestyle/12"
+      },
+      {
+        title: "How does engaging in creative activities contribute to mental health?",
+        img: "Blog_pics/lifestyle/image13.png",
+        markdown:"/blogs_post_data/lifestyle/13"
+      },
      
+    ],
+  },
+
+
+  {
+    category: "Teenager",
+    id: 6,
+    blogs: [
+      {
+        title: "How do societal expectations and stereotypes affect the mental health of teenagers?",
+        img: "Blog_pics/t1.png",
+        markdown: "/blogs_post_data/teen/1"
+      },
+      
+      {
+        title: "How can parents effectively communicate with their teenagers about mental health concerns?",
+        img: "Blog_pics/t2.png",
+        markdown:"/blogs_post_data/teen/2"
+      },
+      {
+        title: "In what ways does academic pressure contribute to stress and anxiety in adolescents?",
+        img: "Blog_pics/t3.jpg",
+        markdown:"/blogs_post_data/teen/3"
+      },
+      {
+        title: "How can teenagers differentiate between normal mood swings and signs of a more serious mental health issue?",
+        img: "Blog_pics/t4.jpg",
+        markdown:"/blogs_post_data/teen/4"
+      },
+      {
+        title: "What role can extracurricular activities play in promoting positive mental health in adolescents?",
+        img: "Blog_pics/t5.jpg",
+        markdown:"/blogs_post_data/teen/5"
+      },
+      {
+        title: "How can adolescents navigate the complexities of romantic relationships while prioritizing their mental health?",
+        img: "Blog_pics/t6.png",
+        markdown:"/blogs_post_data/teen/6"
+      },
+      {
+        title: "What is the mindset of teenagers?",
+        img: "Blog_pics/t7.png",
+        markdown:"/blogs_post_data/teen/7"
+      },
+      {
+        title: "How does the experience of identity exploration impact the mental health of LGBTQ+ adolescents?",
+        img: "Blog_pics/lg.png",
+        markdown:"/blogs_post_data/teen/8"
+      },
+      {
+        title: "What challenges do adolescents face in accessing mental health services, and how can these barriers be addressed?",
+        img: "Blog_pics/t8.png",
+        markdown:"/blogs_post_data/teen/9"
+      },
+      {
+        title: "How can schools create a supportive environment for the mental health of their teenage students?",
+        img: "Blog_pics/t9.png",
+        markdown:"/blogs_post_data/teen/10"
+      },
+      {
+        title: "What strategies can teenagers use to effectively manage screen time for better mental health?",
+        img: "Blog_pics/t10.png",
+        markdown:"/blogs_post_data/teen/11"
+      },
+      {
+        title: "How can teenagers effectively manage and cope with the challenges of peer pressure?",
+        img: "Blog_pics/t11.jpg",
+        markdown:"/blogs_post_data/teen/12"
+      },
+      {
+        title: "How can adolescents build resilience to navigate life's challenges and setbacks?",
+        img: "Blog_pics/t12.png",
+        markdown:"/blogs_post_data/teen/13"
+      },
+      {
+        title: "What impact does bullying, both online and offline, have on the mental health of adolescents?",
+        img: "Blog_pics/t13.png",
+        markdown:"/blogs_post_data/teen/14"
+      },
     ],
   },
 ];
@@ -867,29 +1270,7 @@ export const counselorsData = [
   },
 ];
 
-export const userRating = [
-  {
-    name: "user name",
-    comment:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem fugiat maiores perspiciatis",
-    avatar: "philosophers_image/b_3.jpg",
-    rating: 5,
-  },
-  {
-    name: "user name",
-    comment:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem fugiat maiores perspiciatis",
-    avatar: "philosophers_image/b_9.jpg",
-    rating: 3,
-  },
-  {
-    name: "user name",
-    comment:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem fugiat maiores perspiciatis",
-    avatar: "philosophers_image/c_1.jpg",
-    rating: 2,
-  },
-];
+
 
 export const quickMeditationTechiquesData = [
   {

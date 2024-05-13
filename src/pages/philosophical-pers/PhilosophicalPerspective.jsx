@@ -7,7 +7,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Philosophers from './philosophers/Philosophers';
 import { useMediaQuery } from '@material-ui/core';
-import { stoicismData, modernPhilosophers, hindunismData, buddhismData, taoismData, existentialismData, christianData, sufismData } from '../../data/philosophicalPerspective'
+import { stoicismData, modernPhilosophers, hinduismData, buddhismData, taoismData, existentialismData, christianData, sufismData } from '../../data/philosophicalPerspective'
 import { useLocation } from 'react-router-dom';
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -95,7 +95,7 @@ const PhilosophicalPerspective = () => {
         if (storedValue) {
             setValue(parseInt(storedValue));
         }
-        localStorage.removeItem("activeTab");
+        localStorage.removeItem('activeTab')
     }, []);
 
     const handleChange = (event, newValue) => {
@@ -120,7 +120,7 @@ const PhilosophicalPerspective = () => {
                     }
                 </Tabs>
             </AppBar>
-            <TabPanel value={value} index={0}>
+            <TabPanel value={value || 0} index={0 ||0}>
                 <Philosophers data={modernPhilosophers} />
             </TabPanel>
             <TabPanel value={value} index={1}>
@@ -128,7 +128,7 @@ const PhilosophicalPerspective = () => {
 
             </TabPanel>
             <TabPanel value={value} index={2}>
-                <Philosophers data={hindunismData} />
+                <Philosophers data={hinduismData} />
             </TabPanel>
             <TabPanel value={value} index={3}>
                 <Philosophers data={buddhismData} />

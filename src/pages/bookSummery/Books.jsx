@@ -82,11 +82,12 @@ const Books = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   useEffect(() => {
-    const storedValue = localStorage.getItem('activeTab');
+    const storedValue = localStorage.getItem('activeTab') || 0;
     if (storedValue) {
       setActiveTab(parseInt(storedValue));
     }
-    localStorage.removeItem("activeTab");
+    localStorage.removeItem('activeTab')
+
    
 }, []);
 
@@ -98,7 +99,7 @@ const Books = () => {
   return (
     <div className={classes.root}>
       <AppBar position="static">
-        <Tabs value={activeTab} onChange={handleChange} aria-label="simple tabs example"
+        <Tabs value={activeTab } onChange={handleChange} aria-label="simple tabs example"
           variant={mobileDevice ? "scrollable" : ""}
         >
           <Tab label="Personality Development" {...a11yProps(0)} />
