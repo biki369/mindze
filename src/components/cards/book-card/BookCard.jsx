@@ -4,6 +4,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         "& .book-card ": {
             width: " 280px",
+            height:'530px',
             padding: "16px",
             borderRadius: "5px",
             cursor: "pointer",
@@ -67,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
             height: "100%",
             backgroundColor: "#e1e1e1"
         },
-        "& .book-card__title": { fontSize: "1.5em", marginBottom: "0" },
+        "& .book-card__title": { fontSize: "1.3em", marginBottom: "0" },
         "& .book-card__author": { color: "#757575", fontSize: "1em" },
     }
 }));

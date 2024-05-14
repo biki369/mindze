@@ -62,7 +62,6 @@ const BookDetails = () => {
 
   const data = location.state;
 
-
   // const baseUrl = "http://localhost:5173";
   // const data = props.location.state;
   // const markdown = `${baseUrl}/${data.markdown}.txt`;

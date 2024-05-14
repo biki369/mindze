@@ -71,6 +71,8 @@ const QuickExercises = () => {
         const storedValue = localStorage.getItem('activeTab');
         if (storedValue) {
             setValue(parseInt(storedValue));
+        }else{
+            setValue(0)
         }
         localStorage.removeItem('activeTab')
     }, []);
@@ -108,4 +110,4 @@ const QuickExercises = () => {
     );
 }
 
-export default QuickExercises
+export default QuickExercises;

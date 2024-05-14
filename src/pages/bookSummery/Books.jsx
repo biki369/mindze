@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
       marginTop: 20,
       padding: "1rem",
       display: 'flex',
-      // justifyContent:'center',
+      justifyContent:'center',
       alginItem: 'center',
       flexWrap: "wrap",
       gap: "10px",
@@ -87,19 +87,16 @@ const Books = () => {
       setActiveTab(parseInt(storedValue));
     }
     localStorage.removeItem('activeTab')
-
-   
-}, []);
+  }, []);
 
   const handleChange = (event, newValue) => {
     setActiveTab(newValue);
-      localStorage.setItem('activeTab', newValue);
-
+    localStorage.setItem('activeTab', newValue);
   };
   return (
     <div className={classes.root}>
       <AppBar position="static">
-        <Tabs value={activeTab } onChange={handleChange} aria-label="simple tabs example"
+        <Tabs value={activeTab} onChange={handleChange} aria-label="simple tabs example"
           variant={mobileDevice ? "scrollable" : ""}
         >
           <Tab label="Personality Development" {...a11yProps(0)} />

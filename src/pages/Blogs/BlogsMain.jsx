@@ -91,7 +91,6 @@ const BlogsMain = () => {
             setSendId(parseInt(storedValue));
         }
         localStorage.removeItem('activeTab')
-
     }, []);
 
     const getId = (id) => {

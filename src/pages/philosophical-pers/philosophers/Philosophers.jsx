@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
             "& .philosophers-box": {
                 padding: "20px",
                 // display:"block",
-                minWidth: 283,
+                width: 283,
                 height: 300,
                 [theme.breakpoints.down(700)]: {
                     minWidth: "49%",
