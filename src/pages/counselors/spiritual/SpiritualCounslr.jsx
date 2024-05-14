@@ -4,12 +4,11 @@ import { Link,} from 'react-router-dom';
 import StarsIcon from '@material-ui/icons/Stars';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
-import { useEffect, useState } from 'react';
-import { getConsultant} from '../../../api';
+import { useState } from 'react';
 import Loader from '../../../components/loader/Loader';
 import Swal from 'sweetalert2';
 import BookingSlot from '../../../components/booking-slots/BookingSlot';
-
+import { useOutletContext } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
     root: {
         padding: 20,
@@ -166,13 +165,11 @@ const useStyles = makeStyles((theme) => ({
         height: 90,
     }
 }));
-
 const SpiritualCounslr = () => {
     const classes = useStyles();
-    const [isLoading, setIsLoading] = useState(false)
-    const [spiritualData, setSpiritualData] = useState(null);
     const [openModal, setOpenModal] = useState(false);
     const [item, setItem] = useState();
+    const [spiritualData] = useOutletContext();
     const handleOpenModal = (evn, e) => {
         if (localStorage.getItem("token") !== null) {
             setOpenModal(true);
@@ -195,16 +192,6 @@ const SpiritualCounslr = () => {
 
         }
     };
-  
-    useEffect(() => {
-        getConsultant("api/consultant/spiritual").then((data) =>
-            setSpiritualData(data),
-            setIsLoading(true)
-        ).catch((err) => {
-            console.log(err)
-        })
-    }, [isLoading]);
-
     return (
         <div className={classes.root}>
             {

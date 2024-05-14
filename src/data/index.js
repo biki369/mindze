@@ -843,7 +843,7 @@ export const blogPostData = [
       },
       {
         title: "How can spirituality and religion contribute to mental health in older individuals?",
-        img: "Blog_pics/last.jpg",
+        img: "Blog_pics/e10.jpg",
         markdown:"/blogs_post_data/elderlyMentalHealth/11",
       },
       {

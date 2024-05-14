@@ -85,7 +85,7 @@ export const stoicismData = [
     id: 4,
     title: 'Marcus Aurelius',
     markdown: '/philosophicalPerspective/stoicism/4',
-    image: '/philosophers_image/s_4.webp'
+    image: '/philosophers_image/s_4.jpg'
 },
 {
     id: 5,
@@ -97,7 +97,7 @@ export const stoicismData = [
     id: 6,
     title: 'Musonius Rufus',
     markdown: '/philosophicalPerspective/stoicism/6',
-    image: '/philosophers_image/s_6.jpeg'
+    image: '/philosophers_image/s_6.webp'
 },
 {
     id: 7,

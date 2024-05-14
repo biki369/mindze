@@ -1,14 +1,13 @@
-import { useEffect, useState } from 'react'
-import { Avatar, Button, Grid,  Paper, makeStyles } from '@material-ui/core';
-import { Link,} from 'react-router-dom';
+import {useState } from 'react'
+import { Avatar, Button, Grid, Paper, makeStyles } from '@material-ui/core';
+import { Link, } from 'react-router-dom';
 import StarsIcon from '@material-ui/icons/Stars';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
-import { getConsultant} from '../../../api';
 import Loader from '../../../components/loader/Loader';
 import Swal from 'sweetalert2';
 import BookingSlot from '../../../components/booking-slots/BookingSlot';
-
+import { useOutletContext } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
     root: {
         padding: 20,
@@ -165,13 +164,11 @@ const useStyles = makeStyles((theme) => ({
         height: 90,
     }
 }));
-
 const PsychologicalCounslr = () => {
     const classes = useStyles();
-    const [isLoading, setIsLoading] = useState(false)
-    const [psychologicalData, setPsychologicalData] = useState(null);
     const [openModal, setOpenModal] = useState(false);
     const [item, setItem] = useState();
+    const [,psychologicalData] = useOutletContext();
 
     const handleOpenModal = (evn, e) => {
         if (localStorage.getItem("token") !== null) {
@@ -195,16 +192,6 @@ const PsychologicalCounslr = () => {
 
         }
     };
-    useEffect(() => {
-        // psychological
-        getConsultant("api/consultant/psychological").then((data) =>
-            setPsychologicalData(data),
-            setIsLoading(true)
-        ).catch((err) => {
-            console.log(err)
-        })
-    }, [isLoading]);
-
     return (
         <div className={classes.root}
         >
@@ -281,7 +268,7 @@ const PsychologicalCounslr = () => {
                     </div>
                 )
             }
-            <BookingSlot  openModal={openModal} setOpenModal={setOpenModal} item={item} />
+            <BookingSlot openModal={openModal} setOpenModal={setOpenModal} item={item} />
         </div>
     )
 }

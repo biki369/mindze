@@ -202,7 +202,6 @@ const Home = () => {
         </Swiper>
       </div>
 
-
       <div className="about-section">
         <div className='about-us'>
           <h1>About us</h1>
@@ -231,7 +230,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-
+      
       <div className="trustedBy-section">
         <div >
           <ServiceSlider text={"Trusted by"} trustbyData={reviewData} />

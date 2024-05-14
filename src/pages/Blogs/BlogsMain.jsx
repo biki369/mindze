@@ -75,23 +75,15 @@ const useStyles = makeStyles((theme) => ({
 
 const BlogsMain = () => {
     const classes = useStyles();
-    const [sendId, setSendId] = useState(null);
-
     const theme = useTheme();
-    const mobileDevice = useMediaQuery(theme.breakpoints.down('md'));
 
+    const [sendId, setSendId] = useState(null);
+    const mobileDevice = useMediaQuery(theme.breakpoints.down('md'));
     const [drawerOpen, setDrawerOpen] = useState(false);
+
     const toggleDrawer = () => {
         setDrawerOpen(!drawerOpen);
     };
-
-    useEffect(() => {
-        const storedValue = localStorage.getItem('activeTab') ;
-        if (storedValue) {
-            setSendId(parseInt(storedValue));
-        }
-        localStorage.removeItem('activeTab')
-    }, []);
 
     const getId = (id) => {
         if (!id) {
@@ -100,7 +92,6 @@ const BlogsMain = () => {
         setSendId(id)
         localStorage.setItem('activeTab', id)
     }
-
     const SideMenuBar = () => {
         return (
             <div className='side-menu'>
@@ -125,6 +116,14 @@ const BlogsMain = () => {
             </div>
         )
     }
+
+    useEffect(() => {
+        const storedValue = localStorage.getItem('activeTab') ;
+        if (storedValue) {
+            setSendId(parseInt(storedValue));
+        }
+        localStorage.removeItem('activeTab')
+    }, []);
 
     return (
         <>

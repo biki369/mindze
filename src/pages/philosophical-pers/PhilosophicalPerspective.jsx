@@ -72,9 +72,8 @@ const useStyles = makeStyles((theme) => ({
 const PhilosophicalPerspective = () => {
 
     const theme = useTheme();
+    const classes = useStyles();
     const mobileDevice = useMediaQuery(theme.breakpoints.down('md'));
-    const { pathname } = useLocation()
-
 
     const philosophicalTabData = [
         "Modern Spirituality Thinkers",
@@ -86,20 +85,17 @@ const PhilosophicalPerspective = () => {
         "Sufism",
         "Christian Mysticism",
     ]
-
-    const classes = useStyles();
     const [value, setValue] = React.useState(0);
 
     useEffect(() => {
         const storedValue = localStorage.getItem('activeTab');
         if (storedValue) {
             setValue(parseInt(storedValue));
-        }else{
-            setValue(0)
         }
-        // localStorage.removeItem('activeTab')
+        localStorage.removeItem('activeTab')
     }, []);
 
+    
     const handleChange = (event, newValue) => {
         setValue(newValue);
         localStorage.setItem('activeTab', newValue);
@@ -122,12 +118,11 @@ const PhilosophicalPerspective = () => {
                     }
                 </Tabs>
             </AppBar>
-            <TabPanel value={value || 0} index={0 ||0}>
+            <TabPanel value={value} index={0}>
                 <Philosophers data={modernPhilosophers} />
             </TabPanel>
             <TabPanel value={value} index={1}>
                 <Philosophers data={stoicismData} />
-
             </TabPanel>
             <TabPanel value={value} index={2}>
                 <Philosophers data={hinduismData} />
