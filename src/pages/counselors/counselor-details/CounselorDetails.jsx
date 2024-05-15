@@ -12,7 +12,7 @@ import Loader from "../../../components/loader/Loader";
 import {consultantDetails, consultantReview, giveReview } from "../../../api";
 import Swal from "sweetalert2";
 import BookingSlot from "../../../components/booking-slots/BookingSlot";
-
+import BackCurrent from "../../../components/back-current/BackCurrent";
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: "30px 10px",
@@ -382,13 +382,16 @@ const CounselorDetails = () => {
     reviewDataOnLoad();
   }, [isLoading]);
 
+
+
+
   return (
     <div className={classes.root}>
       {!isLoading ? <Container>
         <div className="profile-content">
           <div className="top">
-            <h3><span><Link to={"/"}>  <HomeIcon /></Link></span>{data?.name}'s profile</h3>
-            {/* <BackCurrent link={"/spiritualCounselors"} name={"spiritual Counselors"} /> */}
+            <h3><span><Link to={data?.is_spiritual?"/spiritualCounselors":"/philosophicalCounselors"}>  <HomeIcon /></Link></span>{data?.name}'s profile</h3>
+            {/* <BackCurrent  link={data?.is_spiritual?"/spiritualCounselors":"/philosophicalCounselors"} name={data?.is_spiritual?"Spiritual Counselors":"Philosophical Counselors"}  /> */}
           </div>
           <Paper >
             <div className="profile">
