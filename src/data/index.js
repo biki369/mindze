@@ -936,12 +936,12 @@ export const blogPostData = [
       
       {
         title: "Explore the role of goal-setting in improving mental health outcomes for athletes.",
-        img: "Blog_pics/sports/image2.jpg",
+        img: "Blog_pics/sports/image3.png",
         markdown:"/blogs_post_data/sports/2"
       },
       {
         title: "Discuss the unique mental health challenges faced by professional athletes.",
-        img: "Blog_pics/sports/image15.jpg",
+        img: "Blog_pics/sports/image2.jpg",
         markdown:"/blogs_post_data/sports/3"
       },
       {
@@ -991,7 +991,7 @@ export const blogPostData = [
       },
       {
         title: "How sports act as a preventive measure against the development of mental health disorders?",
-        img: "Blog_pics/sports/image16.jpg",
+        img: "Blog_pics/sports/image11.jpg",
         markdown:"/blogs_post_data/sports/13"
       },
       {

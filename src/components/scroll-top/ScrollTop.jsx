@@ -9,6 +9,7 @@ export const ScrollTop = () => {
             localStorage.removeItem('activeTabBook');
             localStorage.removeItem('activeTabBlog');
             localStorage.removeItem('activeTabPhil')
+            localStorage.removeItem('activeTabQuickEx')
         }
     }, [pathname]);
 

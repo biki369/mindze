@@ -78,7 +78,7 @@ const QuickExercises = () => {
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
-        localStorage.setItem('activeTab', newValue);
+        localStorage.setItem('activeTabQuickEx', newValue);
     };
 
     return (
