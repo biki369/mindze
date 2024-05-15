@@ -1200,7 +1200,7 @@ export const blogPostData = [
       },
       {
         title: "How does the experience of identity exploration impact the mental health of LGBTQ+ adolescents?",
-        img: "Blog_pics/lg.png",
+        img: "Blog_pics/t8.png",
         markdown:"/blogs_post_data/teen/8"
       },
       {

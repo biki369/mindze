@@ -82,16 +82,18 @@ const Books = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   useEffect(() => {
-    const storedValue = localStorage.getItem('activeTab') || 0;
+    const storedValue = localStorage.getItem('activeTabBook');
     if (storedValue) {
       setActiveTab(parseInt(storedValue));
+    }else{
+      setActiveTab(0)
     }
-    localStorage.removeItem('activeTab')
+    // localStorage.removeItem('activeTabBook')
   }, []);
 
   const handleChange = (event, newValue) => {
     setActiveTab(newValue);
-    localStorage.setItem('activeTab', newValue);
+    localStorage.setItem('activeTabBook', newValue);
   };
   return (
     <div className={classes.root}>

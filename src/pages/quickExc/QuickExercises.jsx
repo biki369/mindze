@@ -68,13 +68,12 @@ const QuickExercises = () => {
     const [value, setValue] = React.useState(0);
 
     useEffect(() => {
-        const storedValue = localStorage.getItem('activeTab');
+        const storedValue = localStorage.getItem('activeTabQuickEx');
         if (storedValue) {
             setValue(parseInt(storedValue));
         }else{
             setValue(0)
         }
-        localStorage.removeItem('activeTab')
     }, []);
 
     const handleChange = (event, newValue) => {

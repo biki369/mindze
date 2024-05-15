@@ -88,17 +88,18 @@ const PhilosophicalPerspective = () => {
     const [value, setValue] = React.useState(0);
 
     useEffect(() => {
-        const storedValue = localStorage.getItem('activeTab');
+        const storedValue = localStorage.getItem('activeTabPhil');
         if (storedValue) {
             setValue(parseInt(storedValue));
+        }else{
+            setValue(0)
         }
-        localStorage.removeItem('activeTab')
     }, []);
 
     
     const handleChange = (event, newValue) => {
         setValue(newValue);
-        localStorage.setItem('activeTab', newValue);
+        localStorage.setItem('activeTabPhil', newValue);
     };
 
 
