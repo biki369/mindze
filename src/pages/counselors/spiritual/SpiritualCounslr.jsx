@@ -14,8 +14,10 @@ const useStyles = makeStyles((theme) => ({
         padding: 20,
         "& .counselor-container": {
             display: "flex",
-            gap: 10,
+            gap: 30,
             flexWrap: "wrap",
+            alignItems: "center",
+            // justifyContent: "center",
             "& .counselor": {
                 padding: "6px 10px",
                 display: "flex",
@@ -89,7 +91,7 @@ const useStyles = makeStyles((theme) => ({
 
             "& .paper-dev": {
                 padding: "10px 6px",
-                width: '400px',
+                width: '460px',
                 [theme.breakpoints.down(500)]: {
                     width: "100%",
                     // padding: "10px 0",
