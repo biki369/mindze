@@ -7,6 +7,7 @@ import SideMenu from '../../../components/drawer/SideMenu';
 import { asanaData, } from '../../../data/yogaMediData';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import AsanaDetails from '../yoga-details-page/AsanaDetails';
+import MarqueeCom from '../../../components/marquee/MarqueeCom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -102,6 +103,7 @@ const Asana = () => {
                 }
                 <div className='sub-content'>
                     {/* {  sendId && <PranayamaAsanasDetails id={sendId}/>} */}
+                    <MarqueeCom  title={"Video will be uploaded soon"} direction={"left"}/>
                     <AsanaDetails id={sendId} />
                 </div>
             </div>

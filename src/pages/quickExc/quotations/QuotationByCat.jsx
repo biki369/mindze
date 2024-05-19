@@ -119,7 +119,7 @@ function QuotationByCat({ id }) {
 
                     findData?.images?.map((e, i) => (
                         <div className="qouts-img" key={i}>
-                            <img src={e.url} alt="" />
+                            <img src={e.url} alt="" loading="lazy"/>
                         </div>
                     ))
                 }

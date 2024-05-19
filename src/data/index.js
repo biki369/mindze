@@ -164,8 +164,6 @@ export const shortsExe = [
   },
 ];
 
-
-
 export const quotationsData = [
   {
     category: "Encouragement",

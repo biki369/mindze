@@ -10,12 +10,12 @@ const useStyles = makeStyles((theme) => ({
             display: "flex",
             flexWrap: "wrap",
             height: "100%",
-            // justifyContent: "center",
+            justifyContent: "center",
             alginItems: "center",
             gap: "30px",
             "& .techniques": {
                 padding: "23px",
-                width:'450px',
+                width: '450px',
                 backgroundColor: "#eeeeee",
                 borderRadius: "10px",
                 transition: "all 0.3s",
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
                     boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
                 },
                 "& .title": {
-                    textAlign:'center',
+                    textAlign: 'center',
                     transition: "all 0.3s",
                     "& a": {
                         fontSize: '1.6rem',
@@ -35,6 +35,21 @@ const useStyles = makeStyles((theme) => ({
                 }
             }
         },
+
+        "& .exploreMore-btn": {
+            backgroundColor: "#3f51b5 !important",
+            padding:10,
+            "& a": {
+                color: "#fff",
+                "&:hover": {
+                    color: "#fff !important",
+                }
+            },
+            "&:hover": {
+                boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+            }
+
+        }
     },
 }));
 
@@ -54,8 +69,8 @@ const QuickMeditation = () => {
                         </div>
                     ))
                 }
-                <div className="techniques" >
-                    <div className="title">
+                <div className="techniques exploreMore-btn" >
+                    <div className="title ">
                         <Link to={"/yogaMeditations"}>Explore More</Link>
                     </div>
                 </div>

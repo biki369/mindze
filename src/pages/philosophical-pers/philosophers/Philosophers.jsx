@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
             flexWrap: "wrap",
             width: '100%',
             gap: '10px',
-            alignItems:'center',
+            alignItems: 'center',
             [theme.breakpoints.down(600)]: {
                 justifyContent: 'center',
 
@@ -25,11 +25,9 @@ const useStyles = makeStyles((theme) => ({
                 height: 300,
                 [theme.breakpoints.down(700)]: {
                     minWidth: "49%",
-    
                 },
                 [theme.breakpoints.down(500)]: {
                     minWidth: "100%",
-    
                 },
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
@@ -38,15 +36,15 @@ const useStyles = makeStyles((theme) => ({
                 display: "flex",
                 justifyContent: 'center',
                 alignItems: 'end',
-                cursor: 'pointer',
                 transition: 'all 0.3s ease-in-out',
                 "&:hover": {
-                    transform: 'scale(0.900)'
+                    transform: 'scale(0.930)'
                 },
                 "& .test-title": {
                     color: "#fff",
                     "& h3": {
-                        fontSize: "1.3rem",
+                        fontSize: "1rem",
+                        cursor: 'pointer',
                         "&:hover": {
                             borderBottom: `3px solid ${theme.palette.primary.main}`,
                             cursor: 'pointer',
@@ -59,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const Philosophers = ({data}) => {
+const Philosophers = ({ data }) => {
     const classes = useStyles();
 
     return (
@@ -69,7 +67,7 @@ const Philosophers = ({data}) => {
                     data?.map((e, i) => (
                         <div className="philosophers-box" key={i} style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(${e.image})` }}>
                             <div className="test-title" >
-                                <Link  state={e} to={`/philosophers/369`}><h3>{e.title}</h3></Link>
+                                <Link state={e} to={`/philosophers/369`}><h3>{e.title}</h3></Link>
                             </div>
                         </div>
                     ))

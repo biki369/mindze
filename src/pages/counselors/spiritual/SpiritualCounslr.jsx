@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
             gap: 30,
             flexWrap: "wrap",
             alignItems: "center",
+            paddingLeft:"1rem",
             // justifyContent: "center",
             "& .counselor": {
                 padding: "6px 10px",

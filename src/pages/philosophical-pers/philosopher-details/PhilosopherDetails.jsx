@@ -7,44 +7,21 @@ import Loader from '../../../components/loader/Loader';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        "& .title": {
-            textAlign: 'center',
-            fontSize: '2.5em',
-            marginTop: 20,
-            marginBottom: 40,
-            color: theme.palette.primary.main
-        },
-        "& .sub-title": {
-            textAlign: 'center',
-            fontSize: '1.2em',
-            color: "#454748",
-            fontWeight: 700,
-            margin: "30px 0"
-
-            // color: theme.palette.primary.main
-        },
-        "& .philosophers-content": {
-            padding: '30px',
-            marginTop: 23,
-            [theme.breakpoints.down("sm")]: {
-                padding: '0px',
-            },
-
-            "& .desc-section": {
-                padding: '20px 0',
-                "& .into-red": {
-                    color: "#900",
-                    marginBottom: 10
-                },
-                "& p": {
-                    marginBottom: 20,
-                    fontFamily: 'Arial, sans-serif',
-                    color: "#333",
-                    lineHeight: 1.6,
-                }
-            },
-
-        }
+        padding:30,
+        "& .article-container": {
+            "& > article": {
+              "& h1": {
+                // fontFamily:'Poppins',
+                fontSize: '2.3rem',
+                fontWeight: 500,
+              },
+              "& h2": {
+                // fontFamily:'Poppins',
+                fontSize: '2rem',
+                fontWeight: 500,
+              }
+            }
+          },
     }
 
 }));
@@ -71,8 +48,8 @@ const PhilosopherDetails = () => {
             {
                 findData.length === 0 ? (<Loader />) : (<>
                     <BackCurrent link="/philosophers" name="Philosophers" />
-                    <Container className="mt-[30px]">
-                        <article className="prose lg:prose-xl prose-headings:text-indigo-500 prose-strong:text-indigo-500 prose-h1:text-5xl mt-3">
+                    <Container className="mt-[30px] article-container">
+                        <article className="prose lg:prose-xl prose-headings:text-indigo-500 prose-strong:text-indigo-500 mt-3">
                             <Markdown>
                                 {findData}
                             </Markdown>

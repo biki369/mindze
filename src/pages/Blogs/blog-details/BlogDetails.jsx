@@ -8,42 +8,20 @@ const useStyles = makeStyles((theme) => ({
     root: {
         height: "100%",
         padding: '30px 10px',
-        "& .blog-container": {
-            position: 'relative',
-            padding: '3rem 10px',
-            "& .blog-title": {
-                fontSize: "24px",
-                textAlign: "center",
-                marginTop: 24,
-                marginBottom: 30,
-                paddingBottom: 20,
-                color: "#333",
+        "& .article-container": {
+            "& > article": {
+              "& h1": {
+                // fontFamily:'Poppins',
+                fontSize: '2.3rem',
                 fontWeight: 500,
-            },
-            "& .blog-content": {
-                // padding: " 1rem 0",
-                // fontSize: " 3.5rem",
-                margin: '20px 10px',
-                padding: '10px 3.5rem',
-                [theme.breakpoints.down("sm")]: {
-                    padding: '10px 0',
-                },
-                "& .b-sub-title": {
-                    fontSize: 20,
-                    color: "#555",
-                    fontWeight: 400,
-                    lineHeight: 1.6,
-                },
-                "& p": {
-                    marginTop: '1rem',
-                    marginBottom: '1.63rem',
-                    fontSize: 16,
-                    color: "#555",
-                    lineHeight: 1.6,
-
-                }
-            },
-        },
+              },
+              "& h2": {
+                // fontFamily:'Poppins',
+                fontSize: '2rem',
+                fontWeight: 500,
+              }
+            }
+          },
     }
 
 }));
@@ -75,8 +53,8 @@ const BlogDetails = () => {
                     <>
                         <BackCurrent link="/blogs" name="Blogs" />
                         <Container className="blog-container">
-                            <div className="w-full">
-                                <article className="prose lg:prose-xl max-w-full prose-headings:text-indigo-500 prose-strong:text-indigo-500 prose-h1:text-5xl mt-6">
+                            <div className="w-full article-container">
+                                <article className="prose lg:prose-xl max-w-full prose-headings:text-indigo-500 prose-strong:text-indigo-500  mt-6">
                                     <Markdown>{findData}</Markdown>
                                 </article>
                             </div>

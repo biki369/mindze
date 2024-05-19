@@ -286,7 +286,7 @@ const CounselorDetails = () => {
   const [reviewData, setReviewData] = useState();
   const [openModal, setOpenModal] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [data, setData] = useState({});
+  const [data, setData] = useState(null);
   const [writeReview, setWriteReview] = useState();
 
   const handleOpenModal = (evn, e) => {
@@ -379,9 +379,10 @@ const CounselorDetails = () => {
     reviewDataOnLoad();
   }, [isLoading]);
 
+console.log(data)
   return (
     <div className={classes.root}>
-      {!isLoading ? <Container>
+      {data !== null ? <Container>
         <div className="profile-content">
           <div className="top">
             <h3><span><Link to={data.is_spiritual?"/spiritualCounselors":"/philosophicalCounselors"}>  <HomeIcon /></Link></span>{data?.name}'s profile</h3>

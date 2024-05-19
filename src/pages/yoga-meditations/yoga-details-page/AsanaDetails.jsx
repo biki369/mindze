@@ -10,59 +10,19 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down("sm")]: {
             padding: '10px',
         },
+
         "& .technique-container": {
-            [theme.breakpoints.up(900)]: {
-                width: '53rem',
-            },
-            margin: 'auto',
             padding: '1rem 3rem',
-            [theme.breakpoints.down("md")]: {
-                padding: '0%',
-
-            },
-            "& .technique-head": {
-                fontSize: '3rem',
-                [theme.breakpoints.down("md")]: {
-                    // padding: '0%',
+            "& > article":{
+                "& h1":{
+                    // fontFamily:'Poppins',
+                    fontSize: '2.3rem',
+                    fontWeight:500,
+                },
+                "& h2":{
+                    // fontFamily:'Poppins',
                     fontSize: '2rem',
-
-                },
-                color: theme.palette.primary.main,
-                margin: '1rem 0',
-                textAlign: 'center',
-            },
-            "& .sub-head": {
-                color: theme.palette.primary.main,
-                fontSize: '2rem',
-                [theme.breakpoints.down("md")]: {
-                    fontSize: '1.5rem',
-                },
-                margin: '1.5rem 0',
-            },
-
-            "& .sub-content": {
-                padding: '1rem 0',
-                "& p": {
-                    fontSize: '20px'
-                }
-            },
-            "& .ol-sub-content": {
-                "& ol": {
-                    marginLeft: '30px',
-                },
-            },
-            "& .ul-sub-content": {
-                "& ul": {
-                    marginLeft: '30px',
-                },
-                // padding: '1rem 0',
-            },
-            "& li": {
-                fontSize: '20px',
-                margin: '1rem 0',
-                "& span": {
-                    fontWeight: 'bold',
-                    fontSize: '20px',
+                    fontWeight:500,
                 }
             }
         }
@@ -70,18 +30,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function AsanaDetails({ id }) {
-
     const [findData, setFindData] = useState("");
-    // const baseUrl = "http://localhost:5173"
-
     const classes = useStyles();
     if (!id) {
         id = 0;
     }
     const data = asanaData.find((item) => item.id === id);
-
-    // read markdown file
-    // const markdownPath = `${import.meta.env.BASE_URL}/${data.markdown}.txt`;
     const markdownPath = `${data.markdown}.txt`;
 
     useEffect(() => {
@@ -92,11 +46,10 @@ function AsanaDetails({ id }) {
             });
     }, [id]);
 
-
     return (
         <div className={classes.root}>
             <div className="technique-container">
-                <article className="prose lg:prose-xl prose-headings:text-indigo-500 prose-strong:text-indigo-500 prose-h1:text-5xl mt-6">
+                <article className="prose lg:prose-xl prose-headings:text-indigo-500 prose-strong:text-indigo-500 mt-6">
                     <Markdown>
                         {findData}
                     </Markdown>

@@ -1,34 +1,31 @@
 import { makeStyles } from "@material-ui/core";
-// import BookCard from "../../../components/cards/book-card/BookCard";
-import PlayCircleFilledWhiteIcon from '@material-ui/icons/PlayCircleFilledWhite';
-import { shortsExe } from "../../../data";
+import { shortExerciseData } from "../../../data/shortExercise";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     "& .short-execs__container": {
-      padding: "30px",
+      padding: "10px 30px",
       display: "flex",
-      gap: "23px",
+      gap: "10px",
       flexWrap: 'wrap',
-      [theme.breakpoints.down(600)]: {
-        justifyContent: "center"
-      },
+      // justifyContent: "center",
       "& .short-execs__card": {
         display: "flex",
         justifyContent: 'center',
         alignItems: 'center',
-        // width: '330px',
-        // height: "260px",
-        // borderRadius: '13px',
-        // border: '1px solid #000',
-        // boxShadow: ' 9px 4px 5px 0px rgba(0,0,0,0.75)',
+        width:356,
         "&:hover": {
           boxShadow: 'none',
         },
         "& .playIcon": {
           fontSize: "90px",
         },
-        cursor: 'pointer',
+        // cursor: 'pointer',
+        "& > img":{
+          width:"100%",
+          borderRadius:6,
+          // height:"100%"
+        }
       }
 
     }
@@ -39,21 +36,14 @@ const ShortExercises = () => {
 
   const classes = useStyles();
 
-
-
-
   return (
     <div className={classes.root}>
       <div className="short-execs__container">
         {
-          shortsExe.map((e, i) => (
+          shortExerciseData.map((e, i) => (
             <div className="short-execs__card" key={i}>
-              <iframe src={e.url} frameborder="0"></iframe>
-              {/* <video src={e.url}></video> */}
-              {/* <PlayCircleFilledWhiteIcon className="playIcon" color="primary" /> */}
-              {/* <a href="https://drive.google.com/file/d/1umK1rigOs3KL7sHVqRJfZvNqXjONozLz/view?usp=drive_link"></a> */}
+              <img src={e.image} alt="" loading="lazy"/>
             </div>
-
           ))
         }
 

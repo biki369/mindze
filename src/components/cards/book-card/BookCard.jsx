@@ -84,7 +84,7 @@ const BookCard = ({ data, tabId }) => {
                     <div className="book-card__cover">
                         <div className="book-card__book">
                             <div className="book-card__book-front">
-                                <img className="book-card__img" src={data.url} />
+                                <img className="book-card__img" src={data.url} loading="lazy"/>
                             </div>
                             <div className="book-card__book-back"></div>
                             <div className="book-card__book-side"></div>

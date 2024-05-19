@@ -3,18 +3,17 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import { Accordion, AccordionDetails, AccordionSummary, Button, IconButton, useMediaQuery, useTheme } from '@material-ui/core';
 import YogaMediDetails from '../yoga-details-page/YogaMediDetails';
-import { NavLink } from 'react-router-dom';
 import SideMenu from '../../../components/drawer/SideMenu';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { MeditationsData } from '../../../data/yogaMediData';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import MarqueeCom from '../../../components/marquee/MarqueeCom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         height: "100%",
         width: '100%',
         display: 'flex',
-
         "& .side-menu": {
             width: '360px',
             height: '100vh',
@@ -25,14 +24,11 @@ const useStyles = makeStyles((theme) => ({
             },
 
             "& .side-menu__links": {
-                // display: 'flex',
-                // flexDirection: 'column',
                 width: '100%',
                 "& .side-link": {
                     margin: '6.9px 0',
                     "& button": {
                         display: 'block',
-                        // margin: "10px 0",
                         width: "100%",
                     },
                 }
@@ -118,6 +114,7 @@ const Meditation = () => {
                     </SideMenu>
                 }
                 <div className='yoga-meditation'>
+                    <MarqueeCom  title={"Video will be uploaded soon"} direction={"left"}/>
                     <YogaMediDetails id={sendId} />
                 </div>
             </div>

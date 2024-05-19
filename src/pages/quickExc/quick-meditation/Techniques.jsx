@@ -69,7 +69,6 @@ const Techniques = () => {
   return (
     <div className={classes.root}>
       <BackCurrent link={"/quickExercises"} name="Quick Exercises" />
-
       <div className="technique-container">
         <h1 className="technique-head">{subTitle}</h1>
         <div className="sub-content">

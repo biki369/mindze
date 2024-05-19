@@ -1,6 +1,5 @@
 import { Paper, makeStyles } from "@material-ui/core";
 import { blogPostData } from "../../../data";
-import React from "react";
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
@@ -21,12 +20,16 @@ const useStyles = makeStyles((theme) => ({
         "&:hover": {
           transform: 'scale(0.990)'
         },
-        [theme.breakpoints.down(500)]: {
+        [theme.breakpoints.down("sm")]: {
           width: "100%",
+          height:"100%"
         },
         "& .blog-img": {
           width: "100%",
           height: 460,
+          [theme.breakpoints.down("sm")]: {
+            height: "100%",
+          },
           "& img": {
             width: '100%',
             height: '100%',

@@ -15,7 +15,6 @@ const useStyles = makeStyles((theme) => ({
       padding: '1rem 3rem',
       [theme.breakpoints.down("md")]: {
         padding: '0%',
-
       },
       "& .technique-head": {
         fontSize: '3rem',
@@ -90,10 +89,6 @@ function YogaMediDetails({id}) {
     }
     fetchData()
   }, [id])
-
-
-  // console.log(findData, id, "===================== datalscjkj")
-
   return (
     <div className={classes.root}>
       <div className="technique-container">

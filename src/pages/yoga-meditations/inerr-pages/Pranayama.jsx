@@ -7,6 +7,7 @@ import SideMenu from '../../../components/drawer/SideMenu';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import PranayamaDetails from '../yoga-details-page/PranayamaDetails';
 import { pranayamaData } from '../../../data/yogaMediData';
+import MarqueeCom from '../../../components/marquee/MarqueeCom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -59,7 +60,7 @@ const Pranayama = () => {
     const getId = (id) => {
         return setSendId(id)
     }
-    
+
     // const [expanded, setExpanded] = React.useState(false);
 
     const SideMenuBar = () => {
@@ -68,13 +69,13 @@ const Pranayama = () => {
                 {
                     pranayamaData.map((data) => (
                         <div key={data.id} className='side-link'>
-                            <Button 
-                                onClick={() => {getId(data.id),toggleDrawer()}}
-                                 style={{
+                            <Button
+                                onClick={() => { getId(data.id), toggleDrawer() }}
+                                style={{
                                     color: sendId === data.id ? '#fff' : '#545e6f',
                                     background: sendId === data.id ? '#3f51b5' : '',
-                                    width:"100%",
-                                    margin:"10px 0"
+                                    width: "100%",
+                                    margin: "10px 0"
 
                                 }}
                             >{data.title}</Button>
@@ -98,11 +99,12 @@ const Pranayama = () => {
                 {
                     mobileDevice && <SideMenu isOpen={drawerOpen} onClose={toggleDrawer} anchor='left'>
                         <div className='side-menu'>
-                            <SideMenuBar onClick={toggleDrawer}/>
+                            <SideMenuBar onClick={toggleDrawer} />
                         </div>
                     </SideMenu>
                 }
                 <div className='sub-content'>
+                    <MarqueeCom title={"Video will be uploaded soon"} direction={"left"} />
                     <PranayamaDetails id={sendId} />
                 </div>
             </div>

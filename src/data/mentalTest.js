@@ -1,6 +1,6 @@
 export const mentalTestData = [
   {
-    title: "Anexity Test",
+    title: "Anxiety Test",
     desc: "It is based on the GAD-7, a standardized tool used for screening generalized anxiety disorder. The frequency of the following symptoms over the past two weeks:",
     img: "MentalHealthTest/anxiety.jpg",
 
