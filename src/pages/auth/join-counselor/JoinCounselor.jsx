@@ -67,10 +67,11 @@ const JoinCounselor = () => {
                                     fullWidth
                                     required
                                     label="Phone number"
-                                    name="phone"
+                                    name="phoneNum"
                                     value={formData.phoneNum}
                                     onChange={handleChange}
                                     variant="outlined"
+                                    type='number'
                                 />
                             </Grid>
                             <Grid item xs={12}>
