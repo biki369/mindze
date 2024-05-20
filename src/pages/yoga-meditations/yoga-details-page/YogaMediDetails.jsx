@@ -8,18 +8,17 @@ const useStyles = makeStyles((theme) => ({
       padding: '10px',
     },
     "& .technique-container": {
+      margin: 'auto',
+      padding: '1rem 3rem',
       [theme.breakpoints.up(900)]: {
         width: '53rem',
       },
-      margin: 'auto',
-      padding: '1rem 3rem',
       [theme.breakpoints.down("md")]: {
-        padding: '0%',
-      },
+        padding:0,
+      },   
       "& .technique-head": {
         fontSize: '3rem',
         [theme.breakpoints.down("md")]: {
-          // padding: '0%',
           fontSize: '2rem',
 
         },

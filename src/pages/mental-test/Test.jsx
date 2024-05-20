@@ -1,4 +1,4 @@
-import {useState } from 'react';
+import { useState } from 'react';
 import { Button, Container, Typography, makeStyles } from "@material-ui/core";
 import BackCurrent from '../../components/back-current/BackCurrent';
 import { useLocation } from 'react-router-dom';
@@ -26,10 +26,16 @@ const useStyles = makeStyles((theme) => ({
                     lineHeight: 1.5,
                     margin: "10px 0",
                     padding: '10px 30px',
+                    [theme.breakpoints.down(600)]: {
+                        padding: '10px',
+                    }
                 },
                 "& ol": {
                     marginTop: "1.3rem",
                     paddingLeft: '2.3rem',
+                    [theme.breakpoints.down(600)]: {
+                        padding: 0,
+                    },
                     "& li": {
                         margin: "2rem 0",
                         fontSize: '1rem',
@@ -44,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
                         },
                         "& .test-options": {
                             display: 'flex',
-                            flexWrap:'wrap',
+                            flexWrap: 'wrap',
                             gap: '0.5rem',
                             "& .test-option": {
                                 display: 'flex',
@@ -85,7 +91,7 @@ const Test = () => {
     const [total, setTotal] = useState(0)
     const [openSec, setOpenSec] = useState(false)
 
-   
+
     const handleSubmit = () => {
         setOpenSec(true);
         // Calculate the total score from selected options

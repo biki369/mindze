@@ -16,29 +16,20 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         "& .side-menu": {
             width: '300px',
-            height: '100vh',
+            // height: '100vh',
             padding: '16px',
-            overFlowY: 'scroll',
             backgroundColor: '#fff',
             [theme.breakpoints.down('md')]: {
                 display: 'none'
             },
-
             "& .side-link": {
                 width: "100%",
                 "& button": {
                     display: 'block',
                     // margin: "10px 0",
                     width: "100%",
-
                 }
             }
-
-
-        },
-
-        "& .sub-content": {
-
         },
     },
 
@@ -98,7 +89,7 @@ const Pranayama = () => {
                 }
                 {
                     mobileDevice && <SideMenu isOpen={drawerOpen} onClose={toggleDrawer} anchor='left'>
-                        <div className='side-menu'>
+                        <div className=''>
                             <SideMenuBar onClick={toggleDrawer} />
                         </div>
                     </SideMenu>

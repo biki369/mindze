@@ -16,8 +16,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         "& .side-menu": {
             width: '360px',
-            height: '100vh',
-            overFlowY: 'scroll',
+            // height: '100vh',
             backgroundColor: '#fff',
             [theme.breakpoints.down('md')]: {
                 display: 'none'

@@ -12,6 +12,9 @@ const useStyles = makeStyles((theme) => ({
         },
         "& .technique-container": {
             padding: '1rem 3rem',
+            [theme.breakpoints.down("md")]: {
+                padding: '10px',
+            },
             "& > article":{
                 "& h1":{
                     // fontFamily:'Poppins',
