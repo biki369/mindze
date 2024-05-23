@@ -87,3 +87,13 @@ export const verifyEmail = async(url)=>{
   const { data } = await axios.get(`${BASE_URL}/${url}`);
   return data;
 }
+
+
+export const forgotPassword = async (url, parameters) => {
+  const { data } = await axios.post(`${BASE_URL}/${url}/`, parameters);
+  return data;
+};
+export const resetPassword = async (url, parameters) => {
+  const { data } = await axios.post(`${BASE_URL}/${url}/`, parameters);
+  return data;
+};

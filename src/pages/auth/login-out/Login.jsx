@@ -81,7 +81,6 @@ export default function Login(props) {
     } else {
 
       if (isSignUp) {
-
         registerNewUser("api/register/", account).then((e) => {
           Swal.fire({
             icon: "success",
@@ -89,7 +88,6 @@ export default function Login(props) {
             showConfirmButton: false,
             timer: 1600
           })
-          console.log(e,"register================");
           setIsSignUp(false);
         }).catch((e) => {
           const { email, password, username, last_name } = e.response.data;
@@ -317,11 +315,11 @@ export default function Login(props) {
             {isSignUp ? signUpForm() : signInform()}
             <Grid container>
               <Grid item xs>
-                {/* {
-                  !isSignUp && <Link href="#" variant="body2">
+                {
+                  !isSignUp && <Link to={"/forgot-password"} variant="body2">
                     Forgot password?
                   </Link>
-                } */}
+                }
               </Grid>
               <Grid item >
                 <Typography onClick={() => setIsSignUp(!isSignUp)} variant="body2" className='link-from-switch'>

@@ -20,103 +20,113 @@ import Layout from "../layout/Layout";
 import Meditation from "../pages/yoga-meditations/inerr-pages/Meditation";
 import ContactUs from "../pages/auth/contact-us/ContactUs";
 import JoinCounselor from "../pages/auth/join-counselor/JoinCounselor";
+import ForgotPassword from "../pages/auth/forgot-password/FogetPassword";
+import ResetPassword from "../pages/auth/forgot-password/ResetPassword";
 
 export const routes = createBrowserRouter([
-    {
+  {
+    path: "/",
+    element: <Layout />,
+    errorElement: "Error 404 not found the page",
+    children: [
+      {
         path: "/",
-        element: <Layout/>,
-        errorElement:"Error 404 not found the page",
-        children: [
-          {
-            path: "/",
-            element: <Home/>,
-          },
-          {
-            path: "/quickExercises",
-            element: <QuickExercises/>,
-          },
-          {
-            path: "/mentalTest",
-            element: <MentalTest/>,
-          },
-          {
-            path: "/yogaMeditations",
-            element: <YogaMeditations/>,
-          },
-
-          {
-            path: "/yogaMeditations/:id",
-            element: <Meditation/>,
-          },
-         
-          
-          {
-            path: "/books",
-            element: <Books/>,
-          },
-          
-          {
-            path: "/philosophers",
-            element: <PhilosophicalPerspective/>,
-          },
-          {
-            path: "/blogs",
-            element: <BlogsMain/>,
-          },
-          {
-            path: "/spiritualCounselors",
-            element: <SpiritualCounslr/>,
-          },
-          {
-            path: "/philosophicalCounselors",
-            element: <PsychologicalCounslr/>,
-          },
-          {
-            path: "/login",
-            element: <Login/>,
-          },
-          {
-            path: "/login/:user/:verify_pin",
-            element: <Login/>,
-          },
-          {
-            path: "/techniques/:id",
-            element: <Techniques/>,
-          },
-          {
-            path:"/mentaltest/:id",
-             element:<Test />
-          },
-          {
-            path: "/blog/:id",
-            element: <BlogDetails/>,
-          },
-          {
-            path: "/philosophers/:id",
-            element: <PhilosopherDetails/>,
-          },
-          {
-            path: "/booksummery/:id",
-            element: <BookDetails/>,
-          },
-          
-          {
-            path: "/counselor/:id",
-            element: <CounselorDetails/>,
-          },
-          
-          {
-            path: "/login-user",
-            element: <LoginUser/>,
-          },
-          {
-            path: "/contact-us",
-            element: <ContactUs/>,
-          },
-          {
-            path: "/join-counselor",
-            element: <JoinCounselor/>,
-          },
-        ],
+        element: <Home />,
       },
+      {
+        path: "/quickExercises",
+        element: <QuickExercises />,
+      },
+      {
+        path: "/mentalTest",
+        element: <MentalTest />,
+      },
+      {
+        path: "/yogaMeditations",
+        element: <YogaMeditations />,
+      },
+
+      {
+        path: "/yogaMeditations/:id",
+        element: <Meditation />,
+      },
+
+
+      {
+        path: "/books",
+        element: <Books />,
+      },
+
+      {
+        path: "/philosophers",
+        element: <PhilosophicalPerspective />,
+      },
+      {
+        path: "/blogs",
+        element: <BlogsMain />,
+      },
+      {
+        path: "/spiritualCounselors",
+        element: <SpiritualCounslr />,
+      },
+      {
+        path: "/philosophicalCounselors",
+        element: <PsychologicalCounslr />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/login/:user/:verify_pin",
+        element: <Login />,
+      },
+      {
+        path: "/forgot-password",
+        element: <ForgotPassword />,
+      },
+      {
+        path: "/reset-password",
+        element: <ResetPassword />,
+      },
+      {
+        path: "/techniques/:id",
+        element: <Techniques />,
+      },
+      {
+        path: "/mentaltest/:id",
+        element: <Test />
+      },
+      {
+        path: "/blog/:id",
+        element: <BlogDetails />,
+      },
+      {
+        path: "/philosophers/:id",
+        element: <PhilosopherDetails />,
+      },
+      {
+        path: "/booksummery/:id",
+        element: <BookDetails />,
+      },
+
+      {
+        path: "/counselor/:id",
+        element: <CounselorDetails />,
+      },
+
+      {
+        path: "/login-user",
+        element: <LoginUser />,
+      },
+      {
+        path: "/contact-us",
+        element: <ContactUs />,
+      },
+      {
+        path: "/join-counselor",
+        element: <JoinCounselor />,
+      },
+    ],
+  },
 ]);
