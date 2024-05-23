@@ -124,15 +124,13 @@ const LoginUser = () => {
   let navigate = useNavigate();
 
   const [userData, setUserData] = useState();
-  const [isLoading, setIsLoading] = useState(false);
   const [bookingUser, setBookingUser] = useState([]);
-
 
   const logoutHandler = () => {
     localStorage.removeItem("token");
     navigate("/");
   }
-
+  
   useEffect(() => {
     getProfile("api/profile/", localStorage.getItem("token")).then((data) => {
       if (data) {
@@ -142,7 +140,6 @@ const LoginUser = () => {
       console.log(err.response.data, "err")
     })
   }, []);
-
 
   useEffect(() => {
     bookedByUser("api/bookings/user", localStorage.getItem("token")).then((data) => {
