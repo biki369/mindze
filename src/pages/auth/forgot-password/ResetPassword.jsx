@@ -68,10 +68,10 @@ const ResetPassword = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (resetPassword.password.length < 6) {
+    if (ResetPassword.password.length < 6) {
       Swal.fire({
         icon: "error",
-        title: `Password doesn't match`,
+        title: `Password must be at least 6 characters`,
         showConfirmButton: false,
         timer: 1500
       })

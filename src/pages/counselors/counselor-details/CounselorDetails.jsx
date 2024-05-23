@@ -375,11 +375,11 @@ const CounselorDetails = () => {
       console.log(err)
     })
   };
+  
   useEffect(() => {
     reviewDataOnLoad();
   }, [isLoading]);
 
-console.log(data)
   return (
     <div className={classes.root}>
       {data !== null ? <Container>

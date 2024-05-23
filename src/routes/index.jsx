@@ -22,6 +22,7 @@ import ContactUs from "../pages/auth/contact-us/ContactUs";
 import JoinCounselor from "../pages/auth/join-counselor/JoinCounselor";
 import ForgotPassword from "../pages/auth/forgot-password/FogetPassword";
 import ResetPassword from "../pages/auth/forgot-password/ResetPassword";
+import VerifyEmail from "../pages/auth/verify-email/VerifyEmail";
 
 export const routes = createBrowserRouter([
   {
@@ -79,7 +80,7 @@ export const routes = createBrowserRouter([
       },
       {
         path: "/login/:user/:verify_pin",
-        element: <Login />,
+        element: <VerifyEmail/>,
       },
       {
         path: "/forgot-password",
