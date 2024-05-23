@@ -76,6 +76,10 @@ export const routes = createBrowserRouter([
             element: <Login/>,
           },
           {
+            path: "/login/:user/:verify_pin",
+            element: <Login/>,
+          },
+          {
             path: "/techniques/:id",
             element: <Techniques/>,
           },

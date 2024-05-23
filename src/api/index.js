@@ -42,10 +42,6 @@ export const bookingsSlot = async (url, parameters, token) => {
 };
 
 export const consultantDetails = async (url, id) => {
-  // const headers = {
-  //   "Content-Type": "application/json",
-  //   Authorization: `Token ${payload}`,
-  // }
   const { data } = await axios.get(`${BASE_URL}/${url}/${id}/`);
   return data;
 };
@@ -58,10 +54,6 @@ export const consultantAddReview = async (url, payload) => {
   return data;
 };
 export const consultantReview = async (url) => {
-  // const headers = {
-  //   "Content-Type": "application/json",
-  //   Authorization: `Token ${payload}`,
-  // }
   const { data } = await axios.get(`${BASE_URL}/${url}/`);
   return data;
 };
@@ -90,3 +82,8 @@ export const giveReview = async (url, parameters, token) => {
   });
   return data;
 };
+
+export const verifyEmail = async(url)=>{
+  const { data } = await axios.get(`${BASE_URL}/${url}`);
+  return data;
+}

@@ -1,9 +1,10 @@
 import React, { useEffect, } from 'react';
-import { Avatar, Button, Grid, makeStyles, Paper, TextField, Typography } from "@material-ui/core";
+import { Avatar, Button, Checkbox, FilledInput, FormControlLabel, Grid, IconButton, Input, InputAdornment, makeStyles, Paper, TextField, Typography } from "@material-ui/core";
 import { Link, useNavigate, } from "react-router-dom";
 import image from "../../../../public/Home_page/1.jpg";
-
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
+import Visibility from '@material-ui/icons/Visibility';
+import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import Swal from 'sweetalert2';
 import { loginUser, registerNewUser } from '../../../api';
 
@@ -50,13 +51,18 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-
 export default function Login(props) {
   const classes = useStyles();
   let navigate = useNavigate();
   const [isSignUp, setIsSignUp] = React.useState(false);
   const [account, setAccount] = React.useState({ username: "", password: "", email: "", first_name: "", last_name: "" });
+  const [showPassword, setShowPassword] = React.useState(false);
   // const [isLoading, setIsLoading] = useState(false)
+
+  const handleClickShowPassword = () => {
+     setShowPassword(!showPassword);
+  };
+
   const handelAccount = (property, event) => {
     const accountCopy = { ...account };
     accountCopy[property] = event.target.value;
@@ -83,6 +89,7 @@ export default function Login(props) {
             showConfirmButton: false,
             timer: 1600
           })
+          console.log(e,"register================");
           setIsSignUp(false);
         }).catch((e) => {
           const { email, password, username, last_name } = e.response.data;
@@ -124,12 +131,9 @@ export default function Login(props) {
         })
       }
     }
-
     //form validation
-
-
-
   };
+
   const signUpForm = () => {
     return (
       <form className={classes.form}  onSubmit={(e) => handelSubmit(e)}>
@@ -193,11 +197,24 @@ export default function Login(props) {
               fullWidth
               name="password"
               label="Password"
-              type="password"
+              type={showPassword ? 'text' : 'password'}
               id="password"
               // value={account.password}
               autoComplete="current-password"
               onChange={(e) => handelAccount("password", e)}
+              InputProps={{
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <IconButton
+                      aria-label="toggle password visibility"
+                      onClick={handleClickShowPassword}
+                      edge="end"
+                    >
+                      {showPassword ? <Visibility /> : <VisibilityOff />}
+                    </IconButton>
+                  </InputAdornment>
+                ),
+              }}
             />
           </Grid>
           <Button
@@ -235,12 +252,25 @@ export default function Login(props) {
           fullWidth
           name="password"
           label="Password"
-          type="password"
+          type={showPassword ? 'text' : 'password'}
           id="password"
-          // value={account.password}
-          // autoComplete="current-password"
           onChange={(e) => handelAccount("password", e)}
+          InputProps={{
+            endAdornment: (
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label="toggle password visibility"
+                  onClick={handleClickShowPassword}
+                  edge="end"
+                >
+                  {showPassword ? <Visibility /> : <VisibilityOff />}
+                </IconButton>
+              </InputAdornment>
+            ),
+          }}
+
         />
+        
         {/* <FormControlLabel
       control={<Checkbox value="remember" color="primary" />}
       label="Remember me"
@@ -287,12 +317,11 @@ export default function Login(props) {
             {isSignUp ? signUpForm() : signInform()}
             <Grid container>
               <Grid item xs>
-
-                {
+                {/* {
                   !isSignUp && <Link href="#" variant="body2">
                     Forgot password?
                   </Link>
-                }
+                } */}
               </Grid>
               <Grid item >
                 <Typography onClick={() => setIsSignUp(!isSignUp)} variant="body2" className='link-from-switch'>
