@@ -89,6 +89,9 @@ export default function Login(props) {
             timer: 1600
           })
           setIsSignUp(false);
+          if(e){
+            navigate("/mail-verification", { state: { username: account.username } });
+          }
         }).catch((e) => {
           const { email, password, username, last_name } = e.response.data;
           const errorMsg = `

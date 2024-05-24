@@ -52,7 +52,6 @@ export const routes = createBrowserRouter([
         element: <Meditation />,
       },
 
-
       {
         path: "/books",
         element: <Books />,
@@ -79,7 +78,7 @@ export const routes = createBrowserRouter([
         element: <Login />,
       },
       {
-        path: "/login/:user/:verify_pin",
+        path: "/mail-verification",
         element: <VerifyEmail/>,
       },
       {

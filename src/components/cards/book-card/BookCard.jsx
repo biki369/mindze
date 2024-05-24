@@ -79,7 +79,7 @@ const BookCard = ({ data, tabId }) => {
 
     return (
         <div className={classes.root}>
-            <Link to={"/booksummery/:3232"} state={data}>
+            <Link to={"/booksummery/369"} state={data}>
                 <div className="book-card">
                     <div className="book-card__cover">
                         <div className="book-card__book">

@@ -84,7 +84,7 @@ export const giveReview = async (url, parameters, token) => {
 };
 
 export const verifyEmail = async(url)=>{
-  const { data } = await axios.get(`${BASE_URL}/${url}`);
+  const { data } = await axios.get(`${BASE_URL}/${url}/`);
   return data;
 }
 

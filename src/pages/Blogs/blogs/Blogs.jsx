@@ -66,7 +66,7 @@ const Blogs = ({id}) => {
         {
           data?.blogs.map((e, i) => (
             <div key={i}>
-                  <Link to={"/blog/:369"} state={e} >
+                  <Link to={"/blog/369"} state={e} >
                     <Paper>
                       <div className="blog">
                         <div className="blog-img">

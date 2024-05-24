@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
 const ResetPassword = () => {
   const classes = useStyles();
   const location = useLocation();
-  let userName = location.state.username || "";
+  let userName = location.state?.username || "";
   // if(userName === null) { 
   //   userName = "";
   // }
