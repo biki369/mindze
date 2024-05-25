@@ -97,3 +97,13 @@ export const resetPassword = async (url, parameters) => {
   const { data } = await axios.post(`${BASE_URL}/${url}/`, parameters);
   return data;
 };
+
+export const contactUs = async (url, parameters) => {
+  const { data } = await axios.post(`${BASE_URL}/${url}/`, parameters);
+  return data;
+};
+
+export const joinAsCounselor = async (url, parameters) => {
+  const { data } = await axios.post(`${BASE_URL}/${url}/`, parameters);
+  return data;
+};

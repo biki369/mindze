@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { TextField, Button, Typography, Grid, Container, makeStyles } from '@material-ui/core';
+import { contactUs } from '../../../api';
+import Swal from 'sweetalert2';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -20,22 +22,57 @@ const ContactUs = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        phoneNum: '',
+        phone_number: '',
         message: '',
 
     });
 
-    const handleChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
-        });
+    const handleChange = (property, event) => {
+        const accountCopy = { ...formData };
+        accountCopy[property] = event.target.value;
+        setFormData(accountCopy);
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Add your logic for form submission here
-        // console.log(formData);
+        if(formData.phone_number.length < 10){
+            Swal.fire({
+                title: 'Error',
+                text: "Please enter a valid phone number",
+                icon: "error",
+                showConfirmButton: false,
+                timer: 1600
+            })
+            return;
+        }
+        contactUs( "api/contact_us", formData).then((data) => {
+            console.log(data,"================")
+            if (data) {
+                Swal.fire({
+                    title: 'Email Sent',
+                    // text: data.info,
+                    text: "your message is successful send to us. We will contact you shortly through mail/phone",
+                    icon: "success",
+                    showConfirmButton: false,
+                    timer: 1900
+                })
+                // .then((result) => {
+                //     if (result.isConfirmed) {
+                //         window.location.reload();
+                //     }
+                // })
+            }
+        }).catch((err) => {
+            console.log(err);
+        });
+
+        setFormData({
+            name: '',
+            email: '',
+            phone_number: '',
+            message: '',
+        })
+        
     };
 
     return (
@@ -53,8 +90,9 @@ const ContactUs = () => {
                                     required
                                     label="Your Name"
                                     name="name"
-                                    value={formData.name}
-                                    onChange={handleChange}
+                                    id='name'
+                                    // value={formData.name}
+                                    onChange={(e) => handleChange("name", e)}
                                     variant="outlined"
                                 />
                             </Grid>
@@ -63,9 +101,10 @@ const ContactUs = () => {
                                     fullWidth
                                     required
                                     label="Phone number"
-                                    name="phoneNum"
-                                    value={formData.phoneNum}
-                                    onChange={handleChange}
+                                    name="phone_number"
+                                    id='phone_number'
+                                    // value={formData.phone_number}
+                                    onChange={(e) => handleChange("phone_number", e)}
                                     variant="outlined"
                                     type='number'
                                 />
@@ -77,8 +116,9 @@ const ContactUs = () => {
                                     type="email"
                                     label="Your Email"
                                     name="email"
-                                    value={formData.email}
-                                    onChange={handleChange}
+                                    id='email'
+                                    // value={formData.email}
+                                    onChange={(e) => handleChange("email", e)}
                                     variant="outlined"
                                 />
                             </Grid>
@@ -90,8 +130,9 @@ const ContactUs = () => {
                                     rows={4}
                                     label="Message"
                                     name="message"
-                                    value={formData.message}
-                                    onChange={handleChange}
+                                    id='message'
+                                    // value={formData.message}
+                                    onChange={(e) => handleChange("message", e)}
                                     variant="outlined"
                                 />
                             </Grid>

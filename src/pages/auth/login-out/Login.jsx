@@ -1,5 +1,5 @@
 import React, { useEffect, } from 'react';
-import { Avatar, Button, Checkbox, FilledInput, FormControlLabel, Grid, IconButton, Input, InputAdornment, makeStyles, Paper, TextField, Typography } from "@material-ui/core";
+import { Avatar, Button, Grid, IconButton, InputAdornment, makeStyles, Paper, TextField, Typography } from "@material-ui/core";
 import { Link, useNavigate, } from "react-router-dom";
 import image from "../../../../public/Home_page/1.jpg";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
@@ -57,17 +57,16 @@ export default function Login(props) {
   const [isSignUp, setIsSignUp] = React.useState(false);
   const [account, setAccount] = React.useState({ username: "", password: "", email: "", first_name: "", last_name: "" });
   const [showPassword, setShowPassword] = React.useState(false);
-  // const [isLoading, setIsLoading] = useState(false)
 
   const handleClickShowPassword = () => {
-     setShowPassword(!showPassword);
+    setShowPassword(!showPassword);
   };
 
   const handelAccount = (property, event) => {
     const accountCopy = { ...account };
     accountCopy[property] = event.target.value;
     setAccount(accountCopy);
-  }
+  };
   const handelSubmit = (e) => {
     e.preventDefault();
 
@@ -89,7 +88,7 @@ export default function Login(props) {
             timer: 1600
           })
           setIsSignUp(false);
-          if(e){
+          if (e) {
             navigate("/mail-verification", { state: { username: account.username } });
           }
         }).catch((e) => {
@@ -137,7 +136,7 @@ export default function Login(props) {
 
   const signUpForm = () => {
     return (
-      <form className={classes.form}  onSubmit={(e) => handelSubmit(e)}>
+      <form className={classes.form} onSubmit={(e) => handelSubmit(e)}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
             <TextField
@@ -230,7 +229,7 @@ export default function Login(props) {
         </Grid>
       </form>
     )
-  }
+  };
 
   const signInform = () => {
     return (
@@ -271,7 +270,7 @@ export default function Login(props) {
           }}
 
         />
-        
+
         {/* <FormControlLabel
       control={<Checkbox value="remember" color="primary" />}
       label="Remember me"
@@ -287,7 +286,7 @@ export default function Login(props) {
         </Button>
 
       </form>)
-  }
+  };
 
   useEffect(() => {
     if (localStorage.getItem("token")) {
