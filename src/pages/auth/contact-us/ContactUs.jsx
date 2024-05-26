@@ -46,22 +46,21 @@ const ContactUs = () => {
             return;
         }
         contactUs( "api/contact_us", formData).then((data) => {
-            console.log(data,"================")
-            if (data) {
+            // console.log(data,"================")
+            // if (data) {}
                 Swal.fire({
                     title: 'Email Sent',
                     // text: data.info,
                     text: "your message is successful send to us. We will contact you shortly through mail/phone",
                     icon: "success",
-                    showConfirmButton: false,
-                    timer: 1900
+                    // showConfirmButton: false,
+                    // timer: 1900
                 })
                 // .then((result) => {
                 //     if (result.isConfirmed) {
-                //         window.location.reload();
+                //         window.location.href = "/";
                 //     }
                 // })
-            }
         }).catch((err) => {
             console.log(err);
         });
@@ -91,7 +90,7 @@ const ContactUs = () => {
                                     label="Your Name"
                                     name="name"
                                     id='name'
-                                    // value={formData.name}
+                                    value={formData.name}
                                     onChange={(e) => handleChange("name", e)}
                                     variant="outlined"
                                 />
@@ -103,7 +102,7 @@ const ContactUs = () => {
                                     label="Phone number"
                                     name="phone_number"
                                     id='phone_number'
-                                    // value={formData.phone_number}
+                                    value={formData.phone_number}
                                     onChange={(e) => handleChange("phone_number", e)}
                                     variant="outlined"
                                     type='number'
@@ -117,7 +116,7 @@ const ContactUs = () => {
                                     label="Your Email"
                                     name="email"
                                     id='email'
-                                    // value={formData.email}
+                                    value={formData.email}
                                     onChange={(e) => handleChange("email", e)}
                                     variant="outlined"
                                 />
@@ -131,7 +130,7 @@ const ContactUs = () => {
                                     label="Message"
                                     name="message"
                                     id='message'
-                                    // value={formData.message}
+                                    value={formData.message}
                                     onChange={(e) => handleChange("message", e)}
                                     variant="outlined"
                                 />

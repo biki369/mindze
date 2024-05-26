@@ -1,6 +1,3 @@
-
-
-
 import { useState } from 'react';
 import { TextField, Button, Typography, Grid, Container, makeStyles } from '@material-ui/core';
 import Swal from 'sweetalert2';
@@ -51,24 +48,23 @@ const JoinCounselor = () => {
 
         joinAsCounselor( "api/join_as_counselor", formData).then((data) => {
             // console.log(data,"================")
-            if (data) {
                 Swal.fire({
                     title: 'Email Sent',
                     // text: data.info,
                     text: "your message is successful send to us. We will contact you shortly through mail/phone",
                     icon: "success",
-                    showConfirmButton: false,
-                    timer: 1900
+                    // showConfirmButton: false,
+                    // timer: 1900
                 })
                 // .then((result) => {
                 //     if (result.isConfirmed) {
-                //         window.location.reload();
+                //         window.location.href = "/";
                 //     }
                 // })
-            }
         }).catch((err) => {
             console.log(err);
         });
+
         setFormData({
             name: '',
             email: '',
@@ -76,6 +72,7 @@ const JoinCounselor = () => {
             message: '',
         })
     };
+
     return (
         <dv >
             <Container maxWidth="md" className={classes.root}>
@@ -92,7 +89,7 @@ const JoinCounselor = () => {
                                     label="Your Name"
                                     name="name"
                                     id='name'
-                                    // value={formData.name}
+                                    value={formData.name}
                                     onChange={(e) => handleChange("name", e)}
                                     variant="outlined"
                                 />
@@ -104,7 +101,7 @@ const JoinCounselor = () => {
                                     label="Phone number"
                                     name="phone_number"
                                     id='phone_number'
-                                    // value={formData.phone_number}
+                                    value={formData.phone_number}
                                     onChange={(e) => handleChange("phone_number", e)}
                                     variant="outlined"
                                     type='number'
@@ -118,7 +115,7 @@ const JoinCounselor = () => {
                                     label="Your Email"
                                     name="email"
                                     id='email'
-                                    // value={formData.email}
+                                    value={formData.email}
                                     onChange={(e) => handleChange("email", e)}
                                     variant="outlined"
                                 />
@@ -132,7 +129,7 @@ const JoinCounselor = () => {
                                     label="Message"
                                     name="message"
                                     id='message'
-                                    // value={formData.message}
+                                    value={formData.message}
                                     onChange={(e) => handleChange("message", e)}
                                     variant="outlined"
                                 />
