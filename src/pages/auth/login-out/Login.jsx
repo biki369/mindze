@@ -75,17 +75,17 @@ export default function Login(props) {
         icon: "error",
         title: `Password must be at least 6 characters`,
         showConfirmButton: false,
-        timer: 1500
+        timer: 1600
       })
     } else {
-
       if (isSignUp) {
         registerNewUser("api/register/", account).then((e) => {
           Swal.fire({
             icon: "success",
             title: e.Success,
+            text: "OTP has been sent to registered email id",
             showConfirmButton: false,
-            timer: 1600
+            timer: 2300
           })
           setIsSignUp(false);
           if (e) {
@@ -121,16 +121,33 @@ export default function Login(props) {
             })
           }
         }).catch((e) => {
-          const { non_field_errors, info } = e.response.data
+          const { non_field_errors, info } = e.response.data;
+          if (info) {
+            Swal.fire({
+              title: 'Email not verified',
+              text: "Please verify your email ok to continue",
+              icon: "error",
+              // showConfirmButton: false,
+              // timer: 1900
+            })
+              .then((result) => {
+                if (result.isConfirmed) {
+                  navigate("/mail-verification", { state: { username: account.username } });
+                }
+              })
+            return;
+          }
           Swal.fire({
             icon: "error",
-            title: `${info || "PLease check your credentials"}`,
+            // title:"",
+            title: `PLease check your username and password`,
             showConfirmButton: false,
-            timer: 900
+            timer: 1600
           })
         })
       }
     }
+    setAccount({ username: "", password: "", email: "", first_name: "", last_name: "" });
     //form validation
   };
 
@@ -147,7 +164,7 @@ export default function Login(props) {
               id="firstName"
               label="First Name"
               // autoFocus
-              // value={account.first_name}
+              value={account.first_name}
               onChange={(e) => handelAccount("first_name", e)}
             />
           </Grid>
@@ -159,7 +176,7 @@ export default function Login(props) {
               id="lastName"
               label="Last Name"
               name="last_name"
-              // value={account.last_name}
+              value={account.last_name}
               onChange={(e) => handelAccount("last_name", e)}
             />
           </Grid>
@@ -171,7 +188,7 @@ export default function Login(props) {
               id="username"
               label="User Name"
               name="username"
-              // value={account.username}
+              value={account.username}
               // autoComplete="uname"
               onChange={(e) => handelAccount("username", e)}
             />
@@ -199,7 +216,7 @@ export default function Login(props) {
               label="Password"
               type={showPassword ? 'text' : 'password'}
               id="password"
-              // value={account.password}
+              value={account.password}
               autoComplete="current-password"
               onChange={(e) => handelAccount("password", e)}
               InputProps={{
@@ -241,7 +258,7 @@ export default function Login(props) {
           id="username"
           label="User Name"
           name="username"
-          // value={account.username}
+          value={account.username}
           // autoComplete="uname"
           onChange={(e) => handelAccount("username", e)}
         />
@@ -252,6 +269,7 @@ export default function Login(props) {
           fullWidth
           name="password"
           label="Password"
+          value={account.password}
           type={showPassword ? 'text' : 'password'}
           id="password"
           onChange={(e) => handelAccount("password", e)}
