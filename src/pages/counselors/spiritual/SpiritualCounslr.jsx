@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
             flexWrap: "wrap",
             alignItems: "center",
             paddingLeft:"1rem",
+            [theme.breakpoints.down("md")]: {
+                paddingLeft:"0",
+            },
             // justifyContent: "center",
             "& .counselor": {
                 padding: "6px 10px",

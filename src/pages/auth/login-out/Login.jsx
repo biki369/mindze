@@ -334,14 +334,14 @@ export default function Login(props) {
           <div>
             {isSignUp ? signUpForm() : signInform()}
             <Grid container>
-              <Grid item xs>
+              <Grid item sx={12} md={6}>
                 {
                   !isSignUp && <Link to={"/forgot-password"} variant="body2">
                     Forgot password?
                   </Link>
                 }
               </Grid>
-              <Grid item >
+              <Grid item sx={12}  md={6}>
                 <Typography onClick={() => setIsSignUp(!isSignUp)} variant="body2" className='link-from-switch'>
                   {!isSignUp ? "Don't have an account? Sign Up" : " Already have an account? Sign In"}
                 </Typography>
