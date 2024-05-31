@@ -6,7 +6,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import { heroSliderImg} from '../../data';
+import { heroSliderImg } from '../../data';
+import NoCounselors from '../../components/NoCounselors/NoCounselors';
 // import ServiceSlider from '../../components/sliders/serice-sldier/ServiceSlider';
 
 const useStyles = makeStyles((theme) => ({
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
       },
       "& img": {
         width: '100%',
-        height:"100%",
+        height: "100%",
         // objectFit: "cover",
         filter: "brightness(0.66)",
         zIndex: 1,
@@ -32,14 +33,16 @@ const useStyles = makeStyles((theme) => ({
       "& .sliderText": {
         position: "absolute",
         zIndex: 99,
-        top: '50%',
+        top: '30%',
         left: "50%",
         transform: "translate(-50%,-50%)",
-        fontFamily: "Grape Nuts, cursive",
+        fontFamily:'Poppins',
+        fontWeight:200,
+        // fontFamily: "Grape Nuts, cursive",
         color: "#fff",
-        fontSize: '90px',
+        fontSize: '60px',
         [theme.breakpoints.down("md")]: {
-          fontSize: '60px',
+          fontSize: '30px',
           // top: '40%',
           textAlign: "center",
           // left: "10%",
@@ -147,58 +150,10 @@ const useStyles = makeStyles((theme) => ({
       }
     }
   },
-
-  noCouncellors: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'column',
-    padding: '2.3rem',
-    fontSize: '1.3rem',
-    margin: '1.5rem 0',
-    // background:'#808080',
-
-    "& .head": {
-      fontSize: " 3rem",
-      margin: '1rem 0',
-      textAlign: "center",
-      [theme.breakpoints.down(600)]: {
-        fontSize: " 2rem",
-      },
-    },
-
-  }
 }));
 
 const Home = () => {
   const classes = useStyles();
-
-  const NoCounselors = ({ text, yes }) => {
-    return (
-      <>
-        <div className={classes.noCouncellors}>
-          <h1 className="head">{text}</h1>
-          {/* <h2>Stay tuned!</h2> */}
-          <Button variant='contained' color='primary'>Stay tuned !</Button>
-          {/* <Chip
-            label="Stay tuned !"
-            clickable
-            color="primary"/> */}
-          {
-            !yes && <p>We'll keep you posted once we've connected with our latest lineup of counselors!
-            </p>
-          }
-
-          {
-            yes && <p>We'll keep you posted once we've connected</p>
-          }
-
-
-
-        </div>
-      </>
-    )
-  };
 
   return (
     <div className={classes.root}>
@@ -241,12 +196,12 @@ const Home = () => {
 
       <div >
         {/* <ServiceSlider text={"Psychological Councellors"} data={reviewData} /> */}
-        <NoCounselors text="Psychological Councellors" />
+        <NoCounselors text="Psychological Councellors" h/>
 
       </div>
       <div >
         {/* <ServiceSlider text={"Spiritual Councellors"} data={reviewData} /> */}
-        <NoCounselors text={"Spiritual Councellors"} />
+        <NoCounselors text={"Spiritual Councellors"} h />
       </div>
 
       <div className="review-section">
