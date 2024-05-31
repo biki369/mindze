@@ -1,4 +1,4 @@
-import { Box, Typography, makeStyles,} from '@material-ui/core';
+import { Box, Button, Typography, makeStyles, } from '@material-ui/core';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -6,8 +6,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import { heroSliderImg, reviewData } from '../../data';
-import ServiceSlider from '../../components/sliders/serice-sldier/ServiceSlider';
+import { heroSliderImg} from '../../data';
+// import ServiceSlider from '../../components/sliders/serice-sldier/ServiceSlider';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,15 +15,15 @@ const useStyles = makeStyles((theme) => ({
     "& .heroImgBox": {
       position: "relative",
       width: "100vw",
-      height: "93vh",
+      height: "96vh",
       [theme.breakpoints.down(760)]: {
         height: "43vh",
       },
       "& img": {
         width: '100%',
-        // height:"100%",
-        objectFit: "cover",
-        filter: "brightness(0.5)",
+        height:"100%",
+        // objectFit: "cover",
+        filter: "brightness(0.66)",
         zIndex: 1,
         [theme.breakpoints.down(600)]: {
           height: "100%",
@@ -35,11 +35,11 @@ const useStyles = makeStyles((theme) => ({
         top: '50%',
         left: "50%",
         transform: "translate(-50%,-50%)",
-        fontFamily:  "Grape Nuts, cursive",
+        fontFamily: "Grape Nuts, cursive",
         color: "#fff",
-        fontSize: '50px',
-        [theme.breakpoints.down(600)]: {
-          fontSize: '36px',
+        fontSize: '90px',
+        [theme.breakpoints.down("md")]: {
+          fontSize: '60px',
           // top: '40%',
           textAlign: "center",
           // left: "10%",
@@ -72,8 +72,8 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         "& img": {
           width: '500px',
-          height:'330px',
-          marginTop:'1rem',
+          height: '330px',
+          marginTop: '1rem',
           borderRadius: '30px',
           [theme.breakpoints.down('md')]: {
             width: '360px',
@@ -147,31 +147,58 @@ const useStyles = makeStyles((theme) => ({
       }
     }
   },
-}));
 
+  noCouncellors: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+    padding: '2.3rem',
+    fontSize: '1.3rem',
+    margin: '1.5rem 0',
+    // background:'#808080',
+
+    "& .head": {
+      fontSize: " 3rem",
+      margin: '1rem 0',
+      textAlign: "center",
+      [theme.breakpoints.down(600)]: {
+        fontSize: " 2rem",
+      },
+    },
+
+  }
+}));
 
 const Home = () => {
   const classes = useStyles();
-  // const [spiritualData, setSpiritualData] = useState();
-  // const [psychologicalData, setPsychologicalData] = useState();
-  // const [isLoading, setIsLoading] = useState(false)
 
-  // useEffect(() => {
-  //   getConsultant("api/consultant/spiritual",localStorage.getItem("token")).then((data) =>
-  //     setSpiritualData(data),
-  //   )
-  // }, [isLoading])
+  const NoCounselors = ({ text, yes }) => {
+    return (
+      <>
+        <div className={classes.noCouncellors}>
+          <h1 className="head">{text}</h1>
+          {/* <h2>Stay tuned!</h2> */}
+          <Button variant='contained' color='primary'>Stay tuned !</Button>
+          {/* <Chip
+            label="Stay tuned !"
+            clickable
+            color="primary"/> */}
+          {
+            !yes && <p>We'll keep you posted once we've connected with our latest lineup of counselors!
+            </p>
+          }
 
-  // useEffect(() => {
-  //   getConsultant("api/consultant/psychological",localStorage.getItem("token")).then((data) =>
-  //     setIsLoading(true)
-  //   )
-  // }, [isLoading])
+          {
+            yes && <p>We'll keep you posted once we've connected</p>
+          }
 
-  // console.log(spiritualData, "==================s");
-  // console.log(psychologicalData, "==================");
-  // style={{backgroundImage: `url(${e.img}), linearGradient(#0001, #0001)`, 
-  //               backgroundPosition:"center center",backgroundSize:"cover" }}
+
+
+        </div>
+      </>
+    )
+  };
 
   return (
     <div className={classes.root}>
@@ -179,10 +206,10 @@ const Home = () => {
         <Swiper
           centeredSlides={true}
           autoplay={{
-            delay: 1000,
+            delay: 6360,
             disableOnInteraction: false,
           }}
-          speed={5000}
+          speed={3000}
           loop={true}
           // slidesPerView={1}
           modules={[Pagination, Navigation, Scrollbar, Autoplay]}
@@ -193,7 +220,7 @@ const Home = () => {
             heroSliderImg.map((e, i) => (
               <SwiperSlide key={i}>
                 <Box className='heroImgBox' >
-                  <img src={e.img} alt="slider" className='heroImg'/>
+                  <img src={e.img} alt="slider" className='heroImg' />
                   <Typography className='sliderText'>{e.text}</Typography>
                 </Box>
               </SwiperSlide>
@@ -213,27 +240,32 @@ const Home = () => {
       </div>
 
       <div >
-        <ServiceSlider text={"Psychological Councellors"} data={reviewData} />
+        {/* <ServiceSlider text={"Psychological Councellors"} data={reviewData} /> */}
+        <NoCounselors text="Psychological Councellors" />
+
       </div>
       <div >
-        <ServiceSlider text={"Spiritual Councellors"} data={reviewData} />
+        {/* <ServiceSlider text={"Spiritual Councellors"} data={reviewData} /> */}
+        <NoCounselors text={"Spiritual Councellors"} />
       </div>
 
       <div className="review-section">
-        <h1>What People Say About</h1>
-        <div className="reviews">
+        {/* <h1>What People Say About</h1> */}
+        <NoCounselors text={"People Say About"} yes />
+        {/* <div className="reviews">
           <div >
             <ServiceSlider text={"Individual Reviews"} data={reviewData} />
           </div>
           <div >
             <ServiceSlider text={"Organisation Reviews"} data={reviewData} />
           </div>
-        </div>
+        </div> */}
       </div>
-      
+
       <div className="trustedBy-section">
         <div >
-          <ServiceSlider text={"Trusted by"} trustbyData={reviewData} />
+          <NoCounselors text={"Trusted by"} yes />
+          {/* <ServiceSlider text={"Trusted by"} trustbyData={reviewData} /> */}
         </div>
       </div>
 

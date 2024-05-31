@@ -8,6 +8,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+
 const useStyles = makeStyles((theme) => ({
     root: {
         "& .footer-container": {
@@ -73,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 const Footer = () => {
     const classes = useStyles();
-
+    
     return (
         <div className={classes.root}>
             <div className="footer-container">
@@ -87,7 +88,7 @@ const Footer = () => {
                                 </div>
                                 <li>
                                     <LocationOnIcon />
-                                    xyz,xyz , india
+                                    Lanka, Varanasi, India
                                 </li>
                                 <li>
                                     <EmailIcon />
@@ -95,7 +96,7 @@ const Footer = () => {
                                 </li>
                                 <li>
                                     <PhoneIcon />
-                                    +91 xxxxxxxxx
+                                    +91 9085661980
                                 </li>
                             </ul>
                             <ul className="social-links">
@@ -125,7 +126,7 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div className="ul-items">
-                            <ul  className='quick-links'>
+                            <ul className='quick-links'>
                                 <h3>Quick Links</h3>
                                 <li>
                                     <Link to={"/philosophers"}>Philosophical Perspectives</Link>
@@ -167,6 +168,6 @@ const Footer = () => {
             </div>
         </div>
     )
-}
+};
 
 export default Footer

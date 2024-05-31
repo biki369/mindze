@@ -61,58 +61,53 @@ export const menuLits = [
 
 export const heroSliderImg = [
   {
-    img: "Home_page/1.jpg",
-    text: "Empower Your Mind, Enrich Your Life",
+    img: "Home_page/1.gif",
+    text: "Welcome to Calmness",
   },
   {
-    img: "Home_page/2.jpg",
-    text: "Empathetic Understanding, Modern Solutions",
+    img: "Home_page/2.gif",
+    // text: "Empathetic Understanding, Modern Solutions",
   },
   {
-    img: "Home_page/3.jpg",
-    text: "Your Safe Space for Mental Fitness",
+    img: "Home_page/3.gif",
+    // text: "Your Safe Space for Mental Fitness",
   },
   {
-    img: "Home_page/4.jpg",
-    text: "Revive Your Spirit, Rediscover Balance",
+    img: "Home_page/4.gif",
+    // text: "Revive Your Spirit, Rediscover Balance",
   },
 ];
 
 export const reviewData = [
   {
-    name: "Title",
-    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum quod atque dolore iure? ",
-    img: "philosophers_image/b_2.jpg",
+    // name: "Title",
+    desc: "Stay tuned! We'll keep you posted once we've connected with our latest lineup of counselors!",
+    img: "/dummy-image.jpg",
   },
   {
-    img: "philosophers_image/b_3.jpg",
-    name: "Title",
-
-    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum quod ",
+    img: "/dummy-image.jpg",
+    // name: "Title",
+    desc: "Stay tuned! We'll keep you posted once we've connected with our latest lineup of counselors!",
   },
   {
-    img: "philosophers_image/b_4.jpg",
-    name: "Title",
-
-    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum quod ",
+    img: "/dummy-image.jpg",
+    // name: "Title",
+    desc: "Stay tuned! We'll keep you posted once we've connected with our latest lineup of counselors!",
   },
   {
-    img: "philosophers_image/mst_1.jpg",
-    name: "Title",
-
-    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum quod ",
+    img: "/dummy-image.jpg",
+    // name: "Title",
+    desc: "Stay tuned! We'll keep you posted once we've connected with our latest lineup of counselors!",
   },
   {
-    img: "philosophers_image/b_6.jpg",
-    name: "Title",
-
-    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum quod ",
+    img: "/dummy-image.jpg",
+    // name: "Title",
+    desc: "Stay tuned! We'll keep you posted once we've connected with our latest lineup of counselors!",
   },
   {
-    img: "philosophers_image/s_3.jpg",
-    name: "Title",
-
-    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio nostrum quod ",
+    img: "/dummy-image.jpg",
+    // name: "Title",
+    desc: "Stay tuned! We'll keep you posted once we've connected with our latest lineup of counselors!",
   },
 ];
 
