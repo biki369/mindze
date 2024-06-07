@@ -45,32 +45,32 @@ const PsychologicalCounslr = () => {
     const [item, setItem] = useState();
     const [,psychologicalData] = useOutletContext();
 
-    // const handleOpenModal = (evn, e) => {
-    //     if (localStorage.getItem("token") !== null) {
-    //         setOpenModal(true);
-    //         setItem(e);
-    //         // setDate(todayDate)
-    //     } else {
-    //         Swal.fire({
-    //             icon: 'warning',
-    //             showCancelButton: true,
-    //             title: `Please login to booked session.`,
-    //             confirmButtonColor: '#3085d6',
-    //             cancelButtonColor: '#d33',
-    //             confirmButtonText: 'Go to login page',
-    //             cancelButtonText: 'No'
-    //         }).then((result) => {
-    //             if (result.isConfirmed) {
-    //                 window.open("/login");
-    //             }
-    //         })
+    const handleOpenModal = (evn, e) => {
+        if (localStorage.getItem("token") !== null) {
+            setOpenModal(true);
+            setItem(e);
+            // setDate(todayDate)
+        } else {
+            Swal.fire({
+                icon: 'warning',
+                showCancelButton: true,
+                title: `Please login to booked session.`,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Go to login page',
+                cancelButtonText: 'No'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.open("/login");
+                }
+            })
 
-    //     }
-    // };
+        }
+    };
     return (
         <div className={classes.root}
         >
-            {/* {
+            {
                 psychologicalData === null ? (<div className='loader'>
                     <Loader />
                 </div>) : (
@@ -86,8 +86,8 @@ const PsychologicalCounslr = () => {
                     </div>
                 )
             }
-        */}
-            <NoCounselors p/>
+       
+            {/* <NoCounselors p/> */}
             <BookingSlot openModal={openModal} setOpenModal={setOpenModal} item={item} />
         </div>
     )

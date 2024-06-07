@@ -14,6 +14,9 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         width:356,
+        [theme.breakpoints.down(760)]: {
+          width: "100%",
+        },
         "&:hover": {
           boxShadow: 'none',
         },

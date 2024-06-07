@@ -26,9 +26,9 @@ export const shortExerciseData = [
     {
         image: "/shortExercise_image/9.svg",
     },
-    {
-        image: "/shortExercise_image/10.svg",
-    },
+    // {
+    //     image: "/shortExercise_image/10.svg",
+    // },
     {
         image: "/shortExercise_image/11.svg",
     },
@@ -149,15 +149,7 @@ export const shortExerciseData = [
     {
         image: "/shortExercise_image/50.svg",
     },
-    {
-        image: "/shortExercise_image/50.svg",
-    },
-    {
-        image: "/shortExercise_image/50.svg",
-    },
-    {
-        image: "/shortExercise_image/50.svg",
-    },
+   
     {
         image: "/shortExercise_image/51.svg",
     },

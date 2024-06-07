@@ -1,5 +1,5 @@
-import { Avatar, Button, Container, LinearProgress,Paper, TextField, makeStyles } from "@material-ui/core"
-import { Link,useParams } from "react-router-dom";
+import { Avatar, Button, Container, LinearProgress, Paper, TextField, makeStyles } from "@material-ui/core"
+import { Link, useParams } from "react-router-dom";
 import HomeIcon from '@material-ui/icons/Home';
 import SchoolIcon from '@material-ui/icons/School';
 import Rating from '@material-ui/lab/Rating';
@@ -9,7 +9,7 @@ import EmojiEventsIcon from '@material-ui/icons/EmojiEvents';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import { useEffect, useState } from "react";
 import Loader from "../../../components/loader/Loader";
-import {consultantDetails, consultantReview, giveReview } from "../../../api";
+import { consultantDetails, consultantReview, giveReview } from "../../../api";
 import Swal from "sweetalert2";
 import BookingSlot from "../../../components/booking-slots/BookingSlot";
 // import BackCurrent from "../../../components/back-current/BackCurrent";
@@ -74,6 +74,26 @@ const useStyles = makeStyles((theme) => ({
             alignItems: 'center',
             "& svg": {
               color: theme.palette.primary.main
+            }
+            ,
+          },
+          "& .edu": {
+            display: 'flex',
+            // gap: 10,
+            color: "#000",
+            alignItems: 'center',
+            "& .title":{
+              fontWeight:'bold'
+            },
+            // fontSize: 13,
+            fontWeight: 500,
+            "& .degree-info":{
+              display: 'flex',
+              gap: 6,
+              color: "#000",
+              alignItems: 'center',
+              // fontSize: 13,
+              fontWeight: 500,
             }
           }
         },
@@ -291,26 +311,26 @@ const CounselorDetails = () => {
 
   const handleOpenModal = (evn, e) => {
     if (localStorage.getItem("token") !== null) {
-        setOpenModal(true);
-        // setItem(e);
-        // setDate(todayDate)
+      setOpenModal(true);
+      // setItem(e);
+      // setDate(todayDate)
     } else {
-        Swal.fire({
-            icon: 'warning',
-            showCancelButton: true,
-            title: `Please login to booked session.`,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Go to login page',
-            cancelButtonText: 'No'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                window.open("/login");
-            }
-        })
+      Swal.fire({
+        icon: 'warning',
+        showCancelButton: true,
+        title: `Please login to booked session.`,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Go to login page',
+        cancelButtonText: 'No'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.open("/login");
+        }
+      })
 
     }
-};
+  };
   const submitReview = (e) => {
     e.preventDefault();
     if (writeReview === "") {
@@ -375,7 +395,7 @@ const CounselorDetails = () => {
       console.log(err)
     })
   };
-  
+
   useEffect(() => {
     reviewDataOnLoad();
   }, [isLoading]);
@@ -385,7 +405,7 @@ const CounselorDetails = () => {
       {data !== null ? <Container>
         <div className="profile-content">
           <div className="top">
-            <h3><span><Link to={data.is_spiritual?"/spiritualCounselors":"/philosophicalCounselors"}>  <HomeIcon /></Link></span>{data?.name}'s profile</h3>
+            <h3><span><Link to={data.is_spiritual ? "/spiritualCounselors" : "/philosophicalCounselors"}>  <HomeIcon /></Link></span>{data?.name}'s profile</h3>
             {/* <BackCurrent  link={data?.is_spiritual?"/spiritualCounselors":"/philosophicalCounselors"} name={data?.is_spiritual?"Spiritual Counselors":"Philosophical Counselors"}  /> */}
           </div>
           <Paper >
@@ -397,12 +417,31 @@ const CounselorDetails = () => {
               <div className="profile-info">
                 <div className="profile-info-top">
                   <h3>{data?.name}</h3>
-                  <p> <span><StarsIcon /></span> <strong>interest:</strong>{data?.interest}</p>
-                  <p><span><EmojiEventsIcon /></span> <strong>Exp:</strong>{data?.exp}+ years</p>
-                  <p className="edu"><span><SchoolIcon /></span>{data?.education}</p>
+                  <p> <span><StarsIcon /></span> <strong>interest:</strong>{data?.area_of_expertise}</p>
+                  <p className="price"> <span><StarsIcon /></span> <strong>number of individual sessions:</strong> {data?.number_of_individual_sessions}</p>
+                  <p className='price'><span><StarsIcon /></span><strong>number of webinar sessions</strong>{data?.number_of_webinar_sessions}</p>
+                  <p><span><EmojiEventsIcon /></span> <strong>year of experience:</strong>{data?.year_of_experience}+ years</p>
+                  <p className="edu"><span><SchoolIcon /></span>
+                  <span className="title">institute name :</span>
+                    <div className="degree-info">
+                       <span> {data?.institute1_name},</span>
+                       <span> {data?.institute2_name},</span>,
+                       <span> {data?.institute3_name}</span>
+                    </div>
+                  </p>
+                  <p className="edu"><span><SchoolIcon /></span>
+                 <span  className="title">degrees</span>
+                    <div className="degree-info">
+                       <span> {data?.degree1_name},</span>
+                       <span> {data?.degree2_name},</span>
+                       <span> {data?.degree3_name}</span>
+                    </div>
+                  </p>
+                  <p className="designation"><span><CheckCircleIcon /></span><strong>language:</strong>{data?.language}</p>
                   <p className="designation"><span><CheckCircleIcon /></span><strong>designation:</strong>{data?.designation}</p>
-                  <p className="price"> <span><LocalOfferIcon /></span> <strong>Annual price:</strong> {data?.price?.annual}</p>
-                  <p className='price'><span><LocalOfferIcon /></span><strong>Monthly price</strong>{data?.price?.monthly}</p>
+                  <p className="price"> <span><LocalOfferIcon /></span> <strong>individual sessions price:</strong> {data?.individual_session_price} ₹</p>
+                  <p className='price'><span><LocalOfferIcon /></span><strong>webinar sessions price</strong>{data?.webinar_session_price} ₹</p>
+             
                   <div className="profile-btn">
                     <button onClick={handleOpenModal}>Book now</button>
                   </div>
@@ -422,10 +461,10 @@ const CounselorDetails = () => {
                   <h4>Ratings & Reviews</h4>
                   <div className="review">
                     <div className="review-stars">
-                      <h5>4.8</h5>
-                      <Rating name="read-only" value={4} readOnly />
+                      <h5>{data?.rating}.0</h5>
+                      <Rating name="read-only" value={data?.rating} readOnly />
                     </div>
-                    <div className="review-bar">
+                    {/* <div className="review-bar">
                       <div className="bar">
                         <div className="bar-number">5</div>
                         <div className="d-bar"><LinearProgress color="primary" variant="determinate" value={86} /></div>
@@ -443,8 +482,7 @@ const CounselorDetails = () => {
                         <div className="d-bar"><LinearProgress color="secondary" variant="determinate" value={16} /></div>
                       </div>
 
-
-                    </div>
+                    </div> */}
                   </div>
                   <div className="write-review">
                     {/* <h4>Write a review</h4> */}
@@ -497,7 +535,7 @@ const CounselorDetails = () => {
             </div>
           </div>
         </div>
-        <BookingSlot  openModal={openModal} setOpenModal={setOpenModal} item={data} />
+        <BookingSlot openModal={openModal} setOpenModal={setOpenModal} item={data} />
       </Container> : <Loader />}
     </div>
   )
