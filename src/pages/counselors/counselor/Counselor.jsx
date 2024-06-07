@@ -1,48 +1,45 @@
-import { Avatar, Button, Grid, Paper, makeStyles } from '@material-ui/core';
+import { Avatar, Button, Grid, IconButton, Paper, makeStyles } from '@material-ui/core';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import StarsIcon from '@material-ui/icons/Stars';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+import SchoolIcon from '@material-ui/icons/School';
+import { Opacity } from '@material-ui/icons';
+
 const useStyles = makeStyles((theme) => ({
     root: {
-
         "& .counselor": {
             padding: "6px 10px",
             display: "flex",
+            gap: 30,
+            cursor: "pointer",
+            alignItems: 'center',
+            justifyContent: 'center',
             [theme.breakpoints.down(500)]: {
                 width: "100%",
             },
-            gap: 16,
-            cursor: "pointer",
             "& .counselor-about": {
-                "& > div": {
-                    margin: "2px 0"
+                "& > p": {
+                    textAlign: 'center',
+                    fontWeight: 400,
+                    // margin: "2px 0"
                 },
                 "& .name": {
                     fontSize: '1rem',
-                    fontWeight: 600,
-                    display: "flex",
-                    // justifyContent: 'center',
-                    alignItems: 'center',
-                    gap: 10,
-                    "& .counslr-online": {
-                        display: "inline-block",
-                        width: 16,
-                        height: 16,
-                        borderRadius: '50%',
-                        // backgroundColor: "#00b894",
-                        // boxShadow: "0 0 0 2px #00b894",
-                    }
+                    // fontWeight: 600,
                 },
 
                 "& .edu": {
-                    display: "flex",
-                    gap: 10,
+                    // display: "flex",
+                    // gap: 10,
                     color: "#000",
-                    alignItems: 'center',
+                    // alignItems: 'center',
                 },
+
 
             },
 
@@ -86,11 +83,25 @@ const useStyles = makeStyles((theme) => ({
                 width: "100%",
                 // padding: "10px 0",
             },
+        },
+        "& .show-more": {
+            cursor: 'pointer',
         }
+
+    },
+    counslrAvatar: {
+        width: 100,
+        height: 100
     }
 }));
+
 function Counselor({ e, handleOpenModal }) {
     const classes = useStyles();
+    const [showMore, setShowMore] = useState(false)
+
+    const showHandler = () => {
+        setShowMore(!showMore)
+    }
 
     //   const [openModal, setOpenModal] = useState(false);
     //   const [item, setItem] = useState();
@@ -118,8 +129,6 @@ function Counselor({ e, handleOpenModal }) {
     //     }
     // };
 
-
-
     return (
         <div className={classes.root}>
             <Paper className='paper-dev'>
@@ -129,26 +138,38 @@ function Counselor({ e, handleOpenModal }) {
                             <Avatar alt="counselor-img" src={e?.img} className={classes.counslrAvatar} />
                         </div>
                         <div className="counselor-about">
-                            <p className="name">{e?.name}</p>
+                            <p className="name">Name: {e?.name}</p>
                             <p className="exp">{e?.year_of_experience}+ years of experience</p>
+                            <p className="exp">Languages: {e?.language}</p>
                         </div>
                     </div>
                     <div className='designation-section'>
                         <div className="designation">
-                            <p><span><StarsIcon /></span> <strong>designation:</strong> {e?.designation}</p>
+                            <p><span><SchoolIcon /></span> <strong>Degree:</strong> {e?.degree1_name}, {e?.degree3_name}, {e?.degree3_name}</p>
                         </div>
                         <div className='interest'>
-
-                            <p><span><CheckCircleIcon /></span><strong>interest:</strong>{e?.interest}</p>
+                            <p>
+                                <span><StarsIcon /></span><strong>Area of interest:</strong>
+                                <span onClick={showHandler} className='show-more'>
+                                    {showMore ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+                                </span>
+                            </p>
+                            {
+                                showMore && <>
+                                    <div>
+                                        hi ..........
+                                    </div>
+                                </>
+                            }
                         </div>
                         {/* <div className="edu"><span><SchoolIcon /></span> {e.education}</div> */}
                     </div>
                     <div className='designation-section price-section'>
                         <div className="designation">
-                            <p><span><LocalOfferIcon /></span> <strong>Individual session price:</strong>₹ {e.price?.annual}</p>
+                            <p><span><LocalOfferIcon /></span> <strong>Individual session price:</strong>₹ {e?.individual_session_price}</p>
                         </div>
-                        <div className='interest'>
-                            <p> <span><LocalOfferIcon /></span><strong>Webinar session</strong>₹  {e.price?.monthly}
+                        <div className='designation'>
+                            <p> <span><LocalOfferIcon /></span><strong>Webinar session</strong>₹  {e?.webinar_session_price}
                             </p>
                         </div>
 

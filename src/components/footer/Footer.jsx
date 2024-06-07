@@ -101,10 +101,10 @@ const Footer = () => {
                             </ul>
                             <ul className="social-links">
                                 <li>
-                                    <Link to={"https://www.facebook.com/people/Mindze/61556522943859/"}> <FacebookIcon /> </Link>
-                                    <Link to="https://www.instagram.com/mindze.official/"><InstagramIcon /></Link>
-                                    <Link to={"https://twitter.com/i/flow/login?redirect_after_login=%2FMindzeOfficial"}><TwitterIcon /></Link>
-                                    <Link to={"https://www.linkedin.com/company/mindze/"}><LinkedInIcon /></Link>
+                                    <Link target="_blank" to={"https://www.facebook.com/people/Mindze/61556522943859/"}> <FacebookIcon /> </Link>
+                                    <Link target="_blank" to="https://www.instagram.com/mindze.official/"><InstagramIcon /></Link>
+                                    <Link target="_blank" to={"https://twitter.com/i/flow/login?redirect_after_login=%2FMindzeOfficial"}><TwitterIcon /></Link>
+                                    <Link target="_blank" to={"https://www.linkedin.com/company/mindze/"}><LinkedInIcon /></Link>
                                 </li>
                             </ul>
                         </div>

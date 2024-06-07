@@ -78,7 +78,7 @@ const PhilosophicalPerspective = () => {
     const philosophicalTabData = [
         "Modern Spirituality Thinkers",
         "Stoicism",
-        "Hindunism",
+        "Hinduism",
         "Buddhism",
         "Taoism",
         "Existentialism",

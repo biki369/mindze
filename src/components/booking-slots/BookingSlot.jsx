@@ -73,7 +73,7 @@ const BookingSlot = (props) => {
         setDate(todayDate)
 
     };
-    // console.log(fetchSlots?.length, "fetchSlots");
+    // console.log(item, "fetchSlots");
 
     // ====== function fro check====
     const CheckboxComp = ({ options, }) => {
@@ -193,7 +193,7 @@ const BookingSlot = (props) => {
                             <p className="discount"><span><CheckIcon /></span>1 session price: </p>
                             <p className="discount"><span><CheckIcon /></span>5 session price:</p>
                             <p className="validity"><span><CheckIcon /></span>Validity : 2 months </p>
-                            <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {consultant?.price?.monthly}</p>
+                            <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {item?.individual_session_price}</p>
                         </div>
                         <div className="plan">
                             <CheckboxComp options={['webinar']} />
@@ -202,7 +202,7 @@ const BookingSlot = (props) => {
                             <p className="discount"><span><CheckIcon /></span>10 session price: </p>
                             <p className="discount"><span><CheckIcon /></span>5 session price:</p>
                             <p className="validity"><span><CheckIcon /></span>Validity : 4 months </p>
-                            <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {consultant?.price?.annual}</p>
+                            <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {item?.webinar_session_price}</p>
                         </div>
                     </div>
 
