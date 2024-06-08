@@ -1,4 +1,4 @@
-import { Avatar, Button, Container, LinearProgress, Paper, TextField, makeStyles } from "@material-ui/core"
+import { Avatar, Button, Container, Paper, TextField, makeStyles } from "@material-ui/core"
 import { Link, useParams } from "react-router-dom";
 import HomeIcon from '@material-ui/icons/Home';
 import SchoolIcon from '@material-ui/icons/School';
@@ -17,6 +17,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     padding: "30px 10px",
     width: "100%",
+
+
     "& .top": {
       display: "flex",
       justifyContent: "space-between",
@@ -40,6 +42,10 @@ const useStyles = makeStyles((theme) => ({
         }
       }
     },
+
+    "& .profileInfo-container": {
+      padding: "6px 16px",
+    },
     "& .profile-content":
       { display: 'flex', flexDirection: 'column', gap: 10, },
     "& .profile": {
@@ -47,107 +53,35 @@ const useStyles = makeStyles((theme) => ({
       gap: 20,
       padding: 13,
       flexWrap: 'wrap',
-      alignItems: 'center',
-      justifyContent: 'space-evenly',
+      justifyContent: 'space-between',
+      "& .p-left": {
+        display: 'flex',
+        gap: 30,
+
+      },
       [theme.breakpoints.down(600)]: {
         padding: '1.3rem'
       },
+      "& .info": {
+        "& .name": {
+          fontSize: "1.5rem",
+          fontWeight: 500,
+          color: theme.palette.primary.main,
+        }
+      },
 
-      // "& .profile-img": {
-      //   // width:'80%',
-      //   width: 260,
-      //   "& img": {
-      //     width: '100%',
-      //     borderRadius: '50%',
-      //     height: 260,
-      //   },
-      // },
-      "& .profile-info": {
-        width: '60%',
-        [theme.breakpoints.down(600)]: {
-          width: "100%",
-        },
-        "& .profile-info-top": {
-          "& > p": {
-            display: 'flex',
-            //  justifyContent:'center',
-            alignItems: 'center',
-            "& svg": {
-              color: theme.palette.primary.main
-            }
-            ,
-          },
-          "& .edu": {
-            display: 'flex',
-            // gap: 10,
-            color: "#000",
-            alignItems: 'center',
-            "& .title":{
-              fontWeight:'bold'
-            },
-            // fontSize: 13,
-            fontWeight: 500,
-            "& .degree-info":{
-              display: 'flex',
-              gap: 6,
-              color: "#000",
-              alignItems: 'center',
-              // fontSize: 13,
-              fontWeight: 500,
-            }
-          }
-        },
-        "& p": {
-          display: "flex",
-          gap: 13,
-          margin: '10px 0',
-          // justifyContent: 'center',
-          alignItems: "center"
-        },
+      "& .ed-ppr":{
+        width: '33%',
+        padding: 20,
+        "& .eduction": {
+          // background:'#808080',
+        }
+      },
+    
 
-        "& .info-about": {
-          "& h4": {
-            textAlign: 'center',
-            textTransform: 'capitalize',
-            margin: '10px 0',
-            fontSize: 16,
-          },
-          "& p": {
-            fontSize: 14,
-            lineHeight: 1.5,
-            fontWeight: 500,
-          }
-        },
-        "& .profile-btn": {
-          // width:'60%',
-          display: "flex",
-          marginTop: 16,
-          marginBottom: 10,
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          "& button": {
-            // width: 260,
-            height: 40,
-            borderRadius: 30,
-            display: "flex",
-            justifyContent: 'space-between',
-            padding: "0 30px",
-            alignItems: 'center',
-            border: "none",
-            cursor: 'pointer',
-            fontSize: 16,
-            textTransform: 'capitalize',
-            boxShadow: "0 0 6px #000",
-            color: "#00b894",
-            "&:hover": {
-              backgroundColor: "#00b894",
-              color: "#fff",
-            }
 
-          }
-        },
-      }
     },
+
 
     "& .review-section": {
       display: 'flex',
@@ -215,8 +149,8 @@ const useStyles = makeStyles((theme) => ({
       "& .other-rating": {
         padding: "20px 16px",
         "& h4": {
-          fontSize: "1.3rem",
-          fontWeight: 800,
+          fontSize: "1rem",
+          fontWeight: 400,
         },
         "& .user-rating": {
           marginTop: 13,
@@ -296,6 +230,7 @@ const useStyles = makeStyles((theme) => ({
 
   counslrAvatar: {
     width: 230,
+    // height: "100%",
     height: 230,
   }
 }))
@@ -408,50 +343,35 @@ const CounselorDetails = () => {
             <h3><span><Link to={data.is_spiritual ? "/spiritualCounselors" : "/philosophicalCounselors"}>  <HomeIcon /></Link></span>{data?.name}'s profile</h3>
             {/* <BackCurrent  link={data?.is_spiritual?"/spiritualCounselors":"/philosophicalCounselors"} name={data?.is_spiritual?"Spiritual Counselors":"Philosophical Counselors"}  /> */}
           </div>
-          <Paper >
+          <Paper className="profileInfo-container">
             <div className="profile">
-              <div className="profile-img">
-                <Avatar alt="counselor-img" src={data.img} className={classes.counslrAvatar} />
-                {/* <img src={data?.img || "" } alt="404" /> */}
-              </div>
-              <div className="profile-info">
-                <div className="profile-info-top">
-                  <h3>{data?.name}</h3>
-                  <p> <span><StarsIcon /></span> <strong>interest:</strong>{data?.area_of_expertise}</p>
-                  <p className="price"> <span><StarsIcon /></span> <strong>number of individual sessions:</strong> {data?.number_of_individual_sessions}</p>
-                  <p className='price'><span><StarsIcon /></span><strong>number of webinar sessions</strong>{data?.number_of_webinar_sessions}</p>
-                  <p><span><EmojiEventsIcon /></span> <strong>year of experience:</strong>{data?.year_of_experience}+ years</p>
-                  <p className="edu"><span><SchoolIcon /></span>
-                  <span className="title">institute name :</span>
-                    <div className="degree-info">
-                       <span> {data?.institute1_name},</span>
-                       <span> {data?.institute2_name},</span>,
-                       <span> {data?.institute3_name}</span>
-                    </div>
-                  </p>
-                  <p className="edu"><span><SchoolIcon /></span>
-                 <span  className="title">degrees</span>
-                    <div className="degree-info">
-                       <span> {data?.degree1_name},</span>
-                       <span> {data?.degree2_name},</span>
-                       <span> {data?.degree3_name}</span>
-                    </div>
-                  </p>
-                  <p className="designation"><span><CheckCircleIcon /></span><strong>language:</strong>{data?.language}</p>
-                  <p className="designation"><span><CheckCircleIcon /></span><strong>designation:</strong>{data?.designation}</p>
-                  <p className="price"> <span><LocalOfferIcon /></span> <strong>individual sessions price:</strong> {data?.individual_session_price} ₹</p>
-                  <p className='price'><span><LocalOfferIcon /></span><strong>webinar sessions price</strong>{data?.webinar_session_price} ₹</p>
-             
-                  <div className="profile-btn">
-                    <button onClick={handleOpenModal}>Book now</button>
-                  </div>
+              <div className="p-left">
+                <div className="profile-img">
+                  <Avatar alt="counselor-img" variant="rounded" src={data.img} className={classes.counslrAvatar} />
+                  {/* <img src={data?.img || "" } alt="404" /> */}
                 </div>
-                <div className="info-about">
-                  <h4>About Me</h4>
-                  <p>{data?.full_description}</p>
+                <div className="info">
+                  <p className="name">{data?.name}</p>
+                  <p>{data?.year_of_experience}+ year of experience</p>
+                  <p>{data?.email}</p>
+                  <p>{data?.language}</p>
                 </div>
               </div>
+
+              <Paper className="ed-ppr">
+                <div className="eduction">
+                  <p>Eduction</p>
+                  <ul style={{ listStyle: 'circle' }}>
+                    <li>{data?.degree1_name}, {data?.institute1_name}</li>
+                    <li>{data?.degree2_name}, {data?.institute2_name}</li>
+                    <li>{data?.degree3_name}, {data?.institute3_name}</li>
+                  </ul>
+
+                </div>
+              </Paper>
+
             </div>
+
           </Paper>
 
           <div className="review-section">
@@ -513,7 +433,7 @@ const CounselorDetails = () => {
 
             <div className="">
               <Paper className="other-rating">
-                <h4>User Ratings</h4>
+                <h4>User Reviews</h4>
                 {
                   reviewData ? <>
                     {

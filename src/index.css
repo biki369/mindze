@@ -16,9 +16,8 @@
 body {
   /* font-family: "Montserrat", sans-serif; */
   font-style: normal;
-  font-family: "Poppins", sans-serif;
+  font-family: Poppins, sans-serif;
   /* font-weight: 100; */
-  font-style: normal;
 }
 
 html,
@@ -45,4 +44,26 @@ a {
 old website - https://mental-health-website-eight.vercel.app/
 api docs - https://docs.google.com/document/d/1HlnBxXLWl6UzbGsJU7kcOhKfStoz1S00kx1sdjJ8ApU/edit?usp=sharing
 backend - https://mindzee-backend.onrender.com
+*/
+
+/* 
+
+<div className="profile-info">
+<div className="profile-info-top">
+  <div className="info">
+    <p className="name">{data?.name}</p>
+    <p>{data?.year_of_experience}+ year of experience</p>
+    <p>{data?.email}</p>
+    <p>{data?.language}</p>
+  </div>
+  <div className="info">
+    <p>Individual sessions taken: {data?.number_of_individual_sessions}</p>
+    <p> Webinar sessions taken: {data?.number_of_webinar_sessions}</p>
+    <p> Individual sessions price:<span className="price">{data?.individual_session_price} ₹</span></p>
+    <p> Webinar sessions price:<span className="price">{data?.webinar_session_price} ₹</span></p>
+  </div>
+</div>
+</div>
+
+
 */
