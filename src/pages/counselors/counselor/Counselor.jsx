@@ -100,6 +100,7 @@ const useStyles = makeStyles((theme) => ({
             "& .showMore-items":{
                 padding:'0 10px',
                 "& p":{
+                    padding:'10px 20px',
                     textTransform: 'capitalize',
                     fontSize:'13px',
                     "& span":{
@@ -164,7 +165,8 @@ function Counselor({ e, handleOpenModal }) {
     const ShowMoreContents = () => {
         return (
             <div className='showMore-items'>
-                <p>
+                <p>{e.area_of_expertise}</p>
+                {/* <p>
                     {e.institute1_name} {e.degree1_name},
                     {e.institute2_name} {e.degree2_name},
                     {e.institute3_name} {e.degree3_name},
@@ -173,7 +175,7 @@ function Counselor({ e, handleOpenModal }) {
                 <p><span>number of individual sessions :</span>{e.number_of_individual_sessions}</p>
                 <p> <span>number of webinar sessions :</span>{e.number_of_webinar_sessions}</p>
                 <p><span>licenses and certification :</span>{e.licenses_and_certification}</p>
-                <p><span>approach to counselling:</span>{e.approach_to_counselling}</p>
+                <p><span>approach to counselling:</span>{e.approach_to_counselling}</p> */}
             </div>
         )
     }
@@ -190,7 +192,7 @@ function Counselor({ e, handleOpenModal }) {
                         <div className="counselor-about">
                             <p className="name">{e?.name}, <span className='exp'>{e?.year_of_experience}+ years exp.</span></p>
                             <div className="designation">
-                                <p><span><EmailIcon /></span>{e?.email}</p>
+                                {/* <p><span><EmailIcon /></span>{e?.email}</p> */}
                                 <p><span><RecordVoiceOverIcon /></span> <strong>language:</strong> {e?.language}</p>
                                 <p><span><SchoolIcon /></span> <strong>Degree:</strong> {e?.degree1_name}, {e?.degree3_name}, {e?.degree3_name}</p>
                             </div>

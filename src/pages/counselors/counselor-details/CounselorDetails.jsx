@@ -1,12 +1,15 @@
 import { Avatar, Button, Container, Paper, TextField, makeStyles } from "@material-ui/core"
 import { Link, useParams } from "react-router-dom";
 import HomeIcon from '@material-ui/icons/Home';
-import SchoolIcon from '@material-ui/icons/School';
+// import SchoolIcon from '@material-ui/icons/School';
 import Rating from '@material-ui/lab/Rating';
-import StarsIcon from '@material-ui/icons/Stars';
-import CheckCircleIcon from '@material-ui/icons/CheckCircle';
-import EmojiEventsIcon from '@material-ui/icons/EmojiEvents';
-import LocalOfferIcon from '@material-ui/icons/LocalOffer';
+// import StarsIcon from '@material-ui/icons/Stars';
+// import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+// import EmojiEventsIcon from '@material-ui/icons/EmojiEvents';
+// import LocalOfferIcon from '@material-ui/icons/LocalOffer';
+import PeopleIcon from '@material-ui/icons/People';
+import PersonIcon from '@material-ui/icons/Person';
+import GroupAddIcon from '@material-ui/icons/GroupAdd';
 import { useEffect, useState } from "react";
 import Loader from "../../../components/loader/Loader";
 import { consultantDetails, consultantReview, giveReview } from "../../../api";
@@ -44,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     "& .profileInfo-container": {
-      padding: "6px 16px",
+      padding: "10px 30px 16px 16px",
     },
     "& .profile-content":
       { display: 'flex', flexDirection: 'column', gap: 10, },
@@ -57,6 +60,7 @@ const useStyles = makeStyles((theme) => ({
       "& .p-left": {
         display: 'flex',
         gap: 30,
+        flexWrap: 'wrap',
 
       },
       [theme.breakpoints.down(600)]: {
@@ -70,16 +74,52 @@ const useStyles = makeStyles((theme) => ({
         }
       },
 
-      "& .ed-ppr":{
+      "& .ed-ppr": {
         width: '33%',
-        padding: 20,
+        [theme.breakpoints.down('md')]: {
+          width: '100%',
+        },
+        borderTop: `10px solid ${theme.palette.primary.main}`,
+
+        padding: 10,
         "& .eduction": {
           // background:'#808080',
+          padding: 20,
+          "& .title": {
+            fontSize: "1.5rem",
+            fontWeight: 500,
+            // marginBottom:'1rem',
+            color: theme.palette.primary.main,
+          },
+          "& ul": {
+            paddingLeft: 20,
+            listStyle: 'square',
+            marginLeft: '1rem'
+          }
+
         }
       },
-    
 
 
+
+    },
+
+    "& .profile-bottom": {
+      "& .profile-bottom_content": {
+        display: 'flex',
+        flexWrap: 'wrap',
+        gap: 20,
+        padding: "10px 20px",
+        "& .info": {
+          fontSize: "14px",
+          "& p": {
+            textTransform: 'capitalize'
+          },
+          "& .price": {
+            color: theme.palette.primary.main
+          }
+        }
+      }
     },
 
 
@@ -185,56 +225,113 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
-  plans: {
-    display: "flex",
-    flexWrap: 'wrap',
-    gap: "10px",
-    alignItems: "center",
-    justifyContent: "center",
-    marginBottom: '1rem',
-    // [theme.breakpoints.down(500)]: {
-    //   display: 'block'
-    // },
-    "& .plan": {
-      width: '230px',
-      cursor: 'pointer',
-      background: "#eee",
-      borderRadius: 10,
-      padding: 13,
-
-      "& .plan-name": {
-        fontSize: "1.3rem",
-        fontWeight: 600,
-        margin: '13px 0',
-        textAlign: 'center',
-        textTransform: 'capitalize'
-      },
-      "& .plan-price": {
-        fontSize: 16,
-        fontWeight: 600,
-        margin: '10px 0',
-        textTransform: 'capitalize'
-      },
-      "& p": {
-        display: 'flex',
-        alignItems: 'center',
-        gap: "6px",
-        fontWeight: 600,
-        "& svg": {
-          color: '#303f9f',
-        }
-      }
-    }
-
-  },
-
   counslrAvatar: {
     width: 230,
     // height: "100%",
     height: 230,
+  },
+
+  bookingPlans: {
+    padding: "10px 20px",
+    "& .plans_container": {
+      display: 'flex',
+      justifyContent: 'space-evenly',
+      flexWrap: 'wrap',
+      gap: '2.3rem',
+      "& .plans": {
+        position: 'relative',
+      },
+      "& .plan": {
+        height: 390,
+        width: 300,
+        // width: '33%',
+        padding: 30,
+        textAlign: 'center',
+        borderTop: `3px solid ${theme.palette.primary.main}`,
+        "& .plan-icon": {
+          "& svg": {
+            fontSize: 50,
+            color: theme.palette.primary.main
+          },
+          margin: '10px 0'
+        },
+        "& .plan_session": {
+          fontSize: "1.5rem",
+          fontWeight: 500,
+          color: theme.palette.primary.main
+        },
+        "& .plan_price": {
+          fontSize: "1.5rem",
+          fontWeight: 500,
+          // color: theme.palette.primary.main
+        },
+        "& .plan_per-session": {
+          fontSize: "1.03rem",
+        },
+        "& .plan_duration": {
+          fontSize: "1.3rem",
+          margin: '6px 0'
+        },
+        "& .plan_access": {
+          fontSize: "1.53rem",
+        }
+
+
+
+      },
+      "& .bookedPlans_btn": {
+        position: 'absolute',
+        bottom: -10,
+        left: "50%",
+        transform: "translate(-50%)",
+        "& button": {
+          backgroundColor: theme.palette.primary.main,
+          color: 'white',
+          width: '160px',
+          padding: '10px 20px',
+          borderRadius: "30px",
+          // "& :hover":{
+          //   backgroundColor:theme.palette.primary.main  ,
+          // }
+        }
+      }
+    }
   }
+
 }))
 const CounselorDetails = () => {
+
+  const bookingPlans = [
+    {
+      session: 1,
+      icon: <PersonIcon />,
+      price: 1000,
+      perSession: 1000,
+      duration: "40",
+      access: "1 week",
+      // discount: 10
+    },
+    {
+      session: 4,
+      price: 4000,
+      icon: <PeopleIcon />,
+      perSession: 800,
+      duration: "40",
+      access: "4 week",
+      discount: "15% discount"
+
+    },
+    {
+      session: 10,
+      price: 4000,
+      perSession: 800,
+      icon: <GroupAddIcon />,
+      duration: "40",
+      access: "10 week",
+      discount: "20% discount"
+    },
+  ]
+
   const classes = useStyles()
   // const {pathname} = useLocation()
   let { id } = useParams();
@@ -353,6 +450,7 @@ const CounselorDetails = () => {
                 <div className="info">
                   <p className="name">{data?.name}</p>
                   <p>{data?.year_of_experience}+ year of experience</p>
+                  <p> Area of expertise: {data?.area_of_expertise}</p>
                   <p>{data?.email}</p>
                   <p>{data?.language}</p>
                 </div>
@@ -360,8 +458,8 @@ const CounselorDetails = () => {
 
               <Paper className="ed-ppr">
                 <div className="eduction">
-                  <p>Eduction</p>
-                  <ul style={{ listStyle: 'circle' }}>
+                  <p className="title">Eduction</p>
+                  <ul >
                     <li>{data?.degree1_name}, {data?.institute1_name}</li>
                     <li>{data?.degree2_name}, {data?.institute2_name}</li>
                     <li>{data?.degree3_name}, {data?.institute3_name}</li>
@@ -369,6 +467,58 @@ const CounselorDetails = () => {
 
                 </div>
               </Paper>
+
+            </div>
+
+            <div className="profile-bottom">
+              <div className="profile-bottom_content">
+                <div className="info">
+                  <p>Individual sessions taken: {data?.number_of_individual_sessions}</p>
+                  <p> Webinar sessions taken: {data?.number_of_webinar_sessions}</p>
+                  <p> Individual sessions price:<span className="price">{data?.individual_session_price} ₹</span></p>
+                  <p> Webinar sessions price:<span className="price">{data?.webinar_session_price} ₹</span></p>
+                </div>
+                <div className="info">
+                  <p>approach to counselling: {data?.approach_to_counselling}</p>
+                  <p> licenses and certification: {data?.licenses_and_certification}</p>
+                </div>
+              </div>
+            </div>
+
+            <div className={classes.bookingPlans}>
+              <div className="plans_container">
+
+                {
+                  bookingPlans.map((e, i) => (
+                    <>
+                      <div key={i} className="plans">
+                        <Paper elevation={3}>
+                          <div className="plan">
+                            <div className="plan-icon">
+                              <span>{e.icon}</span>
+                            </div>
+                            <p className="plan_session">{e.session} session</p>
+                            <p className="plan_price">₹ {e.price}</p>
+                            <p className="plan_per-session">pice per session: {e.perSession}</p>
+                            <p className="plan_duration">{e.duration} minutes</p>
+                            <p className="plan_access">{e.access}</p>
+                            <p className="plan_discount">{e.discount}</p>
+                          </div>
+                        </Paper>
+                        <div className="bookedPlans_btn">
+                          <Button variant="contained" color="primary"
+                            onClick={() => handleOpenModal(true)}
+                          >
+                            Book
+                          </Button>
+                        </div>
+                      </div>
+                    </>
+                  ))
+                }
+
+              </div>
+
 
             </div>
 
