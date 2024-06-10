@@ -7,6 +7,7 @@ import BookingSlot from '../../../components/booking-slots/BookingSlot';
 import { useOutletContext } from "react-router-dom";
 import Counselor from '../counselor/Counselor';
 import NoCounselors from '../../../components/NoCounselors/NoCounselors';
+import TimerAlert from '../../../components/alerts/TimeAlert';
 const useStyles = makeStyles((theme) => ({
     root: {
         padding: 20,
@@ -39,12 +40,14 @@ const useStyles = makeStyles((theme) => ({
 
     },
 }));
+
 const SpiritualCounslr = () => {
     const classes = useStyles();
     const [openModal, setOpenModal] = useState(false);
     const [item, setItem] = useState();
     const [spiritualData] = useOutletContext();
     const handleOpenModal = (evn, e) => {
+        // <TimerAlert/>
         if (localStorage.getItem("token") !== null) {
             setOpenModal(true);
             setItem(e);

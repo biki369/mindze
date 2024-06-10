@@ -1,14 +1,14 @@
-import { Avatar, Button, Grid, IconButton, Paper, makeStyles } from '@material-ui/core';
+import { Avatar, Button, Grid, Paper, makeStyles } from '@material-ui/core';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Swal from 'sweetalert2';
+// import Swal from 'sweetalert2';
 import StarsIcon from '@material-ui/icons/Stars';
-import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+// import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import SchoolIcon from '@material-ui/icons/School';
-import EmailIcon from '@material-ui/icons/Email';
+// import EmailIcon from '@material-ui/icons/Email';
 import RecordVoiceOverIcon from '@material-ui/icons/RecordVoiceOver';
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -18,7 +18,6 @@ const useStyles = makeStyles((theme) => ({
             gap: 30,
             cursor: "pointer",
             alignItems: 'center',
-            // justifyContent: 'center',
             [theme.breakpoints.down(500)]: {
                 width: "100%",
             },
@@ -27,7 +26,6 @@ const useStyles = makeStyles((theme) => ({
                     textAlign: 'left',
                     fontWeight: 400,
                     fontSize: "1rem",
-                    // margin: "2px 0"
                 },
                 "& .name": {
                     fontSize: '1rem',
@@ -40,10 +38,7 @@ const useStyles = makeStyles((theme) => ({
                 },
 
                 "& .edu": {
-                    // display: "flex",
-                    // gap: 10,
                     color: "#000",
-                    // alignItems: 'center',
                 },
 
 
@@ -57,6 +52,9 @@ const useStyles = makeStyles((theme) => ({
                 color: '#000',
                 fontWeight: 500,
                 display: 'flex',
+                "& strong": {
+                   fontWeight:400,
+                },
                 [theme.breakpoints.down(460)]: {
                     fontSize: 10,
                 },
@@ -65,8 +63,9 @@ const useStyles = makeStyles((theme) => ({
                     fontSize: 10,
                 },
                 alignItems: 'center',
-                gap: 10,
+                gap: 6,
                 "& svg": {
+                    fontSize: 16,
                     color: '#303f9f',
                 }
             }
@@ -74,12 +73,13 @@ const useStyles = makeStyles((theme) => ({
         },
 
         "& .designation-section": {
-            padding: '10px 20px 0 20px',
+            padding: '10px 20px 0 10px',
 
         },
         "& .price-section": {
             paddingTop: '3px',
-            marginBottom: "1rem",
+            // marginBottom: "1rem",
+            marginTop:'6px',
             // "& span": {
             //     transform: "rotate(96deg)",
             // }
@@ -96,14 +96,14 @@ const useStyles = makeStyles((theme) => ({
 
         "& .show-moreSection": {
             padding: 3,
-            margin: '9px 0',
-            "& .showMore-items":{
-                padding:'0 10px',
-                "& p":{
-                    padding:'10px 20px',
+            margin: '3px 0',
+            "& .showMore-items": {
+                padding: '0 10px',
+                "& p": {
+                    padding: '10px 20px',
                     textTransform: 'capitalize',
-                    fontSize:'13px',
-                    "& span":{
+                    fontSize: '13px',
+                    "& span": {
                         color: '#303f9f',
                     },
 
@@ -166,20 +166,9 @@ function Counselor({ e, handleOpenModal }) {
         return (
             <div className='showMore-items'>
                 <p>{e.area_of_expertise}</p>
-                {/* <p>
-                    {e.institute1_name} {e.degree1_name},
-                    {e.institute2_name} {e.degree2_name},
-                    {e.institute3_name} {e.degree3_name},
-                </p>
-                <p>area of expertise : {e.area_of_expertise}</p>
-                <p><span>number of individual sessions :</span>{e.number_of_individual_sessions}</p>
-                <p> <span>number of webinar sessions :</span>{e.number_of_webinar_sessions}</p>
-                <p><span>licenses and certification :</span>{e.licenses_and_certification}</p>
-                <p><span>approach to counselling:</span>{e.approach_to_counselling}</p> */}
             </div>
         )
     }
-
 
     return (
         <div className={classes.root}>
@@ -200,35 +189,20 @@ function Counselor({ e, handleOpenModal }) {
                             {/* <p className="exp">Languages: {e?.language}</p> */}
                         </div>
                     </div>
-                    {/* <div className='designation-section'>
-                        <div className="designation">
-                            <p><span><SchoolIcon /></span> <strong>Degree:</strong> {e?.language}, {e?.degree3_name}, {e?.degree3_name}</p>
-                        </div>
-                        <div className='interest'>
-                            <p>
-                                <span><StarsIcon /></span><strong>Area of interest:</strong>
-                                <span onClick={showHandler} className='show-more'>
-                                    {showMore ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-                                </span>
-                            </p>
-                            {
-                                showMore && <>
-                                    <div>
-                                        <ShowMoreContents />
-                                    </div>
-                                </>
-                            }
-                        </div>
-                        
-                    </div> */}
                     <div className='designation-section price-section'>
                         <div className="designation">
                             <p><span><LocalOfferIcon /></span> <strong>Individual session price:</strong>₹ {e?.individual_session_price}</p>
-                        </div>
-                        <div className='designation'>
                             <p> <span><LocalOfferIcon /></span><strong>Webinar session</strong>₹  {e?.webinar_session_price}
                             </p>
+
+                            <p>
+                                <span><StarsIcon /></span><strong>Number of individual sessions:</strong>{e?.number_of_individual_sessions}
+                            </p>
+                            <p>
+                                <span><StarsIcon /></span><strong>Number of webinar sessions:</strong>{e?.number_of_webinar_sessions}
+                            </p>
                         </div>
+
 
                     </div>
                     <div className="show-moreSection">

@@ -56,8 +56,15 @@ const useStyles = makeStyles((theme) => ({
       gap: 20,
       padding: 13,
       flexWrap: 'wrap',
+      marginBottom: 10,
       justifyContent: 'space-between',
       "& .p-left": {
+        "& .p-left_info":{
+          width: 430,
+          [theme.breakpoints.down('md')]: {
+            width: '100%',
+          },
+        },
         display: 'flex',
         gap: 30,
         flexWrap: 'wrap',
@@ -67,10 +74,17 @@ const useStyles = makeStyles((theme) => ({
         padding: '1.3rem'
       },
       "& .info": {
+        "& p": {textTransform: 'capitalize',},
         "& .name": {
           fontSize: "1.5rem",
           fontWeight: 500,
           color: theme.palette.primary.main,
+        },
+        "& span": {
+          color: theme.palette.primary.main
+        },
+        "& .info_more": {
+          marginTop:'10px',
         }
       },
 
@@ -84,6 +98,9 @@ const useStyles = makeStyles((theme) => ({
         padding: 10,
         "& .eduction": {
           // background:'#808080',
+          "& .info":{
+            padding: 20,
+          },
           padding: 20,
           "& .title": {
             fontSize: "1.5rem",
@@ -121,8 +138,6 @@ const useStyles = makeStyles((theme) => ({
         }
       }
     },
-
-
     "& .review-section": {
       display: 'flex',
       [theme.breakpoints.down(700)]: {
@@ -224,15 +239,13 @@ const useStyles = makeStyles((theme) => ({
       }
     },
   },
-
   counslrAvatar: {
     width: 230,
     // height: "100%",
     height: 230,
   },
-
   bookingPlans: {
-    padding: "10px 20px",
+    padding: "30px 20px",
     "& .plans_container": {
       display: 'flex',
       justifyContent: 'space-evenly',
@@ -447,12 +460,18 @@ const CounselorDetails = () => {
                   <Avatar alt="counselor-img" variant="rounded" src={data.img} className={classes.counslrAvatar} />
                   {/* <img src={data?.img || "" } alt="404" /> */}
                 </div>
-                <div className="info">
+                <div className="info p-left_info">
                   <p className="name">{data?.name}</p>
                   <p>{data?.year_of_experience}+ year of experience</p>
                   <p> Area of expertise: {data?.area_of_expertise}</p>
-                  <p>{data?.email}</p>
                   <p>{data?.language}</p>
+
+                  <div className="info_more">
+                    <p>Individual sessions taken: {data?.number_of_individual_sessions}</p>
+                    <p> Webinar sessions taken: {data?.number_of_webinar_sessions}</p>
+                    <p> Individual sessions price:<span className="price"> {data?.individual_session_price} ₹</span></p>
+                    <p> Webinar sessions price:<span className="price"> {data?.webinar_session_price} ₹</span></p>
+                  </div>
                 </div>
               </div>
 
@@ -464,13 +483,17 @@ const CounselorDetails = () => {
                     <li>{data?.degree2_name}, {data?.institute2_name}</li>
                     <li>{data?.degree3_name}, {data?.institute3_name}</li>
                   </ul>
-
                 </div>
+                <div className="info ">
+                  <p><span> approach to counselling: </span>{data?.approach_to_counselling}</p>
+                  <p><span>licenses and certification: </span>{data?.licenses_and_certification}</p>
+                </div>
+
               </Paper>
 
             </div>
 
-            <div className="profile-bottom">
+            {/* <div className="profile-bottom">
               <div className="profile-bottom_content">
                 <div className="info">
                   <p>Individual sessions taken: {data?.number_of_individual_sessions}</p>
@@ -483,7 +506,7 @@ const CounselorDetails = () => {
                   <p> licenses and certification: {data?.licenses_and_certification}</p>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             <div className={classes.bookingPlans}>
               <div className="plans_container">

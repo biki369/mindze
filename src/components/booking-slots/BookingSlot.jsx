@@ -185,7 +185,7 @@ const BookingSlot = (props) => {
             <div className={classes.modalContainer}>
                 <MuiModal open={openModal} onClose={handleCloseModal} title="Book an Appointment">
                     {/* <DatePicker selectedDate={selectedDate} onChange={handleDateChange} /> */}
-                    <div className={classes.plans}>
+                    {/* <div className={classes.plans}>
                         <div className="plan">
                             <CheckboxComp options={['individual']} />
                             <p className="plan-name">Individual session</p>
@@ -204,7 +204,7 @@ const BookingSlot = (props) => {
                             <p className="validity"><span><CheckIcon /></span>Validity : 4 months </p>
                             <p className="plan-price"><span><LocalOfferIcon /></span> ₹ {item?.webinar_session_price}</p>
                         </div>
-                    </div>
+                    </div> */}
 
                     <div className='booked-session-btn'
                         style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem', marginBottom: "1rem" }}
