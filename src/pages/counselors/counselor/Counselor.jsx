@@ -1,8 +1,8 @@
 import { Avatar, Button, Grid, Paper, makeStyles } from '@material-ui/core';
-import { useState } from 'react';
+import { useState, } from 'react';
 import { Link } from 'react-router-dom';
 // import Swal from 'sweetalert2';
-import StarsIcon from '@material-ui/icons/Stars';
+// import StarsIcon from '@material-ui/icons/Stars';
 // import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -13,6 +13,7 @@ import RecordVoiceOverIcon from '@material-ui/icons/RecordVoiceOver';
 const useStyles = makeStyles((theme) => ({
     root: {
         "& .counselor": {
+            position: 'relative',
             padding: "6px 10px",
             display: "flex",
             gap: 30,
@@ -36,6 +37,10 @@ const useStyles = makeStyles((theme) => ({
 
                     }
                 },
+               
+                "& strong": {
+                    fontWeight: 600,
+                },
 
                 "& .edu": {
                     color: "#000",
@@ -47,13 +52,14 @@ const useStyles = makeStyles((theme) => ({
         },
 
         "& .designation, & .interest": {
+            position: 'relative',
             "& p": {
                 fontSize: 13,
                 color: '#000',
                 fontWeight: 500,
                 display: 'flex',
                 "& strong": {
-                   fontWeight:400,
+                    fontWeight: 400,
                 },
                 [theme.breakpoints.down(460)]: {
                     fontSize: 10,
@@ -62,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
                     flexWrap: 'wrap',
                     fontSize: 10,
                 },
-                alignItems: 'center',
+                // alignItems: 'center',
                 gap: 6,
                 "& svg": {
                     fontSize: 16,
@@ -79,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
         "& .price-section": {
             paddingTop: '3px',
             // marginBottom: "1rem",
-            marginTop:'6px',
+            marginTop: '6px',
             // "& span": {
             //     transform: "rotate(96deg)",
             // }
@@ -121,6 +127,13 @@ const useStyles = makeStyles((theme) => ({
                 // padding:3,
             }
         },
+
+        "& .book-webinar": {
+            backgroundColor: '#ADD8E6',
+            color: "#000",
+            // backgroundColor: '#00b894;',
+            // color:"#fff",
+        }
     },
     counslrAvatar: {
         width: 100,
@@ -135,7 +148,6 @@ function Counselor({ e, handleOpenModal }) {
     const showHandler = () => {
         setShowMore(!showMore)
     }
-
     //   const [openModal, setOpenModal] = useState(false);
     //   const [item, setItem] = useState();
 
@@ -175,15 +187,16 @@ function Counselor({ e, handleOpenModal }) {
             <Paper className='paper-dev'>
                 <>
                     <div className="counselor" >
+                       
                         <div className="counselor-img">
                             <Avatar variant="rounded" alt="counselor-img" src={e?.img} className={classes.counslrAvatar} />
                         </div>
                         <div className="counselor-about">
-                            <p className="name">{e?.name}, <span className='exp'>{e?.year_of_experience}+ years exp.</span></p>
+                            <p className="name">{e?.name},<span className='exp'>{e?.year_of_experience}+ years exp.</span></p>
                             <div className="designation">
                                 {/* <p><span><EmailIcon /></span>{e?.email}</p> */}
-                                <p><span><RecordVoiceOverIcon /></span> <strong>language:</strong> {e?.language}</p>
-                                <p><span><SchoolIcon /></span> <strong>Degree:</strong> {e?.degree1_name}, {e?.degree3_name}, {e?.degree3_name}</p>
+                                <p><span><RecordVoiceOverIcon /></span> <strong>Language:</strong> {e?.language}</p>
+                                <p><span><SchoolIcon /></span> <strong>Degree:</strong> {e?.degree1_name}, {e?.degree2_name}{e?.degree3_name && ","} {e?.degree3_name}</p>
                             </div>
                             {/* <p className="exp">+ years of experience</p> */}
                             {/* <p className="exp">Languages: {e?.language}</p> */}
@@ -194,16 +207,10 @@ function Counselor({ e, handleOpenModal }) {
                             <p><span><LocalOfferIcon /></span> <strong>Individual session price:</strong>₹ {e?.individual_session_price}</p>
                             <p> <span><LocalOfferIcon /></span><strong>Webinar session</strong>₹  {e?.webinar_session_price}
                             </p>
-
-                            <p>
-                                <span><StarsIcon /></span><strong>Number of individual sessions:</strong>{e?.number_of_individual_sessions}
-                            </p>
-                            <p>
-                                <span><StarsIcon /></span><strong>Number of webinar sessions:</strong>{e?.number_of_webinar_sessions}
-                            </p>
+                            {
+                               e.speciality != "" && <div className="ribbon">{e.speciality}</div>
+                            }
                         </div>
-
-
                     </div>
                     <div className="show-moreSection">
                         <div className="show-items-label">
@@ -231,22 +238,43 @@ function Counselor({ e, handleOpenModal }) {
                         direction="row"
                         justifyContent="flex-end"
                         alignItems="center"
-                        spacing={2}
+                        spacing={1}
                     >
-                        <Grid item xs={12} sm={2}></Grid>
-                        <Grid item xs={12} sm={5}>
+                        {/* <Grid item xs={12} sm={2}></Grid> */}
+                        <Grid item xs={12} md={4}>
                             <Button variant="outlined"
+                                size='small'
+
                                 fullWidth
                                 color="primary">
+
                                 <Link to={`/counselor/${e.id}`}>View Profile</Link>
                             </Button>
                         </Grid>
-                        <Grid item xs={12} sm={5}>
+                        <Grid item xs={12} md={4}>
                             <Button fullWidth
-                                onClick={(evn) => handleOpenModal(evn, e)}
-                                // onClick={handleOpenModal}
+                                size='small'
+                                // onClick={(evn) => handleOpenModal(evn, e)}
                                 variant="contained"
-                                color="primary">Book session</Button>
+                                color="primary">
+                                <Link to={`https://wa.me/919817670081?text=Hi,I want to book a session with ${e.name}`} target='_bank'>
+                                    Book Individual
+                                </Link>
+                            </Button>
+                        </Grid>
+                        <Grid item xs={12} md={4}>
+                            <Button
+                                size='small'
+                                fullWidth
+                                className='book-webinar'
+                            // onClick={()=>openWatchApp(e.name)}
+                            // onClick={(evn) => handleOpenModal(evn, e)}
+                            >
+                                <Link to={`https://wa.me/919817670081?text=Hi, I want to book a session with ${e.name}`} target='_bank'>
+                                    Book Webinar
+                                </Link>
+
+                            </Button>
                         </Grid>
                     </Grid>
                 </>

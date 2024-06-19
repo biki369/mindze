@@ -8,7 +8,8 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { heroSliderImg } from '../../data';
 import NoCounselors from '../../components/NoCounselors/NoCounselors';
-// import ServiceSlider from '../../components/sliders/serice-sldier/ServiceSlider';
+import ServiceSlider from '../../components/sliders/serice-sldier/ServiceSlider';
+import { useOutletContext } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,8 +37,8 @@ const useStyles = makeStyles((theme) => ({
         top: '30%',
         left: "50%",
         transform: "translate(-50%,-50%)",
-        fontFamily:'Poppins',
-        fontWeight:200,
+        fontFamily: 'Poppins',
+        fontWeight: 200,
         // fontFamily: "Grape Nuts, cursive",
         color: "#fff",
         fontSize: '60px',
@@ -154,6 +155,8 @@ const useStyles = makeStyles((theme) => ({
 
 const Home = () => {
   const classes = useStyles();
+  const [spiritualData, psychologicalData] = useOutletContext();
+
 
   return (
     <div className={classes.root}>
@@ -164,7 +167,7 @@ const Home = () => {
             delay: 6360,
             disableOnInteraction: false,
           }}
-          speed={3000}
+          speed={1000}
           loop={true}
           // slidesPerView={1}
           modules={[Pagination, Navigation, Scrollbar, Autoplay]}
@@ -195,18 +198,19 @@ const Home = () => {
       </div>
 
       <div >
-        {/* <ServiceSlider text={"Psychological Councellors"} data={reviewData} /> */}
-        <NoCounselors text="Psychological Councellors" h/>
+
+        {psychologicalData && <ServiceSlider text={"Psychological Councellors"} data={psychologicalData} />}
+        {/* <NoCounselors text="Psychological Councellors" h/> */}
 
       </div>
       <div >
-        {/* <ServiceSlider text={"Spiritual Councellors"} data={reviewData} /> */}
-        <NoCounselors text={"Spiritual Councellors"} h />
+        {spiritualData && <ServiceSlider text={"Spiritual Councellors"} data={spiritualData} />}
+        {/* <NoCounselors text={"Spiritual Councellors"} h /> */}
       </div>
 
       <div className="review-section">
         {/* <h1>What People Say About</h1> */}
-        <NoCounselors text={"People Say About"} yes />
+        {/* <NoCounselors text={"People Say About"} yes /> */}
         {/* <div className="reviews">
           <div >
             <ServiceSlider text={"Individual Reviews"} data={reviewData} />
@@ -219,7 +223,7 @@ const Home = () => {
 
       <div className="trustedBy-section">
         <div >
-          <NoCounselors text={"Trusted by"} yes />
+          {/* <NoCounselors text={"Trusted by"} yes /> */}
           {/* <ServiceSlider text={"Trusted by"} trustbyData={reviewData} /> */}
         </div>
       </div>

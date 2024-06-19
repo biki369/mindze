@@ -70,7 +70,7 @@ export const routes = createBrowserRouter([
         element: <SpiritualCounslr />,
       },
       {
-        path: "/philosophicalCounselors",
+        path: "/psychologicalCounselors",
         element: <PsychologicalCounslr />,
       },
       {

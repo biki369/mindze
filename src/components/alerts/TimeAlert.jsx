@@ -1,14 +1,14 @@
 import{ useEffect} from 'react';
 import Swal from 'sweetalert2';
-import withReactContent from 'sweetalert2-react-content';
+// import withReactContent from 'sweetalert2-react-content';
 
-const MySwal = withReactContent(Swal);
+// const MySwal = withReactContent(Swal);
 
 const TimerAlert = () => {
   useEffect(() => {
     let timerInterval;
 
-    MySwal.fire({
+    Swal.fire({
       title: 'Auto close alert!',
       html: 'I will close in <b></b> milliseconds.',
       timer: 2000,

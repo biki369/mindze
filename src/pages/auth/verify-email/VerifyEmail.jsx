@@ -60,7 +60,7 @@ const VerifyEmail = () => {
                 }).then((result) => {
                     if (result.isConfirmed) {
                         // window.open("/login");
-                        window.location.href = "/login"
+                        window.location.href = "/"
                     }
                 })
             }

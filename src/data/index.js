@@ -52,8 +52,8 @@ export const menuLits = [
     components: "",
   },
   {
-    label: "Philosophical Counselors",
-    path: "/philosophicalCounselors",
+    label: " Psychological Counselors",
+    path: "/psychologicalCounselors",
     icon: "",
     components: "",
   },

@@ -5,7 +5,7 @@ export const MeditationsData = [
     data: [
       {
         id: 0,
-        title: "Body Scan Mediation",
+        title: "Body Scan Meditation",
         intro:
           "Body Scan Meditation is a mindfulness technique that promotes deep relaxation and self-awareness. This practice involves mentally scanning your body, noticing sensations, and releasing tension.",
         understandingBodyScan:

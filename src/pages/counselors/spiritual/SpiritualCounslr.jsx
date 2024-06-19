@@ -47,11 +47,9 @@ const SpiritualCounslr = () => {
     const [item, setItem] = useState();
     const [spiritualData] = useOutletContext();
     const handleOpenModal = (evn, e) => {
-        // <TimerAlert/>
         if (localStorage.getItem("token") !== null) {
             setOpenModal(true);
             setItem(e);
-            // setDate(todayDate)
         } else {
             Swal.fire({
                 icon: 'warning',

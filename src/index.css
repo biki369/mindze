@@ -40,31 +40,38 @@ a {
   min-height: 100vh;
 }
 
+
+/* for ribbon  */
+.ribbon {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+}
+.ribbon {
+  --f: .6em; 
+  --r: .8em; 
+  margin-left: -1.6rem;
+  /* position: absolute; */
+  padding-inline: 1.6rem;
+  line-height: 1.8;
+  background: #3FB8AF;
+  border-top: var(--f) solid #0005;
+  border-right: var(--r) solid #0000;
+  clip-path: 
+    polygon(0 100%,0 var(--f),var(--f) 0,
+      var(--f) var(--f),100% var(--f),
+      calc(100% - var(--r)) calc(50% + var(--f)/2),100% 100%);
+}
+/* for ribbon  */
+
+
+
+
+
+
 /* 
 old website - https://mental-health-website-eight.vercel.app/
 api docs - https://docs.google.com/document/d/1HlnBxXLWl6UzbGsJU7kcOhKfStoz1S00kx1sdjJ8ApU/edit?usp=sharing
 backend - https://mindzee-backend.onrender.com
 ₹
-*/
-
-/* 
-
-<div className="profile-info">
-<div className="profile-info-top">
-  <div className="info">
-    <p className="name">{data?.name}</p>
-    <p>{data?.year_of_experience}+ year of experience</p>
-    <p>{data?.email}</p>
-    <p>{data?.language}</p>
-  </div>
-  <div className="info">
-    <p>Individual sessions taken: {data?.number_of_individual_sessions}</p>
-    <p> Webinar sessions taken: {data?.number_of_webinar_sessions}</p>
-    <p> Individual sessions price:<span className="price">{data?.individual_session_price} ₹</span></p>
-    <p> Webinar sessions price:<span className="price">{data?.webinar_session_price} ₹</span></p>
-  </div>
-</div>
-</div>
-
-
 */

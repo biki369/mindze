@@ -67,11 +67,18 @@ const useStyles = makeStyles((theme) => ({
         padding:'0.5rem',
         "& .ppl-name":{
           textAlign:'center',
+          fontSize:'1.4rem',
           marginBottom:'0.6rem'
         },
         "& p":{
           lineHeight:1.06,
-          padding:'0 0.5rem'
+          margin:'6px 0',
+          padding:'0 0.5rem',
+          textAlign:'center',
+          "& span":{
+            color:theme.palette.primary.main,
+            fontWeight:500
+          }
         }
 
         
@@ -122,7 +129,7 @@ const ServiceSlider = (props) => {
           </SwiperSlide> */}
 
          
-{
+          {
             data && data.map((e, i) => (
               // <SwiperSlide key={i}>
               //   <img src={e.img} alt="" />
@@ -131,8 +138,9 @@ const ServiceSlider = (props) => {
                 <img src={e.img} alt="" />
 
                 <div className="review-box">
-                  <h3 className="ppl-name">{e.name}</h3>
-                  <p>{e.desc}</p>
+                  <h2 className="ppl-name">{e.name}</h2>
+                  <p>{e.area_of_expertise.substring(0, 56)}...</p>
+                  <p>Exp: <span>{e.year_of_experience}</span></p>
                 </div>
               </SwiperSlide>
             ))
@@ -152,8 +160,6 @@ const ServiceSlider = (props) => {
               </SwiperSlide>
             ))
           }
-
-
           <div className="slider-controler">
             <div className="swiper-button-prev slider-arrow">
               {/* <ArrowBackIcon className='icon' /> */}

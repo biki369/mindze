@@ -6,6 +6,7 @@ import CheckIcon from '@material-ui/icons/Check';
 import { bookingsSlot, get_time_slots } from "../../api";
 import Swal from "sweetalert2";;
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
+import TimerAlert from "../alerts/TimeAlert";
 const useStyles = makeStyles((theme) => ({
     modalContainer: {
         position: 'relative',
@@ -74,7 +75,7 @@ const BookingSlot = (props) => {
 
     };
     // console.log(item, "fetchSlots");
-
+    
     // ====== function fro check====
     const CheckboxComp = ({ options, }) => {
 
@@ -107,15 +108,14 @@ const BookingSlot = (props) => {
             </div>
         );
     };
-
     const BookingSessionModalComp = ({ consultant }) => {
 
         const handleDateChange = (event) => {
             setDate(event.target.value);
         };
-
         const bookSession = () => {
             setOpenModal(false);
+
             // const fetchingSlots = () => {
             //     let timerInterval;
             //     Swal.fire({

@@ -19,6 +19,10 @@ import BookingSlot from "../../../components/booking-slots/BookingSlot";
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: "30px 10px",
+    [theme.breakpoints.down('xs')]: {
+      padding: "30px 0",
+    },
+
     width: "100%",
 
 
@@ -48,6 +52,9 @@ const useStyles = makeStyles((theme) => ({
 
     "& .profileInfo-container": {
       padding: "10px 30px 16px 16px",
+      [theme.breakpoints.down('xs')]: {
+        padding: 0,
+      },
     },
     "& .profile-content":
       { display: 'flex', flexDirection: 'column', gap: 10, },
@@ -59,9 +66,9 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: 10,
       justifyContent: 'space-between',
       "& .p-left": {
-        "& .p-left_info":{
+        "& .p-left_info": {
           width: 430,
-          [theme.breakpoints.down('md')]: {
+          [theme.breakpoints.down('sm')]: {
             width: '100%',
           },
         },
@@ -74,17 +81,21 @@ const useStyles = makeStyles((theme) => ({
         padding: '1.3rem'
       },
       "& .info": {
-        "& p": {textTransform: 'capitalize',},
+        "& p": { textTransform: 'capitalize', margin: '9px 0' },
         "& .name": {
           fontSize: "1.5rem",
           fontWeight: 500,
+          marginBottom: 10,
           color: theme.palette.primary.main,
         },
         "& span": {
           color: theme.palette.primary.main
         },
         "& .info_more": {
-          marginTop:'10px',
+          marginTop: '10px',
+          "& p": {
+            margin: 0,
+          }
         }
       },
 
@@ -98,7 +109,7 @@ const useStyles = makeStyles((theme) => ({
         padding: 10,
         "& .eduction": {
           // background:'#808080',
-          "& .info":{
+          "& .info": {
             padding: 20,
           },
           padding: 20,
@@ -116,9 +127,6 @@ const useStyles = makeStyles((theme) => ({
 
         }
       },
-
-
-
     },
 
     "& .profile-bottom": {
@@ -255,8 +263,11 @@ const useStyles = makeStyles((theme) => ({
         position: 'relative',
       },
       "& .plan": {
-        height: 390,
+        height: 400,
         width: 300,
+        [theme.breakpoints.down('xs')]: {
+          width: '100%',
+        },
         // width: '33%',
         padding: 30,
         textAlign: 'center',
@@ -287,9 +298,16 @@ const useStyles = makeStyles((theme) => ({
         },
         "& .plan_access": {
           fontSize: "1.53rem",
+        },
+        "& .desc": {
+          fontSize: '13px',
+          [theme.breakpoints.down('xs')]: {
+            fontSize: '9px',
+          },
+          margin: '10px 0',
+          color: "#b55109",
+          fontWeight: 500
         }
-
-
 
       },
       "& .bookedPlans_btn": {
@@ -314,36 +332,6 @@ const useStyles = makeStyles((theme) => ({
 }))
 const CounselorDetails = () => {
 
-  const bookingPlans = [
-    {
-      session: 1,
-      icon: <PersonIcon />,
-      price: 1000,
-      perSession: 1000,
-      duration: "40",
-      access: "1 week",
-      // discount: 10
-    },
-    {
-      session: 4,
-      price: 4000,
-      icon: <PeopleIcon />,
-      perSession: 800,
-      duration: "40",
-      access: "4 week",
-      discount: "15% discount"
-
-    },
-    {
-      session: 10,
-      price: 4000,
-      perSession: 800,
-      icon: <GroupAddIcon />,
-      duration: "40",
-      access: "10 week",
-      discount: "20% discount"
-    },
-  ]
 
   const classes = useStyles()
   // const {pathname} = useLocation()
@@ -353,6 +341,43 @@ const CounselorDetails = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState(null);
   const [writeReview, setWriteReview] = useState();
+
+
+  const bookingPlansData = [
+    {
+      session: 1,
+      icon: <PersonIcon />,
+      price: data?.individual_session_price,
+      perSession: data?.individual_session_price,
+      duration: "45",
+      access: "1 week",
+      // discount: 10
+    },
+    {
+      session: 4,
+      price: data?.individual_session_price * 4,
+      icon: <PeopleIcon />,
+      perSession: Number(data?.individual_session_price) - (Number(data?.individual_session_price) * 10) / 100,
+      duration: "45",
+      access: "4 week",
+      discount: "10 % Discount",
+      desc: "Fetch you first slot and later discuss with counselor"
+
+    },
+    {
+      session: 10,
+      price: data?.individual_session_price * 10,
+      perSession: Number(data?.individual_session_price) - (Number(data?.individual_session_price) * 15) / 100,
+      icon: <GroupAddIcon />,
+      duration: "45",
+      access: "10 week",
+      discount: `15 % Discount`,
+      desc: "Fetch you first slot and later discuss with counselor"
+
+    },
+  ]
+
+  console.log(bookingPlansData[1]);
 
   const handleOpenModal = (evn, e) => {
     if (localStorage.getItem("token") !== null) {
@@ -445,6 +470,7 @@ const CounselorDetails = () => {
     reviewDataOnLoad();
   }, [isLoading]);
 
+  // console.log(data?.approach_to_counselling);
   return (
     <div className={classes.root}>
       {data !== null ? <Container>
@@ -463,12 +489,12 @@ const CounselorDetails = () => {
                 <div className="info p-left_info">
                   <p className="name">{data?.name}</p>
                   <p>{data?.year_of_experience}+ year of experience</p>
-                  <p> Area of expertise: {data?.area_of_expertise}</p>
-                  <p>{data?.language}</p>
+                  <p> <span>Area of expertise:</span> {data?.area_of_expertise}</p>
+                  <p><span>Languages:</span> {data?.language}</p>
 
                   <div className="info_more">
-                    <p>Individual sessions taken: {data?.number_of_individual_sessions}</p>
-                    <p> Webinar sessions taken: {data?.number_of_webinar_sessions}</p>
+                    {/* <p>Individual sessions taken: {data?.number_of_individual_sessions}</p>
+                    <p> Webinar sessions taken: {data?.number_of_webinar_sessions}</p> */}
                     <p> Individual sessions price:<span className="price"> {data?.individual_session_price} ₹</span></p>
                     <p> Webinar sessions price:<span className="price"> {data?.webinar_session_price} ₹</span></p>
                   </div>
@@ -477,20 +503,21 @@ const CounselorDetails = () => {
 
               <Paper className="ed-ppr">
                 <div className="eduction">
-                  <p className="title">Eduction</p>
-                  <ul >
-                    <li>{data?.degree1_name}, {data?.institute1_name}</li>
-                    <li>{data?.degree2_name}, {data?.institute2_name}</li>
-                    <li>{data?.degree3_name}, {data?.institute3_name}</li>
+                  <p className="title">Education</p>
+                  <ul>
+                    {data?.degree1_name != "" && <li>{data?.degree1_name}, {data?.institute1_name}</li>}
+                    {data?.degree2_name != "" && <li>{data?.degree2_name}, {data?.institute2_name}</li>}
+                    {data?.degree3_name != "" && <li>{data?.degree3_name} ,{data?.institute3_name}</li>}
                   </ul>
                 </div>
                 <div className="info ">
                   <p><span> approach to counselling: </span>{data?.approach_to_counselling}</p>
-                  <p><span>licenses and certification: </span>{data?.licenses_and_certification}</p>
+                  {
+                    data.licenses_and_certification != "" && <p><span>licenses and certification: </span>{data?.licenses_and_certification}</p>
+                  }
+                  {/* <p><span>licenses and certification: </span>{data?.licenses_and_certification}</p> */}
                 </div>
-
               </Paper>
-
             </div>
 
             {/* <div className="profile-bottom">
@@ -510,9 +537,8 @@ const CounselorDetails = () => {
 
             <div className={classes.bookingPlans}>
               <div className="plans_container">
-
                 {
-                  bookingPlans.map((e, i) => (
+                  bookingPlansData.map((e, i) => (
                     <>
                       <div key={i} className="plans">
                         <Paper elevation={3}>
@@ -522,17 +548,21 @@ const CounselorDetails = () => {
                             </div>
                             <p className="plan_session">{e.session} session</p>
                             <p className="plan_price">₹ {e.price}</p>
-                            <p className="plan_per-session">pice per session: {e.perSession}</p>
+                            <p className="plan_per-session">pice per session: ₹ {e.perSession}</p>
                             <p className="plan_duration">{e.duration} minutes</p>
                             <p className="plan_access">{e.access}</p>
                             <p className="plan_discount">{e.discount}</p>
+                            <p className="desc">{e?.desc}</p>
                           </div>
                         </Paper>
                         <div className="bookedPlans_btn">
                           <Button variant="contained" color="primary"
-                            onClick={() => handleOpenModal(true)}
+                          // onClick={() => handleOpenModal(true)}
                           >
-                            Book
+                            <Link to={`https://wa.me/919817670081?text=Hi, I want to book a session with ${data?.name}`} target='_bank'>
+                              Book
+                            </Link>
+                            {/* Book */}
                           </Button>
                         </div>
                       </div>
@@ -546,17 +576,16 @@ const CounselorDetails = () => {
             </div>
 
           </Paper>
-
           <div className="review-section">
             <div>
               <Paper>
                 <div className="review-ratings">
                   <h4>Ratings & Reviews</h4>
                   <div className="review">
-                    <div className="review-stars">
+                    {/* <div className="review-stars">
                       <h5>{data?.rating}.0</h5>
                       <Rating name="read-only" value={data?.rating} readOnly />
-                    </div>
+                    </div> */}
                     {/* <div className="review-bar">
                       <div className="bar">
                         <div className="bar-number">5</div>
@@ -580,13 +609,12 @@ const CounselorDetails = () => {
                   <div className="write-review">
                     {/* <h4>Write a review</h4> */}
                     <div className="write-review-form">
-                      <form onSubmit={(e) => submitReview(e)}>
+                      <form onSubmit={(e) => submitReview(e)} autoComplete="off">
                         <TextField
                           variant="outlined"
                           label="Write your review"
-                          // variant="filled"
-                          // variant="outlined"
-                          // focused
+                          type="text"
+                          required
                           value={writeReview}
                           style={{ width: '100%', marginBottom: "10px" }}
                           onChange={(e) => setWriteReview(e.target.value)}

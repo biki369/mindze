@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
     "& .link-from-switch": {
+      // padding: "0 3px",
       cursor: "pointer",
       "&:hover": {
         color: theme.palette.primary.main
@@ -333,7 +334,7 @@ export default function Login(props) {
           </Typography>
           <div>
             {isSignUp ? signUpForm() : signInform()}
-            <Grid container>
+            <Grid container >
               <Grid item sx={12} md={6}>
                 {
                   !isSignUp && <Link to={"/forgot-password"} variant="body2">
@@ -343,7 +344,7 @@ export default function Login(props) {
               </Grid>
               <Grid item sx={12}  md={6}>
                 <Typography onClick={() => setIsSignUp(!isSignUp)} variant="body2" className='link-from-switch'>
-                  {!isSignUp ? "Don't have an account? Sign Up" : " Already have an account? Sign In"}
+                  {!isSignUp ?"Don't have an account? Sign Up":"Already have an account? Sign In"}
                 </Typography>
               </Grid>
             </Grid>
