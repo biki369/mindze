@@ -50,6 +50,7 @@ const useStyles = makeStyles((theme) => ({
             },
         },
 
+
         "& .designation, & .interest": {
             position: 'relative',
             "& p": {
