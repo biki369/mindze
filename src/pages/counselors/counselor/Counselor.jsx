@@ -189,14 +189,12 @@ function Counselor({ e, handleOpenModal, psychological }) {
                             <Avatar variant="rounded" alt="counselor-img" src={e?.img} className={classes.counslrAvatar} />
                         </div>
                         <div className="counselor-about">
-                            {
-                                !psychological && <p className="name">{e?.name},<span className='exp'>{e?.year_of_experience}+ years exp.</span></p>
-                            }
-                            {
+                            <p className="name">{e?.name},<span className='exp'>{e?.year_of_experience}+ years exp.</span></p>
+                            {/* {
                                 psychological && <p className="name">{e?.name},<span className='exp'>{e?.year_of_experience}+ 
                                     <br />
                                     years exp.</span></p>
-                            }
+                            } */}
                             <div className="designation">
                                 {/* <p><span><EmailIcon /></span>{e?.email}</p> */}
                                 <p><span><RecordVoiceOverIcon /></span> <strong>Language:</strong> {e?.language}</p>

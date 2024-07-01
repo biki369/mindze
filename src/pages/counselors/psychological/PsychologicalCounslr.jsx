@@ -50,6 +50,8 @@ const PsychologicalCounslr = () => {
     const [openModal, setOpenModal] = useState(false);
     const [item, setItem] = useState();
     const [, psychologicalData] = useOutletContext();
+    const [date, setDate] = useState(psychologicalData?.sort((a, b) => b.year_of_experience - a.year_of_experience));
+    // console.log(sortedData,"laksdhhjkaghjfdhgjadfs");
 
     const handleOpenModal = (evn, e) => {
         if (localStorage.getItem("token") !== null) {
@@ -82,7 +84,7 @@ const PsychologicalCounslr = () => {
                 </div>) : (
                     <div className='counselor-container' >
                         {
-                            psychologicalData?.map((e, i) => {
+                            date?.map((e, i) => {
                                 return (
                                     <div className="counselor-card" key={i}>
                                         <Counselor psychological={true} e={e} handleOpenModal={handleOpenModal} />
