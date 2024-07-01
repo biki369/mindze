@@ -16,6 +16,9 @@ const useStyles = makeStyles((theme) => ({
             position: 'relative',
             padding: "6px 10px",
             display: "flex",
+            // flexDirection: "column",
+            // justifyContent:'space-between',
+            height: "100%",
             gap: 30,
             cursor: "pointer",
             alignItems: 'center',
@@ -34,21 +37,17 @@ const useStyles = makeStyles((theme) => ({
                     "& .exp": {
                         fontWeight: 400,
                         color: '#303f9f',
-
+                        marginLeft: '13px',
                     }
                 },
-               
+
                 "& strong": {
                     fontWeight: 600,
                 },
-
                 "& .edu": {
                     color: "#000",
                 },
-
-
             },
-
         },
 
         "& .designation, & .interest": {
@@ -75,12 +74,10 @@ const useStyles = makeStyles((theme) => ({
                     color: '#303f9f',
                 }
             }
-
         },
 
         "& .designation-section": {
             padding: '10px 20px 0 10px',
-
         },
         "& .price-section": {
             paddingTop: '3px',
@@ -93,10 +90,11 @@ const useStyles = makeStyles((theme) => ({
 
         "& .paper-dev": {
             padding: "10px 6px",
-            width: '460px',
-            [theme.breakpoints.down(500)]: {
-                width: "100%",
-                // padding: "10px 0",
+            // minHeight:'330px',
+            [theme.breakpoints.up('lg')]: {
+                width: '460px',
+                padding: "10px 6px",
+                // width: "100%",
             },
         },
 
@@ -127,7 +125,6 @@ const useStyles = makeStyles((theme) => ({
                 // padding:3,
             }
         },
-
         "& .book-webinar": {
             backgroundColor: '#ADD8E6',
             color: "#000",
@@ -141,10 +138,9 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-function Counselor({ e, handleOpenModal }) {
+function Counselor({ e, handleOpenModal, psychological }) {
     const classes = useStyles();
     const [showMore, setShowMore] = useState(false)
-
     const showHandler = () => {
         setShowMore(!showMore)
     }
@@ -173,7 +169,6 @@ function Counselor({ e, handleOpenModal }) {
 
     //     }
     // };
-
     const ShowMoreContents = () => {
         return (
             <div className='showMore-items'>
@@ -182,17 +177,25 @@ function Counselor({ e, handleOpenModal }) {
         )
     }
 
+
     return (
         <div className={classes.root}>
             <Paper className='paper-dev'>
                 <>
                     <div className="counselor" >
-                       
+
                         <div className="counselor-img">
                             <Avatar variant="rounded" alt="counselor-img" src={e?.img} className={classes.counslrAvatar} />
                         </div>
                         <div className="counselor-about">
-                            <p className="name">{e?.name},<span className='exp'>{e?.year_of_experience}+ years exp.</span></p>
+                            {
+                                !psychological && <p className="name">{e?.name},<span className='exp'>{e?.year_of_experience}+ years exp.</span></p>
+                            }
+                            {
+                                psychological && <p className="name">{e?.name},<span className='exp'>{e?.year_of_experience}+ 
+                                    <br />
+                                    years exp.</span></p>
+                            }
                             <div className="designation">
                                 {/* <p><span><EmailIcon /></span>{e?.email}</p> */}
                                 <p><span><RecordVoiceOverIcon /></span> <strong>Language:</strong> {e?.language}</p>
@@ -208,7 +211,7 @@ function Counselor({ e, handleOpenModal }) {
                             <p> <span><LocalOfferIcon /></span><strong>Webinar session</strong>₹  {e?.webinar_session_price}
                             </p>
                             {
-                               e.speciality != "" && <div className="ribbon">{e.speciality}</div>
+                                e.speciality != "" && <div className="ribbon">{e.speciality}</div>
                             }
                         </div>
                     </div>

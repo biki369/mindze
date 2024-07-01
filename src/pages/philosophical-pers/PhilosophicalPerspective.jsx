@@ -76,7 +76,7 @@ const PhilosophicalPerspective = () => {
     const mobileDevice = useMediaQuery(theme.breakpoints.down('md'));
 
     const philosophicalTabData = [
-        "Modern Spirituality Thinkers",
+        "Modern spiritual Thinkers",
         "Stoicism",
         "Hinduism",
         "Buddhism",

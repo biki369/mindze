@@ -345,7 +345,7 @@ const CounselorDetails = () => {
 
   const bookingPlansData = [
     {
-      session: 1,
+      session: "1 session",
       icon: <PersonIcon />,
       price: data?.individual_session_price,
       perSession: data?.individual_session_price,
@@ -354,30 +354,30 @@ const CounselorDetails = () => {
       // discount: 10
     },
     {
-      session: 4,
+      session: "4 sessions",
       price: data?.individual_session_price * 4,
       icon: <PeopleIcon />,
       perSession: Number(data?.individual_session_price) - (Number(data?.individual_session_price) * 10) / 100,
       duration: "45",
-      access: "4 week",
+      access: "4 weeks",
       discount: "10 % Discount",
       desc: "Fetch you first slot and later discuss with counselor"
 
     },
     {
-      session: 10,
+      session: "10 sessions",
       price: data?.individual_session_price * 10,
       perSession: Number(data?.individual_session_price) - (Number(data?.individual_session_price) * 15) / 100,
       icon: <GroupAddIcon />,
       duration: "45",
-      access: "10 week",
+      access: "10 weeks",
       discount: `15 % Discount`,
       desc: "Fetch you first slot and later discuss with counselor"
 
     },
   ]
 
-  console.log(bookingPlansData[1]);
+  // console.log(bookingPlansData[1]);
 
   const handleOpenModal = (evn, e) => {
     if (localStorage.getItem("token") !== null) {
@@ -546,9 +546,9 @@ const CounselorDetails = () => {
                             <div className="plan-icon">
                               <span>{e.icon}</span>
                             </div>
-                            <p className="plan_session">{e.session} session</p>
+                            <p className="plan_session">{e.session}</p>
                             <p className="plan_price">₹ {e.price}</p>
-                            <p className="plan_per-session">pice per session: ₹ {e.perSession}</p>
+                            <p className="plan_per-session">Price per session: ₹ {e.perSession}</p>
                             <p className="plan_duration">{e.duration} minutes</p>
                             <p className="plan_access">{e.access}</p>
                             <p className="plan_discount">{e.discount}</p>

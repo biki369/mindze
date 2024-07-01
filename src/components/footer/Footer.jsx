@@ -74,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 const Footer = () => {
     const classes = useStyles();
-    
+
     return (
         <div className={classes.root}>
             <div className="footer-container">
@@ -133,7 +133,6 @@ const Footer = () => {
                                 </li>
                                 <li>
                                     <Link to={"/blogs"}>Blogs</Link>
-
                                 </li>
                                 <li>
                                     <Link to={"/spiritualCounselors"}>Spiritual counselors</Link>
@@ -141,7 +140,6 @@ const Footer = () => {
                                 <li>
                                     <Link to={"/philosophicalCounselors"}>Psychological counselors</Link>
                                 </li>
-
                             </ul>
                         </div>
                         <div className="ul-items">

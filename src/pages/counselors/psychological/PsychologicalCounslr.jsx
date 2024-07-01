@@ -1,4 +1,4 @@
-import {useState } from 'react'
+import { useState } from 'react'
 import { makeStyles } from '@material-ui/core';
 import Loader from '../../../components/loader/Loader';
 import Swal from 'sweetalert2';
@@ -11,14 +11,20 @@ const useStyles = makeStyles((theme) => ({
         padding: 20,
         "& .counselor-container": {
             display: "flex",
-            gap: 30,
+            gap: 26,
             flexWrap: "wrap",
-            paddingLeft:"1rem",
+            paddingLeft: "1rem",
             [theme.breakpoints.down("md")]: {
-                paddingLeft:"0",
+                paddingLeft: "0",
             },
             // justifyContent: "center",
             alignItems: "center",
+
+            "& .counselor-card":{
+                flex:"1 1 260px",
+                // boxSizing:"border-box",
+                // padding:'0.5rem',
+            }
         },
 
         "& .loader": {
@@ -43,7 +49,7 @@ const PsychologicalCounslr = () => {
     const classes = useStyles();
     const [openModal, setOpenModal] = useState(false);
     const [item, setItem] = useState();
-    const [,psychologicalData] = useOutletContext();
+    const [, psychologicalData] = useOutletContext();
 
     const handleOpenModal = (evn, e) => {
         if (localStorage.getItem("token") !== null) {
@@ -78,7 +84,9 @@ const PsychologicalCounslr = () => {
                         {
                             psychologicalData?.map((e, i) => {
                                 return (
-                                  <Counselor e={e} handleOpenModal={handleOpenModal} key={i} />
+                                    <div className="counselor-card" key={i}>
+                                        <Counselor psychological={true} e={e} handleOpenModal={handleOpenModal} />
+                                    </div>
                                 )
                             }
                             )
@@ -86,7 +94,7 @@ const PsychologicalCounslr = () => {
                     </div>
                 )
             }
-       
+
             {/* <NoCounselors p/> */}
             <BookingSlot openModal={openModal} setOpenModal={setOpenModal} item={item} />
         </div>
