@@ -1,4 +1,4 @@
-import { Box, Button, Typography, makeStyles, } from '@material-ui/core';
+import { Box, Button, Grid, Typography, makeStyles, } from '@material-ui/core';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -9,7 +9,7 @@ import 'swiper/css/scrollbar';
 import { heroSliderImg } from '../../data';
 import NoCounselors from '../../components/NoCounselors/NoCounselors';
 import ServiceSlider from '../../components/sliders/serice-sldier/ServiceSlider';
-import { useOutletContext } from "react-router-dom";
+import { Link, useOutletContext } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -199,27 +199,31 @@ const Home = () => {
 
       <div >
 
-        {psychologicalData && <ServiceSlider text={"Psychological Councellors"} data={psychologicalData} />}
+        {psychologicalData && 
+        <ServiceSlider text={"Psychological Counselors"} data={psychologicalData} 
+        linkTo={"/psychologicalCounselors"}
+        />}
         {/* <NoCounselors text="Psychological Councellors" h/> */}
-
       </div>
       <div >
-        {spiritualData && <ServiceSlider text={"Spiritual Councellors"} data={spiritualData} />}
+        {spiritualData && <ServiceSlider text={"Spiritual Counselors"} data={spiritualData} 
+        linkTo={"/spiritualCounselors"}
+        />}
         {/* <NoCounselors text={"Spiritual Councellors"} h /> */}
       </div>
 
-      <div className="review-section">
-        {/* <h1>What People Say About</h1> */}
-        {/* <NoCounselors text={"People Say About"} yes /> */}
-        {/* <div className="reviews">
+      {/* <div className="review-section">
+        <h1>What People Say About</h1>
+        <NoCounselors text={"People Say About"} yes />
+        <div className="reviews">
           <div >
             <ServiceSlider text={"Individual Reviews"} data={reviewData} />
           </div>
           <div >
             <ServiceSlider text={"Organisation Reviews"} data={reviewData} />
           </div>
-        </div> */}
-      </div>
+        </div>
+      </div> */}
 
       <div className="trustedBy-section">
         <div >

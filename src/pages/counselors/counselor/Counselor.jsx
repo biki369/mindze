@@ -20,8 +20,8 @@ const useStyles = makeStyles((theme) => ({
             // justifyContent:'space-between',
             height: "100%",
             gap: 30,
-            cursor: "pointer",
-            alignItems: 'center',
+            // cursor: "pointer",
+            // alignItems: 'center',
             [theme.breakpoints.down(500)]: {
                 width: "100%",
             },
@@ -49,7 +49,6 @@ const useStyles = makeStyles((theme) => ({
                 },
             },
         },
-
 
         "& .designation, & .interest": {
             position: 'relative',
@@ -91,8 +90,13 @@ const useStyles = makeStyles((theme) => ({
 
         "& .paper-dev": {
             padding: "10px 6px",
-            // minHeight:'330px',
+            // height:'400px',
+            // minHeight:'423px',
+            // display:'flex',
+            // justifyContent:'space-between',
+            // flexDirection:'column',
             [theme.breakpoints.up('lg')]: {
+                // minHeight:'336px',
                 width: '460px',
                 padding: "10px 6px",
                 // width: "100%",
@@ -244,7 +248,8 @@ function Counselor({ e, handleOpenModal, psychological }) {
                     >
                         {/* <Grid item xs={12} sm={2}></Grid> */}
                         <Grid item xs={12} md={4}>
-                            <Button variant="outlined"
+                            <Button 
+                                variant="outlined"
                                 size='small'
 
                                 fullWidth
@@ -258,7 +263,8 @@ function Counselor({ e, handleOpenModal, psychological }) {
                                 size='small'
                                 // onClick={(evn) => handleOpenModal(evn, e)}
                                 variant="contained"
-                                color="primary">
+                                color="primary"
+                                >
                                 <Link to={`https://wa.me/919817670081?text=Hi,I want to book a session with ${e.name}`} target='_bank'>
                                     Book Individual
                                 </Link>

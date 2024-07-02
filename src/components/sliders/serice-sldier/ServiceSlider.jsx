@@ -9,8 +9,9 @@ import 'swiper/css/navigation';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
-import { EffectCoverflow, Pagination, Navigation ,Autoplay} from 'swiper/modules';
-import { makeStyles } from '@material-ui/core';
+import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules';
+import { Button, Grid, makeStyles } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -19,8 +20,8 @@ const useStyles = makeStyles((theme) => ({
     "& .container": {
       width: '100%',
       // width:'124rem',
-      padding: "4rem 1rem",
-      margin: "0 auto"
+      padding: "2rem 1rem",
+      margin: "2rem auto"
     },
 
     "& .heading": {
@@ -34,9 +35,9 @@ const useStyles = makeStyles((theme) => ({
 
     "& .swiper_container": {
       // height:" 52rem",
-      height:'80vh',
+      height: '80vh',
       [theme.breakpoints.down(769)]: {
-        height:'66vh',
+        height: '66vh',
       },
       padding: "2rem 0",
       position: " relative",
@@ -62,35 +63,35 @@ const useStyles = makeStyles((theme) => ({
       }
     },
 
-    "& .review-box":{
-        position:'relative',
-        padding:'0.5rem',
-        "& .ppl-name":{
-          textAlign:'center',
-          fontSize:'1.4rem',
-          marginBottom:'0.6rem'
-        },
-        "& p":{
-          lineHeight:1.06,
-          margin:'6px 0',
-          padding:'0 0.5rem',
-          textAlign:'center',
-          "& span":{
-            color:theme.palette.primary.main,
-            fontWeight:500
-          }
+    "& .review-box": {
+      position: 'relative',
+      padding: '0.5rem',
+      "& .ppl-name": {
+        textAlign: 'center',
+        fontSize: '1.4rem',
+        marginBottom: '0.6rem'
+      },
+      "& p": {
+        lineHeight: 1.06,
+        margin: '6px 0',
+        padding: '0 0.5rem',
+        textAlign: 'center',
+        "& span": {
+          color: theme.palette.primary.main,
+          fontWeight: 500
         }
+      }
 
-        
+
     }
 
   }
 }));
 
 const ServiceSlider = (props) => {
-  
-  const { data, text, trustbyData } = props
-  
+
+  const { data, text, trustbyData, linkTo } = props
+
   const classes = useStyles();
 
 
@@ -121,14 +122,14 @@ const ServiceSlider = (props) => {
           }}
           speed={3000}
           loop={true}
-          modules={[EffectCoverflow, Pagination, Navigation,Autoplay]}
+          modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
           className="swiper_container"
         >
           {/* <SwiperSlide>
             <img src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fGZsb3dlcnN8ZW58MHx8MHx8fDA%3D" alt="" />
           </SwiperSlide> */}
 
-         
+
           {
             data && data.map((e, i) => (
               // <SwiperSlide key={i}>
@@ -170,6 +171,25 @@ const ServiceSlider = (props) => {
             <div className="swiper-pagination"></div>
           </div>
         </Swiper>
+        <Grid
+          container
+          mt={6}
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+          style={{ marginTop: '1rem' }}
+        >
+          <Grid item md={3} sx={12}>
+            <Button
+              size='small'
+              fullWidth
+              variant="contained"
+              color="primary"
+            >
+              <Link to={linkTo}>Explore more</Link>
+            </Button>
+          </Grid>
+        </Grid>
       </div>
     </div>
   )

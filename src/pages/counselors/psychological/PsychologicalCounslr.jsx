@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { makeStyles } from '@material-ui/core';
 import Loader from '../../../components/loader/Loader';
 import Swal from 'sweetalert2';
@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
             alignItems: "center",
 
             "& .counselor-card":{
-                flex:"1 1 260px",
+                // flex:"1 1 260px",
                 // boxSizing:"border-box",
                 // padding:'0.5rem',
             }
@@ -50,7 +50,12 @@ const PsychologicalCounslr = () => {
     const [openModal, setOpenModal] = useState(false);
     const [item, setItem] = useState();
     const [, psychologicalData] = useOutletContext();
-    const [date, setDate] = useState(psychologicalData?.sort((a, b) => b.year_of_experience - a.year_of_experience));
+    // const [date, setDate] = useState(null);
+    let sortedData = psychologicalData?.sort((a, b) => b.year_of_experience - a.year_of_experience)
+
+    // useEffect(() => {
+    //     setDate(psychologicalData?.sort((a, b) => b.year_of_experience - a.year_of_experience))
+    // },[psychologicalData])
     // console.log(sortedData,"laksdhhjkaghjfdhgjadfs");
 
     const handleOpenModal = (evn, e) => {
@@ -84,7 +89,7 @@ const PsychologicalCounslr = () => {
                 </div>) : (
                     <div className='counselor-container' >
                         {
-                            date?.map((e, i) => {
+                            sortedData?.map((e, i) => {
                                 return (
                                     <div className="counselor-card" key={i}>
                                         <Counselor psychological={true} e={e} handleOpenModal={handleOpenModal} />

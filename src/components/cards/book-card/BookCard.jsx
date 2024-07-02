@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
     root: {
         "& .book-card ": {
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
             width: " 280px",
             height:'530px',
             padding: "16px",
@@ -74,9 +77,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const BookCard = ({ data, tabId }) => {
-
     const classes = useStyles();
-
+    
     return (
         <div className={classes.root}>
             <Link to={"/booksummery/369"} state={data}>

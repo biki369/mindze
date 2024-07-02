@@ -46,6 +46,8 @@ const SpiritualCounslr = () => {
     const [openModal, setOpenModal] = useState(false);
     const [item, setItem] = useState();
     const [spiritualData] = useOutletContext();
+    let sortedData = spiritualData?.sort((a, b) => b.year_of_experience - a.year_of_experience)
+
     const handleOpenModal = (evn, e) => {
         if (localStorage.getItem("token") !== null) {
             setOpenModal(true);
@@ -75,7 +77,7 @@ const SpiritualCounslr = () => {
                 </div>) : (
                     <div className='counselor-container' >
                         {
-                            spiritualData?.map((e, i) => {
+                            sortedData?.map((e, i) => {
                                 return (
                                     <Counselor e={e} i={i} handleOpenModal={handleOpenModal} key={i}/>
                                 )

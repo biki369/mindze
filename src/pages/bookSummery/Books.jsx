@@ -56,7 +56,6 @@ const useStyles = makeStyles((theme) => ({
       gap: "10px",
       [theme.breakpoints.down(600)]: {
         justifyContent: 'center',
-
       }
     },
     "& .MuiTabs-scrollButtonsDesktop": {
