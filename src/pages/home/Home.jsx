@@ -157,6 +157,9 @@ const Home = () => {
   const classes = useStyles();
   const [spiritualData, psychologicalData] = useOutletContext();
 
+  const shortExpSpiritualData = spiritualData?.filter((e) => e.year_of_experience >= 8)
+  const shortExpPsychologicalData = psychologicalData?.filter((e) => e.year_of_experience >= 8)
+
 
   return (
     <div className={classes.root}>
@@ -193,22 +196,27 @@ const Home = () => {
           <p>Mindze blends psychological insight, philosophical depth, and spiritual wellness to guide you through life's challenges. Our team believes in integrating these dimensions for healing, growth, and transformation.</p>
         </div>
         <div className="about-img">
-          <img src="/Blog_pics/t9.png" alt="" />
+          <img src="about-us.jpg" alt="" />
         </div>
       </div>
 
+
+      {/* multi slider  */}
       <div >
 
-        {psychologicalData && 
-        <ServiceSlider text={"Psychological Counselors"} data={psychologicalData} 
-        linkTo={"/psychologicalCounselors"}
-        />}
+        {psychologicalData &&
+          <ServiceSlider text={"Spiritual Counselors"} data={shortExpPsychologicalData}
+            linkTo={"/spiritualCounselors"}
+          />
+        }
         {/* <NoCounselors text="Psychological Councellors" h/> */}
       </div>
       <div >
-        {spiritualData && <ServiceSlider text={"Spiritual Counselors"} data={spiritualData} 
-        linkTo={"/spiritualCounselors"}
-        />}
+        {spiritualData &&
+          <ServiceSlider text={"Psychological Counselors"} data={shortExpSpiritualData}
+            linkTo={"/psychologicalCounselors"}
+          />
+        }
         {/* <NoCounselors text={"Spiritual Councellors"} h /> */}
       </div>
 
