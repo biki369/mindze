@@ -75,10 +75,10 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         "& img": {
-          width: '500px',
-          height: '330px',
+          width: '530px',
+          height: '430px',
           marginTop: '1rem',
-          borderRadius: '30px',
+          // borderRadius: '30px',
           [theme.breakpoints.down('md')]: {
             width: '360px',
           },
