@@ -66,7 +66,7 @@ export const routes = createBrowserRouter([
         element: <BlogsMain />,
       },
       {
-        path: "/spiritualCounselors",
+        path: "/spiritualHealers",
         element: <SpiritualCounslr />,
       },
       {

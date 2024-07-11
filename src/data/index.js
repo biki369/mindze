@@ -46,8 +46,8 @@ export const menuLits = [
     components: "",
   },
   {
-    label: "Spiritual Counselors",
-    path: "/spiritualCounselors",
+    label: "Spiritual Healers",
+    path: "/spiritualHealers",
     icon: "",
     components: "",
   },

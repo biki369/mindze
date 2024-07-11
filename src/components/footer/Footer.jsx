@@ -135,7 +135,7 @@ const Footer = () => {
                                     <Link to={"/blogs"}>Blogs</Link>
                                 </li>
                                 <li>
-                                    <Link to={"/spiritualCounselors"}>Spiritual counselors</Link>
+                                    <Link to={"/spiritualHealers"}>Spiritual Healers</Link>
                                 </li>
                                 <li>
                                     <Link to={"/philosophicalCounselors"}>Psychological counselors</Link>

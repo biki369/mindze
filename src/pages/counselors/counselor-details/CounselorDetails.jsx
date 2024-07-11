@@ -476,7 +476,7 @@ const CounselorDetails = () => {
       {data !== null ? <Container>
         <div className="profile-content">
           <div className="top">
-            <h3><span><Link to={data.is_spiritual ? "/spiritualCounselors" : "/philosophicalCounselors"}>  <HomeIcon /></Link></span>{data?.name}'s profile</h3>
+            <h3><span><Link to={data.is_spiritual ? "/spiritualHealers" : "/psychologicalCounselors"}>  <HomeIcon /></Link></span>{data?.name}'s profile</h3>
             {/* <BackCurrent  link={data?.is_spiritual?"/spiritualCounselors":"/philosophicalCounselors"} name={data?.is_spiritual?"Spiritual Counselors":"Philosophical Counselors"}  /> */}
           </div>
           <Paper className="profileInfo-container">

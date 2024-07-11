@@ -205,15 +205,15 @@ const Home = () => {
       <div >
 
         {psychologicalData &&
-          <ServiceSlider text={"Spiritual Counselors"} data={shortExpPsychologicalData}
-            linkTo={"/spiritualCounselors"}
+          <ServiceSlider text={"Spiritual Healers"} data={shortExpSpiritualData}
+            linkTo={"/spiritualHealers"}
           />
         }
         {/* <NoCounselors text="Psychological Councellors" h/> */}
       </div>
       <div >
         {spiritualData &&
-          <ServiceSlider text={"Psychological Counselors"} data={shortExpSpiritualData}
+          <ServiceSlider text={"Psychological Counselors"} data={shortExpPsychologicalData}
             linkTo={"/psychologicalCounselors"}
           />
         }
