@@ -16,12 +16,8 @@ const useStyles = makeStyles((theme) => ({
             position: 'relative',
             padding: "6px 10px",
             display: "flex",
-            // flexDirection: "column",
-            // justifyContent:'space-between',
             height: "100%",
             gap: 30,
-            // cursor: "pointer",
-            // alignItems: 'center',
             [theme.breakpoints.down(500)]: {
                 width: "100%",
             },
@@ -90,11 +86,6 @@ const useStyles = makeStyles((theme) => ({
 
         "& .paper-dev": {
             padding: "10px 6px",
-            // height:'400px',
-            // minHeight:'423px',
-            // display:'flex',
-            // justifyContent:'space-between',
-            // flexDirection:'column',
             [theme.breakpoints.up('lg')]: {
                 // minHeight:'336px',
                 width: '460px',
@@ -265,7 +256,7 @@ function Counselor({ e, handleOpenModal, psychological }) {
                                 variant="contained"
                                 color="primary"
                                 >
-                                <Link to={`https://wa.me/919817670081?text=Hi,I want to book a session with ${e.name}`} target='_bank'>
+                                <Link to={`https://wa.me/919506126365?text=Hi,I want to book a session with ${e.name}`} target='_bank'>
                                     Book Individual
                                 </Link>
                             </Button>

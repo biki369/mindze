@@ -96,7 +96,7 @@ const Footer = () => {
                                 </li>
                                 <li>
                                     <PhoneIcon />
-                                    +91 9085661980
+                                    +91 9506126365
                                 </li>
                             </ul>
                             <ul className="social-links">
@@ -161,7 +161,7 @@ const Footer = () => {
                 </Container>
             </div>
             <div className="cpy-right">
-                <Typography>"Mindze is not a crisis intervention or emergency service. In case of a crisis, severe symptoms, or a life-threatening situation, seek immediate medical help or contact emergency helplines"</Typography>
+                <Typography>"Mindze is not a crisis intervention or emergency service. In case of a crisis, severe symptoms, or a life-threatening situation, seek immediate medical help or contact emergency help lines"</Typography>
                 <Copyright title="Mindze" to="/" />
             </div>
         </div>

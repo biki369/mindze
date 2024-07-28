@@ -559,7 +559,7 @@ const CounselorDetails = () => {
                           <Button variant="contained" color="primary"
                           // onClick={() => handleOpenModal(true)}
                           >
-                            <Link to={`https://wa.me/919817670081?text=Hi, I want to book a session with ${data?.name}`} target='_bank'>
+                            <Link to={`https://wa.me/919506126365?text=Hi, I want to book a session with ${data?.name}`} target='_bank'>
                               Book
                             </Link>
                             {/* Book */}
